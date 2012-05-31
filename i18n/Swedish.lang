@@ -1,0 +1,23 @@
+/**
+ * Swedish translation
+ *  @name Swedish
+ *  @author <a href="http://www.kmmtiming.se/">Kristoffer Karlström</a>
+ */
+
+{
+	"sProcessing":   "Laddar...",
+	"sLengthMenu":   "Visa _MENU_ rader",
+	"sZeroRecords":  "Inga matchande resultat funna",
+	"sInfo":         "Visar _START_ till _END_ av totalt _TOTAL_ rader",
+	"sInfoEmpty":    "Visar 0 till 0 av totalt 0 rader",
+	"sInfoFiltered": "(filtrerade från totalt _MAX_ rader)",
+	"sInfoPostFix":  "",
+	"sSearch":       "Sök:",
+	"sUrl":          "",
+	"oPaginate": {
+		"sFirst":    "Första",
+		"sPrevious": "Föregående",
+		"sNext":     "Nästa",
+		"sLast":     "Sista"
+	}
+}

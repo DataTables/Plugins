@@ -1,0 +1,23 @@
+/**
+ * Hungarian translation
+ *  @name Hungarian
+ *  @author <a href="http://www.maschek.hu">Adam Maschek</a>
+ */
+
+{
+	"sProcessing":   "Feldolgozás...",
+	"sLengthMenu":   "_MENU_ találat oldalanként",
+	"sZeroRecords":  "Nincs a keresésnek megfelelő találat",
+	"sInfo":         "Találatok: _START_ - _END_ Összesen: _TOTAL_",
+	"sInfoEmpty":    "Nulla találat",
+	"sInfoFiltered": "(_MAX_ összes rekord közül szűrve)",
+	"sInfoPostFix":  "",
+	"sSearch":       "Keresés:",
+	"sUrl":          "",
+	"oPaginate": {
+		"sFirst":    "Első",
+		"sPrevious": "Előző",
+		"sNext":     "Következő",
+		"sLast":     "Utolsó"
+	}
+}
