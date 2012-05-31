@@ -9,33 +9,20 @@
  */
 
  jQuery.extend( jQuery.fn.dataTableExt.oSort, {
-    "file-size-asc": function ( a, b ) {
+    "file-size-pre": function ( a ) {
         var x = a.substring(0,a.length - 2);
-        var y = b.substring(0,b.length - 2);
             
         var x_unit = (a.substring(a.length - 2, a.length) == "MB" ? 
             1000 : (a.substring(a.length - 2, a.length) == "GB" ? 1000000 : 1));
-        var y_unit = (b.substring(b.length - 2, b.length) == "MB" ? 
-            1000 : (b.substring(b.length - 2, b.length) == "GB" ? 1000000 : 1));
          
-        x = parseInt( x * x_unit );
-        y = parseInt( y * y_unit );
-         
-        return ((x < y) ? -1 : ((x > y) ?  1 : 0));
+        return parseInt( x * x_unit, 10 );
+    },
+
+    "file-size-asc": function ( a, b ) {
+        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
     },
 
     "file-size-desc": function ( a, b ) {
-        var x = a.substring(0,a.length - 2);
-        var y = b.substring(0,b.length - 2);
-        
-        var x_unit = (a.substring(a.length - 2, a.length) == "MB" ? 
-            1000 : (a.substring(a.length - 2, a.length) == "GB" ? 1000000 : 1));
-        var y_unit = (b.substring(b.length - 2, b.length) == "MB" ? 
-            1000 : (b.substring(b.length - 2, b.length) == "GB" ? 1000000 : 1));
-        
-        x = parseInt( x * x_unit);
-        y = parseInt( y * y_unit);
-        
-        return ((x < y) ?  1 : ((x > y) ? -1 : 0));
+        return ((a < b) ? 1 : ((a > b) ? -1 : 0));
     }
 } );

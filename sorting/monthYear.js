@@ -8,15 +8,15 @@
  */
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+	"monthYear-pre": function ( a ) {
+		return new Date('01 '+a);
+	},
+
 	"monthYear-asc": function ( a, b ) {
-		a = new Date('01 '+a);
-		b = new Date('01 '+b);
-		return ((a < b) ? -1 : ((a > b) ?  1 : 0));
+		return ((a < b) ? -1 : ((a > b) ? 1 : 0));
 	},
 
 	"monthYear-desc": function ( a, b ) {
-		a = new Date('01 '+a);
-		b = new Date('01 '+b);
 		return ((a < b) ? 1 : ((a > b) ?  -1 : 0));
 	}
 } );

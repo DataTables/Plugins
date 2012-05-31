@@ -7,15 +7,15 @@
  */
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+	"signed-num-pre": function ( a ) {
+		return (a=="-" || a==="") ? 0 : a.replace('+','')*1;
+	},
+
 	"signed-num-asc": function ( a, b ) {
-		var x = (a=="-" || a==="") ? 0 : a.replace('+','')*1;
-		var y = (b=="-" || b==="") ? 0 : b.replace('+','')*1;
-		return x - y;
+		return ((a < b) ? -1 : ((a > b) ? 1 : 0));
 	},
 
 	"signed-num-desc": function ( a, b ) {
-		var x = (a=="-" || a==="") ? 0 : a.replace('+','')*1;
-		var y = (b=="-" || b==="") ? 0 : b.replace('+','')*1;
-		return y - x;
+		return ((a < b) ? 1 : ((a > b) ? -1 : 0));
 	}
 } );

@@ -8,21 +8,16 @@
  */
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
-	"numeric-comma-asc": function ( a, b ) {
+	"numeric-comma-pre": function ( a ) {
 		var x = (a == "-") ? 0 : a.replace( /,/, "." );
-		var y = (b == "-") ? 0 : b.replace( /,/, "." );
-		x = parseFloat( x );
-		y = parseFloat( y );
+		return parseFloat( x );
+	},
 
-		return ((x < y) ? -1 : ((x > y) ?  1 : 0));
+	"numeric-comma-asc": function ( a, b ) {
+		return ((a < b) ? -1 : ((a > b) ? 1 : 0));
 	},
 
 	"numeric-comma-desc": function ( a, b ) {
-		var x = (a == "-") ? 0 : a.replace( /,/, "." );
-		var y = (b == "-") ? 0 : b.replace( /,/, "." );
-		x = parseFloat( x );
-		y = parseFloat( y );
-
-		return ((x < y) ?  1 : ((x > y) ? -1 : 0));
+		return ((a < b) ? 1 : ((a > b) ? -1 : 0));
 	}
 } );

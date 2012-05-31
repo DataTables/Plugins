@@ -8,17 +8,15 @@
  */
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
-	"anti-the-asc": function ( a, b ) {
-		var x = a.replace(/^the /i, "");
-		var y = b.replace(/^the /i, "");
+	"anti-the-pre": function ( a ) {
+		return a.replace(/^the /i, "");
+	},
 
-		return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+	"anti-the-asc": function ( a, b ) {
+		return ((a < b) ? -1 : ((a > b) ? 1 : 0));
 	},
 
 	"anti-the-desc": function ( a, b ) {
-		var x = a.replace(/^the /i, "");
-		var y = b.replace(/^the /i, "");
-		
-		return ((x < y) ? 1 : ((x > y) ? -1 : 0));
+		return ((a < b) ? 1 : ((a > b) ? -1 : 0));
 	}
 } );

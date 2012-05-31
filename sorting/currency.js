@@ -7,25 +7,16 @@
  */
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
-	"currency-asc": function ( a, b ) {
-		/* Remove any formatting */
-		var x = a == "-" ? 0 : a.replace( /[^\d\-\.]/g, "" );
-		var y = b == "-" ? 0 : b.replace( /[^\d\-\.]/g, "" );
-		 
-		/* Parse and return */
-		x = parseFloat( x );
-		y = parseFloat( y );
+	"currency-pre": function ( a ) {
+		a = (a==="-") ? 0 : a.replace( /[^\d\-\.]/g, "" );
+		return parseFloat( a );
+	},
 
-		return x - y;
+	"currency-asc": function ( a, b ) {
+		return a - b;
 	},
 
 	"currency-desc": function ( a, b ) {
-		var x = a == "-" ? 0 : a.replace( /[^\d\-\.]/g, "" );
-		var y = b == "-" ? 0 : b.replace( /[^\d\-\.]/g, "" );
-		 
-		x = parseFloat( x );
-		y = parseFloat( y );
-		
-		return y - x;
+		return b - a;
 	}
 } );

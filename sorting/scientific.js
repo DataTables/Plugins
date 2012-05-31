@@ -6,17 +6,15 @@
  */
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
-	"scientific-asc": function ( a, b ) {
-		var x = parseFloat(a);
-		var y = parseFloat(b);
+	"scientific-pre": function ( a ) {
+		return parseFloat(a);
+	},
 
-		return ((x < y) ? -1 : ((x > y) ?  1 : 0));
+	"scientific-asc": function ( a, b ) {
+		return ((a < b) ? -1 : ((a > b) ? 1 : 0));
 	},
 
 	"scientific-desc": function ( a, b ) {
-		var x = parseFloat(a);
-		var y = parseFloat(b);
-
-		return ((x < y) ? 1 : ((x > y) ?  -1 : 0));
+		return ((a < b) ? 1 : ((a > b) ? -1 : 0));
 	}
 } );

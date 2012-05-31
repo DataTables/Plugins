@@ -9,21 +9,16 @@
  */
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
-    "num-html-asc": function ( a, b ) {
-        var x = a.replace( /<.*?>/g, "" );
-        var y = b.replace( /<.*?>/g, "" );
-        x = parseFloat( x );
-        y = parseFloat( y );
+	"num-html-pre": function ( a ) {
+		var x = a.replace( /<.*?>/g, "" );
+		return parseFloat( x );
+	},
 
-        return ((x < y) ? -1 : ((x > y) ?  1 : 0));
-    },
+	"num-html-asc": function ( a, b ) {
+		return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+	},
 
-    "num-html-desc": function ( a, b ) {
-        var x = a.replace( /<.*?>/g, "" );
-        var y = b.replace( /<.*?>/g, "" );
-        x = parseFloat( x );
-        y = parseFloat( y );
-
-        return ((x < y) ?  1 : ((x > y) ? -1 : 0));
-    }
+	"num-html-desc": function ( a, b ) {
+		return ((a < b) ? 1 : ((a > b) ? -1 : 0));
+	}
 } );

@@ -32,18 +32,16 @@ function GetUniCode(source) {
 };
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
-	"pstring-asc": function ( a, b ) {
-		var x = GetUniCode(a.toLowerCase());
-		var y = GetUniCode(b.toLowerCase());
+	"pstring-pre": function ( a ) {
+		return GetUniCode(a.toLowerCase());
+	},
 
-		return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+	"pstring-asc": function ( a, b ) {
+		return ((a < b) ? -1 : ((a > b) ? 1 : 0));
 	},
 
 	"pstring-desc": function ( a, b ) {
-		var x = GetUniCode(a.toLowerCase());
-		var y = GetUniCode(b.toLowerCase());
-		
-		return ((x < y) ? 1 : ((x > y) ? -1 : 0));
+		return ((a < b) ? 1 : ((a > b) ? -1 : 0));
 	}
 } );
 

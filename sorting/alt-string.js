@@ -7,17 +7,15 @@
  */
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+	"alt-string-pre": function ( a ) {
+		return a.match(/alt="(.*?)"/)[1].toLowerCase();
+	},
+	
 	"alt-string-asc": function( a, b ) {
-		var x = a.match(/alt="(.*?)"/)[1].toLowerCase();
-		var y = b.match(/alt="(.*?)"/)[1].toLowerCase();
-
-		return ((x < y) ? -1 : ((x > y) ?  1 : 0));
+		return ((a < b) ? -1 : ((a > b) ? 1 : 0));
 	},
 
 	"alt-string-desc": function(a,b) {
-		var x = a.match(/alt="(.*?)"/)[1].toLowerCase();
-		var y = b.match(/alt="(.*?)"/)[1].toLowerCase();
-
-		return ((x < y) ?  1 : ((x > y) ? -1 : 0));
+		return ((a < b) ? 1 : ((a > b) ? -1 : 0));
 	}
 } );
