@@ -12,6 +12,10 @@ jQuery.fn.dataTableExt.aTypes.unshift(
 	{  
 		var sValidChars = "0123456789.-,";  
 		var Char;  
+
+		if ( typeof sData !== 'string' ) {
+			return null;
+		}
 		   
 		/* Check the numeric part */  
 		for ( i=1 ; i<sData.length ; i++ )   
