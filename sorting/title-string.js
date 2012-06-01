@@ -4,6 +4,7 @@
  * element. The only difference is that it is string based sorting rather than
  * numeric.
  *  @name Hidden title string sorting
+ *  @anchor hidden_title_string
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  */
 

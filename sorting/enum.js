@@ -4,6 +4,7 @@
  * by converting the works to a numerical value and then sorting based on that
  * value.
  *  @name enum
+ *  @anchor enum
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  */
 

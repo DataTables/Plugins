@@ -4,6 +4,7 @@
  * but in this case the returned array contains TR nodes of the matching rows,
  * rather than data indexes.
  *  @name fnFindCellRowNodes
+ *  @anchor fnFindCellRowNodes
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  *
  *  @example

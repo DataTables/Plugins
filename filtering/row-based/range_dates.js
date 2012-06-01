@@ -3,6 +3,7 @@
  * to change the id's on the inputs and the columns in which the start and 
  * end date exist.
  *  @name Range filtering (dates)
+ *  @anchor range_dates
  *  @author <i>guillimon</i>
  *
  *  @example

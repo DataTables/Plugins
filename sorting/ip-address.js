@@ -4,6 +4,7 @@
  * reporting information containing IP address. Also has a matching type 
  * detection plug-in for automatic type detection.
  *  @name IP addresses 
+ *  @anchor ip_address
  *  @author Brad Wasson
  */
 

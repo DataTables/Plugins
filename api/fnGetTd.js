@@ -5,6 +5,7 @@
  * taking into account hidden rows and columns. This function can be used to
  * overcome these difficulties.
  *  @name fnColumnIndexToVisible
+ *  @anchor fnColumnIndexToVisible
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  *
  *  @example

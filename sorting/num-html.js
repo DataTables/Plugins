@@ -5,6 +5,7 @@
  * plug-in has an equivalent type detection plug-in which can make integration
  * easier.
  *  @name Numbers with HTML
+ *  @anchor numbers_html
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  */
 

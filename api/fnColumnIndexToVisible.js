@@ -5,6 +5,7 @@
  * column index (i.e. all columns regardless of visibility) into a visible
  * column index.
  *  @name fnColumnIndexToVisible
+ *  @anchor fnColumnIndexToVisible
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  *
  *  @example

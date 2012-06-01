@@ -4,6 +4,7 @@
  * the data indexes (from DataTables' internal data store) for any rows which
  * match.
  *  @name fnFindCellRowIndexes
+ *  @anchor fnFindCellRowIndexes
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  *
  *  @example

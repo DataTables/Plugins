@@ -6,6 +6,7 @@
  * <i>Note</i>:To reload data when using server-side processing, just use the
  * built-inAPI function fnDraw rather than this plug-in.
  *  @name fnReloadAjax
+ *  @anchor fnReloadAjax
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  *
  *  @example

@@ -1,6 +1,7 @@
 /**
  * Sort numeric data which has a percent sign with it.
  *  @name Percentage
+ *  @anchor percentage
  *  @author <a href="http://jonathanromley.org/">Jonathan Romley</a>
  */
 

@@ -4,6 +4,7 @@
  * to include in your sorting order. This plug-in will strip the word "the"
  * from the start of a string and sort on what is left.
  *  @name Natural sorting
+ *  @anchor natrual
  *  @author <a href="http://www.overset.com/2008/09/01/javascript-natural-sort-algorithm/">Jim Palmer</a>
  */
 

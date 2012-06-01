@@ -4,6 +4,7 @@
  * to include in your sorting order. This plug-in will strip the word "the"
  * from the start of a string and sort on what is left.
  *  @name Month / year sorting
+ *  @anchor monthYear
  *  @author Michael Motek
  */
 

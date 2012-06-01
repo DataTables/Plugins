@@ -7,6 +7,7 @@
  * 'title' attribute of en empty span element (or anything else) to sort
  * numerically (for example <span title="1000000"><span>1'000'000).
  *  @name Hidden title numeric sorting
+ *  @anchor hidden_title
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  */
 

@@ -3,6 +3,7 @@
  * numbers, it does not accept positively signed numbers. This plug-in will
  * sort just such data numerically.
  *  @name Fully signed numbers sorting 
+ *  @anchor Signed_Numbers
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  */
 

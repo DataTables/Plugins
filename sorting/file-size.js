@@ -5,6 +5,7 @@
  * indicates of size into account. A counterpart type detection plug-in 
  * is also available.
  *  @name File size
+ *  @anchor file_size
  *  @author <i>anjibman</i>
  */
 

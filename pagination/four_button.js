@@ -3,6 +3,7 @@
  * or lots of buttons (forward, back, first, last and individual pages). This
  * plug-in meets the two in the middle providing navigation controls for forward, back, first and last.
  *  @name Four button navigation
+ *  @anchor four_button
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  *
  *  @example

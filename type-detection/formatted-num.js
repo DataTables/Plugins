@@ -6,6 +6,7 @@
  * be. Also note that the jQuery 1.7 method isNumeric is used, so jQuery 1.7
  * is required.
  *  @name Formatted numbers
+ *  @anchor formatted_numbers
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  */
 

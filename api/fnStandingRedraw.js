@@ -2,6 +2,7 @@
  * Redraw the table (i.e. fnDraw) to take account of sorting and filtering,
  * but retain the current pagination settings.
  *  @name fnStandingRedraw
+ *  @anchor fnStandingRedraw
  *  @author Jonathan Hoguet
  *
  *  @example

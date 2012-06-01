@@ -4,6 +4,7 @@
  * <b>Note</b> - this plug-in currently only operates correctly with 
  * <b>server-side processing</b>.
  *  @name fnFakeRowspan
+ *  @anchor fnFakeRowspan
  *  @author Fredrik Wendel
  *
  *  @example

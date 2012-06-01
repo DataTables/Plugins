@@ -7,6 +7,7 @@
  * indicating if the adjacent row retrieved should be the next (true, or no
  * value) or the previous (false).
  *  @name fnGetAdjacentTr
+ *  @anchor fnGetAdjacentTr
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  *
  *  @example

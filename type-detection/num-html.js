@@ -4,6 +4,7 @@
  * If it is, then the data can be sorted numerically with the Numbers with HTML
  * sorting plug-in.
  *  @name Numbers with HTML
+ *  @anchor numbers_html
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  */
 

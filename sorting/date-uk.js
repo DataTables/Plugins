@@ -5,7 +5,8 @@
  * dd/mm/yy.
  * 
  * An automatic type detection plug-in is available for this sorting plug-in.
- *  @name Date (dd/mm/YY) 
+ *  @name Date (dd/mm/YY)
+ *  @anchor date_uk
  *  @author Andy McMaster
  */
 

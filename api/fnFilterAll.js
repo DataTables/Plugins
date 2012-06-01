@@ -3,6 +3,7 @@
  * function call exactly matches that used by fnFilter() so regular expression
  * and individual column sorting can be used.
  *  @name fnFilterAll
+ *  @anchor fnFilterAll
  *  @author <a href="http://www.kmmtiming.se/">Kristoffer Karlström</a>
  *
  *  @example

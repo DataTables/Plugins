@@ -4,6 +4,7 @@
  * value for the column positions. This function converts the visible column
  * index into a data column index (i.e. all columns regardless of visibility).
  *  @name fnVisibleToColumnIndex
+ *  @anchor fnVisibleToColumnIndex
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  *
  *  @example

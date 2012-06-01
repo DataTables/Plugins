@@ -3,6 +3,7 @@
  * additional  flexibility with support for spaces between the values and
  * either . or / notation for the separators.
  *  @name Date (dd . mm[ . YYYY]) 
+ *  @anchor date_eu
  *  @author <a href="http://galjot.si/">Robert Sedovšek</a>
  */
 

@@ -2,6 +2,7 @@
  * This pagination plug-in provides a select menu with the list of the page
  * numbers that are available for viewing.
  *  @name Select list
+ *  @anchor listbox
  *  @author <i>jneilliii</i>
  *
  *  @example

@@ -2,6 +2,7 @@
  * Return an array of table values from a particular column, with various
  * filtering options.
  *  @name fnGetColumnData
+ *  @anchor fnGetColumnData
  *  @author <a href="http://mind2.de">Benedikt Forchhammer</a>
  *
  *  @example

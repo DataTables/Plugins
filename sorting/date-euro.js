@@ -4,6 +4,7 @@
  * also be quickly adapted for other formatting as required. Furthermore, this 
  * date sorting plug-in allows for empty values in the column.
  *  @name Date (dd/mm/YYY hh:ii:ss) 
+ *  @anchor date_euro
  *  @author <a href="http://coolforest.net/">Ronan Guilloux</a>
  */
 

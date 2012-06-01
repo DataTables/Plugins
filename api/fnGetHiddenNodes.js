@@ -2,6 +2,7 @@
  * Get a list of all TR nodes in the table which are not currently visible 
  * (useful for building forms).
  *  @name fnGetHiddenNodes
+ *  @anchor fnGetHiddenNodes
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  */
 

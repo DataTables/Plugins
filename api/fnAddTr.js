@@ -2,6 +2,7 @@
  * Take a TR element and add it to a DataTables table. Useful for maintaining
  * custom classes and other attributes.
  *  @name fnAddTr
+ *  @anchor fnAddTr
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  *
  *  @example

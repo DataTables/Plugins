@@ -3,6 +3,7 @@
  * numbers. Note that you will likely need to change the id's on the inputs
  * and the column in which the numeric value is given.
  *  @name Range filtering (numbers)
+ *  @anchor range_numbers
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  *
  *  @example

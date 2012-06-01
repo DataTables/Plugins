@@ -3,6 +3,7 @@
  * pagination styling with DataTables. Note that this plug-in uses the 
  * fnPagingInfo API plug-in method to obtain paging information.
  *  @name Twitter Bootstrap
+ *  @anchor bootstrap
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  *
  *  @example

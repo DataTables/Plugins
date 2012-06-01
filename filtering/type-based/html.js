@@ -7,6 +7,7 @@
  * default because it is slightly slower than the built-in method, which is
  * good enough for by far the majority of use cases.
  *  @name html
+ *  @anchor html_column
  *  @author <i>guillimon</i>
  *
  *  @example

@@ -2,6 +2,7 @@
  * Enables filtration delay for keeping the browser more responsive while 
  * searching for a longer keyword.
  *  @name fnSetFilteringDelay
+ *  @anchor fnSetFilteringDelay
  *  @author <a href="http://www.zygimantas.com/">Zygimantas Berziunas</a>, <a href="http://www.sprymedia.co.uk/">Allan Jardine</a> and <i>vex</i>
  *
  *  @example

@@ -5,6 +5,7 @@
  * pass in an object with the key/value pair being the column you wish to
  * search on, and the value you wish to search for.
  *  @name fnMultiFilter
+ *  @anchor fnMultiFilter
  *  @author <i>mrkevans</i>
  *
  *  @example

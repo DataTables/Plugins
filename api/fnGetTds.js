@@ -2,6 +2,7 @@
  * Get an array of TD nodes from DataTables for a given row, including any 
  * column elements which are hidden.
  *  @name fnGetTds
+ *  @anchor fnGetTds
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  *
  *  @example

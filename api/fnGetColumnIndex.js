@@ -5,6 +5,7 @@
  * will match a given string to the title of a column in the table and return
  * the column index, helping to overcome this problem.
  *  @name fnGetColumnIndex
+ *  @anchor fnGetColumnIndex
  *  @author <a href="http://www.rosstechassociates.com/">Michael Ross</a>
  *
  *  @example

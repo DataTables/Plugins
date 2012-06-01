@@ -1,6 +1,7 @@
 /**
  * Take a TR element and alter the table's paging to show the TR in question.
  *  @name fnDisplayRow
+ *  @anchor fnDisplayRow
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  *
  *  @example

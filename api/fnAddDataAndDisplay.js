@@ -7,6 +7,7 @@
  * exception, it will only take a 1D array or an object, and not a 2D array
  * (i.e. it will not add multiple rows like fnAddData).
  *  @name fnAddDataAndDisplay
+ *  @anchor fnAddDataAndDisplay
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  *
  *  @example

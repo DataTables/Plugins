@@ -2,6 +2,7 @@
  * Update the internal data for a TR element based on what is used in the 
  * DOM. You will likely want to call fnDraw() after this function.
  *  @name fnColumnIndexToVisible
+ *  @anchor fnColumnIndexToVisible
  *  @author Lior Gerson
  *
  *  @example

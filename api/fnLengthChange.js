@@ -2,6 +2,7 @@
  * Change the number of records that can be viewed on a single page in 
  * DataTables.
  *  @name fnColumnIndexToVisible
+ *  @anchor fnColumnIndexToVisible
  *  @author <a href="http://www.webdetails.pt/">Pedro Alves</a>
  *
  *  @example

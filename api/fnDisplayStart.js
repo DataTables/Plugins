@@ -2,6 +2,7 @@
  * Set the point at which DataTables will start it's display of data in the
  * table.
  *  @name fnDisplayStart
+ *  @anchor fnDisplayStart
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  *
  *  @example

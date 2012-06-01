@@ -3,6 +3,7 @@
  * you have a column of images (ticks and crosses for example) and you want to
  * control the sorting using the alt tag.
  *  @name Alt string
+ *  @anchor alt
  *  @author <i>Jumpy</i>
  */
 

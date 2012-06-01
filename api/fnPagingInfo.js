@@ -3,6 +3,7 @@
  * using to display each page, including the number of records shown, start
  * and end points in the data set etc.
  *  @name fnPagingInfo
+ *  @anchor fnPagingInfo
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  *
  *  @example

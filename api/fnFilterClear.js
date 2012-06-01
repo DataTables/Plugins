@@ -2,6 +2,7 @@
  * Remove all filtering that has been applied to a DataTable, be it column
  * based filtering or global filtering.
  *  @name fnFilterClear
+ *  @anchor fnFilterClear
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  *
  *  @example

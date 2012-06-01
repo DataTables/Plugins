@@ -3,6 +3,7 @@
  * characters - for which special consideration must be made. This plug-in 
  * performs correct sorting on Persian characters.
  *  @name Persian
+ *  @anchor Persian
  *  @author <a href="http://www.afshinblog.com/">Afshin Mehrabani</a>
  */
 

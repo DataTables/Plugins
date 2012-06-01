@@ -4,6 +4,7 @@
  * multiple times for each event, each draw progressing by one row until the
  * required point in the table is reached.
  *  @name Scrolling navigation
+ *  @anchor scrolling
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  *
  *  @example

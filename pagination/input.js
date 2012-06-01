@@ -5,6 +5,7 @@
  * for), and four standard navigation buttons are also presented to the end
  * user.
  *  @name Navigation with text input
+ *  @anchor text_input
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  *
  *  @example

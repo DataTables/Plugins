@@ -4,6 +4,7 @@
  * sorting by adding the type 'numeric-comma' to DataTables. A type detection 
  * plug-in for this sorting method is provided below.
  *  @name Commas for decimal place
+ *  @anchor numeric_comma
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  */
 

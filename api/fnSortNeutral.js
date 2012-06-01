@@ -6,6 +6,7 @@
  * after sorting has already occurred - which is exactly what this function
  * does.
  *  @name fnSortNeutral
+ *  @anchor fnSortNeutral
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  *
  *  @example

@@ -3,6 +3,7 @@
  * keypress, and replaces with it the requirement to press the enter key to
  * perform the filter.
  *  @name fnFilterOnReturn
+ *  @anchor fnFilterOnReturn
  *  @author <a href="http://www.mvccms.com/">Jon Ranes</a>
  *
  *  @example

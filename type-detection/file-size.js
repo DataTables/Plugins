@@ -3,6 +3,7 @@
  * file sizes, this can allow sorting to take the order of magnitude indicated
  * by the label (GB etc) into account.
  *  @name File size
+ *  @anchor file_size
  *  @author <i>anjibman</i>
  */
 

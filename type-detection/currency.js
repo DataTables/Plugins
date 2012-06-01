@@ -4,6 +4,7 @@
  * but it is trivial to add more or change the current ones. This is best used
  * in conjunction with the currency sorting plug-in.
  *  @name Currency
+ *  @anchor currency
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  */
 

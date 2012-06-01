@@ -2,6 +2,7 @@
  * Automatically detect numbers which use a comma in the place of a decimal 
  * point to allow them to be sorted numerically.
  *  @name Commas for decimal place
+ *  @anchor numeric_comma
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  */
 
