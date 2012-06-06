@@ -125,6 +125,9 @@ if ( $.fn.DataTable.TableTools ) {
 				"normal": "",
 				"disabled": "disabled"
 			}
+		},
+		"print": {
+			"info": "DTTT_print_info modal"
 		}
 	} );
 
