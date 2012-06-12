@@ -5,34 +5,30 @@
  * in conjunction with the currency sorting plug-in.
  *  @name Currency
  *  @anchor currency
- *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
+ *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>, Nuno Gomes
  */
 
-jQuery.fn.dataTableExt.aTypes.unshift(  
-	function ( sData )  
-	{  
-		var sValidChars = "0123456789.-,";  
-		var Char;  
+jQuery.fn.dataTableExt.aTypes.unshift(
+   function ( sData )
+	{
+		var sValidChars = "0123456789.-,";
+		var sValidSymbols = "$£€";
+		var c;
+		var symbolMatch = false;
 
-		if ( typeof sData !== 'string' ) {
+		if ( sValidSymbols.indexOf( sData.charAt(0) ) === -1 ) {
 			return null;
 		}
-		   
-		/* Check the numeric part */  
-		for ( i=1 ; i<sData.length ; i++ )   
-		{   
-			Char = sData.charAt(i);   
-			if (sValidChars.indexOf(Char) == -1)   
-			{  
-				return null;  
-			}  
-		}  
-		   
-		/* Check prefixed by currency */  
-		if ( sData.charAt(0) == '$' || sData.charAt(0) == '£' )  
-		{  
-			return 'currency';  
-		}  
-		return null;  
-	}  
+
+		for ( i=1 ; i<sData.length ; i++ ) {
+			// check for valid chars
+			c = sData.charAt(i);
+			if (sValidChars.indexOf(c) === -1) {
+				return null;
+			}
+		}
+
+		// currency detected
+		return 'currency';
+	}
 );
