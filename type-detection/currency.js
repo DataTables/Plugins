@@ -8,27 +8,27 @@
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>, Nuno Gomes
  */
 
-jQuery.fn.dataTableExt.aTypes.unshift(
-   function ( sData )
-	{
-		var sValidChars = "0123456789.-,";
-		var sValidSymbols = "$£€";
-		var c;
-		var symbolMatch = false;
+(function(){
 
-		if ( sValidSymbols.indexOf( sData.charAt(0) ) === -1 ) {
+// Change this list to the valid characters you want
+var validChars = "$£€c" + "0123456789" + ".-,'";
+
+// Init the regex just once for speed - it is "closure locked"
+var
+	str = jQuery.fn.dataTableExt.oApi._fnEscapeRegex( validChars ),
+	re = new RegExp('[^'+str+']');
+
+
+jQuery.fn.dataTableExt.aTypes.unshift(
+   function ( data )
+	{
+		if ( typeof data !== 'string' || re.test(data) ) {
 			return null;
 		}
 
-		for ( i=1 ; i<sData.length ; i++ ) {
-			// check for valid chars
-			c = sData.charAt(i);
-			if (sValidChars.indexOf(c) === -1) {
-				return null;
-			}
-		}
-
-		// currency detected
 		return 'currency';
 	}
 );
+
+}());
+
