@@ -9,7 +9,7 @@
  *    
  */
 
-jQUery.fn.dataTableExt.oApi.fnGetColumnData = function ( oSettings, iColumn, bUnique, bFiltered, bIgnoreEmpty ) {
+jQuery.fn.dataTableExt.oApi.fnGetColumnData = function ( oSettings, iColumn, bUnique, bFiltered, bIgnoreEmpty ) {
 	// check that we have a column id
 	if ( typeof iColumn == "undefined" ) return [];
 	 
