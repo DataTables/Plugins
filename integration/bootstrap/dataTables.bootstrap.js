@@ -117,7 +117,7 @@ if ( $.fn.DataTable.TableTools ) {
 		"container": "btn-group",
 		"buttons": {
 			"normal": "btn",
-			"disabled": "btn disabled"
+			"disabled": "disabled"
 		},
 		"collection": {
 			"container": "DTTT_dropdown dropdown-menu",
