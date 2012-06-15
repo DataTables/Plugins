@@ -50,6 +50,36 @@ table.dataTable th:active {
 /*
  * TableTools styles
  */
+.table tbody tr.active td,
+.table tbody tr.active th {
+	background-color: #08C;
+	color: white;
+}
+
+.table tbody tr.active:hover td,
+.table tbody tr.active:hover th {
+	background-color: #0075b0 !important;
+}
+
+.table-striped tbody tr.active:nth-child(odd) td,
+.table-striped tbody tr.active:nth-child(odd) th {
+	background-color: #017ebc;
+}
+
+table.DTTT_selectable tbody tr {
+	cursor: pointer;
+	*cursor: hand;
+}
+
+div.DTTT .btn {
+	color: #333 !important;
+}
+
+div.DTTT .btn:hover {
+	text-decoration: none !important;
+}
+
+
 ul.DTTT_dropdown.dropdown-menu a {
 	color: #333 !important; /* needed only when demo_page.css is included */
 }

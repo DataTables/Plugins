@@ -114,7 +114,7 @@ $.extend( $.fn.dataTableExt.oPagination, {
 if ( $.fn.DataTable.TableTools ) {
 	// Set the classes that TableTools uses to something suitable for Bootstrap
 	$.extend( true, $.fn.DataTable.TableTools.classes, {
-		"container": "btn-group",
+		"container": "DTTT btn-group",
 		"buttons": {
 			"normal": "btn",
 			"disabled": "disabled"
@@ -128,6 +128,9 @@ if ( $.fn.DataTable.TableTools ) {
 		},
 		"print": {
 			"info": "DTTT_print_info modal"
+		},
+		"select": {
+			"row": "active"
 		}
 	} );
 
