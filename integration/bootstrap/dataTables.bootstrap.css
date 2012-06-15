@@ -73,6 +73,7 @@ table.DTTT_selectable tbody tr {
 
 div.DTTT .btn {
 	color: #333 !important;
+	font-size: 0.9em;
 }
 
 div.DTTT .btn:hover {
