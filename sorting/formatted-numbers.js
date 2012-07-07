@@ -8,16 +8,16 @@
  */
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
-	"formatted_numbers-pre": function ( a ) {
+	"formatted-num-pre": function ( a ) {
 		a = (a==="-") ? 0 : a.replace( /[^\d\-\.]/g, "" );
 		return parseFloat( a );
 	},
 
-	"formatted_numbers-asc": function ( a, b ) {
+	"formatted-num-asc": function ( a, b ) {
 		return a - b;
 	},
 
-	"formatted_numbers-desc": function ( a, b ) {
+	"formatted-num-desc": function ( a, b ) {
 		return b - a;
 	}
 } );
