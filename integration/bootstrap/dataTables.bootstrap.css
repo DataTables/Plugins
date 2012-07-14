@@ -143,6 +143,8 @@ div.DTTT_print_info p {
 /*
  * FixedColumns styles
  */
+div.DTFC_LeftHeadWrapper table,
+div.DTFC_LeftFootWrapper table,
 table.DTFC_Cloned tr.even {
 	background-color: white;
 }
