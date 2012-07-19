@@ -1,8 +1,10 @@
 /**
- * Often a list of data which has titles in it (books, albums etc) will have
- * the word "the" at the start of some individual titles, which you don't want
- * to include in your sorting order. This plug-in will strip the word "the"
- * from the start of a string and sort on what is left.
+ * Data can often be a complicated mix of numbers and letters (file names
+ * are a common example) and sorting them in a natural manner is quite a
+ * difficult problem. Fortunately a deal of work has already been done in
+ * this area by other authors - the following plug-in uses the naturalSort()
+ * function by Jim Palmer (<a href="http://www.overset.com/2008/09/01/javascript-natural-sort-algorithm-with-unicode-support/">download it here</a>)
+ * to provide natural sorting in DataTables.
  *  @name Natural sorting
  *  @anchor natrual
  *  @author <a href="http://www.overset.com/2008/09/01/javascript-natural-sort-algorithm/">Jim Palmer</a>

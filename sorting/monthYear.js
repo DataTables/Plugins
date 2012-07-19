@@ -1,16 +1,16 @@
 /**
- * Often a list of data which has titles in it (books, albums etc) will have
- * the word "the" at the start of some individual titles, which you don't want
- * to include in your sorting order. This plug-in will strip the word "the"
- * from the start of a string and sort on what is left.
+ * This sorting plug-in will sort, in calendar order, data which
+ * is in the format "MM YY".
  *  @name Month / year sorting
  *  @anchor monthYear
  *  @author Michael Motek
  */
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
-	"monthYear-pre": function ( a ) {
-		return new Date('01 '+a);
+	"monthYear-pre": function ( s ) {
+		var a = s.split(' ');
+		// Date uses the American "MM DD YY" format
+		return new Date(a[0]+' 01 '+a[1]);
 	},
 
 	"monthYear-asc": function ( a, b ) {
