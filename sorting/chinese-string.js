@@ -2,7 +2,7 @@
  * Sorting in Javascript for Chinese Character. The Chinese Characters are sorted on the radical and number of 
  * strokes. This plug-in  performs  sorting for Chinese characters.
  * <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String/localeCompare">localeCompare MDC documentation</a>. 
- * <a href="http://www.datatables.net/forums/discussion/9700/sorting-non-ascii-characters-and-data-content-html-tag-sorting/p1">Please also note about localeCompare and IE9.</a>
+ * Please also see <a href="http://www.datatables.net/forums/discussion/9700/sorting-non-ascii-characters-and-data-content-html-tag-sorting/p1">note about localeCompare and IE9</a>.
  *  @name Chinese (string)
  *  @anchor chinese-string
  *  @author <a href="http://www.lcube.se/sorting-chinese-characters-in-javascript/">Patrik Lindstr�m</a>
