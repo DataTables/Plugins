@@ -24,6 +24,7 @@ div.dataTables_paginate {
 table.table {
 	clear: both;
 	margin-bottom: 6px !important;
+	max-width: none !important;
 }
 
 table.table thead .sorting,
