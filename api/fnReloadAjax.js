@@ -44,13 +44,14 @@ $.fn.dataTableExt.oApi.fnReloadAjax = function ( oSettings, sNewSource, fnCallba
 		}
 		 
 		oSettings.aiDisplay = oSettings.aiDisplayMaster.slice();
-		that.fnDraw();
 		 
 		if ( typeof bStandingRedraw != 'undefined' && bStandingRedraw === true )
 		{
 			oSettings._iDisplayStart = iStart;
 			that.fnDraw( false );
 		}
+		else
+			that.fnDraw();
 		 
 		that.oApi._fnProcessingDisplay( oSettings, false );
 		 
