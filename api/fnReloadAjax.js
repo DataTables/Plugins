@@ -30,7 +30,7 @@ $.fn.dataTableExt.oApi.fnReloadAjax = function ( oSettings, sNewSource, fnCallba
  
 	this.oApi._fnServerParams( oSettings, aData );
 	 
-	oSettings.fnServerData( oSettings.sAjaxSource, aData, function(json) {
+	oSettings.fnServerData.call( oSettings.oInstance, oSettings.sAjaxSource, aData, function(json) {
 		/* Clear the old information from the table */
 		that.oApi._fnClearTable( oSettings );
 		 
