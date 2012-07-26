@@ -51,7 +51,9 @@ $.fn.dataTableExt.oApi.fnReloadAjax = function ( oSettings, sNewSource, fnCallba
 			that.fnDraw( false );
 		}
 		else
+		{
 			that.fnDraw();
+		}
 		 
 		that.oApi._fnProcessingDisplay( oSettings, false );
 		 
