@@ -30,7 +30,7 @@ $.fn.dataTableExt.oApi.fnReloadAjax = function ( oSettings, sNewSource, fnCallba
  
 	this.oApi._fnServerParams( oSettings, aData );
 	 
-	oSettings.fnServerData( oSettings.sAjaxSource, aData, function(json) {
+	oSettings.fnServerData.call( oSettings.oInstance, oSettings.sAjaxSource, aData, function(json) {
 		/* Clear the old information from the table */
 		that.oApi._fnClearTable( oSettings );
 		 
@@ -44,12 +44,15 @@ $.fn.dataTableExt.oApi.fnReloadAjax = function ( oSettings, sNewSource, fnCallba
 		}
 		 
 		oSettings.aiDisplay = oSettings.aiDisplayMaster.slice();
-		that.fnDraw();
 		 
 		if ( typeof bStandingRedraw != 'undefined' && bStandingRedraw === true )
 		{
 			oSettings._iDisplayStart = iStart;
 			that.fnDraw( false );
+		}
+		else
+		{
+			that.fnDraw();
 		}
 		 
 		that.oApi._fnProcessingDisplay( oSettings, false );
