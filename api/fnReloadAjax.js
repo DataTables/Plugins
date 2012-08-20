@@ -3,8 +3,6 @@
  * time, however it can be useful to re-read an Ajax source and have the table
  * update. Typically you would need to use the fnClearTable() and fnAddData()
  * functions, however this wraps it all up in a single function call.
- * <i>Note</i>:To reload data when using server-side processing, just use the
- * built-inAPI function fnDraw rather than this plug-in.
  *  @name fnReloadAjax
  *  @anchor fnReloadAjax
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
@@ -19,10 +17,16 @@
 
 $.fn.dataTableExt.oApi.fnReloadAjax = function ( oSettings, sNewSource, fnCallback, bStandingRedraw )
 {
-	if ( typeof sNewSource != 'undefined' && sNewSource != null )
-	{
+	if ( typeof sNewSource != 'undefined' && sNewSource != null ) {
 		oSettings.sAjaxSource = sNewSource;
 	}
+
+	// Server-side processing should just call fnDraw
+	if ( oSettings.oFeatures.bServerSide ) {
+		this.fnDraw();
+		return;
+	}
+
 	this.oApi._fnProcessingDisplay( oSettings, true );
 	var that = this;
 	var iStart = oSettings._iDisplayStart;
