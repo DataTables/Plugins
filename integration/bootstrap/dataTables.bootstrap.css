@@ -115,6 +115,10 @@ ul.DTTT_dropdown.dropdown-menu a {
 	color: #333 !important; /* needed only when demo_page.css is included */
 }
 
+ul.DTTT_dropdown.dropdown-menu li {
+	position: relative;
+}
+
 ul.DTTT_dropdown.dropdown-menu li:hover a {
 	background-color: #0088cc;
 	color: white !important;
