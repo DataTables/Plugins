@@ -2,29 +2,31 @@
  * Spanish translation
  *  @name Spanish
  *  @anchor Spanish
- *  @author Giovanni Ariza
+ *  @author Giovanni Ariza & Aristobulo Gomez
  */
 
 {
-	"sEmptyTable":     "No data available in table",
-	"sInfo":           "Mostrando desde _START_ hasta _END_ de _TOTAL_ registros",
-	"sInfoEmpty":      "Mostrando desde 0 hasta 0 de 0 registros",
-	"sInfoFiltered":   "(filtrado de _MAX_ registros en total)",
-	"sInfoPostFix":    "",
-	"sInfoThousands":  ",",
-	"sLengthMenu":     "Mostrar _MENU_ registros",
-	"sLoadingRecords": "Cargando...",
 	"sProcessing":     "Procesando...",
-	"sSearch":         "Buscar:",
+	"sLengthMenu":     "Mostrar _MENU_ registros",
 	"sZeroRecords":    "No se encontraron resultados",
+	"sEmptyTable":     "Ningún dato disponible en esta tabla",
+	"sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+	"sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+	"sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+	"sInfoPostFix":    "",
+	"sSearch":         "Buscar:",
+	"sUrl":            "",
+	"sInfoThousands":  ",",
+	"sLoadingRecords": "Cargando...",
 	"oPaginate": {
 		"sFirst":    "Primero",
 		"sLast":     "Último",
 		"sNext":     "Siguiente",
 		"sPrevious": "Anterior"
 	},
+	"fnInfoCallback": null,
 	"oAria": {
-		"sSortAscending":  ": activar para Ordenar Ascendentemente",
-		"sSortDescending": ": activar para Ordendar Descendentemente"
+		"sSortAscending":  ": Activar para ordernar la columna de manera ascendente",
+		"sSortDescending": ": Activar para ordernar la columna de manera descendente"
 	}
 }
