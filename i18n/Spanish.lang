@@ -2,7 +2,7 @@
  * Spanish translation
  *  @name Spanish
  *  @anchor Spanish
- *  @author Giovanni Ariza & Aristobulo Gomez
+ *  @author Giovanni Ariza, Aristobulo Gomez and Roberto Poo
  */
 
 {
@@ -24,9 +24,8 @@
 		"sNext":     "Siguiente",
 		"sPrevious": "Anterior"
 	},
-	"fnInfoCallback": null,
 	"oAria": {
-		"sSortAscending":  ": Activar para ordernar la columna de manera ascendente",
-		"sSortDescending": ": Activar para ordernar la columna de manera descendente"
+		"sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+		"sSortDescending": ": Activar para ordenar la columna de manera descendente"
 	}
 }
