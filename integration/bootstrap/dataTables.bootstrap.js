@@ -75,20 +75,33 @@ $.extend( $.fn.dataTableExt.oPagination, {
 				iEnd = iStart + iListLength - 1;
 			}
 
+			var append_page = function(oPaging, an, j) {
+				sClass = (j==oPaging.iPage+1) ? 'class="active"' : '';
+				$('<li '+sClass+'><a href="#">'+j+'</a></li>')
+					.insertBefore( $('li:last', an[i])[0] )
+					.bind('click', function (e) {
+						e.preventDefault();
+						oSettings._iDisplayStart = (parseInt($('a', this).text(),10)-1) * oPaging.iLength;
+						fnDraw( oSettings );
+					} );
+			};
+
 			for ( i=0, ien=an.length ; i<ien ; i++ ) {
 				// Remove the middle elements
 				$('li:gt(0)', an[i]).filter(':not(:last)').remove();
 
+				
+				// Append first page
+				if ( iStart > 1 ) {
+					append_page(oPaging, an, 1);
+				}
 				// Add the new list items and their event handlers
 				for ( j=iStart ; j<=iEnd ; j++ ) {
-					sClass = (j==oPaging.iPage+1) ? 'class="active"' : '';
-					$('<li '+sClass+'><a href="#">'+j+'</a></li>')
-						.insertBefore( $('li:last', an[i])[0] )
-						.bind('click', function (e) {
-							e.preventDefault();
-							oSettings._iDisplayStart = (parseInt($('a', this).text(),10)-1) * oPaging.iLength;
-							fnDraw( oSettings );
-						} );
+					append_page(oPaging, an, j);
+				}
+				// Append last page
+				if ( oPaging.iTotalPages > iEnd ) {
+					append_page(oPaging, an, oPaging.iTotalPages);
 				}
 
 				// Add / remove disabled classes from the static elements
