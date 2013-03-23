@@ -2,23 +2,29 @@
  * Slovenian translation
  *  @name Slovenian
  *  @anchor Slovenian
- *  @author Marko Kroflic, and Blaž Brenčič
+ *  @author Marko Kroflic, Blaž Brenčič and Andrej Florjančič
  */
 
 {
-	"sProcessing":   "Obdelujem...",
-	"sLengthMenu":   "Prikaži _MENU_ zapisov",
-	"sZeroRecords":  "Noben zapis ni bil najden",
-	"sInfo":         "Prikazanih od _START_ do _END_ od skupno _TOTAL_ zapisov",
-	"sInfoEmpty":    "Prikazanih od 0 do 0 od skupno 0 zapisov",
-	"sInfoFiltered": "(filtrirano po vseh _MAX_ zapisih)",
-	"sInfoPostFix":  "",
-	"sSearch":       "Išči:",
-	"sUrl":          "",
+	"sEmptyTable": "Nobenih podatkov ni na voljo",
+	"sInfo": "Prikazujem _START_ do _END_ od _TOTAL_ zapisov",
+	"sInfoEmpty": "Prikazujem 0 do 0 od 0 zapisov",
+	"sInfoFiltered": "(filtrirano od _MAX_ vseh zapisov)",
+	"sInfoPostFix": "",
+	"sInfoThousands": ",",
+	"sLengthMenu": "Prikaži _MENU_ zapisov",
+	"sLoadingRecords": "Nalagam...",
+	"sProcessing": "Obdelujem...",
+	"sSearch": "Išči:",
+	"sZeroRecords": "Nobeden zapis ne ustreza",
 	"oPaginate": {
-		"sFirst":    "Prva",
-		"sPrevious": "Nazaj",
-		"sNext":     "Naprej",
-		"sLast":     "Zadnja"
+		"sFirst": "Prvi",
+		"sLast": "Zadnji",
+		"sNext": "Nasl.",
+		"sPrevious": "Pred."
+	},
+	"oAria": {
+		"sSortAscending": ": vključite za naraščujoči sort",
+		"sSortDescending": ": vključite za padajoči sort"
 	}
 }
