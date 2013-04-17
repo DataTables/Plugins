@@ -1,13 +1,12 @@
 /*
- * This plug-in adds another pagination option called ellipses.
- * This will render the pagination control similar to the full_numbers option,
- * except it will add ellipses around the page numbers when applicable.
+ * This plug-in adds another pagination option similar to full_numbers,
+ * except it adds ellipses around the page numbers when applicable.
  * You can set how many page numbers should be displayed with the iShowPages option.
- * This plug-in also extends the oClasses object with the following properties:
+ * This plug-in extends the oStdClasses object with the following properties:
  * sPageEllipsis, sPageNumber and sPageNumbers.
- * Finally, this plug-in extends the oSettings object with the following properties:
- * _iShowPages, _iCurrentPage, _iTotalPages, _iShowPagesHalf, _iFirstPage and _iLastPage.
- * 
+ * It also extends the oSettings object with the following properties:
+ * _iShowPages, _iShowPagesHalf, _iCurrentPage, _iTotalPages, _iFirstPage and _iLastPage.
+ *
  * @name Ellipses
  * @anchor ellipses
  * @author <a href="http://daveden.wordpress.com/">Dave Kennedy</a>
@@ -15,11 +14,13 @@
  *     $('#my-table').dataTable({
  *         // Optional usage of extended oSettings object
  *         'fnInfoCallback': function(oSettings) {
+ *             // Update stateful properties
+ *             $.fn.dataTableExt.oPagination.ellipses.fnUpdateState(oSettings);
  *             return 'Viewing page ' + oSettings._iCurrentPage + ' of ' + oSettings._iTotalPages;
  *         },
  *         // Optional usage of iShowPages option
  *         'iShowPages': 15,
- *         // This is the only required line
+ *         // This is the only required option
  *         'sPaginationType': 'ellipses'
  *     });
  */
@@ -30,13 +31,10 @@ $.extend($.fn.dataTableExt.oStdClasses, {
     'sPageNumbers': 'paginate_numbers'
 });
 
-$.extend($.fn.dataTableExt.oJUIClasses, {
-    'sPageEllipsis': 'paginate_ellipsis',
-    'sPageNumber': 'paginate_number',
-    'sPageNumbers': 'paginate_numbers'
-});
-
 $.fn.dataTableExt.oPagination.ellipses = {
+    'oDefaults': {
+        'iShowPages': 5
+    },
     'fnClickHandler': function(e) {
         var fnCallbackDraw = e.data.fnCallbackDraw,
             oSettings = e.data.oSettings,
@@ -48,105 +46,112 @@ $.fn.dataTableExt.oPagination.ellipses = {
 
         oSettings.oApi._fnPageChange(oSettings, sPage);
         fnCallbackDraw(oSettings);
+
         return true;
     },
+    // fnInit is called once for each instance of pager
     'fnInit': function(oSettings, nPager, fnCallbackDraw) {
         var oClasses = oSettings.oClasses,
             oLang = oSettings.oLanguage.oPaginate,
             that = this;
 
-        this.nPager = $(nPager);
+        var iShowPages = oSettings.oInit.iShowPages || this.oDefaults.iShowPages,
+            iShowPagesHalf = Math.floor(iShowPages / 2);
 
-        this.nFirst = $('<a class="' + oClasses.sPageButton + ' ' + oClasses.sPageFirst + '">' + oLang.sFirst + '</a>');
-        this.nPrevious = $('<a class="' + oClasses.sPageButton + ' ' + oClasses.sPagePrevious + '">' + oLang.sPrevious + '</a>');
-        this.nNext = $('<a class="' + oClasses.sPageButton + ' ' + oClasses.sPageNext + '">' + oLang.sNext + '</a>');
-        this.nLast = $('<a class="' + oClasses.sPageButton + ' ' + oClasses.sPageLast + '">' + oLang.sLast + '</a>');
+        $.extend(oSettings, {
+            _iShowPages: iShowPages,
+            _iShowPagesHalf: iShowPagesHalf,
+        });
 
-        this.nFirst.click({ 'fnCallbackDraw': fnCallbackDraw, 'oSettings': oSettings, 'sPage': 'first' }, that.fnClickHandler);
-        this.nPrevious.click({ 'fnCallbackDraw': fnCallbackDraw, 'oSettings': oSettings, 'sPage': 'previous' }, that.fnClickHandler);
-        this.nNext.click({ 'fnCallbackDraw': fnCallbackDraw, 'oSettings': oSettings, 'sPage': 'next' }, that.fnClickHandler);
-        this.nLast.click({ 'fnCallbackDraw': fnCallbackDraw, 'oSettings': oSettings, 'sPage': 'last' }, that.fnClickHandler);
+        var oFirst = $('<a class="' + oClasses.sPageButton + ' ' + oClasses.sPageFirst + '">' + oLang.sFirst + '</a>'),
+            oPrevious = $('<a class="' + oClasses.sPageButton + ' ' + oClasses.sPagePrevious + '">' + oLang.sPrevious + '</a>'),
+            oNumbers = $('<span class="' + oClasses.sPageNumbers + '"></span>'),
+            oNext = $('<a class="' + oClasses.sPageButton + ' ' + oClasses.sPageNext + '">' + oLang.sNext + '</a>'),
+            oLast = $('<a class="' + oClasses.sPageButton + ' ' + oClasses.sPageLast + '">' + oLang.sLast + '</a>');
 
-        this.nNumbers = $('<span class="' + oClasses.sPageNumbers + '"></span>');
+        oFirst.click({ 'fnCallbackDraw': fnCallbackDraw, 'oSettings': oSettings, 'sPage': 'first' }, that.fnClickHandler);
+        oPrevious.click({ 'fnCallbackDraw': fnCallbackDraw, 'oSettings': oSettings, 'sPage': 'previous' }, that.fnClickHandler);
+        oNext.click({ 'fnCallbackDraw': fnCallbackDraw, 'oSettings': oSettings, 'sPage': 'next' }, that.fnClickHandler);
+        oLast.click({ 'fnCallbackDraw': fnCallbackDraw, 'oSettings': oSettings, 'sPage': 'last' }, that.fnClickHandler);
 
-        // Render
-        this.nPager.append(this.nFirst, this.nPrevious, this.nNumbers, this.nNext, this.nLast);
+        // Draw
+        $(nPager).append(oFirst, oPrevious, oNumbers, oNext, oLast);
     },
+    // fnUpdate is only called once while table is rendered
     'fnUpdate': function(oSettings, fnCallbackDraw) {
         var oClasses = oSettings.oClasses,
             that = this;
 
-        // If iShowPages wasn't included in initialisation options,
-        // use default value in global object
-        var iShowPages = oSettings.oInit.iShowPages || 5;
+        // Update stateful properties
+        this.fnUpdateState(oSettings);
 
+        if (oSettings._iCurrentPage === 1) {
+            $('.' + oClasses.sPageFirst).attr('disabled', true);
+            $('.' + oClasses.sPagePrevious).attr('disabled', true);
+        } else {
+            $('.' + oClasses.sPageFirst).removeAttr('disabled');
+            $('.' + oClasses.sPagePrevious).removeAttr('disabled');
+        }
+
+        if (oSettings._iCurrentPage === oSettings._iTotalPages) {
+            $('.' + oClasses.sPageNext).attr('disabled', true);
+            $('.' + oClasses.sPageLast).attr('disabled', true);
+        } else {
+            $('.' + oClasses.sPageNext).removeAttr('disabled');
+            $('.' + oClasses.sPageLast).removeAttr('disabled');
+        }
+
+        var i, oNumber, oNumbers = $('.' + oClasses.sPageNumbers);
+
+        // Erase
+        oNumbers.html('');
+
+        for (i = oSettings._iFirstPage; i <= oSettings._iLastPage; i++) {
+            oNumber = $('<a class="' + oClasses.sPageButton + ' ' + oClasses.sPageNumber + '">' + oSettings.fnFormatNumber(i) + '</a>');
+
+            if (oSettings._iCurrentPage === i) {
+                oNumber.attr('active', true).attr('disabled', true);
+            } else {
+                oNumber.click({ 'fnCallbackDraw': fnCallbackDraw, 'oSettings': oSettings, 'sPage': i - 1 }, that.fnClickHandler);
+            }
+
+            // Draw
+            oNumbers.append(oNumber);
+        }
+
+        // Add ellipses
+        if (1 < oSettings._iFirstPage) {
+            oNumbers.prepend('<span class="' + oClasses.sPageEllipsis + '">...</span>');
+        }
+
+        if (oSettings._iLastPage < oSettings._iTotalPages) {
+            oNumbers.append('<span class="' + oClasses.sPageEllipsis + '">...</span>');
+        }
+    },
+    // fnUpdateState used to be part of fnUpdate
+    // The reason for moving is so we can access current state info before fnUpdate is called
+    'fnUpdateState': function(oSettings) {
         var iCurrentPage = Math.ceil((oSettings._iDisplayStart + 1) / oSettings._iDisplayLength),
             iTotalPages = Math.ceil(oSettings.fnRecordsTotal() / oSettings._iDisplayLength),
-            iShowPagesHalf = Math.floor(iShowPages / 2),
-            iFirstPage = iCurrentPage - iShowPagesHalf,
-            iLastPage = iCurrentPage + iShowPagesHalf;
+            iFirstPage = iCurrentPage - oSettings._iShowPagesHalf,
+            iLastPage = iCurrentPage + oSettings._iShowPagesHalf;
 
-        if (iTotalPages < iShowPages) {
+        if (iTotalPages < oSettings._iShowPages) {
             iFirstPage = 1;
             iLastPage = iTotalPages;
         } else if (iFirstPage < 1) {
             iFirstPage = 1;
-            iLastPage = iShowPages;
+            iLastPage = oSettings._iShowPages;
         } else if (iLastPage > iTotalPages) {
-            iFirstPage = (iTotalPages - iShowPages) + 1;
+            iFirstPage = (iTotalPages - oSettings._iShowPages) + 1;
             iLastPage = iTotalPages;
         }
 
-        // Add these properties to oSettings so we can use them later
         $.extend(oSettings, {
-            _iShowPages: iShowPages,
             _iCurrentPage: iCurrentPage,
             _iTotalPages: iTotalPages,
-            _iShowPagesHalf: iShowPagesHalf,
             _iFirstPage: iFirstPage,
             _iLastPage: iLastPage
         });
-
-        if (iCurrentPage === 1) {
-            this.nFirst.attr('disabled', true);
-            this.nPrevious.attr('disabled', true);
-        } else {
-            this.nFirst.removeAttr('disabled');
-            this.nPrevious.removeAttr('disabled');
-        }
-
-        if (iCurrentPage === iTotalPages) {
-            this.nNext.attr('disabled', true);
-            this.nLast.attr('disabled', true);
-        } else {
-            this.nNext.removeAttr('disabled');
-            this.nLast.removeAttr('disabled');
-        }
-
-        // Erase and render
-        this.nNumbers.html('');
-
-        var i, nNumber;
-
-        for (i = iFirstPage; i <= iLastPage; i++) {
-            nNumber = $('<a class="' + oClasses.sPageButton + ' ' + oClasses.sPageNumber + '">' + oSettings.fnFormatNumber(i) + '</a>');
-
-            if (iCurrentPage === i) {
-                nNumber.attr('active', true).attr('disabled', true);
-            } else {
-                nNumber.click({ 'fnCallbackDraw': fnCallbackDraw, 'oSettings': oSettings, 'sPage': i - 1 }, that.fnClickHandler);
-            }
-
-            this.nNumbers.append(nNumber);
-        }
-
-        // Add ellipses
-        if (1 < iFirstPage) {
-            this.nNumbers.prepend('<span class="' + oClasses.sPageEllipsis + '">...</span>');
-        }
-
-        if (iLastPage < iTotalPages) {
-            this.nNumbers.append('<span class="' + oClasses.sPageEllipsis + '">...</span>');
-        }
     }
 };
