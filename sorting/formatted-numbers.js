@@ -9,7 +9,7 @@
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 	"formatted-num-pre": function ( a ) {
-		a = (a==="-") ? 0 : a.replace( /[^\d\-\.]/g, "" );
+		a = (a === "-" || a === "" ? 0 : a.replace( /[^\d\-\.]/g, "" );
 		return parseFloat( a );
 	},
 
