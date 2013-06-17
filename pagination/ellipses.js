@@ -95,7 +95,7 @@ $.fn.dataTableExt.oPagination.ellipses = {
             $('.' + oClasses.sPagePrevious, tableWrapper).removeAttr('disabled');
         }
 
-        if (oSettings._iCurrentPage === oSettings._iTotalPages) {
+        if (oSettings._iTotalPages === 0 || oSettings._iCurrentPage === oSettings._iTotalPages) {
             $('.' + oClasses.sPageNext, tableWrapper).attr('disabled', true);
             $('.' + oClasses.sPageLast, tableWrapper).attr('disabled', true);
         } else {
