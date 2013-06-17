@@ -82,26 +82,28 @@ $.fn.dataTableExt.oPagination.ellipses = {
         var oClasses = oSettings.oClasses,
             that = this;
 
+        var tableWrapper = oSettings.nTableWrapper;
+
         // Update stateful properties
         this.fnUpdateState(oSettings);
 
         if (oSettings._iCurrentPage === 1) {
-            $('.' + oClasses.sPageFirst).attr('disabled', true);
-            $('.' + oClasses.sPagePrevious).attr('disabled', true);
+            $('.' + oClasses.sPageFirst, tableWrapper).attr('disabled', true);
+            $('.' + oClasses.sPagePrevious, tableWrapper).attr('disabled', true);
         } else {
-            $('.' + oClasses.sPageFirst).removeAttr('disabled');
-            $('.' + oClasses.sPagePrevious).removeAttr('disabled');
+            $('.' + oClasses.sPageFirst, tableWrapper).removeAttr('disabled');
+            $('.' + oClasses.sPagePrevious, tableWrapper).removeAttr('disabled');
         }
 
         if (oSettings._iCurrentPage === oSettings._iTotalPages) {
-            $('.' + oClasses.sPageNext).attr('disabled', true);
-            $('.' + oClasses.sPageLast).attr('disabled', true);
+            $('.' + oClasses.sPageNext, tableWrapper).attr('disabled', true);
+            $('.' + oClasses.sPageLast, tableWrapper).attr('disabled', true);
         } else {
-            $('.' + oClasses.sPageNext).removeAttr('disabled');
-            $('.' + oClasses.sPageLast).removeAttr('disabled');
+            $('.' + oClasses.sPageNext, tableWrapper).removeAttr('disabled');
+            $('.' + oClasses.sPageLast, tableWrapper).removeAttr('disabled');
         }
 
-        var i, oNumber, oNumbers = $('.' + oClasses.sPageNumbers);
+        var i, oNumber, oNumbers = $('.' + oClasses.sPageNumbers, tableWrapper);
 
         // Erase
         oNumbers.html('');
