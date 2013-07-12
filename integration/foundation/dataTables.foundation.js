@@ -119,7 +119,7 @@ $.extend( $.fn.dataTableExt.oPagination, {
 				$('li:gt(0)', an[i]).filter(':not(:last)').remove();
 
 				// Add the new list items and their event handlers
-				$.each( pages, function( i, page ) {
+				$.each( pages, function( ii, page ) {
 					klass = page === null ? 'unavailable' :
 						page === oPaging.iPage ? 'current' : '';
 					$('<li class="'+klass+'"><a href="">'+(page===null? '&hellip;' : page+1)+'</a></li>')
