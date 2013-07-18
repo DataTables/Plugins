@@ -56,7 +56,7 @@ $.extend( $.fn.dataTableExt.oPagination, {
 			var oPaging = oSettings.oInstance.fnPagingInfo();
 			var an = oSettings.aanFeatures.p;
 			var pages = [];
-			var i, ien, klass;
+			var i, ien, klass, host;
 
 			// This could use some improving - however, see
 			// https://github.com/DataTables/DataTables/issues/163 - this will
@@ -116,14 +116,15 @@ $.extend( $.fn.dataTableExt.oPagination, {
 
 			for ( i=0, ien=an.length ; i<ien ; i++ ) {
 				// Remove the middle elements
-				$('li:gt(0)', an[i]).filter(':not(:last)').remove();
+				host = an[i];
+				$('li:gt(0)', host).filter(':not(:last)').remove();
 
 				// Add the new list items and their event handlers
 				$.each( pages, function( i, page ) {
 					klass = page === null ? 'unavailable' :
 						page === oPaging.iPage ? 'current' : '';
 					$('<li class="'+klass+'"><a href="">'+(page===null? '&hellip;' : page+1)+'</a></li>')
-						.insertBefore( $('li:last', an[i]) )
+						.insertBefore( $('li:last', host) )
 						.bind('click', function (e) {
 							e.preventDefault();
 							oSettings._iDisplayStart = (parseInt($('a', this).text(),10)-1) * oPaging.iLength;
@@ -133,15 +134,15 @@ $.extend( $.fn.dataTableExt.oPagination, {
 
 				// Add / remove disabled classes from the static elements
 				if ( oPaging.iPage === 0 ) {
-					$('li:first', an[i]).addClass('unavailable');
+					$('li:first', host).addClass('unavailable');
 				} else {
-					$('li:first', an[i]).removeClass('unavailable');
+					$('li:first', host).removeClass('unavailable');
 				}
 
 				if ( oPaging.iPage === oPaging.iTotalPages-1 || oPaging.iTotalPages === 0 ) {
-					$('li:last', an[i]).addClass('unavailable');
+					$('li:last', host).addClass('unavailable');
 				} else {
-					$('li:last', an[i]).removeClass('unavailable');
+					$('li:last', host).removeClass('unavailable');
 				}
 			}
 		}
