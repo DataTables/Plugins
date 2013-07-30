@@ -29,14 +29,5 @@ $.fn.dataTableExt.oApi.fnAddTr = function ( oSettings, nTr, bRedraw ) {
     }
      
     /* Add the data and then replace DataTable's generated TR with ours */
-    var iIndex = this.oApi._fnAddData( oSettings, aData );
-    nTr._DT_RowIndex = iIndex;
-    oSettings.aoData[ iIndex ].nTr = nTr;
-     
-    oSettings.aiDisplay = oSettings.aiDisplayMaster.slice();
-     
-    if ( bRedraw )
-    {
-        this.oApi._fnReDraw( oSettings );
-    }
+    return this.fnAddData( aData, bRedraw );
 };
