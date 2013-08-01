@@ -23,11 +23,21 @@ $.fn.dataTableExt.oApi.fnAddTr = function ( oSettings, nTr, bRedraw ) {
     }
      
     var aData = [];
+    var aInvisible = [];
     for ( var i=0 ; i<nTds.length ; i++ )
     {
         aData.push( nTds[i].innerHTML );
+        if (!oSettings.aoColumns[i].bVisible)
+        {
+            aInvisible.push( i );
+        }
     }
-     
+    
+    for ( var i = (aInvisible.length - 1) ; i >= 0 ; i-- )
+    {
+        nTds[aInvisible[i]].remove();
+    }
+
     /* Add the data and then replace DataTable's generated TR with ours */
     var iIndex = this.oApi._fnAddData( oSettings, aData );
     nTr._DT_RowIndex = iIndex;
