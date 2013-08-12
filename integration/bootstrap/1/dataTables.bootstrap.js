@@ -1,6 +1,6 @@
 /* Set the defaults for DataTables initialisation */
 $.extend( true, $.fn.dataTable.defaults, {
-	"sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
+	"sDom": "<'row'<'span8'l><'span8'f>r>t<'row'<'span8'i><'span8'p>>",
 	"sPaginationType": "bootstrap",
 	"oLanguage": {
 		"sLengthMenu": "_MENU_ records per page"
@@ -10,7 +10,9 @@ $.extend( true, $.fn.dataTable.defaults, {
 
 /* Default class modification */
 $.extend( $.fn.dataTableExt.oStdClasses, {
-	"sWrapper": "dataTables_wrapper form-inline"
+    "sSortAsc": "header headerSortDown",
+    "sSortDesc": "header headerSortUp",
+    "sSortable": "header"
 } );
 
 
@@ -43,8 +45,8 @@ $.extend( $.fn.dataTableExt.oPagination, {
 				}
 			};
 
-			$(nPaging).append(
-				'<ul class="pagination">'+
+			$(nPaging).addClass('pagination').append(
+				'<ul>'+
 					'<li class="prev disabled"><a href="#">&larr; '+oLang.sPrevious+'</a></li>'+
 					'<li class="next disabled"><a href="#">'+oLang.sNext+' &rarr; </a></li>'+
 				'</ul>'
