@@ -154,7 +154,7 @@
         "fnInit": function (oSettings) {
             return new $.fn.dataTable.SelectedLengthMenu(oSettings);
         },
-        "cFeature": "S",
+        "cFeature": "O",
         "sFeature": "SelectedLengthMenu"
     });
     
