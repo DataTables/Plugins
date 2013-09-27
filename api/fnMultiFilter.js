@@ -39,5 +39,5 @@ $.fn.dataTableExt.oApi.fnMultiFilter = function( oSettings, oData ) {
 			}
 		}
 	}
-	this.oApi._fnDraw( oSettings );
+	this.oApi._fnReDraw( oSettings );
 };
