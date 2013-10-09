@@ -14,6 +14,10 @@ div.dataTables_filter label {
 	float: right;
 }
 
+div.dataTables_filter input {
+	width: 16em;
+}
+
 div.dataTables_info {
 	padding-top: 8px;
 }
