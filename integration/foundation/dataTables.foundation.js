@@ -127,8 +127,11 @@ $.extend( $.fn.dataTableExt.oPagination, {
 						.insertBefore( $('li:last', host) )
 						.bind('click', function (e) {
 							e.preventDefault();
-							oSettings._iDisplayStart = (parseInt($('a', this).text(),10)-1) * oPaging.iLength;
-							fnDraw( oSettings );
+							var pageNum = parseInt($('a', this).text(),10);
+							if ( ! isNaN(pageNum)) {
+								oSettings._iDisplayStart = (pageNum-1) * oPaging.iLength;
+								fnDraw( oSettings );
+							}
 						} );
 				} );
 
