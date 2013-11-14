@@ -109,6 +109,10 @@ div.dataTables_scrollFoot table {
 	background-color: #0075b0 !important;
 }
 
+.table tbody tr.active a {
+	color: white;
+}
+
 .table-striped tbody tr.active:nth-child(odd) td,
 .table-striped tbody tr.active:nth-child(odd) th {
 	background-color: #017ebc;
