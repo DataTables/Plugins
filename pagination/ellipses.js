@@ -134,7 +134,7 @@ $.fn.dataTableExt.oPagination.ellipses = {
     // The reason for moving is so we can access current state info before fnUpdate is called
     'fnUpdateState': function(oSettings) {
         var iCurrentPage = Math.ceil((oSettings._iDisplayStart + 1) / oSettings._iDisplayLength),
-            iTotalPages = Math.ceil(oSettings.fnRecordsTotal() / oSettings._iDisplayLength),
+            iTotalPages = Math.ceil(oSettings.fnRecordsDisplay() / oSettings._iDisplayLength),
             iFirstPage = iCurrentPage - oSettings._iShowPagesHalf,
             iLastPage = iCurrentPage + oSettings._iShowPagesHalf;
 
