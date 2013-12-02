@@ -11,17 +11,10 @@
  * @anchor ellipses
  * @author <a href="http://daveden.wordpress.com/">Dave Kennedy</a>
  * @example
- *     $('#my-table').dataTable({
- *         // Optional usage of extended oSettings object
- *         'fnInfoCallback': function(oSettings) {
- *             // Update stateful properties
- *             $.fn.dataTableExt.oPagination.ellipses.fnUpdateState(oSettings);
- *             return 'Viewing page ' + oSettings._iCurrentPage + ' of ' + oSettings._iTotalPages;
- *         },
- *         // Optional usage of iShowPages option
- *         'iShowPages': 15,
- *         // This is the only required option
- *         'sPaginationType': 'ellipses'
+ *     $(document).ready(function() {
+ *         $('#example').dataTable({
+ *             'sPaginationType': 'ellipses'
+ *         });
  *     });
  */
 
@@ -134,7 +127,7 @@ $.fn.dataTableExt.oPagination.ellipses = {
     // The reason for moving is so we can access current state info before fnUpdate is called
     'fnUpdateState': function(oSettings) {
         var iCurrentPage = Math.ceil((oSettings._iDisplayStart + 1) / oSettings._iDisplayLength),
-            iTotalPages = Math.ceil(oSettings.fnRecordsTotal() / oSettings._iDisplayLength),
+            iTotalPages = Math.ceil(oSettings.fnRecordsDisplay() / oSettings._iDisplayLength),
             iFirstPage = iCurrentPage - oSettings._iShowPagesHalf,
             iLastPage = iCurrentPage + oSettings._iShowPagesHalf;
 
