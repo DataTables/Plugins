@@ -11,17 +11,10 @@
  * @anchor ellipses
  * @author <a href="http://daveden.wordpress.com/">Dave Kennedy</a>
  * @example
- *     $('#my-table').dataTable({
- *         // Optional usage of extended oSettings object
- *         'fnInfoCallback': function(oSettings) {
- *             // Update stateful properties
- *             $.fn.dataTableExt.oPagination.ellipses.fnUpdateState(oSettings);
- *             return 'Viewing page ' + oSettings._iCurrentPage + ' of ' + oSettings._iTotalPages;
- *         },
- *         // Optional usage of iShowPages option
- *         'iShowPages': 15,
- *         // This is the only required option
- *         'sPaginationType': 'ellipses'
+ *     $(document).ready(function() {
+ *         $('#example').dataTable({
+ *             'sPaginationType': 'ellipses'
+ *         });
  *     });
  */
 
