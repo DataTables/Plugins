@@ -17,6 +17,21 @@
 
 $.fn.dataTableExt.oApi.fnReloadAjax = function ( oSettings, sNewSource, fnCallback, bStandingRedraw )
 {
+	// DataTables 1.10 compatibility - if 1.10 then `versionCheck` exists.
+	// 1.10's API has ajax reloading built in, so we use those abilities
+	// directly.
+	if ( $.fn.dataTable.versionCheck ) {
+		var api = new $.fn.dataTable.Api( oSettings );
+
+		if ( sNewSource ) {
+			api.ajax.url( sNewSource ).load( fnCallback, !bStandingRedraw );
+		}
+		else {
+			api.ajax.reload( fnCallback, !bStandingRedraw );
+		}
+		return;
+	}
+
 	if ( sNewSource !== undefined && sNewSource !== null ) {
 		oSettings.sAjaxSource = sNewSource;
 	}
