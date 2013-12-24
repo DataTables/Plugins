@@ -19,6 +19,7 @@ $.extend( $.fn.dataTableExt.oStdClasses, {
 if ( $.fn.dataTable.Api ) {
 	$.fn.dataTable.defaults.renderer = 'bootstrap';
 	$.fn.dataTable.ext.renderer.pageButton.bootstrap = function ( settings, host, idx, buttons, page, pages ) {
+		var api = new $.fn.dataTable.Api( settings );
 		var classes = settings.oClasses;
 		var lang = settings.oLanguage.oPaginate;
 		var btnDisplay, btnClass;
@@ -26,15 +27,13 @@ if ( $.fn.dataTable.Api ) {
 		var attach = function( container, buttons ) {
 			var i, ien, node, button;
 			var clickHandler = function ( e ) {
-				settings.oApi._fnPageChange( settings, e.data.action, true );
+				api.page( e.data.action ).draw( false );
 			};
 
 			for ( i=0, ien=buttons.length ; i<ien ; i++ ) {
 				button = buttons[i];
 
 				if ( $.isArray( button ) ) {
-					// var inner = $( '<'+(button.DT_el || 'div')+'/>' )
-					// 	.appendTo( container );
 					attach( container, button );
 				}
 				else {
