@@ -1,6 +1,9 @@
 /* Set the defaults for DataTables initialisation */
 $.extend( true, $.fn.dataTable.defaults, {
-	"sDom": "<'row'<'col-xs-6'l><'col-xs-6'f>r>t<'row'<'col-xs-6'i><'col-xs-6'p>>",
+	"sDom":
+		"<'row'<'col-xs-6'l><'col-xs-6'f>r>"+
+		"t"+
+		"<'row'<'col-xs-6'i><'col-xs-6'p>>",
 	"oLanguage": {
 		"sLengthMenu": "_MENU_ records per page"
 	}
@@ -27,7 +30,10 @@ if ( $.fn.dataTable.Api ) {
 		var attach = function( container, buttons ) {
 			var i, ien, node, button;
 			var clickHandler = function ( e ) {
-				api.page( e.data.action ).draw( false );
+				e.preventDefault();
+				if ( e.data.action !== 'ellipsis' ) {
+					api.page( e.data.action ).draw( false );
+				}
 			};
 
 			for ( i=0, ien=buttons.length ; i<ien ; i++ ) {
@@ -42,7 +48,8 @@ if ( $.fn.dataTable.Api ) {
 
 					switch ( button ) {
 						case 'ellipsis':
-							container.append('<span>&hellip;</span>');
+							btnDisplay = '&hellip;';
+							btnClass = 'disabled';
 							break;
 
 						case 'first':

@@ -9,24 +9,25 @@ div.dataTables_info {
 	font-weight: normal;
 }
 
-div.dataTables_length {
-	padding-top: 6px;
-}
 div.dataTables_length label {
 	float: left;
 	text-align: left;
+	margin-bottom: 0;
 }
 
 div.dataTables_length select {
 	width: 75px;
+	margin-bottom: 0;
 }
 
 div.dataTables_filter label {
 	float: right;
+	margin-bottom: 0;
 }
 div.dataTables_filter input {
 	display: inline-block !important;
 	width: auto !important;
+	margin-bottom: 0;
 }
 
 div.dataTables_info {
@@ -41,7 +42,7 @@ div.dataTables_paginate {
 
 table.dataTable {
 	clear: both;
-	margin-bottom: 0.5em !important;
+	margin: 0.5em 0 !important;
 	max-width: none !important;
 	width: 100%;
 }
