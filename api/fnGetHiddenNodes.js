@@ -6,22 +6,29 @@
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  */
 
-$.fn.dataTableExt.oApi.fnGetHiddenNodes = function ( oSettings )
+$.fn.dataTableExt.oApi.fnGetHiddenNodes = function ( settings )
 {
-	/* Note the use of a DataTables 'private' function thought the 'oApi' object */
-	var anNodes = this.oApi._fnGetTrNodes( oSettings );
-	var anDisplay = $('tbody tr', oSettings.nTable);
-	 
+	var nodes;
+	var display = $('tbody tr', settings.nTable);
+
+	if ( $.fn.dataTable.versionCheck ) {
+		// DataTables 1.10
+		var api = new $.fn.dataTable.Api( settings );
+		nodes = api.rows().nodes().toArray();
+	}
+	else {
+		// 1.9-
+		nodes = this.oApi._fnGetTrNodes( settings );
+	}
+
 	/* Remove nodes which are being displayed */
-	for ( var i=0 ; i<anDisplay.length ; i++ )
-	{
-		var iIndex = jQuery.inArray( anDisplay[i], anNodes );
-		if ( iIndex != -1 )
-		{
-			anNodes.splice( iIndex, 1 );
+	for ( var i=0 ; i<display.length ; i++ ) {
+		var iIndex = jQuery.inArray( display[i], nodes );
+
+		if ( iIndex != -1 ) {
+			nodes.splice( iIndex, 1 );
 		}
 	}
-	 
-	/* Fire back the array to the caller */
-	return anNodes;
+
+	return nodes;
 };
