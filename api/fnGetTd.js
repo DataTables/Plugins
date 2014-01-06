@@ -4,8 +4,8 @@
  * DOM methods, jQuery or whatever, it becomes a lot more complicated when 
  * taking into account hidden rows and columns. This function can be used to
  * overcome these difficulties.
- *  @name fnColumnIndexToVisible
- *  @anchor fnColumnIndexToVisible
+ *  @name fnGetTd
+ *  @anchor fnGetTd
  *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
  *
  *  @example
