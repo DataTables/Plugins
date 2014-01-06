@@ -1,9 +1,9 @@
 /* Set the defaults for DataTables initialisation */
 $.extend( true, $.fn.dataTable.defaults, {
 	"sDom":
-		"<'row'<'large-6 columns'l><'large-6 columns'f>r>"+
+		"<'row'<'small-6 columns'l><'small-6 columns'f>r>"+
 		"t"+
-		"<'row'<'large-6 columns'i><'large-6 columns'p>>",
+		"<'row'<'small-6 columns'i><'small-6 columns'p>>",
 	"oLanguage": {
 		"sLengthMenu": "_MENU_ records per page"
 	}

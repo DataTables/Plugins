@@ -61,6 +61,7 @@ div.dataTables_scrollHead table thead tr:last-child td:first-child {
 
 div.dataTables_scrollBody table {
 	border-top: none;
+	margin-top: 0 !important;
 	margin-bottom: 0 !important;
 }
 
@@ -70,6 +71,7 @@ div.dataTables_scrollBody tbody tr:first-child td {
 }
 
 div.dataTables_scrollFoot table {
+	margin-top: 0 !important;
 	border-top: none;
 }
 
