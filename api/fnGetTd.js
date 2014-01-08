@@ -4,9 +4,10 @@
  * DOM methods, jQuery or whatever, it becomes a lot more complicated when 
  * taking into account hidden rows and columns. This function can be used to
  * overcome these difficulties.
+ *
  *  @name fnGetTd
- *  @anchor fnGetTd
- *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
+ *  @summary 
+ *  @author [Allan Jardine](http://sprymedia.co.uk)
  *
  *  @example
  *    $(document).ready(function() {
@@ -18,12 +19,12 @@
  *    } );
  */
 
-$.fn.dataTableExt.oApi.fnGetTd  = function ( oSettings, mTr, iTd, bVisOnly )
+jQuery.fn.dataTableExt.oApi.fnGetTd  = function ( oSettings, mTr, iTd, bVisOnly )
 {
 	/* Take either a TR node or aoData index as the mTr property */
-	var iRow = (typeof mTr == 'object') ? 
+	var iRow = (typeof mTr == 'object') ?
 		oSettings.oApi._fnNodeToDataIndex(oSettings, mTr) : mTr;
-	 
+
 	if ( typeof bVisOnly == 'undefined' && !bVisOnly )
 	{
 		/* Looking at both visible and hidden TD elements - convert to visible index, if not present

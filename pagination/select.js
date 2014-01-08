@@ -1,9 +1,10 @@
 /**
- * This pagination plug-in provides a select menu with the list of the page
+ * This pagination plug-in provides a `dt-tag select` menu with the list of the page
  * numbers that are available for viewing.
+ *
  *  @name Select list
- *  @anchor listbox
- *  @author <i>jneilliii</i>
+ *  @summary Show a `dt-tag select` list of pages the user can pick from.
+ *  @author _jneilliii_
  *
  *  @example
  *    $(document).ready(function() {

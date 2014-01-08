@@ -2,9 +2,10 @@
  * Get information about the paging settings that DataTables is currently 
  * using to display each page, including the number of records shown, start
  * and end points in the data set etc.
+ *
  *  @name fnPagingInfo
- *  @anchor fnPagingInfo
- *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
+ *  @summary 
+ *  @author [Allan Jardine](http://sprymedia.co.uk)
  *
  *  @example
  *    $(document).ready(function() {
@@ -16,7 +17,7 @@
  *    } );
  */
 
-$.fn.dataTableExt.oApi.fnPagingInfo = function ( oSettings )
+jQuery.fn.dataTableExt.oApi.fnPagingInfo = function ( oSettings )
 {
 	return {
 		"iStart":         oSettings._iDisplayStart,

@@ -1,15 +1,15 @@
 /**
  * Read information from a column of checkboxes (input elements with type
  * checkbox) and return an array to use as a basis for sorting.
+ *
+ *  @summary Sort based on the checked state of checkboxes in a column
  *  @name Checkbox data source
- *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
+ *  @author [Allan Jardine](http://sprymedia.co.uk)
  */
 
-$.fn.dataTableExt.afnSortData['dom-checkbox'] = function ( oSettings, iColumn )
+$.fn.dataTable.ext.order['dom-checkbox'] = function  ( settings, col )
 {
-	var aData = [];
-	$( 'td:eq('+iColumn+') input', oSettings.oApi._fnGetTrNodes(oSettings) ).each( function () {
-		aData.push( this.checked==true ? "1" : "0" );
+	return this.api().column( col, {order:'index'} ).nodes().map( function ( td, i ) {
+		return $('input', td).prop('checked') ? '1' : '0';
 	} );
-	return aData;
 };

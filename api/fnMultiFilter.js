@@ -4,9 +4,10 @@
  * processing). Used in combination with the column sName parameter, simply
  * pass in an object with the key/value pair being the column you wish to
  * search on, and the value you wish to search for.
+ *
  *  @name fnMultiFilter
- *  @anchor fnMultiFilter
- *  @author <i>mrkevans</i>
+ *  @summary 
+ *  @author _mrkevans_
  *
  *  @example
  *    $(document).ready(function() {
@@ -23,7 +24,7 @@
  *    } );
  */
 
-$.fn.dataTableExt.oApi.fnMultiFilter = function( oSettings, oData ) {
+jQuery.fn.dataTableExt.oApi.fnMultiFilter = function( oSettings, oData ) {
 	for ( var key in oData )
 	{
 		if ( oData.hasOwnProperty(key) )

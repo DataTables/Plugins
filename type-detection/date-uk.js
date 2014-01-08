@@ -1,8 +1,9 @@
 /**
- * Automatically detect British (dd/mm/yyyy) date types. Goes with the UK 
+ * Automatically detect British (`dd/mm/yyyy`) date types. Goes with the UK 
  * date sorting plug-in.
- *  @name UK date type detection
- *  @anchor uk_date
+ *
+ *  @name Date (`dd/mm/yyyy`)
+ *  @summary Detect data which is in the date format `dd/mm/yyyy`
  *  @author Andy McMaster
  */
 

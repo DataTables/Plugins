@@ -1,15 +1,23 @@
 /*
- * This plug-in adds another pagination option similar to full_numbers,
- * except it adds ellipses around the page numbers when applicable.
- * You can set how many page numbers should be displayed with the iShowPages option.
- * This plug-in extends the oStdClasses object with the following properties:
+ * This plug-in adds another pagination option similar to `full_numbers`, except
+ * it adds ellipses around the page numbers when applicable. You can set how
+ * many page numbers should be displayed with the iShowPages option.
+ * 
+ * This plug- in extends the oStdClasses object with the following properties:
  * sPageEllipsis, sPageNumber and sPageNumbers.
+ * 
  * It also extends the oSettings object with the following properties:
- * _iShowPages, _iShowPagesHalf, _iCurrentPage, _iTotalPages, _iFirstPage and _iLastPage.
+ * _iShowPages, _iShowPagesHalf, _iCurrentPage, _iTotalPages, _iFirstPage and
+ * _iLastPage.
+ *
+ * Note that DataTables 1.10 has this ability built in. As such, this plug-ins
+ * has been marked as depreciated, but may still be useful for if you are using
+ * an old version of DataTables.
  *
  * @name Ellipses
- * @anchor ellipses
- * @author <a href="http://daveden.wordpress.com/">Dave Kennedy</a>
+ * @summary Show ellipses in the pagination control where there is a gap in numbers
+ * @depreciated
+ * @author [Dave Kennedy](http://daveden.wordpress.com/)
  * @example
  *     $(document).ready(function() {
  *         $('#example').dataTable({

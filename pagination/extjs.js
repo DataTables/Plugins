@@ -1,9 +1,10 @@
 /**
  * This pagination plug-in provides pagination controls for DataTables which
  * match the style and interaction of the ExtJS library's grid component.
+ *
  *  @name ExtJS style
- *  @anchor extjs
- *  @author <a href="http://zachariahtimothy.wordpress.com/">Zach Curtis</a>
+ *  @summary Pagination in the styling of ExtJS
+ *  @author [Zach Curtis](http://zachariahtimothy.wordpress.com/)
  *
  *  @example
  *    $(document).ready(function() {

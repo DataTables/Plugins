@@ -1,6 +1,11 @@
 ﻿/**
- * Used in combination with TableTools and selectable rows, this will allow you to switch between showing all rows and just the selected ones.
- *  @author <a href="http://stackoverflow.com/users/8507/phloopy">Caleb Harrelson</a>
+ * Used in combination with TableTools and selectable rows, this will allow you
+ * to switch between showing all rows and just the selected ones.
+ *
+ *  @name Show selected only
+ *  @summary Show only selected rows, or all rows, through filtering
+ *  @requires TableTools
+ *  @author [Caleb Harrelson](http://stackoverflow.com/users/8507/phloopy)
  *
  *  @example
  *  $('#example').dataTable({

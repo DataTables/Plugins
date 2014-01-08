@@ -3,8 +3,9 @@
  * data loading from the server) it can be useful to make use of the 
  * 'processing' indicator built-into DataTables. This plug-in function
  * exposes the internal DataTables function so it can be used for exactly this.
+ *
  *  @name fnProcessingIndicator
- *  @anchor fnProcessingIndicator
+ *  @summary 
  *  @author Allan Chappell
  *
  *  @example

@@ -1,17 +1,29 @@
 /**
- * Sorting in Javascript for Chinese Character. The Chinese Characters are sorted on the radical and number of 
- * strokes. This plug-in  performs  sorting for Chinese characters.
- * <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String/localeCompare">localeCompare MDC documentation</a>. 
- * Please also see <a href="http://www.datatables.net/forums/discussion/9700/sorting-non-ascii-characters-and-data-content-html-tag-sorting/p1">note about localeCompare and IE9</a>.
+ * Sorting in Javascript for Chinese Character. The Chinese Characters are
+ * sorted on the radical and number of strokes. This plug-in performs sorting
+ * for Chinese characters using the Javascript [localeCompare](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String/localeCompare)
+ * function.
+ *
+ * Please note that `localeCompare` is not implemented in the same way in all
+ * browsers, potentially leading to different results (particularly in IE).
+ * 
  *  @name Chinese (string)
- *  @anchor chinese-string
- *  @author <a href="http://www.lcube.se/sorting-chinese-characters-in-javascript/">Patrik Lindstr�m</a>
+ *  @summary Sort Chinese characters
+ *  @author [Patrik Lindström](http://www.lcube.se/sorting-chinese-characters-in-javascript/)
+ *
+ *  @example
+ *    $('#example').dataTable( {
+ *       columnDefs: [
+ *         { type: 'chinese-string', targets: 0 }
+ *       ]
+ *    } );
  */
- 
- jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+
+jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 	"chinese-string-asc" : function (s1, s2) {
 		return s1.localeCompare(s2);
 	},
+
 	"chinese-string-desc" : function (s1, s2) {
 		return s2.localeCompare(s1);
 	}

@@ -2,9 +2,10 @@
  * This plug-in removed the default behaviour of DataTables to filter on each
  * keypress, and replaces with it the requirement to press the enter key to
  * perform the filter.
+ *
  *  @name fnFilterOnReturn
- *  @anchor fnFilterOnReturn
- *  @author <a href="http://www.mvccms.com/">Jon Ranes</a>
+ *  @summary 
+ *  @author [Jon Ranes](http://www.mvccms.com/)
  *
  *  @example
  *    $(document).ready(function() {
@@ -14,7 +15,7 @@
 
 jQuery.fn.dataTableExt.oApi.fnFilterOnReturn = function (oSettings) {
 	var _that = this;
- 
+
 	this.each(function (i) {
 		$.fn.dataTableExt.iApiIndex = i;
 		var $this = this;

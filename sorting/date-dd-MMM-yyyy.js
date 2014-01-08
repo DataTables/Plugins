@@ -1,17 +1,25 @@
 /*
- * Adds a new sorting option to dataTables called <code>date-dd-mmm-yyyy</code>. Also
+ * Adds a new sorting option to dataTables called `date-dd-mmm-yyyy`. Also
  * includes a type detection plug-in. Matches and sorts date strings in
- * the format: <code>(dd/mmm/yyyy</code>. For example:
- *   <ul>
- *      <li>02-FEB-1978</li>
- *      <li>17-MAY-2013</li>
- *      <li>31-JAN-2014</li>
- *   </ul>
+ * the format: `dd/mmm/yyyy`. For example:
+ * 
+ * * 02-FEB-1978
+ * * 17-MAY-2013
+ * * 31-JAN-2014
  *
- *  @name Date dd-mmm-yyyy
- *  @anchor date-dd-mmm-yyyy
- *  @author <a href="http://www.appliedinter.net/jeromy_works/">Jeromy French</a>
+ *  @name Date (dd-mmm-yyyy)
+ *  @summary Sort dates in the format `dd-mmm-yyyy`
+ *  @author [Jeromy French](http://www.appliedinter.net/jeromy_works/)
+ *
+ *  @example
+ *    $('#example').dataTable( {
+ *       columnDefs: [
+ *         { type: 'date-dd-mmm-yyyy', targets: 0 }
+ *       ]
+ *    } );
  */
+
+(function () {
 
 var customDateDDMMMYYYYToOrd = function (date) {
 	"use strict"; //let's avoid tom-foolery in this function
@@ -20,7 +28,8 @@ var customDateDDMMMYYYYToOrd = function (date) {
 	return (dateParts[2] * 10000) + ($.inArray(dateParts[1].toUpperCase(), ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"]) * 100) + dateParts[0];
 };
 
-// This will help DataTables magic detect the "dd-MMM-yyyy" format; Unshift so that it's the first data type (so it takes priority over existing)
+// This will help DataTables magic detect the "dd-MMM-yyyy" format; Unshift
+// so that it's the first data type (so it takes priority over existing)
 jQuery.fn.dataTableExt.aTypes.unshift(
 	function (sData) {
 		"use strict"; //let's avoid tom-foolery in this function
@@ -45,3 +54,5 @@ jQuery.fn.dataTableExt.oSort['date-dd-mmm-yyyy-desc'] = function (a, b) {
 		ordB = customDateDDMMMYYYYToOrd(b);
 	return (ordA < ordB) ? 1 : ((ordA > ordB) ? -1 : 0);
 };
+
+})();

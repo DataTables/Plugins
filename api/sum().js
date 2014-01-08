@@ -1,8 +1,9 @@
 /**
  * Sum the values in a data set.
+ *
  *  @name sum()
- *  @anchor sum()
- *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
+ *  @summary 
+ *  @author [Allan Jardine](http://sprymedia.co.uk)
  *  @requires DataTables 1.10+
  *
  *  @example

@@ -1,8 +1,21 @@
 /**
  * Sort numeric data which has a percent sign with it.
+ *
+ * DataTables 1.10+ has percentage data type detection and sorting abilities
+ * built-in. As such this plug-in is marked as depreciated, but might be useful
+ * when working with old versions of DataTables.
+ * 
  *  @name Percentage
- *  @anchor percentage
- *  @author <a href="http://jonathanromley.org/">Jonathan Romley</a>
+ *  @summary Sort numeric data with a postfixed percentage symbol
+ *  @depreciated
+ *  @author [Jonathan Romley](http://jonathanromley.org/)
+ *
+ *  @example
+ *    $('#example').dataTable( {
+ *       columnDefs: [
+ *         { type: 'percent', targets: 0 }
+ *       ]
+ *    } );
  */
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {

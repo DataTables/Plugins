@@ -3,14 +3,19 @@
  * formatted number (for example 1,000,000) can be detected automatically and
  * sorted numerically. Note that characters a-z are not automatically removed,
  * otherwise there is a risk of detecting columns as numeric which should not
- * be. Also note that the jQuery 1.7 method isNumeric is used, so jQuery 1.7
- * is required.
+ * be.
+ *
+ * DataTables 1.10+ has formatted number type detection and sorting abilities
+ * built-in. As such this plug-in is marked as depreciated, but might be useful
+ * when working with old versions of DataTables.
+ *
  *  @name Formatted numbers
- *  @anchor formatted_numbers
- *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
+ *  @summary formatted_numbers
+ *  @depreciated
+ *  @author [Allan Jardine](http://sprymedia.co.uk)
  */
 
-jQuery.fn.dataTableExt.aTypes.unshift(  
+jQuery.fn.dataTableExt.aTypes.unshift(
 	function ( sData )
 	{
 		var deformatted = sData.replace(/[^\d\-\.\/a-zA-Z]/g,'');

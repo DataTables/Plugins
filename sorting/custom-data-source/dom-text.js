@@ -1,15 +1,16 @@
 /**
  * Read information from a column of input (type text) elements and return an
  * array to use as a basis for sorting.
+ *
+ *  @summary Sorting based on the values of `dt-tag input` elements in a column.
  *  @name Input element data source
- *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
+ *  @requires DataTables 1.10+
+ *  @author [Allan Jardine](http://sprymedia.co.uk)
  */
 
-$.fn.dataTableExt.afnSortData['dom-text'] = function ( oSettings, iColumn )
+$.fn.dataTable.ext.order['dom-text'] = function  ( settings, col )
 {
-	var aData = [];
-	$( 'td:eq('+iColumn+') input', oSettings.oApi._fnGetTrNodes(oSettings) ).each( function () {
-	    aData.push( this.value );
+	return this.api().column( col, {order:'index'} ).nodes().map( function ( td, i ) {
+		return $('input', td).val();
 	} );
-	return aData;
 };

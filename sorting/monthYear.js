@@ -1,9 +1,17 @@
 /**
  * This sorting plug-in will sort, in calendar order, data which
  * is in the format "MM YY".
- *  @name Month / year sorting
- *  @anchor monthYear
+ *
+ *  @name Date (MM YY)
+ *  @anchor Sort dates in the format `MM YY`
  *  @author Michael Motek
+ *
+ *  @example
+ *    $('#example').dataTable( {
+ *       columnDefs: [
+ *         { type: 'monthYear', targets: 0 }
+ *       ]
+ *    } );
  */
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {

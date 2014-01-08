@@ -3,9 +3,10 @@
  * can be restricted to a single column). The return value is an array with
  * the data indexes (from DataTables' internal data store) for any rows which
  * match.
+ *
  *  @name fnFindCellRowIndexes
- *  @anchor fnFindCellRowIndexes
- *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
+ *  @summary 
+ *  @author [Allan Jardine](http://sprymedia.co.uk)
  *
  *  @example
  *    $(document).ready(function() {
@@ -17,16 +18,16 @@
  *    } );
  */
 
-$.fn.dataTableExt.oApi.fnFindCellRowIndexes = function ( oSettings, sSearch, iColumn )
+jQuery.fn.dataTableExt.oApi.fnFindCellRowIndexes = function ( oSettings, sSearch, iColumn )
 {
 	var
 		i,iLen, j, jLen,
 		aOut = [], aData;
-	 
+
 	for ( i=0, iLen=oSettings.aoData.length ; i<iLen ; i++ )
 	{
 		aData = oSettings.aoData[i]._aData;
-		 
+
 		if ( typeof iColumn == 'undefined' )
 		{
 			for ( j=0, jLen=aData.length ; j<jLen ; j++ )
@@ -42,7 +43,6 @@ $.fn.dataTableExt.oApi.fnFindCellRowIndexes = function ( oSettings, sSearch, iCo
 			aOut.push( i );
 		}
 	}
-	 
+
 	return aOut;
 };
- 

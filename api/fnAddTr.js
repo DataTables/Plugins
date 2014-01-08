@@ -1,15 +1,16 @@
 /**
  * Take a TR element and add it to a DataTables table. Useful for maintaining
  * custom classes and other attributes.
+ *
  *  @name fnAddTr
- *  @anchor fnAddTr
- *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
+ *  @summary 
+ *  @author [Allan Jardine](http://sprymedia.co.uk)
  *
  *  @example
  *    
  */
 
-$.fn.dataTableExt.oApi.fnAddTr = function ( oSettings, nTr, bRedraw ) {
+jQuery.fn.dataTableExt.oApi.fnAddTr = function ( oSettings, nTr, bRedraw ) {
     if ( typeof bRedraw == 'undefined' )
     {
         bRedraw = true;
@@ -24,7 +25,8 @@ $.fn.dataTableExt.oApi.fnAddTr = function ( oSettings, nTr, bRedraw ) {
 
     var aData = [];
     var aInvisible = [];
-    for ( var i=0 ; i<nTds.length ; i++ )
+    var i;
+    for ( i=0 ; i<nTds.length ; i++ )
     {
         aData.push( nTds[i].innerHTML );
         if (!oSettings.aoColumns[i].bVisible)
@@ -41,7 +43,7 @@ $.fn.dataTableExt.oApi.fnAddTr = function ( oSettings, nTr, bRedraw ) {
     oSettings.aiDisplay = oSettings.aiDisplayMaster.slice();
 
     // Hidding invisible columns
-    for ( var i = (aInvisible.length - 1) ; i >= 0 ; i-- )
+    for ( i = (aInvisible.length - 1) ; i >= 0 ; i-- )
     {
 		oSettings.aoData[iIndex]._anHidden[ i ] = nTds[aInvisible[i]];
 		nTr.removeChild( nTds[aInvisible[i]] );

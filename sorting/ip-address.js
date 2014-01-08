@@ -3,9 +3,17 @@
  * be most useful when using DataTables for a networking application, and 
  * reporting information containing IP address. Also has a matching type 
  * detection plug-in for automatic type detection.
+ *
  *  @name IP addresses 
- *  @anchor ip_address
+ *  @summary Sort IP addresses numerically
  *  @author Brad Wasson
+ *
+ *  @example
+ *    $('#example').dataTable( {
+ *       columnDefs: [
+ *         { type: 'ip-address', targets: 0 }
+ *       ]
+ *    } );
  */
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {

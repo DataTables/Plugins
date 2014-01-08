@@ -1,8 +1,9 @@
 /**
  * Take a TR element and alter the table's paging to show the TR in question.
+ *
  *  @name fnDisplayRow
- *  @anchor fnDisplayRow
- *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
+ *  @summary 
+ *  @author [Allan Jardine](http://sprymedia.co.uk)
  *
  *  @example
  *    $(document).ready(function() {
@@ -12,14 +13,14 @@
  *    } );
  */
 
-$.fn.dataTableExt.oApi.fnDisplayRow = function ( oSettings, nRow )
+jQuery.fn.dataTableExt.oApi.fnDisplayRow = function ( oSettings, nRow )
 {
 	// Account for the "display" all case - row is already displayed
 	if ( oSettings._iDisplayLength == -1 )
 	{
 		return;
 	}
- 
+
 	// Find the node in the table
 	var iPos = -1;
 	for( var i=0, iLen=oSettings.aiDisplay.length ; i<iLen ; i++ )
@@ -30,13 +31,13 @@ $.fn.dataTableExt.oApi.fnDisplayRow = function ( oSettings, nRow )
 			break;
 		}
 	}
-	 
+
 	// Alter the start point of the paging display
 	if( iPos >= 0 )
 	{
 		oSettings._iDisplayStart = ( Math.floor(i / oSettings._iDisplayLength) ) * oSettings._iDisplayLength;
 		this.oApi._fnCalculateEnd( oSettings );
 	}
-	 
+
 	this.oApi._fnDraw( oSettings );
 };

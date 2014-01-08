@@ -1,13 +1,22 @@
 /**
  * Data can often be a complicated mix of numbers and letters (file names
  * are a common example) and sorting them in a natural manner is quite a
- * difficult problem. Fortunately a deal of work has already been done in
- * this area by other authors - the following plug-in uses the naturalSort()
- * function by Jim Palmer (<a href="http://www.overset.com/2008/09/01/javascript-natural-sort-algorithm-with-unicode-support/">download it here</a>)
- * to provide natural sorting in DataTables.
+ * difficult problem.
+ * 
+ * Fortunately a deal of work has already been done in this area by other
+ * authors - the following plug-in uses the [naturalSort() function by Jim
+ * Palmer](http://www.overset.com/2008/09/01/javascript-natural-sort-algorithm-with-unicode-support) to provide natural sorting in DataTables.
+ *
  *  @name Natural sorting
- *  @anchor natrual
- *  @author <a href="http://www.overset.com/2008/09/01/javascript-natural-sort-algorithm/">Jim Palmer</a>
+ *  @summary Sort data with a mix of numbers and letters _naturally_.
+ *  @author [Jim Palmer](http://www.overset.com/2008/09/01/javascript-natural-sort-algorithm-with-unicode-support)
+ *
+ *  @example
+ *    $('#example').dataTable( {
+ *       columnDefs: [
+ *         { type: 'natural', targets: 0 }
+ *       ]
+ *    } );
  */
 
 (function() {
@@ -31,26 +40,39 @@ function naturalSort (a, b) {
 		xN = x.replace(re, '\0$1\0').replace(/\0$/,'').replace(/^\0/,'').split('\0'),
 		yN = y.replace(re, '\0$1\0').replace(/\0$/,'').replace(/^\0/,'').split('\0'),
 		// numeric, hex or date detection
-		xD = parseInt(x.match(hre)) || (xN.length != 1 && x.match(dre) && Date.parse(x)),
-		yD = parseInt(y.match(hre)) || xD && y.match(dre) && Date.parse(y) || null;
+		xD = parseInt(x.match(hre), 10) || (xN.length != 1 && x.match(dre) && Date.parse(x)),
+		yD = parseInt(y.match(hre), 10) || xD && y.match(dre) && Date.parse(y) || null;
+
 	// first try and sort Hex codes or Dates
-	if (yD)
-		if ( xD < yD ) return -1;
-		else if ( xD > yD )	return 1;
+	if (yD) {
+		if ( xD < yD ) {
+			return -1;
+		}
+		else if ( xD > yD )	{
+			return 1;
+		}
+	}
+
 	// natural sorting through split numeric strings and default strings
 	for(var cLoc=0, numS=Math.max(xN.length, yN.length); cLoc < numS; cLoc++) {
 		// find floats not starting with '0', string or 0 if not defined (Clint Priest)
-		var oFxNcL = !(xN[cLoc] || '').match(ore) && parseFloat(xN[cLoc]) || xN[cLoc] || 0;
-		var oFyNcL = !(yN[cLoc] || '').match(ore) && parseFloat(yN[cLoc]) || yN[cLoc] || 0;
+		var oFxNcL = !(xN[cLoc] || '').match(ore) && parseFloat(xN[cLoc], 10) || xN[cLoc] || 0;
+		var oFyNcL = !(yN[cLoc] || '').match(ore) && parseFloat(yN[cLoc], 10) || yN[cLoc] || 0;
 		// handle numeric vs string comparison - number < string - (Kyle Adams)
-		if (isNaN(oFxNcL) !== isNaN(oFyNcL)) return (isNaN(oFxNcL)) ? 1 : -1; 
+		if (isNaN(oFxNcL) !== isNaN(oFyNcL)) {
+			return (isNaN(oFxNcL)) ? 1 : -1;
+		}
 		// rely on string comparison if different types - i.e. '02' < 2 != '02' < '2'
 		else if (typeof oFxNcL !== typeof oFyNcL) {
-			oFxNcL += ''; 
-			oFyNcL += ''; 
+			oFxNcL += '';
+			oFyNcL += '';
 		}
-		if (oFxNcL < oFyNcL) return -1;
-		if (oFxNcL > oFyNcL) return 1;
+		if (oFxNcL < oFyNcL) {
+			return -1;
+		}
+		if (oFxNcL > oFyNcL) {
+			return 1;
+		}
 	}
 	return 0;
 }

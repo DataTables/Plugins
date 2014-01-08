@@ -4,9 +4,22 @@
  * strips the HTML and then sorts by numbers. Note also that this sorting 
  * plug-in has an equivalent type detection plug-in which can make integration
  * easier.
+ * 
+ * DataTables 1.10+ has HTML numeric data type detection and sorting abilities
+ * built-in. As such this plug-in is marked as depreciated, but might be useful
+ * when working with old versions of DataTables.
+ *
  *  @name Numbers with HTML
- *  @anchor numbers_html
- *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
+ *  @summary Sort data which is a mix of HTML and numeric data.
+ *  @depreciated
+ *  @author [Allan Jardine](http://sprymedia.co.uk)
+ *
+ *  @example
+ *    $('#example').dataTable( {
+ *       columnDefs: [
+ *         { type: 'num-html', targets: 0 }
+ *       ]
+ *    } );
  */
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {

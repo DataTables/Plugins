@@ -1,8 +1,9 @@
 /**
  * Automatically detect IP addresses in dot notation. Goes perfectly with the
  * IP address sorting function.
+ *
  *  @name IP address detection
- *  @anchor ip_address
+ *  @summary Detect data which is in IP address notation
  *  @author Brad Wasson
  */
 

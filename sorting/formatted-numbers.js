@@ -1,10 +1,23 @@
 /**
- * This plug-in will provide numeric sorting for numeric columns which have extra
- * formatting, such as thousands seperators, currency symobols or any other 
+ * This plug-in will provide numeric sorting for numeric columns which have
+ * extra formatting, such as thousands separators, currency symbols or any other
  * non-numeric data.
+ *
+ * DataTables 1.10+ has formatted number detection and sorting abilities built-
+ * in. As such this plug-in is marked as depreciated, but might be useful when
+ * working with old versions of DataTables.
+ *
  *  @name Formatted numbers
- *  @anchor formatted_numbers
- *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
+ *  @summary Sort numbers which are displayed with thousand separators
+ *  @depreciated
+ *  @author [Allan Jardine](http://sprymedia.co.uk)
+ *
+ *  @example
+ *    $('#example').dataTable( {
+ *       columnDefs: [
+ *         { type: 'formatted-num', targets: 0 }
+ *       ]
+ *    } );
  */
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {

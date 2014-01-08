@@ -2,9 +2,17 @@
  * Although DataTables' internal numeric sorting works no problem on negative
  * numbers, it does not accept positively signed numbers. This plug-in will
  * sort just such data numerically.
+ *
  *  @name Fully signed numbers sorting 
- *  @anchor Signed_Numbers
- *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
+ *  @summary Sort data numerically with a leading `+` symbol (as well as `-`).
+ *  @author [Allan Jardine](http://sprymedia.co.uk)
+ *
+ *  @example
+ *    $('#example').dataTable( {
+ *       columnDefs: [
+ *         { type: 'signed-num', targets: 0 }
+ *       ]
+ *    } );
  */
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {

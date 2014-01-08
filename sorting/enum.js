@@ -1,11 +1,19 @@
 /**
- * Sort by priority through an enumerated list. In this case the words 'High',
- * 'Medium' and 'Low' are used and thus sorted in priority order. This works 
+ * Sort by priority through an enumerated list. In this case the words _High_,
+ * _Medium_ and _Low_ are used and thus sorted in priority order. This works 
  * by converting the works to a numerical value and then sorting based on that
  * value.
+ *
  *  @name enum
- *  @anchor enum
- *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
+ *  @summary Sort an enumerated list of options
+ *  @author [Allan Jardine](http://sprymedia.co.uk)
+ *
+ *  @example
+ *    $('#example').dataTable( {
+ *       columnDefs: [
+ *         { type: 'enum', targets: 0 }
+ *       ]
+ *    } );
  */
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {

@@ -1,11 +1,23 @@
 /**
- * Just like the "hidden title numeric sorting" plug-in, this sorting plug-in
+ * Just like the _hidden title numeric sorting_ plug-in, this sorting plug-in
  * will take the information to be sorted on from the title attribute of a span
  * element. The only difference is that it is string based sorting rather than
  * numeric.
+ *
+ * Note that the HTML5 `data-sort` attribute can be [used to supply sorting data
+ * to DataTables](//datatables.net/manual/orthogonal-data) and is preferable to
+ * using this method, which is therefore marked as depreciated.
+ * 
  *  @name Hidden title string sorting
- *  @anchor hidden_title_string
- *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
+ *  @summary Sort data as a string based on an attribute on an empty element.
+ *  @author [Allan Jardine](http://sprymedia.co.uk)
+ *
+ *  @example
+ *    $('#example').dataTable( {
+ *       columnDefs: [
+ *         { type: 'title-string', targets: 0 }
+ *       ]
+ *    } );
  */
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {

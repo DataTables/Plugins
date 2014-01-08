@@ -1,9 +1,10 @@
 /**
  * Get an array of TD nodes from DataTables for a given row, including any 
  * column elements which are hidden.
+ *
  *  @name fnGetTds
- *  @anchor fnGetTds
- *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
+ *  @summary 
+ *  @author [Allan Jardine](http://sprymedia.co.uk)
  *
  *  @example
  *    $(document).ready(function() {
@@ -15,18 +16,18 @@
  *    } );
  */
 
-$.fn.dataTableExt.oApi.fnGetTds  = function ( oSettings, mTr )
+jQuery.fn.dataTableExt.oApi.fnGetTds  = function ( oSettings, mTr )
 {
     var anTds = [];
     var anVisibleTds = [];
     var iCorrector = 0;
     var nTd, iColumn, iColumns;
-     
+
     /* Take either a TR node or aoData index as the mTr property */
-    var iRow = (typeof mTr == 'object') ? 
+    var iRow = (typeof mTr == 'object') ?
         oSettings.oApi._fnNodeToDataIndex(oSettings, mTr) : mTr;
     var nTr = oSettings.aoData[iRow].nTr;
-     
+
     /* Get an array of the visible TD elements */
     for ( iColumn=0, iColumns=nTr.childNodes.length ; iColumn<iColumns ; iColumn++ )
     {
@@ -36,7 +37,7 @@ $.fn.dataTableExt.oApi.fnGetTds  = function ( oSettings, mTr )
             anVisibleTds.push( nTd );
         }
     }
-     
+
     /* Construct and array of the combined elements */
     for ( iColumn=0, iColumns=oSettings.aoColumns.length ; iColumn<iColumns ; iColumn++ )
     {
@@ -50,6 +51,6 @@ $.fn.dataTableExt.oApi.fnGetTds  = function ( oSettings, mTr )
             iCorrector++;
         }
     }
-     
+
     return anTds;
 };

@@ -3,9 +3,10 @@
  * time, however it can be useful to re-read an Ajax source and have the table
  * update. Typically you would need to use the fnClearTable() and fnAddData()
  * functions, however this wraps it all up in a single function call.
+ *
  *  @name fnReloadAjax
- *  @anchor fnReloadAjax
- *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
+ *  @summary 
+ *  @author [Allan Jardine](http://sprymedia.co.uk)
  *
  *  @example
  *    // Example call to load a new file
@@ -15,13 +16,13 @@
  *    oTable.fnReloadAjax();
  */
 
-$.fn.dataTableExt.oApi.fnReloadAjax = function ( oSettings, sNewSource, fnCallback, bStandingRedraw )
+jQuery.fn.dataTableExt.oApi.fnReloadAjax = function ( oSettings, sNewSource, fnCallback, bStandingRedraw )
 {
 	// DataTables 1.10 compatibility - if 1.10 then `versionCheck` exists.
 	// 1.10's API has ajax reloading built in, so we use those abilities
 	// directly.
-	if ( $.fn.dataTable.versionCheck ) {
-		var api = new $.fn.dataTable.Api( oSettings );
+	if ( jQuery.fn.dataTable.versionCheck ) {
+		var api = new jQuery.fn.dataTable.Api( oSettings );
 
 		if ( sNewSource ) {
 			api.ajax.url( sNewSource ).load( fnCallback, !bStandingRedraw );
@@ -61,7 +62,7 @@ $.fn.dataTableExt.oApi.fnReloadAjax = function ( oSettings, sNewSource, fnCallba
 		{
 			that.oApi._fnAddData( oSettings, aData[i] );
 		}
-		
+
 		oSettings.aiDisplay = oSettings.aiDisplayMaster.slice();
 
 		that.fnDraw();

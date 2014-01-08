@@ -5,9 +5,10 @@
  * initialisation, it can sometimes be useful to restore the original order
  * after sorting has already occurred - which is exactly what this function
  * does.
+ *
  *  @name fnSortNeutral
- *  @anchor fnSortNeutral
- *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
+ *  @summary 
+ *  @author [Allan Jardine](http://sprymedia.co.uk)
  *
  *  @example
  *    $(document).ready(function() {
@@ -18,11 +19,11 @@
  *    } );
  */
 
-$.fn.dataTableExt.oApi.fnSortNeutral = function ( oSettings )
+jQuery.fn.dataTableExt.oApi.fnSortNeutral = function ( oSettings )
 {
 	/* Remove any current sorting */
 	oSettings.aaSorting = [];
-	 
+
 	/* Sort display arrays so we get them in numerical order */
 	oSettings.aiDisplay.sort( function (x,y) {
 		return x-y;
@@ -30,7 +31,7 @@ $.fn.dataTableExt.oApi.fnSortNeutral = function ( oSettings )
 	oSettings.aiDisplayMaster.sort( function (x,y) {
 		return x-y;
 	} );
-	 
+
 	/* Redraw */
 	oSettings.oApi._fnReDraw( oSettings );
 };

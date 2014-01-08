@@ -1,13 +1,21 @@
 /**
- * DataTables internal date sorting replies on Date.parse() which is part of 
+ * DataTables internal date sorting replies on `Date.parse()` which is part of 
  * the Javascript language, but you may wish to sort on dates which is doesn't 
  * recognise. The following is a plug-in for sorting dates in the format 
- * dd/mm/yy.
+ * `dd/mm/yy`.
  * 
  * An automatic type detection plug-in is available for this sorting plug-in.
+ *
  *  @name Date (dd/mm/YY)
- *  @anchor date_uk
+ *  @summary Sort dates in the format `dd/mm/YY`
  *  @author Andy McMaster
+ *
+ *  @example
+ *    $('#example').dataTable( {
+ *       columnDefs: [
+ *         { type: 'date-uk', targets: 0 }
+ *       ]
+ *    } );
  */
 
  jQuery.extend( jQuery.fn.dataTableExt.oSort, {

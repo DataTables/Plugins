@@ -3,9 +3,10 @@
  * matching data (optionally the search can be restricted to a single column), 
  * but in this case the returned array contains TR nodes of the matching rows,
  * rather than data indexes.
+ *
  *  @name fnFindCellRowNodes
- *  @anchor fnFindCellRowNodes
- *  @author <a href="http://sprymedia.co.uk">Allan Jardine</a>
+ *  @summary 
+ *  @author [Allan Jardine](http://sprymedia.co.uk)
  *
  *  @example
  *    $(document).ready(function() {
@@ -17,16 +18,16 @@
  *    } );
  */
 
-$.fn.dataTableExt.oApi.fnFindCellRowNodes = function ( oSettings, sSearch, iColumn )
+jQuery.fn.dataTableExt.oApi.fnFindCellRowNodes = function ( oSettings, sSearch, iColumn )
 {
 	var
 		i,iLen, j, jLen,
 		aOut = [], aData;
-	 
+
 	for ( i=0, iLen=oSettings.aoData.length ; i<iLen ; i++ )
 	{
 		aData = oSettings.aoData[i]._aData;
-		 
+
 		if ( typeof iColumn == 'undefined' )
 		{
 			for ( j=0, jLen=aData.length ; j<jLen ; j++ )
@@ -42,6 +43,6 @@ $.fn.dataTableExt.oApi.fnFindCellRowNodes = function ( oSettings, sSearch, iColu
 			aOut.push( oSettings.aoData[i].nTr );
 		}
 	}
-	 
+
 	return aOut;
 };

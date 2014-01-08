@@ -1,8 +1,9 @@
 /**
  * Redraw the table (i.e. fnDraw) to take account of sorting and filtering,
  * but retain the current pagination settings.
+ *
  *  @name fnStandingRedraw
- *  @anchor fnStandingRedraw
+ *  @summary 
  *  @author Jonathan Hoguet
  *
  *  @example
@@ -12,7 +13,7 @@
  *    } );
  */
 
-$.fn.dataTableExt.oApi.fnStandingRedraw = function(oSettings) {
+jQuery.fn.dataTableExt.oApi.fnStandingRedraw = function(oSettings) {
     if(oSettings.oFeatures.bServerSide === false){
         var before = oSettings._iDisplayStart;
 
@@ -22,7 +23,7 @@ $.fn.dataTableExt.oApi.fnStandingRedraw = function(oSettings) {
         oSettings._iDisplayStart = before;
         oSettings.oApi._fnCalculateEnd(oSettings);
     }
-     
+
     // draw the 'current' page
     oSettings.oApi._fnDraw(oSettings);
 };

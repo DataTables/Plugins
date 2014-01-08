@@ -1,6 +1,8 @@
 /**
  * Average the values in a data set.
+ *
  *  @name average()
+ *  @summary 
  *  @author [Allan Jardine](http://sprymedia.co.uk)
  *  @requires DataTables 1.10+
  *
