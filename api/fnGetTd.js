@@ -1,20 +1,31 @@
 /**
- * Get a TD node from a row, taking into account column visibility. While 
- * getting a TD node is easy when it is visible on the page by using normal 
- * DOM methods, jQuery or whatever, it becomes a lot more complicated when 
- * taking into account hidden rows and columns. This function can be used to
- * overcome these difficulties.
+ * Get a `dt-tag td` node from a row, taking into account column visibility.
+ * While getting a `dt-tag td` node is easy when it is visible on the page by
+ * using normal DOM methods, jQuery or whatever, it becomes a lot more
+ * complicated when taking into account hidden rows and columns. This function
+ * can be used to overcome these difficulties.
+ *
+ * DataTables 1.10+'s new API provides the `dt-api cell()` and `dt-api cells()`
+ * methods which are preferable for use over this method. As such this method is
+ * marked deprecated, but is available for use with legacy version of
+ * DataTables. Please use the new API if you are used DataTables 1.10 or newer.
  *
  *  @name fnGetTd
- *  @summary 
+ *  @summary Get the `dt-tag td` element for a cell.
  *  @author [Allan Jardine](http://sprymedia.co.uk)
+ *  @deprecated
+ *
+ *  @param {node} mTr `dt-tag tr` element to get the `dt-tag td` of
+ *  @param {integer} iTd Column index to get the node of
+ *  @param {boolean} bVisOnly Consider visible columns only
+ *  @returns {node} `dt-tag td` element in question
  *
  *  @example
  *    $(document).ready(function() {
- *        var oTable = $('#example').dataTable();
+ *        var table = $('#example').dataTable();
  *         
  *        // Sort in the order that was origially in the HTML
- *        var nTd = oTable.fnGetTd( $('#example tbody tr:eq(1)')[0], 1 );
+ *        var nTd = table.fnGetTd( $('#example tbody tr:eq(1)')[0], 1 );
  *        console.log( nTd );
  *    } );
  */

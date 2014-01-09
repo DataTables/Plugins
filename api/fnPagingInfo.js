@@ -3,9 +3,15 @@
  * using to display each page, including the number of records shown, start
  * and end points in the data set etc.
  *
+ * DataTables 1.10+ provides the `dt-api page.info()` method, built-in, provide
+ * the same information as this method. As such this method is marked
+ * deprecated, but is available for use with legacy version of DataTables.
+ * Please use the new API if you are used DataTables 1.10 or newer.
+ *
  *  @name fnPagingInfo
- *  @summary 
+ *  @summary Get information about the paging state of the table
  *  @author [Allan Jardine](http://sprymedia.co.uk)
+ *  @deprecated
  *
  *  @example
  *    $(document).ready(function() {

@@ -1,10 +1,19 @@
 /**
- * Get an array of TD nodes from DataTables for a given row, including any 
- * column elements which are hidden.
+ * Get an array of `dt-tag td` nodes from DataTables for a given row, including
+ * any column elements which are hidden.
+ *
+ * DataTables 1.10 has the `dt-api row().nodes()` method, built-in, to provide
+ * this functionality. As such this method is marked deprecated, but is
+ * available for use with legacy version of DataTables. Please use the new API
+ * if you are used DataTables 1.10 or newer.
  *
  *  @name fnGetTds
- *  @summary 
+ *  @summary Get the `dt-tag td` elements for a row
  *  @author [Allan Jardine](http://sprymedia.co.uk)
+ *  @deprecated
+ *
+ *  @param {node} mTr `dt-tag tr` element to get the `dt-tag td` of
+ *  @returns {array} Array of `dt-tag td` elements
  *
  *  @example
  *    $(document).ready(function() {

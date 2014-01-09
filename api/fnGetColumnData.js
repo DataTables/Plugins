@@ -2,12 +2,25 @@
  * Return an array of table values from a particular column, with various
  * filtering options.
  *
+ * DataTables 1.10+ provides the `dt-api column().data()` method, built-in to
+ * the core, to provide this ability. As such, this method is marked deprecated,
+ * but is available for use with legacy version of DataTables. Please use the
+ * new API if you are used DataTables 1.10 or newer.
+ *
  *  @name fnGetColumnData
- *  @summary 
+ *  @summary Get the data from a column
  *  @author [Benedikt Forchhammer](http://mind2.de)
+ *  @deprecated
+ *
+ *  @param {integer} iColumn Column to get data from
+ *  @param {boolean} [bFiltered=true] Reduce the data set to only unique values
+ *  @param {boolean} [bUnique=true] Get data from filter results only
+ *  @param {boolean} [bIgnoreEmpty=true] Remove data elements which are empty
+ *  @returns {array} Array of data from the column
  *
  *  @example
- *    
+ *    var table = $('#example').dataTable();
+ *    table.fnGetColumnData( 3 );
  */
 
 jQuery.fn.dataTableExt.oApi.fnGetColumnData = function ( oSettings, iColumn, bUnique, bFiltered, bIgnoreEmpty ) {

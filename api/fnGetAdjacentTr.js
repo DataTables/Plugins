@@ -1,23 +1,29 @@
 /**
- * Due to the fact that DataTables moves DOM elements around (mainly TR 
- * elements for sorting and filtering) it can at times be a little tricky
- * to get the next row based on another, while taking into account pagination,
- * filtering, sorting etc. This function is designed to address exactly this
- * situation. It takes two parameters, the target node, and a boolean
- * indicating if the adjacent row retrieved should be the next (true, or no
- * value) or the previous (false).
+ * Due to the fact that DataTables moves DOM elements around (mainly `dt-tag tr`
+ * elements for sorting and filtering) it can at times be a little tricky to get
+ * the next row based on another, while taking into account pagination,
+ * filtering, sorting etc.
+ * 
+ * This function is designed to address exactly this situation. It takes two
+ * parameters, the target node, and a boolean indicating if the adjacent row
+ * retrieved should be the next (`true`, or no value) or the previous (`false`).
  *
  *  @name fnGetAdjacentTr
- *  @summary 
+ *  @summary Get the adjacent `dt-tag tr` element for a row.
  *  @author [Allan Jardine](http://sprymedia.co.uk)
+ *
+ *  @param {node} nTr `dt-tag tr` element to get the adjacent element of
+ *  @param {boolean} [bNext=true] Get the next (`true`), or previous (`false`)
+ *    `dt-tag tr` element.
+ *  @returns {node} `dt-tag tr` element or null if not found.
  *
  *  @example
  *    $(document).ready(function() {
- *        var oTable = $('#example').dataTable();
+ *        var table = $('#example').dataTable();
  *         
- *        var n1 = $('#example tbody tr:eq(2)')[0];
- *        var nNext = oTable.fnGetAdjacentTr( n1 );
- *        var nPrev = oTable.fnGetAdjacentTr( n1, false );
+ *        var n1 = $('#example tbody tr').eq(2)[0];
+ *        var next = table.fnGetAdjacentTr( n1 );
+ *        var prev = table.fnGetAdjacentTr( n1, false );
  *    } );
  */
 

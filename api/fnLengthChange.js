@@ -2,14 +2,20 @@
  * Change the number of records that can be viewed on a single page in 
  * DataTables.
  *
+ * DataTables 1.10 provides the `dt-api page.len()` method to get and set the
+ * page length using the built-in API. As such this method is marked deprecated,
+ * but is available for use with legacy version of DataTables. Please use the
+ * new API if you are used DataTables 1.10 or newer.
+ *
  *  @name fnLengthChange
- *  @summary 
+ *  @summary Change the paging display length
  *  @author [Pedro Alves](http://www.webdetails.pt/)
+ *  @deprecated
  *
  *  @example
  *    $(document).ready(function() {
- *        var oTable = $('#example').dataTable();
- *        oTable.fnLengthChange( 100 );
+ *        var table = $('#example').dataTable();
+ *        table.fnLengthChange( 100 );
  *    } );
  */
 

@@ -1,19 +1,36 @@
 /**
  * By default DataTables only uses the sAjaxSource variable at initialisation
  * time, however it can be useful to re-read an Ajax source and have the table
- * update. Typically you would need to use the fnClearTable() and fnAddData()
- * functions, however this wraps it all up in a single function call.
+ * update. Typically you would need to use the `fnClearTable()` and
+ * `fnAddData()` functions, however this wraps it all up in a single function
+ * call.
+ *
+ * DataTables 1.10 provides the `dt-api ajax.url()` and `dt-api ajax.reload()`
+ * methods, built-in, to give the same functionality as this plug-in. As such
+ * this method is marked deprecated, but is available for use with legacy
+ * version of DataTables. Please use the new API if you are used DataTables 1.10
+ * or newer.
  *
  *  @name fnReloadAjax
- *  @summary 
+ *  @summary Reload the table's data from the Ajax source
  *  @author [Allan Jardine](http://sprymedia.co.uk)
+ *  @deprecated
+ *
+ *  @param {string} [sNewSource] URL to get the data from. If not give, the
+ *    previously used URL is used.
+ *  @param {function} [fnCallback] Callback that is executed when the table has
+ *    redrawn with the new data
+ *  @param {boolean} [bStandingRedraw=false] Standing redraw (don't changing the
+ *      paging)
  *
  *  @example
+ *    var table = $('#example').dataTable();
+ *    
  *    // Example call to load a new file
- *    oTable.fnReloadAjax( 'media/examples_support/json_source2.txt' );
+ *    table.fnReloadAjax( 'media/examples_support/json_source2.txt' );
  *
  *    // Example call to reload from original file
- *    oTable.fnReloadAjax();
+ *    table.fnReloadAjax();
  */
 
 jQuery.fn.dataTableExt.oApi.fnReloadAjax = function ( oSettings, sNewSource, fnCallback, bStandingRedraw )

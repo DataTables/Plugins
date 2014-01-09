@@ -2,20 +2,34 @@
  * Remove all filtering that has been applied to a DataTable, be it column
  * based filtering or global filtering.
  *
+ * DataTables 1.10+ new API can achieve the same effect as this plug-in, without
+ * the requirement for plug-ins using the following chaining:
+ *
+ * ```js
+ * var table = $('#example').DataTable();
+ * table
+ *   .search( '' )
+ *   .columns().search( '' )
+ *   .draw();
+ * ```
+ *
+ * Please use the new API in DataTables 1.10+ is you are able to do so.
+ *
  *  @name fnFilterClear
- *  @summary 
+ *  @summary Remove all column and global filters applied to a table
  *  @author [Allan Jardine](http://sprymedia.co.uk)
+ *  @deprecated
  *
  *  @example
  *    $(document).ready(function() {
- *        var oTable = $('#example').dataTable();
+ *        var table = $('#example').dataTable();
  *         
  *        // Perform a filter
- *        oTable.fnFilter('Win');
- *        oTable.fnFilter('Trident', 0);
+ *        table.fnFilter('Win');
+ *        table.fnFilter('Trident', 0);
  *         
  *        // Remove all filtering
- *        oTable.fnFilterClear();
+ *        table.fnFilterClear();
  *    } );
  */
 

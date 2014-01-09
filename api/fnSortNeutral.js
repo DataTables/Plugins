@@ -1,21 +1,20 @@
 /**
- * This function will restore the order in which data was read into a 
- * DataTable (for example from an HTML source). Although you can set 
- * aaSorting to be an empty array ([ ]) in order to prevent sorting during 
- * initialisation, it can sometimes be useful to restore the original order
- * after sorting has already occurred - which is exactly what this function
- * does.
+ * This function will restore the order in which data was read into a DataTable
+ * (for example from an HTML source). Although you can set aaSorting to be an
+ * empty array (`[ ]`) in order to prevent sorting during initialisation, it can
+ * sometimes be useful to restore the original order after sorting has already
+ * occurred - which is exactly what this function does.
  *
  *  @name fnSortNeutral
- *  @summary 
+ *  @summary Change ordering of the table to its data load order
  *  @author [Allan Jardine](http://sprymedia.co.uk)
  *
  *  @example
  *    $(document).ready(function() {
- *        var oTable = $('#example').dataTable();
+ *        var table = $('#example').dataTable();
  *         
  *        // Sort in the order that was originally in the HTML
- *        oTable.fnSortNeutral();
+ *        table.fnSortNeutral();
  *    } );
  */
 

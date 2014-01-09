@@ -1,20 +1,25 @@
 /**
  * Add a new row to the table and display it on the screen by jumping the
  * pagination to the required location. This function also returns an object
- * with the added TR element and it's index in aoData such that you could
- * provide an effect (fade for example) to show which row has been added.
- * This function is a drop in replacement for fnAddData with one important
+ * with the added `dt-tag TR` element and it's index in `aoData` such that you
+ * could provide an effect (fade for example) to show which row has been added.
+ *
+ * This function is a drop in replacement for `fnAddData` with one important
  * exception, it will only take a 1D array or an object, and not a 2D array
- * (i.e. it will not add multiple rows like fnAddData).
+ * (i.e. it will not add multiple rows like `fnAddData`).
  *
  *  @name fnAddDataAndDisplay
- *  @summary 
+ *  @summary Add data and shift the paging to display it immediately
  *  @author [Allan Jardine](http://sprymedia.co.uk)
+ *
+ *  @param {data} aData Data to add to the table
+ *  @returns {object} Object with `nTr` and `iPos` parameters, where the former
+ *    is the added `dt-tag tr` element and the latter is the row's index.
  *
  *  @example
  *    $(document).ready(function() {
- *        var oTable = $('#example').dataTable();
- *        oTable.fnAddDataAndDisplay( [ 1, 2, 3, 4, 5, ... ] );
+ *        var table = $('#example').dataTable();
+ *        table.fnAddDataAndDisplay( [ 1, 2, 3, 4, 5, ... ] );
  *    } );
  */
 
@@ -45,7 +50,9 @@ jQuery.fn.dataTableExt.oApi.fnAddDataAndDisplay = function ( oSettings, aData )
 	if( iPos >= 0 )
 	{
 		oSettings._iDisplayStart = ( Math.floor(i / oSettings._iDisplayLength) ) * oSettings._iDisplayLength;
-		this.oApi._fnCalculateEnd( oSettings );
+		if ( this.oApi._fnCalculateEnd ) {
+			this.oApi._fnCalculateEnd( oSettings );
+		}
 	}
 
 	this.oApi._fnDraw( oSettings );

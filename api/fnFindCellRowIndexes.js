@@ -5,16 +5,20 @@
  * match.
  *
  *  @name fnFindCellRowIndexes
- *  @summary 
+ *  @summary Search for data, returning row indexes
  *  @author [Allan Jardine](http://sprymedia.co.uk)
+ *
+ *  @param {string} sSearch Data to search for
+ *  @param {integer} [iColumn=null] Limit search to this column
+ *  @returns {array} Array of row indexes with this data
  *
  *  @example
  *    $(document).ready(function() {
- *        var oTable = $('#example').dataTable();
+ *        var table = $('#example').dataTable();
  * 
- *        var a = oTable.fnFindCellRowIndexes( '1.7' ); // Search all columns
+ *        var a = table.fnFindCellRowIndexes( '1.7' ); // Search all columns
  *
- *        var b = oTable.fnFindCellRowIndexes( '1.7', 3 );  // Search only column 3
+ *        var b = table.fnFindCellRowIndexes( '1.7', 3 );  // Search only column 3
  *    } );
  */
 
@@ -28,7 +32,7 @@ jQuery.fn.dataTableExt.oApi.fnFindCellRowIndexes = function ( oSettings, sSearch
 	{
 		aData = oSettings.aoData[i]._aData;
 
-		if ( typeof iColumn == 'undefined' )
+		if ( iColumn === undefined )
 		{
 			for ( j=0, jLen=aData.length ; j<jLen ; j++ )
 			{

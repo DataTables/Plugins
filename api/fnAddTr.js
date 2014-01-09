@@ -1,13 +1,30 @@
 /**
- * Take a TR element and add it to a DataTables table. Useful for maintaining
- * custom classes and other attributes.
+ * This method will add an existing `dt-tag tr` element to a DataTable. This can
+ * be useful for maintaining custom classes and other attributes which have
+ * been explicitly assigned to the row.
+ *
+ * DataTables 1.10+ has `dt-api row.add()` and `dt-api rows.add()` which have
+ * this ability built in, and extend it to be able to use jQuery objects as well
+ * as plain `dt-tag tr` elements. As such this method is marked deprecated, but
+ * is available for use with legacy version of DataTables. Please use the
+ * new API if you are used DataTables 1.10 or newer.
  *
  *  @name fnAddTr
- *  @summary 
+ *  @summary Add a `dt-tag tr` element to the table
  *  @author [Allan Jardine](http://sprymedia.co.uk)
+ *  @deprecated
+ *
+ *  @param {node} nTr `dt-tag tr` element to add to the table
+ *  @param {boolean} [bRedraw=false] Indicate if the table should do a redraw or not.
  *
  *  @example
- *    
+ *    var table = $('#example').dataTable();
+ *    table.fnAddTr( $('<tr>'+
+ *         '<td>1</td>'+
+ *         '<td>2</td>'+
+ *         '<td>3</td>'+
+ *      '</tr>')[0]
+ *    );
  */
 
 jQuery.fn.dataTableExt.oApi.fnAddTr = function ( oSettings, nTr, bRedraw ) {

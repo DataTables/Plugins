@@ -1,12 +1,18 @@
 /**
- * Creates rowspan cells in a column when there are two or more cells in a 
+ * Creates `rowspan` cells in a column when there are two or more cells in a 
  * row with the same content, effectively grouping them together visually. 
- * *Note* - this plug-in currently only operates correctly with 
- * *server-side processing*.
+ * 
+ * **Note** - this plug-in currently only operates correctly with 
+ * **server-side processing**.
  *
  *  @name fnFakeRowspan
- *  @summary 
+ *  @summary Create a rowspan for cells which share data
  *  @author Fredrik Wendel
+ *
+ *  @param {interger} iColumn Column index to have row span
+ *  @param {boolean} [bCaseSensitive=true] If the data check should be case
+ *    sensitive or not.
+ *  @returns {jQuery} jQuery instance
  *
  *  @example
  *    $('#example').dataTable().fnFakeRowspan(3);
