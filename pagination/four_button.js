@@ -6,11 +6,11 @@
  *
  * DataTables has this ability built in using the `dt-string full` option of
  * the `dt-init pagingType` initialisation option. As such, this plug-in is
- * marked as depreciated.
+ * marked as deprecated.
  *
  *  @name Four button navigation
  *  @summary Display forward, back, first and last buttons.
- *  @depreciated
+ *  @deprecated
  *  @author [Allan Jardine](http://sprymedia.co.uk)
  *
  *  @example

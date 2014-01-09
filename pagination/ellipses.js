@@ -11,12 +11,12 @@
  * _iLastPage.
  *
  * Note that DataTables 1.10 has this ability built in. As such, this plug-ins
- * has been marked as depreciated, but may still be useful for if you are using
+ * has been marked as deprecated, but may still be useful for if you are using
  * an old version of DataTables.
  *
  * @name Ellipses
  * @summary Show ellipses in the pagination control where there is a gap in numbers
- * @depreciated
+ * @deprecated
  * @author [Dave Kennedy](http://daveden.wordpress.com/)
  * @example
  *     $(document).ready(function() {

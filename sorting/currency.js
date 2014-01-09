@@ -4,12 +4,12 @@
  * manually) while taking account of the currency symbol ($ or £ by default).
  *
  * DataTables 1.10+ has currency sorting abilities built-in and will be
- * automatically detected. As such this plug-in is marked as depreciated, but
+ * automatically detected. As such this plug-in is marked as deprecated, but
  * might be useful when working with old versions of DataTables.
  *
  *  @name Currency
  *  @summary Sort data numerically when it has a leading currency symbol.
- *  @depreciated
+ *  @deprecated
  *  @author [Allan Jardine](http://sprymedia.co.uk)
  *
  *  @example

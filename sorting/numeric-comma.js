@@ -10,7 +10,7 @@
  *
  *  @name Commas for decimal place
  *  @summary Sort numbers correctly which use a common as the decimal place.
- *  @depreciated
+ *  @deprecated
  *  @author [Allan Jardine](http://sprymedia.co.uk)
  *
  *  @example

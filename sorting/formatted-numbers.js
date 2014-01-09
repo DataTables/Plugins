@@ -4,12 +4,12 @@
  * non-numeric data.
  *
  * DataTables 1.10+ has formatted number detection and sorting abilities built-
- * in. As such this plug-in is marked as depreciated, but might be useful when
+ * in. As such this plug-in is marked as deprecated, but might be useful when
  * working with old versions of DataTables.
  *
  *  @name Formatted numbers
  *  @summary Sort numbers which are displayed with thousand separators
- *  @depreciated
+ *  @deprecated
  *  @author [Allan Jardine](http://sprymedia.co.uk)
  *
  *  @example

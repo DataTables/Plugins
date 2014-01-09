@@ -6,11 +6,12 @@
  *
  * Note that the HTML5 `data-sort` attribute can be [used to supply sorting data
  * to DataTables](//datatables.net/manual/orthogonal-data) and is preferable to
- * using this method, which is therefore marked as depreciated.
+ * using this method, which is therefore marked as deprecated.
  * 
  *  @name Hidden title string sorting
  *  @summary Sort data as a string based on an attribute on an empty element.
  *  @author [Allan Jardine](http://sprymedia.co.uk)
+ *  @deprecated
  *
  *  @example
  *    $('#example').dataTable( {

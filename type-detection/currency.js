@@ -5,12 +5,12 @@
  * in conjunction with the currency sorting plug-in.
  * 
  * DataTables 1.10+ has currency sorting abilities built-in and will be
- * automatically detected. As such this plug-in is marked as depreciated, but
+ * automatically detected. As such this plug-in is marked as deprecated, but
  * might be useful when working with old versions of DataTables.
  *
  *  @name Currency
  *  @summary Detect data of numeric type with a leading currency symbol.
- *  @depreciated
+ *  @deprecated
  *  @author [Allan Jardine](http://sprymedia.co.uk), Nuno Gomes
  */
 

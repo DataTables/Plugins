@@ -8,7 +8,7 @@
  *
  *  @name Commas for decimal place
  *  @summary Detect numeric data which uses a comma as the decimal place.
- *  @depreciated
+ *  @deprecated
  *  @author [Allan Jardine](http://sprymedia.co.uk)
  */
 

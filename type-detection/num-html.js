@@ -5,12 +5,12 @@
  * sorting plug-in.
  *
  * DataTables 1.10+ has numeric HTML data type and sorting abilities built-in.
- * As such this plug-in is marked as depreciated, but might be useful when
+ * As such this plug-in is marked as deprecated, but might be useful when
  * working with old versions of DataTables.
  *
  *  @name Numbers with HTML
  *  @summary Detect data which is a mix of HTML and numeric data.
- *  @depreciated
+ *  @deprecated
  *  @author [Allan Jardine](http://sprymedia.co.uk)
  */
 
