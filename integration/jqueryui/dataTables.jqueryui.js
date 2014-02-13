@@ -44,7 +44,7 @@ $.extend( DataTable.ext.classes, {
 } );
 
 
-DataTable.ext.renderer.header.jqueryui = function ( settings, cell, column, idx, classes ) {
+DataTable.ext.renderer.header.jqueryui = function ( settings, cell, column, classes ) {
 	$('<div/>')
 		.addClass( 'DataTables_sort_wrapper' )
 		.append( cell.contents() )
@@ -55,10 +55,12 @@ DataTable.ext.renderer.header.jqueryui = function ( settings, cell, column, idx,
 
 	// Attach a sort listener to update on sort
 	$(settings.nTable).on( 'order.dt', function ( e, settings, sorting, columns ) {
+		var colIdx = column.idx;
+
 		cell
 			.removeClass( classes.sSortAsc +" "+classes.sSortDesc )
-			.addClass( columns[ idx ] == 'asc' ?
-				classes.sSortAsc : columns[ idx ] == 'desc' ?
+			.addClass( columns[ colIdx ] == 'asc' ?
+				classes.sSortAsc : columns[ colIdx ] == 'desc' ?
 					classes.sSortDesc :
 					column.sSortingClass
 			);
@@ -72,13 +74,13 @@ DataTable.ext.renderer.header.jqueryui = function ( settings, cell, column, idx,
 				sort_prefix+'carat-1-n' +" "+
 				sort_prefix+'carat-1-s'
 			)
-			.addClass( columns[ idx ] == 'asc' ?
-				sort_prefix+'triangle-1-n' : columns[ idx ] == 'desc' ?
+			.addClass( columns[ colIdx ] == 'asc' ?
+				sort_prefix+'triangle-1-n' : columns[ colIdx ] == 'desc' ?
 					sort_prefix+'triangle-1-s' :
 					column.sSortingClassJUI
 			);
 	} );
-}
+};
 
 
 /*
