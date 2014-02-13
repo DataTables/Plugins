@@ -166,6 +166,7 @@ div.DTFC_RightHeadWrapper table,
 div.DTFC_RightFootWrapper table,
 table.DTFC_Cloned tr.even {
     background-color: white;
+    margin-bottom: 0;
 }
  
 div.DTFC_RightHeadWrapper table ,

@@ -62,6 +62,11 @@ table.dataTable thead .sorting_desc { background: url('../images/sort_desc.png')
 table.dataTable thead .sorting_asc_disabled { background: url('../images/sort_asc_disabled.png') no-repeat center right; }
 table.dataTable thead .sorting_desc_disabled { background: url('../images/sort_desc_disabled.png') no-repeat center right; }
 
+table.dataTable thead > tr > th {
+	padding-left: 18px;
+	padding-right: 18px;
+}
+
 table.dataTable th:active {
 	outline: none;
 }
@@ -185,6 +190,7 @@ div.DTFC_RightHeadWrapper table,
 div.DTFC_RightFootWrapper table,
 table.DTFC_Cloned tr.even {
     background-color: white;
+    margin-bottom: 0;
 }
  
 div.DTFC_RightHeadWrapper table ,
@@ -220,4 +226,3 @@ div.DTFC_RightFootWrapper table,
 div.DTFC_LeftFootWrapper table {
     border-top: none;
 }
-
