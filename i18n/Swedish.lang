@@ -11,7 +11,7 @@
   "sInfoEmpty": "Visar 0 till 0 av totalt 0 rader",
   "sInfoFiltered": "(filtrerade från totalt _MAX_ rader)",
   "sInfoPostFix": "",
-  "sInfoThousands": ",",
+  "sInfoThousands": " ",
   "sLengthMenu": "Visa _MENU_ rader",
   "sLoadingRecords": "Laddar...",
   "sProcessing": "Bearbetar...",
