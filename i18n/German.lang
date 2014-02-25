@@ -16,9 +16,9 @@
 	"sSearch":       "Suchen",
 	"sUrl":          "",
 	"oPaginate": {
-		"sFirst":    "Erster",
+		"sFirst":    "Erste",
 		"sPrevious": "Zurück",
-		"sNext":     "Nächster",
-		"sLast":     "Letzter"
+		"sNext":     "Nächste",
+		"sLast":     "Letzte"
 	}
 }
