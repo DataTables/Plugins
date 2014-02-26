@@ -20,7 +20,9 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 		date = date.replace(" ", "");
 		var eu_date, year;
 		
-		if (date == '') return 0;
+		if (date == '') {
+			return 0;
+		}
 
 		if (date.indexOf('.') > 0) {
 			/*date a, format dd.mn.(yyyy) ; (year is optional)*/
