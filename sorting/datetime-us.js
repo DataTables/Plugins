@@ -27,7 +27,7 @@ jQuery.extend(jQuery.fn.dataTableExt.oSort, {
             year = b[3],
             hour = b[4],
             min = b[5],
-            ap = b[6];
+            ap = b[6].toLowerCase();
 
         if (hour == '12') {
             hour = '0';
