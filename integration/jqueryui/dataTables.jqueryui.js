@@ -44,12 +44,28 @@ $.extend( DataTable.ext.classes, {
 } );
 
 
-DataTable.ext.renderer.header.jqueryui = function ( settings, cell, column, classes ) {
+$.fn.DataTable.ext.renderer.header.jqueryui = function ( settings, cell, column, classes ) {
+	// Calculate what the unsorted class should be
+	var noSortAppliedClass = sort_prefix+'carat-2-n-s';
+	var asc = $.inArray('asc', column.asSorting) !== -1;
+	var desc = $.inArray('desc', column.asSorting) !== -1;
+
+	if ( !column.bSortable || (!asc && !desc) ) {
+		noSortAppliedClass = '';
+	}
+	else if ( asc && !desc ) {
+		noSortAppliedClass = sort_prefix+'carat-1-n';
+	}
+	else if ( !asc && desc ) {
+		noSortAppliedClass = sort_prefix+'carat-1-s';
+	}
+
+	// Setup the DOM structure
 	$('<div/>')
 		.addClass( 'DataTables_sort_wrapper' )
 		.append( cell.contents() )
 		.append( $('<span/>')
-			.addClass( classes.sSortIcon+' '+column.sSortingClassJUI )
+			.addClass( classes.sSortIcon+' '+noSortAppliedClass )
 		)
 		.appendTo( cell );
 
@@ -66,7 +82,7 @@ DataTable.ext.renderer.header.jqueryui = function ( settings, cell, column, clas
 			);
 
 		cell
-			.find( 'span' )
+			.find( 'span.'+classes.sSortIcon )
 			.removeClass(
 				sort_prefix+'triangle-1-n' +" "+
 				sort_prefix+'triangle-1-s' +" "+
@@ -77,7 +93,7 @@ DataTable.ext.renderer.header.jqueryui = function ( settings, cell, column, clas
 			.addClass( columns[ colIdx ] == 'asc' ?
 				sort_prefix+'triangle-1-n' : columns[ colIdx ] == 'desc' ?
 					sort_prefix+'triangle-1-s' :
-					column.sSortingClassJUI
+					noSortAppliedClass
 			);
 	} );
 };

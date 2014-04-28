@@ -406,6 +406,24 @@ table.dataTable td {
 }
 
 
+// Collapse the two column display of the control elements when the screen is
+// small
+@media screen and (max-width: 767px) {
+  .dataTables_wrapper {
+    .dataTables_length,
+    .dataTables_filter,
+    .dataTables_info,
+    .dataTables_paginate {
+      float: none;
+      text-align: center;
+    }
+
+    .dataTables_filter,
+    .dataTables_paginate {
+      margin-top: 0.5em;
+    }
+  }
+}
 
 
 
