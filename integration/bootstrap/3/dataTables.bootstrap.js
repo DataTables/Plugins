@@ -8,9 +8,9 @@
 /* Set the defaults for DataTables initialisation */
 $.extend( true, $.fn.dataTable.defaults, {
 	"sDom":
-		"<'row'<'col-xs-6'l><'col-xs-6'f>r>"+
+		"<'row'<'col-xs-6'<'pull-left'l>><'col-xs-6'<'pull-right'f>>r>"+
 		"t"+
-		"<'row'<'col-xs-6'i><'col-xs-6'p>>",
+		"<'row'<'col-xs-6'<'pull-left'i>><'col-xs-6'<'pull-right'p>>>",
 	"oLanguage": {
 		"sLengthMenu": "_MENU_ records per page"
 	}
