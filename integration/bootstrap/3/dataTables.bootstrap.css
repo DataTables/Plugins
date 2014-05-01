@@ -103,15 +103,6 @@ table.table thead .sorting_desc:after { content: '\e156'; }
 table.table thead .sorting_asc_disabled:after { content: '\e155'; opacity: 0.2; }
 table.table thead .sorting_desc_disabled:after { content: '\e156'; opacity: 0.2; }
 
-table.dataTable thead > tr > th {
-	padding-left: 0;
-	padding-right: 18px;
-}
-html[dir='rtl'] table.dataTable thead > tr > th {
-	padding-left: 18px;
-	padding-right: 0;
-}
-
 table.dataTable th:active {
 	outline: none;
 }
