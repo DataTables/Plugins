@@ -1,3 +1,10 @@
+(function (factory) {
+	if (typeof define === 'function' && define.amd) {
+		define(['jquery','datatables'], factory);
+	} else {
+		factory(jQuery);
+	}
+}(function ($) {
 /* Set the defaults for DataTables initialisation */
 $.extend( true, $.fn.dataTable.defaults, {
 	"sDom":
@@ -248,4 +255,4 @@ if ( $.fn.DataTable.TableTools ) {
 		}
 	} );
 }
-
+}));
