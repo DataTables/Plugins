@@ -25,7 +25,7 @@ var customDateDDMMMYYYYToOrd = function (date) {
 	"use strict"; //let's avoid tom-foolery in this function
 	// Convert to a number YYYYMMDD which we can use to order
 	var dateParts = date.split(/-/);
-	return (dateParts[2] * 10000) + ($.inArray(dateParts[1].toUpperCase(), ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"]) * 100) + dateParts[0];
+	return (dateParts[2] * 10000) + ($.inArray(dateParts[1].toUpperCase(), ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"]) * 100) + (dateParts[0]*1);
 };
 
 // This will help DataTables magic detect the "dd-MMM-yyyy" format; Unshift
