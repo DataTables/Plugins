@@ -146,5 +146,5 @@ div.columns div.dataTables_paginate li.first a:before,
 div.columns div.dataTables_paginate li.previous a:before,
 div.columns div.dataTables_paginate li.next a:after,
 div.columns div.dataTables_paginate li.last a:after {
-	top: 0px;
+	top: 0;
 }
