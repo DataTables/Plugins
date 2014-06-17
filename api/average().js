@@ -22,12 +22,11 @@
  */
 
 jQuery.fn.dataTable.Api.register( 'average()', function () {
-	var i=0;
-	var sum = this.flatten().reduce( function ( a, b ) {
-		i++;
-		return (a*1) + (b*1); // cast values in-case they are strings
-	} );
-
-	return sum / i;
+    var data = this.flatten();
+    var sum = data.reduce( function ( a, b ) {
+        return (a*1) + (b*1); // cast values in-case they are strings
+    } );
+ 
+    return sum / data.length;
 } );
 
