@@ -1,3 +1,12 @@
+(function(o_o) {
+	if (typeof define === 'function' && define.amd) {
+		require(['jquery', 'datatables'], function($) { o_o($) })
+	} else {
+		o_o(window.jQuery)
+	}
+}(function($) {
+
+
 /* Set the defaults for DataTables initialisation */
 $.extend( true, $.fn.dataTable.defaults, {
 	"sDom":
@@ -249,3 +258,4 @@ if ( $.fn.DataTable.TableTools ) {
 	} );
 }
 
+}));
