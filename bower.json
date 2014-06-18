@@ -1,0 +1,11 @@
+{
+    "name": "datatables.plugins",
+    "version": "0.1",
+    "main": [
+        "integration/bootstrap/3/dataTables.bootstrap.css",
+        "integration/bootstrap/3/dataTables.bootstrap.js"
+    ],
+    "dependencies": {
+        "datatables": ">=1.10"
+    }
+}
