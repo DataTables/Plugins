@@ -3,6 +3,10 @@ div.dataTables_length label {
 	float: left;
 	text-align: left;
 }
+html[dir='rtl'] div.dataTables_length label {
+	float: right;
+	text-align: right;
+}
 
 div.dataTables_length select {
 	width: 75px;
@@ -11,6 +15,9 @@ div.dataTables_length select {
 div.dataTables_filter label {
 	font-weight: normal;
 	float: right;
+}
+html[dir='rtl'] div.dataTables_filter label {
+	float: left;
 }
 
 div.dataTables_filter input {
@@ -24,6 +31,9 @@ div.dataTables_info {
 div.dataTables_paginate {
 	float: right;
 	margin: 0;
+}
+html[dir='rtl'] div.dataTables_paginate {
+	float: left;
 }
 
 div.dataTables_paginate ul.pagination {
@@ -54,17 +64,43 @@ table.dataTable thead .sorting_desc_disabled {
 	cursor: pointer;
 }
 
-table.dataTable thead .sorting { background: url('../images/sort_both.png') no-repeat center right; }
-table.dataTable thead .sorting_asc { background: url('../images/sort_asc.png') no-repeat center right; }
-table.dataTable thead .sorting_desc { background: url('../images/sort_desc.png') no-repeat center right; }
-
-table.dataTable thead .sorting_asc_disabled { background: url('../images/sort_asc_disabled.png') no-repeat center right; }
-table.dataTable thead .sorting_desc_disabled { background: url('../images/sort_desc_disabled.png') no-repeat center right; }
-
-table.dataTable thead > tr > th {
-	padding-left: 18px;
-	padding-right: 18px;
+/*
+ * Use Glyphicons Halflings from Bootstrap 3 instead of images.
+ *
+ * Relevant icons:
+ *
+ * Glyphicons Halflings (default)
+ *   glyphicon-sort			'\e150'		sort
+ *   glyphicon-sort-by-attributes	'\e155'		asc
+ *   glyphicon-sort-by-attributes-alt	'\e156'		desc
+ *
+ * Font Awesome
+ *   fa-sort				'\f0dc'		sort
+ *   fa-caret-up			'\f0d8'		asc
+ *   fa-caret-down			'\f0d7'		desc
+ */
+table.table thead .sorting:after,
+table.table thead .sorting_asc:after,
+table.table thead .sorting_desc:after,
+table.table thead .sorting_asc_disabled:after,
+table.table thead .sorting_desc_disabled:after {
+	font-family: 'Glyphicons Halflings';
+	text-align: right;
+	float: right;
 }
+html[dir='rtl'] table.table thead .sorting:after,
+html[dir='rtl'] table.table thead .sorting_asc:after,
+html[dir='rtl'] table.table thead .sorting_desc:after,
+html[dir='rtl'] table.table thead .sorting_asc_disabled:after,
+html[dir='rtl'] table.table thead .sorting_desc_disabled:after {
+	text-align: left;
+	float: left;
+}
+table.table thead .sorting:after { content: '\e150'; opacity: 0.2; }
+table.table thead .sorting_asc:after { content: '\e155'; }
+table.table thead .sorting_desc:after { content: '\e156'; }
+table.table thead .sorting_asc_disabled:after { content: '\e155'; opacity: 0.2; }
+table.table thead .sorting_desc_disabled:after { content: '\e156'; opacity: 0.2; }
 
 table.dataTable th:active {
 	outline: none;

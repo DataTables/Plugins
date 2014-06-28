@@ -1,9 +1,16 @@
+(function (factory) {
+	if (typeof define === 'function' && define.amd) {
+		define(['jquery','datatables'], factory);
+	} else {
+		factory(jQuery);
+	}
+}(function ($) {
 /* Set the defaults for DataTables initialisation */
 $.extend( true, $.fn.dataTable.defaults, {
 	"sDom":
-		"<'row'<'col-xs-6'l><'col-xs-6'f>r>"+
+		"<'row'<'col-xs-6'<'pull-left'l>><'col-xs-6'<'pull-right'f>>r>"+
 		"t"+
-		"<'row'<'col-xs-6'i><'col-xs-6'p>>",
+		"<'row'<'col-xs-6'<'pull-left'i>><'col-xs-6'<'pull-right'p>>>",
 	"oLanguage": {
 		"sLengthMenu": "_MENU_ records per page"
 	}
@@ -13,8 +20,8 @@ $.extend( true, $.fn.dataTable.defaults, {
 /* Default class modification */
 $.extend( $.fn.dataTableExt.oStdClasses, {
 	"sWrapper": "dataTables_wrapper form-inline",
-	"sFilterInput": "form-control input-sm",
-	"sLengthSelect": "form-control input-sm"
+	"sFilterInput": "form-control",
+	"sLengthSelect": "form-control"
 } );
 
 // In 1.10 we use the pagination renderers to draw the Bootstrap paging,
@@ -248,4 +255,4 @@ if ( $.fn.DataTable.TableTools ) {
 		}
 	} );
 }
-
+}));
