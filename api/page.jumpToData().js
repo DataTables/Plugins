@@ -23,7 +23,7 @@
  *
  *  @example
  *    var table = $('#example').DataTable();
- *    table.page.jumpToData( 0, "Allan Jardine" );
+ *    table.page.jumpToData( "Allan Jardine", 0 );
  */
 
 jQuery.fn.dataTable.Api.register( 'page.jumpToData()', function ( data, column ) {
