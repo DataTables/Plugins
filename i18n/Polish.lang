@@ -19,6 +19,8 @@
 	"sFirst":    "Pierwsza",
 	"sPrevious": "Poprzednia",
 	"sNext":     "Następna",
-	"sLast":     "Ostatnia"
+	"sLast":     "Ostatnia",
+	"page": "Strona",
+	"pageOf": "z"
 	}
 }
