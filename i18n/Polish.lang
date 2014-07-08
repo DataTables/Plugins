@@ -20,5 +20,11 @@
 	"sPrevious": "Poprzednia",
 	"sNext":     "Następna",
 	"sLast":     "Ostatnia"
+	},
+	"sEmptyTable":     "Brak danych",
+	"sLoadingRecords": "Wczytywanie...",
+	"oAria": {
+		"sSortAscending":  ": aktywuj by posortować kolumnę rosnąco",
+		"sSortDescending": ": aktywuj by posortować kolumnę malejąco"
 	}
 }
