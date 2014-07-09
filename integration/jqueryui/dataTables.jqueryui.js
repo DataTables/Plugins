@@ -40,7 +40,7 @@ $.extend( DataTable.ext.classes, {
 
 	/* Misc */
 	"sHeaderTH":  "ui-state-default",
-	"sFooterTH":  "ui-state-default",
+	"sFooterTH":  "ui-state-default"
 } );
 
 
