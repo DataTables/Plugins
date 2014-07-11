@@ -13,3 +13,5 @@ DT_BUILT="${DT_SRC}/built/DataTables"
 # Only copying the integration files
 rsync -r integration     $OUT_DIR
 
+scss_compile $OUT_DIR/integration/jqueryui/dataTables.jqueryui.scss
+
