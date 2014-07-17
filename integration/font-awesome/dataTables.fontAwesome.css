@@ -34,6 +34,12 @@ table.dataTable thead th.sorting_desc:after {
 	content: "\f0dd";
 }
 
+div.dataTables_scrollBody table.dataTable thead th.sorting:after,
+div.dataTables_scrollBody table.dataTable thead th.sorting_asc:after,
+div.dataTables_scrollBody table.dataTable thead th.sorting_desc:after {
+	content: "";
+}
+
 /* In Bootstrap and Foundation the padding top is a little different from the DataTables stylesheet */
 table.table thead th.sorting:after,
 table.table thead th.sorting_asc:after,
