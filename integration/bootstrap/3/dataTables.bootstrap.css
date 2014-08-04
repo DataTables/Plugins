@@ -141,7 +141,8 @@ div.dataTables_scrollHead table.table-bordered {
 	background-color: #0075b0 !important;
 }
 
-.table tbody tr.active a {
+.table tbody tr.active th > a,
+.table tbody tr.active td > a {
 	color: white;
 }
 
