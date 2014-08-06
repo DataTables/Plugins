@@ -116,7 +116,7 @@ DataTable.ext.renderer.pageButton.bootstrap = function ( settings, host, idx, bu
 					settings.oApi._fnBindAction(
 						node, {action: button}, clickHandler
 					);
-				}
+				}f
 			}
 		}
 	};
@@ -148,7 +148,7 @@ if ( DataTable.TableTools ) {
 			}
 		},
 		"print": {
-			"info": "DTTT_print_info modal"
+			"info": "DTTT_print_info"
 		},
 		"select": {
 			"row": "active"
