@@ -148,7 +148,7 @@ if ( DataTable.TableTools ) {
 			}
 		},
 		"print": {
-			"info": "DTTT_print_info modal"
+			"info": "DTTT_print_info"
 		},
 		"select": {
 			"row": "active"
