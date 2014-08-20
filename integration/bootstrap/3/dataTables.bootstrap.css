@@ -15,6 +15,7 @@ div.dataTables_filter label {
 
 div.dataTables_filter input {
 	width: 16em;
+	margin-left: 0.5em;
 }
 
 div.dataTables_info {
