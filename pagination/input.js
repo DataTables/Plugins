@@ -39,6 +39,7 @@ $.fn.dataTableExt.oPagination.input = {
 		nLast.className = "paginate_button last";
 		nOf.className = "paginate_of";
 		nPage.className = "paginate_page";
+		nInput.className = "paginate_input";
 
 		if ( oSettings.sTableId !== '' )
 		{
@@ -50,8 +51,6 @@ $.fn.dataTableExt.oPagination.input = {
 		}
 
 		nInput.type = "text";
-		nInput.style.width = "15px";
-		nInput.style.display = "inline";
 		nPage.innerHTML = "Page ";
 
 		nPaging.appendChild( nFirst );
@@ -65,28 +64,58 @@ $.fn.dataTableExt.oPagination.input = {
 		$(nFirst).click( function () {
 			oSettings.oApi._fnPageChange( oSettings, "first" );
 			fnCallbackDraw( oSettings );
+			$(nFirst).addClass('disabled');
+			$(nPrevious).addClass('disabled');
+			$(nNext).removeClass('disabled');
+			$(nLast).removeClass('disabled');
 		} );
 
 		$(nPrevious).click( function() {
 			oSettings.oApi._fnPageChange( oSettings, "previous" );
 			fnCallbackDraw( oSettings );
+			if ($(nInput).val() == 2)
+			{
+			    $(nFirst).addClass('disabled');
+			    $(nPrevious).addClass('disabled');
+			}
+			else
+			{
+			    $(nNext).removeClass('disabled');
+			    $(nLast).removeClass('disabled');
+			}
 		} );
 
 		$(nNext).click( function() {
 			oSettings.oApi._fnPageChange( oSettings, "next" );
 			fnCallbackDraw( oSettings );
+			if ($(nInput).val() == (Math.ceil((oSettings.fnRecordsDisplay() - 1) / oSettings._iDisplayLength) - 1))
+			{
+			    $(nNext).addClass('disabled');
+			    $(nLast).addClass('disabled');
+			}
+			else
+			{
+			    $(nFirst).removeClass('disabled');
+			    $(nPrevious).removeClass('disabled');
+			}
 		} );
 
 		$(nLast).click( function() {
 			oSettings.oApi._fnPageChange( oSettings, "last" );
 			fnCallbackDraw( oSettings );
+			$(nFirst).removeClass('disabled');
+			$(nPrevious).removeClass('disabled');
+			$(nNext).addClass('disabled');
+			$(nLast).addClass('disabled');
 		} );
 
 		$(nInput).keyup( function (e) {
+			// 38 = up arrow, 39 = right arrow
 			if ( e.which == 38 || e.which == 39 )
 			{
 				this.value++;
 			}
+			// 37 = left arrow, 40 = down arrow
 			else if ( (e.which == 37 || e.which == 40) && this.value > 1 )
 			{
 				this.value--;
@@ -99,14 +128,33 @@ $.fn.dataTableExt.oPagination.input = {
 			}
 
 			var iNewStart = oSettings._iDisplayLength * (this.value - 1);
-			if ( iNewStart > oSettings.fnRecordsDisplay() )
-			{
-				/* Display overrun */
-				oSettings._iDisplayStart = (Math.ceil((oSettings.fnRecordsDisplay()-1) /
-					oSettings._iDisplayLength)-1) * oSettings._iDisplayLength;
-				fnCallbackDraw( oSettings );
-				return;
-			}
+			var iEndPosition = (Math.ceil((oSettings.fnRecordsDisplay() - 1) / oSettings._iDisplayLength) - 1) * oSettings._iDisplayLength;
+			if (iNewStart < 0)
+		        {
+		            iNewStart = 0;
+		        }
+		        if (iNewStart > oSettings.fnRecordsDisplay())
+		        {
+		            iNewStart = iEndPosition;
+		        }
+
+		        if (iNewStart == 0)
+		        {
+		            $(nFirst).addClass('disabled');
+		            $(nPrevious).addClass('disabled');
+		        }
+		        else if (iNewStart == iEndPosition)
+		        {
+		            $(nNext).addClass('disabled');
+		            $(nLast).addClass('disabled');
+		        }
+		        else
+		        {
+		            $(nFirst).removeClass('disabled');
+		            $(nPrevious).removeClass('disabled');
+		            $(nNext).removeClass('disabled');
+		            $(nLast).removeClass('disabled');
+		        }
 
 			oSettings._iDisplayStart = iNewStart;
 			fnCallbackDraw( oSettings );
