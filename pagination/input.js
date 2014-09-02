@@ -73,7 +73,8 @@ $.fn.dataTableExt.oPagination.input = {
 		$(nPrevious).click( function() {
 			oSettings.oApi._fnPageChange( oSettings, "previous" );
 			fnCallbackDraw( oSettings );
-			if ($(nInput).val() == 1)
+			var iCurrentPage = Math.ceil(oSettings._iDisplayStart / oSettings._iDisplayLength) + 1;
+			if (iCurrentPage == 1)
 			{
 			    $(nFirst).addClass('disabled');
 			    $(nPrevious).addClass('disabled');
@@ -88,7 +89,8 @@ $.fn.dataTableExt.oPagination.input = {
 		$(nNext).click( function() {
 			oSettings.oApi._fnPageChange( oSettings, "next" );
 			fnCallbackDraw( oSettings );
-			if ($(nInput).val() == (Math.ceil((oSettings.fnRecordsDisplay() - 1) / oSettings._iDisplayLength)))
+			var iCurrentPage = Math.ceil(oSettings._iDisplayStart / oSettings._iDisplayLength) + 1;
+			if (iCurrentPage == (Math.ceil((oSettings.fnRecordsDisplay() - 1) / oSettings._iDisplayLength)))
 			{
 			    $(nNext).addClass('disabled');
 			    $(nLast).addClass('disabled');
