@@ -36,7 +36,10 @@ $.fn.dataTable.Api.register( 'alphabetSearch()', function ( searchTerm ) {
 // Recalculate the alphabet display for updated data
 $.fn.dataTable.Api.register( 'alphabetSearch.recalc()', function ( searchTerm ) {
 	this.iterator( 'table', function ( context ) {
-		draw( this, $('div.alphabet', this.table().container()) );
+		draw(
+			new $.fn.dataTable.Api( context ),
+			$('div.alphabet', this.table().container())
+		);
 	} );
 
 	return this;
