@@ -33,8 +33,8 @@ $.fn.dataTableExt.oPagination.input = {
 		nNext.innerHTML = oSettings.oLanguage.oPaginate.sNext;
 		nLast.innerHTML = oSettings.oLanguage.oPaginate.sLast;
 
-		nFirst.className = "paginate_button first";
-		nPrevious.className = "paginate_button previous";
+		nFirst.className = "paginate_button first disabled";
+		nPrevious.className = "paginate_button previous disabled";
 		nNext.className="paginate_button next";
 		nLast.className = "paginate_button last";
 		nOf.className = "paginate_of";
@@ -61,54 +61,66 @@ $.fn.dataTableExt.oPagination.input = {
 		nPaging.appendChild( nNext );
 		nPaging.appendChild( nLast );
 
-		$(nFirst).click( function () {
-			oSettings.oApi._fnPageChange( oSettings, "first" );
-			fnCallbackDraw( oSettings );
-			$(nFirst).addClass('disabled');
-			$(nPrevious).addClass('disabled');
-			$(nNext).removeClass('disabled');
-			$(nLast).removeClass('disabled');
+		$(nFirst).click( function () 
+		{
+			var iCurrentPage = Math.ceil(oSettings._iDisplayStart / oSettings._iDisplayLength) + 1;
+		    	if (iCurrentPage != 1)
+		    	{
+				oSettings.oApi._fnPageChange( oSettings, "first" );
+				fnCallbackDraw( oSettings );
+				$(nFirst).addClass('disabled');
+				$(nPrevious).addClass('disabled');
+				$(nNext).removeClass('disabled');
+				$(nLast).removeClass('disabled');
+		    	}
 		} );
 
-		$(nPrevious).click( function() {
-			oSettings.oApi._fnPageChange( oSettings, "previous" );
-			fnCallbackDraw( oSettings );
+		$(nPrevious).click( function() 
+		{
 			var iCurrentPage = Math.ceil(oSettings._iDisplayStart / oSettings._iDisplayLength) + 1;
-			if (iCurrentPage == 1)
-			{
-			    $(nFirst).addClass('disabled');
-			    $(nPrevious).addClass('disabled');
-			}
-			else
-			{
-			    $(nNext).removeClass('disabled');
-			    $(nLast).removeClass('disabled');
+		    	if (iCurrentPage != 1)
+		    	{
+				oSettings.oApi._fnPageChange(oSettings, "previous");
+			        fnCallbackDraw(oSettings);
+			        if (iCurrentPage == 2)
+			        {
+			            $(nFirst).addClass('disabled');
+			            $(nPrevious).addClass('disabled');
+			        }
+			        $(nNext).removeClass('disabled');
+			        $(nLast).removeClass('disabled');
 			}
 		} );
 
-		$(nNext).click( function() {
-			oSettings.oApi._fnPageChange( oSettings, "next" );
-			fnCallbackDraw( oSettings );
+		$(nNext).click( function() 
+		{
 			var iCurrentPage = Math.ceil(oSettings._iDisplayStart / oSettings._iDisplayLength) + 1;
-			if (iCurrentPage == (Math.ceil((oSettings.fnRecordsDisplay() - 1) / oSettings._iDisplayLength)))
+			if (iCurrentPage != (Math.ceil((oSettings.fnRecordsDisplay() - 1) / oSettings._iDisplayLength)))
 			{
-			    $(nNext).addClass('disabled');
-			    $(nLast).addClass('disabled');
-			}
-			else
-			{
+			    oSettings.oApi._fnPageChange(oSettings, "next");
+			    fnCallbackDraw(oSettings);
+			    if (iCurrentPage == (Math.ceil((oSettings.fnRecordsDisplay() - 1) / oSettings._iDisplayLength) - 1))
+			    {
+			        $(nNext).addClass('disabled');
+			        $(nLast).addClass('disabled');
+			    }
 			    $(nFirst).removeClass('disabled');
 			    $(nPrevious).removeClass('disabled');
 			}
 		} );
 
-		$(nLast).click( function() {
-			oSettings.oApi._fnPageChange( oSettings, "last" );
-			fnCallbackDraw( oSettings );
-			$(nFirst).removeClass('disabled');
-			$(nPrevious).removeClass('disabled');
-			$(nNext).addClass('disabled');
-			$(nLast).addClass('disabled');
+		$(nLast).click( function() 
+		{
+			var iCurrentPage = Math.ceil(oSettings._iDisplayStart / oSettings._iDisplayLength) + 1;
+		    	if (iCurrentPage != (Math.ceil((oSettings.fnRecordsDisplay() - 1) / oSettings._iDisplayLength)))
+		    	{
+			        oSettings.oApi._fnPageChange(oSettings, "last");
+			        fnCallbackDraw(oSettings);
+			        $(nFirst).removeClass('disabled');
+			        $(nPrevious).removeClass('disabled');
+			        $(nNext).addClass('disabled');
+			        $(nLast).addClass('disabled');
+		    	}
 		} );
 
 		$(nInput).keyup( function (e) {
@@ -126,29 +138,33 @@ $.fn.dataTableExt.oPagination.input = {
 			if ( this.value === "" || this.value.match(/[^0-9]/) )
 			{
 				/* Nothing entered or non-numeric character */
+				this.value = this.value.replace(/[^\d]/g, ''); // don't even allow anything but digits
 				return;
 			}
 
 			var iNewStart = oSettings._iDisplayLength * (this.value - 1);
-			var iEndPosition = (Math.ceil((oSettings.fnRecordsDisplay() - 1) / oSettings._iDisplayLength) - 1) * oSettings._iDisplayLength;
-			if (iNewStart < 0)
+		        if (iNewStart < 0)
 		        {
 		            iNewStart = 0;
 		        }
 		        if (iNewStart > oSettings.fnRecordsDisplay())
 		        {
-		            iNewStart = iEndPosition;
+		            iNewStart = (Math.ceil((oSettings.fnRecordsDisplay() - 1) / oSettings._iDisplayLength) - 1) * oSettings._iDisplayLength;
 		        }
 
 		        if (iNewStart == 0)
 		        {
 		            $(nFirst).addClass('disabled');
 		            $(nPrevious).addClass('disabled');
+		            $(nNext).removeClass('disabled');
+		            $(nLast).removeClass('disabled');
 		        }
-		        else if (iNewStart == iEndPosition)
+		        else if (iNewStart == ((Math.ceil((oSettings.fnRecordsDisplay() - 1) / oSettings._iDisplayLength) - 1) * oSettings._iDisplayLength))
 		        {
 		            $(nNext).addClass('disabled');
 		            $(nLast).addClass('disabled');
+		            $(nFirst).removeClass('disabled');
+		            $(nPrevious).removeClass('disabled');
 		        }
 		        else
 		        {
@@ -165,6 +181,13 @@ $.fn.dataTableExt.oPagination.input = {
 		/* Take the brutal approach to cancelling text selection */
 		$('span', nPaging).bind( 'mousedown', function () { return false; } );
 		$('span', nPaging).bind( 'selectstart', function () { return false; } );
+		
+		// If we can't page anyway, might as well not show it
+		var iPages = Math.ceil((oSettings.fnRecordsDisplay()) / oSettings._iDisplayLength);
+		if(iPages <= 1)
+		{
+		    $(nPaging).hide();
+		}
 	},
 
 
@@ -177,14 +200,21 @@ $.fn.dataTableExt.oPagination.input = {
 		var iPages = Math.ceil((oSettings.fnRecordsDisplay()) / oSettings._iDisplayLength);
 		var iCurrentPage = Math.ceil(oSettings._iDisplayStart / oSettings._iDisplayLength) + 1;
 
-		/* Loop over each instance of the pager */
 		var an = oSettings.aanFeatures.p;
-		for ( var i=0, iLen=an.length ; i<iLen ; i++ )
+		if (iPages <= 1) // hide paging when we can't page
 		{
-			var spans = an[i].getElementsByTagName('span');
-			var inputs = an[i].getElementsByTagName('input');
-			spans[3].innerHTML = " of "+iPages;
-			inputs[0].value = iCurrentPage;
+		    $(an).hide();
+		}
+		else
+		{
+		    /* Loop over each instance of the pager */
+		    for (var i = 0, iLen = an.length ; i < iLen ; i++)
+		    {
+		        var spans = an[i].getElementsByTagName('span');
+		        var inputs = an[i].getElementsByTagName('input');
+		        spans[3].innerHTML = " of " + iPages;
+		        inputs[0].value = iCurrentPage;
+		    }
 		}
 	}
 };
