@@ -86,7 +86,11 @@ DataTable.ext.renderer.header.jqueryui = function ( settings, cell, column, clas
 		.appendTo( cell );
 
 	// Attach a sort listener to update on sort
-	$(settings.nTable).on( 'order.dt', function ( e, settings, sorting, columns ) {
+	$(settings.nTable).on( 'order.dt', function ( e, ctx, sorting, columns ) {
+		if ( settings !== ctx ) {
+			return;
+		}
+
 		var colIdx = column.idx;
 
 		cell
