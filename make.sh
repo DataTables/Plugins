@@ -10,8 +10,8 @@ DT_SRC=$(dirname $(dirname $(pwd)))
 DT_BUILT="${DT_SRC}/built/DataTables"
 . $DT_SRC/build/include.sh
 
+scss_compile $DT_SRC/extensions/Plugins/integration/jqueryui/dataTables.jqueryui.scss
+
 # Only copying the integration files
 rsync -r integration     $OUT_DIR
-
-scss_compile $OUT_DIR/integration/jqueryui/dataTables.jqueryui.scss
 
