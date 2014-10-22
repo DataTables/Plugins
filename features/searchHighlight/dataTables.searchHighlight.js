@@ -35,6 +35,7 @@
 (function(window, document, $){
 
 
+// Listen for DataTables initialisations
 $(document).on( 'init.dt.dth', function (e, settings, json) {
 	var table = new $.fn.dataTable.Api( settings );
 	var body = $( table.table().body() );
