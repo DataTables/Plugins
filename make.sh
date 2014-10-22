@@ -12,6 +12,9 @@ DT_BUILT="${DT_SRC}/built/DataTables"
 
 scss_compile $DT_SRC/extensions/Plugins/integration/jqueryui/dataTables.jqueryui.scss
 
+js_compress $DT_SRC/extensions/Plugins/features/searchHighlight/dataTables.searchHighlight.js
+js_compress $DT_SRC/extensions/Plugins/features/alphabetSearch/dataTables.alphabetSearch.js
+
 # Only copying the integration files
 rsync -r integration     $OUT_DIR
 
