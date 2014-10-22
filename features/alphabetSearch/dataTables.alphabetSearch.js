@@ -4,22 +4,17 @@
 
 /**
  * @summary     AlphabetSearch
- * @description Show an alphabet aloneside a table providing search input options
- *              See http://datatables.net/blog/2014-09-22 for details
+ * @description Show an set of alphabet buttons alongside a table providing
+ *     search input options
  * @version     1.0.0
  * @file        dataTables.alphabetSearch.js
  * @author      SpryMedia Ltd (www.sprymedia.co.uk)
  * @contact     www.sprymedia.co.uk/contact
  * @copyright   Copyright 2014 SpryMedia Ltd.
+ * @license     MIT - http://datatables.net/license/mit
  *
- * This source file is free software, available under the following license:
- *   MIT license - http://datatables.net/license/mit
- *
- * This source file is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
- * or FITNESS FOR A PARTICULAR PURPOSE. See the license files for details.
- *
- * For details please refer to: http://www.datatables.net
+ * For more detailed information please see:
+ *     http://datatables.net/blog/2014-09-22
  */
 (function(){
 
