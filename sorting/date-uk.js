@@ -20,6 +20,7 @@
 
  jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 	"date-uk-pre": function ( a ) {
+		if (a == null || a == "") return 1;
 		var ukDatea = a.split('/');
 		return (ukDatea[2] + ukDatea[1] + ukDatea[0]) * 1;
 	},
