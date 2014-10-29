@@ -1,10 +1,10 @@
 ﻿/**
  * This sorting plug-in will sort, in calendar order, data which
- * is in the format "MMMM yyyy". Inspired by forum discussion:
+ * is in the format "MMM yyyy" or "MMMM yyyy". Inspired by forum discussion:
  * http://datatables.net/forums/discussion/1242/sorting-dates-with-only-month-and-year
  *
- *  @name Date (MMMM yyyy)
- *  @anchor Sort dates in the format `MMMM yyyy`
+ *  @name Date (MMM yyyy) or (MMMM yyyy)
+ *  @anchor Sort dates in the format `MMM yyyy` or `MMMM yyyy`
  *  @author Phil Hurwitz
  *
  *  @example
@@ -17,7 +17,7 @@
 
 jQuery.extend(jQuery.fn.dataTableExt.oSort, {
     "stringMonthYear-pre": function (s) {
-        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
         var dateComponents = s.split(" ");
         dateComponents[0] = dateComponents[0].replace(",", "");
@@ -27,7 +27,7 @@ jQuery.extend(jQuery.fn.dataTableExt.oSort, {
 
         var month = 0;
         for (var i = 0; i < months.length; i++) {
-            if (months[i].toLowerCase() == dateComponents[0].toLowerCase()) {
+            if (months[i].toLowerCase() == dateComponents[0].toLowerCase().substring(0,3)) {
                 month = i;
                 break;
             }
