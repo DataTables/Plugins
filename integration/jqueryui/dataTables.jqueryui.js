@@ -35,7 +35,6 @@
         });
         DataTable.defaults.oLanguage.oPaginate.sEllipsis = "..."; // TODO Base DT file needs to be updated with this.
 
-        // Unsure if this is necessary with header and pageButton render functions.
         $.extend(DataTable.ext.classes,
         {
             sFilterInput: "ui-corner-all",
