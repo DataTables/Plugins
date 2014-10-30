@@ -16,16 +16,6 @@
     {
         "use strict";
 
-        var originalDataTable = $.fn.DataTable;
-        $.fn.DataTable = function(options)
-        {
-            var dataTable = originalDataTable.apply(this, [ options ]);
-
-            $(dataTable.table().container()).addClass("ui-widget");
-
-            return dataTable;
-        };
-
         $.extend(true, DataTable.defaults,
         {
             dom: "<'fg-toolbar ui-toolbar ui-widget-header ui-helper-clearfix ui-corner-tl ui-corner-tr'lfr>" +
@@ -53,7 +43,7 @@
             sSortableDesc: "sorting_desc_disabled ui-state-default",
             sSortableNone: "sorting_disabled ui-state-default",
             sSortIcon: "DataTables_sort_icon",
-            sWrapper: "dataTables_wrapper dt-jqueryui",
+            sWrapper: "dataTables_wrapper dt-jqueryui ui-widget",
         });
 
         DataTable.ext.renderer.header.jqueryui = function(settings, $tableHead, column, classes)
