@@ -1,35 +1,55 @@
 div.dataTables_length label {
 	font-weight: normal;
-	float: left;
 	text-align: left;
+	white-space: nowrap;
 }
 
 div.dataTables_length select {
 	width: 75px;
+	display: inline-block;
+}
+
+div.dataTables_filter {
+	text-align: right;
 }
 
 div.dataTables_filter label {
 	font-weight: normal;
-	float: right;
+	white-space: nowrap;
+	text-align: left;
 }
 
 div.dataTables_filter input {
 	margin-left: 0.5em;
+	width: 16em;
+	display: inline-block;
 }
 
 div.dataTables_info {
 	padding-top: 8px;
+	white-space: nowrap;
 }
 
 div.dataTables_paginate {
-	float: right;
 	margin: 0;
+	white-space: nowrap;
+	text-align: right;
 }
 
 div.dataTables_paginate ul.pagination {
 	margin: 2px 0;
 	white-space: nowrap;
 }
+
+@media screen and (max-width: 767px) {
+	div.dataTables_length,
+	div.dataTables_filter,
+	div.dataTables_info,
+	div.dataTables_paginate {
+		text-align: center;
+	}
+}
+
 
 table.dataTable td,
 table.dataTable th {
