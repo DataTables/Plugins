@@ -16,6 +16,11 @@ js_compress $DT_SRC/extensions/Plugins/features/searchHighlight/dataTables.searc
 js_compress $DT_SRC/extensions/Plugins/features/alphabetSearch/dataTables.alphabetSearch.js
 js_compress $DT_SRC/extensions/Plugins/features/lengthLinks/dataTables.lengthLinks.js
 
+js_compress $DT_SRC/extensions/Plugins/integration/bootstrap/2/dataTables.bootstrap.js
+js_compress $DT_SRC/extensions/Plugins/integration/bootstrap/3/dataTables.bootstrap.js
+js_compress $DT_SRC/extensions/Plugins/integration/foundation/dataTables.foundation.js
+js_compress $DT_SRC/extensions/Plugins/integration/jqueryui/dataTables.jqueryui.js
+
 # Only copying the integration files
 rsync -r integration     $OUT_DIR
 
