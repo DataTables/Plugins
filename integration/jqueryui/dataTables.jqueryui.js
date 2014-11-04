@@ -7,7 +7,7 @@
  * DataTables 1.10 or newer.
  *
  * This file sets the defaults and adds options to DataTables to style its
- * controls using Bootstrap. See http://datatables.net/manual/styling/jqueryui
+ * controls using jQuery UI. See http://datatables.net/manual/styling/jqueryui
  * for further information.
  */
 (function(window, document, undefined){
