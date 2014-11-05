@@ -9,8 +9,6 @@
  * accented characters will no longer match. The second example below shows
  * how the function can be used to remove accents from the search input as well,
  * to mitigate this problem.
- * 
- * - Added Greek accented vowels
  *
  *  @summary Replace accented characters with unaccented counterparts
  *  @name Accent neutralise
