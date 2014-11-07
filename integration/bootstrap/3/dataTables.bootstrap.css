@@ -275,6 +275,7 @@ table.DTFC_Cloned tr.even {
  
 div.DTFC_RightHeadWrapper table ,
 div.DTFC_LeftHeadWrapper table {
+	border-bottom: none !important;
     margin-bottom: 0 !important;
     border-top-right-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
@@ -305,6 +306,7 @@ div.DTFC_LeftBodyWrapper tbody tr:first-child td {
 div.DTFC_RightFootWrapper table,
 div.DTFC_LeftFootWrapper table {
     border-top: none;
+    margin-top: 0 !important;
 }
 
 
