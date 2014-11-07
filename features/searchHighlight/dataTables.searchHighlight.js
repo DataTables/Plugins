@@ -10,7 +10,8 @@
  * @author      SpryMedia Ltd (www.sprymedia.co.uk)
  * @contact     www.sprymedia.co.uk/contact
  * @copyright   Copyright 2014 SpryMedia Ltd.
- * @license     MIT - http://datatables.net/license/mit
+ * 
+ * License      MIT - http://datatables.net/license/mit
  *
  * This feature plug-in for DataTables will highlight search terms in the
  * DataTable as they are entered into the main search input element, or via the

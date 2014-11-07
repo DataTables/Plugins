@@ -10,7 +10,8 @@
  * @author      SpryMedia Ltd (www.sprymedia.co.uk)
  * @contact     www.sprymedia.co.uk/contact
  * @copyright   Copyright 2014 SpryMedia Ltd.
- * @license     MIT - http://datatables.net/license/mit
+ * 
+ * License      MIT - http://datatables.net/license/mit
  *
  * This feature plug-in for DataTables adds page length control links to the
  * DataTable. The `dom` option can be used to insert the control using the `L`
