@@ -53,7 +53,7 @@ $(document).on( 'init.dt.dth', function (e, settings, json) {
 
 				// Don't highlight the "not found" row
 				if ( table.rows( { filter: 'applied' } ).data().length ) {
-					body.highlight( table.search() );
+					body.highlight( table.search().split(" ") );
 				}
 			} )
 			.on( 'destroy', function () {
