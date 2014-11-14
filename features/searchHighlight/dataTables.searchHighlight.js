@@ -41,20 +41,30 @@ $(document).on( 'init.dt.dth', function (e, settings, json) {
 	var table = new $.fn.dataTable.Api( settings );
 	var body = $( table.table().body() );
 
+	var highlightWords = function() {
+        	// On each draw highlight search results, removing the old ones
+		body.unhighlight();
+
+		// Don't highlight the "not found" row
+		if ( table.rows( { filter: 'applied' } ).data().length ) {
+			body.highlight( table.search().split(" ") );
+		}
+        };
+        
 	if (
 		$( table.table().node() ).hasClass( 'searchHighlight' ) || // table has class
 		settings.oInit.searchHighlight                          || // option specified
 		$.fn.dataTable.defaults.searchHighlight                    // default set
 	) {
+		// if the search option is set to a filter, the draw event below does not fire.
+		// so on init, if there is a search term, highlight.
+		if (table.search()) { 
+			highlightWords();
+		}
+		
 		table
 			.on( 'draw.dt.dth column-visibility.dt.dth', function () {
-				// On each draw highlight search results, removing the old ones
-				body.unhighlight();
-
-				// Don't highlight the "not found" row
-				if ( table.rows( { filter: 'applied' } ).data().length ) {
-					body.highlight( table.search().split(" ") );
-				}
+				highlightWords();
 			} )
 			.on( 'destroy', function () {
 				// Remove event handler
