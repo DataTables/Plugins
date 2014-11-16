@@ -215,6 +215,8 @@ $.fn.dataTableExt.oPagination.input = {
 		        spans[3].innerHTML = " of " + iPages;
 		        inputs[0].value = iCurrentPage;
 		    }
+		    
+    		    $(an).show();
 		}
 	}
 };
