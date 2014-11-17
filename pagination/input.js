@@ -95,7 +95,7 @@ $.fn.dataTableExt.oPagination.input = {
 		$(nNext).click( function() 
 		{
 			var iCurrentPage = Math.ceil(oSettings._iDisplayStart / oSettings._iDisplayLength) + 1;
-			if (iCurrentPage != (Math.ceil((oSettings.fnRecordsDisplay() - 1) / oSettings._iDisplayLength)))
+			if (iCurrentPage != Math.ceil((oSettings.fnRecordsDisplay() / oSettings._iDisplayLength)))
 			{
 			    oSettings.oApi._fnPageChange(oSettings, "next");
 			    fnCallbackDraw(oSettings);
@@ -112,7 +112,7 @@ $.fn.dataTableExt.oPagination.input = {
 		$(nLast).click( function() 
 		{
 			var iCurrentPage = Math.ceil(oSettings._iDisplayStart / oSettings._iDisplayLength) + 1;
-		    	if (iCurrentPage != (Math.ceil((oSettings.fnRecordsDisplay() - 1) / oSettings._iDisplayLength)))
+		    	if (iCurrentPage != Math.ceil((oSettings.fnRecordsDisplay() / oSettings._iDisplayLength)))
 		    	{
 			        oSettings.oApi._fnPageChange(oSettings, "last");
 			        fnCallbackDraw(oSettings);
