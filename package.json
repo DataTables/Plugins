@@ -1,0 +1,29 @@
+{
+  "name": "datatables-plugins",
+  "version": "1.0.0",
+  "title": "DataTables Plugins",
+  "license": "MIT",
+  "author": {
+    "name": "Allan Jardine",
+    "url": "http://sprymedia.co.uk"
+  },
+  "description": "Plug-ins for DataTables.",
+  "keywords": [
+    "DataTables",
+    "DataTable",
+    "table",
+    "grid",
+    "filter",
+    "sort",
+    "page",
+    "internationalisable"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DataTables/Plugins.git"
+  },
+  "homepage": "http://datatables.net",
+  "bugs": {
+    "url": "https://github.com/DataTables/Plugins/issues"
+  }
+}
