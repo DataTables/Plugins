@@ -58,6 +58,8 @@ jQuery.fn.DataTable.ext.type.search.string = function ( data ) {
                 .replace( /è/g, 'e' )
                 .replace( /ï/g, 'i' )
                 .replace( /ü/g, 'u' )
+                .replace( /ã/g, 'a' )
+                .replace( /õ/g, 'o' )
                 .replace( /ç/g, 'c' )
                 .replace( /ì/g, 'i' ) :
             data;
