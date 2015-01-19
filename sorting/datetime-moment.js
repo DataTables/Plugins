@@ -27,6 +27,11 @@ $.fn.dataTable.moment = function ( format, locale ) {
 
 	// Add type detection
 	types.detect.unshift( function ( d ) {
+		// Null and empty values are acceptable
+		if ( d === '' || d === null ) {
+			return 'moment-'+format;
+		}
+
 		return moment( d, format, locale, true ).isValid() ?
 			'moment-'+format :
 			null;
@@ -34,7 +39,9 @@ $.fn.dataTable.moment = function ( format, locale ) {
 
 	// Add sorting method - use an integer for the sorting
 	types.order[ 'moment-'+format+'-pre' ] = function ( d ) {
-		return moment( d, format, locale, true ).unix();
+		return d === '' || d === null ?
+			-Infinity :
+			moment( d, format, locale, true ).unix();
 	};
 };
 
