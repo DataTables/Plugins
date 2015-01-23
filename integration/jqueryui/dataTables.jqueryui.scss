@@ -265,6 +265,112 @@ table.dataTable {
       }
     }
   }
+
+  &.nowrap {
+    th, td {
+      white-space: nowrap;
+    }
+  }
+
+  &.compact {
+    thead th,
+    thead td {
+      padding: 5px 9px;
+    }
+
+    tfoot th,
+    tfoot td {
+      padding: 5px 9px 3px 9px;
+    }
+
+    tbody th,
+    tbody td {
+      padding: 4px 5px;
+    }
+  }
+
+
+  // Typography
+  th.dt-left,
+  td.dt-left {
+    text-align: left;
+  }
+
+  th.dt-center,
+  td.dt-center,
+  td.dataTables_empty {
+    text-align: center;
+  }
+
+  th.dt-right,
+  td.dt-right {
+    text-align: right;
+  }
+
+  th.dt-justify,
+  td.dt-justify {
+    text-align: justify;
+  }
+
+  th.dt-nowrap,
+  td.dt-nowrap {
+    white-space: nowrap;
+  }
+
+  thead,
+  tfoot {
+    th.dt-head-left,
+    td.dt-head-left {
+      text-align: left;
+    }
+
+    th.dt-head-center,
+    td.dt-head-center{
+      text-align: center;
+    }
+
+    th.dt-head-right,
+    td.dt-head-right {
+      text-align: right;
+    }
+
+    th.dt-head-justify,
+    td.dt-head-justify {
+      text-align: justify;
+    }
+
+    th.dt-head-nowrap,
+    td.dt-head-nowrap {
+      white-space: nowrap;
+    }
+  }
+
+  tbody {
+    th.dt-body-left,
+    td.dt-body-left {
+      text-align: left;
+    }
+
+    th.dt-body-center,
+    td.dt-body-center {
+      text-align: center;
+    }
+
+    th.dt-body-right,
+    td.dt-body-right {
+      text-align: right;
+    }
+
+    th.dt-body-justify,
+    td.dt-body-justify {
+      text-align: justify;
+    }
+
+    th.dt-body-nowrap,
+    td.dt-body-nowrap {
+      white-space: nowrap;
+    }
+  }
 }
 
 // Its not uncommon to use * {border-box} now, but it messes up the column width
