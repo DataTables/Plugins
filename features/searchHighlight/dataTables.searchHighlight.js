@@ -58,12 +58,12 @@ $(document).on( 'init.dt.dth', function (e, settings, json) {
 		$.fn.dataTable.defaults.searchHighlight                    // default set
 	) {
 		table
-			.on( 'draw.dt.dth column-visibility.dt.dth', function () {
+			.on( 'draw.dt.dth column-visibility.dt.dth column-reorder.dt.dth', function () {
 				highlight( body, table );
 			} )
 			.on( 'destroy', function () {
 				// Remove event handler
-				table.off( 'draw.dt.dth column-visibility.dt.dth' );
+				table.off( 'draw.dt.dth column-visibility.dt.dth column-reorder.dt.dth' );
 			} );
 
 		// initial highlight for state saved conditions and initial states
