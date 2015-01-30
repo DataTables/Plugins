@@ -120,15 +120,21 @@ THE SOFTWARE.
 				this.dtsettings = dtsettings;
 				//console.log(dtsettings);
 								
-				var tr = $("<tr/>");
+				var tr = $("<tr/>").addClass("dataTable_colSearchBar");
 				
 				var cols = dtsettings.aoColumns;
 				var colLen = cols.length;
 				//console.info(cols);
 				for(var i = 0; i < colLen; i++) {
-					if(cols[i].bVisible === false || cols[i].bSearchable === false) {
+					if(cols[i].bVisible === false) {
 						continue;
 					}
+					
+					if(cols[i].bSearchable === false) {
+						tr.append($("<td/>"));
+						continue;
+					}
+						
 					var name = cols[i].data || cols[i].mData;
 					var input = this._getSearchCtrl(name, i).addClass(this.getOptions().controlClass);
 					var td = $("<td/>").append(input);
@@ -151,6 +157,11 @@ THE SOFTWARE.
 						
 				parent.prepend(tr);
 				
+				//listen for columns being hidden and make sure we hide the column in the search bar too
+				$(dtapi.table().node()).on("column-visibility.dt", function(e, settings, column, state) {
+					tr.children().eq(column).toggle(state);
+				});
+						
 			},
 			
 			//private method to build the text or select box for the searching
@@ -232,6 +243,9 @@ THE SOFTWARE.
 		$.fn.dataTable.DtServerColSearch = DtServerColSearch;
 		$.fn.DataTable.DtServerColSearch = DtServerColSearch;
 		
+		
+		
+		
 		return DtServerColSearch;
 	};
 	
@@ -248,5 +262,7 @@ THE SOFTWARE.
 		// Otherwise simply initialise as normal, stopping multiple evaluation
 		factory( jQuery, jQuery.fn.dataTable );
 	}
+	
+		
 	
 })(window, document);
