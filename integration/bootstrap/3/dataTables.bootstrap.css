@@ -74,22 +74,31 @@ table.dataTable thead .sorting_desc_disabled {
 	position: relative;
 }
 
-table.dataTable thead th.sorting:after,
-table.dataTable thead th.sorting_asc:after,
-table.dataTable thead th.sorting_desc:after {
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_desc:after {
 	position: absolute;
 	top: 8px;
 	right: 8px;
 	display: block;
 	font-family: 'Glyphicons Halflings';
-	content: "\e150"; /* sort */
-	color: #999;
+	opacity: 0.5;
 }
-table.dataTable thead th.sorting_asc:after { color: #333; content: "\e155"; /* sort-by-attributes */ }
-table.dataTable thead th.sorting_desc:after { color: #333; content: "\e156"; /* sort-by-attributes-alt */ }
+table.dataTable thead .sorting:after {
+	opacity: 0.2;
+	content: "\e150"; /* sort */
+}
+table.dataTable thead .sorting_asc:after {
+	content: "\e155"; /* sort-by-attributes */
+}
+table.dataTable thead .sorting_desc:after {
+	content: "\e156"; /* sort-by-attributes-alt */
+}
 
 table.dataTable thead .sorting_asc_disabled:after,
-table.dataTable thead .sorting_desc_disabled:after { color: #eee }
+table.dataTable thead .sorting_desc_disabled:after {
+	color: #eee;
+}
 
 table.dataTable thead > tr > th {
 	padding-left: 8px;
