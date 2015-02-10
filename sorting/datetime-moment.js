@@ -41,7 +41,7 @@ $.fn.dataTable.moment = function ( format, locale ) {
 	types.order[ 'moment-'+format+'-pre' ] = function ( d ) {
 		return d === '' || d === null ?
 			-Infinity :
-			moment( d, format, locale, true ).unix();
+			parseInt( moment( d, format, locale, true ).format( 'x' ), 10 );
 	};
 };
 
