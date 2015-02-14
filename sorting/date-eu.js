@@ -32,7 +32,12 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 		if (date.indexOf('.') > 0) {
 			/*date a, format dd.mn.(yyyy) ; (year is optional)*/
 			eu_date = date.split('.');
-		} else {
+		} 
+		else if (date.indexOf('-') > 0) {
+			/*date a, format dd-mn-(yyyy) ; (year is optional)*/
+			eu_date = date.split('-');
+		} 
+		else {
 			/*date a, format dd/mn/(yyyy) ; (year is optional)*/
 			eu_date = date.split('/');
 		}
