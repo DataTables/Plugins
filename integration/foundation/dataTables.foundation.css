@@ -28,6 +28,7 @@ div.dataTables_filter input {
 	display: inline-block !important;
 	width: auto !important;
 	margin-bottom: 0;
+	margin-left: 0.5em;
 }
 
 div.dataTables_info {
@@ -118,6 +119,11 @@ table.DTTT_selectable tbody tr {
 div.DTTT {
 	float: left;
 	margin-bottom: 0;
+	margin-top: -0.3em;
+}
+
+div.DTTT .button {
+	margin: 0 0 0.25rem;
 }
 
 div.DTTT .button:hover {
