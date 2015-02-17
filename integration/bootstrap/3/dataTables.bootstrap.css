@@ -94,6 +94,11 @@ table.dataTable thead .sorting_asc:after {
 table.dataTable thead .sorting_desc:after {
 	content: "\e156"; /* sort-by-attributes-alt */
 }
+div.dataTables_scrollBody table.dataTable thead .sorting:after,
+div.dataTables_scrollBody table.dataTable thead .sorting_asc:after,
+div.dataTables_scrollBody table.dataTable thead .sorting_desc:after {
+	display: none;
+}
 
 table.dataTable thead .sorting_asc_disabled:after,
 table.dataTable thead .sorting_desc_disabled:after {
