@@ -1,36 +1,23 @@
 /**
  * Detect "file size" type columns automatically. Commonly used for computer
  * file sizes, this can allow sorting to take the order of magnitude indicated
- * by the label (GB etc) into account.
+ * by the label (GB, MB, Unlimited etc) into account.
  *
  *  @name File size
- *  @summary Detect abbreviated file size data (8MB, 4KB etc)
- *  @author _anjibman_
+ *  @summary Detect abbreviated file size data (8 MB, 4KB, 10TB, Unlimited, No Limit etc)
+ *  @author Ilia Rostovtsev (https://rostovtsev.ru)
  */
 
-jQuery.fn.dataTableExt.aTypes.unshift(
+$.fn.dataTable.ext.type.detect.unshift(
 	function ( sData )
 	{
-		var sValidChars = "0123456789";
-		var Char;
-
-		/* Check the numeric part */
-		for ( var i=0 ; i<(sData.length - 3) ; i++ )
-		{
-			Char = sData.charAt(i);
-			if (sValidChars.indexOf(Char) == -1)
-			{
-				return null;
-			}
-		}
-
-		/* Check for size unit KB, MB or GB */
-		if ( sData.substring(sData.length - 2, sData.length) == "KB"
-			|| sData.substring(sData.length - 2, sData.length) == "MB"
-			|| sData.substring(sData.length - 2, sData.length) == "GB" )
+		/* Check for size unit KB, MB, GB, TB */
+		if ( /((\d+(\s+)|\d+\.\d+(\s+)))(TB|GB|MB|KB|Byte|Bytes|ГБ|МБ|КБ|Байт)|(Unlimited|Ubegrenset|Nielimitowane|Ilimitado|无限制|No Limit)/i.test(sData) )
 		{
 			return 'file-size';
+		} else 
+		{
+			return null;
 		}
-		return null;
 	}
 );
