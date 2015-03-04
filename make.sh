@@ -15,6 +15,7 @@ scss_compile $DT_SRC/extensions/Plugins/integration/jqueryui/dataTables.jqueryui
 js_compress $DT_SRC/extensions/Plugins/features/searchHighlight/dataTables.searchHighlight.js
 js_compress $DT_SRC/extensions/Plugins/features/alphabetSearch/dataTables.alphabetSearch.js
 js_compress $DT_SRC/extensions/Plugins/features/lengthLinks/dataTables.lengthLinks.js
+js_compress $DT_SRC/extensions/Plugins/features/pageResize/dataTables.pageResize.js
 
 js_compress $DT_SRC/extensions/Plugins/integration/bootstrap/2/dataTables.bootstrap.js
 js_compress $DT_SRC/extensions/Plugins/integration/bootstrap/3/dataTables.bootstrap.js
