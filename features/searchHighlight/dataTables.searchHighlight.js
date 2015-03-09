@@ -43,7 +43,7 @@ function highlight( body, table )
 
 	// Don't highlight the "not found" row, so we get the rows using the api
 	if ( table.rows( { filter: 'applied' } ).data().length ) {
-		body.highlight( table.search().split(' ') );
+		body.highlight( $.trim( table.search() ).split(/\s+/) );
 	}
 }
 
