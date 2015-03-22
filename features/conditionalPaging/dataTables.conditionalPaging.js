@@ -34,23 +34,34 @@
             var config = $.isPlainObject(options) ? options : {},
                 api = new $.fn.dataTable.Api(dtSettings),
                 speed = 'slow',
-                conditionalPaging = function() {
-                    var $paging = $(api.table().container()).find('div.dataTables_paginate');
+                conditionalPaging = function(e) {
+                    var $paging = $(api.table().container()).find('div.dataTables_paginate'),
+                        pages = api.page.info().pages;
 
-                    if (api.page.info().pages <= 1) {
+                    if ($.isPlainObject(e)) {
+                        if (pages <= 1) {
+                            if (config.style === 'fade') {
+                                $paging.stop().fadeTo(speed, 0);
+                            }
+                            else {
+                                $paging.css('visibility', 'hidden');
+                            }
+                        }
+                        else {
+                            if (config.style === 'fade') {
+                                $paging.stop().fadeTo(speed, 1);
+                            }
+                            else {
+                                $paging.css('visibility', '');
+                            }
+                        }
+                    }
+                    else if (pages <= 1) {
                         if (config.style === 'fade') {
-                            $paging.stop().fadeTo(speed, 0);
+                            $paging.css('opacity', 0);
                         }
                         else {
                             $paging.css('visibility', 'hidden');
-                        }
-                    }
-                    else {
-                        if (config.style === 'fade') {
-                            $paging.stop().fadeTo(speed, 1);
-                        }
-                        else {
-                            $paging.css('visibility', '');
                         }
                     }
                 };
