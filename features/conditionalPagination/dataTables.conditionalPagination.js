@@ -13,38 +13,41 @@
  * of pages is <= 1. The controls can either appear / disappear or fade in / out
  *
  * @example
- *     $('#myTable').DataTable({
- *         conditionalPagination: {
- *             enable: true,
- *             fade: {
- *                 enable: true,
- *                 speed: 'fast'
- *             }
- *         }
- *     });
+ *    $('#myTable').DataTable({
+ *        conditionalPagination: true
+ *    });
+ *
+ * @example
+ *    $('#myTable').DataTable({
+ *        conditionalPagination: {
+ *            style: 'fade',
+ *            speed: 500 // optional
+ *        }
+ *    });
  */
 
 (function(window, document, $) {
-    $(document).on('init.dt', function(e, settings) {
-        if ($.isPlainObject(settings.oInit.conditionalPagination) && settings.oInit.conditionalPagination.enable) {
-            var api = new $.fn.dataTable.Api(settings),
-                fade = settings.oInit.conditionalPagination.fade,
-                fadeSpeed = 'slow',
-                fadeEnable = false,
+    $(document).on('init.dt', function(e, dtSettings) {
+        var options = dtSettings.oInit.conditionalPagination;
+
+        if ($.isPlainObject(options) || options === true) {
+            var config = $.isPlainObject(options) ? options : {},
+                api = new $.fn.dataTable.Api(dtSettings),
+                speed = 'slow',
                 conditionalPagination = function() {
                     var $pagination = $(api.table().container()).find('div.dataTables_paginate');
 
                     if (api.page.info().pages <= 1) {
-                        if (fadeEnable) {
-                            $pagination.stop().fadeOut(fadeSpeed);
+                        if (config.style === 'fade') {
+                            $pagination.stop().fadeOut(speed);
                         }
                         else {
                             $pagination.hide();
                         }
                     }
                     else {
-                        if (fadeEnable) {
-                            $pagination.stop().fadeIn(fadeSpeed);
+                        if (config.style === 'fade') {
+                            $pagination.stop().fadeIn(speed);
                         }
                         else {
                             $pagination.show();
@@ -52,14 +55,8 @@
                     }
                 };
 
-            if ($.isPlainObject(fade)) {
-                if (fade.enable === true) {
-                    fadeEnable = true;
-                }
-
-                if ($.isNumeric(fade.speed) || $.type(fade.speed) === 'string') {
-                    fadeSpeed = fade.speed;
-                }
+            if ($.isNumeric(config.speed) || $.type(config.speed) === 'string') {
+                speed = config.speed;
             }
 
             conditionalPagination();
