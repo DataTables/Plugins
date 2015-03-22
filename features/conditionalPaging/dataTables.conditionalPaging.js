@@ -1,25 +1,25 @@
 /**
- * @summary     ConditionalPagination
- * @description Hide pagination controls when the amount of pages is <= 1
+ * @summary     ConditionalPaging
+ * @description Hide paging controls when the amount of pages is <= 1
  * @version     1.0.0
- * @file        dataTables.conditionalPagination.js
+ * @file        dataTables.conditionalPaging.js
  * @author      Matthew Hasbach (https://github.com/mjhasbach)
  * @contact     hasbach.git@gmail.com
  * @copyright   Copyright 2015 Matthew Hasbach
  *
  * License      MIT - http://datatables.net/license/mit
  *
- * This feature plugin for DataTables hides pagination controls when the amount
+ * This feature plugin for DataTables hides paging controls when the amount
  * of pages is <= 1. The controls can either appear / disappear or fade in / out
  *
  * @example
  *    $('#myTable').DataTable({
- *        conditionalPagination: true
+ *        conditionalPaging: true
  *    });
  *
  * @example
  *    $('#myTable').DataTable({
- *        conditionalPagination: {
+ *        conditionalPaging: {
  *            style: 'fade',
  *            speed: 500 // optional
  *        }
@@ -28,29 +28,29 @@
 
 (function(window, document, $) {
     $(document).on('init.dt', function(e, dtSettings) {
-        var options = dtSettings.oInit.conditionalPagination;
+        var options = dtSettings.oInit.conditionalPaging;
 
         if ($.isPlainObject(options) || options === true) {
             var config = $.isPlainObject(options) ? options : {},
                 api = new $.fn.dataTable.Api(dtSettings),
                 speed = 'slow',
-                conditionalPagination = function() {
-                    var $pagination = $(api.table().container()).find('div.dataTables_paginate');
+                conditionalPaging = function() {
+                    var $paging = $(api.table().container()).find('div.dataTables_paginate');
 
                     if (api.page.info().pages <= 1) {
                         if (config.style === 'fade') {
-                            $pagination.stop().fadeTo(speed, 0);
+                            $paging.stop().fadeTo(speed, 0);
                         }
                         else {
-                            $pagination.css('visibility', 'hidden');
+                            $paging.css('visibility', 'hidden');
                         }
                     }
                     else {
                         if (config.style === 'fade') {
-                            $pagination.stop().fadeTo(speed, 1);
+                            $paging.stop().fadeTo(speed, 1);
                         }
                         else {
-                            $pagination.css('visibility', '');
+                            $paging.css('visibility', '');
                         }
                     }
                 };
@@ -59,9 +59,9 @@
                 speed = config.speed;
             }
 
-            conditionalPagination();
+            conditionalPaging();
 
-            api.on('draw.dt', conditionalPagination);
+            api.on('draw.dt', conditionalPaging);
         }
     });
 })(window, document, jQuery);
