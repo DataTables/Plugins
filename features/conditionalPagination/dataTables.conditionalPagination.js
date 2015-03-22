@@ -39,18 +39,18 @@
 
                     if (api.page.info().pages <= 1) {
                         if (config.style === 'fade') {
-                            $pagination.stop().fadeOut(speed);
+                            $pagination.stop().fadeTo(speed, 0);
                         }
                         else {
-                            $pagination.hide();
+                            $pagination.css('visibility', 'hidden');
                         }
                     }
                     else {
                         if (config.style === 'fade') {
-                            $pagination.stop().fadeIn(speed);
+                            $pagination.stop().fadeTo(speed, 1);
                         }
                         else {
-                            $pagination.show();
+                            $pagination.css('visibility', '');
                         }
                     }
                 };
