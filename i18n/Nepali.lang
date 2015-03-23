@@ -1,3 +1,10 @@
+/**
+ * Nepali
+ *  @name Nepali
+ *  @anchor Nepali
+ *  @author Bishwo Adhikari
+ */
+
 {
 	"sEmptyTable":	 "टेबलमा डाटा उपलब्ध भएन",
 	"sInfo":         "_TOTAL_ रेकर्ड मध्य _START_ देखि _END_ रेकर्ड देखाउंदै",
