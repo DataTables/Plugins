@@ -22,6 +22,7 @@ div.dataTables_filter label {
 div.dataTables_filter input {
 	margin-left: 0.5em;
 	display: inline-block;
+	width: auto;
 }
 
 div.dataTables_info {
