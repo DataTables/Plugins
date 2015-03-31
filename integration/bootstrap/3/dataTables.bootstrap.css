@@ -1,7 +1,13 @@
+/* RTL support requires morteza/bootstrap-rtl */
+
 div.dataTables_length label {
 	font-weight: normal;
 	text-align: left;
 	white-space: nowrap;
+}
+
+[dir=rtl] div.dataTables_length label {
+	text-align: right;
 }
 
 div.dataTables_length select {
@@ -13,16 +19,29 @@ div.dataTables_filter {
 	text-align: right;
 }
 
+[dir=rtl] div.dataTables_filter {
+	text-align: left;
+}
+
 div.dataTables_filter label {
 	font-weight: normal;
 	white-space: nowrap;
 	text-align: left;
 }
 
+[dir=rtl] div.dataTables_filter label {
+	text-align: right;
+}
+
 div.dataTables_filter input {
 	margin-left: 0.5em;
 	display: inline-block;
 	width: auto;
+}
+
+[dir=rtl] div.dataTables_filter input {
+	margin-left: 0;
+	margin-right: 0.5em;
 }
 
 div.dataTables_info {
@@ -34,6 +53,10 @@ div.dataTables_paginate {
 	margin: 0;
 	white-space: nowrap;
 	text-align: right;
+}
+
+[dir=rtl] div.dataTables_paginate {
+	text-align: left;
 }
 
 div.dataTables_paginate ul.pagination {
@@ -90,6 +113,14 @@ table.dataTable thead .sorting_desc:after {
 	font-family: 'Glyphicons Halflings';
 	opacity: 0.5;
 }
+
+[dir=rtl] table.dataTable thead .sorting:after,
+[dir=rtl] table.dataTable thead .sorting_asc:after,
+[dir=rtl] table.dataTable thead .sorting_desc:after {
+	right: auto;
+	left: 8px;
+}
+
 table.dataTable thead .sorting:after {
 	opacity: 0.2;
 	content: "\e150"; /* sort */
@@ -115,6 +146,11 @@ table.dataTable thead > tr > th {
 	padding-right: 30px;
 }
 
+[dir=rtl] table.dataTable thead > tr > th {
+	padding-left: 30px;
+	padding-right: 8px;
+}
+
 table.dataTable th:active {
 	outline: none;
 }
@@ -125,11 +161,23 @@ table.dataTable.table-condensed thead > tr > th {
 	padding-right: 20px;
 }
 
+[dir=rtl] table.dataTable.table-condensed thead > tr > th {
+	padding-left: 20px;
+	padding-right: 5px;
+}
+
 table.dataTable.table-condensed thead .sorting:after,
 table.dataTable.table-condensed thead .sorting_asc:after,
 table.dataTable.table-condensed thead .sorting_desc:after {
 	top: 6px;
 	right: 6px;
+}
+
+[dir=rtl] table.dataTable.table-condensed thead .sorting:after,
+[dir=rtl] table.dataTable.table-condensed thead .sorting_asc:after,
+[dir=rtl] table.dataTable.table-condensed thead .sorting_desc:after {
+	right: auto;
+	left: 6px;
 }
 
 /* Scrolling */
@@ -185,6 +233,14 @@ table.table-bordered tfoot td {
 }
 table.table-bordered th:last-child,
 table.table-bordered td:last-child {
+	border-right-width: 0;
+}
+[dir=rtl] table.table-bordered th:last-child,
+[dir=rtl] table.table-bordered td:last-child {
+	border-right-width: 1px;
+}
+[dir=rtl] table.table-bordered th:first-child,
+[dir=rtl] table.table-bordered td:first-child {
 	border-right-width: 0;
 }
 div.dataTables_scrollHead table.table-bordered {
@@ -269,6 +325,13 @@ div.DTTT_print_info {
 	        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
 }
 
+[dir=rtl] div.DTTT_print_info {
+	left: auto;
+	right: 50%;
+	margin-left: inherit;
+	margin-right: -200px;
+}
+
 div.DTTT_print_info h6 {
 	font-weight: normal;
 	font-size: 28px;
@@ -325,6 +388,12 @@ div.DTFC_LeftHeadWrapper table {
     border-bottom-right-radius: 0 !important;
 }
  
+[dir=rtl] div.DTFC_RightHeadWrapper table ,
+[dir=rtl] div.DTFC_LeftHeadWrapper table {
+    border-top-right-radius: inherit !important;
+    border-top-left-radius: 0 !important;
+}
+
 div.DTFC_RightHeadWrapper table thead tr:last-child th:first-child,
 div.DTFC_RightHeadWrapper table thead tr:last-child td:first-child,
 div.DTFC_LeftHeadWrapper table thead tr:last-child th:first-child,
