@@ -1,0 +1,9 @@
+{
+	"name": "datatables-plugins",
+	"version": "1.0.0",
+	"main": [],
+	"ignore": [],
+	"dependencies": {
+		"datatables": ">=1.10.1"
+	}
+}

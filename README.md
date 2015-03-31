@@ -19,3 +19,14 @@ This repository holds the following plug-in types for DataTables:
   * Twitter Bootstrap
 
 Each directory has an index.html file which is used to generate the plug-ins documentation on [DataTables.net](http://datatables.net/plug-ins) and describes how plug-ins can be used.
+
+## Bower
+To select which plugins to use, override the main section in your bower.json file with the files you need. Eg.  
+`"overrides": {`  
+`"datatables-plugins": {`  
+`"main": [`  
+			 `"./integration/bootstrap/3/dataTables.bootstrap.js",`  
+			 `"./integration/bootstrap/3/dataTables.bootstrap.css"`  
+		`]`  
+`}`  
+`}`
