@@ -28,6 +28,10 @@
 
 (function(window, document, $) {
     $(document).on('init.dt', function(e, dtSettings) {
+        if ( e.namespace !== 'dt' ) {
+            return;
+        }
+
         var options = dtSettings.oInit.conditionalPaging;
 
         if ($.isPlainObject(options) || options === true) {

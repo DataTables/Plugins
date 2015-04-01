@@ -49,6 +49,10 @@ function highlight( body, table )
 
 // Listen for DataTables initialisations
 $(document).on( 'init.dt.dth', function (e, settings, json) {
+	if ( e.namespace !== 'dt' ) {
+		return;
+	}
+
 	var table = new $.fn.dataTable.Api( settings );
 	var body = $( table.table().body() );
 

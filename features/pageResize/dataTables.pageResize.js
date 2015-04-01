@@ -58,7 +58,8 @@ var PageResize = function ( dt )
 
 	this._attach();
 	this._size();
-}
+};
+
 
 PageResize.prototype = {
 	_size: function ()
@@ -127,6 +128,10 @@ $.fn.DataTable.PageResize = PageResize;
 
 // Automatic initialisation listener
 $(document).on( 'init.dt', function ( e, settings ) {
+	if ( e.namespace !== 'dt' ) {
+		return;
+	}
+
 	var api = new $.fn.dataTable.Api( settings );
 
 	if ( $( api.table().node() ).hasClass( 'pageResize' ) ||
