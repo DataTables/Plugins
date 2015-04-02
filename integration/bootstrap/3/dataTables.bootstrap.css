@@ -42,11 +42,16 @@ div.dataTables_paginate ul.pagination {
 }
 
 @media screen and (max-width: 767px) {
+	div.dataTables_wrapper > div.row > div,
 	div.dataTables_length,
 	div.dataTables_filter,
 	div.dataTables_info,
 	div.dataTables_paginate {
 		text-align: center;
+	}
+
+	div.DTTT {
+		margin-bottom: 0.5em;
 	}
 }
 
