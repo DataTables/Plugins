@@ -121,7 +121,7 @@ table.dataTable th:active {
 
 
 /* Condensed */
-table.dataTable thead > tr > th {
+table.dataTable.table-condensed thead > tr > th {
 	padding-right: 20px;
 }
 
