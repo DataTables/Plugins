@@ -112,12 +112,24 @@ table.dataTable thead .sorting_desc_disabled:after {
 }
 
 table.dataTable thead > tr > th {
-	padding-left: 8px;
 	padding-right: 30px;
 }
 
 table.dataTable th:active {
 	outline: none;
+}
+
+
+/* Condensed */
+table.dataTable thead > tr > th {
+	padding-right: 20px;
+}
+
+table.dataTable.table-condensed thead .sorting:after,
+table.dataTable.table-condensed thead .sorting_asc:after,
+table.dataTable.table-condensed thead .sorting_desc:after {
+	top: 6px;
+	right: 6px;
 }
 
 /* Scrolling */
