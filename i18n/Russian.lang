@@ -16,7 +16,7 @@
   "infoPostFix": "",
   "loadingRecords": "Загрузка записей...",
   "zeroRecords": "Записи отсутствуют.",
-  "emptyTable:": "В таблице отсутствуют данные",
+  "emptyTable": "В таблице отсутствуют данные",
   "paginate": {
     "first": "Первая",
     "previous": "Предыдущая",
