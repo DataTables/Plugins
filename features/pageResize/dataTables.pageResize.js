@@ -100,8 +100,7 @@ PageResize.prototype = {
 				width: '100%',
 				zIndex: -1
 			} )
-			.attr( 'type', 'text/html' )
-			.attr( 'data', 'about:blank' );
+			.attr( 'type', 'text/html' );
 
 		obj[0].onload = function () {
 			var body = this.contentDocument.body;
@@ -118,7 +117,9 @@ PageResize.prototype = {
 			}
 		};
 
-		obj.appendTo( this.s.host );
+		obj
+			.appendTo( this.s.host )
+			.attr( 'data', 'about:blank' );
 	}
 };
 
