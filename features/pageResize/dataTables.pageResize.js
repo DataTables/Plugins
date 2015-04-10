@@ -1,5 +1,5 @@
 /*! PageResize for DataTables v1.0.0
- * 2014 SpryMedia Ltd - datatables.net/license
+ * 2015 SpryMedia Ltd - datatables.net/license
  */
 
 /**
