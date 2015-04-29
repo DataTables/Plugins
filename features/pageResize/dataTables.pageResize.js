@@ -80,7 +80,7 @@ PageResize.prototype = {
 
 		var drawRows = Math.floor( availableHeight / rowHeight );
 
-		if ( drawRows !== dt.page.len() ) {
+		if ( ! isNaN( drawRows ) && drawRows !== Infinity && drawRows !== dt.page.len() ) {
 			dt.page.len( drawRows ).draw();
 		}
 	},
