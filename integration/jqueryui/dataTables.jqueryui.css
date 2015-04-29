@@ -329,24 +329,14 @@ table.dataTable td {
   display: inline-block;
   min-width: 1.5em;
   padding: 0.5em;
-  margin-left: 2px;
   text-align: center;
   text-decoration: none !important;
   cursor: pointer;
   *cursor: hand;
-  color: #333333 !important;
   border: 1px solid transparent;
 }
 .dataTables_wrapper .dataTables_paginate .fg-button:active {
   outline: none;
-}
-.dataTables_wrapper .dataTables_paginate .fg-button:first-child {
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-}
-.dataTables_wrapper .dataTables_paginate .fg-button:last-child {
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
 }
 .dataTables_wrapper .dataTables_processing {
   position: absolute;
@@ -372,13 +362,6 @@ table.dataTable td {
   /* Opera 11.10+ */
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 25%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0) 100%);
   /* W3C */
-}
-.dataTables_wrapper .dataTables_length,
-.dataTables_wrapper .dataTables_filter,
-.dataTables_wrapper .dataTables_info,
-.dataTables_wrapper .dataTables_processing,
-.dataTables_wrapper .dataTables_paginate {
-  color: #333333;
 }
 .dataTables_wrapper .dataTables_scroll {
   clear: both;
@@ -406,12 +389,12 @@ table.dataTable td {
   .dataTables_wrapper .dataTables_filter,
   .dataTables_wrapper .dataTables_info,
   .dataTables_wrapper .dataTables_paginate {
-    float: none;
-    text-align: center;
+  float: none;
+  text-align: center;
   }
   .dataTables_wrapper .dataTables_filter,
   .dataTables_wrapper .dataTables_paginate {
-    margin-top: 0.5em;
+  margin-top: 0.5em;
   }
 }
 /*

@@ -1,5 +1,5 @@
 /*! DataTables jQuery UI integration
- * ©2011-2014 SpryMedia Ltd - datatables.net/license
+ * Â©2011-2014 SpryMedia Ltd - datatables.net/license
  */
 
 /**
@@ -10,147 +10,241 @@
  * controls using jQuery UI. See http://datatables.net/manual/styling/jqueryui
  * for further information.
  */
-(function(window, document, undefined){
+(function()
+{
+    var factory = function($, DataTable)
+    {
+        "use strict";
 
-var factory = function( $, DataTable ) {
-"use strict";
+        $.extend(true, DataTable.defaults,
+        {
+            dom: "<'fg-toolbar ui-toolbar ui-widget-header ui-helper-clearfix ui-corner-tl ui-corner-tr'lfr>" +
+                 "t" +
+                 "<'fg-toolbar ui-toolbar ui-widget-header ui-helper-clearfix ui-corner-bl ui-corner-br'ip>",
+            renderer: "jqueryui",
+        });
+        DataTable.defaults.oLanguage.oPaginate.sEllipsis = "..."; // TODO Base DT file needs to be updated with this.
 
+        $.extend(DataTable.ext.classes,
+        {
+            sFilterInput: "ui-corner-all",
+            sFooterTH: "ui-state-default",
+            sHeaderTH: "ui-state-default",
+            sPageButton: "fg-button ui-button ui-state-default",
+            sPageButtonActive: "ui-state-highlight",
+            sPageButtonDisabled: "ui-state-disabled",
+            sPaging: "dataTables_paginate paging_",
+            sScrollFoot: "dataTables_scrollFoot ui-state-default",
+            sScrollHead: "dataTables_scrollHead ui-state-default",
+            sSortAsc: "sorting_asc ui-state-default",
+            sSortDesc: "sorting_desc ui-state-default",
+            sSortable: "sorting ui-state-default",
+            sSortableAsc: "sorting_asc_disabled ui-state-default",
+            sSortableDesc: "sorting_desc_disabled ui-state-default",
+            sSortableNone: "sorting_disabled ui-state-default",
+            sSortIcon: "DataTables_sort_icon",
+            sWrapper: "dataTables_wrapper dt-jqueryui ui-widget",
+        });
 
-var sort_prefix = 'css_right ui-icon ui-icon-';
-var toolbar_prefix = 'fg-toolbar ui-toolbar ui-widget-header ui-helper-clearfix ui-corner-';
+        DataTable.ext.renderer.header.jqueryui = function(settings, $tableHead, column, classes)
+        {
+            var sortClass = "";
+            if (column.bSortable)
+            {
+                if ($.inArray("asc", column.asSorting) !== -1)
+                {
+                    if ($.inArray("desc", column.asSorting) !== -1)
+                    {
+                        sortClass = "css_right ui-icon ui-icon-carat-2-n-s";
+                    }
+                    else
+                    {
+                        sortClass = "css_right ui-icon ui-icon-carat-1-n";
+                    }
+                }
+                else if ($.inArray("desc", column.asSorting) !== -1)
+                {
+                    sortClass = "css_right ui-icon ui-icon-carat-1-s";
+                }
+            }
 
-/* Set the defaults for DataTables initialisation */
-$.extend( true, DataTable.defaults, {
-	dom:
-		'<"'+toolbar_prefix+'tl ui-corner-tr"lfr>'+
-		't'+
-		'<"'+toolbar_prefix+'bl ui-corner-br"ip>',
-	renderer: 'jqueryui'
-} );
+            $("<div>",
+            {
+                class: "DataTables_sort_wrapper",
+            })
+            .append($tableHead.contents())
+            .append($("<span>",
+                    {
+                        class: classes.sSortIcon + " " + sortClass,
+                    }))
+            .appendTo($tableHead);
 
+            $(settings.nTable).on("order.dt", function(event, context, sorting, columns)
+            {
+                if (context === settings)
+                {
+                    var $sortIconSpan = $tableHead.find("span." + classes.sSortIcon);
 
-$.extend( DataTable.ext.classes, {
-	"sWrapper":            "dataTables_wrapper dt-jqueryui",
+                    $tableHead.removeClass(classes.sSortAsc + " " + classes.sSortDesc);
+                    $sortIconSpan.removeClass("css_right ui-icon ui-icon-carat-1-n ui-icon-carat-1-s ui-icon-carat-2-n-s ui-icon-triangle-1-n ui-icon-triangle-1-s");
 
-	/* Full numbers paging buttons */
-	"sPageButton":         "fg-button ui-button ui-state-default",
-	"sPageButtonActive":   "ui-state-disabled",
-	"sPageButtonDisabled": "ui-state-disabled",
+                    if (columns[column.idx] === "asc")
+                    {
+                        $tableHead.addClass(classes.sSortAsc);
+                        $sortIconSpan.addClass("css_right ui-icon ui-icon-triangle-1-n");
+                    }
+                    else if (columns[column.idx] === "desc")
+                    {
+                        $tableHead.addClass(classes.sSortDesc);
+                        $sortIconSpan.addClass("css_right ui-icon ui-icon-triangle-1-s");
+                    }
+                    else
+                    {
+                        $tableHead.addClass(column.sSortingClass);
+                        $sortIconSpan.addClass(sortClass);
+                    }
+                }
+            });
+        };
 
-	/* Features */
-	"sPaging": "dataTables_paginate fg-buttonset ui-buttonset fg-buttonset-multi "+
-		"ui-buttonset-multi paging_", /* Note that the type is postfixed */
+        $.fn.dataTable.ext.renderer.pageButton.jqueryui = function(settings, host, index, buttons, page, pages)
+        {
+            // IE9 throws an "unknown error" if document.activeElement is used inside an iframe or frame.
+            try
+            {
+                var activeElement = $(document.activeElement).data("dt-idx");
 
-	/* Sorting */
-	"sSortAsc":            "ui-state-default sorting_asc",
-	"sSortDesc":           "ui-state-default sorting_desc",
-	"sSortable":           "ui-state-default sorting",
-	"sSortableAsc":        "ui-state-default sorting_asc_disabled",
-	"sSortableDesc":       "ui-state-default sorting_desc_disabled",
-	"sSortableNone":       "ui-state-default sorting_disabled",
-	"sSortIcon":           "DataTables_sort_icon",
+                var buttonClickHandler = function(event)
+                {
+                    settings.oApi._fnPageChange(settings, event.data.action, true);
+                };
+                var $host = $(host).empty();
+                var buttonIndex = 0;
+                var addButton = function($container, button)
+                {
+                    if ($.isArray(button))
+                    {
+                        var $buttonDiv = $("<" + (button.DT_el || "div") + ">").appendTo($container);
+                        button.forEach(function(subButton)
+                        {
+                            addButton($buttonDiv, subButton);
+                        });
+                    }
+                    else
+                    {
+                        var buttonText = "";
+                        var disabled = false;
+                        var active = false;
+                        switch (button)
+                        {
+                            case "ellipsis":
+                            {
+                                buttonText = settings.oLanguage.oPaginate.sEllipsis;
+                                disabled = true;
+                                break;
+                            }
+                            case "first":
+                            {
+                                buttonText = settings.oLanguage.oPaginate.sFirst;
+                                disabled = page === 0;
+                                break;
+                            }
+                            case "next":
+                            {
+                                buttonText = settings.oLanguage.oPaginate.sNext;
+                                disabled = page === pages - 1;
+                                break;
+                            }
+                            case "previous":
+                            {
+                                buttonText = settings.oLanguage.oPaginate.sPrevious;
+                                disabled = page === 0;
+                                break;
+                            }
+                            case "last":
+                            {
+                                buttonText = settings.oLanguage.oPaginate.sLast;
+                                disabled = page === pages - 1;
+                                break;
+                            }
+                            default:
+                            {
+                                buttonText = button + 1;
+                                active = page === button;
+                                disabled = false;
+                                break;
+                            }
+                        }
 
-	/* Scrolling */
-	"sScrollHead": "dataTables_scrollHead "+"ui-state-default",
-	"sScrollFoot": "dataTables_scrollFoot "+"ui-state-default",
+                        var $buttonAnchor = $("<a>",
+                        {
+                            "aria-controls": settings.sTableId,
+                            class: settings.oClasses.sPageButton + (active ? " " + settings.oClasses.sPageButtonActive : ""),
+                            "data-dt-idx": buttonIndex,
+                            id: index === 0 && typeof(button) === "string" ? settings.sTableId + "_" + button : null,
+                            "tabindex": settings.iTabIndex,
+                        })
+                        .html(buttonText)
+                        .appendTo($container)
+                        .button(
+                        {
+                            disabled: disabled,
+                        })
+                        .removeClass("ui-corner-all");
 
-	/* Misc */
-	"sHeaderTH":  "ui-state-default",
-	"sFooterTH":  "ui-state-default"
-} );
+                        settings.oApi._fnBindAction($buttonAnchor, { action: button, }, buttonClickHandler);
 
+                        buttonIndex++;
+                    }
+                };
+                buttons.forEach(function(button)
+                {
+                    addButton($host, button);
+                });
 
-DataTable.ext.renderer.header.jqueryui = function ( settings, cell, column, classes ) {
-	// Calculate what the unsorted class should be
-	var noSortAppliedClass = sort_prefix+'carat-2-n-s';
-	var asc = $.inArray('asc', column.asSorting) !== -1;
-	var desc = $.inArray('desc', column.asSorting) !== -1;
+                $host.find("a:first").addClass("ui-corner-tl ui-corner-bl");
+                $host.find("a:last").addClass("ui-corner-tr ui-corner-br");
 
-	if ( !column.bSortable || (!asc && !desc) ) {
-		noSortAppliedClass = '';
-	}
-	else if ( asc && !desc ) {
-		noSortAppliedClass = sort_prefix+'carat-1-n';
-	}
-	else if ( !asc && desc ) {
-		noSortAppliedClass = sort_prefix+'carat-1-s';
-	}
+                if (activeElement !== null)
+                {
+                    $(host).find("[data-dt-idx=" + activeElement + "]").focus();
+                }
+            }
+            catch (exception) { }
+        };
 
-	// Setup the DOM structure
-	$('<div/>')
-		.addClass( 'DataTables_sort_wrapper' )
-		.append( cell.contents() )
-		.append( $('<span/>')
-			.addClass( classes.sSortIcon+' '+noSortAppliedClass )
-		)
-		.appendTo( cell );
+        /*
+         * TableTools jQuery UI compatibility
+         * Required TableTools 2.1+
+         */
+        if (DataTable.TableTools)
+        {
+            $.extend(true, DataTable.TableTools.classes,
+            {
+                buttons:
+                {
+                    normal: "DTTT_button ui-button ui-state-default",
+                },
+                collection:
+                {
+                    container: "DTTT_collection ui-buttonset ui-buttonset-multi",
+                },
+                container: "DTTT_container ui-buttonset ui-buttonset-multi",
+            });
+        }
+    };
 
-	// Attach a sort listener to update on sort
-	$(settings.nTable).on( 'order.dt', function ( e, ctx, sorting, columns ) {
-		if ( settings !== ctx ) {
-			return;
-		}
-
-		var colIdx = column.idx;
-
-		cell
-			.removeClass( classes.sSortAsc +" "+classes.sSortDesc )
-			.addClass( columns[ colIdx ] == 'asc' ?
-				classes.sSortAsc : columns[ colIdx ] == 'desc' ?
-					classes.sSortDesc :
-					column.sSortingClass
-			);
-
-		cell
-			.find( 'span.'+classes.sSortIcon )
-			.removeClass(
-				sort_prefix+'triangle-1-n' +" "+
-				sort_prefix+'triangle-1-s' +" "+
-				sort_prefix+'carat-2-n-s' +" "+
-				sort_prefix+'carat-1-n' +" "+
-				sort_prefix+'carat-1-s'
-			)
-			.addClass( columns[ colIdx ] == 'asc' ?
-				sort_prefix+'triangle-1-n' : columns[ colIdx ] == 'desc' ?
-					sort_prefix+'triangle-1-s' :
-					noSortAppliedClass
-			);
-	} );
-};
-
-
-/*
- * TableTools jQuery UI compatibility
- * Required TableTools 2.1+
- */
-if ( DataTable.TableTools ) {
-	$.extend( true, DataTable.TableTools.classes, {
-		"container": "DTTT_container ui-buttonset ui-buttonset-multi",
-		"buttons": {
-			"normal": "DTTT_button ui-button ui-state-default"
-		},
-		"collection": {
-			"container": "DTTT_collection ui-buttonset ui-buttonset-multi"
-		}
-	} );
-}
-
-}; // /factory
-
-
-// Define as an AMD module if possible
-if ( typeof define === 'function' && define.amd ) {
-	define( ['jquery', 'datatables'], factory );
-}
-else if ( typeof exports === 'object' ) {
-    // Node/CommonJS
-    factory( require('jquery'), require('datatables') );
-}
-else if ( jQuery ) {
-	// Otherwise simply initialise as normal, stopping multiple evaluation
-	factory( jQuery, jQuery.fn.dataTable );
-}
-
-
-})(window, document);
-
+    if (typeof(define) === "function" && define.amd)
+    {
+        define([ "jquery", "datatables" ], factory);
+    }
+    else if (typeof(exports) === "object")
+    {
+        // Node/CommonJS
+        factory(require("jquery"), require("datatables"));
+    }
+    else if (typeof(jQuery) !== "undefined")
+    {
+        factory($, $.fn.dataTable);
+    }
+})();
