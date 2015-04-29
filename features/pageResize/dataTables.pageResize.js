@@ -32,7 +32,7 @@
  *   `table` is a DataTable's API instance.
  *
  * For more detailed information please see:
- *     http://datatables.net/blog/
+ *     http://datatables.net/blog/2015-04-10
  */
 
 (function($){
@@ -107,14 +107,14 @@ PageResize.prototype = {
 			var height = body.offsetHeight;
 
 			this.contentDocument.defaultView.onresize = function () {
-				var newHeight = body.offsetHeight;
+				var newHeight = body.clientHeight || body.offsetHeight;
 
 				if ( newHeight !== height ) {
 					height = newHeight;
 
 					that._size();
 				}
-			}
+			};
 		};
 
 		obj
