@@ -42,7 +42,7 @@
                     var $paging = $(api.table().container()).find('div.dataTables_paginate'),
                         pages = api.page.info().pages;
 
-                    if ($.isPlainObject(e)) {
+                    if (e instanceof $.Event) {
                         if (pages <= 1) {
                             if (config.style === 'fade') {
                                 $paging.stop().fadeTo(speed, 0);
