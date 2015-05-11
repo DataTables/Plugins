@@ -1,0 +1,16 @@
+{
+	"processing":   "處理中...",
+	"lengthMenu":   "顯示 _MENU_ 項結果",
+	"zeroRecords":  "沒有匹配結果",
+	"info":         "顯示第 _START_ 至 _END_ 項結果，共 _TOTAL_ 項",
+	"infoEmpty":    "顯示第 0 至 0 項結果，共 0 項",
+	"infoFiltered": "(從 _MAX_ 項結果過濾)",
+	"infoPostFix":  "",
+	"search":       "搜索:",
+	"paginate": {
+		"first":    "首頁",
+		"previous": "上頁",
+		"next":     "下頁",
+		"last":     "尾頁"
+	}
+}

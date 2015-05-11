@@ -1,0 +1,16 @@
+{
+    "processing": "İşleniyor...",
+    "lengthMenu": "Sayfada _MENU_ Kayıt Göster",
+    "zeroRecords": "Eşleşen Kayıt Bulunmadı",
+    "info": "  _TOTAL_ Kayıttan _START_ - _END_ Arası Kayıtlar",
+    "infoEmpty": "Kayıt Yok",
+    "infoFiltered": "( _MAX_ Kayıt İçerisinden Bulunan)",
+    "infoPostFix": "",
+    "search": "Bul:",
+    "paginate": {
+        "first": "İlk",
+        "previous": "Önceki",
+        "next": "Sonraki",
+        "last": "Son"
+    }
+}

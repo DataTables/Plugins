@@ -1,0 +1,19 @@
+{
+    "processing": "Bezig...",
+    "lengthMenu": "_MENU_ resultaten weergeven",
+    "zeroRecords": "Geen resultaten gevonden",
+    "info": "_START_ tot _END_ van _TOTAL_ resultaten",
+    "infoEmpty": "Geen resultaten om weer te geven",
+    "infoFiltered": " (gefilterd uit _MAX_ resultaten)",
+    "infoPostFix": "",
+    "search": "Zoeken:",
+    "emptyTable": "Geen resultaten aanwezig in de tabel",
+    "thousands": ".",
+    "loadingRecords": "Een moment geduld aub - bezig met laden...",
+    "paginate": {
+        "first": "Eerste",
+        "last": "Laatste",
+        "next": "Volgende",
+        "previous": "Vorige"
+    }
+}
