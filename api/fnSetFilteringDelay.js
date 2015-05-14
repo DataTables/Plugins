@@ -6,6 +6,10 @@
  * where you wouldn't typically want an Ajax request to be made with every key
  * press the user makes when searching the table.
  *
+ * Please note that this plug-in has been deprecated and the `dt-init
+ * searchDelay` option in DataTables 1.10 should now be used. This plug-in will
+ * not operate with v1.10+.
+ *
  *  @name fnSetFilteringDelay
  *  @summary Add a key debouce delay to the global filtering input of a table
  *  @author [Zygimantas Berziunas](http://www.zygimantas.com/), 
