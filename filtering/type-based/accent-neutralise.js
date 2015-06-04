@@ -27,7 +27,7 @@
  *        $('#myInput').keyup( function () {
  *          table
  *            .search(
- *              jQuery.fn.DataTable.ext.type.search.string( this )
+ *              jQuery.fn.DataTable.ext.type.search.string( this.value )
  *            )
  *            .draw()
  *        } );
