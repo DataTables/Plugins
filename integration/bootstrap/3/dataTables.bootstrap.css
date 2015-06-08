@@ -78,6 +78,7 @@ table.dataTable thead .sorting_asc_disabled,
 table.dataTable thead .sorting_desc_disabled {
 	cursor: pointer;
 	position: relative;
+	background-image: none;
 }
 
 table.dataTable thead .sorting:after,
@@ -370,3 +371,14 @@ div.FixedHeader_Cloned table {
 	margin: 0 !important
 }
 
+/*
+ * Pagination styles
+ */
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  padding: 0;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  border: 1px solid transparent;
+  background: none;
+}
