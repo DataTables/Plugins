@@ -207,6 +207,8 @@ $.fn.dataTableExt.oPagination.input = {
 		}
 		else
 		{
+			$(an).show();
+
 			/* Loop over each instance of the pager */
 			for (var i = 0, iLen = an.length ; i < iLen ; i++)
 			{
