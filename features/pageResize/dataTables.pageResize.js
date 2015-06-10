@@ -70,11 +70,14 @@ PageResize.prototype = {
 		var offsetTop = $( settings.table ).offset().top;
 		var rowHeight = $( 'tr', settings.body ).eq(0).height();
 		var availableHeight = settings.host.height();
+		var scrolling = t.header().parentNode !== t.body().parentNode;
 
 		// Subtract the height of the header, footer and the elements
 		// surrounding the table
-		availableHeight -= settings.header.height();
-		availableHeight -= settings.footer.height();
+		if ( ! scrolling ) {
+			availableHeight -= settings.header.height();
+			availableHeight -= settings.footer.height();
+		}
 		availableHeight -= offsetTop;
 		availableHeight -= settings.container.height() - ( offsetTop + settings.table.height() );
 
