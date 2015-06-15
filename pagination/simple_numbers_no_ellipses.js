@@ -16,7 +16,7 @@
  *    } );
  */
 
-$.fn.DataTable.ext.pager.full_numbers_no_ellipses = function(page, pages){
+$.fn.DataTable.ext.pager.simple_numbers_no_ellipses = function(page, pages){
    var numbers = [];
    var buttons = $.fn.DataTable.ext.pager.numbers_length;
    var half = Math.floor( buttons / 2 );
