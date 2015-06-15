@@ -2,6 +2,8 @@
  *  Plug-in offers the same functionality as `full_numbers` pagination type 
  *  (see `pagingType` option) but without ellipses.
  *
+ *  See [example](http://www.gyrocode.com/articles/jquery-datatables-pagination-without-ellipses) for demonstration.
+ *
  *  @name Full Numbers - No Ellipses
  *  @summary Same pagination as 'full_numbers' but without ellipses
  *  @author [Michael Ryvkin](http://www.gyrocode.com)
