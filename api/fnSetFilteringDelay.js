@@ -31,13 +31,11 @@ jQuery.fn.dataTableExt.oApi.fnSetFilteringDelay = function ( oSettings, iDelay )
 	this.each( function ( i ) {
 		$.fn.dataTableExt.iApiIndex = i;
 		var
-			$this = this,
 			oTimerId = null,
 			sPreviousSearch = null,
 			anControl = $( 'input', _that.fnSettings().aanFeatures.f );
 
-			anControl.unbind( 'keyup search input' ).bind( 'keyup search input', function() {
-			var $$this = $this;
+		anControl.unbind( 'keyup search input' ).bind( 'keyup search input', function() {
 
 			if (sPreviousSearch === null || sPreviousSearch != anControl.val()) {
 				window.clearTimeout(oTimerId);
