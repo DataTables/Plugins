@@ -3,7 +3,8 @@
  *  @name Russian
  *  @anchor Russian
  *  @author Tjoma
- *  @autor aspyatkin 
+ *  @author aspyatkin 
+ *  @author Alexey SHildyakov (ashl1future@gmail.com)
  */
 
 {
@@ -26,5 +27,28 @@
   "aria": {
     "sortAscending": ": активировать для сортировки столбца по возрастанию",
     "sortDescending": ": активировать для сортировки столбца по убыванию"
+  },
+  // Editor localization
+  'create': {
+      'button': "Создать",
+      'title':  "Создать новую запись",
+      'submit': "Создать"
+  },
+  'edit': {
+      'button': "Изменить",
+      'title':  "Изменить запись",
+      'submit': "Изменить"
+  },
+  'remove': {
+      'button': "Удалить",
+      'title':  "Удалить запись",
+      'submit': "Удалить",
+      'confirm': {
+          '_': "Вы уверены, что хотите удалить %d записей?",
+          '1': "Вы уверены, что хотите удалить эту запись?"
+      }
+  },
+  'error': {
+      'system': "Возникла ошибка, свяжитесь с админстратором системы."
   }
 }
