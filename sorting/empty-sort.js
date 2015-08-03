@@ -5,7 +5,7 @@
  *  This was written to help with sorting items that were ranked, where
  *  items without a rank number were considered lower in rank.
  * 
- *   This plug-in was inspired by this forum discussion
+ *  This plug-in was inspired by this forum discussion
  *  http://datatables.net/forums/discussion/4025/sorting-to-ignore-empty-cells
  *
  *
