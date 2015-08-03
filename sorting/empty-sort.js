@@ -1,9 +1,13 @@
 /**
- * Sorts cells with empty values by placing them after cells with values
- * This helps when if you have column that may or may not have values
- * allowing items with values to appear first when sorting ascending
- * This was written to help with sorting items that were ranked, where
- *  items without a rank number were considered lower in rank
+ *  Sorts cells with empty values by placing them after cells with values
+ *  This helps when if you have column that may or may not have values
+ *  allowing items with values to appear first when sorting ascending
+ *  This was written to help with sorting items that were ranked, where
+ *  items without a rank number were considered lower in rank.
+ * 
+ *   This plug-in was inspired by this forum discussion
+ *  http://datatables.net/forums/discussion/4025/sorting-to-ignore-empty-cells
+ *
  *
  *  @name  Empty
  *  @summary Sort items without a value after items with a value
