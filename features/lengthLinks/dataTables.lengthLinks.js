@@ -37,7 +37,7 @@ $.fn.dataTable.LengthLinks = function ( inst ) {
 	var api = new $.fn.dataTable.Api( inst );
 	var settings = api.settings()[0];
 	var container = $('<div></div>').addClass( settings.oClasses.sLength );
-	var lastLength = -1;
+	var lastLength = null;
 
 	// API so the feature wrapper can return the node to insert
 	this.container = function () {
