@@ -19,7 +19,7 @@
  */
 
 jQuery.fn.dataTable.ext.type.order['file-size-pre'] = function ( data ) {
-    var units = data.replace( /[\d\.]/g, '' ).toLowerCase();
+    var units = data.replace( /[\d\.\s]/g, '' ).toLowerCase();
     var multiplier = 1;
 
     if ( units === 'kb' ) {
@@ -30,6 +30,12 @@ jQuery.fn.dataTable.ext.type.order['file-size-pre'] = function ( data ) {
     }
     else if ( units === 'gb' ) {
         multiplier = 1000000000;
+    }
+    else if ( units === 'tb' ) {
+        multiplier = 1000000000000;
+    }
+    else if ( units === 'pb' ) {
+        multiplier = 1000000000000000;
     }
 
     return parseFloat( data ) * multiplier;
