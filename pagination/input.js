@@ -147,7 +147,7 @@ $.fn.dataTableExt.oPagination.input = {
 				{
 					iNewStart = 0;
 				}
-				if (iNewStart > oSettings.fnRecordsDisplay())
+				if (iNewStart >= oSettings.fnRecordsDisplay())
 				{
 					iNewStart = (Math.ceil((oSettings.fnRecordsDisplay() - 1) / oSettings._iDisplayLength) - 1) * oSettings._iDisplayLength;
 				}
