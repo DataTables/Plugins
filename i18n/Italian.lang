@@ -11,7 +11,7 @@
 	"sInfoEmpty":      "Vista da 0 a 0 di 0 elementi",
 	"sInfoFiltered":   "(filtrati da _MAX_ elementi totali)",
 	"sInfoPostFix":    "",
-	"sInfoThousands":  ",",
+	"sInfoThousands":  ".",
 	"sLengthMenu":     "Visualizza _MENU_ elementi",
 	"sLoadingRecords": "Caricamento...",
 	"sProcessing":     "Elaborazione...",
