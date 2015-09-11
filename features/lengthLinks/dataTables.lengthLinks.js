@@ -6,7 +6,7 @@
  * @summary     LengthLinks
  * @description Page length control via links for DataTables
  * @version     1.1.0
- * @file        dataTables.searchHighlight.js
+ * @file        dataTables.lengthLinks.js
  * @author      SpryMedia Ltd (www.sprymedia.co.uk)
  * @contact     www.sprymedia.co.uk/contact
  * @copyright   Copyright 2014 SpryMedia Ltd.
