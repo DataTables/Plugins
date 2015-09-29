@@ -39,13 +39,13 @@ jQuery.fn.DataTable.ext.type.search.string = function ( data ) {
         '' :
         typeof data === 'string' ?
             data
-                .replace( /έ/g, 'ε')
-                .replace( /ύ/g, 'υ')
-                .replace( /ό/g, 'ο')
-                .replace( /ώ/g, 'ω')
-                .replace( /ά/g, 'α')
-                .replace( /ί/g, 'ι')
-                .replace( /ή/g, 'η')
+                .replace( /έ/g, 'ε' )
+                .replace( /[ύϋΰ]/g, 'υ' )
+                .replace( /ό/g, 'ο' )
+                .replace( /ώ/g, 'ω' )
+                .replace( /ά/g, 'α' )
+                .replace( /[ίϊΐ]/g, 'ι' )
+                .replace( /ή/g, 'η' )
                 .replace( /\n/g, ' ' )
                 .replace( /á/g, 'a' )
                 .replace( /é/g, 'e' )
