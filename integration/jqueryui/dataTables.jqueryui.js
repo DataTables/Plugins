@@ -2,13 +2,13 @@
  * ©2011-2014 SpryMedia Ltd - datatables.net/license
  */
 
-/**
- * DataTables integration for jQuery UI. This requires jQuery UI and
- * DataTables 1.10 or newer.
- *
- * This file sets the defaults and adds options to DataTables to style its
- * controls using jQuery UI. See http://datatables.net/manual/styling/jqueryui
- * for further information.
+/*
+ * IMPORTANT
+ * This file has now been deprecated and replaced by support for the styling
+ * integration with jQuery UI in the DataTables core software and its
+ * accompanying extensions. Please refer to the styling documentation for
+ * details:
+ * 	https://datatables.net/manual/styling/
  */
 (function(window, document, undefined){
 
