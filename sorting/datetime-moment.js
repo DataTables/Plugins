@@ -29,7 +29,7 @@ $.fn.dataTable.moment = function ( format, locale ) {
 	types.detect.unshift( function ( d ) {
 		// Strip HTML tags if possible
 		if ( d && d.replace ) {
-			d = d.replace(/<.*?>/g, '') ) {
+			d = d.replace(/<.*?>/g, '');
 		}
 
 		// Null and empty values are acceptable
