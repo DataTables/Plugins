@@ -13,12 +13,8 @@ jQuery.fn.dataTable.ext.type.detect.unshift( function ( data ) {
 		return null;
 	}
 
-	var units = data.replace( /[\d\.]/g, '' ).toLowerCase();
-	if ( units !== '' && units !== 'b' && units !== 'kb' && units !== 'mb' && units !== 'gb' ) {
-		return null;
-	}
-
-	return isNaN( parseFloat( data ) ) ?
-		null :
-		'file-size';
+	var matches = data.match( /^(\d+(?:\.\d+)?)\s*([a-z]+)/i );
+	var units = ['b', 'kb', 'mb', 'gb', 'tb', 'pb'];
+	var is_file_size = ( matches && jQuery.inArray(matches[2].toLowerCase(), units) !== -1 );
+	return is_file_size ? 'file-size' : null;
 } );
