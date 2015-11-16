@@ -3,7 +3,7 @@
  * such as B, KB, MB or GB to a string in order to easily denote the order of
  * magnitude of the file size. This plug-in allows sorting to take these
  * indicates of size into account.
- * 
+ *
  * A counterpart type detection plug-in is also available.
  *
  *  @name File size
@@ -19,24 +19,16 @@
  */
 
 jQuery.fn.dataTable.ext.type.order['file-size-pre'] = function ( data ) {
-    var units = data.replace( /[\d\.\s]/g, '' ).toLowerCase();
-    var multiplier = 1;
+    var matches = data.match( /^(\d+(?:\.\d+)?)\s*([a-z]+)/i );
+    var multipliers = {
+        b:  1,
+        kb: 1000,
+        mb: 1000000,
+        gb: 1000000000,
+        tb: 1000000000000,
+        pb: 1000000000000000
+    };
 
-    if ( units === 'kb' ) {
-        multiplier = 1000;
-    }
-    else if ( units === 'mb' ) {
-        multiplier = 1000000;
-    }
-    else if ( units === 'gb' ) {
-        multiplier = 1000000000;
-    }
-    else if ( units === 'tb' ) {
-        multiplier = 1000000000000;
-    }
-    else if ( units === 'pb' ) {
-        multiplier = 1000000000000000;
-    }
-
-    return parseFloat( data ) * multiplier;
+    var multiplier = multipliers[matches[2].toLowerCase()];
+    return parseFloat( matches[1] ) * multiplier;
 };
