@@ -49,7 +49,7 @@ $.fn.dataTable.moment = function ( format, locale ) {
 	} );
 
 	// Add sorting method - use an integer for the sorting
-	types.order[ 'moment-'+format+'-pre' ] = function ( d ) {
+	types.order[ 'moment-'+format ] = function ( d ) {
 		return d === '' || d === null ?
 			-Infinity :
 			parseInt( moment( d.replace ? d.replace(/<.*?>/g, '') : d, format, locale, true ).format( 'x' ), 10 );
