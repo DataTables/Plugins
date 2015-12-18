@@ -45,33 +45,31 @@
  *    } );
  */
 
-jQuery.fn.dataTable.render = {
-	ellipsis: function ( cutoff, wordbreak ) {
-		return {
-			display: function ( d ) {
-				if ( wordbreak === undefined ) {
-					wordbreak = false;
-				}
-
-				if ( typeof d !== 'number' && typeof d !== 'string' ) {
-					return d;
-				}
-
-				var str = d.toString(); // cast numbers
-
-				if ( d.length < cutoff ) {
-					return d;
-				}
-
-				str = d.substr(0, cutoff);
-
-				if ( wordbreak ) {
-					// Find the last white space character in the string
-					str = str.replace(/\s([^\s]*)$/, '');
-				}
-
-				return '<span class="ellipsis" title="'+d+'">'+str+'&#8230;</span>';
+jQuery.fn.dataTable.render.ellipsis = function ( cutoff, wordbreak ) {
+	return {
+		display: function ( d ) {
+			if ( wordbreak === undefined ) {
+				wordbreak = false;
 			}
-		};
-	}
+
+			if ( typeof d !== 'number' && typeof d !== 'string' ) {
+				return d;
+			}
+
+			var str = d.toString(); // cast numbers
+
+			if ( d.length < cutoff ) {
+				return d;
+			}
+
+			str = d.substr(0, cutoff);
+
+			if ( wordbreak ) {
+				// Find the last white space character in the string
+				str = str.replace(/\s([^\s]*)$/, '');
+			}
+
+			return '<span class="ellipsis" title="'+d+'">'+str+'&#8230;</span>';
+		}
+	};
 };
