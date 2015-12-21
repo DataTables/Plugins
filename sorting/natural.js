@@ -36,12 +36,15 @@ function naturalSort (a, b) {
 		// convert all to strings and trim()
 		x = a.toString().replace(sre, '') || '',
 		y = b.toString().replace(sre, '') || '',
+		//strip html from the strings
+		xH = $(x).text(),
+		yH = $(y).text(),
 		// chunk/tokenize
-		xN = x.replace(re, '\0$1\0').replace(/\0$/,'').replace(/^\0/,'').split('\0'),
-		yN = y.replace(re, '\0$1\0').replace(/\0$/,'').replace(/^\0/,'').split('\0'),
+		xN = xH.replace(re, '\0$1\0').replace(/\0$/,'').replace(/^\0/,'').split('\0'),
+		yN = yH.replace(re, '\0$1\0').replace(/\0$/,'').replace(/^\0/,'').split('\0'),
 		// numeric, hex or date detection
-		xD = parseInt(x.match(hre), 10) || (xN.length !== 1 && x.match(dre) && Date.parse(x)),
-		yD = parseInt(y.match(hre), 10) || xD && y.match(dre) && Date.parse(y) || null;
+		xD = parseInt(xH.match(hre), 10) || (xN.length !== 1 && xH.match(dre) && Date.parse(xH)),
+		yD = parseInt(yH.match(hre), 10) || xD && yH.match(dre) && Date.parse(yH) || null;
 
 	// first try and sort Hex codes or Dates
 	if (yD) {
