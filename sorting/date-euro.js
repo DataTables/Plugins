@@ -27,7 +27,7 @@
 
         if ( $.trim(a) !== '' ) {
             var frDatea = $.trim(a).split(' ');
-            var frTimea = frDatea[1].split(':');
+            var frTimea = (undefined != frDatea[1]) ? frDatea[1].split(':') : [00,00,00];
             var frDatea2 = frDatea[0].split('/');
             x = (frDatea2[2] + frDatea2[1] + frDatea2[0] + frTimea[0] + frTimea[1] + frTimea[2]) * 1;
         }
