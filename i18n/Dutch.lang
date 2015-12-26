@@ -6,21 +6,21 @@
  */
 
 {
-    "sProcessing": "Bezig...",
-    "sLengthMenu": "_MENU_ resultaten weergeven",
-    "sZeroRecords": "Geen resultaten gevonden",
-    "sInfo": "_START_ tot _END_ van _TOTAL_ resultaten",
-    "sInfoEmpty": "Geen resultaten om weer te geven",
-    "sInfoFiltered": " (gefilterd uit _MAX_ resultaten)",
-    "sInfoPostFix": "",
-    "sSearch": "Zoeken:",
-    "sEmptyTable": "Geen resultaten aanwezig in de tabel",
-    "sInfoThousands": ".",
-    "sLoadingRecords": "Een moment geduld aub - bezig met laden...",
-    "oPaginate": {
-        "sFirst": "Eerste",
-        "sLast": "Laatste",
-        "sNext": "Volgende",
-        "sPrevious": "Vorige"
+    "processing": "Bezig...",
+    "lengthMenu": "_MENU_ resultaten weergeven",
+    "zeroRecords": "Geen resultaten gevonden",
+    "info": "_START_ tot _END_ van _TOTAL_ resultaten",
+    "infoEmpty": "Geen resultaten om weer te geven",
+    "infoFiltered": " (gefilterd uit _MAX_ resultaten)",
+    "infoPostFix": "",
+    "search": "Zoeken:",
+    "emptyTable": "Geen resultaten aanwezig in de tabel",
+    "infoThousands": ".",
+    "loadingRecords": "Een moment geduld aub - bezig met laden...",
+    "paginate": {
+        "first": "Eerste",
+        "last": "Laatste",
+        "next": "Volgende",
+        "previous": "Vorige"
     }
 }

@@ -7,24 +7,24 @@
  */
 
 {
-    "sEmptyTable":      "Lentelėje nėra duomenų",
-    "sInfo":            "Rodomi įrašai nuo _START_ iki _END_ iš _TOTAL_ įrašų",
-    "sInfoEmpty":       "Rodomi įrašai nuo 0 iki 0 iš 0",
-    "sInfoFiltered":    "(atrinkta iš _MAX_ įrašų)",
-    "sInfoPostFix":     "",
-    "sInfoThousands":   " ",
-    "sLengthMenu":      "Rodyti _MENU_ įrašus",
-    "sLoadingRecords":  "Įkeliama...",
-    "sProcessing":      "Apdorojama...",
-    "sSearch":          "Ieškoti:",
-    "sThousands":       " ",
-    "sUrl":             "",
-    "sZeroRecords":     "Įrašų nerasta",
+    "emptyTable":      "Lentelėje nėra duomenų",
+    "info":            "Rodomi įrašai nuo _START_ iki _END_ iš _TOTAL_ įrašų",
+    "infoEmpty":       "Rodomi įrašai nuo 0 iki 0 iš 0",
+    "infoFiltered":    "(atrinkta iš _MAX_ įrašų)",
+    "infoPostFix":     "",
+    "infoThousands":   " ",
+    "lengthMenu":      "Rodyti _MENU_ įrašus",
+    "loadingRecords":  "Įkeliama...",
+    "processing":      "Apdorojama...",
+    "search":          "Ieškoti:",
+    "thousands":       " ",
+    "url":             "",
+    "zeroRecords":     "Įrašų nerasta",
 
-    "oPaginate": {
-        "sFirst": "Pirmas",
-        "sPrevious": "Ankstesnis",
-        "sNext": "Tolimesnis",
-        "sLast": "Paskutinis"
+    "paginate": {
+        "first": "Pirmas",
+        "previous": "Ankstesnis",
+        "next": "Tolimesnis",
+        "last": "Paskutinis"
     }
 }

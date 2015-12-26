@@ -7,27 +7,27 @@
  */
 
 {
-	"sEmptyTable": "Ingen data tilgjengelig i tabellen",
-	"sInfo": "Viser _START_ til _END_ av _TOTAL_ linjer",
-	"sInfoEmpty": "Viser 0 til 0 av 0 linjer",
-	"sInfoFiltered": "(filtrert fra _MAX_ totalt antall linjer)",
-	"sInfoPostFix": "",
-	"sInfoThousands": " ",
-	"sLoadingRecords": "Laster...",
-	"sLengthMenu": "Vis _MENU_ linjer",
-	"sLoadingRecords": "Laster...",
-	"sProcessing": "Laster...",
-	"sSearch": "S&oslash;k:",
-	"sUrl": "",
-	"sZeroRecords": "Ingen linjer matcher s&oslash;ket",
-  	"oPaginate": {
-		"sFirst": "F&oslash;rste",
-		"sPrevious": "Forrige",
-		"sNext": "Neste",
-		"sLast": "Siste"
+	"emptyTable": "Ingen data tilgjengelig i tabellen",
+	"info": "Viser _START_ til _END_ av _TOTAL_ linjer",
+	"infoEmpty": "Viser 0 til 0 av 0 linjer",
+	"infoFiltered": "(filtrert fra _MAX_ totalt antall linjer)",
+	"infoPostFix": "",
+	"infoThousands": " ",
+	"loadingRecords": "Laster...",
+	"lengthMenu": "Vis _MENU_ linjer",
+	"loadingRecords": "Laster...",
+	"processing": "Laster...",
+	"search": "S&oslash;k:",
+	"url": "",
+	"zeroRecords": "Ingen linjer matcher s&oslash;ket",
+  	"paginate": {
+		"first": "F&oslash;rste",
+		"previous": "Forrige",
+		"next": "Neste",
+		"last": "Siste"
    	}
-   	"oAria": {
-		"sSortAscending": ": aktiver for å sortere kolonnen stigende",
-		"sSortDescending": ": aktiver for å sortere kolonnen synkende"
+   	"aria": {
+		"sortAscending": ": aktiver for å sortere kolonnen stigende",
+		"sortDescending": ": aktiver for å sortere kolonnen synkende"
 	}
 }

@@ -5,25 +5,25 @@
  */
 
 {
-	"sEmptyTable":     "Таблицада эч кандай берилиш жок",
-	"sInfo":           "Жалпы _TOTAL_ саптын ичинен _START_-саптан _END_-сапка чейинкилер",
-	"sInfoEmpty":      "Жалпы 0 саптын ичинен 0-саптан 0-сапка чейинкилер",
-	"sInfoFiltered":   "(жалпы _MAX_ саптан фильтрленди)",
-	"sInfoPostFix":    "",
-	"sInfoThousands":  " ",
-	"sLengthMenu":     "_MENU_ саптан көрсөт",
-	"sLoadingRecords": "Жүктөлүүдө...",
-	"sProcessing":     "Иштеп жатат...",
-	"sSearch":         "Издөө:",
-	"sZeroRecords":    "Туура келген бир да сап жок",
-	"oPaginate": {
-		"sFirst":    "Биринчи",
-		"sLast":     "Акыркы",
-		"sNext":     "Кийинки",
-		"sPrevious": "Мурунку"
+	"emptyTable":     "Таблицада эч кандай берилиш жок",
+	"info":           "Жалпы _TOTAL_ саптын ичинен _START_-саптан _END_-сапка чейинкилер",
+	"infoEmpty":      "Жалпы 0 саптын ичинен 0-саптан 0-сапка чейинкилер",
+	"infoFiltered":   "(жалпы _MAX_ саптан фильтрленди)",
+	"infoPostFix":    "",
+	"infoThousands":  " ",
+	"lengthMenu":     "_MENU_ саптан көрсөт",
+	"loadingRecords": "Жүктөлүүдө...",
+	"processing":     "Иштеп жатат...",
+	"search":         "Издөө:",
+	"zeroRecords":    "Туура келген бир да сап жок",
+	"paginate": {
+		"first":    "Биринчи",
+		"last":     "Акыркы",
+		"next":     "Кийинки",
+		"previous": "Мурунку"
 	},
-	"oAria": {
-		"sSortAscending":  ": иретте",
-		"sSortDescending": ": тескери иретте"
+	"aria": {
+		"sortAscending":  ": иретте",
+		"sortDescending": ": тескери иретте"
 	}
 }

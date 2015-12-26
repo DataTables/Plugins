@@ -6,26 +6,26 @@
  */
 
 {
-	"sProcessing":   "Przetwarzanie...",
-	"sLengthMenu":   "Pokaż _MENU_ pozycji",
-	"sZeroRecords":  "Nie znaleziono pasujących pozycji",
-	"sInfoThousands":  " ",
-	"sInfo":         "Pozycje od _START_ do _END_ z _TOTAL_ łącznie",
-	"sInfoEmpty":    "Pozycji 0 z 0 dostępnych",
-	"sInfoFiltered": "(filtrowanie spośród _MAX_ dostępnych pozycji)",
-	"sInfoPostFix":  "",
-	"sSearch":       "Szukaj:",
-	"sUrl":          "",
-	"oPaginate": {
-		"sFirst":    "Pierwsza",
-		"sPrevious": "Poprzednia",
-		"sNext":     "Następna",
-		"sLast":     "Ostatnia"
+	"processing":   "Przetwarzanie...",
+	"lengthMenu":   "Pokaż _MENU_ pozycji",
+	"zeroRecords":  "Nie znaleziono pasujących pozycji",
+	"infoThousands":  " ",
+	"info":         "Pozycje od _START_ do _END_ z _TOTAL_ łącznie",
+	"infoEmpty":    "Pozycji 0 z 0 dostępnych",
+	"infoFiltered": "(filtrowanie spośród _MAX_ dostępnych pozycji)",
+	"infoPostFix":  "",
+	"search":       "Szukaj:",
+	"url":          "",
+	"paginate": {
+		"first":    "Pierwsza",
+		"previous": "Poprzednia",
+		"next":     "Następna",
+		"last":     "Ostatnia"
 	},
-	"sEmptyTable":     "Brak danych",
-	"sLoadingRecords": "Wczytywanie...",
-	"oAria": {
-		"sSortAscending":  ": aktywuj, by posortować kolumnę rosnąco",
-		"sSortDescending": ": aktywuj, by posortować kolumnę malejąco"
+	"emptyTable":     "Brak danych",
+	"loadingRecords": "Wczytywanie...",
+	"aria": {
+		"sortAscending":  ": aktywuj, by posortować kolumnę rosnąco",
+		"sortDescending": ": aktywuj, by posortować kolumnę malejąco"
 	}
 }

@@ -6,26 +6,26 @@
  */
 
 {
-	"sProcessing":     "Procesando...",
-	"sLengthMenu":     "Mostrar _MENU_ rexistros",
-	"sZeroRecords":    "Non se atoparon resultados",
-	"sEmptyTable":     "Ningún dato dispoñible nesta táboa",
-	"sInfo":           "Mostrando rexistros do _START_ ó _END_ dun total de _TOTAL_ rexistros",
-	"sInfoEmpty":      "Mostrando rexistros do 0 ó 0 dun total de 0 rexistros",
-	"sInfoFiltered":   "(filtrado dun total de _MAX_ rexistros)",
-	"sInfoPostFix":    "",
-	"sSearch":         "Buscar:",
-	"sUrl":            "",
-	"sInfoThousands":  ",",
-	"sLoadingRecords": "Cargando...",
-	"oPaginate": {
-		"sFirst":    "Primeiro",
-		"sLast":     "Último",
-		"sNext":     "Seguinte",
-		"sPrevious": "Anterior"
+	"processing":     "Procesando...",
+	"lengthMenu":     "Mostrar _MENU_ rexistros",
+	"zeroRecords":    "Non se atoparon resultados",
+	"emptyTable":     "Ningún dato dispoñible nesta táboa",
+	"info":           "Mostrando rexistros do _START_ ó _END_ dun total de _TOTAL_ rexistros",
+	"infoEmpty":      "Mostrando rexistros do 0 ó 0 dun total de 0 rexistros",
+	"infoFiltered":   "(filtrado dun total de _MAX_ rexistros)",
+	"infoPostFix":    "",
+	"search":         "Buscar:",
+	"url":            "",
+	"infoThousands":  ",",
+	"loadingRecords": "Cargando...",
+	"paginate": {
+		"first":    "Primeiro",
+		"last":     "Último",
+		"next":     "Seguinte",
+		"previous": "Anterior"
 	},
-	"oAria": {
-		"sSortAscending":  ": Activar para ordear a columna de maneira ascendente",
-		"sSortDescending": ": Activar para ordear a columna de maneira descendente"
+	"aria": {
+		"sortAscending":  ": Activar para ordear a columna de maneira ascendente",
+		"sortDescending": ": Activar para ordear a columna de maneira descendente"
 	}
 }

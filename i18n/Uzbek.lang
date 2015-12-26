@@ -6,24 +6,24 @@
  */
 
 {
-	"sEmptyTable":   	"Ma'lumot yo'q",
-	"sInfo":         	"Umumiy _TOTAL_ yozuvlarlardan _START_ dan _END_ gachasi ko'rsatilmoqda",
-	"sInfoEmpty":    	"Umumiy 0 yozuvlardan 0 dan 0 gachasi ko'rsatilmoqda",
-	"sInfoFiltered": 	"(_MAX_ yozuvlardan filtrlandi)",
-	"sInfoPostFix":  	"",
-	"sLengthMenu":   	"_MENU_ ta yozuvlarni ko'rsat",
-	"sLoadingRecords": 	"Yozuvlar yuklanmoqda...",
-	"sProcessing":     	"Ishlayapman...",
-	"sSearch":       	"Izlash:",
-	"sZeroRecords":  	"Ma'lumot yo'q.",
-	"oPaginate": {
-		"sFirst": 		"Birinchi",
-		"sPrevious": 	"Avvalgi",
-		"sNext": 		"Keyingi",
-		"sLast": 		"Son'ggi"
+	"emptyTable":   	"Ma'lumot yo'q",
+	"info":         	"Umumiy _TOTAL_ yozuvlarlardan _START_ dan _END_ gachasi ko'rsatilmoqda",
+	"infoEmpty":    	"Umumiy 0 yozuvlardan 0 dan 0 gachasi ko'rsatilmoqda",
+	"infoFiltered": 	"(_MAX_ yozuvlardan filtrlandi)",
+	"infoPostFix":  	"",
+	"lengthMenu":   	"_MENU_ ta yozuvlarni ko'rsat",
+	"loadingRecords": 	"Yozuvlar yuklanmoqda...",
+	"processing":     	"Ishlayapman...",
+	"search":       	"Izlash:",
+	"zeroRecords":  	"Ma'lumot yo'q.",
+	"paginate": {
+		"first": 		"Birinchi",
+		"previous": 	"Avvalgi",
+		"next": 		"Keyingi",
+		"last": 		"Son'ggi"
 	},
-	"oAria": {
-		"sSortAscending":  ": to'g'ri tartiblash",
-		"sSortDescending": ": teskari tartiblash"
+	"aria": {
+		"sortAscending":  ": to'g'ri tartiblash",
+		"sortDescending": ": teskari tartiblash"
 	}
 }
