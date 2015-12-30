@@ -21,7 +21,7 @@
 		"previous": "上一頁",
 		"next":     "下一頁",
 		"last":     "最後一頁"
-	}
+	},
 	"aria": {
 		"sortAscending":  ": 升冪排列",
 		"sortDescending": ": 降冪排列"
