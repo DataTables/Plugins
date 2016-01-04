@@ -10,6 +10,7 @@
  *  @name Natural sorting
  *  @summary Sort data with a mix of numbers and letters _naturally_.
  *  @author [Jim Palmer](http://www.overset.com/2008/09/01/javascript-natural-sort-algorithm-with-unicode-support)
+ *  @author [Michael Buehler] (https://github.com/AnimusMachina)
  *
  *  @example
  *    $('#example').dataTable( {
