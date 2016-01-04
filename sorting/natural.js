@@ -17,6 +17,15 @@
  *         { type: 'natural', targets: 0 }
  *       ]
  *    } );
+ *
+ *    Html can be stripped from sorting by using 'natural-nohtml' such as
+ *
+ *    $('#example').dataTable( {
+ *       columnDefs: [
+ *    	   { type: 'natural-nohtml', targets: 0 }
+ *       ]
+ *    } );
+ *
  */
 
 (function() {
@@ -27,24 +36,27 @@
  * Contributors: Mike Grier (mgrier.com), Clint Priest, Kyle Adams, guillermo
  * See: http://js-naturalsort.googlecode.com/svn/trunk/naturalSort.js
  */
-function naturalSort (a, b) {
+function naturalSort (a, b, html) {
 	var re = /(^-?[0-9]+(\.?[0-9]*)[df]?e?[0-9]?$|^0x[0-9a-f]+$|[0-9]+)/gi,
 		sre = /(^[ ]*|[ ]*$)/g,
 		dre = /(^([\w ]+,?[\w ]+)?[\w ]+,?[\w ]+\d+:\d+(:\d+)?[\w ]?|^\d{1,4}[\/\-]\d{1,4}[\/\-]\d{1,4}|^\w+, \w+ \d+, \d{4})/,
 		hre = /^0x[0-9a-f]+$/i,
 		ore = /^0/,
+		htmre = /(<([^>]+)>)/ig,
 		// convert all to strings and trim()
 		x = a.toString().replace(sre, '') || '',
-		y = b.toString().replace(sre, '') || '',
-		//strip html from the strings
-		xH = $(x).text(),
-		yH = $(y).text(),
+		y = b.toString().replace(sre, '') || '';
+		// remove html from strings if desired
+		if (!html) {
+			x = x.replace(htmre, '');
+			y = y.replace(htmre, '');
+		}
 		// chunk/tokenize
-		xN = xH.replace(re, '\0$1\0').replace(/\0$/,'').replace(/^\0/,'').split('\0'),
-		yN = yH.replace(re, '\0$1\0').replace(/\0$/,'').replace(/^\0/,'').split('\0'),
+	var	xN = x.replace(re, '\0$1\0').replace(/\0$/,'').replace(/^\0/,'').split('\0'),
+		yN = y.replace(re, '\0$1\0').replace(/\0$/,'').replace(/^\0/,'').split('\0'),
 		// numeric, hex or date detection
-		xD = parseInt(xH.match(hre), 10) || (xN.length !== 1 && xH.match(dre) && Date.parse(xH)),
-		yD = parseInt(yH.match(hre), 10) || xD && yH.match(dre) && Date.parse(yH) || null;
+		xD = parseInt(x.match(hre), 10) || (xN.length !== 1 && x.match(dre) && Date.parse(x)),
+		yD = parseInt(y.match(hre), 10) || xD && y.match(dre) && Date.parse(y) || null;
 
 	// first try and sort Hex codes or Dates
 	if (yD) {
@@ -82,11 +94,19 @@ function naturalSort (a, b) {
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 	"natural-asc": function ( a, b ) {
-		return naturalSort(a,b);
+		return naturalSort(a,b,true);
 	},
 
 	"natural-desc": function ( a, b ) {
-		return naturalSort(a,b) * -1;
+		return naturalSort(a,b,true) * -1;
+	},
+
+	"natural-nohtml-asc": function( a, b ) {
+		return naturalSort(a,b,false);
+	},
+
+	"natural-nohtml-desc": function( a, b ) {
+		return naturalSort(a,b,false) * -1;
 	}
 } );
 
