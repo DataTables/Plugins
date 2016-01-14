@@ -29,7 +29,7 @@
  *    $('#example').DataTable( {
  *      drawCallback: function () {
  *        var api = this.api();
- *        api.table().footer().to$().html(
+ *        $( api.table().footer() ).html(
  *          api.column( 4, {page:'current'} ).data().sum()
  *        );
  *      }
