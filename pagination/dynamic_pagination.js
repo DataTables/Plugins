@@ -200,6 +200,7 @@ $.fn.dataTableExt.oPagination.dynamic_pagination = {
                 }
                 
                 if(inputType=='select'){
+                    $(input).empty();
                     for (var j = 0; j < iPages; j++) { //add the pages
                         $(input).append($('<option>', {value:j+1,text:j+1}));
                     }
