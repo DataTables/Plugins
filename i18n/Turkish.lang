@@ -2,23 +2,30 @@
  * Turkish translation
  *  @name Turkish
  *  @anchor Turkish
- *  @author Umit Gorkem
+ *  @author Umit Gorkem & Erdal TAŞKESEN
  */
 
 {
-	"sProcessing":   "İşleniyor...",
-	"sLengthMenu":   "Sayfada _MENU_ Kayıt Göster",
-	"sZeroRecords":  "Eşleşen Kayıt Bulunmadı",
-	"sInfo":         "  _TOTAL_ Kayıttan _START_ - _END_ Arası Kayıtlar",
-	"sInfoEmpty":    "Kayıt Yok",
-	"sInfoFiltered": "( _MAX_ Kayıt İçerisinden Bulunan)",
-	"sInfoPostFix":  "",
-	"sSearch":       "Bul:",
-	"sUrl":          "",
+	"sDecimal":        ",",
+	"sEmptyTable":     "Tabloda herhangi bir veri mevcut değil",
+	"sInfo":           "_TOTAL_ kayıttan _START_ - _END_ arasındaki kayıtlar gösteriliyor",
+	"sInfoEmpty":      "Kayıt yok",
+	"sInfoFiltered":   "(_MAX_ kayıt içerisinden bulunan)",
+	"sInfoPostFix":    "",
+	"sInfoThousands":  ".",
+	"sLengthMenu":     "Sayfada _MENU_ kayıt göster",
+	"sLoadingRecords": "Yükleniyor...",
+	"sProcessing":     "İşleniyor...",
+	"sSearch":         "Ara:",
+	"sZeroRecords":    "Eşleşen kayıt bulunamadı",
 	"oPaginate": {
 		"sFirst":    "İlk",
-		"sPrevious": "Önceki",
+		"sLast":     "Son",
 		"sNext":     "Sonraki",
-		"sLast":     "Son"
+		"sPrevious": "Önceki"
+	},
+	"oAria": {
+		"sSortAscending":  ": artan sütun sıralamasını aktifleştir",
+		"sSortDescending": ": azalan sütun soralamasını aktifleştir"
 	}
 }
