@@ -204,14 +204,16 @@ $.fn.dataTableExt.oPagination.dynamic_pagination = {
 				
 				var input = $(paging).find('input');
 				input.css('display','inline');
+
 			    if(that.bootstrapTooltip){
-			        $('.pagination > li > input').attr('data-title','Max. page number: '+iPages).tooltip({
+			        input.attr('data-original-title','Max. page number: '+Math.ceil(oSettings.fnRecordsDisplay() / oSettings._iDisplayLength));
+			        input.tooltip({
 			            container: '.pagination',
 			            placement: 'top'
 			        });
 			    }
 			    input.val(iCurrentPage);
-			    $(paging).find('select').css('display','none');                    
+			    $(paging).find('select').css('display','none');             
 			}
             				
             // When there are pages show pagination block and info block
