@@ -5,12 +5,9 @@
  *
  * 'maxNormalPages' is used for the maximum pages in normal mode
  * 'maxSelectPages' is used for the selectbox mode
- * 'maxInputPages' is used for the input mode,
- * 'bootstrapTooltip' is used to display max input value for the input mode with bootstrap tooltip plugin
  *
- *  @name Dynamic input,select or basic navigation
- *
- *  @summary Show a `dt-tag select`,`dt-tag input` or basic navigation the user can use to navigate through the tables.
+ *  @name Dynamic input,select list
+ *  @summary Show a `dt-tag select` `dt-tag input` list of pages the user can pick from.
  *  @author Frank van Os
  *
  *  @example
@@ -23,7 +20,6 @@
 $.fn.dataTableExt.oPagination.dynamic_pagination = {
      'maxNormalPages': 10,
      'maxSelectPages': 20,
-     'maxInputPages': 50,
      'bootstrapTooltip': false,
      'fnClickHandler': function(e) {
         var fnCallbackDraw = e.data.fnCallbackDraw,
@@ -84,20 +80,16 @@ $.fn.dataTableExt.oPagination.dynamic_pagination = {
 		function updatePage(element){
 			if (element.val() === '' || element.val().match(/[^0-9]/)) {
 				/* Nothing entered or non-numeric character */
-				element.val() = element.val().replace(/[^\d]/g, ''); // don't even allow anything but digits
-				return;
-			}
-
-			var iNewStart = oSettings._iDisplayLength * (element.val() - 1);
-			if (iNewStart < 0) {
-				iNewStart = 0;
-			}
-			if (iNewStart >= oSettings.fnRecordsDisplay()) {
-				iNewStart = (Math.ceil((oSettings.fnRecordsDisplay() - 1) / oSettings._iDisplayLength) - 1) * oSettings._iDisplayLength;
-			}
-			
-			oSettings._iDisplayStart = iNewStart;
-			fnCallbackDraw(oSettings);
+                return;
+            }
+            var iNewStart = oSettings._iDisplayLength * (element.val() - 1);
+            if (iNewStart > oSettings.fnRecordsDisplay()) { /* Display overrun */
+                oSettings._iDisplayStart = (Math.ceil((oSettings.fnRecordsDisplay() - 1) / oSettings._iDisplayLength) - 1) * oSettings._iDisplayLength;
+                fnCallbackDraw(oSettings);
+                return;
+            }
+            oSettings._iDisplayStart = iNewStart;
+            fnCallbackDraw(oSettings);
 		}
 		
 		$(nInputText).keypress(function (e) {
@@ -135,7 +127,7 @@ $.fn.dataTableExt.oPagination.dynamic_pagination = {
 		var info = oSettings.aanFeatures.i;
         var that = this;
 		
-        for (var i = 0, iLen = paging.length; i < iLen; i++) {
+		for (var i = 0, iLen = paging.length; i < iLen; i++) {
 
             if ( oSettings._iDisplayStart === 0 ){
                 $(paging).find('.first').attr('class',"paginate_button disabled first");
@@ -158,8 +150,8 @@ $.fn.dataTableExt.oPagination.dynamic_pagination = {
             // Hide pagination block and info block
 			$(paging).hide();
 			$(info).hide();
-			
-            if(iPages < that.maxNormalPages){
+            
+            if(iPages <= that.maxNormalPages){
                 $(paging).find('select,input').css('display','none');
 
 				// Erase
@@ -180,45 +172,44 @@ $.fn.dataTableExt.oPagination.dynamic_pagination = {
                     $(oNumber).appendTo('#'+oSettings.sTableId+'_pagination_controls');
                 }
             }
-            else if(iPages > that.maxSelectPages) {
+            else if(iPages > that.maxNormalPages && iPages <= that.maxSelectPages) {
 
 				// Erase
               	$('#'+oSettings.sTableId+'_pagination_controls').find('a.paginate_button').remove();
             	
-                var inputType = (iPages>that.maxInputPages) ? 'input' : 'select';
-                var input = $(paging).find(inputType);
+                var input = $(paging).find('select');
             
-                $(input).css('display','inline');
+                input.css('display','inline');
 			
                 if(oSettings._iDisplayStart === 0 && oSettings.fnDisplayEnd() == oSettings.fnRecordsDisplay()){
-                    $(input).attr('disabled','disabled').attr('class','form-control disabled');
+                    input.attr('disabled','disabled').attr('class','form-control disabled');
                 }
                 else{
-                    $(input)
+                    input
                         .removeAttr('disabled','disabled')
                         .attr('class','form-control');
                 }
                 
-                if(inputType=='select'){
-                    $(input).empty();
-                    for (var j = 0; j < iPages; j++) { //add the pages
-                        $(input).append($('<option>', {value:j+1,text:j+1}));
-                    }
-                    $(input).val(iCurrentPage);
+                input.empty();
+		        for (var j = 0; j < iPages; j++) { //add the pages
+		            input.append($('<option>', {value:j+1,text:j+1}));
+				}
+                input.val(iCurrentPage);
 
-                    $(paging).find('input').css('display','none');
-                }
-                else if(inputType=='input'){
-                    if(that.bootstrapTooltip){
-                        $('.pagination > li > input').attr('data-title','Max. page number: '+iPages).tooltip({
-                            container: '.pagination',
-                            placement: 'top'
-                        });
-                    }
-                    $(input).val(iCurrentPage);
-                    $(paging).find('select').css('display','none');                    
-                }
+                $(paging).find('input').css('display','none');
             }
+            else if(iPages > that.maxNormalPages && iPages > that.maxSelectPages){
+				var input = $(paging).find('input');
+				input.css('display','inline');
+			    if(that.bootstrapTooltip){
+			        $('.pagination > li > input').attr('data-title','Max. page number: '+iPages).tooltip({
+			            container: '.pagination',
+			            placement: 'top'
+			        });
+			    }
+			    input.val(iCurrentPage);
+			    $(paging).find('select').css('display','none');                    
+			}
             				
             // When there are pages show pagination block and info block
             $(paging).show();
