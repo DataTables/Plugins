@@ -199,6 +199,9 @@ $.fn.dataTableExt.oPagination.dynamic_pagination = {
                 $(paging).find('input').css('display','none');
             }
             else if(iPages > that.maxNormalPages && iPages > that.maxSelectPages){
+				// Remove paging buttons
+				$('#'+oSettings.sTableId+'_pagination_controls').find('a.paginate_button').remove();
+				
 				var input = $(paging).find('input');
 				input.css('display','inline');
 			    if(that.bootstrapTooltip){
