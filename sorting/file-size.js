@@ -29,6 +29,10 @@ jQuery.fn.dataTable.ext.type.order['file-size-pre'] = function ( data ) {
         pb: 1000000000000000
     };
 
-    var multiplier = multipliers[matches[2].toLowerCase()];
-    return parseFloat( matches[1] ) * multiplier;
+    if (matches) {
+        var multiplier = multipliers[matches[2].toLowerCase()];
+        return parseFloat( matches[1] ) * multiplier;
+    } else {
+        return -1;
+    };
 };
