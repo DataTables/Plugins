@@ -68,7 +68,7 @@ jQuery.fn.dataTable.render.ellipsis = function ( cutoff, wordbreak, escapeHtml )
 
 		d = d.toString(); // cast numbers
 
-		if ( d.length < cutoff ) {
+		if ( d.length <= cutoff ) {
 			return d;
 		}
 
