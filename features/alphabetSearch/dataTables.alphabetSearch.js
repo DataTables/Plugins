@@ -62,7 +62,10 @@ function bin ( data ) {
 	var letter, bins = {};
 
 	for ( var i=0, ien=data.length ; i<ien ; i++ ) {
-		letter = data[i].charAt(0).toUpperCase();
+		letter = data[i]
+			.toString()
+			.replace(/<.*?>/g, '')
+			.charAt(0).toUpperCase();
 
 		if ( bins[letter] ) {
 			bins[letter]++;
