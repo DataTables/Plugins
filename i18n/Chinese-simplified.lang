@@ -1,0 +1,28 @@
+/**
+ * Chinese (simplified) translation
+ *  @name Chinese (simplified)
+ *  @anchor Chinese (simplified)
+ *  @author <a href="http://docs.jquery.com/UI">Chi Cheng</a>
+ */
+
+{
+    "emptyTable":     "无数据",
+    "info":           "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+    "infoEmpty":      "显示第 0 至 0 项结果，共 0 项",
+    "infoFiltered":   "（从 _MAX_ 项结果中过滤）",
+    "lengthMenu":     "显示 _MENU_ 项结果",
+    "loadingRecords": "载入中...",
+    "processing":     "处理中...",
+    "search":         "搜索：",
+    "zeroRecords":    "没有匹配的结果",
+    "paginate": {
+        "first":      "首页",
+        "last":       "末页",
+        "next":       "下页",
+        "previous":   "上页"
+    },
+    "aria": {
+        "sortAscending":  "：升序排列",
+        "sortDescending": "：降序排列"
+    }
+}
