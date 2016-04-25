@@ -10,7 +10,7 @@ div.alphabet span {
 	color: #3174c7;
 	cursor: pointer;
 	text-align: center;
-	width: 3.5%
+	width: 3.5%;
 }
 
 div.alphabet span:hover {
@@ -25,7 +25,7 @@ div.alphabet span.empty {
 	color: red;
 }
 
-div.alphabetInfo {
+div.alphabet_info {
 	display: block;
 	position: absolute;
 	background-color: #111;
@@ -36,4 +36,8 @@ div.alphabetInfo {
 	padding-top: 0.4em;
 	text-align: center;
 	z-index: 1;
+}
+
+tr.alphabet_group, tr.alphabet_group:hover {
+	background-color: rgba(0,0,0,0.15) !important;
 }
