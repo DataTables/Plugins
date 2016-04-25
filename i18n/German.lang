@@ -12,6 +12,7 @@
 	"sInfoFiltered": 	"(gefiltert von _MAX_ Einträgen)",
 	"sInfoPostFix":  	"",
 	"sInfoThousands":  	".",
+	"sDecimal":  		",",
 	"sLengthMenu":   	"_MENU_ Einträge anzeigen",
 	"sLoadingRecords": 	"Wird geladen...",
 	"sProcessing":   	"Bitte warten...",
