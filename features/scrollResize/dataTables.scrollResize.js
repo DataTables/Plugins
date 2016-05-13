@@ -77,7 +77,7 @@ ScrollResize.prototype = {
 		availableHeight -= offsetTop;
 		availableHeight -= settings.container.height() - ( offsetTop + scrollBody.height() );
 
-		$('div.dataTables_scrollBody').css( {
+		$('div.dataTables_scrollBody', t.container()).css( {
 			maxHeight: availableHeight,
 			height: availableHeight
 		} );
