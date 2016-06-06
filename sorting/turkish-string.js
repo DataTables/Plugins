@@ -9,9 +9,9 @@
  *
  *  @example
  *    $('#example').dataTable({
- *       'aoColumns' : [
- *                       {'sType' : 'turkish'}
- *       ]
+ *       columnDefs: [
+ *       	{ targets: '_all', type: 'turkish' }
+ *   	]
  *   });
  */
 
