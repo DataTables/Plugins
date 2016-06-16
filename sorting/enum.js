@@ -1,37 +1,49 @@
 /**
- * Sort by priority through an enumerated list. In this case the words _High_,
- * _Medium_ and _Low_ are used and thus sorted in priority order. This works 
- * by converting the works to a numerical value and then sorting based on that
- * value.
+ * Sort data by a defined enumerated (enum) list. The options for the values in
+ * the enum are defined by passing the values in an array to the method
+ * `$.fn.dataTable.enum`. Type detection and sorting plug-ins for DataTables will
+ * automatically be generated and added to the table.
  *
- *  @name enum
- *  @summary Sort an enumerated list of options
- *  @author [Allan Jardine](http://sprymedia.co.uk)
+ * For full details and instructions please see [this DataTables blog
+ * post](//datatables.net/blog/2016-06-16).
+ *
+ * @name enum
+ * @summary Dynamically create enum sorting options for a DataTable
+ * @author [SpryMedia Ltd](http://datatables.net)
  *
  *  @example
- *    $('#example').dataTable( {
- *       columnDefs: [
- *         { type: 'enum', targets: 0 }
- *       ]
- *    } );
+ *    $.fn.dataTable.enum( [ 'High', 'Medium', 'Low' ] );
+ *
+ *    $('#example').DataTable();
  */
 
-jQuery.extend( jQuery.fn.dataTableExt.oSort, {
-	"enum-pre": function ( a ) {
-		// Add / alter the switch statement below to match your enum list
-		switch( a ) {
-			case "High":   return 1;
-			case "Medium": return 2;
-			case "Low":    return 3;
-			default:       return 4;
-		}
-	},
 
-	"enum-asc": function ( a, b ) {
-		return ((a < b) ? -1 : ((a > b) ? 1 : 0));
-	},
+(function ($) {
 
-	"enum-desc": function ( a, b ) {
-		return ((a < b) ? 1 : ((a > b) ? -1 : 0));
+
+var unique = 0;
+var types = $.fn.dataTable.ext.type;
+
+$.fn.dataTable.enum = function ( arr ) {
+	var name = 'enum-'+(unique++);
+	var lookup = window.Map ? new Map() : {};
+
+	for ( var i=0, ien=arr.length ; i<ien ; i++ ) {
+		lookup[ arr[i] ] = i;
 	}
-} );
+
+	// Add type detection
+	types.detect.unshift( function ( d ) {
+		return lookup[ d ] !== undefined ?
+			name :
+			null;
+	} );
+
+	// Add sorting method
+	types.order[ name+'-pre' ] = function ( d ) {
+		return lookup[ d ];
+	};
+};
+
+
+})(jQuery);
