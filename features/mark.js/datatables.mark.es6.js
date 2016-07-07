@@ -1,5 +1,5 @@
 /*!***************************************************
- * datatables.mark.js v1.0.0
+ * datatables.mark.js v1.0.1
  * https://github.com/julmot/datatables.mark.js
  * Copyright (c) 2016, Julian Motz
  * Released under the MIT license https://git.io/voRZ7
@@ -27,20 +27,36 @@
             }
             this.instance = dtInstance;
             this.options = typeof options === "object" ? options : {};
+            this.intervalThreshold = 49;
+            this.intervalMs = 300;
             this.initMarkListener();
         }
 
         initMarkListener() {
-            this.instance.on("draw.dt.dth column-visibility.dt.dth column-reorder.dt.dth", this.mark.bind(this));
+            const ev = "draw.dt.dth column-visibility.dt.dth column-reorder.dt.dth";
+            let intvl = null;
+            this.instance.on(ev, () => {
+                const rows = this.instance.rows({
+                    filter: "applied",
+                    page: "current"
+                }).nodes().length;
+                if (rows > this.intervalThreshold) {
+                    clearTimeout(intvl);
+                    intvl = setTimeout(() => {
+                        this.mark();
+                    }, this.intervalMs);
+                } else {
+                    this.mark();
+                }
+            });
             this.instance.on("destroy", () => {
-                this.instance.off("draw.dt.dth column-visibility.dt.dth column-reorder.dt.dth");
+                this.instance.off(ev);
             });
             this.mark();
         }
 
         mark() {
             const globalSearch = this.instance.search();
-
             $(this.instance.table().body()).unmark(this.options);
             this.instance.columns({
                 search: "applied",
