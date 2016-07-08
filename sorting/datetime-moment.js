@@ -22,7 +22,7 @@
 
 (function (factory) {
 	if (typeof define === "function" && define.amd) {
-		define(["jquery", "moment", "datatables"], factory);
+		define(["jquery", "moment", "datatables.net"], factory);
 	} else {
 		factory(jQuery, moment);
 	}
