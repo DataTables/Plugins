@@ -1,5 +1,5 @@
 /*!***************************************************
- * datatables.mark.js v1.0.1
+ * datatables.mark.js v2.0.0
  * https://github.com/julmot/datatables.mark.js
  * Copyright (c) 2016, Julian Motz
  * Released under the MIT license https://git.io/voRZ7
@@ -9,11 +9,11 @@
 
 ((factory, window, document) => {
     if (typeof define === "function" && define.amd) {
-        define(["jquery", "datatables", "markjs"], jQuery => {
+        define(["jquery", "datatables.net", "markjs"], jQuery => {
             return factory(window, document, jQuery);
         });
     } else if (typeof exports === "object") {
-        require("datatables");
+        require("datatables.net");
         require("markjs");
         factory(window, document, require("jquery"));
     } else {
