@@ -1,5 +1,5 @@
 /*!***************************************************
- * datatables.mark.js v1.0.0
+ * datatables.mark.js v2.0.0
  * https://github.com/julmot/datatables.mark.js
  * Copyright (c) 2016, Julian Motz
  * Released under the MIT license https://git.io/voRZ7
@@ -15,11 +15,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 (function (factory, window, document) {
     if (typeof define === "function" && define.amd) {
-        define(["jquery", "datatables", "markjs"], function (jQuery) {
+        define(["jquery", "datatables.net", "markjs"], function (jQuery) {
             return factory(window, document, jQuery);
         });
     } else if ((typeof exports === "undefined" ? "undefined" : _typeof(exports)) === "object") {
-        require("datatables");
+        require("datatables.net");
         require("markjs");
         factory(window, document, require("jquery"));
     } else {
@@ -35,6 +35,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
             this.instance = dtInstance;
             this.options = (typeof options === "undefined" ? "undefined" : _typeof(options)) === "object" ? options : {};
+            this.intervalThreshold = 49;
+            this.intervalMs = 300;
             this.initMarkListener();
         }
 
@@ -43,9 +45,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             value: function initMarkListener() {
                 var _this = this;
 
-                this.instance.on("draw.dt.dth column-visibility.dt.dth column-reorder.dt.dth", this.mark.bind(this));
+                var ev = "draw.dt.dth column-visibility.dt.dth column-reorder.dt.dth";
+                var intvl = null;
+                this.instance.on(ev, function () {
+                    var rows = _this.instance.rows({
+                        filter: "applied",
+                        page: "current"
+                    }).nodes().length;
+                    if (rows > _this.intervalThreshold) {
+                        clearTimeout(intvl);
+                        intvl = setTimeout(function () {
+                            _this.mark();
+                        }, _this.intervalMs);
+                    } else {
+                        _this.mark();
+                    }
+                });
                 this.instance.on("destroy", function () {
-                    _this.instance.off("draw.dt.dth column-visibility.dt.dth column-reorder.dt.dth");
+                    _this.instance.off(ev);
                 });
                 this.mark();
             }
@@ -55,7 +72,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 var _this2 = this;
 
                 var globalSearch = this.instance.search();
-
                 $(this.instance.table().body()).unmark(this.options);
                 this.instance.columns({
                     search: "applied",

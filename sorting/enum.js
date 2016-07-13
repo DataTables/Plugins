@@ -24,7 +24,9 @@
 var unique = 0;
 var types = $.fn.dataTable.ext.type;
 
-$.fn.dataTable.enum = function ( arr ) {
+// Using form $.fn.dataTable.enum breaks at least YuiCompressor since enum is
+// a reserved word in JavaScript
+$.fn.dataTable['enum'] = function ( arr ) {
 	var name = 'enum-'+(unique++);
 	var lookup = window.Map ? new Map() : {};
 

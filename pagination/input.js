@@ -157,7 +157,7 @@
 					iNewStart = 0;
 				}
 				if (iNewStart >= oSettings.fnRecordsDisplay()) {
-					iNewStart = (Math.ceil((oSettings.fnRecordsDisplay() - 1) / oSettings._iDisplayLength) - 1) * oSettings._iDisplayLength;
+					iNewStart = (Math.ceil((oSettings.fnRecordsDisplay()) / oSettings._iDisplayLength) - 1) * oSettings._iDisplayLength;
 				}
 
 				oSettings._iDisplayStart = iNewStart;
