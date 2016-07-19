@@ -83,8 +83,6 @@ PageResize.prototype = {
 
 		var drawRows = Math.floor( availableHeight / rowHeight );
 
-		console.log( drawRows );
-
 		if ( drawRows !== Infinity && drawRows !== -Infinity && 
 			 ! isNaN( drawRows )   && drawRows > 0 &&
 			 drawRows !== dt.page.len()
