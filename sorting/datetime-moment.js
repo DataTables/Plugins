@@ -35,14 +35,13 @@ $.fn.dataTable.moment = function ( format, locale ) {
 	types.detect.unshift( function ( d ) {
 		if ( d ) {
 			// Strip HTML tags and newline characters if possible
-	        if ( d.replace ) {
-	            d = d.replace(/(<.*?>)|(\r?\n|\r)/g, '');
-	        }
-			// Strip out surrounding whitespace if possible
-	        if ( d.trim ) {
-	            d = d.trim();
-	        }
-	    }
+			if ( d.replace ) {
+				d = d.replace(/(<.*?>)|(\r?\n|\r)/g, '');
+			}
+
+			// Strip out surrounding white space
+			d = $.trim( d );
+		}
 
 		// Null and empty values are acceptable
 		if ( d === '' || d === null ) {
@@ -57,15 +56,14 @@ $.fn.dataTable.moment = function ( format, locale ) {
 	// Add sorting method - use an integer for the sorting
 	types.order[ 'moment-'+format+'-pre' ] = function ( d ) {
 		if ( d ) {
-	        // Strip HTML tags and newline characters if possible
-	        if ( d.replace ) {
-	            d = d.replace(/(<.*?>)|(\r?\n|\r)/g, '');
-	        }
-			// Strip out surrounding whitespace if possible
-	        if ( d.trim ) {
-	            d = d.trim();
-	        }
-	    }
+			// Strip HTML tags and newline characters if possible
+			if ( d.replace ) {
+				d = d.replace(/(<.*?>)|(\r?\n|\r)/g, '');
+			}
+
+			// Strip out surrounding white space
+			d = $.trim( d );
+		}
 		
 		return d === '' || d === null ?
 			-Infinity :
