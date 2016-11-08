@@ -94,10 +94,6 @@ function naturalSort (a, b, html) {
 }
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
-	"natural-ci-pre": function ( a ) {
-		return a.toString().toLowerCase();
-	},
-
 	"natural-asc": function ( a, b ) {
 		return naturalSort(a,b,true);
 	},
@@ -115,10 +111,16 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 	},
 
 	"natural-ci-asc": function( a, b ) {
+		a = a.toString().toLowerCase();
+		b = b.toString().toLowerCase();
+
 		return naturalSort(a,b,true);
 	},
 
 	"natural-ci-desc": function( a, b ) {
+		a = a.toString().toLowerCase();
+		b = b.toString().toLowerCase();
+
 		return naturalSort(a,b,true) * -1;
 	}
 } );
