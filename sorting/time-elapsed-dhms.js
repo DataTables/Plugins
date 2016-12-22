@@ -23,7 +23,6 @@
  */
 
 
-
 jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
 
     var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
