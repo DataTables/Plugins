@@ -35,13 +35,33 @@
  *    } );
  */
 
-(function (factory) {
-	if (typeof define === "function" && define.amd) {
-		define(["jquery", "datatables.net"], factory);
-	} else {
-		factory(jQuery);
+(function( factory ){
+	if ( typeof define === 'function' && define.amd ) {
+		// AMD
+		define( ['jquery', 'datatables.net'], function ( $ ) {
+			return factory( $, window, document );
+		} );
 	}
-}(function ($) {
+	else if ( typeof exports === 'object' ) {
+		// CommonJS
+		module.exports = function (root, $) {
+			if ( ! root ) {
+				root = window;
+			}
+
+			if ( ! $ || ! $.fn.dataTable ) {
+				$ = require('datatables.net')(root, $).$;
+			}
+
+			return factory( $, root, root.document );
+		};
+	}
+	else {
+		// Browser
+		factory( jQuery, window, document );
+	}
+}(function( $, window, document, undefined ) {
+'use strict';
 
 // Unique value allowing multiple absolute ordering use cases on a single page.
 var _unique = 0;
@@ -88,10 +108,10 @@ var _setup = function ( values ) {
 		if ( isNumber ) {
 			// Cast as a number if required
 			if ( typeof a === 'string' ) {
-				a = a.replace(/[^\d\-\.]/g) * 1;
+				a = a.replace(/[^\d\-\.]/g, '') * 1;
 			}
 			if ( typeof b === 'string' ) {
-				b = b.replace(/[^\d\-\.]/g) * 1;
+				b = b.replace(/[^\d\-\.]/g, '') * 1;
 			}
 		}
 
@@ -109,10 +129,10 @@ var _setup = function ( values ) {
 
 		if ( isNumber ) {
 			if ( typeof a === 'string' ) {
-				a = a.replace(/[^\d\-\.]/g) * 1;
+				a = a.replace(/[^\d\-\.]/g, '') * 1;
 			}
 			if ( typeof b === 'string' ) {
-				b = b.replace(/[^\d\-\.]/g) * 1;
+				b = b.replace(/[^\d\-\.]/g, '') * 1;
 			}
 		}
 
@@ -142,7 +162,7 @@ $.fn.dataTable.absoluteOrderNumber = function ( values ) {
 		return conf.asc( a, b, true );
 	};
 	$.fn.dataTable.ext.type.order[ conf.name+'-desc' ] = function ( a, b ) {
-		return conf.asc( a, b, true );
+		return conf.desc( a, b, true );
 	};
 
 	return conf.name;
