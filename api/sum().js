@@ -49,3 +49,16 @@ jQuery.fn.dataTable.Api.register( 'sum()', function ( ) {
 	}, 0 );
 } );
 
+jQuery.fn.dataTable.Api.register( 'sumselected()', function ( ) {
+	// Remove the formatting to get integer data for summation
+	var intVal = function ( i ) {
+		return typeof i === 'string' ?
+			i.replace(/[\$,]/g, '')*1 :
+			typeof i === 'number' ?
+				i : 0;
+	},cellvalue=0;
+	this.rows( { selected: true } ).every( function ( r ) {
+		cellvalue=cellvalue+intVal(this.cell(r,11).data());
+	} );
+	return cellvalue;
+} );
