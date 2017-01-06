@@ -32,7 +32,7 @@
             return;
         }
 
-        var options = dtSettings.oInit.conditionalPaging;
+        var options = dtSettings.oInit.conditionalPaging || $.fn.dataTable.defaults.conditionalPaging;
 
         if ($.isPlainObject(options) || options === true) {
             var config = $.isPlainObject(options) ? options : {},
