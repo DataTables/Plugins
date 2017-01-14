@@ -55,8 +55,12 @@
             else {
                 $.ajax({
                     type: opts.ajax.requestType,
-                    url: opts.ajax.requestUrl,
-                    data: opts.ajax.requestData,
+                    url: opts.ajax.requestUrl,                    
+                    beforeSend: function(xhr, settings) {
+                        if (opts.ajax.getRequestData) {
+                            this.data = opts.ajax.getRequestData(dtRow);
+                        }
+                    },
                     contentType: opts.ajax.contentType,
                     dataType: opts.ajax.dataType,
                     success: function (response) {
