@@ -1,6 +1,6 @@
 /**
  * @summary     SlidingChild
- * @description Show/Hide row child data plug-in
+ * @description Plug-in to show/hide row child data
  * @version     1.0.0
  * @file        datatables-slidingchild.js
  * @author      datahandler (www.datahandler.uk)
@@ -43,7 +43,7 @@
                 $(opts.sliderSelector, dtRow.child()).slideUp(function () {
                     dtRow.child.remove();
                     showingRow.removeClass('shown');
-                    $(dt.table().node()).trigger('rowClosed', [dtRow]);
+                    $(dt.table().node()).trigger('childClosed', [dtRow]);
                 });
             }
         };
@@ -57,16 +57,16 @@
                     type: opts.ajax.requestType,
                     url: opts.ajax.requestUrl,
                     beforeSend: function(xhr, settings) {
-                        if (opts.ajax.getRequestData) {
-                            this.data = opts.ajax.getRequestData(dtRow);
+                        if (opts.ajax.requestData) {
+                            this.data = opts.ajax.requestData(dtRow);
                         }
                     },
                     contentType: opts.ajax.contentType,
                     dataType: opts.ajax.dataType,
                     success: function (response) {
                         var data = response;
-                        if (opts.dataCallback) {
-                            data = opts.dataCallback(response);
+                        if (opts.dataFormatCallback) {
+                            data = opts.dataFormatCallback(response);
                         }
                         showChild(dtRow, data);
                     },
@@ -76,8 +76,8 @@
         };
 
         var showChildDataFromRow = function(dtRow) {
-            if (!opts.dataCallback) { return; } // throw error?
-            var data = opts.dataCallback(dtRow.data());
+            if (!opts.dataFormatCallback) { return; } // throw error?
+            var data = opts.dataFormatCallback(dtRow.data());
             showChild(dtRow, data);
         }
 
@@ -88,7 +88,7 @@
             $(opts.sliderSelector, dtRow.child()).slideDown(function () {
                 selectedRow.addClass('shown');
 
-                $(dt.table().node()).trigger('rowShown', [dtRow]);
+                $(dt.table().node()).trigger('childShown', [dtRow]);
             });
         };
     };
@@ -104,7 +104,7 @@
             contentType: "application/json; charset=utf-8",
             dataType: "json"
         },
-        dataCallback: null,
+        dataFormatCallback: null,
         sliderSelector: 'div.slider'
     };
 
