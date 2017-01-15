@@ -2,11 +2,26 @@
  * @summary     SlidingChild
  * @description Plug-in to show/hide row child data
  * @version     1.0.0
- * @file        datatables-slidingchild.js
+ * @file        slidingchild.js
  * @author      datahandler (www.datahandler.uk)
  * @copyright   Copyright 2014 SpryMedia Ltd.
  * 
  * License      MIT - http://datatables.net/license/mit
+ */
+
+/**
+ * Example usage
+ * @example
+ * var table = $('#table_id').DataTable();
+ * slidingChild =
+ *     new $.fn.dataTable.SlidingChild(table, {
+ *         ajax: {
+ *             requestType: 'POST',
+ *             requestUrl: '/Home/GetChildData',
+ *             dataType: 'HTML',
+ *             requestDataCallback: myRequestDataCallback
+ *         }
+ *     });
  */
 (function ($) {
     var SlidingChild = function (dt, options) {
@@ -57,8 +72,8 @@
                     type: opts.ajax.requestType,
                     url: opts.ajax.requestUrl,
                     beforeSend: function(xhr, settings) {
-                        if (opts.ajax.requestData) {
-                            this.data = opts.ajax.requestData(dtRow);
+                        if (opts.ajax.requestDataCallback) {
+                            this.data = opts.ajax.requestDataCallback(dtRow);
                         }
                     },
                     contentType: opts.ajax.contentType,
@@ -99,7 +114,7 @@
         useRowData: false,
         ajax: {
             requestType: "GET",
-            requestData: null,
+            requestDataCallback: null,
             requestUrl: null,
             contentType: "application/json; charset=utf-8",
             dataType: "json"
