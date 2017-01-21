@@ -26,5 +26,22 @@
 	"oAria": {
 		"sSortAscending":  ": lajittele sarake nousevasti",
 		"sSortDescending": ": lajittele sarake laskevasti"
+	},
+	"select": {
+		"rows": {
+			"_": "Valittuna %d riviä",
+			"0": "Klikkaa riviä valitaksesi sen",
+			"1": "Valittuna vain yksi rivi"
+		}
+	},
+	"buttons": {
+		"copy": "Kopioi",
+		"copySuccess": {
+			"1": "Yksi rivi kopioitu leikepöydälle",
+			"_": "%d riviä kopioitu leikepöydälle"
+		},
+		"copyTitle": "Kopioi leikepöydälle",
+		"copyKeys": "Paina <i>ctrl</i> tai<i>\u2318</i> + <i>C</i> kopioidaksesi taulukon arvot<br>järjestelmäsi leikepöydälle. <br><br>Peruuttaaksesi paina tätä viestiä tai Esc."
 	}
+}
 }
