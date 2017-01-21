@@ -41,7 +41,7 @@
 			"_": "%d riviä kopioitu leikepöydälle"
 		},
 		"copyTitle": "Kopioi leikepöydälle",
-		"copyKeys": "Paina <i>ctrl</i> tai<i>\u2318</i> + <i>C</i> kopioidaksesi taulukon arvot<br>järjestelmäsi leikepöydälle. <br><br>Peruuttaaksesi paina tätä viestiä tai Esc."
+		"copyKeys": "Paina <i>ctrl</i> tai <i>\u2318</i> + <i>C</i> kopioidaksesi taulukon arvot<br>järjestelmäsi leikepöydälle. <br><br>Peruuttaaksesi paina tätä viestiä tai Esc."
 	}
 }
 }
