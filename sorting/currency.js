@@ -22,7 +22,9 @@
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 	"currency-pre": function ( a ) {
-		a = (a==="-") ? 0 : a.replace( /[^\d\-\.]/g, "" );
+	    var foo = a.replace( /[^\d\-\.]/g, "." );
+	    foo =  foo.replace( /[^\d\-\,]/g, "" );
+		a = (a==="-") ? 0 : foo;
 		return parseFloat( a );
 	},
 
