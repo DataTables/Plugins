@@ -6,7 +6,13 @@
  * This function should be used with the `dt-init columns.render` configuration
  * option of DataTables.
  *
- * It accepts six parameters:
+ * v1.1 Changelog
+ * - Added a seventh border type parameter.
+ * - All parameters are now optional.
+ * - Improved styling.
+ * - Bug fix: Text is always centered now.
+ *
+ * It accepts seven parameters:
  *
  * 1. `-type string` square as default or round for a rounded bar.
  * 2. `-type string` A hex color for the text.
@@ -14,6 +20,7 @@
  * 4. `-type string` A hex color for the bar.
  * 5. `-type string` A hex color for the background.
  * 6. `-type integer` A number used to round the value.
+ * 7. `-type string` A border style, default=ridge (solid, outset, groove, ridge)
  *
  *  DEMO : http://codepen.io/RedJokingInn/pen/jrkZQN
  *
@@ -25,33 +32,40 @@
  *  @returns {String} Html code for bar
  *
  *  @example
- *    // Display square bars with white text, medium blue border, light blue bar, dark blue background, rounded to integer.
+ *    // Display rounded bars with white text, medium blue border, light blue bar, dark blue background, rounded to one decimal.
  *    $('#example').DataTable( {
  *      columnDefs: [ {
  *        targets: 4,
- *        render: $.fn.dataTable.render.percentBar( 'square','#FFF', '#269ABC', '#31B0D5', '#286090', 0 )
+ *        render: $.fn.dataTable.render.percentBar( 'round','#FFF', '#269ABC', '#31B0D5', '#286090', 1, 'groove' )
  *      } ]
  *    } );
  *
  *  @example
- *    // Display round bars with yellow text, medium blue border, light blue bar, dark blue background, rounded to 1 decimal.
+ *    // All default values used. Square bars with black text, gray ridged border, light green bar, light gray background, rounded to integer.
  *    $('#example').DataTable( {
  *      columnDefs: [ {
  *        targets: 2,
- *        render: $.fn.dataTable.render.percentBar( 'round','#FF0', '#269ABC', '#31B0D5', '#286090', 1 )
+ *        render: $.fn.dataTable.render.percentBar()
  *      } ]
  *    } );
  */
 
-jQuery.fn.dataTable.render.percentBar = function(pShape, cText, cBorder, cBar, cBack, vRound) {
+jQuery.fn.dataTable.render.percentBar = function(pShape, cText, cBorder, cBar, cBack, vRound, bType) {
+  pShape = pShape || 'square';
+  cText = cText || '#000';
+  cBorder = cBorder || '#BCBCBC';
+  cBar = cBar || '#5FD868';
+  cBack = cBack || '#E6E6E6';
+  vRound = vRound || 0;
+  bType = bType || 'ridge';
   //Bar templates
   var styleRule1 = 'max-width:100px;height:12px;margin:0 auto;';
-  var styleRule2 = 'border:2px solid '+cBorder+';line-height:12px;font-size:14px;color:'+cText+';background:'+cBack+';';
+  var styleRule2 = 'border:2px '+bType+' '+cBorder+';line-height:12px;font-size:14px;color:'+cText+';background:'+cBack+';position:relative;';
   var styleRule3 = 'height:12px;line-height:12px;text-align:center;background-color:'+cBar+';padding:auto 6px;';
   //Square is default, make template round if pShape == round
   if(pShape=='round'){
-    styleRule2 += 'border-radius:7px;';
-    styleRule3 += 'border-top-left-radius:6px;border-bottom-left-radius:6px;';
+    styleRule2 += 'border-radius:5px;';
+    styleRule3 += 'border-top-left-radius:4px;border-bottom-left-radius:4px;';
   }
 
   return function(d, type, row) {
@@ -70,6 +84,6 @@ jQuery.fn.dataTable.render.percentBar = function(pShape, cText, cBorder, cBar, c
     }
     
     //Return the code for the bar
-    return '<div style="'+styleRule1+'"><div style="'+styleRule2+'"><div style="'+styleRule3+'width:'+s+ '%;">'+s+'%</div></div></div>';
+    return '<div style="'+styleRule1+'"><div style="'+styleRule2+'"><div style="'+styleRule3+'width:'+s+ '%;"></div><div style="width:100%;text-align:center;position:absolute;left:0;top:0;">'+s+'%</div></div></div>';
   };
 };
