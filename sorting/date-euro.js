@@ -1,5 +1,5 @@
 /**
- * This plug-in will provide date sorting for the "dd/mm/YYY hh:ii:ss" 
+ * This plug-in will provide date sorting for the "dd/mm/YYYY hh:ii:ss" 
  * formatting, which is common in France and other European countries. It can 
  * also be quickly adapted for other formatting as required. Furthermore, this 
  * date sorting plug-in allows for empty values in the column.
@@ -8,8 +8,8 @@
  * [datetime](//datatables.net/blog/2014-12-18) plug-in provides enhanced
  * functionality and flexibility.
  *
- *  @name Date (dd/mm/YYY hh:ii:ss) 
- *  @summary Sort date / time in the format `dd/mm/YYY hh:ii:ss`
+ *  @name Date (dd/mm/YYYY hh:ii:ss) 
+ *  @summary Sort date / time in the format `dd/mm/YYYY hh:ii:ss`
  *  @author [Ronan Guilloux](http://coolforest.net/)
  *  @deprecated
  *
@@ -29,7 +29,7 @@
             var frDatea = $.trim(a).split(' ');
             var frTimea = (undefined != frDatea[1]) ? frDatea[1].split(':') : [00,00,00];
             var frDatea2 = frDatea[0].split('/');
-            x = (frDatea2[2] + frDatea2[1] + frDatea2[0] + frTimea[0] + frTimea[1] + frTimea[2]) * 1;
+            x = (frDatea2[2] + frDatea2[1] + frDatea2[0] + frTimea[0] + frTimea[1] + ((undefined != frTimea[2]) ? frTimea[2] : 0)) * 1;
         }
         else {
             x = Infinity;
