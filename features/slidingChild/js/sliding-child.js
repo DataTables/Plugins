@@ -4,7 +4,7 @@
  * @version     1.0.0
  * @file        slidingchild.js
  * @author      datahandler (www.datahandler.uk)
- * @copyright   Copyright 2014 SpryMedia Ltd.
+ * @copyright   Copyright datahandler (www.datahandler.uk)
  * 
  * License      MIT - http://datatables.net/license/mit
  */
