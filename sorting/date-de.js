@@ -35,7 +35,7 @@
                             x = (deDatea2[2] + deDatea2[1] + deDatea2[0] + deTimea[0] + deTimea[1]) * 1;
                         }
 		} else {
-			x = Infinity; // = l'an 1000 ...
+			x = 0; // = l'an 1000 ...
 		}
 
 		if (jQuery.trim(b) !== '') {
@@ -48,7 +48,7 @@
                             y = (deDateb[2] + deDateb[1] + deDateb[0] + deTimeb[0] + deTimeb[1]) * 1;
                         }
 		} else {
-			y = Infinity;
+			y = 0;
 		}
 		var z = ((x < y) ? -1 : ((x > y) ? 1 : 0));
 		return z;
@@ -79,7 +79,7 @@
                             y = (deDateb[2] + deDateb[1] + deDateb[0] + deTimeb[0] + deTimeb[1]) * 1;
                         }
 		} else {
-			y = Infinity;
+			y = 0;
 		}
 		var z = ((x < y) ? 1 : ((x > y) ? -1 : 0));
 		return z;
@@ -98,7 +98,7 @@
 			var deDateb = jQuery.trim(b).split('.');
 			y = (deDateb[2] + deDateb[1] + deDateb[0]) * 1;
 		} else {
-			y = Infinity;
+			y = 0;
 		}
 		var z = ((x < y) ? -1 : ((x > y) ? 1 : 0));
 		return z;
@@ -110,7 +110,7 @@
 			var deDatea = jQuery.trim(a).split('.');
 			x = (deDatea[2] + deDatea[1] + deDatea[0]) * 1;
 		} else {
-			x = Infinity;
+			x = 0;
 		}
 
 		if (jQuery.trim(b) !== '') {
