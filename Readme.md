@@ -15,7 +15,5 @@ This repository holds the following plug-in types for DataTables (among others):
 * Internationalisation translations
 * Type detection
 * Pagination
-* Integration scripts
-  * Twitter Bootstrap
 
 Please refer to the DataTables [plug-in documentation](http://datatables.net/plug-ins) for details on how to use these plug-ins.
