@@ -1,6 +1,7 @@
 {
 	"name": "datatables.net-plugins",
 	"main": [],
+	"ignore": [],
 	"dependencies": {
 		"jquery": ">=1.7.0",
 		"datatables": ">=1.10.15"
