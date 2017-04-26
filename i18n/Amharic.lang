@@ -1,3 +1,10 @@
+/**
+ * Amharic translation
+ *  @name Amharic
+ *  @anchor Amharic
+ *  @author veduket
+ */
+
 {
     "sEmptyTable":     "ባዶ ሰንጠረዥ",
     "sInfo":           "ከጠቅላላው _TOTAL_ ዝርዝሮች ውስጥ ከ _START_ እስከ _END_ ያሉት ዝርዝር",
