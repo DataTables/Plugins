@@ -34,33 +34,6 @@
  *
  */
 
-"use strict;"
-
-/**
- * When filtering a table with accented characters (letters with diacritical marks)
- * it can be frustrating to have an input such as _Zurich_ not match _Zürich_ in 
- * the table (`u !== ü`). 
- *
- * This type based search plug-in replaces the built-in string formatter in
- * DataTables with a function that will replace a comprehensive range of letters 
- * with diacritical marks to their "normalized" a..Z latin equivalents. 
- *
- * This plug-in targets a wider scope of languages than the accent-neutralise plugin. 
- * Slavic, nordic, baltic and central-european languages is covered, as well as 
- * hungarian, turkish, greek and asian languages written in european latin.  
- *
- * For example is ＥÈÉÊỀẾỄỂẼĒḔḖĔĖËẺĚȄȆẸỆȨḜĘḘḚƐƎ searchable by the input 'E'.
- *
- *
- *  @name Diacritics-neutralise
- *  @summary Replace accented characters (diacritics) with latin equivalents
- *  @author David Konrad
- *  @email davidkonrad at googles email
- *
- *  Please report missing diacritics that need to be included.
- *
-**/
-
 'use strict';
 
 var diacriticsMap = [
