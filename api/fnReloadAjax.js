@@ -1,5 +1,5 @@
 /**
- * By default DataTables only uses the sAjaxSource variable at initialisation
+ * By default DataTables only uses the sAjaxSource variable at initialization
  * time, however it can be useful to re-read an Ajax source and have the table
  * update. Typically you would need to use the `fnClearTable()` and
  * `fnAddData()` functions, however this wraps it all up in a single function
