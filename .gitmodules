@@ -1,0 +1,3 @@
+[submodule "features/rowsGroup"]
+	path = features/rowsGroup
+	url = https://github.com/ashl1/datatables-rowsgroup
