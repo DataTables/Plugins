@@ -59,7 +59,7 @@
         function initSelectSearch() {
             if (opts.rowId !== null) {
                 $('tr#' + opts.rowId + ' th', dt.table().node()).each(function(i) {
-                    if (opts.cols.indexOf(i) !== -1) {
+                    if (opts.cols.length === 0 || opts.cols.indexOf(i) !== -1) {
                         var column = dt.column(i);
                         appendSelectTo($(this), column);
                     }
@@ -67,7 +67,7 @@
             }
             else {
                 dt.columns().every( function (i) {
-                    if (opts.cols.indexOf(i) !== -1) {
+                    if (opts.cols.length === 0 || opts.cols.indexOf(i) !== -1) {
                         var column = this;
                         appendSelectTo($(column.footer()).empty(), column);
                     }
@@ -96,7 +96,7 @@
         function initTextSearch() {
              if (opts.rowId !== null) {
                 $('tr#' + opts.rowId + ' th', dt.table().node()).each(function(i) {
-                    if (opts.cols.indexOf(i) !== -1) {
+                    if (opts.cols.length === 0 || opts.cols.indexOf(i) !== -1) {
                         var column = dt.column(i);                    
                         var header = $(column.header());
                         var headerText = header.text();
@@ -106,7 +106,7 @@
             }
             else {
                 dt.columns().every( function (i) {
-                    if (opts.cols.indexOf(i) !== -1) {
+                    if (opts.cols.length === 0 || opts.cols.indexOf(i) !== -1) {
                         var column = this;
                         var footer = $(column.footer());
                         var footerText = footer.text();
