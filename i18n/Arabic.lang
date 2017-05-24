@@ -14,6 +14,7 @@
 	"sInfoFiltered": "(منتقاة من مجموع _MAX_ مُدخل)",
 	"sInfoPostFix":  "",
 	"sSearch":       "ابحث:",
+	"sCopy":         "نسخ"و
 	"sUrl":          "",
 	"oPaginate": {
 		"sFirst":    "الأول",
