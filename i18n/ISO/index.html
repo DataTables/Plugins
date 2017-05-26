@@ -1,0 +1,55 @@
+
+<h2>Internationalisation with Country's ISOCODE</h2>
+
+<p>Once the languages files were named based on its language name, and I needed to be based on the country's ISOCODE, I copied all of them into this new ISO folder and replaced the names with its respectively country's ISOCODE. Hopefully, this may be usefull for more users.</p>
+
+<ul>
+	<li><a href="#how_to">How to use DataTables internalisation options with ISOCODE</a></li>
+</ul>
+
+
+<a name="how_to"></a>
+<h3>How to use DataTables internalisation options with Country's ISOCODE</h3>
+
+<p>To include internalisation options in DataTables, you just replace the filename you are requesting with the ISOCODE filename</p>
+
+<p>So, instead of using this:</p>
+
+<pre class="brush: html">&lt;script type="text/javascript" src="jquery.dataTables.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+	$(document).ready(function() {
+		$('#example').dataTable( {
+			"oLanguage": {
+				"sUrl": "Spanish.lang"
+			}
+		} );
+	} );
+&lt;/script&gt;
+</pre>
+
+<p>You could use this:</p>
+<pre class="brush: html">&lt;script type="text/javascript" src="jquery.dataTables.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+	$(document).ready(function() {
+		$('#example').dataTable( {
+			"oLanguage": {
+				"sUrl": "ISO/es.lang"
+			}
+		} );
+	} );
+&lt;/script&gt;
+</pre>
+
+<p>Or, if it is correctly set, you can get the filename based on &lt;html&gt; laguage property as the sample below:</p>
+<pre class="brush: html">&lt;script type="text/javascript" src="jquery.dataTables.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+	$(document).ready(function() {
+		var language = $('html').attr('lang');
+		$('#example').dataTable( {
+			"oLanguage": {
+				"sUrl": "ISO/"+language+".lang"
+			}
+		} );
+	} );
+&lt;/script&gt;
+</pre>
