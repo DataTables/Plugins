@@ -1,5 +1,6 @@
 {
 	"name": "datatables.net-plugins",
+	"license": "MIT",
 	"main": [],
 	"ignore": [],
 	"dependencies": {
