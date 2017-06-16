@@ -1,0 +1,142 @@
+/**
+ * @summary     ColumnSearch
+ * @description Feature to provide column searching by text input or select
+ * @version     1.0.0
+ * @file        columnsearch.js
+ * @author      datahandler (www.datahandler.uk)
+ * @copyright   Copyright datahandler (www.datahandler.uk)
+ * 
+ * License      MIT - http://datatables.net/license/mit
+ */
+
+/**
+ * Example usage 1
+ * @example
+ * zero configuration - displays a select in the footer of each column
+ * var table = $('#table_id').DataTable();
+ * $.fn.dataTable.ColumnSearch(table);
+ */
+/**
+ * Example usage 2
+ * @example
+ * select search targetting specific columns
+ * var table = $('#table_id').DataTable();
+ * $.fn.dataTable.ColumnSearch(table, {
+ *      selectAllText: 'Any',
+ *      cols: [0,3,5]
+ * }); 
+ */
+/**
+ * Example usage 3
+ * @example
+ * text search with headings as placeholder
+ * var table = $('#table_id').DataTable();
+ * $.fn.dataTable.ColumnSearch(table, {
+ *      searchElementType: 'text',
+ *      displayHeadingAsPlaceholder: true
+ * }); 
+ */
+/**
+ * Example usage 4
+ * @example
+ * text search targetting the header or 
+ * footer row specified by rowId, and
+ * targetting specific columns
+ * var table = $('#table_id').DataTable();
+ * $.fn.dataTable.ColumnSearch(table, {
+ *      searchElementType: 'Any',
+ *      rowId: 'rowSearch',
+ *      cols: [0,3,5]
+ * }); 
+ */
+(function ($) {
+    var ColumnSearch = function (dt, options) {
+        var opts = $.extend({}, ColumnSearch.defaults, options);
+
+        if (opts.searchElementType === 'select') initSelectSearch();
+        else initTextSearch();
+
+        function initSelectSearch() {
+            if (opts.rowId !== null) {
+                $('tr#' + opts.rowId + ' th', dt.table().node()).each(function(i) {
+                    if (opts.cols.length === 0 || opts.cols.indexOf(i) !== -1) {
+                        var column = dt.column(i);
+                        appendSelectTo($(this), column);
+                    }
+                });
+            }
+            else {
+                dt.columns().every( function (i) {
+                    if (opts.cols.length === 0 || opts.cols.indexOf(i) !== -1) {
+                        var column = this;
+                        appendSelectTo($(column.footer()).empty(), column);
+                    }
+                } );
+            }            
+        }
+
+        function appendSelectTo($elem, col) {
+            var select = $('<select class="col-filter"><option value="">' + opts.selectAllText + '</option></select>')
+                .appendTo( $elem )
+                .on( 'change', function () {
+                    var val = $.fn.dataTable.util.escapeRegex(
+                        $(this).val()
+                    );
+
+                    col
+                        .search( val ? '^'+val+'$' : '', true, false )
+                        .draw();
+                } );
+
+                col.data().unique().sort().each( function ( d, j ) {
+                    select.append( '<option value="'+d+'">'+d+'</option>' )
+            } );
+        }
+
+        function initTextSearch() {
+             if (opts.rowId !== null) {
+                $('tr#' + opts.rowId + ' th', dt.table().node()).each(function(i) {
+                    if (opts.cols.length === 0 || opts.cols.indexOf(i) !== -1) {
+                        var column = dt.column(i);                    
+                        var header = $(column.header());
+                        var headerText = header.text();
+                        appendTextInputTo($(this), column, opts.displayHeadingAsPlaceholder ? headerText : '');
+                    }
+                });
+            }
+            else {
+                dt.columns().every( function (i) {
+                    if (opts.cols.length === 0 || opts.cols.indexOf(i) !== -1) {
+                        var column = this;
+                        var footer = $(column.footer());
+                        var footerText = footer.text();
+                        appendTextInputTo(footer.empty(), column, opts.displayHeadingAsPlaceholder ? footerText : '');
+                    }
+                } );
+            }            
+        }
+
+        function appendTextInputTo($elem, col, placeholder) {
+            var textInput = $('<input type="text" placeholder="Search '+placeholder+'" />')
+            .appendTo( $elem )                
+            .on( 'keyup change', function () {
+                if ( col.search() !== this.value ) {
+                    col
+                        .search( this.value )
+                        .draw();
+                }
+            } );
+        }
+    };
+
+    ColumnSearch.defaults = {
+        searchElementType: 'select',
+        selectAllText: 'All',
+        displayHeadingAsPlaceholder: false,
+        rowId: null,
+        cols: []
+    };
+
+    $.fn.dataTable.ColumnSearch = ColumnSearch;
+    $.fn.DataTable.ColumnSearch = ColumnSearch;    
+}(jQuery));
