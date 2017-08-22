@@ -3,6 +3,7 @@
  *  @name German
  *  @anchor German
  *  @author Joerg Holz
+ *  @author DJmRek - Markus Bergt
  */
 
 {
@@ -26,5 +27,12 @@
 	"oAria": {
 		"sSortAscending":  ": aktivieren, um Spalte aufsteigend zu sortieren",
 		"sSortDescending": ": aktivieren, um Spalte absteigend zu sortieren"
+	},
+	select: {
+    		rows: {
+			_: '%d Zeilen ausgewählt',
+			0: 'Zum Auswählen auf eine Zeile klicken',
+			1: '1 Zeile ausgewählt'
+	    	}
 	}
 }
