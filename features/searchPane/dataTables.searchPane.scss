@@ -1,0 +1,105 @@
+
+div.dt-searchPane {
+	display:flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-content: flex-start;
+	align-items: stretch;
+	height: 100%;
+	margin: 1em 0;
+
+	div.pane {
+		position: relative;
+		flex: 1;
+
+		margin: 0 0.5%;
+		border: 1px solid #ccc;
+		
+		/*width: 15.5%;
+		margin: 0 0.583333333%;*/
+
+		button[type=button] {
+			display: none;
+		}
+
+		&.filtering {
+			button[type=button] {
+				display: block;
+				position: absolute;
+				right: 6px;
+				top: 6px;
+				border: 1px solid #999;
+				background: rgba(0,0,0,0.1);
+				border-radius: 3px;
+				cursor: pointer;
+
+				&:hover {
+					background: rgba(0,0,0,0.2);
+				}
+			}
+		}
+
+		div.title {
+			box-sizing: border-box;
+			height: 30px;
+			padding: 0.35em;
+			font-size: 1.1em;
+			background-color: rgba(0,0,0,0.075);
+			border-bottom: 1px solid #ddd;
+		}
+
+		div.scroller {
+			position: absolute;
+			top: 30px;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			overflow: auto;
+
+			ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+
+				li {
+					position: relative;
+					margin: 0;
+					padding: 0;
+					cursor: pointer;
+
+					&:nth-child(odd) {
+						background: rgba(0,0,0,0.03);
+					}
+
+					&.selected {
+						background: #3276b1;
+						color: white;
+					}
+
+					span.label {
+						display: inline-block;
+						box-sizing: border-box;
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						width: 85%;
+						vertical-align: middle;
+						padding: 0.2em 0.3em;
+					}
+
+					span.count {
+						display: inline-block;
+						width: 14%;
+						margin-right: 1%;
+						font-size: 0.8em;
+						color: white;
+						text-align: center;
+						background-color: #3276b1;
+						border-radius: 3px;
+					}
+				}
+			}
+		}
+	}
+}
