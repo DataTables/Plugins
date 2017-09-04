@@ -8,9 +8,10 @@
  *  @author [Yuksel Beyti](http://yukselbeyti.com)
  *
  *  @example
+ *    // Use plug-in for all columns
  *    $('#example').dataTable({
- *       'aoColumns' : [
- *                       {'sType' : 'turkish'}
+ *       columnDefs: [
+ *           { type: 'turkish'. targets: '_all' }
  *       ]
  *   });
  */
