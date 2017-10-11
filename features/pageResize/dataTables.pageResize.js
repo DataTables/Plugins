@@ -75,8 +75,12 @@ PageResize.prototype = {
 		// Subtract the height of the header, footer and the elements
 		// surrounding the table
 		if ( ! scrolling ) {
-			availableHeight -= settings.header.height();
-			availableHeight -= settings.footer.height();
+			if ( t.header() ) {
+			    availableHeight -= settings.header.height();
+			}
+			if ( t.footer() ) {
+			    availableHeight -= settings.footer.height();
+			}
 		}
 		availableHeight -= offsetTop;
 		availableHeight -= settings.container.height() - ( offsetTop + settings.table.height() );
