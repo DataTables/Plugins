@@ -71,7 +71,7 @@
 
 $.fn.dataTable.ext.order.intl = function ( locales, options ) {
 	if ( window.Intl ) {
-		var collator = new window.Intl.Collator( locales, options );
+		var collator = new Intl.Collator( locales, options );
 		var types = $.fn.dataTable.ext.type;
 
 		delete types.order['string-pre'];
