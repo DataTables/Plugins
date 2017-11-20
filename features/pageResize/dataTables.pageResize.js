@@ -37,7 +37,7 @@
 
 (function($){
 
-var PageResize = function ( dt )
+var PageResize = function ( dt, pageResizeManualDelta )
 {
 	var table = dt.table();
 
@@ -48,7 +48,8 @@ var PageResize = function ( dt )
 		footer:    $(table.footer()),
 		body:      $(table.body()),
 		container: $(table.container()),
-		table:     $(table.node())
+		table:     $(table.node()),
+		delta:     pageResizeManualDelta
 	};
 
 	var host = this.s.host;
@@ -71,15 +72,24 @@ PageResize.prototype = {
 		var rowHeight = $( 'tr', settings.body ).eq(0).height();
 		var availableHeight = settings.host.height();
 		var scrolling = t.header().parentNode !== t.body().parentNode;
+		var delta = settings.delta;
 
 		// Subtract the height of the header, footer and the elements
 		// surrounding the table
 		if ( ! scrolling ) {
-			availableHeight -= settings.header.height();
-			availableHeight -= settings.footer.height();
+			if ( t.header() ) {
+			    availableHeight -= settings.header.height();
+			}
+			if ( t.footer() ) {
+			    availableHeight -= settings.footer.height();
+			}
 		}
 		availableHeight -= offsetTop;
 		availableHeight -= settings.container.height() - ( offsetTop + settings.table.height() );
+
+		if ( !isNaN( parseFloat( delta ) ) && isFinite( delta ) ) {
+			availableHeight -= delta;
+		}
 
 		var drawRows = Math.floor( availableHeight / rowHeight );
 
@@ -145,7 +155,7 @@ $(document).on( 'init.dt', function ( e, settings ) {
 		 settings.oInit.pageResize ||
 		 $.fn.dataTable.defaults.pageResize )
 	{
-		new PageResize( api );
+		new PageResize( api, settings.oInit.pageResizeManualDelta );
 	}
 } );
 
