@@ -3,7 +3,6 @@
 // - Styling for container / header
 // - Styling for clear option
 // - State saving integration
-// - Fix regex characters - (CEO) for example
 
 (function(factory) {
 	if (typeof define === 'function' && define.amd) {
@@ -209,7 +208,7 @@
 					.column(pane.data('column'))
 					.search(
 						$.map(filters, function(filter) {
-							return $(filter).data('filter');
+							return $.fn.dataTable.util.escapeRegex( $(filter).data('filter') );
 						}).join('|'),
 						true,
 						false
