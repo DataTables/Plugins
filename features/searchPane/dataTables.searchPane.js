@@ -2,7 +2,7 @@
 // - Styling for selected
 // - Styling for container / header
 // - Styling for clear option
-// - State saving integration
+// - Rebuild API method
 
 (function(factory) {
 	if (typeof define === 'function' && define.amd) {
@@ -72,8 +72,6 @@
 				container( this.s.dt ) :
 				container;
 			
-				console.log( host );
-			
 			if ( this.c.insert === 'prepend' ) {
 				$(this.dom.container).prependTo( host );
 			}
@@ -130,10 +128,9 @@
 			// On initialisation, do we need to set a filtering value from a
 			// saved state or init option?
 			var search = column.search();
-			search =
-				search.length && search[0]
-					? search[0].substr(1, search[0].length - 2).split('|')
-					: [];
+			search = search
+				? search.substr(1, search.length - 2).split('|')
+				: [];
 
 			var data = column
 				.data()
@@ -154,8 +151,12 @@
 								.html(bins[data[i]])
 						);
 
-					if ($.inArray(data[i], search) !== -1) {
-						li.addClass(itemClasses.selected);
+					if ( search.length ) {
+						var escaped = $.fn.dataTable.util.escapeRegex( data[i] );
+
+						if ($.inArray(escaped, search) !== -1) {
+							li.addClass(itemClasses.selected);
+						}
 					}
 
 					list.append(li);
@@ -207,9 +208,9 @@
 				table
 					.column(pane.data('column'))
 					.search(
-						$.map(filters, function(filter) {
+						'^'+$.map(filters, function(filter) {
 							return $.fn.dataTable.util.escapeRegex( $(filter).data('filter') );
-						}).join('|'),
+						}).join('|')+'$',
 						true,
 						false
 					)
