@@ -1,8 +1,23 @@
-// TODO
-// - Styling for selected
-// - Styling for container / header
-// - Styling for clear option
+/*! SearchPane 0.0.1
+ * 2017 SpryMedia Ltd - datatables.net/license
+ */
 
+/**
+ * @summary     SearchPane
+ * @description Search Panes for DataTables columns
+ * @version     0.0.1
+ * @author      SpryMedia Ltd (www.sprymedia.co.uk)
+ * @copyright   Copyright 2017 SpryMedia Ltd.
+ *
+ * This source file is free software, available under the following license:
+ *   MIT license - http://datatables.net/license/mit
+ *
+ * This source file is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ * or FITNESS FOR A PARTICULAR PURPOSE. See the license files for details.
+ *
+ * For details please refer to: http://www.datatables.net
+ */
 (function(factory) {
 	if (typeof define === 'function' && define.amd) {
 		// AMD
@@ -40,7 +55,7 @@
 			container: $('<div/>').addClass(this.classes.container)
 		};
 
-		this.c = $.extend( true, {}, SearchPanes.defaults, opts );
+		this.c = $.extend(true, {}, SearchPanes.defaults, opts);
 
 		this.s = {
 			dt: table
@@ -67,7 +82,7 @@
 	}
 
 	$.extend(SearchPanes.prototype, {
-		rebuild: function () {
+		rebuild: function() {
 			var that = this;
 
 			this.s.dt
@@ -78,17 +93,15 @@
 				});
 		},
 
-		_attach: function () {
+		_attach: function() {
 			var container = this.c.container;
-			var host = typeof container === 'function' ?
-				container( this.s.dt ) :
-				container;
-			
-			if ( this.c.insert === 'prepend' ) {
-				$(this.dom.container).prependTo( host );
-			}
-			else {
-				$(this.dom.container).appendTo( host );
+			var host =
+				typeof container === 'function' ? container(this.s.dt) : container;
+
+			if (this.c.insert === 'prepend') {
+				$(this.dom.container).prependTo(host);
+			} else {
+				$(this.dom.container).appendTo(host);
 			}
 		},
 
@@ -133,16 +146,14 @@
 			var bins = this._binData(column.data().flatten());
 
 			// Don't show the pane if there isn't enough variance in the data
-			if ( this._variance(bins) < this.c.threshold ) {
+			if (this._variance(bins) < this.c.threshold) {
 				return;
 			}
 
 			// On initialisation, do we need to set a filtering value from a
 			// saved state or init option?
 			var search = column.search();
-			search = search
-				? search.substr(1, search.length - 2).split('|')
-				: [];
+			search = search ? search.substr(1, search.length - 2).split('|') : [];
 
 			var data = column
 				.data()
@@ -163,10 +174,10 @@
 								.html(bins[data[i]])
 						);
 
-					if ( search.length ) {
-						var escaped = data[i].replace ?
-							$.fn.dataTable.util.escapeRegex( data[i] ) :
-							data[i];
+					if (search.length) {
+						var escaped = data[i].replace
+							? $.fn.dataTable.util.escapeRegex(data[i])
+							: data[i];
 
 						if ($.inArray(escaped, search) !== -1) {
 							li.addClass(itemClasses.selected);
@@ -198,19 +209,16 @@
 				);
 
 			var container = this.dom.container;
-			var replace = container.children().map( function () {
-				if ( $(this).data('column') == idx ) {
+			var replace = container.children().map(function() {
+				if ($(this).data('column') == idx) {
 					return this;
 				}
-			} );
+			});
 
-			console.log( replace );
-
-			if ( replace.length ) {
-				replace.replaceWith( pane );
-			}
-			else {
-				$(container).append( pane );
+			if (replace.length) {
+				replace.replaceWith(pane);
+			} else {
+				$(container).append(pane);
 			}
 		},
 
@@ -236,36 +244,40 @@
 				table
 					.column(pane.data('column'))
 					.search(
-						'^'+$.map(filters, function(filter) {
-							var d = $(filter).data('filter').toString();
-							return $.fn.dataTable.util.escapeRegex( d );
-						}).join('|')+'$',
+						'^' +
+							$.map(filters, function(filter) {
+								var d = $(filter)
+									.data('filter')
+									.toString();
+								return $.fn.dataTable.util.escapeRegex(d);
+							}).join('|') +
+							'$',
 						true,
 						false
 					)
 					.draw();
 			}
 		},
-		
-		_variance: function ( d ) {
-			var data = $.map( d, function (val, key) {
+
+		_variance: function(d) {
+			var data = $.map(d, function(val, key) {
 				return val;
-			} );
+			});
 
 			var count = data.length;
 			var sum = 0;
-			for ( var i=0, ien=count ; i<ien ; i++ ) {
+			for (var i = 0, ien = count; i < ien; i++) {
 				sum += data[i];
 			}
-			
+
 			var mean = sum / count;
 			var varSum = 0;
-			for ( var i=0, ien=count ; i<ien ; i++ ) {
-				varSum += Math.pow( mean - data[i], 2 );
+			for (var i = 0, ien = count; i < ien; i++) {
+				varSum += Math.pow(mean - data[i], 2);
 			}
 
-			return varSum / (count-1);
-		},
+			return varSum / (count - 1);
+		}
 	});
 
 	SearchPanes.classes = {
@@ -285,7 +297,7 @@
 	};
 
 	SearchPanes.defaults = {
-		container: function ( dt ) {
+		container: function(dt) {
 			return dt.table().container();
 		},
 		columns: undefined,
@@ -293,22 +305,18 @@
 		threshold: 0.5
 	};
 
-
-	SearchPanes.version = "0.0.1";
-
+	SearchPanes.version = '0.0.1';
 
 	$.fn.dataTable.SearchPanes = SearchPanes;
 	$.fn.DataTable.SearchPanes = SearchPanes;
 
-
-	DataTable.Api.register( 'searchPanes.rebuild()', function () {
-		return this.iterator( 'table', function (ctx) {
-			if ( ctx.searchPane ) {
+	DataTable.Api.register('searchPanes.rebuild()', function() {
+		return this.iterator('table', function(ctx) {
+			if (ctx.searchPane) {
 				ctx.searchPane.rebuild();
 			}
-		} );
-	} );
-
+		});
+	});
 
 	$(document).on('init.dt', function(e, settings, json) {
 		if (e.namespace !== 'dt') {

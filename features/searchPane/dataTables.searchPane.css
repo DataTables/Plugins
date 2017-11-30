@@ -12,8 +12,7 @@ div.dt-searchPanes div.pane {
   flex: 1;
   margin: 1em 0.5%;
   border: 1px solid #ccc;
-  /*width: 15.5%;
-  margin: 0 0.583333333%;*/
+  border-radius: 3px;
 }
 div.dt-searchPanes div.pane button[type=button] {
   display: none;
@@ -25,7 +24,7 @@ div.dt-searchPanes div.pane.filtering button[type=button] {
   top: 6px;
   border: 1px solid #999;
   background: rgba(0, 0, 0, 0.1);
-  border-radius: 3px;
+  border-radius: 16px;
   cursor: pointer;
 }
 div.dt-searchPanes div.pane.filtering button[type=button]:hover {
@@ -33,15 +32,15 @@ div.dt-searchPanes div.pane.filtering button[type=button]:hover {
 }
 div.dt-searchPanes div.pane div.title {
   box-sizing: border-box;
-  height: 30px;
-  padding: 0.35em;
+  height: 36px;
+  padding: 9px 0.35em;
   font-size: 1.1em;
-  background-color: rgba(0, 0, 0, 0.075);
-  border-bottom: 1px solid #ddd;
+  background-color: #e8e9eb;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 div.dt-searchPanes div.pane div.scroller {
   position: absolute;
-  top: 30px;
+  top: 36px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -80,8 +79,7 @@ div.dt-searchPanes div.pane div.scroller ul li span.count {
   width: 14%;
   margin-right: 1%;
   font-size: 0.8em;
-  color: white;
   text-align: center;
-  background-color: #3276b1;
+  background-color: rgba(50, 118, 177, 0.5);
   border-radius: 3px;
 }
