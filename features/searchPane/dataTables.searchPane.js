@@ -1,5 +1,4 @@
 // TODO
-// - Threshold option - require that there is duplicate information in a column before it is used
 // - Styling for selected
 // - Styling for container / header
 // - Styling for clear option
@@ -124,6 +123,11 @@
 			var list = $('<ul/>');
 			var bins = this._binData(column.data().flatten());
 
+			// Don't show the pane if there isn't enough variance in the data
+			if ( this._variance(bins) < this.c.threshold ) {
+				return;
+			}
+
 			// On initialisation, do we need to set a filtering value from a
 			// saved state or init option?
 			var search = column.search();
@@ -212,7 +216,27 @@
 					)
 					.draw();
 			}
-		}
+		},
+		
+		_variance: function ( d ) {
+			var data = $.map( d, function (val, key) {
+				return val;
+			} );
+
+			var count = data.length;
+			var sum = 0;
+			for ( var i=0, ien=count ; i<ien ; i++ ) {
+				sum += data[i];
+			}
+			
+			var mean = sum / count;
+			var varSum = 0;
+			for ( var i=0, ien=count ; i<ien ; i++ ) {
+				varSum += Math.pow( mean - data[i], 2 );
+			}
+
+			return varSum / (count-1);
+		},
 	});
 
 	SearchPanes.classes = {
@@ -236,7 +260,8 @@
 			return dt.table().container();
 		},
 		columns: null,
-		insert: 'prepend'
+		insert: 'prepend',
+		threshold: 0.5
 	};
 
 	$(document).on('init.dt', function(e, settings, json) {
