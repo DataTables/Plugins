@@ -6,8 +6,7 @@ div.dt-searchPanes {
 	justify-content: space-around;
 	align-content: flex-start;
 	align-items: stretch;
-	height: 100%;
-	margin: 1em 0;
+	height: 200px;
 
 	div.pane {
 		position: relative;
@@ -15,9 +14,6 @@ div.dt-searchPanes {
 
 		margin: 1em 0.5%;
 		border: 1px solid #ccc;
-		
-		/*width: 15.5%;
-		margin: 0 0.583333333%;*/
 
 		button[type=button] {
 			display: none;

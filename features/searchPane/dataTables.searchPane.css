@@ -5,8 +5,7 @@ div.dt-searchPanes {
   justify-content: space-around;
   align-content: flex-start;
   align-items: stretch;
-  height: 100%;
-  margin: 1em 0;
+  height: 200px;
 }
 div.dt-searchPanes div.pane {
   position: relative;

@@ -1,6 +1,4 @@
 // TODO
-// - Option to have vertical layout class
-// - Number of horizontal panels class options
 // - Threshold option - require that there is duplicate information in a column before it is used
 // - Styling for selected
 // - Styling for container / header
@@ -42,10 +40,10 @@
 		this.classes = $.extend(true, {}, SearchPanes.classes);
 
 		this.dom = {
-			container: $('<div/>')
-				.addClass(this.classes.container)
-				.appendTo(opts.container)
+			container: $('<div/>').addClass(this.classes.container)
 		};
+
+		this.c = $.extend( true, {}, SearchPanes.defaults, opts );
 
 		this.s = {
 			dt: table
@@ -65,9 +63,27 @@
 			.on('click', 'button.' + this.classes.clear, function() {
 				that._clear($(this).closest('div.' + that.classes.pane.container));
 			});
+
+		this._attach();
 	}
 
 	$.extend(SearchPanes.prototype, {
+		_attach: function () {
+			var container = this.c.container;
+			var host = typeof container === 'function' ?
+				container( this.s.dt ) :
+				container;
+			
+				console.log( host );
+			
+			if ( this.c.insert === 'prepend' ) {
+				$(this.dom.container).prependTo( host );
+			}
+			else {
+				$(this.dom.container).appendTo( host );
+			}
+		},
+
 		_binData: function(data) {
 			var out = {};
 
@@ -213,6 +229,14 @@
 			label: 'label',
 			count: 'count'
 		}
+	};
+
+	SearchPanes.defaults = {
+		container: function ( dt ) {
+			return dt.table().container();
+		},
+		columns: null,
+		insert: 'prepend'
 	};
 
 	$(document).on('init.dt', function(e, settings, json) {

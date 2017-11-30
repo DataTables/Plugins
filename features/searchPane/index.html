@@ -24,7 +24,6 @@ body {
 			$(document).ready( function () {
 				$('#example').DataTable( {
 					searchPane: {
-						container: '#grouping',
 						columns: ':not(:last-child)'
 					}
 				} );
@@ -34,8 +33,6 @@ body {
 	<body>
 		<div class="container">
 			<p style="text-align:center">Space for banner etc</p>
-
-			<div id="grouping" style="height: 200px;"> </div>
 
 			<table id="example" class="display nowrap" cellspacing="0" width="100%">
 				<thead>
