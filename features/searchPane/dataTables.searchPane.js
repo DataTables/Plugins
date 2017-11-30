@@ -2,7 +2,6 @@
 // - Styling for selected
 // - Styling for container / header
 // - Styling for clear option
-// - Rebuild API method
 
 (function(factory) {
 	if (typeof define === 'function' && define.amd) {
@@ -47,8 +46,10 @@
 			dt: table
 		};
 
+		table.settings()[0].searchPane = this;
+
 		table
-			.columns(opts.columns)
+			.columns(this.c.columns)
 			.eq(0)
 			.each(function(idx) {
 				that._pane(idx);
@@ -66,6 +67,17 @@
 	}
 
 	$.extend(SearchPanes.prototype, {
+		rebuild: function () {
+			var that = this;
+
+			this.s.dt
+				.columns(this.c.columns)
+				.eq(0)
+				.each(function(idx) {
+					that._pane(idx);
+				});
+		},
+
 		_attach: function () {
 			var container = this.c.container;
 			var host = typeof container === 'function' ?
@@ -152,7 +164,9 @@
 						);
 
 					if ( search.length ) {
-						var escaped = $.fn.dataTable.util.escapeRegex( data[i] );
+						var escaped = data[i].replace ?
+							$.fn.dataTable.util.escapeRegex( data[i] ) :
+							data[i];
 
 						if ($.inArray(escaped, search) !== -1) {
 							li.addClass(itemClasses.selected);
@@ -163,27 +177,41 @@
 				}
 			}
 
-			$(this.dom.container).append(
-				$('<div/>')
-					.data('column', idx)
-					.addClass(paneClasses.container)
-					.addClass(search.length ? paneClasses.active : '')
-					.append(
-						$('<button type="button">&times;</button>').addClass(
-							this.classes.clear
-						)
+			var pane = $('<div/>')
+				.data('column', idx)
+				.addClass(paneClasses.container)
+				.addClass(search.length ? paneClasses.active : '')
+				.append(
+					$('<button type="button">&times;</button>').addClass(
+						this.classes.clear
 					)
-					.append(
-						$('<div/>')
-							.addClass(paneClasses.title)
-							.html($(column.header()).text())
-					)
-					.append(
-						$('<div/>')
-							.addClass(paneClasses.scroller)
-							.append(list)
-					)
-			);
+				)
+				.append(
+					$('<div/>')
+						.addClass(paneClasses.title)
+						.html($(column.header()).text())
+				)
+				.append(
+					$('<div/>')
+						.addClass(paneClasses.scroller)
+						.append(list)
+				);
+
+			var container = this.dom.container;
+			var replace = container.children().map( function () {
+				if ( $(this).data('column') == idx ) {
+					return this;
+				}
+			} );
+
+			console.log( replace );
+
+			if ( replace.length ) {
+				replace.replaceWith( pane );
+			}
+			else {
+				$(container).append( pane );
+			}
 		},
 
 		_toggle: function(li) {
@@ -209,7 +237,8 @@
 					.column(pane.data('column'))
 					.search(
 						'^'+$.map(filters, function(filter) {
-							return $.fn.dataTable.util.escapeRegex( $(filter).data('filter') );
+							var d = $(filter).data('filter').toString();
+							return $.fn.dataTable.util.escapeRegex( d );
 						}).join('|')+'$',
 						true,
 						false
@@ -259,10 +288,27 @@
 		container: function ( dt ) {
 			return dt.table().container();
 		},
-		columns: null,
+		columns: undefined,
 		insert: 'prepend',
 		threshold: 0.5
 	};
+
+
+	SearchPanes.version = "0.0.1";
+
+
+	$.fn.dataTable.SearchPanes = SearchPanes;
+	$.fn.DataTable.SearchPanes = SearchPanes;
+
+
+	DataTable.Api.register( 'searchPanes.rebuild()', function () {
+		return this.iterator( 'table', function (ctx) {
+			if ( ctx.searchPane ) {
+				ctx.searchPane.rebuild();
+			}
+		} );
+	} );
+
 
 	$(document).on('init.dt', function(e, settings, json) {
 		if (e.namespace !== 'dt') {
