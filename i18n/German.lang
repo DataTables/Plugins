@@ -4,20 +4,21 @@
  *  @anchor German
  *  @author Joerg Holz
  *  @author DJmRek - Markus Bergt
+ *  @author OSWorX https://osworx.net
  */
 
 {
 	"sEmptyTable":   	"Keine Daten in der Tabelle vorhanden",
 	"sInfo":         	"_START_ bis _END_ von _TOTAL_ Einträgen",
-	"sInfoEmpty":    	"0 bis 0 von 0 Einträgen",
+	"sInfoEmpty":    	"Keine Daten vorhanden",
 	"sInfoFiltered": 	"(gefiltert von _MAX_ Einträgen)",
 	"sInfoPostFix":  	"",
 	"sInfoThousands":  	".",
 	"sLengthMenu":   	"_MENU_ Einträge anzeigen",
-	"sLoadingRecords": 	"Wird geladen...",
-	"sProcessing":   	"Bitte warten...",
+	"sLoadingRecords": 	"Wird geladen ..",
+	"sProcessing":   	"Bitte warten ..",
 	"sSearch":       	"Suchen",
-	"sZeroRecords":  	"Keine Einträge vorhanden.",
+	"sZeroRecords":  	"Keine Einträge vorhanden",
 	"oPaginate": {
 		"sFirst":    	"Erste",
 		"sPrevious": 	"Zurück",
@@ -34,5 +35,16 @@
 			"0": "Zum Auswählen auf eine Zeile klicken",
 			"1": "1 Zeile ausgewählt"
 	    	}
+	},
+	"buttons": {
+		"print":	"Drucken",
+		"colvis":	"Spalten",
+		"copy":		"Kopieren",
+		"copyTitle":	"In Zwischenablage kopieren",
+		"copyKeys":	"Taste <i>ctrl</i> oder <i>\u2318</i> + <i>C</i> um Tabelle<br>in Zwischenspeicher zu kopieren.<br><br>Um abzubrechen die Nachricht anklicken oder Escape drücken.",
+		"copySuccess": {
+			"_": "%d Spalten kopiert",
+			"1": "1 Spalte kopiert"
+		}
 	}
 }
