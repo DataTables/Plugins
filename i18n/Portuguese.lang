@@ -6,6 +6,7 @@
  */
 
 {
+	"sEmptyTable":   "Nenhum registro encontrado",
 	"sProcessing":   "A processar...",
 	"sLengthMenu":   "Mostrar _MENU_ registos",
 	"sZeroRecords":  "Não foram encontrados resultados",
@@ -20,5 +21,9 @@
 	    "sPrevious": "Anterior",
 	    "sNext":     "Seguinte",
 	    "sLast":     "Último"
+	},
+	"oAria": {
+	    "sSortAscending":  ": Ordenar colunas de forma ascendente",
+	    "sSortDescending": ": Ordenar colunas de forma descendente"
 	}
 }
