@@ -63,19 +63,21 @@
 'use strict';
 
 
-var PageResize = function ( dt, pageResizeManualDelta )
+var PageResize = function ( dt, pageResizeManualDelta, pageResizeDrawPagingParameter, pageResizePreDrawCallback )
 {
 	var table = dt.table();
 
 	this.s = {
-		dt:        dt,
-		host:      $(table.container()).parent(),
-		header:    $(table.header()),
-		footer:    $(table.footer()),
-		body:      $(table.body()),
-		container: $(table.container()),
-		table:     $(table.node()),
-		delta:     pageResizeManualDelta
+		dt:                     dt,
+		host:                   $(table.container()).parent(),
+		header:                 $(table.header()),
+		footer:                 $(table.footer()),
+		body:                   $(table.body()),
+		container:              $(table.container()),
+		table:                  $(table.node()),
+        delta:                  pageResizeManualDelta,
+        drawPagingParameter:    pageResizeDrawPagingParameter,
+        preDrawCallback:        pageResizePreDrawCallback
 	};
 
 	var host = this.s.host;
@@ -99,7 +101,9 @@ PageResize.prototype = {
 		var rowHeight = rows.eq( rows.length > 1 ? 1 : 0 ).height(); // Attempt to use the second row if poss, for top and bottom border
 		var availableHeight = settings.host.height();
 		var scrolling = t.header().parentNode !== t.body().parentNode;
-		var delta = settings.delta;
+        var delta = settings.delta;
+        var pagingObject = { paging: settings.drawPagingParameter };
+        var preDrawCallback = settings.preDrawCallback;
 
 		// Subtract the height of the header, footer and the elements
 		// surrounding the table
@@ -122,9 +126,10 @@ PageResize.prototype = {
 
 		if ( drawRows !== Infinity && drawRows !== -Infinity && 
 			 ! isNaN( drawRows )   && drawRows > 0 &&
-			 drawRows !== dt.page.len()
+             drawRows !== dt.page.len() &&
+             ( !preDrawCallback || preDrawCallback( drawRows, dt.page.len(), pagingObject ) !== false )
 		) {
-			dt.page.len( drawRows ).draw();
+            dt.page.len( drawRows ).draw( pagingObject.paging );
 		}
 	},
 
@@ -182,7 +187,7 @@ $(document).on( 'init.dt', function ( e, settings ) {
 		 settings.oInit.pageResize ||
 		 $.fn.dataTable.defaults.pageResize )
 	{
-		new PageResize( api, settings.oInit.pageResizeManualDelta );
+		new PageResize( api, settings.oInit.pageResizeManualDelta, settings.oInit.pageResizeDrawPagingParameter, settings.oInit.pageResizePreDrawCallback );
 	}
 } );
 
