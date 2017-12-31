@@ -2,7 +2,7 @@
  * Bulgarian translation
  *  @name Bulgarian
  *  @anchor Bulgarian
- *  @author Rostislav Stoyanov
+ *  @author Rostislav Stoyanov, Oliwier Thomas
  */
 
 {
@@ -13,7 +13,7 @@
 	"sInfoEmpty":    "Показване на резултати от 0 до 0 от общо 0",
 	"sInfoFiltered": "(филтрирани от общо _MAX_ резултата)",
 	"sInfoPostFix":  "",
-	"sSearch":       "Търсене във всички колони:",
+	"sSearch":       "Търсене:",
 	"sUrl":          "",
 	"oPaginate": {
 		"sFirst":    "Първа",
