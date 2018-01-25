@@ -1,11 +1,15 @@
 /**
 * Created by Shodhan Save on Jan 23, 2018.
+* Updated @ Jan 25, 2018
 */
 
 /**
 * This plug-in allows sorting of human readable time delta, viz.,
 * "1 week", "2 weeks 3 days", "4 weeks 5 days 6hours", etc.
-* Curently this plugin supports time range from seconds to weeks
+*
+* Curently this plugin supports time range from microseconds to decades.
+*
+* The plugin also takes care of singular and plural values lik week(s)
 *
 *  @name Natural Time Delta
 *  @summary Sort human readable time delta
