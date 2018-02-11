@@ -125,7 +125,7 @@ $.fn.dataTable.render.intlDateTime = function ( locale, options ) {
 			if ( typeof data === 'string' ) {
 				date = Date.parse( data );
 			}
-			else if ( d instanceof Date ) {
+			else if ( data instanceof Date ) {
 				date = data;
 			}
 
