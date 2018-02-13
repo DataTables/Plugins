@@ -1,6 +1,6 @@
 /**
 * Created by Shodhan Save on Jan 23, 2018.
-* Updated @ Jan 25, 2018
+* Last updated @ Feb 13, 2018
 */
 
 /**
@@ -37,20 +37,20 @@ jQuery.extend(jQuery.fn.dataTableExt.oSort,{
         matches.reverse();
 
         var time_elements = [
-            {"splitter" : "us",  "name" : "microsecond",  "mul" : 1 / 1000 / 1000},
-            {"splitter" : "ms",  "name" : "millisecond",  "mul" : 1 / 1000},
-            {"splitter" : "s",  "name" : "second",  "mul" : 1},
-            {"splitter" : "m",  "name" : "minute",  "mul" : 1 * 60},
-            {"splitter" : "h",  "name" : "hour",    "mul" : 1 * 60 * 60},
-            {"splitter" : "d",  "name" : "day",     "mul" : 1 * 60 * 60 * 24},
-            {"splitter" : "w",  "name" : "week",    "mul" : 1 * 60 * 60 * 24 * 7},
-            {"splitter" : "w",  "name" : "month",    "mul" : 1 * 60 * 60 * 24 * 7 * 30},
-            {"splitter" : "w",  "name" : "year",    "mul" : 1 * 60 * 60 * 24 * 7 * 30 * 12},
-            {"splitter" : "w",  "name" : "decade",    "mul" : 1 * 60 * 60 * 24 * 7 * 30 * 12 * 10},
+            {"name" : "microsecond",    "mul" : 1 / 1000 / 1000},
+            {"name" : "millisecond",    "mul" : 1 / 1000},
+            {"name" : "second",         "mul" : 1},
+            {"name" : "minute",         "mul" : 1 * 60},
+            {"name" : "hour",           "mul" : 1 * 60 * 60},
+            {"name" : "day",            "mul" : 1 * 60 * 60 * 24},
+            {"name" : "week",           "mul" : 1 * 60 * 60 * 24 * 7},
+            {"name" : "month",          "mul" : 1 * 60 * 60 * 24 * 7 * 30},
+            {"name" : "year",           "mul" : 1 * 60 * 60 * 24 * 7 * 30 * 12},
+            {"name" : "decade",         "mul" : 1 * 60 * 60 * 24 * 7 * 30 * 12 * 10},
         ];
 
         time_elements.forEach(function(el, i){
-            var val = format_time_element(matches[i], el["splitter"], el["mul"]);
+            var val = format_time_element(matches[i], el.name, el.mul);
             result += val;
         });
 
