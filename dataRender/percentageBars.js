@@ -71,7 +71,7 @@ jQuery.fn.dataTable.render.percentBar = function(pShape, cText, cBorder, cBar, c
   return function(d, type, row) {
     //Remove % if found in the value
     //Round to the given parameter vRound
-    s = parseFloat(d.replace(/\s%|%/g,'')).toFixed(vRound);
+    s = parseFloat(d.toString().replace(/\s%|%/g,'')).toFixed(vRound);
     //Not allowed to go over 100%
     if(s>100){s=100}
     
