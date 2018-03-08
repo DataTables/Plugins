@@ -18,6 +18,7 @@
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 	"ip-address-pre": function ( a ) {
+		if (!a) { return 0 }
 		var i, item;
 		var m = a.split("."),
 			n = a.split(":"),
