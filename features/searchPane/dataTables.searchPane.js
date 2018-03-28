@@ -244,14 +244,14 @@
 				table
 					.column(pane.data('column'))
 					.search(
-						'^' +
+						'^(' +
 							$.map(filters, function(filter) {
 								var d = $(filter)
 									.data('filter')
 									.toString();
 								return $.fn.dataTable.util.escapeRegex(d);
 							}).join('|') +
-							'$',
+							')$',
 						true,
 						false
 					)
