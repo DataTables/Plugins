@@ -16,6 +16,7 @@ js_compress $DT_SRC/extensions/Plugins/features/searchHighlight/dataTables.searc
 js_compress $DT_SRC/extensions/Plugins/features/alphabetSearch/dataTables.alphabetSearch.js
 js_compress $DT_SRC/extensions/Plugins/features/lengthLinks/dataTables.lengthLinks.js
 js_compress $DT_SRC/extensions/Plugins/features/pageResize/dataTables.pageResize.js
+js_compress $DT_SRC/extensions/Plugins/features/scrollResize/dataTables.scrollResize.js
 js_compress $DT_SRC/extensions/Plugins/features/deepLink/dataTables.deepLink.js
 
 js_compress $DT_SRC/extensions/Plugins/integration/bootstrap/2/dataTables.bootstrap.js
