@@ -84,7 +84,7 @@
 		});
 
 		table.on('draw', function() {
-			$('.searchFadeInput').trigger('redraw');
+			$('input', searchFade).trigger('redraw');
 		});
 
 		// API method to get the searchFade container node
