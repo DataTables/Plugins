@@ -69,7 +69,8 @@ PageResize.prototype = {
 		var dt = settings.dt;
 		var t = dt.table();
 		var offsetTop = $( settings.table ).offset().top;
-		var rowHeight = $( 'tr', settings.body ).eq(0).height();
+		var rows = $( 'tr', settings.body );
+		var rowHeight = rows.eq( rows.length > 1 ? 1 : 0 ).height(); // Attempt to use the second row if poss, for top and bottom border
 		var availableHeight = settings.host.height();
 		var scrolling = t.header().parentNode !== t.body().parentNode;
 		var delta = settings.delta;
