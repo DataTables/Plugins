@@ -25,5 +25,12 @@
 	"oAria": {
 		"sSortAscending":  ": activer pour trier la colonne par ordre croissant",
 		"sSortDescending": ": activer pour trier la colonne par ordre d&eacute;croissant"
+	},
+	"select": {
+        	"rows": {
+         		_: "%d lignes séléctionnées",
+         		0: "Aucune ligne séléctionnée",
+        		1: "1 ligne séléctionnée"
+        	}  
 	}
 }
