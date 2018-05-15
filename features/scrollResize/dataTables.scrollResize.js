@@ -30,8 +30,34 @@
  * * Creating a new instance: `new $.fn.dataTable.ScrollResize( table );` where
  *   `table` is a DataTable's API instance.
  */
+(function( factory ){
+	if ( typeof define === 'function' && define.amd ) {
+		// AMD
+		define( ['jquery', 'datatables.net'], function ( $ ) {
+			return factory( $, window, document );
+		} );
+	}
+	else if ( typeof exports === 'object' ) {
+		// CommonJS
+		module.exports = function (root, $) {
+			if ( ! root ) {
+				root = window;
+			}
 
-(function($){
+			if ( ! $ || ! $.fn.dataTable ) {
+				$ = require('datatables.net')(root, $).$;
+			}
+
+			return factory( $, root, root.document );
+		};
+	}
+	else {
+		// Browser
+		factory( jQuery, window, document );
+	}
+}(function( $, window, document, undefined ) {
+'use strict';
+
 
 var ScrollResize = function ( dt )
 {
@@ -152,5 +178,4 @@ $(document).on( 'init.dt', function ( e, settings ) {
 	}
 } );
 
-}(jQuery));
-
+}));

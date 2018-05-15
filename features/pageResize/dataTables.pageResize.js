@@ -34,8 +34,34 @@
  * For more detailed information please see:
  *     http://datatables.net/blog/2015-04-10
  */
+(function( factory ){
+	if ( typeof define === 'function' && define.amd ) {
+		// AMD
+		define( ['jquery', 'datatables.net'], function ( $ ) {
+			return factory( $, window, document );
+		} );
+	}
+	else if ( typeof exports === 'object' ) {
+		// CommonJS
+		module.exports = function (root, $) {
+			if ( ! root ) {
+				root = window;
+			}
 
-(function($){
+			if ( ! $ || ! $.fn.dataTable ) {
+				$ = require('datatables.net')(root, $).$;
+			}
+
+			return factory( $, root, root.document );
+		};
+	}
+	else {
+		// Browser
+		factory( jQuery, window, document );
+	}
+}(function( $, window, document, undefined ) {
+'use strict';
+
 
 var PageResize = function ( dt, pageResizeManualDelta )
 {
@@ -160,5 +186,5 @@ $(document).on( 'init.dt', function ( e, settings ) {
 	}
 } );
 
-}(jQuery));
 
+}));
