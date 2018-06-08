@@ -7,10 +7,12 @@
  * @copyright   Copyright 2017 datahandler.
  */
 (function ($) {
+    'use strict';
     var SlidingChild = function (dt, options) {
         var opts = $.extend({}, SlidingChild.defaults, options);
 
-        $(dt.table().node(), '>tbody').on('click', opts.selector, function() {          
+        // bind to selector click
+        $(dt.table().node(), '> tbody').on('click', opts.selector, function() {          
             var $this = $(this);
             var tr = $this.is('tr') ? $this : $this.closest('tr');
 
@@ -20,7 +22,7 @@
             toggleChild(row);
         });
 
-        var toggleChild = function (dtRow) {
+        function toggleChild (dtRow) {
             if (dtRow.child.isShown()) {
                 closeChild(dtRow);
             }
@@ -32,9 +34,9 @@
 
                 showChildData(dtRow);
             }
-        };
+        }
         // code borrowed from the resource at: https://datatables.net/blog/2014-10-02
-        var closeChild = function (dtRow) {            
+        function closeChild (dtRow) {            
             var showingRow = $(dtRow.node());
             $(opts.sliderSelector, dtRow.child()).slideUp(opts.animationSpeed, function () {
                 dtRow.child.remove();
@@ -43,9 +45,9 @@
                     opts.onHidden(dtRow);
                 }
             });
-        };
+        }
 
-        var showChildData = function (dtRow) {
+        function showChildData (dtRow) {
             if (opts.ajax.requestUrl === null) {                
                 showChildDataFromRow(dtRow);
             }
@@ -70,15 +72,15 @@
                     error: function (response) { showChild(dtRow, response); }
                 });
             }
-        };
+        }
 
-        var showChildDataFromRow = function(dtRow) {
+        function showChildDataFromRow(dtRow) {
             if (!opts.dataFormatCallback) { return; } // throw error?            
             var data = opts.dataFormatCallback(dtRow);
             showChild(dtRow, data);
-        };
+        }
 
-        var showChild = function(dtRow, data) {            
+        function showChild(dtRow, data) {            
             var selectedRow = $(dtRow.node());
             dtRow.child(data, opts.childClass).show();
 
@@ -89,7 +91,7 @@
                     opts.onShown(dtRow);
                 }
             });
-        };
+        }
     };
 
     SlidingChild.defaults = {
