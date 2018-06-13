@@ -1,7 +1,7 @@
 /**
  * @summary     SlidingChild
  * @description Show / Hide row child plugin
- * @version     2.0.0
+ * @version     2.0.1
  * @file        dataTables.slidingChild.js
  * @author      Nick Adkinson (https://github.com/data-handler)
  * @copyright   Copyright 2018 Nick Adkinson
@@ -51,8 +51,12 @@
 }(function( $, document ) {
 'use strict';
 
-var SlidingChild = function ( dt, options )
+var SlidingChild = function (dt, options)
 {
+	var that = this;
+	dt.on('draw', function() {
+		that._updateFadedRows();
+	});
     var table = dt.table();
     var sliderElement = document.createElement('div');
     sliderElement.className = 'slider';
@@ -81,93 +85,126 @@ SlidingChild.prototype = {
 			if (!tr.is('tr')) { return; } // throw error?
 			
 			var dtRow = settings.dt.row(tr);            
-            settings.source( tr, that._response(dtRow) );
+			that._toggleChild(dtRow);			
         });
-	},
-	_response: function(dtRow) {
-		return function( dtRow, childData ) {
-			this._toggleChild( dtRow, childData );
-		}.bind( this, dtRow );
-	},
-	_toggleChild: function(dtRow, childData) {
-        var that = this;
+	},	
+	_toggleChild: function(dtRow) {
+		var settings = this.s;
 		if (dtRow.child.isShown()) {
-			that._hideChild(dtRow, function() {});
-		} else {      
-			var settings = that.s;          
+			this._hideChild(dtRow, function() {});						
+		} else {      			    
             var existingShownDtRow = settings.dt.row('.shown');
 			if (existingShownDtRow.length && settings.toggle) {     
-                that._hideChild(existingShownDtRow, that._showChild(dtRow, childData));
+                this._hideChild(existingShownDtRow, this._showChildCallback(dtRow));
             } else {            
-                that.__showChild(dtRow, childData);
+                this._showChild(dtRow);
             }
 		}
+	},	
+	_showChildCallback: function(dtRow) {
+		return function( dtRow ) {			
+			this._showChild(dtRow);
+		}.bind( this, dtRow );
+	},
+	_showChild: function(dtRow) {	
+		this.s.source( $(dtRow.node() ), this._response(dtRow) );		
     },
-    _showChild: function(dtRow, data) {
-        return function( dtRow, childData ) {
+	_response: function(dtRow) {
+		return function( dtRow, childData ) {
 			this.__showChild( dtRow, childData );
-		}.bind( this, dtRow, data );
-    },
+		}.bind( this, dtRow );
+	},    
 	__showChild: function(dtRow, data) {   
 		var settings = this.s;                 
-        var slider = settings.slider;
+		var slider = settings.slider;
 
         slider.append(data);
-        dtRow.child(slider, settings.childClass).show();
+		dtRow.child(slider, settings.childClass).show();
+		
+		$(dtRow.node()).toggleClass('shown');
+		this._updateFadedRows();
 
         if (settings.animateShow) {
-            this._showChildAnimation(dtRow);
+            this._showChildWithAnimation(dtRow);
         } else {
-            this._showChildNoAnimation(dtRow);
+            this._showChildWithoutAnimation(dtRow);
         }   
     },
-    _showChildAnimation: function(dtRow) {
-        var selectedRow = $(dtRow.node());
+    _showChildWithAnimation: function(dtRow) {
         var settings = this.s;
         $(settings.slider, dtRow.child()).slideDown(settings.animationSpeed, function () {
-            selectedRow.addClass('shown');
             settings.onShown(dtRow);
         });
     },
-    _showChildNoAnimation: function(dtRow) {
-        var selectedRow = $(dtRow.node());
+    _showChildWithoutAnimation: function(dtRow) {
         var settings = this.s;
         $(settings.slider, dtRow.child()).show();
-        selectedRow.addClass('shown');
         settings.onShown(dtRow);
     },
 	_hideChild: function(dtRow, callback) {  
 		var settings = this.s;     
-        
+
+		$(dtRow.node()).toggleClass('shown');
+		this._updateFadedRows();
+
 		if (settings.animateHide) {
-            this._hideChildAnimation(dtRow, callback);
+            this._hideChildWithAnimation(dtRow, callback);
         } else {
-            this._hideChildNoAnimation(dtRow, callback);
-        }
+            this._hideChildWithoutAnimation(dtRow, callback);
+		}		
 	},
-    _hideChildAnimation: function(dtRow, callback) {
+    _hideChildWithAnimation: function(dtRow, callback) {
         var settings = this.s;
-        var showingRow = $(dtRow.node());
         var slider = settings.slider;
         $(slider, dtRow.child()).slideUp(settings.animationSpeed, function () {          
             dtRow.child.remove();            
-            showingRow.removeClass('shown');
             slider.empty();            
             settings.onHidden(dtRow);                       
             callback();
 		});
     },
-    _hideChildNoAnimation: function(dtRow, callback) {
+    _hideChildWithoutAnimation: function(dtRow, callback) {
         var settings = this.s;
-        var showingRow = $(dtRow.node());
         var slider = settings.slider;
         $(slider, dtRow.child()).hide();   
         dtRow.child.remove();            
-        showingRow.removeClass('shown');
         slider.empty();            
         settings.onHidden(dtRow);                       
         callback();
-    }
+	},
+	_updateFadedRows: function() {
+		if (this.s.fadeNonShowingRows) {
+			this._fadeNonShowingRows();
+			this._removeFadeFromShowingRows();
+		} else {
+			this._removeFadeFromRows();
+		}
+	},
+	_fadeNonShowingRows: function() {
+		if (this.s.dt.rows('.shown:visible').count()) {			
+			this.s.dt.rows(':visible:not(.shown):not(.faded)')
+				.nodes()
+				.to$()
+				.css('opacity', this.s.fadeOpacity)
+				.addClass('faded');					
+		} else {
+			this._removeFadeFromRows();
+		}
+	},
+	_removeFadeFromShowingRows: function() {
+		this.s.dt.rows('.shown.faded:visible')
+			.nodes()
+			.to$()
+			.css('opacity', 1)
+			.removeClass('faded');
+	},
+	_removeFadeFromRows: function() {
+		this.s.dt.rows('.faded')
+			.nodes()
+			.to$()
+			.css('opacity', 1)
+			.removeClass('faded');
+	}
 };
 
 SlidingChild.defaults = {
@@ -176,7 +213,9 @@ SlidingChild.defaults = {
 	source: function() {},
     toggle: true,
     animateShow: true,
-    animateHide: true,
+	animateHide: true,
+	fadeNonShowingRows: false,
+	fadeOpacity: 0.4,
 	animationSpeed: 200,
 	onShown: function() {},
 	onHidden: function() {}
