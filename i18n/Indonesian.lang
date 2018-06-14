@@ -6,6 +6,7 @@
  */
 
 {
+	"sEmptyTable":	 "Tidak ada data yang tersedia pada tabel ini",
 	"sProcessing":   "Sedang memproses...",
 	"sLengthMenu":   "Tampilkan _MENU_ entri",
 	"sZeroRecords":  "Tidak ditemukan data yang sesuai",

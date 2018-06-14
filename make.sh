@@ -30,6 +30,8 @@ scss_compile $DT_SRC/extensions/Plugins/features/searchPane/dataTables.searchPan
 js_compress $DT_SRC/extensions/Plugins/features/searchFade/dataTables.searchFade.js
 css_compress $DT_SRC/extensions/Plugins/features/searchFade/dataTables.searchFade
 
+js_compress $DT_SRC/extensions/Plugins/features/slidingChild/dataTables.slidingChild.js
+
 # Only copying the integration files
 rsync -r integration     $OUT_DIR
 

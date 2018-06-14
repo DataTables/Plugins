@@ -34,8 +34,34 @@
  * For more detailed information please see:
  *     http://datatables.net/blog/2015-04-10
  */
+(function( factory ){
+	if ( typeof define === 'function' && define.amd ) {
+		// AMD
+		define( ['jquery', 'datatables.net'], function ( $ ) {
+			return factory( $, window, document );
+		} );
+	}
+	else if ( typeof exports === 'object' ) {
+		// CommonJS
+		module.exports = function (root, $) {
+			if ( ! root ) {
+				root = window;
+			}
 
-(function($){
+			if ( ! $ || ! $.fn.dataTable ) {
+				$ = require('datatables.net')(root, $).$;
+			}
+
+			return factory( $, root, root.document );
+		};
+	}
+	else {
+		// Browser
+		factory( jQuery, window, document );
+	}
+}(function( $, window, document, undefined ) {
+'use strict';
+
 
 var PageResize = function ( dt, pageResizeManualDelta )
 {
@@ -69,7 +95,8 @@ PageResize.prototype = {
 		var dt = settings.dt;
 		var t = dt.table();
 		var offsetTop = $( settings.table ).offset().top;
-		var rowHeight = $( 'tr', settings.body ).eq(0).height();
+		var rows = $( 'tr', settings.body );
+		var rowHeight = rows.eq( rows.length > 1 ? 1 : 0 ).height(); // Attempt to use the second row if poss, for top and bottom border
 		var availableHeight = settings.host.height();
 		var scrolling = t.header().parentNode !== t.body().parentNode;
 		var delta = settings.delta;
@@ -159,5 +186,5 @@ $(document).on( 'init.dt', function ( e, settings ) {
 	}
 } );
 
-}(jQuery));
 
+}));

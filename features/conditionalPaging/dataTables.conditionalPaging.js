@@ -70,7 +70,7 @@
                     }
                 };
 
-            if ($.isNumeric(config.speed) || $.type(config.speed) === 'string') {
+            if ( config.speed !== undefined ) {
                 speed = config.speed;
             }
 

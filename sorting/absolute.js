@@ -98,7 +98,13 @@ var _setup = function ( values ) {
 
 	// Ascending ordering method
 	o.asc = function ( a, b, isNumber ) {
-		if ( o.alwaysTop[ a ] || o.alwaysBottom[ b ] ) {
+		if ( o.alwaysTop[ a ] && o.alwaysTop[ b ] ) {
+			return 0;
+		}
+		else if ( o.alwaysBottom[ a ] && o.alwaysBottom[ b ] ) {
+			return 0;
+		}
+		else if ( o.alwaysTop[ a ] || o.alwaysBottom[ b ] ) {
 			return -1;
 		}
 		else if ( o.alwaysBottom[ a ] || o.alwaysTop[ b ] ) {
@@ -120,7 +126,13 @@ var _setup = function ( values ) {
 
 	// Descending ordering method
 	o.desc = function ( a, b, isNumber ) {
-		if ( o.alwaysTop[ a ] || o.alwaysBottom[ b ] ) {
+		if ( o.alwaysTop[ a ] && o.alwaysTop[ b ] ) {
+			return 0;
+		}
+		else if ( o.alwaysBottom[ a ] && o.alwaysBottom[ b ] ) {
+			return 0;
+		}
+		else if ( o.alwaysTop[ a ] || o.alwaysBottom[ b ] ) {
 			return -1;
 		}
 		else if ( o.alwaysBottom[ a ] || o.alwaysTop[ b ] ) {
