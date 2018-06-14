@@ -27,6 +27,9 @@ js_compress $DT_SRC/extensions/Plugins/integration/jqueryui/dataTables.jqueryui.
 js_compress $DT_SRC/extensions/Plugins/features/searchPane/dataTables.searchPane.js
 scss_compile $DT_SRC/extensions/Plugins/features/searchPane/dataTables.searchPane.scss
 
+js_compress $DT_SRC/extensions/Plugins/features/searchFade/dataTables.searchFade.js
+css_compress $DT_SRC/extensions/Plugins/features/searchFade/dataTables.searchFade
+
 # Only copying the integration files
 rsync -r integration     $OUT_DIR
 
