@@ -29,10 +29,10 @@
 		"sSortDescending": ": azalan sütun sıralamasını aktifleştir"
 	},
 	"select": {
-	"rows": {
-		"_": "%d kayıt seçildi",
-		"0": "",
-		"1": "1 kayıt seçildi"
+		"rows": {
+			"_": "%d kayıt seçildi",
+			"0": "",
+			"1": "1 kayıt seçildi"
+		}
 	}
-}
 }
