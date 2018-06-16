@@ -107,6 +107,10 @@ SlidingChild.prototype = {
 		}.bind( this, dtRow );
 	},
 	_showChild: function(dtRow) {	
+		var $tr = $(dtRow.node());
+		if (this.s.displayLoadingIndicator) {
+			this._addLoadingIndicator($tr);
+		}
 		this.s.source( $(dtRow.node() ), this._response(dtRow) );		
     },
 	_response: function(dtRow) {
@@ -117,11 +121,16 @@ SlidingChild.prototype = {
 	__showChild: function(dtRow, data) {   
 		var settings = this.s;                 
 		var slider = settings.slider;
+		var $tr = $(dtRow.node());
+
+		if (settings.displayLoadingIndicator) {
+			$('.'+this.s.loadingIndicatorClass).remove();
+		}
 
         slider.append(data);
 		dtRow.child(slider, settings.childClass).show();
 		
-		$(dtRow.node()).toggleClass('shown');
+		$tr.toggleClass('shown');
 		this._updateFadedRows();
 
         if (settings.animateShow) {
@@ -204,6 +213,16 @@ SlidingChild.prototype = {
 			.to$()
 			.css('opacity', 1)
 			.removeClass('faded');
+	},
+	_addLoadingIndicator: function($tr) {
+		var position = $tr.position();
+		var indicator = $(this.s.loadingIndicatorContent);
+		indicator.addClass(this.s.loadingIndicatorClass);
+		indicator.css('top', position.top);
+		indicator.css('left', position.left);
+		indicator.css('height', $tr.height());
+		
+		$tr.append(indicator);
 	}
 };
 
@@ -218,7 +237,10 @@ SlidingChild.defaults = {
 	fadeOpacity: 0.4,
 	animationSpeed: 200,
 	onShown: function() {},
-	onHidden: function() {}
+	onHidden: function() {},
+	displayLoadingIndicator: false,
+	loadingIndicatorClass: 'loading-indicator',
+	loadingIndicatorContent: '<div style="background: black; color: white; display: flex; align-items: center; justify-content: center; opacity: 0.5; position: absolute; width: 100%; z-index: 100;">Loading...</div>'
 };
 
 
