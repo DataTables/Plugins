@@ -111,7 +111,7 @@ SlidingChild.prototype = {
 		if (this.s.displayLoadingIndicator) {
 			this._addLoadingIndicator($tr);
 		}
-		this.s.source( $(dtRow.node() ), this._response(dtRow) );		
+		this.s.source( $tr, this._response(dtRow) );		
     },
 	_response: function(dtRow) {
 		return function( dtRow, childData ) {
