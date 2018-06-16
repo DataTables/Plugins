@@ -1,7 +1,7 @@
 /**
  * @summary     SlidingChild
  * @description Show / Hide row child plugin
- * @version     2.0.1
+ * @version     2.0.2
  * @file        dataTables.slidingChild.js
  * @author      Nick Adkinson (https://github.com/data-handler)
  * @copyright   Copyright 2018 Nick Adkinson
