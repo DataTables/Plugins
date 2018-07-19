@@ -29,9 +29,9 @@
     },
     "select": {
         "rows": {
-            _: "Selecionado %d linhas",
-            0: "Nenhuma linha selecionada",
-            1: "Selecionado 1 linha"
+            "_": "Selecionado %d linhas",
+            "0": "Nenhuma linha selecionada",
+            "1": "Selecionado 1 linha"
         }
     }
 }
