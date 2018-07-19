@@ -43,7 +43,7 @@
 			name = '';
 		}
 
-		if ($.isPlainObject(data)) {
+		if ($.isPlainObject(data) || $.isArray(data)) {
 			$.each(data, function(idx, val) {
 				if (name === '') {
 					flattenJson(val, idx, flattened);
