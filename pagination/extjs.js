@@ -86,7 +86,7 @@ $.fn.dataTableExt.oPagination.extStyle = {
   
         nPageNumBox.change(function () {
             var pageValue = parseInt($(this).val(), 10) - 1 ; // -1 because pages are 0 indexed, but the UI is 1
-            var oPaging = oSettings.oInstance.fnPagingInfo();
+            var oPaging = oSettings.oInstance.fnExtStylePagingInfo();
             
             if(pageValue === NaN || pageValue<0 ){
                 pageValue = 0;
