@@ -54,9 +54,9 @@
 	var lastClassName = 'last';
 
 	var paginateClassName = 'paginate';
-	var paginateOfClassName = 'paginate_of';
 	var paginatePageClassName = 'paginate_page';
 	var paginateInputClassName = 'paginate_input';
+	var paginateTotalClassName = 'paginate_total';
 
 	$.fn.dataTableExt.oPagination.input = {
 		'fnInit': function (oSettings, nPaging, fnCallbackDraw) {
@@ -65,11 +65,11 @@
 			var nNext = document.createElement('span');
 			var nLast = document.createElement('span');
 			var nInput = document.createElement('input');
-			var nPage = document.createElement('span');
-			var nOf = document.createElement('span');
+			var nTotal = document.createElement('span');
 
 			var language = oSettings.oLanguage.oPaginate;
 			var classes = oSettings.oClasses;
+			var info = language.info || 'Page _INPUT_ of _TOTAL_';
 
 			nFirst.innerHTML = language.sFirst;
 			nPrevious.innerHTML = language.sPrevious;
@@ -81,9 +81,8 @@
 			nNext.className = nextClassName + ' ' + classes.sPageButton;
 			nLast.className = lastClassName + ' ' + classes.sPageButton;
 
-			nOf.className = paginateOfClassName;
-			nPage.className = paginatePageClassName;
 			nInput.className = paginateInputClassName;
+			nTotal.className = paginateTotalClassName;
 
 			if (oSettings.sTableId !== '') {
 				nPaging.setAttribute('id', oSettings.sTableId + '_' + paginateClassName);
@@ -94,13 +93,14 @@
 			}
 
 			nInput.type = 'text';
-			nPage.innerHTML = 'Page ';
+
+			info = info.replace(/_INPUT_/g, '</span>' + nInput.outerHTML + '<span>');
+			info = info.replace(/_TOTAL_/g, '</span>' + nTotal.outerHTML + '<span>');
+			info = '<span>' + info + '</span>';
 
 			nPaging.appendChild(nFirst);
 			nPaging.appendChild(nPrevious);
-			nPaging.appendChild(nPage);
-			nPaging.appendChild(nInput);
-			nPaging.appendChild(nOf);
+			nPaging.innerHTML += info;
 			nPaging.appendChild(nNext);
 			nPaging.appendChild(nLast);
 
@@ -136,7 +136,7 @@
 				}
 			});
 
-			$(nInput).keyup(function (e) {
+			$(nPaging).find('.' + paginateInputClassName).keyup(function (e) {
 				// 38 = up arrow, 39 = right arrow
 				if (e.which === 38 || e.which === 39) {
 					this.value++;
@@ -215,9 +215,9 @@
 				.addClass(disableClasses[lastClassName]);
 
 			// Paginate of N pages text
-			$(an).children('.' + paginateOfClassName).html(' of ' + iPages);
+			$(an).children('.' + paginateTotalClassName).html(iPages);
 
-			// Current page numer input value
+			// Current page number input value
 			$(an).children('.' + paginateInputClassName).val(iCurrentPage);
 		}
 	};
