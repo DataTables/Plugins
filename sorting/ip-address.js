@@ -26,6 +26,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 			return 0
 		}
 
+		a = a.replace(/<[\s\S]*?>/g, "");
 		m = a.split(".");
 		n = a.split(":");
 		x = "";
