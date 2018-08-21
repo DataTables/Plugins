@@ -66,6 +66,7 @@
 			var nLast = document.createElement('span');
 			var nInput = document.createElement('input');
 			var nTotal = document.createElement('span');
+			var nInfo = document.createElement('span');
 
 			var language = oSettings.oLanguage.oPaginate;
 			var classes = oSettings.oClasses;
@@ -96,11 +97,13 @@
 
 			info = info.replace(/_INPUT_/g, '</span>' + nInput.outerHTML + '<span>');
 			info = info.replace(/_TOTAL_/g, '</span>' + nTotal.outerHTML + '<span>');
-			info = '<span>' + info + '</span>';
+			nInfo.innerHTML = '<span>' + info + '</span>';
 
 			nPaging.appendChild(nFirst);
 			nPaging.appendChild(nPrevious);
-			nPaging.innerHTML += info;
+			$(nInfo).children().each(function (i, n) {
+			    nPaging.appendChild(n);
+			});
 			nPaging.appendChild(nNext);
 			nPaging.appendChild(nLast);
 
@@ -215,10 +218,10 @@
 				.addClass(disableClasses[lastClassName]);
 
 			// Paginate of N pages text
-			$(an).children('.' + paginateTotalClassName).html(iPages);
+			$(an).find('.' + paginateTotalClassName).html(iPages);
 
 			// Current page number input value
-			$(an).children('.' + paginateInputClassName).val(iCurrentPage);
+			$(an).find('.' + paginateInputClassName).val(iCurrentPage);
 		}
 	};
 })(jQuery);
