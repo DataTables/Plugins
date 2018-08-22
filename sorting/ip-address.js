@@ -18,12 +18,19 @@
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 	"ip-address-pre": function ( a ) {
-		if (!a) { return 0 }
 		var i, item;
-		var m = a.split("."),
-			n = a.split(":"),
-			x = "",
-			xa = "";
+		var m, n;
+		var x, xa;
+
+		if (!a) {
+			return 0
+		}
+
+		a = a.replace(/<[\s\S]*?>/g, "");
+		m = a.split(".");
+		n = a.split(":");
+		x = "";
+		xa = "";
 
 		if (m.length == 4) {
 			// IPV4
