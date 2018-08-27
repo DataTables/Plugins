@@ -111,7 +111,7 @@
 				var d = data[i];
 
 				if (!d) {
-					return;
+					continue;
 				}
 
 				if (!out[d]) {
@@ -343,12 +343,12 @@
 		return this.iterator('column', function(ctx, idx) {
 			var col = ctx.aoColumns[idx];
 
-			if (ctx.searchPane) {
-				if (!col.searchPane) {
-					col.searchPane = {};
-				}
+			if (!col.searchPane) {
+				col.searchPane = {};
+			}
+			col.searchPane.options = options;
 
-				col.searchPane.options = options;
+			if (ctx.searchPane) {
 				ctx.searchPane.rebuild();
 			}
 		});
