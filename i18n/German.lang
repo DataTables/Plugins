@@ -43,8 +43,8 @@
 		"copyTitle":	"In Zwischenablage kopieren",
 		"copyKeys":	"Taste <i>ctrl</i> oder <i>\u2318</i> + <i>C</i> um Tabelle<br>in Zwischenspeicher zu kopieren.<br><br>Um abzubrechen die Nachricht anklicken oder Escape drücken.",
 		"copySuccess": {
-			"_": "%d Spalten kopiert",
-			"1": "1 Spalte kopiert"
+			"_": "%d Zeilen kopiert",
+			"1": "1 Zeile kopiert"
 		}
 	}
 }
