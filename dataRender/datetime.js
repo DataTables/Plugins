@@ -14,9 +14,9 @@
  *
  * It accepts one, two or three parameters:
  *
- *     $.fn.dataTable.render.moment( to );
- *     $.fn.dataTable.render.moment( from, to );
- *     $.fn.dataTable.render.moment( from, to, locale );
+ * * `$.fn.dataTable.render.moment( to );`
+ * * `$.fn.dataTable.render.moment( from, to );`
+ * * `$.fn.dataTable.render.moment( from, to, locale );`
  *
  * Where:
  *
@@ -29,7 +29,7 @@
  *  @name datetime
  *  @summary Convert date / time source data into one suitable for display
  *  @author [Allan Jardine](http://datatables.net)
- *  @requires DataTables 1.10+
+ *  @requires DataTables 1.10+, Moment.js 1.7+
  *
  *  @example
  *    // Convert ISO8601 dates into a simple human readable format
