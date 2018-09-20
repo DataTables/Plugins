@@ -95,8 +95,7 @@
 
 		_attach: function() {
 			var container = this.c.container;
-			var host =
-				typeof container === 'function' ? container(this.s.dt) : container;
+			var host = typeof container === 'function' ? container(this.s.dt) : container;
 
 			if (this.c.insert === 'prepend') {
 				$(this.dom.container).prependTo(host);
@@ -108,9 +107,11 @@
 		_binData: function(data) {
 			var out = {};
 
-			data.each(function(d) {
+			for (var i = 0, ien = data.length; i < ien; i++) {
+				var d = data[i];
+
 				if (!d) {
-					return;
+					continue;
 				}
 
 				if (!out[d]) {
@@ -118,7 +119,7 @@
 				} else {
 					out[d]++;
 				}
-			});
+			}
 
 			return out;
 		},
@@ -142,8 +143,10 @@
 			var paneClasses = classes.pane;
 			var table = this.s.dt;
 			var column = table.column(idx);
+			var colOpts = this._getOptions(idx);
 			var list = $('<ul/>');
-			var bins = this._binData(column.data().flatten());
+			var binData = colOpts.options ? new DataTable.Api(null, colOpts.options) : column.data();
+			var bins = this._binData(binData.flatten());
 
 			// Don't show the pane if there isn't enough variance in the data
 			if (this._variance(bins) < this.c.threshold) {
@@ -155,8 +158,7 @@
 			var search = column.search();
 			search = search ? search.substr(1, search.length - 2).split('|') : [];
 
-			var data = column
-				.data()
+			var data = binData
 				.unique()
 				.sort()
 				.toArray();
@@ -164,9 +166,7 @@
 			for (var i = 0, ien = data.length; i < ien; i++) {
 				if (data[i]) {
 					var li = $('<li/>')
-						.html(
-							'<span class="' + itemClasses.label + '">' + data[i] + '</span>'
-						)
+						.html('<span class="' + itemClasses.label + '">' + data[i] + '</span>')
 						.data('filter', data[i])
 						.append(
 							$('<span/>')
@@ -175,9 +175,7 @@
 						);
 
 					if (search.length) {
-						var escaped = data[i].replace
-							? $.fn.dataTable.util.escapeRegex(data[i])
-							: data[i];
+						var escaped = data[i].replace ? $.fn.dataTable.util.escapeRegex(data[i]) : data[i];
 
 						if ($.inArray(escaped, search) !== -1) {
 							li.addClass(itemClasses.selected);
@@ -192,11 +190,7 @@
 				.data('column', idx)
 				.addClass(paneClasses.container)
 				.addClass(search.length ? paneClasses.active : '')
-				.append(
-					$('<button type="button">&times;</button>').addClass(
-						this.classes.clear
-					)
-				)
+				.append($('<button type="button">&times;</button>').addClass(this.classes.clear))
 				.append(
 					$('<div/>')
 						.addClass(paneClasses.title)
@@ -222,12 +216,20 @@
 			}
 		},
 
+		_getOptions: function ( colIdx ) {
+			var table = this.s.dt;
+
+			return table.settings()[0].aoColumns[colIdx].searchPane || {};
+		},
+
 		_toggle: function(li) {
 			var classes = this.classes;
 			var itemSelected = classes.item.selected;
 			var table = this.s.dt;
 			var li = $(li);
 			var pane = li.closest('div.' + classes.pane.container);
+			var columnIdx = pane.data('column');
+			var options = this._getOptions(columnIdx);
 
 			li.toggleClass(itemSelected, !li.hasClass(itemSelected));
 
@@ -236,22 +238,41 @@
 			if (filters.length === 0) {
 				pane.removeClass(classes.pane.active);
 				table
-					.column(pane.data('column'))
+					.column(columnIdx)
 					.search('')
 					.draw();
-			} else {
+			} else if (options.match === 'any') {
+				// Allow sub-word matching
 				pane.addClass(classes.pane.active);
 				table
-					.column(pane.data('column'))
+					.column(columnIdx)
 					.search(
-						'^' +
+						'(' +
 							$.map(filters, function(filter) {
 								var d = $(filter)
 									.data('filter')
 									.toString();
 								return $.fn.dataTable.util.escapeRegex(d);
 							}).join('|') +
-							'$',
+							')',
+						true,
+						false
+					)
+					.draw();
+			} else {
+				// Only search on the full phrase
+				pane.addClass(classes.pane.active);
+				table
+					.column(columnIdx)
+					.search(
+						'^(' +
+							$.map(filters, function(filter) {
+								var d = $(filter)
+									.data('filter')
+									.toString();
+								return $.fn.dataTable.util.escapeRegex(d);
+							}).join('|') +
+							')$',
 						true,
 						false
 					)
@@ -312,6 +333,21 @@
 
 	DataTable.Api.register('searchPanes.rebuild()', function() {
 		return this.iterator('table', function(ctx) {
+			if (ctx.searchPane) {
+				ctx.searchPane.rebuild();
+			}
+		});
+	});
+
+	DataTable.Api.register('column().paneOptions()', function(options) {
+		return this.iterator('column', function(ctx, idx) {
+			var col = ctx.aoColumns[idx];
+
+			if (!col.searchPane) {
+				col.searchPane = {};
+			}
+			col.searchPane.options = options;
+
 			if (ctx.searchPane) {
 				ctx.searchPane.rebuild();
 			}

@@ -1,5 +1,8 @@
 /**
- * Externally trigger the display of DataTables' "processing" indicator. 
+ * Externally trigger the display of DataTables' "processing" indicator.
+ * 
+ * Please note that of DataTables 2.0.0 this functionality is now built into
+ * DataTables core and this plug-in is no longer required.
  *
  *  @name processing()
  *  @summary Show / hide the processing indicator via the API

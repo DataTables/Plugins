@@ -1,4 +1,19 @@
-$.extend( $.fn.dataTableExt.oSort, {
+/**
+ * This plug-in provides locale aware sorting for Czech.
+ *
+ *  @name Czech
+ *  @summary Sort locale aware sorting for Czech.
+ *  @author  
+ *
+ *  @example
+ *    $('#example').dataTable( {
+ *       columnDefs: [
+ *         { type: 'czech', targets: 0 }
+ *       ]
+ *    } );
+ */
+
+ $.extend( $.fn.dataTableExt.oSort, {
    "czech-pre": function ( a ) {
         var special_letters = {
             "A": "Aa", "a": "aa", "Á": "Ab", "á": "ab",
