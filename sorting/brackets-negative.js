@@ -37,6 +37,6 @@
 		}else{
 			data = data.replace(/[\$£€\,]/g,'');
 		}
-		return parseInt( data, 10 );
+		return parseFloat( data );
 	};
 }());
