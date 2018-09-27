@@ -19,7 +19,7 @@ $.extend( $.fn.dataTableExt.oSort, {
 			"A": "Aa", "a": "aa", "Á": "Ab", "á": "ab",
 			"E": "Ea", "e": "ea", "É": "eb", "é": "eb",
 			"I": "Ia", "i": "ia", "Í": "Ib", "í": "ib",
-			"O": "Oa", "o": "oa", "Ó": "Ob", "ó": "ob", "Ö": "oc", "ö": "oc", "Ő": "od", "ő": "oc",
+			"O": "Oa", "o": "oa", "Ó": "Ob", "ó": "ob", "Ö": "oc", "ö": "oc", "Ő": "od", "ő": "od",
 			"U": "Ua", "u": "ua", "Ú": "Ub", "ú": "ub", "Ü": "Uc", "ü": "uc", "Ű": "ud", "ű": "ud"
 		};
 		for (var val in special_letters)
