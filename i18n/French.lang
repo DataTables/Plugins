@@ -28,9 +28,9 @@
 	},
 	"select": {
         	"rows": {
-         		"_": "%d lignes séléctionnées",
-         		"0": "Aucune ligne séléctionnée",
-        		"1": "1 ligne séléctionnée"
+         		"_": "%d lignes s&eacute;lectionn&eacute;es",
+         		"0": "Aucune ligne s&eacute;lectionn&eacute;e",
+        		"1": "1 ligne s&eacute;lectionn&eacute;e"
         	}  
 	}
 }
