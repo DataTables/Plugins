@@ -42,6 +42,10 @@
        "copySuccess": {
            "_": "%d sor másolva",
            "1": "1 sor másolva"
+       },
+       "pageLength": {
+            _: "%d sort mutat",
+            "-1": "Minden sort mutat"
        }
    }
 }
