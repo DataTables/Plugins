@@ -25,6 +25,10 @@
 		}
 	);
 	$.fn.dataTable.ext.type.order['currency-pre'] = function ( data ) {
+		if ( data === '' ) {
+			return 0;
+		}
+
 		//Check if its in the proper format
 		if(data.match(/[\()]/g)){
 			if( data.match(/[\-]/g) !== true){
