@@ -1,5 +1,5 @@
 /**
- * Sorts a column containing IP addresses (IPv4 and IPv6) in typical dot
+ * Sorts a column containing IP addresses (IPv4 and IPv6) or IPv4 address and port delimited by ':' in typical dot
  * notation / colon. This can be most useful when using DataTables for a
  * networking application, and reporting information containing IP address.
  *
@@ -7,6 +7,7 @@
  *  @summary Sort IP addresses numerically
  *  @author Dominique Fournier
  *  @author Brad Wasson
+ *  @author Peter Vilhan
  *
  *  @example
  *    $('#example').dataTable( {
@@ -16,10 +17,11 @@
  *    } );
  */
 
+
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 	"ip-address-pre": function ( a ) {
 		var i, item;
-		var m, n;
+		var m, n, t;
 		var x, xa;
 
 		if (!a) {
@@ -27,7 +29,14 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 		}
 
 		a = a.replace(/<[\s\S]*?>/g, "");
-		m = a.split(".");
+		//IPv4:Port
+                t = a.split(":");
+                if (t.length == 2){
+                        m = t[0].split(".");
+                }
+                else {
+                        m = a.split(".");
+                }
 		n = a.split(":");
 		x = "";
 		xa = "";
