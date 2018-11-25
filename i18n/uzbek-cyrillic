@@ -1,0 +1,29 @@
+/**
+ * Uzbek-Cryillic translation
+ *  @name Uzbek-Cyrillic
+ *  @anchor Uzbek-Cyrillic
+ *  @author <a href="www.ilmSoft.uz">Jakhongirmirzo</a>
+ */
+
+{
+	"sEmptyTable":   	"Маълумот топилмади",
+	"sInfo":         	"Умумий _TOTAL_ ёзувларлардан _START_ дан _END_ гачаси кўрсатилмоқда",
+	"sInfoEmpty":    	"Умумий 0 ёзувлардан 0 дан 0 гачаси кўрсатилмоқда",
+	"sInfoFiltered": 	"(_MAX_ ёзувлардан филтрланди)",
+	"sInfoPostFix":  	"",
+	"sLengthMenu":   	"_MENU_ та ёзувларни кўрсатиш",
+	"sLoadingRecords": 	"Ёзувлар юкланмоқда...",
+	"sProcessing":     	"Юкланмоқда...",
+	"sSearch":       	"Излаш: ",
+	"sZeroRecords":  	"Маълумот йўқ.",
+	"oPaginate": {
+		"sFirst": 		"Биринчи",
+		"sPrevious": 	"Аввалги",
+		"sNext": 		"Кейинги",
+		"sLast": 		"Сўнгги"
+	},
+	"oAria": {
+		"sSortAscending":  ": тўғри тартиблаш",
+		"sSortDescending": ": тескари тартиблаш"
+	}
+}
