@@ -1,13 +1,13 @@
-/*! SearchPane 0.0.1
- * 2017 SpryMedia Ltd - datatables.net/license
+/*! SearchPane 0.0.2
+ * 2018 SpryMedia Ltd - datatables.net/license
  */
 
 /**
  * @summary     SearchPane
  * @description Search Panes for DataTables columns
- * @version     0.0.1
+ * @version     0.0.2
  * @author      SpryMedia Ltd (www.sprymedia.co.uk)
- * @copyright   Copyright 2017 SpryMedia Ltd.
+ * @copyright   Copyright 2018 SpryMedia Ltd.
  *
  * This source file is free software, available under the following license:
  *   MIT license - http://datatables.net/license/mit
@@ -145,7 +145,11 @@
 			var column = table.column(idx);
 			var colOpts = this._getOptions(idx);
 			var list = $('<ul/>');
-			var binData = colOpts.options ? new DataTable.Api(null, colOpts.options) : column.data();
+			var binData = typeof colOpts.options === 'function' ?
+				colOpts.options( table, idx ) :
+				colOpts.options ?
+					new DataTable.Api(null, colOpts.options) :
+					column.data();
 			var bins = this._binData(binData.flatten());
 
 			// Don't show the pane if there isn't enough variance in the data
@@ -326,7 +330,7 @@
 		threshold: 0.5
 	};
 
-	SearchPanes.version = '0.0.1';
+	SearchPanes.version = '0.0.2';
 
 	$.fn.dataTable.SearchPanes = SearchPanes;
 	$.fn.DataTable.SearchPanes = SearchPanes;
