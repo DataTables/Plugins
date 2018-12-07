@@ -1,8 +1,8 @@
 /**
- * When search a table with accented characters, it can be frustrating to have
+ * When searching a table with accented characters, it can be frustrating to have
  * an input such as _Zurich_ not match _Zürich_ in the table (`u !== ü`). This
  * type based search plug-in replaces the built-in string formatter in
- * DataTables with a function that will remove replace the accented characters
+ * DataTables with a function that will replace the accented characters
  * with their unaccented counterparts for fast and easy filtering.
  *
  * Note that with the accented characters being replaced, a search input using
