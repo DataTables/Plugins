@@ -6,10 +6,10 @@
  * You'll need jQuery DataTables (http://datatables.net/) and jPaginator
  * (http://remylab.github.com/jpaginator/) loaded before load this one.
  *
- * Full description is available here:
- * http://www.intellinews.com.br/blog/2012/10/26/jquery-datatables-integration-with-jpaginator-4/
+ * See:
+ * https://github.com/ernaniaz/dataTables-jPaginator/blob/master/dataTables.jPaginator.js
  *
- *  @license GPL v3.0.
+ *  @license MIT
  *  @example
  *   // Initialise DataTables with jPaginator paging
  *   $('#example').dataTable ( {
