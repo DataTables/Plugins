@@ -85,6 +85,7 @@
 		rebuild: function() {
 			var that = this;
 
+			this.c.container.empty();
 			this.s.dt
 				.columns(this.c.columns)
 				.eq(0)
@@ -154,16 +155,6 @@
 
 			// Don't show the pane if there isn't enough variance in the data
 			if (this._variance(bins) < this.c.threshold) {
-				this
-					.dom
-					.container
-					.children()
-					.map(function() {
-						if ($(this).data('column') == idx) {
-							return this;
-						}
-					})
-					.remove();
 				return;
 			}
 
