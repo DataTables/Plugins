@@ -5,7 +5,7 @@
  *  @author Giovanni Ariza, Aristobulo Gomez and Roberto Poo
  */
 
-{
+{	"colvis":	   "Visibilidad",
 	"sProcessing":     "Procesando...",
 	"sLengthMenu":     "Mostrar _MENU_ registros",
 	"sZeroRecords":    "No se encontraron resultados",
