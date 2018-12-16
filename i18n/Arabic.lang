@@ -6,6 +6,8 @@
  */
 
 {
+	"sEmptyTable":     "ليست هناك بيانات متاحة في الجدول",
+	"sLoadingRecords": "جارٍ التحميل...",
 	"sProcessing":   "جارٍ التحميل...",
 	"sLengthMenu":   "أظهر _MENU_ مدخلات",
 	"sZeroRecords":  "لم يعثر على أية سجلات",
@@ -20,5 +22,9 @@
 		"sPrevious": "السابق",
 		"sNext":     "التالي",
 		"sLast":     "الأخير"
+	},
+	"oAria": {
+		"sSortAscending":  ": تفعيل لترتيب العمود تصاعدياً",
+		"sSortDescending": ": تفعيل لترتيب العمود تنازلياً"
 	}
 }
