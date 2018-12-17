@@ -85,7 +85,7 @@
 		rebuild: function() {
 			var that = this;
 
-			this.c.container.empty();
+			this.dom.container.empty();
 			this.s.dt
 				.columns(this.c.columns)
 				.eq(0)
