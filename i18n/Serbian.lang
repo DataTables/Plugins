@@ -1,24 +1,30 @@
 /**
- * Serbian translation (Latin alphabet)
- *  @name Serbian (Latin)
- *  @anchor Serbian (Latin)
- *  @author <a href="http://mnovakovic.byteout.com">Marko Novakovic</a>
+ * Serbian
+ *  @name Serbian
+ *  @anchor Serbian
+ *  @author <a href="http://blog.trk.in.rs">duleorlovic</a>
  */
 
 {
-    "sProcessing":   "Procesiranje u toku...",
-    "sLengthMenu":   "Prikaži _MENU_ elemenata",
-    "sZeroRecords":  "Nije pronađen nijedan rezultat",
-    "sInfo":         "Prikaz _START_ do _END_ od ukupno _TOTAL_ elemenata",
-    "sInfoEmpty":    "Prikaz 0 do 0 od ukupno 0 elemenata",
-    "sInfoFiltered": "(filtrirano od ukupno _MAX_ elemenata)",
-    "sInfoPostFix":  "",
-    "sSearch":       "Pretraga:",
-    "sUrl":          "",
-    "oPaginate": {
-        "sFirst":    "Početna",
-        "sPrevious": "Prethodna",
-        "sNext":     "Sledeća",
-        "sLast":     "Poslednja"
-    }
+	"sEmptyTable":     "Нема података у табели",
+	"sInfo":           "Приказ _START_ до _END_ од укупно _TOTAL_ записа",
+	"sInfoEmpty":      "Приказ 0 до 0 од укупно 0 записа",
+	"sInfoFiltered":   "(филтрирано од укупно _MAX_ записа)",
+	"sInfoPostFix":    "",
+	"sInfoThousands":  ".",
+	"sLengthMenu":     "Прикажи _MENU_ записа",
+	"sLoadingRecords": "Учитавање...",
+	"sProcessing":     "Обрада...",
+	"sSearch":         "Претрага:",
+	"sZeroRecords":    "Нису пронађени одговарајући записи",
+	"oPaginate": {
+		"sFirst":    "Почетна",
+		"sLast":     "Последња",
+		"sNext":     "Следећа",
+		"sPrevious": "Предходна"
+	},
+	"oAria": {
+		"sSortAscending":  ": активирајте да сортирате колону узлазно",
+		"sSortDescending": ": активирајте да сортирате колону силазно"
+	}
 }
