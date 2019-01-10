@@ -79,6 +79,15 @@ $.fn.dataTable.ext.order.intl = function ( locales, options ) {
 		types.order['string-desc'] = function ( a, b ) {
 			return collator.compare( a, b ) * -1;
 		};
+
+		// only compare inner text
+		delete types.order['html-pre'];
+        types.order['html-asc'] = function (a, b) {
+            return collator.compare( $(a)[0].innerHTML, $(b)[0].innerText );
+        }
+        types.order['html-desc'] = function ( a, b ) {
+            return collator.compare( $(a)[0].innerHTML, $(b)[0].innerText ) * -1;
+        };
 	}
 };
 
