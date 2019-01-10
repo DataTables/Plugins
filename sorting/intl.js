@@ -83,10 +83,10 @@ $.fn.dataTable.ext.order.intl = function ( locales, options ) {
 		// only compare inner text
 		delete types.order['html-pre'];
         types.order['html-asc'] = function (a, b) {
-            return collator.compare( $(a)[0].innerHTML, $(b)[0].innerText );
+            return collator.compare($(a).text(), $(b).text());
         }
         types.order['html-desc'] = function ( a, b ) {
-            return collator.compare( $(a)[0].innerHTML, $(b)[0].innerText ) * -1;
+            return collator.compare($(a).text(), $(b).text()) * -1;
         };
 	}
 };
