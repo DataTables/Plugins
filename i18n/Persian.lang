@@ -7,20 +7,20 @@
  */
 
 {
-	"sEmptyTable":     "هیچ داده ای در جدول وجود ندارد",
-	"sInfo":           "نمایش _START_ تا _END_ از _TOTAL_ رکورد",
-	"sInfoEmpty":      "نمایش 0 تا 0 از 0 رکورد",
-	"sInfoFiltered":   "(فیلتر شده از _MAX_ رکورد)",
+	"sEmptyTable":     "هیچ داده‌ای در جدول وجود ندارد",
+	"sInfo":           "نمایش _START_ تا _END_ از _TOTAL_ ردیف",
+	"sInfoEmpty":      "نمایش 0 تا 0 از 0 ردیف",
+	"sInfoFiltered":   "(فیلتر شده از _MAX_ ردیف)",
 	"sInfoPostFix":    "",
 	"sInfoThousands":  ",",
-	"sLengthMenu":     "نمایش _MENU_ رکورد",
+	"sLengthMenu":     "نمایش _MENU_ ردیف",
 	"sLoadingRecords": "در حال بارگزاری...",
 	"sProcessing":     "در حال پردازش...",
 	"sSearch":         "جستجو:",
 	"sZeroRecords":    "رکوردی با این مشخصات پیدا نشد",
 	"oPaginate": {
-		"sFirst":    "ابتدا",
-		"sLast":     "انتها",
+		"sFirst":    "برگه‌ی نخست",
+		"sLast":     "برگه‌ی آخر",
 		"sNext":     "بعدی",
 		"sPrevious": "قبلی"
 	},
