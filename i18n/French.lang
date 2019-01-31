@@ -25,6 +25,13 @@
 	},
 	"oAria": {
 		"sSortAscending":  ": activer pour trier la colonne par ordre croissant",
-		"sSortDescending": ": activer pour trier la colonne par ordre d&eacute;croissant"
-	}	
+		"sSortDescending": ": activer pour trier la colonne par ordre décroissant"
+	},
+	"select": {
+        	"rows": {
+         		"_": "%d lignes sélectionnées",
+         		"0": "Aucune ligne sélectionnée",
+        		"1": "1 ligne sélectionnée"
+        	}  
+	}
 }
