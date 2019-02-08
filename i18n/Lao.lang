@@ -1,3 +1,9 @@
+/**
+ * Lao translation
+ *  @name Lao
+ *  @anchor Lao
+ *  @author Jumbo Liemphachanh
+ */
 {
     "sEmptyTable":     "ບໍ່ພົບຂໍ້ມູນໃນຕາຕະລາງ",
     "sInfo":           "ສະແດງ _START_ ເຖິງ _END_ ຈາກ _TOTAL_ ແຖວ",
