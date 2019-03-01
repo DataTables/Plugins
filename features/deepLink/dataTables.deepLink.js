@@ -59,8 +59,6 @@
 			var pair = search[i].split('=');
 			var key = decodeURIComponent(pair[0]);
 			var value = decodeURIComponent(pair[1]);
-			console.log('key: ' + key);
-			console.log('value: ' + value);
 
 			// "Casting"
 			if (value === 'true') {
