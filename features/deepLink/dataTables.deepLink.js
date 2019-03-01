@@ -60,6 +60,8 @@ $.fn.dataTable.ext.deepLink = function(whitelist) {
 		var pair = search[i].split('=');
 		var key = decodeURIComponent(pair[0]);
 		var value = decodeURIComponent(pair[1]);
+		console.log("key: " + key);
+		console.log("value: " + value);
 
 		// "Casting"
 		if (value === 'true') {
@@ -68,7 +70,8 @@ $.fn.dataTable.ext.deepLink = function(whitelist) {
 		else if (value === 'false') {
 			value = false;
 		}
-		else if (!value.match(/[^\d]/)) {
+		  else if (!value.match(/[^\d]/) && key !== 'search.search') {
+			  // don't convert if searching or it'll break the search
 			value = value * 1;
 		}
 		else if (value.indexOf('{') === 0 || value.indexOf('[') === 0) {
