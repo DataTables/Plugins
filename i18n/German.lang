@@ -45,6 +45,10 @@
 		"copySuccess": {
 			"_": "%d Zeilen kopiert",
 			"1": "1 Zeile kopiert"
+		},
+		"pageLength": {
+			"-1": "Zeige alle Zeilen",
+			"_":  "Zeige %d Zeilen"
 		}
 	}
 }
