@@ -28,7 +28,7 @@
 	}
 }(function ($, moment) {
 
-$.fn.dataTable.moment = function ( format, reverseEmpties, locale ) {
+$.fn.dataTable.moment = function ( format, locale, reverseEmpties ) {
 	var types = $.fn.dataTable.ext.type;
 
 	// Add type detection
