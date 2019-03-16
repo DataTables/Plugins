@@ -28,7 +28,7 @@
 	}
 }(function ($, moment) {
 
-$.fn.dataTable.moment = function ( format, locale ) {
+$.fn.dataTable.moment = function ( format, locale, reverseEmpties ) {
 	var types = $.fn.dataTable.ext.type;
 
 	// Add type detection
@@ -66,7 +66,7 @@ $.fn.dataTable.moment = function ( format, locale ) {
 		}
 		
 		return !moment(d, format, locale, true).isValid() ?
-			Infinity :
+			(reverseEmpties ? -Infinity : Infinity) :
 			parseInt( moment( d, format, locale, true ).format( 'x' ), 10 );
 	};
 };
