@@ -14,9 +14,9 @@
  *
  * It accepts one, two or three parameters:
  *
- * * $.fn.dataTable.render.moment( to );
- * * $.fn.dataTable.render.moment( from, to );
- * * $.fn.dataTable.render.moment( from, to, locale );
+ * * `$.fn.dataTable.render.moment( to );`
+ * * `$.fn.dataTable.render.moment( from, to );`
+ * * `$.fn.dataTable.render.moment( from, to, locale );`
  *
  * Where:
  *
