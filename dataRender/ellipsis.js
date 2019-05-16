@@ -47,7 +47,7 @@
  *    } );
  */
 
-jQuery.fn.dataTable.render.ellipsis = function ( cutoff, wordbreak, escapeHtml ) {
+jQuery.fn.dataTable.render.ellipsis = function ( cutoff, maxLength, wordbreak, escapeHtml ) {
     var esc = function ( t ) {
         return t
             .replace( /&/g, '&amp;' )
@@ -55,7 +55,7 @@ jQuery.fn.dataTable.render.ellipsis = function ( cutoff, wordbreak, escapeHtml )
             .replace( />/g, '&gt;' )
             .replace( /"/g, '&quot;' );
     };
- 
+
     return function ( d, type, row ) {
         // Order, search and type get the original data
         if ( type !== 'display' ) {
@@ -68,36 +68,38 @@ jQuery.fn.dataTable.render.ellipsis = function ( cutoff, wordbreak, escapeHtml )
  
         d = d.toString(); // cast numbers
  
-        if ( d.length <= cutoff * 1.5) {
+        if ( d.length <= maxLength) {
             return d;
         }
- 
         var shortened = d.substr(0, cutoff-1);
- 
+        
         // Find the last white space character in the string
         if ( wordbreak ) {
             shortened = shortened.replace(/\s([^\s]*)$/, '');
         }
- 
+        var remainder = d.substr(shortened.length);
         // Protect against uncontrolled HTML input
         if ( escapeHtml ) {
             shortened = esc( shortened );
+            remainder = esc(remainder);
         }
-        var myID = row[0];
-        return '<span class="ellipsis" title="'+esc(d)+'">'+ shortened + '</span><a id="ellipsis_' + myID + '" onclick=toggleVisibility(' + myID + ') class="ellipsis" style="font-style: italic"> &#8230more</a><span id="truncatedItem_' + myID + '" style="display:none">' +d.substr(shortened.length, d.length)+'<span>';
+
+        return '<span class="ellipsis" title="'+esc(d)+'">' + 
+        shortened +
+        '</span><a  onclick="toggleVisibility(this)" class="ellipsis" style="font-style: italic"> &#8230more</a><span style="display:none">' +
+        remainder + '</span></span>';
     };
 };
 
 
-function toggleVisibility(myId){
-	var truncatedText = document.getElementById("truncatedItem_"+myId);
-	var ellipsis = document.getElementById("ellipsis_" + myId);
-	if(ellipsis.innerText === truncatedText.innerText) {
-        ellipsis.innerText = " …more";
-        ellipsis.style = "font-style: italic";
-  	}
-	else {
-		ellipsis.innerText = truncatedText.innerText;
-        ellipsis.style  = "";
-	}
+// eslint-disable-next-line no-unused-vars
+function toggleVisibility(thisElement){
+    if(thisElement.innerText === " …more") {
+        thisElement.style  = "font-style: inherit";
+        thisElement.innerText = thisElement.nextSibling.innerText;
+    }
+    else {
+        thisElement.innerText = " …more";
+        thisElement.style = "font-style: italic";
+    }
 } 
