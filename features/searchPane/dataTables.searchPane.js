@@ -221,7 +221,7 @@
 			}
 		},
 
-		_getOptions: function ( colIdx ) {
+		_getOptions: function(colIdx) {
 			var table = this.s.dt;
 
 			return table.settings()[0].aoColumns[colIdx].searchPane || {};
@@ -257,7 +257,10 @@
 								var d = $(filter)
 									.data('filter')
 									.toString();
-								return $.fn.dataTable.util.escapeRegex(d);
+								var decoded = $('<div/>')
+									.html(d)
+									.text();
+								return $.fn.dataTable.util.escapeRegex(decoded);
 							}).join('|') +
 							')',
 						true,
@@ -275,7 +278,10 @@
 								var d = $(filter)
 									.data('filter')
 									.toString();
-								return $.fn.dataTable.util.escapeRegex(d);
+								var decoded = $('<div/>')
+									.html(d)
+									.text();
+								return $.fn.dataTable.util.escapeRegex(decoded);
 							}).join('|') +
 							')$',
 						true,
