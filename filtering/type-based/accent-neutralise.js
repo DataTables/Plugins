@@ -46,22 +46,25 @@ function removeAccents ( data ) {
         .replace( /[ίϊΐ]/g, 'ι' )
         .replace( /ή/g, 'η' )
         .replace( /\n/g, ' ' )
-        .replace( /á/g, 'a' )
-        .replace( /é/g, 'e' )
-        .replace( /í/g, 'i' )
-        .replace( /ó/g, 'o' )
-        .replace( /ú/g, 'u' )
-        .replace( /ê/g, 'e' )
-        .replace( /î/g, 'i' )
-        .replace( /ô/g, 'o' )
-        .replace( /è/g, 'e' )
-        .replace( /ï/g, 'i' )
-        .replace( /ü/g, 'u' )
-        .replace( /ã/g, 'a' )
-        .replace( /õ/g, 'o' )
-        .replace( /ç/g, 'c' )
-        .replace( /ì/g, 'i' );
-}
+        .replace( /[ÀÁÂÃÄÅ]/g, 'A' )
+        .replace( /[àáâãäå]/g, 'a' )
+        .replace( /[ÈÉÊË]/g, 'E' )
+        .replace( /[èéêë]/g, 'e' )
+        .replace( /[ÌÍÎÏ]/g, 'i' )
+        .replace( /[ìíîï]/g, 'i' )
+        .replace( /[ÒÓÔÕÖ]/g, 'O' )
+        .replace( /[òóôõö]/g, 'o' )
+        .replace( /[ÙÚÛÜ]/g, 'U' )
+        .replace( /[ùúûü]/g, 'u' )
+        .replace( /Ñ/g, 'N' )
+        .replace( /ñ/g, 'n' )
+        .replace( /Ț/g, 'T' )
+        .replace( /ț/g, 't' )
+        .replace( /Ș/g, 'S' )
+        .replace( /ș/g, 's' )
+        .replace( /Ç/g, 'C' )
+        .replace( /ç/g, 'c' );
+    }
 
 var searchType = jQuery.fn.DataTable.ext.type.search;
 
