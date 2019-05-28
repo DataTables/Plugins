@@ -4,7 +4,7 @@
  * This is useful for sorting data which requires some extra context to be included in the table.
  *
  *  @name numString
- *  @summary Sort with the prefixed word `dt-string The` removed, if present
+ *  @summary Sorting for number value that is included anywhere in a regex.
  *  @author [Sandy Galloway](http://datatables.net)
  *
  * 
