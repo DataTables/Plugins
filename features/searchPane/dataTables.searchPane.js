@@ -357,7 +357,7 @@
 			if (!col.searchPane) {
 				col.searchPane = {};
 			}
-			col.searchPane.options = options;
+			col.searchPane.values = options;
 
 			if (ctx.searchPane) {
 				ctx.searchPane.rebuild();
