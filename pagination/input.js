@@ -94,7 +94,7 @@
 			}
 
 			nInput.type = 'text';
-			nPage.innerHTML = 'Page ';
+			nPage.innerHTML = language.page || '';
 
 			nPaging.appendChild(nFirst);
 			nPaging.appendChild(nPrevious);
