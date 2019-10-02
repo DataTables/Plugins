@@ -8,10 +8,10 @@
 {
   "processing": "Интизор шавед...",
   "search": "Ҷустуҷӯ:",
-  "lengthMenu": "Намоиши сабтҳои MENU",
-  "info": "Сабтҳо аз START то END аз TOTAL сабтҳо",
+  "lengthMenu": "Намоиши сабтҳои _MENU_",
+  "info": "Сабтҳо аз _START_ то _END_ аз _TOTAL_ сабтҳо",
   "infoEmpty": "Сабтҳо аз 0 то 0 аз 0 сабтҳо",
-  "infoFiltered": "(филтр карда шудааст аз MAX сабтҳо)",
+  "infoFiltered": "(филтр карда шудааст аз _MAX_ сабтҳо)",
   "infoPostFix": "",
   "loadingRecords": "Боргирии сабтҳо...",
   "zeroRecords": "Сабтҳо вуҷуд надорад.",
