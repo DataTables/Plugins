@@ -3,12 +3,13 @@
  *  @name Gujarati
  *  @anchor Gujarati
  *  @author <a href="http://www.apoto.com/">Apoto</a>
+ *  @author <a href="https ://www.mrcloudhosting.com/">Mr Cloud Hosting</a>
  */
 
 {
 	"sEmptyTable":     "કોષ્ટકમાં કોઈ ડેટા ઉપલબ્ધ નથી",
-	"sInfo":           "કુલ_પ્રવેશો_અંત_પ્રારંભ_દર્શાવે_છે",
-	"sInfoEmpty":      "0 પ્રવેશો 0 0 બતાવી રહ્યું છે",
+	"sInfo":           "કુલ _TOTAL_ માંથી _START_ થી  _END_ પ્રવેશો દર્શાવે છે",
+	"sInfoEmpty":      "કુલ 0 પ્રવેશ માંથી 0 થી 0 બતાવી રહ્યું છે",
 	"sInfoFiltered":   "(_MAX_ કુલ પ્રવેશો માંથી ફિલ્ટર)",
 	"sInfoPostFix":    "",
 	"sInfoThousands":  ",",
@@ -16,7 +17,7 @@
 	"sLoadingRecords": "લોડ કરી રહ્યું છે ...",
 	"sProcessing":     "પ્રક્રિયા ...",
 	"sSearch":         "શોધો:",
-	"sZeroRecords":    "કોઈ મેળ ખાતા રેકોર્ડ મળી",
+	"sZeroRecords":    "કોઈ મેળ ખાતા રેકોર્ડ મળ્યા નથી ",
 	"oPaginate": {
 		"sFirst":      "પ્રથમ",
 		"sLast":       "અંતિમ",
