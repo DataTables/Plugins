@@ -8,7 +8,7 @@
 
 {
 	"sEmptyTable":     "કોષ્ટકમાં કોઈ ડેટા ઉપલબ્ધ નથી",
-	"sInfo":           "_TOTAL_ માંથી _START_ થી  _END_ પ્રવેશો દર્શાવે છે",
+	"sInfo":           "કુલ _TOTAL_ માંથી _START_ થી  _END_ પ્રવેશો દર્શાવે છે",
 	"sInfoEmpty":      "0 પ્રવેશો 0 0 બતાવી રહ્યું છે",
 	"sInfoFiltered":   "(_MAX_ કુલ પ્રવેશો માંથી ફિલ્ટર)",
 	"sInfoPostFix":    "",
