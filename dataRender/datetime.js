@@ -36,7 +36,7 @@
  *    $('#example').DataTable( {
  *      columnDefs: [ {
  *        targets: 1,
- *        render: $.fn.dataTable.render.moment( 'Do MMM YYYYY' )
+ *        render: $.fn.dataTable.render.moment( 'Do MMM YYYY' )
  *      } ]
  *    } );
  *
