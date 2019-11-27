@@ -164,6 +164,7 @@
 				}
 
 				oSettings._iDisplayStart = iNewStart;
+				oSettings.oInstance.trigger("page.dt", oSettings);
 				fnCallbackDraw(oSettings);
 			});
 
