@@ -85,6 +85,12 @@ $.fn.dataTableExt.oPagination.simple_incremental_bootstrap = {
         });
 
         $(nNext).click(function () {
+            if(oSettings.aiDisplay.length < oSettings._iDisplayLength){
+                oSettings._iRecordsTotal = oSettings._iDisplayStart + oSettings.aiDisplay.length;
+            }else{
+                oSettings._iRecordsTotal = oSettings._iDisplayStart +  oSettings._iDisplayLength + 1;
+            }
+
             if (!(oSettings.fnDisplayEnd() == oSettings.fnRecordsDisplay()
                 ||
                 oSettings.aiDisplay.length < oSettings._iDisplayLength)) {
