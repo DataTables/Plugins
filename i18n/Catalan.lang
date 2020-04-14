@@ -6,17 +6,17 @@
  */
 
 {
-        "sProcessing":    "Processant...",
-        "sLengthMenu":    "Mostra _MENU_ registres",
-        "sZeroRecords":   "No s'han trobat registres",
-        "sEmptyTable":    "No hi ha cap dada disponible en aquesta taula.",
-	"sInfo":          "Mostrant del _START_ al _END_ d'un total de _TOTAL_ registres",
-	"sInfoEmpty":     "No hi ha registres disponibles",
-	"sInfoFiltered":  "(filtrat de _MAX_ registres)",
-	"sInfoPostFix":   "",
-	"sSearch":        "Cerca:",
-	"sUrl":           "",
-	"sInfoThousands": ".",
+    "sProcessing":     "Processant...",
+    "sLengthMenu":     "Mostra _MENU_ registres",
+    "sZeroRecords":    "No s'han trobat registres",
+    "sEmptyTable":     "No hi ha cap dada disponible en aquesta taula.",
+	"sInfo":           "Mostrant del _START_ al _END_ d'un total de _TOTAL_ registres",
+	"sInfoEmpty":      "No hi ha registres disponibles",
+	"sInfoFiltered":   "(filtrat de _MAX_ registres)",
+	"sInfoPostFix":    "",
+	"sSearch":         "Cerca:",
+	"sUrl":            "",
+	"sInfoThousands":  ".",
 	"sLoadingRecords": "Carregant...",
 	"oPaginate": {
 		"sFirst":    "Primer",
@@ -24,13 +24,13 @@
 		"sNext":     "Següent",
 		"sLast":     "Últim"
 	}
-        "oAria": {
-                "sSortAscending":  ": Activa per ordenar la columna de manera ascendent",
-                "sSortDescending": ": Activa per ordenar la columna de manera descendent"
-        },
-        "buttons": {
-	        "print":  "Imprimeix",
-                "copy":   "Copia",
-                "colvis": "Columnes"
-        }
+    "oAria": {
+        "sSortAscending":  ": Activa per ordenar la columna de manera ascendent",
+        "sSortDescending": ": Activa per ordenar la columna de manera descendent"
+    },
+    "buttons": {
+        "print":  "Imprimeix",
+        "copy":   "Copia",
+        "colvis": "Columnes"
+    }
 }
