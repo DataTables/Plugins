@@ -23,7 +23,7 @@
         "sPrevious": "Anterior",
         "sNext":     "Següent",
         "sLast":     "Últim"
-    }
+    },
     "oAria": {
         "sSortAscending":  ": Activa per ordenar la columna de manera ascendent",
         "sSortDescending": ": Activa per ordenar la columna de manera descendent"
