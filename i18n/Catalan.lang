@@ -16,7 +16,7 @@
     "sSearch":         "Cerca:",
     "sUrl":            "",
     "sInfoThousands":  ".",
-    "sDecimal":        ","
+    "sDecimal":        ",",
     "sLoadingRecords": "Carregant...",
     "oPaginate": {
         "sFirst":    "Primer",
