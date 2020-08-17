@@ -4,7 +4,6 @@
  *  @anchor Catalan
  *  @author Sergi, Oriol Roselló Castells
  */
-
 {
     "sProcessing":     "Processant...",
     "sLengthMenu":     "Mostra _MENU_ registres",
@@ -17,6 +16,7 @@
     "sSearch":         "Cerca:",
     "sUrl":            "",
     "sInfoThousands":  ".",
+    "sDecimal":        ",",
     "sLoadingRecords": "Carregant...",
     "oPaginate": {
         "sFirst":    "Primer",
@@ -31,6 +31,22 @@
     "buttons": {
         "print":  "Imprimeix",
         "copy":   "Copia",
-        "colvis": "Columnes"
+        "colvis": "Columnes",
+        "copyTitle": "Copia al portapapers",
+        "copySuccess": {
+            "_": "%d files copiades",
+            "1": "1 fila copiada"
+        },
+        "pageLength": {
+            "-1": "Mostra totes les files",
+            "_":  "Mostra %d files"
+        }
+    },
+    "select": {
+        "rows": {
+            "_": "%d files seleccionades",
+            "0": "Cap fila seleccionada",
+            "1": "1 fila seleccionada"
+        }  
     }
 }
