@@ -3,6 +3,7 @@
  *  @name Kazakh
  *  @anchor Kazakh
  *  @author <a href="https://github.com/talgautb">Talgat Uspanov</a>
+ *  @lcid kk
  */
  {
   "processing": "Күте тұрыңыз...",

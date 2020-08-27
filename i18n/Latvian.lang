@@ -3,6 +3,7 @@
  *  @name Latvian
  *  @anchor Latvian
  *  @author Oskars Podans, Ruslans Jermakovičs and Edgars
+ *  @lcid lv
  */
 {
 	"processing": "Uzgaidiet ...",

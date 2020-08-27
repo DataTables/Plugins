@@ -3,6 +3,7 @@
  *  @name Lao
  *  @anchor Lao
  *  @author Jumbo Liemphachanh
+ *  @lcid lo
  */
 {
     "sEmptyTable":     "ບໍ່ພົບຂໍ້ມູນໃນຕາຕະລາງ",

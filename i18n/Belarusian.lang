@@ -3,6 +3,7 @@
 * @name Belarusian
 * @anchor Belarusian
 * @author vkachurka
+*  @lcid be
 */
 {
 	"sProcessing": "Пачакайце...",

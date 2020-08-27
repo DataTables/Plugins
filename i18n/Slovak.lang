@@ -4,6 +4,7 @@
  *  @anchor Slovak
  *  @author <a href="https://github.com/dlugos">Ivan Dlugoš</a>
  *  @author (original translation) <a href="http://miskerik.com/">Maroš Miškerik</a>
+ *  @lcid sk
  */
 {
 	"sEmptyTable":     "Nie sú k dispozícii žiadne dáta",

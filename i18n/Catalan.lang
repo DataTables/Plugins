@@ -3,6 +3,7 @@
  *  @name Catalan
  *  @anchor Catalan
  *  @author Sergi, Oriol Roselló Castells
+ *  @lcid ca
  */
 {
     "sProcessing":     "Processant...",
