@@ -11,7 +11,6 @@
 	"sInfo": "Prikazujem _START_ do _END_ od _TOTAL_ zapisov",
 	"sInfoEmpty": "Prikazujem 0 do 0 od 0 zapisov",
 	"sInfoFiltered": "(filtrirano od _MAX_ vseh zapisov)",
-	"sInfoPostFix": "",
 	"sInfoThousands": ",",
 	"sLengthMenu": "Prikaži _MENU_ zapisov",
 	"sLoadingRecords": "Nalagam...",

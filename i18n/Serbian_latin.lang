@@ -11,7 +11,6 @@
 	"sInfo":           "Prikaz _START_ do _END_ od ukupno _TOTAL_ zapisa",
 	"sInfoEmpty":      "Prikaz 0 do 0 od ukupno 0 zapisa",
 	"sInfoFiltered":   "(filtrirano od ukupno _MAX_ zapisa)",
-	"sInfoPostFix":    "",
 	"sInfoThousands":  ".",
 	"sLengthMenu":     "Prikaži _MENU_ zapisa",
 	"sLoadingRecords": "Učitavanje...",

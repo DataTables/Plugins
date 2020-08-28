@@ -11,7 +11,6 @@
 	"sInfo":           "Záznamy _START_ až _END_ z celkom _TOTAL_",
 	"sInfoEmpty":      "Záznamy 0 až 0 z celkom 0 ",
 	"sInfoFiltered":   "(vyfiltrované spomedzi _MAX_ záznamov)",
-	"sInfoPostFix":    "",
   	"sInfoThousands":  " ",
 	"sLengthMenu":     "Zobraz _MENU_ záznamov",
 	"sLoadingRecords": "Načítavam...",

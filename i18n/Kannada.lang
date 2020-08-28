@@ -11,7 +11,6 @@
     "sInfo":            "ಒಟ್ಟು _TOTAL_ ಎಂಟ್ರಿಗಳಲ್ಲಿ _START_ ರಿಂದ _END_ ವರೆಗು ತೋರಿಸಲಾಗುತ್ತಿದೆ",
     "sInfoEmpty":       "ಒಟ್ಟು 0 ಎಂಟ್ರಿಗಳಲ್ಲಿ 0 ರಿಂದ 0 ವರೆಗು ತೋರಿಸಲಾಗುತ್ತಿದೆ",
     "sInfoFiltered":    "(ಒಟ್ಟು _MAX_ ಎಂಟ್ರಿ ಗಳಿಂದ ಫಿಲ್ಟರ್ ಮಾಡಲಾಗಿದೆ)",
-    "sInfoPostFix":     "",
     "sInfoThousands":   ",",
     "sLengthMenu":      "_MENU_ ಎಂಟ್ರಿಗಳು ತೋರಿಸು",
     "sLoadingRecords":  "ಲೋಡ್ ಆಗುತ್ತಿದೆ...",

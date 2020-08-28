@@ -11,7 +11,6 @@
 	"sInfo": "_TOTAL_ ਵਿੱਚੋਂ _START_ ਤੋਂ _END_ ਐਂਟਰੀਆਂ ਦਿੱਖ ਰਹੀਆਂ ਹਨ",
 	"sInfoEmpty": "0 ਵਿੱਚੋਂ 0 ਤੋਂ 0 ਕਤਾਰਾਂ ਦਿੱਖ ਰਹੀਆਂ ਹਨ",
 	"sInfoFiltered": "(ਕੁੱਲ _MAX_ ਵਿਚੋਂ ਛਾਂਟੀਆਂ ਗਈਆਂ ਕਤਾਰਾਂ)",
-	"sInfoPostFix": "",
 	"sInfoThousands": ",",
 	"sLengthMenu": "ਕੁੱਲ _MENU_ ਕਤਾਰਾਂ",
 	"sLoadingRecords": "ਸੂਚੀ ਲੋਡ ਹੋ ਰਹੀ ਹੈ...",

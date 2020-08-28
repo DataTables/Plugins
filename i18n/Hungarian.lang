@@ -11,7 +11,6 @@
    "sInfo": "Találatok: _START_ - _END_ Összesen: _TOTAL_",
    "sInfoEmpty": "Nulla találat",
    "sInfoFiltered": "(_MAX_ összes rekord közül szűrve)",
-   "sInfoPostFix": "",
    "sInfoThousands": " ",
    "sLengthMenu": "_MENU_ találat oldalanként",
    "sLoadingRecords": "Betöltés...",
@@ -31,7 +30,6 @@
    "select": {
        "rows": {
            "_": "%d sor kiválasztva",
-           "0": "",
            "1": "1 sor kiválasztva"
        }
    },

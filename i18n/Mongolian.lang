@@ -11,7 +11,6 @@
         "sInfo":           "Нийт _TOTAL_ бичлэгээс _START_ - _END_ харуулж байна",
         "sInfoEmpty":      "Тохирох үр дүн алга",
         "sInfoFiltered":   "(нийт _MAX_ бичлэгээс шүүв)",
-        "sInfoPostFix":    "",
         "sInfoThousands":  ",",
         "sLengthMenu":     "Дэлгэцэд _MENU_ бичлэг харуулна",
         "sLoadingRecords": "Ачааллаж байна...",

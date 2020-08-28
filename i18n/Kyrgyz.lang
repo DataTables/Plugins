@@ -10,7 +10,6 @@
 	"sInfo":           "Жалпы _TOTAL_ саптын ичинен _START_-саптан _END_-сапка чейинкилер",
 	"sInfoEmpty":      "Жалпы 0 саптын ичинен 0-саптан 0-сапка чейинкилер",
 	"sInfoFiltered":   "(жалпы _MAX_ саптан фильтрленди)",
-	"sInfoPostFix":    "",
 	"sInfoThousands":  " ",
 	"sLengthMenu":     "_MENU_ саптан көрсөт",
 	"sLoadingRecords": "Жүктөлүүдө...",
