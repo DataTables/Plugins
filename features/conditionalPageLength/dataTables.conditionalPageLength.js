@@ -43,7 +43,12 @@
             return;
         }
 
-        var options = dtSettings.oInit.conditionalPageLength || $.fn.dataTable.defaults.conditionalPageLength;
+        var options = dtSettings.oInit.conditionalPageLength || $.fn.dataTable.defaults.conditionalPageLength,
+            lengthMenu = dtSettings.aLengthMenu || $.fn.dataTable.defaults.lengthMenu,
+            lengthMenuValues = Array.isArray(lengthMenu[0]) ? lengthMenu[0] : lengthMenu;
+            
+        lengthMenuValues = lengthMenuValues.filter(function(n) { return n > 0 });
+        var smallestLength = Math.min.apply(Math, lengthMenuValues);
 
         if ($.isPlainObject(options) || options === true) {
             var config = $.isPlainObject(options) ? options : {},
@@ -55,7 +60,7 @@
                         size = api.rows({search:'applied'}).count();
 
                     if (e instanceof $.Event) {
-                        if (pages <= 1) {
+                        if (pages <= 1 && size <= smallestLength) {
                             if (config.style === 'fade') {
                                 $paging.stop().fadeTo(speed, 0);
                             }
@@ -72,7 +77,7 @@
                             }
                         }
                     }
-                    else if (pages <= 1) {
+                    else if (pages <= 1 && size <= smallestLength) {
                         if (config.style === 'fade') {
                             $paging.css('opacity', 0);
                         }
