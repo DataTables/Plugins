@@ -21,7 +21,7 @@ var persianSort = [ 'آ', 'ا', 'ب', 'پ', 'ت', 'ث', 'ج', 'چ', 'ح', 'خ', 
 					'س', 'ش', 'ص', 'ط', 'ظ', 'ع', 'غ', 'ف', 'ق', 'ک', 'گ', 'ل', 'م', 'ن', 'و', 'ه', 'ی', 'ي' ];
 
 function GetUniCode(source) {
-	source = $.trim(source);
+	source = source.trim();
 	var result = '';
 	var i, index;
 	for (i = 0; i < source.length; i++) {
