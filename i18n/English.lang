@@ -72,7 +72,7 @@
 					"equals": "Equals",
 					"not": "Not",
 					"notBetween": "Not Between",
-					"notEmpty": "Not Empty",
+					"notEmpty": "Not Empty"
 				},
 				"moment": {
 					"after": "After",
@@ -82,7 +82,7 @@
 					"equals": "Equals",
 					"not": "Not",
 					"notBetween": "Not Between",
-					"notEmpty": "Not Empty",
+					"notEmpty": "Not Empty"
 				},
 				"number": {
 					"between": "Between",
@@ -94,7 +94,7 @@
 					"lte": "Less Than Equal To",
 					"not": "Not",
 					"notBetween": "Not Between",
-					"notEmpty": "Not Empty",
+					"notEmpty": "Not Empty"
 				},
 				"string": {
 					"contains": "Contains",
@@ -103,7 +103,7 @@
 					"equals": "Equals",
 					"not": "Not",
 					"notEmpty": "Not Empty",
-					"startsWith": "Starts With",
+					"startsWith": "Starts With"
 				}
 			},
 		"data": "Data",
