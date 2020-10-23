@@ -1,0 +1,16 @@
+{
+    "processing": "Processant...",
+    "lengthMenu": "Mostra _MENU_ registres",
+    "zeroRecords": "No s'han trobat registres.",
+    "info": "Mostrant de _START_ a _END_ de _TOTAL_ registres",
+    "infoEmpty": "Mostrant de 0 a 0 de 0 registres",
+    "infoFiltered": "(filtrat de _MAX_ total registres)",
+    "infoPostFix": "",
+    "search": "Filtrar:",
+    "paginate": {
+        "first": "Primer",
+        "previous": "Anterior",
+        "next": "Següent",
+        "last": "Últim"
+    }
+}
