@@ -3,13 +3,13 @@
  *  @name Lao
  *  @anchor Lao
  *  @author Jumbo Liemphachanh
+ *  @lcid lo
  */
 {
     "sEmptyTable":     "ບໍ່ພົບຂໍ້ມູນໃນຕາຕະລາງ",
     "sInfo":           "ສະແດງ _START_ ເຖິງ _END_ ຈາກ _TOTAL_ ແຖວ",
     "sInfoEmpty":      "ສະແດງ 0 ເຖິງ 0 ຈາກ 0 ແຖວ",
     "sInfoFiltered":   "(ກັ່ນຕອງຂໍ້ມູນ _MAX_ ທຸກແຖວ)",
-    "sInfoPostFix":    "",
     "sInfoThousands":  ",",
     "sLengthMenu":     "ສະແດງ _MENU_ ແຖວ",
     "sLoadingRecords": "ກຳລັງໂຫຼດຂໍ້ມູນ...",

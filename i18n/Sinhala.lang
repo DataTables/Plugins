@@ -3,6 +3,7 @@
  *  @name Sinhala
  *  @anchor Sinhala
  *  @author Isuru Sampath Ratnayake
+ *  @lcid si
  */
 
 {
@@ -10,7 +11,6 @@
 	"sInfo":           "_TOTAL_ න් _START_ සිට _END_ දක්වා",
 	"sInfoEmpty":      "0 න් 0 සිට 0 දක්වා",
 	"sInfoFiltered":   "(_MAX_ න් තෝරාගත් )",
-	"sInfoPostFix":    "",
 	"sInfoThousands":  ",",
 	"sLengthMenu":     "_MENU_ ක් පෙන්වන්න",
 	"sLoadingRecords": "පූරණය වෙමින් පවතී...",

@@ -3,6 +3,7 @@
  *  @name Croatian
  *  @anchor Croatian
  *  @author Predrag Mušić and _hrvoj3e_
+ *  @lcid hr
  */
 
 {
@@ -10,7 +11,6 @@
     "sInfo":            "Prikazano _START_ do _END_ od _TOTAL_ rezultata",
     "sInfoEmpty":       "Prikazano 0 do 0 od 0 rezultata",
     "sInfoFiltered":    "(filtrirano iz _MAX_ ukupnih rezultata)",
-    "sInfoPostFix":     "",
     "sInfoThousands":   ",",
     "sLengthMenu":      "Prikaži _MENU_ rezultata po stranici",
     "sLoadingRecords":  "Dohvaćam...",

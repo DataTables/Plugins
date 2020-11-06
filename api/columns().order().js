@@ -38,7 +38,7 @@ $.fn.dataTable.Api.register( 'columns().order()', function ( dir ) {
     var a = [];
     
     for ( var i=0, ien=columns.length ; i<ien ; i++ ) {
-      a.push( [ columns[i], $.isArray(dir) ? dir[i] : dir ] );
+      a.push( [ columns[i], Array.isArray(dir) ? dir[i] : dir ] );
     }
     
     new $.fn.dataTable.Api( settings ).order( a );

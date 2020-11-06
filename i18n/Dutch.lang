@@ -3,6 +3,7 @@
  *  @name Dutch
  *  @anchor Dutch
  *  @author <a href="http://www.blikgooien.nl/">Erwin Kerk</a> and <i>ashwin</i>
+ *  @lcid nl_nl
  */
 
 {
@@ -12,7 +13,6 @@
     "sInfo": "_START_ tot _END_ van _TOTAL_ resultaten",
     "sInfoEmpty": "Geen resultaten om weer te geven",
     "sInfoFiltered": " (gefilterd uit _MAX_ resultaten)",
-    "sInfoPostFix": "",
     "sSearch": "Zoeken:",
     "sEmptyTable": "Geen resultaten aanwezig in de tabel",
     "sInfoThousands": ".",

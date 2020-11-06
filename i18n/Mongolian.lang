@@ -3,6 +3,7 @@
  *  @name Mongolian
  *  @anchor Mongolian
  *  @author <a href="http://www.Batmandakh.com/">Batmandakh Erdenebileg</a>
+ *  @lcid mn
  */
 
 {
@@ -10,7 +11,6 @@
         "sInfo":           "Нийт _TOTAL_ бичлэгээс _START_ - _END_ харуулж байна",
         "sInfoEmpty":      "Тохирох үр дүн алга",
         "sInfoFiltered":   "(нийт _MAX_ бичлэгээс шүүв)",
-        "sInfoPostFix":    "",
         "sInfoThousands":  ",",
         "sLengthMenu":     "Дэлгэцэд _MENU_ бичлэг харуулна",
         "sLoadingRecords": "Ачааллаж байна...",
@@ -20,8 +20,8 @@
         "oPaginate": {
         	"sFirst":    "Эхнийх",
                 "sLast":     "Сүүлийнх",
-                "sNext":     "Өмнөх",
-                "sPrevious": "Дараах"
+                "sNext":     "Дараах",
+                "sPrevious": "Өмнөх"
         },
         "oAria": {
                 "sSortAscending":  ": цагаан толгойн дарааллаар эрэмбэлэх",

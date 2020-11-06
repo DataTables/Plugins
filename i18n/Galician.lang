@@ -4,6 +4,7 @@
  *  @anchor Galician
  *  @author <i>Emilio</i>
  *  @author <i>Xosé Antonio Rubal López</i>
+ *  @lcid gl
  */
 
 {
@@ -14,9 +15,7 @@
 	"sInfo":           "Mostrando rexistros do _START_ ao _END_ dun total de _TOTAL_ rexistros",
 	"sInfoEmpty":      "Mostrando rexistros do 0 ao 0 dun total de 0 rexistros",
 	"sInfoFiltered":   "(filtrado dun total de _MAX_ rexistros)",
-	"sInfoPostFix":    "",
 	"sSearch":         "Buscar:",
-	"sUrl":            "",
 	"sInfoThousands":  ",",
 	"sLoadingRecords": "Cargando...",
 	"oPaginate": {

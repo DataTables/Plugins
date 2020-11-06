@@ -3,6 +3,7 @@
  *  @name Kazakh
  *  @anchor Kazakh
  *  @author <a href="https://github.com/talgautb">Talgat Uspanov</a>
+ *  @lcid kk
  */
  {
   "processing": "Күте тұрыңыз...",
@@ -11,7 +12,6 @@
   "info": "_TOTAL_ жазбалары бойынша _START_ бастап _END_ дейінгі жазбалар",
   "infoEmpty": "0 жазбалары бойынша 0 бастап 0 дейінгі жазбалар",
   "infoFiltered": "(_MAX_ жазбасынан сұрыпталды)",
-  "infoPostFix": "",
   "loadingRecords": "Жазбалар жүктемесі...",
   "zeroRecords": "Жазбалар жоқ",
   "emptyTable": "Кестеде деректер жоқ",

@@ -3,6 +3,7 @@
  *  @name Albanian
  *  @anchor Albanian
  *  @author Besnik Belegu
+ *  @lcid sq
  */
 
 {
@@ -10,7 +11,6 @@
    "sInfo":           "Duke treguar _START_ deri _END_ prej _TOTAL_ reshtave",
    "sInfoEmpty":      "Duke treguar 0 deri 0 prej 0 reshtave",
    "sInfoFiltered":   "(të filtruara nga gjithësej _MAX_  reshtave)",
-   "sInfoPostFix":    "",
    "sInfoThousands":  ",",
    "sLengthMenu":     "Shiko _MENU_ reshta",
    "sLoadingRecords": "Duke punuar...",

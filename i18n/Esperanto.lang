@@ -3,6 +3,7 @@
  *  @name Esperanto
  *  @anchor Esperanto
  *  @author <a href="https://miestasmia.com">Mia Nordentoft</a>
+ *  @lcid eo
  */
 
 {
@@ -10,7 +11,6 @@
 	"sInfo":           "Montras _START_ ĝis _END_ el _TOTAL_ vicoj",
 	"sInfoEmpty":      "Montras 0 ĝis 0 el 0 vicoj",
 	"sInfoFiltered":   "(filtrita el entute _MAX_ vicoj)",
-	"sInfoPostFix":    "",
 	"sInfoThousands":  ".",
 	"sLengthMenu":     "Montri _MENU_ vicojn",
 	"sLoadingRecords": "Ŝarĝas ...",

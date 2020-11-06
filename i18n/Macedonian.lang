@@ -3,6 +3,7 @@
  *  @name Macedonian
  *  @anchor Macedonian
  *  @author Bojan Petkovski
+ *  @lcid mk
  */
 
 {
@@ -14,9 +15,7 @@
 	"sInfo":           "Прикажани _START_ до _END_ од _TOTAL_ записи",
 	"sInfoEmpty":      "Прикажани 0 до 0 од 0 записи",
 	"sInfoFiltered":   "(филтрирано од вкупно _MAX_ записи)",
-	"sInfoPostFix":    "",
 	"sSearch":         "Барај",
-	"sUrl": "",
 	"oPaginate": {
 		"sFirst":      "Почетна",
 		"sPrevious":   "Претходна",

@@ -3,6 +3,7 @@
  *  @name Hindi
  *  @anchor Hindi
  *  @author <a href="http://outshinesolutions.com">Outshine Solutions</a>
+ *  @lcid hi
  */
 
 {
@@ -12,9 +13,7 @@
 	"sInfo":         "_START_ to _END_ of _TOTAL_ प्रविष्टियां दिखा रहे हैं",
 	"sInfoEmpty":    "0 में से 0 से 0 प्रविष्टियां दिखा रहे हैं",
 	"sInfoFiltered": "(_MAX_ कुल प्रविष्टियों में से छठा हुआ)",
-	"sInfoPostFix":  "",
 	"sSearch":       "खोजें:",
-	"sUrl":          "",
 	"oPaginate": {
 		"sFirst":    "प्रथम",
 		"sPrevious": "पिछला",

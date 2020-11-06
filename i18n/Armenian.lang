@@ -3,6 +3,7 @@
  *  @name Armenian
  *  @anchor Armenian
  *  @author <a href="http://www.voznisoft.com/">Levon Levonyan</a>
+ *  @lcid hy
  */
 
 {
@@ -15,7 +16,6 @@
   "sInfo": "Ցուցադրված են _START_-ից _END_ արդյունքները ընդհանուր _TOTAL_-ից",
   "sInfoEmpty": "Արդյունքներ գտնված չեն",
   "sInfoFiltered": "(ֆիլտրվել է ընդհանուր _MAX_ արդյունքներից)",
-  "sInfoPostFix":  "",
   "sSearch": "Փնտրել",
   "oPaginate": {
       "sFirst": "Առաջին էջ",

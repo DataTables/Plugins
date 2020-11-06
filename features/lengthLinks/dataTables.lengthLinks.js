@@ -58,8 +58,8 @@ $.fn.dataTable.LengthLinks = function ( inst ) {
 		}
 
 		var menu = settings.aLengthMenu;
-		var lang = menu.length===2 && $.isArray(menu[0]) ? menu[1] : menu;
-		var lens = menu.length===2 && $.isArray(menu[0]) ? menu[0] : menu;
+		var lang = menu.length===2 && Array.isArray(menu[0]) ? menu[1] : menu;
+		var lens = menu.length===2 && Array.isArray(menu[0]) ? menu[0] : menu;
 
 		var out = $.map( lens, function (el, i) {
 			return el == api.page.len() ?

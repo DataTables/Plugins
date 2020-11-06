@@ -4,6 +4,7 @@
  *  @anchor Gujarati
  *  @author <a href="http://www.apoto.com/">Apoto</a>
  *  @author <a href="https ://www.mrcloudhosting.com/">Mr Cloud Hosting</a>
+ *  @lcid gu
  */
 
 {
@@ -11,7 +12,6 @@
 	"sInfo":           "કુલ _TOTAL_ માંથી _START_ થી  _END_ પ્રવેશો દર્શાવે છે",
 	"sInfoEmpty":      "કુલ 0 પ્રવેશ માંથી 0 થી 0 બતાવી રહ્યું છે",
 	"sInfoFiltered":   "(_MAX_ કુલ પ્રવેશો માંથી ફિલ્ટર)",
-	"sInfoPostFix":    "",
 	"sInfoThousands":  ",",
 	"sLengthMenu":     "બતાવો _MENU_ પ્રવેશો",
 	"sLoadingRecords": "લોડ કરી રહ્યું છે ...",

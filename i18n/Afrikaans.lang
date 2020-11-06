@@ -3,6 +3,7 @@
  *  @name Afrikaans
  *  @anchor Afrikaans
  *  @author <a href="http://www.ajoft.com">Ajoft Software</a>
+ *  @lcid af
  */
 
 {
@@ -10,7 +11,6 @@
 	"sInfo":           "uitstalling _START_ to _END_ of _TOTAL_ inskrywings",
 	"sInfoEmpty":      "uitstalling 0 to 0 of 0 inskrywings",
 	"sInfoFiltered":   "(gefiltreer uit _MAX_ totaal inskrywings)",
-	"sInfoPostFix":    "",
 	"sInfoThousands":  ",",
 	"sLengthMenu":     "uitstal _MENU_ inskrywings",
 	"sLoadingRecords": "laai...",

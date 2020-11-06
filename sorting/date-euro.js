@@ -25,8 +25,8 @@
     "date-euro-pre": function ( a ) {
         var x;
 
-        if ( $.trim(a) !== '' ) {
-            var frDatea = $.trim(a).split(' ');
+        if ( a.trim() !== '' ) {
+            var frDatea = a.trim().split(' ');
             var frTimea = (undefined != frDatea[1]) ? frDatea[1].split(':') : [00,00,00];
             var frDatea2 = frDatea[0].split('/');
             x = (frDatea2[2] + frDatea2[1] + frDatea2[0] + frTimea[0] + frTimea[1] + ((undefined != frTimea[2]) ? frTimea[2] : 0)) * 1;

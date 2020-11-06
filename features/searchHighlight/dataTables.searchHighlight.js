@@ -46,9 +46,9 @@ function highlight( body, table )
 		table.columns().every( function () {
 				var column = this;
 				column.nodes().flatten().to$().unhighlight({ className: 'column_highlight' });
-				column.nodes().flatten().to$().highlight( $.trim( column.search() ).split(/\s+/), { className: 'column_highlight' } );
+				column.nodes().flatten().to$().highlight( column.search().trim().split(/\s+/), { className: 'column_highlight' } );
 		} );
-		body.highlight( $.trim( table.search() ).split(/\s+/) );
+		body.highlight( table.search().trim().split(/\s+/) );
 	}
 }
 

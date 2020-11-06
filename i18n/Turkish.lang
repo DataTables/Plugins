@@ -3,6 +3,7 @@
  *  @name Turkish
  *  @anchor Turkish
  *  @author Umit Gorkem & Erdal TAŞKESEN
+ *  @lcid tr
  */
 
 {
@@ -11,7 +12,6 @@
 	"sInfo":           "_TOTAL_ kayıttan _START_ - _END_ arasındaki kayıtlar gösteriliyor",
 	"sInfoEmpty":      "Kayıt yok",
 	"sInfoFiltered":   "(_MAX_ kayıt içerisinden bulunan)",
-	"sInfoPostFix":    "",
 	"sInfoThousands":  ".",
 	"sLengthMenu":     "Sayfada _MENU_ kayıt göster",
 	"sLoadingRecords": "Yükleniyor...",
@@ -31,7 +31,6 @@
 	"select": {
 		"rows": {
 			"_": "%d kayıt seçildi",
-			"0": "",
 			"1": "1 kayıt seçildi"
 		}
 	}

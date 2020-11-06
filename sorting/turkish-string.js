@@ -11,7 +11,7 @@
  *    // Use plug-in for all columns
  *    $('#example').dataTable({
  *       columnDefs: [
- *           { type: 'turkish'. targets: '_all' }
+ *           { type: 'turkish', targets: '_all' }
  *       ]
  *   });
  */

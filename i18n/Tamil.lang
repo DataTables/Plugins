@@ -3,6 +3,7 @@
  *  @name Tamil
  *  @anchor Tamil
  *  @author Sam Arul Raj
+ *  @lcid ta
  */
 
 {
@@ -10,7 +11,6 @@
 	"sInfo":           "உள்ளீடுகளை் _START_ முதல _END_ உள்ள _TOTAL_ காட்டும்",
 	"sInfoEmpty":      "0 உள்ளீடுகளை 0 0 காட்டும்",
 	"sInfoFiltered":   "(_MAX_ மொத்த உள்ளீடுகளை இருந்து வடிகட்டி)",
-	"sInfoPostFix":    "",
 	"sInfoThousands":  ",",
 	"sLengthMenu":     "_MENU_ காண்பி",
 	"sLoadingRecords": "ஏற்றுகிறது ...",

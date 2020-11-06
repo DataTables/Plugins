@@ -3,6 +3,7 @@
  *  @name French
  *  @anchor French
  *  @author schizophrene
+ *  @lcid fr_fr
  */
 
 {
@@ -10,7 +11,6 @@
 	"sInfo":           "Affichage de l'élément _START_ à _END_ sur _TOTAL_ éléments",
 	"sInfoEmpty":      "Affichage de l'élément 0 à 0 sur 0 élément",
 	"sInfoFiltered":   "(filtré à partir de _MAX_ éléments au total)",
-	"sInfoPostFix":    "",
 	"sInfoThousands":  ",",
 	"sLengthMenu":     "Afficher _MENU_ éléments",
 	"sLoadingRecords": "Chargement...",

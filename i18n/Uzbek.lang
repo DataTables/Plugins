@@ -3,6 +3,7 @@
  *  @name Uzbek
  *  @anchor Uzbek
  *  @author <a href="http://davlat.info">Farkhod Dadajanov</a>
+ *  @lcid uz
  */
 
 {
@@ -10,7 +11,6 @@
 	"sInfo":         	"Umumiy _TOTAL_ yozuvlarlardan _START_ dan _END_ gachasi ko'rsatilmoqda",
 	"sInfoEmpty":    	"Umumiy 0 yozuvlardan 0 dan 0 gachasi ko'rsatilmoqda",
 	"sInfoFiltered": 	"(_MAX_ yozuvlardan filtrlandi)",
-	"sInfoPostFix":  	"",
 	"sLengthMenu":   	"_MENU_ ta yozuvlarni ko'rsat",
 	"sLoadingRecords": 	"Yozuvlar yuklanmoqda...",
 	"sProcessing":     	"Ishlayapman...",

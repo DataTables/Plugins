@@ -69,7 +69,7 @@ var _unique = 0;
 // Function to encapsulate code that is common to both the string and number
 // ordering plug-ins.
 var _setup = function ( values ) {
-	if ( ! $.isArray( values ) ) {
+	if ( ! Array.isArray( values ) ) {
 		values = [ values ];
 	}
 

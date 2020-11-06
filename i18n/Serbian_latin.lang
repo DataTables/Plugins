@@ -3,6 +3,7 @@
  *  @name Serbian (Latin)
  *  @anchor Serbian (Latin)
  *  @author <a href="http://mnovakovic.byteout.com">Marko Novakovic</a>
+ *  @lcid sr_sp
  */
 
 {
@@ -10,7 +11,6 @@
 	"sInfo":           "Prikaz _START_ do _END_ od ukupno _TOTAL_ zapisa",
 	"sInfoEmpty":      "Prikaz 0 do 0 od ukupno 0 zapisa",
 	"sInfoFiltered":   "(filtrirano od ukupno _MAX_ zapisa)",
-	"sInfoPostFix":    "",
 	"sInfoThousands":  ".",
 	"sLengthMenu":     "Prikaži _MENU_ zapisa",
 	"sLoadingRecords": "Učitavanje...",
@@ -21,7 +21,7 @@
 		"sFirst":    "Početna",
 		"sLast":     "Poslednja",
 		"sNext":     "Sledeća",
-		"sPrevious": "Predhodna"
+		"sPrevious": "Prethodna"
 	},
 	"oAria": {
 		"sSortAscending":  ": aktivirajte da sortirate kolonu uzlazno",

@@ -4,6 +4,7 @@
  *  @anchor Persian
  *  @author <a href="http://www.chavoshi.com/">Ehsan Chavoshi</a>
  *  @author <a href="http://www.robowiki.ir/">Mohammad Babazadeh</a>
+ *  @lcid fa
  */
 
 {
@@ -11,7 +12,6 @@
 	"sInfo":           "نمایش _START_ تا _END_ از _TOTAL_ ردیف",
 	"sInfoEmpty":      "نمایش 0 تا 0 از 0 ردیف",
 	"sInfoFiltered":   "(فیلتر شده از _MAX_ ردیف)",
-	"sInfoPostFix":    "",
 	"sInfoThousands":  ",",
 	"sLengthMenu":     "نمایش _MENU_ ردیف",
 	"sLoadingRecords": "در حال بارگزاری...",

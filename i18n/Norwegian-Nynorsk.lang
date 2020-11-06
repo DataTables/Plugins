@@ -3,6 +3,7 @@
  *  @name Norwegian-Nynorsk
  *  @anchor Norwegian-Nynorsk
  *  @author Andreas-Johann Østerdal Ulvestad
+ *  @lcid no_no
  */
 
 
@@ -11,14 +12,12 @@
     "sInfo": "Syner _START_ til _END_ av _TOTAL_ linjer",
     "sInfoEmpty": "Syner 0 til 0 av 0 linjer",
     "sInfoFiltered": "(filtrert frå _MAX_ totalt antal linjer)",
-    "sInfoPostFix": "",
     "sInfoThousands": " ",
     "sLoadingRecords": "Lastar...",
     "sLengthMenu": "Syn _MENU_ linjer",
     "sLoadingRecords": "Lastar...",
     "sProcessing": "Lastar...",
     "sSearch": "S&oslash;k:",
-    "sUrl": "",
     "sZeroRecords": "Inga linjer treff p&aring; s&oslash;ket",
     "oPaginate": {
         "sFirst": "Fyrste",

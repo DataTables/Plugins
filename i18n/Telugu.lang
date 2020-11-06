@@ -3,13 +3,13 @@
  *  @name Telugu
  *  @anchor Telugu
  *  @author <a href="https://in.linkedin.com/in/srinivas-rathikrindi-0405973a">Srinivas Rathikrindi</a>
+ *  @lcid te
  **/ 
 {
     "sEmptyTable": "పట్టికలో డేటా లేదు.",
     "sInfo": "మొత్తం _TOTAL_ ఎంట్రీలులో _START_ నుండి _END_ వరకు చూపిస్తున్నాం",
     "sInfoEmpty": "చూపిస్తున్నాం 0 నుండి 0 వరకు 0 ఎంట్రీలు లో",
     "sInfoFiltered": "( _MAX_ ఎంట్రీలులో నుండి వడపోయాబడినవి)",
-    "sInfoPostFix": "",
     "sInfoThousands": ",",
     "sLengthMenu": " _MENU_ ఎంట్రీలు చూపించు",
     "sLoadingRecords": "లోడ్ అవుతుంది ...",

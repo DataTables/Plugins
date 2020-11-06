@@ -3,6 +3,7 @@
  *  @name Pashto
  *  @anchor Pashto
  *  @author <a href="http://mbrig.com/">MBrig | Muhammad Nasir Rahimi</a>
+ *  @lcid ps
  */
 
 {
@@ -10,7 +11,6 @@
 	"sInfo":           "د _START_ څخه تر _END_ پوري، له ټولو _TOTAL_ څخه",
 	"sInfoEmpty":      "د 0 څخه تر 0 پوري، له ټولو 0 څخه",
 	"sInfoFiltered":   "(لټول سوي له ټولو _MAX_ څخه)",
-	"sInfoPostFix":    "",
 	"sInfoThousands":  ",",
 	"sLengthMenu":     "_MENU_ کتاره وښايه",
 	"sLoadingRecords": "منتظر اوسئ...",

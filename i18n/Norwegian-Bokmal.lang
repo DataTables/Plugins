@@ -4,6 +4,7 @@
  *  @anchor Norwegian-Bokmal
  *  @author Petter Ekrann
  *  @author Vegard Johannessen
+ *  @lcid no_nb
  */
 
 {
@@ -11,14 +12,12 @@
 	"sInfo": "Viser _START_ til _END_ av _TOTAL_ linjer",
 	"sInfoEmpty": "Viser 0 til 0 av 0 linjer",
 	"sInfoFiltered": "(filtrert fra _MAX_ totalt antall linjer)",
-	"sInfoPostFix": "",
 	"sInfoThousands": " ",
 	"sLoadingRecords": "Laster...",
 	"sLengthMenu": "Vis _MENU_ linjer",
 	"sLoadingRecords": "Laster...",
 	"sProcessing": "Laster...",
 	"sSearch": "S&oslash;k:",
-	"sUrl": "",
 	"sZeroRecords": "Ingen linjer matcher s&oslash;ket",
   	"oPaginate": {
 		"sFirst": "F&oslash;rste",

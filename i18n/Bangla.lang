@@ -3,6 +3,7 @@
  *  @name Bangla
  *  @anchor Bangla
  *  @author <a href="http://khaledcse06.wordpress.com">Md. Khaled Ben Islam</a>
+ *  @lcid bn
  */
 
 {
@@ -12,9 +13,7 @@
 	"sInfo":         "_TOTAL_ টা এন্ট্রির মধ্যে _START_ থেকে _END_ পর্যন্ত দেখানো হচ্ছে",
 	"sInfoEmpty":    "কোন এন্ট্রি খুঁজে পাওয়া যায় নাই",
 	"sInfoFiltered": "(মোট _MAX_ টা এন্ট্রির মধ্যে থেকে বাছাইকৃত)",
-	"sInfoPostFix":  "",
 	"sSearch":       "অনুসন্ধান:",
-	"sUrl":          "",
 	"oPaginate": {
 		"sFirst":    "প্রথমটা",
 		"sPrevious": "আগেরটা",

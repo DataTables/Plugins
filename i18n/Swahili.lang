@@ -3,6 +3,7 @@
  *  @name Swahili
  *  @anchor Swahili
  *  @author <a href="http://zoop.co.tz/schoolpesa/">Roy Owino</a>
+ *  @lcid sw
  */
 
 {
@@ -10,7 +11,6 @@
 	"sInfo":           "Inaonyesha _START_ mpaka _END_ ya matokeo _TOTAL_",
 	"sInfoEmpty":      "Inaonyesha 0 hadi 0 ya matokeo 0",
 	"sInfoFiltered":   "(uschujo kutoka matokeo idadi _MAX_)",
-	"sInfoPostFix":    "",
 	"sInfoThousands":  ",",
 	"sLengthMenu":     "Onyesha _MENU_ matokeo",
 	"sLoadingRecords": "Inapakia...",

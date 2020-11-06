@@ -3,6 +3,7 @@
  *  @name Korean
  *  @anchor Korean
  *  @author WonGoo Lee
+ *  @lcid ko
  */
 
 {
@@ -10,7 +11,6 @@
    "sInfo":           "_START_ - _END_ / _TOTAL_",
    "sInfoEmpty":      "0 - 0 / 0",
    "sInfoFiltered":   "(총 _MAX_ 개)",
-   "sInfoPostFix":    "",
    "sInfoThousands":  ",",
    "sLengthMenu":     "페이지당 줄수 _MENU_",
    "sLoadingRecords": "읽는중...",

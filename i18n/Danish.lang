@@ -3,6 +3,7 @@
  *  @name Danish
  *  @anchor Danish
  *  @author <a href="http://www.kor.dk/">Werner Knudsen</a>
+ *  @lcid da
  */
 
 {
@@ -12,9 +13,7 @@
 	"sInfo":         "Viser _START_ til _END_ af _TOTAL_ linjer",
 	"sInfoEmpty":    "Viser 0 til 0 af 0 linjer",
 	"sInfoFiltered": "(filtreret fra _MAX_ linjer)",
-	"sInfoPostFix":  "",
 	"sSearch":       "S&oslash;g:",
-	"sUrl":          "",
 	"oPaginate": {
 	    "sFirst":    "F&oslash;rste",
 	    "sPrevious": "Forrige",

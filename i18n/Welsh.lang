@@ -3,6 +3,7 @@
  *  @name Welsh
  *  @anchor Welsh
  *  @author <a href="https://eveoh.nl/">Marco Krikke</a>
+ *  @lcid cy
  */
 
 {
@@ -10,7 +11,6 @@
 	"sInfo":           "Dangos _START_ i _END_ o _TOTAL_ cofnod",
 	"sInfoEmpty":      "Dangos 0 i 0 o 0 cofnod",
 	"sInfoFiltered":   "(wedi hidlo o gyfanswm o _MAX_ cofnod)",
-	"sInfoPostFix":    "",
 	"sInfoThousands":  ",",
 	"sLengthMenu":     "Dangos _MENU_ cofnod",
 	"sLoadingRecords": "Wrthi'n llwytho...",

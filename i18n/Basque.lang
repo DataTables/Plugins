@@ -3,6 +3,7 @@
  *  @name Basque
  *  @anchor Basque
  *  @author <a href="https://github.com/xabikip/">Xabi Pico</a>
+ *  @lcid eu
  */
 
 {
@@ -13,9 +14,7 @@
 	"sInfo":           "_START_ -etik _END_ -erako erregistroak erakusten, guztira _TOTAL_ erregistro",
 	"sInfoEmpty":      "0tik 0rako erregistroak erakusten, guztira 0 erregistro",
 	"sInfoFiltered":   "(guztira _MAX_ erregistro iragazten)",
-	"sInfoPostFix":    "",
 	"sSearch":         "Aurkitu:",
-	"sUrl":            "",
 	"sInfoThousands":  ",",
 	"sLoadingRecords": "Abiarazten...",
 	"oPaginate": {

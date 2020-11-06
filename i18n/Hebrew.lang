@@ -3,6 +3,7 @@
  *  @name Hebrew
  *  @anchor Hebrew
  *  @author <a href="http://ww3.co.il/">Neil Osman (WW3)</a>
+ *  @lcid he
  */
 
 {
@@ -13,9 +14,7 @@
     "info": "_START_ עד _END_ מתוך _TOTAL_ רשומות" ,
     "infoEmpty":    "0 עד 0 מתוך 0 רשומות",
     "infoFiltered": "(מסונן מסך _MAX_  רשומות)",
-    "infoPostFix":  "",
     "search":       "חפש:",
-    "url":          "",
     "paginate": {
         "first":    "ראשון",
         "previous": "קודם",

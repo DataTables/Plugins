@@ -4,6 +4,7 @@
  *  @anchor Russian
  *  @author Tjoma
  *  @autor aspyatkin 
+ *  @lcid ru
  */
 
 {
@@ -13,7 +14,6 @@
   "info": "Записи с _START_ до _END_ из _TOTAL_ записей",
   "infoEmpty": "Записи с 0 до 0 из 0 записей",
   "infoFiltered": "(отфильтровано из _MAX_ записей)",
-  "infoPostFix": "",
   "loadingRecords": "Загрузка записей...",
   "zeroRecords": "Записи отсутствуют.",
   "emptyTable": "В таблице отсутствуют данные",

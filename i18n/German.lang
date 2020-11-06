@@ -5,6 +5,7 @@
  *  @author Joerg Holz
  *  @author DJmRek - Markus Bergt
  *  @author OSWorX https://osworx.net
+ *  @lcid de_de
  */
 
 {
@@ -12,7 +13,6 @@
 	"sInfo":         	"_START_ bis _END_ von _TOTAL_ Einträgen",
 	"sInfoEmpty":    	"Keine Daten vorhanden",
 	"sInfoFiltered": 	"(gefiltert von _MAX_ Einträgen)",
-	"sInfoPostFix":  	"",
 	"sInfoThousands":  	".",
 	"sLengthMenu":   	"_MENU_ Einträge anzeigen",
 	"sLoadingRecords": 	"Wird geladen ..",
@@ -32,7 +32,6 @@
 	"select": {
     	"rows": {
 			"_": "%d Zeilen ausgewählt",
-			"0": "",
 			"1": "1 Zeile ausgewählt"
 	    }
 	},
