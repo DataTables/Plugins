@@ -1,0 +1,22 @@
+{
+    "emptyTable": "Neniuj datumoj en tabelo",
+    "info": "Montras _START_ ?is _END_ el _TOTAL_ vicoj",
+    "infoEmpty": "Montras 0 ?is 0 el 0 vicoj",
+    "infoFiltered": "(filtrita el entute _MAX_ vicoj)",
+    "infoThousands": ".",
+    "lengthMenu": "Montri _MENU_ vicojn",
+    "loadingRecords": "?ar?as ...",
+    "processing": "Pretigas ...",
+    "search": "Ser?i:",
+    "zeroRecords": "Neniuj rezultoj trovitaj",
+    "paginate": {
+        "first": "Unua",
+        "last": "Lasta",
+        "next": "Venonta",
+        "previous": "Anta?a"
+    },
+    "aria": {
+        "sortAscending": ": aktivigi por filtri kolumnon kreskante",
+        "sortDescending": ": aktivigi por filtri kolumnon malkreskante"
+    }
+}
