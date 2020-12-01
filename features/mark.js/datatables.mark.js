@@ -1,7 +1,7 @@
 /*!***************************************************
- * datatables.mark.js v2.0.1
+ * datatables.mark.js v2.1.0
  * https://github.com/julmot/datatables.mark.js
- * Copyright (c) 2016–2017, Julian Motz
+ * Copyright (c) 2016–2020, Julian Kühnel
  * Released under the MIT license https://git.io/voRZ7
  *****************************************************/
 
@@ -47,6 +47,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var _this = this;
 
         var ev = 'draw.dt.dth column-visibility.dt.dth column-reorder.dt.dth';
+        ev += ' responsive-display.dt.dth';
         var intvl = null;
         this.instance.on(ev, function () {
           var rows = _this.instance.rows({
@@ -73,7 +74,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         var _this2 = this;
 
         var globalSearch = this.instance.search();
-        $(this.instance.table().body()).unmark(this.options);
+        var $tableBody = $(this.instance.table().body());
+        $tableBody.unmark(this.options);
+        if (this.instance.table().rows({ search: 'applied' }).data().length) {
+          $tableBody.mark(globalSearch, this.options);
+        }
         this.instance.columns({
           search: 'applied',
           page: 'current'
@@ -82,7 +87,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               searchVal = columnSearch || globalSearch;
           if (searchVal) {
             nodes.forEach(function (node) {
-              $(node).mark(searchVal, _this2.options);
+              $(node).unmark(_this2.options).mark(searchVal, _this2.options);
             });
           }
         });
