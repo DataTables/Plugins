@@ -2,29 +2,144 @@
  * Chinese translation
  *  @name Chinese
  *  @anchor Chinese
- *  @author <a href="http://docs.jquery.com/UI">Chi Cheng</a>
+ *  @author <a href="http://blog.cloud-mes.com">Eric Guo 过纯中</a>
  *  @lcid zh
  */
 
 {
-	"sProcessing":   "处理中...",
-	"sLengthMenu":   "显示 _MENU_ 项结果",
-	"sZeroRecords":  "没有匹配结果",
-	"sInfo":         "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
-	"sInfoEmpty":    "显示第 0 至 0 项结果，共 0 项",
-	"sInfoFiltered": "(由 _MAX_ 项结果过滤)",
-	"sSearch":       "搜索:",
-	"sEmptyTable":     "表中数据为空",
-	"sLoadingRecords": "载入中...",
-	"sInfoThousands":  ",",
-	"oPaginate": {
-		"sFirst":    "首页",
-		"sPrevious": "上页",
-		"sNext":     "下页",
-		"sLast":     "末页"
+	"emptyTable":     "表中数据为空",
+	"info":           "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+	"infoEmpty":      "显示第 0 至 0 项结果，共 0 项",
+	"infoFiltered":   "(由 _MAX_ 项结果过滤)",
+	"infoThousands":  ",",
+	"lengthMenu":     "显示 _MENU_ 项结果",
+	"loadingRecords": "载入中...",
+	"processing":     "处理中...",
+	"search":         "搜索:",
+	"zeroRecords":    "没有匹配结果",
+	"thousands": ",",
+	"paginate": {
+		"first":    "首页",
+		"last":     "末页",
+		"next":     "下页",
+		"previous": "上页"
 	},
-	"oAria": {
-		"sSortAscending":  ": 以升序排列此列",
-		"sSortDescending": ": 以降序排列此列"
+	"aria": {
+		"sortAscending":  ": 以升序排列此列",
+		"sortDescending": ": 以降序排列此列"
+	},
+	"autoFill": {
+		"cancel": "取消",
+		"fill": "用 <i>%d</i> 填充所有单元格",
+		"fillHorizontal": "水平填充单元格",
+		"fillVertical": "垂直填充单元格"
+	},
+	"buttons": {
+		"collection": "集合 <span class='ui-button-icon-primary ui-icon ui-icon-triangle-1-s'/>",
+		"colvis": "列可见性",
+		"colvisRestore": "恢复列可见性",
+		"copy": "复制",
+		"copyKeys": "按 ctrl 或者 u2318 + C 将表数据复制到剪贴板。<br><br>要取消，请单击此消息或按Escape键。",
+		"copySuccess": {
+			"1": "已将 1 行复制到剪贴板",
+			"_": "已将 %d 行复制到剪贴板"
+		},
+		"copyTitle": "复制到剪贴板",
+		"csv": "CSV",
+		"excel": "Excel",
+		"pageLength": {
+			"-1": "显示所有行",
+			"1": "显示 1 行",
+			"_": "显示 %d 行"
+		},
+		"pdf": "PDF",
+		"print": "打印"
+	},
+	"searchBuilder": {
+		"add": "添加搜索条件",
+		"button": {
+			"0": "搜索生成器",
+			"_": "搜索生成器 (%d)"
+		},
+		"clearAll": "全部清除",
+		"condition": "条件",
+		"conditions": {
+				"date": {
+					"after": "After",
+					"before": "Before",
+					"between": "Between",
+					"empty": "空",
+					"equals": "等于 =",
+					"not": "Not",
+					"notBetween": "Not Between",
+					"notEmpty": "非空"
+				},
+				"moment": {
+					"after": "After",
+					"before": "Before",
+					"between": "Between",
+					"empty": "空",
+					"equals": "等于 =",
+					"not": "Not",
+					"notBetween": "Not Between",
+					"notEmpty": "非空"
+				},
+				"number": {
+					"between": "Between",
+					"empty": "空",
+					"equals": "等于 =",
+					"gt": "大于 >",
+					"gte": "大于等于 >=",
+					"lt": "小于 <",
+					"lte": "小于等于 <=",
+					"not": "Not",
+					"notBetween": "Not Between",
+					"notEmpty": "非空"
+				},
+				"string": {
+					"contains": "包含",
+					"empty": "空",
+					"endsWith": "Ends With",
+					"equals": "等于 =",
+					"not": "Not",
+					"notEmpty": "非空",
+					"startsWith": "Starts With"
+				}
+			},
+		"data": "数据",
+		"deleteTitle": "删除过滤规则",
+		"leftTitle": "Outdent 条件",
+		"logicAnd": "And",
+		"logicOr": "Or",
+		"rightTitle": "Indent 条件",
+		"title": {
+			"0": "搜索生成器",
+			"_": "搜索生成器 (%d)"
+		},
+		"value": "值"
+	},
+	"searchPanes": {
+		"clearMessage": "全部清除",
+		"collapse": {
+			"0": "搜索面板",
+			"_": "搜索面板 (%d)"
+		},
+		"count": "{total}",
+		"countFiltered": "{shown} ({total})",
+		"emptyPanes": "没有搜索面板",
+		"loadMessage": "载入搜索面板",
+		"title": "%d 筛选器有效"
+	},
+	"select": {
+		"1": "已选择 1 行",
+		"_": "已选择 %d 行",
+		"cells": {
+			"1": "已选择 1 个单元格",
+			"_": "已选择 %d 个单元格"
+		},
+		"columns": {
+			"1": "已选择 1 列",
+			"_": "已选择 %d 列"
+		}
 	}
 }
