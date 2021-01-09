@@ -96,6 +96,14 @@
                 "not": "Not",
                 "notEmpty": "Not Empty",
                 "startsWith": "Starts With"
+            },
+            "array": {
+                "without": "Without",
+                "notEmpty": "Not Empty",
+                "not": "Not",
+                "contains": "Contains",
+                "empty": "Empty",
+                "equals": "Equals"
             }
         },
         "data": "Data",

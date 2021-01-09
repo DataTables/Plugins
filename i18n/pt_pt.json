@@ -17,5 +17,12 @@
     "aria": {
         "sortAscending": ": Ordenar colunas de forma ascendente",
         "sortDescending": ": Ordenar colunas de forma descendente"
+    },
+    "autoFill": {
+        "cancel": "cancelar",
+        "fill": "preencher",
+        "fillHorizontal": "preencher células na horizontal",
+        "fillVertical": "preencher células na vertical",
+        "info": "Exemplo de Auto Preenchimento"
     }
 }

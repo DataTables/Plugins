@@ -24,6 +24,79 @@
             "_": "%d lignes sélectionnées",
             "0": "Aucune ligne sélectionnée",
             "1": "1 ligne sélectionnée"
+        },
+        "_": "%d lignes selectionées"
+    },
+    "autoFill": {
+        "cancel": "Annuler",
+        "fill": "Remplir toutes les cellules avec <i>%d<\/i>",
+        "fillHorizontal": "Remplir les cellules horizontalement",
+        "fillVertical": "Remplir les cellules verticalement",
+        "info": "Exemple de remplissage automatique"
+    },
+    "searchBuilder": {
+        "conditions": {
+            "date": {
+                "after": "Après le",
+                "before": "Avant le",
+                "between": "Entre",
+                "empty": "Vide",
+                "equals": "Egal à",
+                "not": "Différent de",
+                "notBetween": "Pas entre",
+                "notEmpty": "Non vide"
+            },
+            "moment": {
+                "after": "Après le",
+                "before": "Avant le",
+                "between": "Entre",
+                "empty": "Vide",
+                "equals": "Egal à",
+                "not": "Différent de",
+                "notBetween": "Pas entre",
+                "notEmpty": "Non vide"
+            },
+            "number": {
+                "between": "Entre",
+                "empty": "Vide",
+                "equals": "Egal à",
+                "gt": "Supérieur à",
+                "gte": "Supérieur ou égal à",
+                "lt": "Inférieur à",
+                "lte": "Inférieur ou égal à",
+                "not": "Différent de",
+                "notBetween": "Pas entre",
+                "notEmpty": "Non vide"
+            },
+            "string": {
+                "contains": "Contient",
+                "empty": "Vide",
+                "endsWith": "Se termine par",
+                "equals": "Egal à",
+                "not": "Différent de",
+                "notEmpty": "Non vide",
+                "startsWith": "Commence par"
+            }
         }
+    },
+    "searchPanes": {
+        "clearMessage": "Effacer tout",
+        "count": "{total}",
+        "emptyPanes": "Pas de recherche",
+        "loadMessage": "Chargement de la recherche",
+        "title": "Filtres actifs - %d"
+    },
+    "searchPlaceholder": "Exemple de recherche",
+    "buttons": {
+        "copy": "copier",
+        "copyKeys": "Appuyer sur ctrl ou u2318 + C pour copier les données du tableau dans votre presse-papier.",
+        "copySuccess": {
+            "1": "une ligne copiée dans le presse-papier"
+        },
+        "copyTitle": "copier dans le presse-papier",
+        "csv": "csv",
+        "excel": "excel",
+        "pdf": "pdf",
+        "print": "imprimer"
     }
 }
