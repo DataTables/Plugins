@@ -14,6 +14,9 @@
  *    } );
  */
 
+var paginateSelectClassName = 'paginate_select';
+var paginateTotalClassName = 'paginate_total';
+
 $.fn.dataTableExt.oPagination.listbox = {
 	/*
 	 * Function: oPagination.listbox.fnInit
@@ -25,20 +28,29 @@ $.fn.dataTableExt.oPagination.listbox = {
 	 */
 	"fnInit": function (oSettings, nPaging, fnCallbackDraw) {
 		var nInput = document.createElement('select');
-		var nPage = document.createElement('span');
-		var nOf = document.createElement('span');
-		nOf.className = "paginate_of";
-		nPage.className = "paginate_page";
+		var nTotal = document.createElement('span');
+		var nInfo = document.createElement('span');
+
+		var language = oSettings.oLanguage.oPaginate;
+		var info = language.info || 'Page _INPUT_ of _TOTAL_';
+
+		nInput.className = paginateSelectClassName;
+		nTotal.className = paginateTotalClassName;
+
 		if (oSettings.sTableId !== '') {
 			nPaging.setAttribute('id', oSettings.sTableId + '_paginate');
 		}
 		nInput.style.display = "inline";
-		nPage.innerHTML = "Page ";
-		nPaging.appendChild(nPage);
-		nPaging.appendChild(nInput);
-		nPaging.appendChild(nOf);
-		$(nInput).change(function (e) { // Set DataTables page property and redraw the grid on listbox change event.
-			window.scroll(0,0); //scroll to top of page
+
+		info = info.replace(/_INPUT_/g, '</span>' + nInput.outerHTML + '<span>');
+		info = info.replace(/_TOTAL_/g, '</span>' + nTotal.outerHTML);
+		nInfo.innerHTML = '<span>' + info;
+		
+		$(nInfo).children().each(function (i, n) {
+				nPaging.appendChild(n);
+		});
+
+		$(nPaging).find('.' + paginateSelectClassName).change(function (e) { // Set DataTables page property and redraw the grid on listbox change event.
 			if (this.value === "" || this.value.match(/[^0-9]/)) { /* Nothing entered or non-numeric character */
 				return;
 			}
@@ -73,25 +85,22 @@ $.fn.dataTableExt.oPagination.listbox = {
 		var iPages = Math.ceil((oSettings.fnRecordsDisplay()) / oSettings._iDisplayLength);
 		var iCurrentPage = Math.ceil(oSettings._iDisplayStart / oSettings._iDisplayLength) + 1; /* Loop over each instance of the pager */
 		var an = oSettings.aanFeatures.p;
-		for (var i = 0, iLen = an.length; i < iLen; i++) {
-			var spans = an[i].getElementsByTagName('span');
-			var inputs = an[i].getElementsByTagName('select');
-			var elSel = inputs[0];
-			if(elSel.options.length != iPages) {
-				elSel.options.length = 0; //clear the listbox contents
-				for (var j = 0; j < iPages; j++) { //add the pages
-					var oOption = document.createElement('option');
-					oOption.text = j + 1;
-					oOption.value = j + 1;
-					try {
-						elSel.add(oOption, null); // standards compliant; doesn't work in IE
-					} catch (ex) {
-						elSel.add(oOption); // IE only
-					}
-				}
-				spans[1].innerHTML = "&nbsp;of&nbsp;" + iPages;
+		
+		var elSel = $(an).find('.' + paginateSelectClassName);
+
+		if(elSel.children('option').length != iPages) {
+			for (var j = 0; j < iPages; j++) { //add the pages
+				var oOption = document.createElement('option');
+				oOption.text = j + 1;
+				oOption.value = j + 1;
+				
+				elSel.append(oOption);
+				
 			}
-		  elSel.value = iCurrentPage;
 		}
+
+		elSel.val(iCurrentPage);
+
+		$(an).find('.' + paginateTotalClassName).html(iPages);
 	}
 };
