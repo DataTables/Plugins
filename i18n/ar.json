@@ -1,43 +1,139 @@
 {
-    "emptyTable": "ليست هناك بيانات متاحة في الجدول",
-    "loadingRecords": "جارٍ التحميل...",
-    "processing": "جارٍ التحميل...",
-    "lengthMenu": "أظهر _MENU_ مدخلات",
-    "zeroRecords": "لم يعثر على أية سجلات",
-    "info": "إظهار _START_ إلى _END_ من أصل _TOTAL_ مدخل",
-    "infoEmpty": "يعرض 0 إلى 0 من أصل 0 سجل",
-    "infoFiltered": "(منتقاة من مجموع _MAX_ مُدخل)",
+    "decimal": "",
+    "emptyTable": "لا يوجد بيانات",
+    "info": "عرض " + " _END_ " + " سجلات من أصل " + "_TOTAL_",
+    "infoEmpty": "عرض 0 من 0 إلى 0 سجل",
+    "infoFiltered": "",
+    "infoPostFix": "",
+    "lengthMenu": "عرض _MENU_ سجلات",
+    "loadingRecords": "تحميل...",
+    "processing": "جاري البحث...",
     "search": "ابحث:",
+    "zeroRecords": "لا يوجد سجل بهذه البيانات",
+    "thousands": ",",
     "paginate": {
-        "first": "الأول",
-        "previous": "السابق",
+        "first": "الأولى",
+        "last": "الأخيرة",
         "next": "التالي",
-        "last": "الأخير"
+        "previous": "السابق"
     },
     "aria": {
-        "sortAscending": ": تفعيل لترتيب العمود تصاعدياً",
-        "sortDescending": ": تفعيل لترتيب العمود تنازلياً"
+        "sortAscending": ":  تفعيل لترتيب العمود تصاعدياً ",
+        "sortDescending": ": تفعيل لترتيب العمود تنازلياً "
     },
-    "select": {
-        "rows": {
-            "_": "%d قيمة محددة",
-            "0": "",
-            "1": "1 قيمة محددة"
-        }
+    "autoFill": {
+        "cancel": "إلغاء",
+        "fill": "املأ جميع الحقول بـ <i>%d<\/i>",
+        "fillHorizontal": "تعبئة الحقول أفقيًا",
+        "fillVertical": "ًتعبئة الحقول عموديا"
     },
     "buttons": {
-        "print": "طباعة",
-        "colvis": "الأعمدة الظاهرة",
-        "copy": "نسخ إلى الحافظة",
-        "copyTitle": "نسخ",
-        "copyKeys": "زر <i>ctrl<\/i> أو <i>⌘<\/i> + <i>C<\/i> من الجدول<br>ليتم نسخها إلى الحافظة<br><br>للإلغاء اضغط على الرسالة أو اضغط على زر الخروج.",
+        "collection": "Collection <span class='ui-button-icon-primary ui-icon ui-icon-triangle-1-s'\/>",
+        "colvis": "إظهار الأعمدة",
+        "colvisRestore": "إستعادة العرض",
+        "copy": "نسخ",
+        "copyKeys": "Press ctrl or u2318 + C to copy the table data to your system clipboard.<br><br>To cancel, click this message or press escape.",
         "copySuccess": {
-            "_": "%d قيمة نسخت",
-            "1": "1 قيمة نسخت"
+            "1": "نسخ الصف إلى الحافظة",
+            "_": "نسخ الصف  %d إلى الحافظة"
         },
+        "copyTitle": "نسخ إلى الحافظة",
+        "csv": "CSV",
+        "excel": "إكسل",
         "pageLength": {
-            "-1": "اظهار الكل",
-            "_": "إظهار %d أسطر"
+            "-1": "عرض الكل",
+            "1": "عرض 1 ",
+            "_": "عرض  %d "
+        },
+        "pdf": "PDF",
+        "print": "طباعة"
+    },
+    "searchBuilder": {
+        "add": "إضافة فلتر +",
+
+        "button": {
+            "0": "فلاتر البحث",
+            "_": "فلاتر البحث (%d)"
+        },
+        "clearAll": "تنظيف الكل",
+        "condition": "الشرط",
+        "conditions": {
+            "date": {
+                "after": "بعد",
+                "before": "قبل",
+                "between": "بين",
+                "empty": "فارغ",
+                "equals": "تساوي",
+                "not": "ليس",
+                "notBetween": "ليست بين",
+                "notEmpty": "ليست فارغة"
+            },
+            "moment": {
+                "after": "بعد",
+                "before": "قبل",
+                "between": "بين",
+                "empty": "فارغة",
+                "equals": "تساوي",
+                "not": "ليس",
+                "notBetween": "ليست بين",
+                "notEmpty": "ليست فارغة"
+            },
+            "number": {
+                "between": "بين",
+                "empty": "فارغة",
+                "equals": "تساوي",
+                "gt": "أكبر من",
+                "gte": "أكبر وتساوي ",
+                "lt": "أقل من",
+                "lte": "أقل وتساوي",
+                "not": "ليست",
+                "notBetween": "ليست بين",
+                "notEmpty": "ليست فارغة"
+            },
+            "string": {
+                "contains": "يحتوي",
+                "empty": "فاغ",
+                "endsWith": "ينتهي ب",
+                "equals": "يساوي",
+                "not": "ليست",
+                "notEmpty": "ليست فارغة",
+                "startsWith": " تبدأ بـ "
+            }
+        },
+        "data": "Data",
+        "deleteTitle": "حذف فلاتر",
+        "leftTitle": "Outdent Criteria",
+        "logicAnd": "و",
+        "logicOr": "أو",
+        "rightTitle": "Indent Criteria",
+        "title": {
+            "0": "فلاتر البحث",
+            "_": "فلاتر البحث (%d)"
+        },
+        "value": "القيمة"
+    },
+    "searchPanes": {
+        "clearMessage": "تنظيف الكل",
+        "collapse": {
+            "0": "بحث",
+            "_": "بحث (%d)"
+        },
+        "count": "{total}",
+        "countFiltered": "{shown} ({total})",
+        "emptyPanes": "No SearchPanes",
+        "loadMessage": "Loading SearchPanes",
+        "title": "Filters Active - %d"
+    },
+    "select": {
+        "1": "%d الصف محددة",
+        "_": "%d الصف محددة",
+        "cells": {
+            "1": "1 الحقل محدد",
+            "_": "%d الحقول محددة"
+        },
+        "columns": {
+            "1": "1 الأعمدة المحددة",
+            "_": "%d الأعمدة المحددة"
         }
     }
 }
