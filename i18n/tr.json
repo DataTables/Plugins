@@ -40,7 +40,7 @@
     },
     "autoFill": {
         "cancel": "İptal",
-        "fill": "Bütün hücreleri <i>%d<i> ile doldur<\/i><\/i>",
+        "fill": "Bütün hücreleri <i>%d<\/i> ile doldur",
         "fillHorizontal": "Hücreleri yatay olarak doldur",
         "fillVertical": "Hücreleri dikey olarak doldur",
         "info": "-"
