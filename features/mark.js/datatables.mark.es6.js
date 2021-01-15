@@ -1,7 +1,7 @@
 /*!***************************************************
- * datatables.mark.js v2.0.1
+ * datatables.mark.js v2.1.0
  * https://github.com/julmot/datatables.mark.js
- * Copyright (c) 2016–2017, Julian Motz
+ * Copyright (c) 2016–2020, Julian Kühnel
  * Released under the MIT license https://git.io/voRZ7
  *****************************************************/
 
@@ -34,7 +34,8 @@
     }
 
     initMarkListener() {
-      const ev = 'draw.dt.dth column-visibility.dt.dth column-reorder.dt.dth';
+      let ev = 'draw.dt.dth column-visibility.dt.dth column-reorder.dt.dth';
+      ev += ' responsive-display.dt.dth';
       let intvl = null;
       this.instance.on(ev, () => {
         const rows = this.instance.rows({
@@ -58,7 +59,11 @@
 
     mark() {
       const globalSearch = this.instance.search();
-      $(this.instance.table().body()).unmark(this.options);
+      const $tableBody = $(this.instance.table().body());
+      $tableBody.unmark(this.options);
+      if (this.instance.table().rows({ search: 'applied' }).data().length) {
+        $tableBody.mark(globalSearch, this.options);
+      }
       this.instance.columns({
         search: 'applied',
         page: 'current'
@@ -67,7 +72,7 @@
               searchVal = columnSearch || globalSearch;
         if (searchVal) {
           nodes.forEach(node => {
-            $(node).mark(searchVal, this.options);
+            $(node).unmark(this.options).mark(searchVal, this.options);
           });
         }
       });

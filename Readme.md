@@ -17,3 +17,9 @@ This repository holds the following plug-in types for DataTables (among others):
 * Pagination
 
 Please refer to the DataTables [plug-in documentation](http://datatables.net/plug-ins) for details on how to use these plug-ins.
+
+
+## Internationalisation
+
+In the case of i18n Plugins, we ask that you don't create a pull request and instead make use of the [management system](https://datatables.net/plug-ins/i18n/) that we have in place for this on our website. Changes there will be synced up to this repo.
+

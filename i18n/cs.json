@@ -1,0 +1,94 @@
+{
+    "emptyTable": "Tabulka neobsahuje žádná data",
+    "info": "Zobrazuji _START_ až _END_ z celkem _TOTAL_ záznamů",
+    "infoEmpty": "Zobrazuji 0 až 0 z 0 záznamů",
+    "infoFiltered": "(filtrováno z celkem _MAX_ záznamů)",
+    "infoThousands": " ",
+    "lengthMenu": "Zobraz záznamů _MENU_",
+    "loadingRecords": "Načítám...",
+    "processing": "Provádím...",
+    "search": "Hledat:",
+    "zeroRecords": "Žádné záznamy nebyly nalezeny",
+    "paginate": {
+        "first": "První",
+        "last": "Poslední",
+        "next": "Další",
+        "previous": "Předchozí"
+    },
+    "aria": {
+        "sortAscending": ": aktivujte pro řazení sloupce vzestupně",
+        "sortDescending": ": aktivujte pro řazení sloupce sestupně"
+    },
+    "buttons": {
+        "colvis": "Zobrazení sloupců",
+        "colvisRestore": "Původní nastavení"
+    },
+    "searchBuilder": {
+        "add": "Přidat podmínku",
+        "clearAll": "Smazat vše",
+        "condition": "Podmínka",
+        "conditions": {
+            "date": {
+                "after": "po",
+                "before": "před",
+                "between": "mezi",
+                "empty": "prázdné",
+                "equals": "rovno",
+                "not": "není",
+                "notBetween": "není mezi",
+                "notEmpty": "není prázdné"
+            },
+            "moment": {
+                "after": "po",
+                "before": "před",
+                "between": "mezi",
+                "empty": "prázdné",
+                "equals": "rovno",
+                "not": "není",
+                "notBetween": "není mezi",
+                "notEmpty": "není prázdné"
+            },
+            "number": {
+                "between": "mezi",
+                "empty": "prázdné",
+                "equals": "rovno",
+                "gt": "větší",
+                "gte": "rovno a větší",
+                "lt": "menší",
+                "lte": "rovno a menší",
+                "not": "není",
+                "notBetween": "není mezi",
+                "notEmpty": "není prázdné"
+            },
+            "string": {
+                "contains": "obsahuje",
+                "empty": "prázdné",
+                "endsWith": "končí na",
+                "equals": "rovno",
+                "not": "není",
+                "notEmpty": "není prázdné",
+                "startsWith": "začíná na"
+            },
+            "array": {
+                "equals": "rovno",
+                "empty": "prázdné",
+                "contains": "obsahuje",
+                "not": "není",
+                "notEmpty": "není prázdné",
+                "without": "neobsahuje"
+            }
+        },
+        "data": "Sloupec",
+        "logicAnd": "A",
+        "logicOr": "NEBO",
+        "title": [
+            "Rozšířený filtr"
+        ],
+        "value": "Hodnota"
+    },
+    "select": {
+        "1": "Vybrán %d záznam",
+        "2": "Vybrány %d záznamy",
+        "_": "Vybráno %d záznamů"
+    }
+}

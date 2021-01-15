@@ -4,6 +4,9 @@
  * be an empty array (`[]`) in order to prevent sorting during initialisation,
  * it can sometimes be useful to restore the original order after sorting has
  * already occurred - which is exactly what this function does.
+ * 
+ * Please note that this plug-in can only be used for client-side processing
+ * tables (i.e. without `serverSide: true`).
  *
  * @name order.neutral()
  * @summary Change ordering of the table to its data load order
