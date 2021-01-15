@@ -54,7 +54,8 @@ $.fn.dataTable.moment = function ( format, locale, reverseEmpties ) {
 	} );
 
 	// Add sorting method - use an integer for the sorting
-	types.order[ 'moment-'+format+'-pre' ] = function ( d ) {
+	var formatKey = format.replace(/[^a-zA-Z0-9-]/g, '-');
+	types.order[ 'moment-'+formatKey+'-pre' ] = function ( d ) {
 		if ( d ) {
 			// Strip HTML tags and newline characters if possible
 			if ( d.replace ) {
