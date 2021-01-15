@@ -15,5 +15,6 @@
         "previous": "Ankstesnis",
         "next": "Tolimesnis",
         "last": "Paskutinis"
-    }
+    },
+    "searchPlaceholder": "Ieškoti"
 }

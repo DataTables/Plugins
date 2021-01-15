@@ -107,7 +107,17 @@
             }
         },
         "logicAnd": "En",
-        "logicOr": "Of"
+        "logicOr": "Of",
+        "button": {
+            "0": "Zoekwizard",
+            "_": "Zoekwizard (%d)"
+        },
+        "leftTitle": "Afwijkende criteria",
+        "rightTitle": "Criteria inspringen",
+        "title": {
+            "0": "Zoekwizard",
+            "_": "Zoekwizard (%d) "
+        }
     },
     "searchPanes": {
         "clearMessage": "Alles leegmaken",
@@ -138,5 +148,6 @@
             "_": "%d rijen geselecteerd"
         }
     },
-    "thousands": "."
+    "thousands": ".",
+    "searchPlaceholder": "Zoekterm"
 }

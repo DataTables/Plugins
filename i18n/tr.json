@@ -40,10 +40,10 @@
     },
     "autoFill": {
         "cancel": "İptal",
-        "fill": "Bütün hücreleri <i>%d<i> ile doldur<\/i><\/i>",
         "fillHorizontal": "Hücreleri yatay olarak doldur",
         "fillVertical": "Hücreleri dikey olarak doldur",
-        "info": "-"
+        "info": "-",
+        "fill": "Bütün hücreleri <i>%d<\/i> ile doldur"
     },
     "buttons": {
         "collection": "Koleksiyon <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",

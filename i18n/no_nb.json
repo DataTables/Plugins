@@ -8,7 +8,6 @@
     "lengthMenu": "Vis _MENU_ linjer",
     "processing": "Laster...",
     "search": "S&oslash;k:",
-    "zeroRecords": "Ingen linjer matcher s&oslash;ket",
     "paginate": {
         "first": "F&oslash;rste",
         "previous": "Forrige",
@@ -16,7 +15,129 @@
         "last": "Siste"
     },
     "aria": {
-        "sortAscending": ": aktiver for å sortere kolonnen stigende",
-        "sortDescending": ": aktiver for å sortere kolonnen synkende"
-    }
+        "sortAscending": "aktiver for &aring; sortere kolonnen stigende",
+        "sortDescending": "aktiver for &aring; sortere kolonnen synkende"
+    },
+    "autoFill": {
+        "cancel": "Avbryt",
+        "fill": "Fyll alle celler med <i>%d<i><\/i><\/i>",
+        "fillHorizontal": "Fyll celler horisontalt",
+        "fillVertical": "Fyll celler vertikalt",
+        "info": "Eksempel AutoFyll Info"
+    },
+    "buttons": {
+        "collection": "Kolleksjon",
+        "colvis": "Kolonne synlighet",
+        "colvisRestore": "Gjennopprett synlighet",
+        "copy": "Kopier",
+        "copyKeys": "Trykk p&aring; ctrl eller u2318 + C for &aring; kopiere tabell informasjonen til systemets utklippstavle.  For &aring; avbryte, klikk p&aring; denne meldingen eller trykk p&aring; escape.",
+        "copySuccess": {
+            "1": "Kopierte 1 rad til utklippstavle",
+            "_": "Kopierte %ds rader til utklippstavle"
+        },
+        "copyTitle": "Kopier til Utklippstavle",
+        "csv": "CSV",
+        "excel": "Excel",
+        "pageLength": {
+            "-1": "Vis alle rader",
+            "1": "Vis 1 Rad",
+            "_": "Vis %d rader"
+        },
+        "pdf": "PDF",
+        "print": "Utskrift"
+    },
+    "decimal": ",",
+    "searchBuilder": {
+        "add": "Tilf&oslash;y Kriterium",
+        "button": {
+            "0": "Søkevalg",
+            "_": "Søkevalg (%d)"
+        },
+        "clearAll": "Fjern Alle",
+        "condition": "Kriterier",
+        "conditions": {
+            "date": {
+                "after": "Etter",
+                "between": "Mellom",
+                "empty": "Tom",
+                "equals": "Er lik",
+                "not": "Ikke",
+                "notBetween": "Ikke mellom",
+                "notEmpty": "Ikke tom"
+            },
+            "moment": {
+                "after": "Etter",
+                "between": "Mellom",
+                "empty": "Tom",
+                "equals": "Er lik",
+                "not": "Ikke",
+                "notBetween": "Ikke mellom",
+                "notEmpty": "Ikke tom"
+            },
+            "number": {
+                "between": "Mellom",
+                "empty": "Tom",
+                "equals": "Er lik",
+                "gt": "Større enn",
+                "gte": "Større eller lik",
+                "lt": "Mindre enn",
+                "lte": "Mindre eller lik",
+                "not": "Ikke",
+                "notBetween": "Ikke mellom",
+                "notEmpty": "Ikke tom"
+            },
+            "string": {
+                "contains": "Inneholder",
+                "empty": "Tom",
+                "endsWith": "Avslutter med",
+                "equals": "Er lik",
+                "not": "Ikke",
+                "notEmpty": "Ikke tom",
+                "startsWith": "Starter med"
+            },
+            "array": {
+                "equals": "Er lik",
+                "empty": "Tom",
+                "contains": "Inneholder",
+                "not": "Ikke",
+                "notEmpty": "Ikke tom",
+                "without": "Uten"
+            }
+        },
+        "data": "Data",
+        "deleteTitle": "Slett filtreringsregel",
+        "logicAnd": "Og",
+        "logicOr": "Eller",
+        "title": {
+            "0": "Søkevalg",
+            "_": "Søkevalg (%d)"
+        },
+        "value": "Verdi"
+    },
+    "searchPanes": {
+        "clearMessage": "Fjern Alle",
+        "collapse": {
+            "0": "Søkefelt",
+            "_": "Søkefelt (%d)"
+        },
+        "count": "{total}",
+        "countFiltered": "{shown} ({total})",
+        "emptyPanes": "Ingen søkefelt",
+        "loadMessage": "Laster inn søkefelt...",
+        "title": "Aktive Filtervalg - %d"
+    },
+    "select": {
+        "1": "%d rader er valgt",
+        "_": "%d rader er valgt",
+        "cells": {
+            "1": "1 celle er valgt",
+            "_": "%d celler er valgt"
+        },
+        "columns": {
+            "1": "1 kolonne er valgt",
+            "_": "%d kolonner er valgt"
+        }
+    },
+    "thousands": " ",
+    "zeroRecords": "Ingen rader matcher s&oslash;ket"
 }

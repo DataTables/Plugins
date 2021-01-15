@@ -25,7 +25,8 @@
             "0": "Aucune ligne sélectionnée",
             "1": "1 ligne sélectionnée"
         },
-        "_": "%d lignes selectionées"
+        "_": "%d lignes selectionées",
+        "1": "1 ligne selectionée"
     },
     "autoFill": {
         "cancel": "Annuler",
