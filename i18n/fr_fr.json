@@ -1,13 +1,8 @@
 {
     "emptyTable": "Aucune donnée disponible dans le tableau",
-    "info": "Affichage de l'élément _START_ à _END_ sur _TOTAL_ éléments",
-    "infoEmpty": "Affichage de l'élément 0 à 0 sur 0 élément",
-    "infoFiltered": "(filtré à partir de _MAX_ éléments au total)",
-    "infoThousands": ",",
     "lengthMenu": "Afficher _MENU_ éléments",
     "loadingRecords": "Chargement...",
     "processing": "Traitement...",
-    "search": "Rechercher :",
     "zeroRecords": "Aucun élément correspondant trouvé",
     "paginate": {
         "first": "Premier",
@@ -25,8 +20,16 @@
             "0": "Aucune ligne sélectionnée",
             "1": "1 ligne sélectionnée"
         },
-        "_": "%d lignes selectionées",
-        "1": "1 ligne selectionée"
+        "1": "1 ligne selectionnée",
+        "_": "%d lignes selectionnées",
+        "cells": {
+            "1": "1 cellule sélectionnée",
+            "_": "%d cellules sélectionnées"
+        },
+        "columns": {
+            "1": "1 colonne sélectionnée",
+            "_": "%d colonnes sélectionnées"
+        }
     },
     "autoFill": {
         "cancel": "Annuler",
@@ -77,27 +80,72 @@
                 "not": "Différent de",
                 "notEmpty": "Non vide",
                 "startsWith": "Commence par"
+            },
+            "array": {
+                "equals": "Egal à",
+                "empty": "Vide",
+                "contains": "Contient",
+                "not": "Différent de",
+                "notEmpty": "Non vide",
+                "without": "Sans"
             }
-        }
+        },
+        "add": "Ajouter une condition",
+        "button": {
+            "0": "Recherche avancée",
+            "_": "Recherche avancée (%d)"
+        },
+        "clearAll": "Effacer tout",
+        "condition": "Condition",
+        "data": "Donnée",
+        "deleteTitle": "Supprimer la règle de filtrage",
+        "logicAnd": "Et",
+        "logicOr": "Ou",
+        "title": {
+            "0": "Recherche avancée",
+            "_": "Recherche avancée (%d)"
+        },
+        "value": "Valeur"
     },
     "searchPanes": {
         "clearMessage": "Effacer tout",
         "count": "{total}",
-        "emptyPanes": "Pas de recherche",
-        "loadMessage": "Chargement de la recherche",
-        "title": "Filtres actifs - %d"
-    },
-    "searchPlaceholder": "Exemple de recherche",
-    "buttons": {
-        "copy": "copier",
-        "copyKeys": "Appuyer sur ctrl ou u2318 + C pour copier les données du tableau dans votre presse-papier.",
-        "copySuccess": {
-            "1": "une ligne copiée dans le presse-papier"
+        "title": "Filtres actifs - %d",
+        "collapse": {
+            "0": "Volet de recherche",
+            "_": "Volet de recherche (%d)"
         },
-        "copyTitle": "copier dans le presse-papier",
-        "csv": "csv",
-        "excel": "excel",
-        "pdf": "pdf",
-        "print": "imprimer"
-    }
+        "countFiltered": "{shown} ({total})",
+        "emptyPanes": "Pas de volet de recherche",
+        "loadMessage": "Chargement du volet de recherche..."
+    },
+    "buttons": {
+        "copyKeys": "Appuyer sur ctrl ou u2318 + C pour copier les données du tableau dans votre presse-papier.",
+        "collection": "Collection",
+        "colvis": "Visibilité colonnes",
+        "colvisRestore": "Rétablir visibilité",
+        "copy": "Copier",
+        "copySuccess": {
+            "1": "1 ligne copiée dans le presse-papier",
+            "_": "%ds lignes copiées dans le presse-papier"
+        },
+        "copyTitle": "Copier dans le presse-papier",
+        "csv": "CSV",
+        "excel": "Excel",
+        "pageLength": {
+            "-1": "Afficher toutes les lignes",
+            "1": "Afficher 1 ligne",
+            "_": "Afficher %d lignes"
+        },
+        "pdf": "PDF",
+        "print": "Imprimer"
+    },
+    "decimal": ",",
+    "info": "Affichage de _START_ à _END_ sur _TOTAL_ éléments",
+    "infoEmpty": "Affichage de 0 à 0 sur 0 éléments",
+    "infoFiltered": "(filtrés de _MAX_ éléments au total)",
+    "infoThousands": ".",
+    "search": "Rechercher:",
+    "searchPlaceholder": "...",
+    "thousands": "."
 }
