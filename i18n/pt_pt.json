@@ -44,8 +44,8 @@
         "print": "Imprimir"
     },
     "decimal": ",",
-    "info": "Mostrando os registros _START_ a _END_ num total de _TOTAL_",
-    "infoEmpty": "Mostrando 0 os registros num total de 0",
+    "info": "Mostrando os registos _START_ a _END_ num total de _TOTAL_",
+    "infoEmpty": "Mostrando 0 os registos num total de 0",
     "infoFiltered": "(filtrado num total de _MAX_ registos)",
     "infoThousands": ".",
     "searchBuilder": {
