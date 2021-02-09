@@ -1,0 +1,37 @@
+/**
+ * Corsican translation
+ *  @name Corsican
+ *  @anchor Corsican
+ *  @author Ghjacumina Tognotti
+ */
+
+{
+    "sEmptyTable":     "Nisunu datu dispunibule in u tavulone",
+    "sInfo":           "Visualisazione di l'elementu _START_ à _END_ nant'à _TOTAL_ elementi",
+    "sInfoEmpty":      "Visualisazione di l'elementu 0 à 0 nant'à 0 elementu",
+    "sInfoFiltered":   "(staccià à partesi da _MAX_ elementi in tutale)",
+    "sInfoPostFix":    "",
+    "sInfoThousands":  ",",
+    "sLengthMenu":     "Mustrà _MENU_ elementi",
+    "sLoadingRecords": "Carcamentu...",
+    "sProcessing":     "Trattamentu...",
+    "sSearch":         "Circà :",
+    "sZeroRecords":    "Nisunu elementu currispundente trovu",
+    "oPaginate": {
+        "sFirst":    "Prima",
+        "sLast":     "Ultimu",
+        "sNext":     "Seguente ",
+        "sPrevious": "Precedente"
+    },
+    "oAria": {
+        "sSortAscending":  ": attivà per trasceglie a culonna in ordine criscente",
+        "sSortDescending": ": attivà per trasceglie a culonna in ordine scendente"
+    },
+    "select": {
+            "rows": {
+                "_": "%d linee selezziunate",
+                "0": "Nisuna linea selezziunata",
+                "1": "1 linea selezziunata"
+            }
+    }
+}
