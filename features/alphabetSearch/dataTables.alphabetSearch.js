@@ -11,7 +11,7 @@
  * @author      SpryMedia Ltd (www.sprymedia.co.uk)
  * @contact     www.sprymedia.co.uk/contact
  * @copyright   Copyright 2014 SpryMedia Ltd.
- * 
+ *
  * License      MIT - http://datatables.net/license/mit
  *
  * For more detailed information please see:
@@ -49,7 +49,7 @@ $.fn.dataTable.ext.search.push( function ( context, searchData ) {
 		return true;
 	}
 
-	if ( searchData[0].charAt(0) === context.alphabetSearch ) {
+	if ( searchData[$.fn.dataTable.AlphabetSearch.column].charAt(0).toUpperCase() === context.alphabetSearch ) {
 		return true;
 	}
 
@@ -83,7 +83,7 @@ function draw ( table, alphabet )
 	alphabet.empty();
 	alphabet.append( 'Search: ' );
 
-	var columnData = table.column(0).data();
+	var columnData = table.column($.fn.dataTable.AlphabetSearch.column).data();
 	var bins = bin( columnData );
 
 	$('<span class="clear active"/>')
