@@ -49,9 +49,15 @@ $.fn.dataTable.ext.search.push( function ( context, searchData ) {
 		return true;
 	}
 
-	if ( searchData[$.fn.dataTable.AlphabetSearch.column].charAt(0).toUpperCase() === context.alphabetSearch ) {
-		return true;
-	}
+    if ($.fn.dataTable.AlphabetSearch.caseSensitive) {
+        if ( searchData[$.fn.dataTable.AlphabetSearch.column].charAt(0) === context.alphabetSearch ) {
+            return true;
+        }
+    } else {
+        if ( searchData[$.fn.dataTable.AlphabetSearch.column].charAt(0).toUpperCase() === context.alphabetSearch ) {
+            return true;
+        }
+    }
 
 	return false;
 } );
