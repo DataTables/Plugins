@@ -69,16 +69,6 @@
                 "not": "Ni enako",
                 "notBetween": "Ni med",
                 "notEmpty": "Ni prazno"
-            },
-            "moment": {
-                "after": "Od",
-                "before": "Do",
-                "between": "Med",
-                "empty": "Prazno",
-                "equals": "Je enako",
-                "not": "Ni",
-                "notBetween": "Ni med",
-                "notEmpty": "Ni prazno"
             }
         },
         "value": "Vrednost",
@@ -109,7 +99,8 @@
         "count": "{total}",
         "emptyPanes": "Ni vnosnega polja za iskanje",
         "loadMessage": "Nalagam iskalnik ...",
-        "title": "Aktivni filtri - %d"
+        "title": "Aktivni filtri - %d",
+        "countFiltered": "{shown} ({total})"
     },
     "searchPlaceholder": "Vnesi iskalni pojem",
     "buttons": {

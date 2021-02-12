@@ -50,16 +50,6 @@
                 "notBetween": "Pas entre",
                 "notEmpty": "Non vide"
             },
-            "moment": {
-                "after": "Après le",
-                "before": "Avant le",
-                "between": "Entre",
-                "empty": "Vide",
-                "equals": "Egal à",
-                "not": "Différent de",
-                "notBetween": "Pas entre",
-                "notEmpty": "Non vide"
-            },
             "number": {
                 "between": "Entre",
                 "empty": "Vide",

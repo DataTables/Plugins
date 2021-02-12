@@ -67,16 +67,6 @@
                 "notBetween": "Não está entre",
                 "notEmpty": "Não está vazio"
             },
-            "moment": {
-                "after": "Depois",
-                "before": "Antes",
-                "between": "Entre",
-                "empty": "Vazio",
-                "equals": "Igual",
-                "not": "Diferente",
-                "notBetween": "Não está entre",
-                "notEmpty": "Não está vazio"
-            },
             "number": {
                 "between": "Entre",
                 "empty": "Vazio",

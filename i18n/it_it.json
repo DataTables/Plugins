@@ -66,16 +66,6 @@
                 "notBetween": "Non Tra",
                 "notEmpty": "Non Vuoto"
             },
-            "moment": {
-                "after": "Dopo",
-                "before": "Prima",
-                "between": "Tra",
-                "empty": "Vuoto",
-                "equals": "Uguale A",
-                "not": "Non",
-                "notBetween": "Non Tra",
-                "notEmpty": "Non Vuoto"
-            },
             "number": {
                 "between": "Tra",
                 "empty": "Vuoto",
@@ -140,6 +130,11 @@
         "columns": {
             "1": "1 colonna selezionata",
             "_": "%d colonne selezionate"
+        },
+        "rows": {
+            "1": "1 riga selezionata",
+            "_": "%d righe selezionate",
+            "0": "%d righe selezionate"
         }
     },
     "zeroRecords": "Nessun elemento corrispondente trovato"

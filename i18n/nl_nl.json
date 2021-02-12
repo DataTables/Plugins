@@ -66,16 +66,6 @@
                 "notBetween": "Niet tussen",
                 "notEmpty": "Niet leeg"
             },
-            "moment": {
-                "after": "Na",
-                "before": "Voor",
-                "between": "Tussen",
-                "empty": "Leeg",
-                "equals": "Gelijk aan",
-                "not": "Niet",
-                "notBetween": "Niet tussen",
-                "notEmpty": "Niet leeg"
-            },
             "number": {
                 "between": "Tussen",
                 "empty": "Leeg",

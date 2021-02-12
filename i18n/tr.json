@@ -87,16 +87,6 @@
                 "notBetween": "Dışında",
                 "notEmpty": "Dolu"
             },
-            "moment": {
-                "after": "Sonra",
-                "before": "Önce",
-                "between": "Arasında",
-                "empty": "Boş",
-                "equals": "Eşittir",
-                "not": "Değildir",
-                "notBetween": "Dışında",
-                "notEmpty": "Dolu"
-            },
             "number": {
                 "between": "Arasında",
                 "empty": "Boş",

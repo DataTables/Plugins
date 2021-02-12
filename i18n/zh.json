@@ -7,8 +7,6 @@
     "infoFiltered": "(由 _MAX_ 项结果过滤)",
     "search": "搜索:",
     "emptyTable": "表中数据为空",
-    "loadingRecords": "载入中...",
-    "infoThousands": ",",
     "paginate": {
         "first": "首页",
         "previous": "上页",
@@ -65,7 +63,27 @@
             "0": "搜索生成器",
             "_": "搜索生成器 (%d)"
         },
-        "value": "值"
+        "value": "值",
+        "conditions": {
+            "date": {
+                "after": "日期条件查询为after条件名称：大于",
+                "before": "日期条件查询为before条件名称：小于",
+                "between": "日期条件查询为between条件名称：介于2个日期之间",
+                "empty": "日期条件查询为empty条件名称：日期为空",
+                "equals": "日期条件查询为equals条件名称：等于",
+                "notBetween": "日期条件查询为notBetween条件名称：不介于2个日期之间",
+                "notEmpty": "日期条件查询为notEmpty条件名称：日期不为空"
+            },
+            "string": {
+                "contains": "文本包含",
+                "empty": "文本为空",
+                "endsWith": "文本以某某结尾",
+                "equals": "文本等于",
+                "not": "文本不等于",
+                "notEmpty": "文本不为空",
+                "startsWith": "文本从某某开始"
+            }
+        }
     },
     "searchPanes": {
         "collapse": {
@@ -81,7 +99,6 @@
     },
     "searchPlaceholder": "请输入查询关键字",
     "select": {
-        "1": "选择了%d行",
         "_": "选择了%d行",
         "cells": {
             "1": "选择了1个单元格",
@@ -90,6 +107,17 @@
         "columns": {
             "1": "选择了1列",
             "_": "选择了%d列"
+        },
+        "0": "没有选中数据行的文字说明",
+        "1": "选中一行的文字说明",
+        "rows": {
+            "1": "被选中一行的说明",
+            "_": "被选中多行的说明"
         }
-    }
+    },
+    "decimal": "用于标记小数位的字符",
+    "infoPostFix": "分页数据信息说明",
+    "infoThousands": "千分数分隔符，默认值是英文逗号",
+    "loadingRecords": "数据加载提示信息，例如：数据加载中...",
+    "thousands": "千位分隔符，默认值是英文逗号"
 }

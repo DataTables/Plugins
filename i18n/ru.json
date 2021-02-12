@@ -56,16 +56,6 @@
                 "notBetween": "Не между",
                 "notEmpty": "Не пусто"
             },
-            "moment": {
-                "after": "После",
-                "before": "До",
-                "between": "Между",
-                "empty": "Не пусто",
-                "equals": "Между",
-                "not": "Не",
-                "notBetween": "Не между",
-                "notEmpty": "Не пусто"
-            },
             "number": {
                 "between": "В промежутке от",
                 "empty": "Пусто",

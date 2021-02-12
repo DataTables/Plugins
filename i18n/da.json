@@ -11,5 +11,44 @@
         "previous": "Forrige",
         "next": "N&aelig;ste",
         "last": "Sidste"
-    }
+    },
+    "aria": {
+        "sortAscending": "Stigende sortering",
+        "sortDescending": "Faldende sortering"
+    },
+    "autoFill": {
+        "cancel": "annullere",
+        "fill": "Fyld alle celler med <i>%d<i><\/i><\/i>",
+        "fillHorizontal": "Fyld celler horisontalt",
+        "fillVertical": "Fyld celler vertikalt"
+    },
+    "buttons": {
+        "copy": "Kopi",
+        "copyTitle": "Kopier til udklipsholder",
+        "csv": "CSV",
+        "excel": "Excel",
+        "pageLength": {
+            "-1": "Vis alle rækker",
+            "_": "Vis %d rækker"
+        },
+        "pdf": "PDF",
+        "print": "Udskriv"
+    },
+    "decimal": ",",
+    "emptyTable": "Ingen data tilgængelige i tabellen",
+    "infoThousands": ".",
+    "loadingRecords": "Loading",
+    "select": {
+        "1": "%d række valgt",
+        "_": "%d rækker valgt",
+        "cells": {
+            "1": "1 celle valgt",
+            "_": "%d celler valgt"
+        },
+        "columns": {
+            "1": "1 kolonne valgt",
+            "_": "%d kolonner valgt"
+        }
+    },
+    "thousands": "."
 }

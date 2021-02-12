@@ -66,16 +66,6 @@
                 "notBetween": "ez dago tartean",
                 "notEmpty": "ez dago hutsik"
             },
-            "moment": {
-                "after": "Ondoren",
-                "before": "Aurretik",
-                "between": "Tartean",
-                "empty": "Hutsik",
-                "equals": "berdina da",
-                "not": "ez da",
-                "notBetween": "ez dago tartean",
-                "notEmpty": "ez dago hutsik"
-            },
             "number": {
                 "between": "Tartean",
                 "empty": "Hutsik",

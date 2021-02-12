@@ -88,16 +88,6 @@
                 "notBetween": "Không nằm giữa",
                 "notEmpty": "Không rỗng"
             },
-            "moment": {
-                "empty": "Rỗng",
-                "after": "Sau",
-                "equals": "Bằng với",
-                "before": "Trước",
-                "not": "Không phải",
-                "notBetween": "Không nằm giữa",
-                "between": "Nằm giữa",
-                "notEmpty": "Không rỗng"
-            },
             "number": {
                 "between": "Nằm giữa",
                 "empty": "Rỗng",

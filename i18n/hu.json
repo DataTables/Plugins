@@ -81,16 +81,6 @@
                 "notBetween": "Kívül eső",
                 "notEmpty": "Nem üres"
             },
-            "moment": {
-                "after": "Után",
-                "before": "Előtt",
-                "between": "Között",
-                "empty": "Üres",
-                "equals": "Egyenlő",
-                "not": "Nem",
-                "notBetween": "Kívül eső",
-                "notEmpty": "Nem üres"
-            },
             "number": {
                 "between": "Között",
                 "empty": "Üres",

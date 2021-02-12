@@ -83,16 +83,6 @@
                 "notBetween": "Nicht zwischen",
                 "notEmpty": "Nicht leer"
             },
-            "moment": {
-                "after": "Nach",
-                "before": "Vor",
-                "between": "Zwischen",
-                "empty": "Leer",
-                "equals": "Entspricht",
-                "not": "Nicht",
-                "notBetween": "Nicht zwischen",
-                "notEmpty": "Nicht leer"
-            },
             "number": {
                 "between": "Zwischen",
                 "empty": "Leer",
@@ -113,6 +103,14 @@
                 "not": "Nicht",
                 "notEmpty": "Nicht leer",
                 "startsWith": "Startet mit"
+            },
+            "array": {
+                "equals": "ist gleich",
+                "empty": "ist leer",
+                "contains": "enthält",
+                "not": "ist ungleich",
+                "notEmpty": "ist nicht leer",
+                "without": "aber nicht"
             }
         },
         "data": "Daten",

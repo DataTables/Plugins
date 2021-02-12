@@ -1,11 +1,7 @@
 {
     "emptyTable": "Ingen data tilgjengelig i tabellen",
-    "info": "Viser _START_ til _END_ av _TOTAL_ linjer",
-    "infoEmpty": "Viser 0 til 0 av 0 linjer",
-    "infoFiltered": "(filtrert fra _MAX_ totalt antall linjer)",
     "infoThousands": " ",
     "loadingRecords": "Laster...",
-    "lengthMenu": "Vis _MENU_ linjer",
     "processing": "Laster...",
     "search": "S&oslash;k:",
     "paginate": {
@@ -20,22 +16,18 @@
     },
     "autoFill": {
         "cancel": "Avbryt",
-        "fill": "Fyll alle celler med <i>%d<i><\/i><\/i>",
         "fillHorizontal": "Fyll celler horisontalt",
         "fillVertical": "Fyll celler vertikalt",
-        "info": "Eksempel AutoFyll Info"
+        "fill": "Fyll alle celler med <i>%d<\/i>",
+        "info": "Eksempel autofyll info"
     },
     "buttons": {
-        "collection": "Kolleksjon",
-        "colvis": "Kolonne synlighet",
         "colvisRestore": "Gjennopprett synlighet",
         "copy": "Kopier",
-        "copyKeys": "Trykk p&aring; ctrl eller u2318 + C for &aring; kopiere tabell informasjonen til systemets utklippstavle.  For &aring; avbryte, klikk p&aring; denne meldingen eller trykk p&aring; escape.",
         "copySuccess": {
-            "1": "Kopierte 1 rad til utklippstavle",
-            "_": "Kopierte %ds rader til utklippstavle"
+            "_": "Kopierte %ds rader til utklippstavle",
+            "1": "Kopierte én rad til utklippstavle"
         },
-        "copyTitle": "Kopier til Utklippstavle",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -44,17 +36,14 @@
             "_": "Vis %d rader"
         },
         "pdf": "PDF",
-        "print": "Utskrift"
+        "print": "Utskrift",
+        "collection": "Samling <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
+        "colvis": "Kolonne-synlighet",
+        "copyKeys": "Trykk ctrl eller u2318 + C for &aring; kopiere tabelldata til systemets utklippstavle.<br \/><br \/>For &aring; avbryte, klikk p&aring; denne meldingen eller trykk p&aring; escape.",
+        "copyTitle": "Kopier til utklippstavle"
     },
     "decimal": ",",
     "searchBuilder": {
-        "add": "Tilf&oslash;y Kriterium",
-        "button": {
-            "0": "Søkevalg",
-            "_": "Søkevalg (%d)"
-        },
-        "clearAll": "Fjern Alle",
-        "condition": "Kriterier",
         "conditions": {
             "date": {
                 "after": "Etter",
@@ -63,37 +52,29 @@
                 "equals": "Er lik",
                 "not": "Ikke",
                 "notBetween": "Ikke mellom",
-                "notEmpty": "Ikke tom"
-            },
-            "moment": {
-                "after": "Etter",
-                "between": "Mellom",
-                "empty": "Tom",
-                "equals": "Er lik",
-                "not": "Ikke",
-                "notBetween": "Ikke mellom",
-                "notEmpty": "Ikke tom"
+                "notEmpty": "Ikke tom",
+                "before": "F&oslash;r"
             },
             "number": {
                 "between": "Mellom",
                 "empty": "Tom",
                 "equals": "Er lik",
-                "gt": "Større enn",
-                "gte": "Større eller lik",
                 "lt": "Mindre enn",
                 "lte": "Mindre eller lik",
                 "not": "Ikke",
                 "notBetween": "Ikke mellom",
-                "notEmpty": "Ikke tom"
+                "notEmpty": "Ikke tom",
+                "gt": "St&oslash;rre enn",
+                "gte": "St&oslash;rre eller lik"
             },
             "string": {
                 "contains": "Inneholder",
                 "empty": "Tom",
-                "endsWith": "Avslutter med",
                 "equals": "Er lik",
                 "not": "Ikke",
                 "notEmpty": "Ikke tom",
-                "startsWith": "Starter med"
+                "startsWith": "Starter med",
+                "endsWith": "Slutter med"
             },
             "array": {
                 "equals": "Er lik",
@@ -108,26 +89,34 @@
         "deleteTitle": "Slett filtreringsregel",
         "logicAnd": "Og",
         "logicOr": "Eller",
-        "title": {
-            "0": "Søkevalg",
-            "_": "Søkevalg (%d)"
+        "value": "Verdi",
+        "add": "Legg til betingelse",
+        "button": {
+            "0": "S&oslash;kekonstrukt&oslash;r",
+            "_": "S&oslash;kekonstrukt&oslash;r (%d)"
         },
-        "value": "Verdi"
+        "clearAll": "Fjern alle",
+        "condition": "Betingelse",
+        "leftTitle": "Rykk tilbake betingelse",
+        "rightTitle": "Rykk inn betingelse",
+        "title": {
+            "0": "S&oslash;kekonstrukt&oslash;r",
+            "_": "S&oslash;kekonstrukt&oslash;r (%d)"
+        }
     },
     "searchPanes": {
-        "clearMessage": "Fjern Alle",
-        "collapse": {
-            "0": "Søkefelt",
-            "_": "Søkefelt (%d)"
-        },
         "count": "{total}",
         "countFiltered": "{shown} ({total})",
-        "emptyPanes": "Ingen søkefelt",
-        "loadMessage": "Laster inn søkefelt...",
-        "title": "Aktive Filtervalg - %d"
+        "clearMessage": "Fjern alle",
+        "collapse": {
+            "0": "S&oslash;kerute",
+            "_": "S&oslash;kerute (%d)"
+        },
+        "emptyPanes": "Ingen s&oslash;kerute",
+        "loadMessage": "Laster inn s&oslash;kerute...",
+        "title": "Aktive filter - %d"
     },
     "select": {
-        "1": "%d rader er valgt",
         "_": "%d rader er valgt",
         "cells": {
             "1": "1 celle er valgt",
@@ -136,8 +125,14 @@
         "columns": {
             "1": "1 kolonne er valgt",
             "_": "%d kolonner er valgt"
-        }
+        },
+        "1": "%d rad er valgt",
+        "2": "%d rader er valgt"
     },
     "thousands": " ",
-    "zeroRecords": "Ingen rader matcher s&oslash;ket"
+    "info": "Viser _START_ til _END_ av _TOTAL_ oppf&oslash;ringer",
+    "infoEmpty": "Viser 0 til 0 av 0 oppf&oslash;ringer",
+    "infoFiltered": "filtrert fra totalt _MAX_ oppf&oslash;ringer",
+    "lengthMenu": "Vis _MENU_ oppf&oslash;ringer",
+    "zeroRecords": "Ingen rader samsvarer med s&oslash;ket"
 }

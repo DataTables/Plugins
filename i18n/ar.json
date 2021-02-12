@@ -84,16 +84,6 @@
                 "notBetween": "ليست بين",
                 "notEmpty": "ليست فارغة"
             },
-            "moment": {
-                "after": "بعد",
-                "before": "قبل",
-                "between": "بين",
-                "empty": "فارغة",
-                "equals": "تساوي",
-                "not": "ليس",
-                "notBetween": "ليست بين",
-                "notEmpty": "ليست فارغة"
-            },
             "number": {
                 "between": "بين",
                 "empty": "فارغة",
