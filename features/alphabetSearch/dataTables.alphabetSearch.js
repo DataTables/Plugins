@@ -68,11 +68,17 @@ function bin ( data ) {
 	var letter, bins = {};
 
 	for ( var i=0, ien=data.length ; i<ien ; i++ ) {
-		letter = data[i]
-			.toString()
-			.replace(/<.*?>/g, '')
-			.charAt(0).toUpperCase();
-
+        if ($.fn.dataTable.AlphabetSearch.caseSensitive) {
+            letter = data[i]
+                .toString()
+                .replace(/<.*?>/g, '')
+                .charAt(0);
+        } else {
+            letter = data[i]
+                .toString()
+                .replace(/<.*?>/g, '')
+                .charAt(0).toUpperCase();
+        }
 		if ( bins[letter] ) {
 			bins[letter]++;
 		}
@@ -98,6 +104,18 @@ function draw ( table, alphabet )
 		.html( 'None' )
 		.appendTo( alphabet );
 
+    if ($.fn.dataTable.AlphabetSearch.addNumbers) {
+        for (var i = 0; i < 10; i++) {
+            var letter = String.fromCharCode(48 + i);
+
+            $('<span/>')
+                .data('letter', letter)
+                .data('match-count', bins[letter] || 0)
+                .addClass(!bins[letter] ? 'empty' : '')
+                .html(letter)
+                .appendTo(alphabet);
+        }
+    }
 	for ( var i=0 ; i<26 ; i++ ) {
 		var letter = String.fromCharCode( 65 + i );
 
@@ -108,6 +126,18 @@ function draw ( table, alphabet )
 			.html( letter )
 			.appendTo( alphabet );
 	}
+    if ($.fn.dataTable.AlphabetSearch.caseSensitive === true) {
+        for (var i = 0; i < 26; i++) {
+            var letter = String.fromCharCode(97 + i);
+
+            $('<span/>')
+                .data('letter', letter)
+                .data('match-count', bins[letter] || 0)
+                .addClass(!bins[letter] ? 'empty' : '')
+                .html(letter)
+                .appendTo(alphabet);
+        }
+    }
 
 	$('<div class="alphabetInfo"></div>')
 		.appendTo( alphabet );
@@ -155,7 +185,7 @@ $.fn.dataTable.AlphabetSearch = function ( context ) {
 };
 
 $.fn.DataTable.AlphabetSearch = $.fn.dataTable.AlphabetSearch;
-
+$.fn.dataTable.AlphabetSearch.column = 0;
 
 // Register a search plug-in
 $.fn.dataTable.ext.feature.push( {
