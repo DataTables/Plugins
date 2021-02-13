@@ -147,6 +147,15 @@ function draw ( table, alphabet )
 $.fn.dataTable.AlphabetSearch = function ( context ) {
 	var table = new $.fn.dataTable.Api( context );
 	var alphabet = $('<div class="alphabet"/>');
+	var options = $.extend({
+		column: 0,
+		caseSensitive: false,
+		numbers: false
+	}, table.init().alphabet);
+
+	$.fn.dataTable.AlphabetSearch.column = options.column;
+	$.fn.dataTable.AlphabetSearch.caseSensitive = options.caseSensitive;
+	$.fn.dataTable.AlphabetSearch.addNumbers = options.numbers;
 
 	draw( table, alphabet );
 
@@ -185,7 +194,6 @@ $.fn.dataTable.AlphabetSearch = function ( context ) {
 };
 
 $.fn.DataTable.AlphabetSearch = $.fn.dataTable.AlphabetSearch;
-$.fn.dataTable.AlphabetSearch.column = 0;
 
 // Register a search plug-in
 $.fn.dataTable.ext.feature.push( {
