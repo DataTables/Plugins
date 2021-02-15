@@ -197,6 +197,8 @@ $.fn.dataTable.AlphabetSearch = function ( context ) {
 	};
 };
 
+$.fn.DataTable.AlphabetSearch = $.fn.dataTable.AlphabetSearch;
+
 // Register a search plug-in
 $.fn.dataTable.ext.feature.push( {
 	fnInit: function ( settings ) {
