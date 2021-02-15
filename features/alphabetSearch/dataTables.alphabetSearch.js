@@ -49,12 +49,20 @@ $.fn.dataTable.ext.search.push( function ( context, searchData ) {
 		return true;
 	}
 
-    if ($.fn.dataTable.AlphabetSearch.caseSensitive) {
-        if ( searchData[$.fn.dataTable.AlphabetSearch.column].charAt(0) === context.alphabetSearch ) {
+	if (context.oInit.alphabet !== undefined) {
+		var columnId = (context.oInit.alphabet.column !== undefined) ? context.oInit.alphabet.column : 0
+		var caseSensitive = (context.oInit.alphabet.caseSensitive !== undefined) ? context.oInit.alphabet.caseSensitive : false
+	} else {
+		var columnId = 0
+		var caseSensitive = false
+	}
+
+    if (caseSensitive) {
+        if ( searchData[columnId].charAt(0) === context.alphabetSearch ) {
             return true;
         }
     } else {
-        if ( searchData[$.fn.dataTable.AlphabetSearch.column].charAt(0).toUpperCase() === context.alphabetSearch ) {
+        if ( searchData[columnId].charAt(0).toUpperCase() === context.alphabetSearch ) {
             return true;
         }
     }
@@ -64,11 +72,11 @@ $.fn.dataTable.ext.search.push( function ( context, searchData ) {
 
 
 // Private support methods
-function bin ( data ) {
+function bin ( data, options ) {
 	var letter, bins = {};
 
 	for ( var i=0, ien=data.length ; i<ien ; i++ ) {
-        if ($.fn.dataTable.AlphabetSearch.caseSensitive) {
+        if (options.caseSensitive) {
             letter = data[i]
                 .toString()
                 .replace(/<.*?>/g, '')
@@ -90,13 +98,13 @@ function bin ( data ) {
 	return bins;
 }
 
-function draw ( table, alphabet )
+function draw ( table, alphabet, options )
 {
 	alphabet.empty();
 	alphabet.append( 'Search: ' );
 
-	var columnData = table.column($.fn.dataTable.AlphabetSearch.column).data();
-	var bins = bin( columnData );
+	var columnData = table.column(options.column).data();
+	var bins = bin( columnData, options );
 
 	$('<span class="clear active"/>')
 		.data( 'letter', '' )
@@ -104,7 +112,7 @@ function draw ( table, alphabet )
 		.html( 'None' )
 		.appendTo( alphabet );
 
-    if ($.fn.dataTable.AlphabetSearch.addNumbers) {
+    if (options.numbers) {
         for (var i = 0; i < 10; i++) {
             var letter = String.fromCharCode(48 + i);
 
@@ -126,7 +134,7 @@ function draw ( table, alphabet )
 			.html( letter )
 			.appendTo( alphabet );
 	}
-    if ($.fn.dataTable.AlphabetSearch.caseSensitive === true) {
+    if (options.caseSensitive) {
         for (var i = 0; i < 26; i++) {
             var letter = String.fromCharCode(97 + i);
 
@@ -153,11 +161,7 @@ $.fn.dataTable.AlphabetSearch = function ( context ) {
 		numbers: false
 	}, table.init().alphabet);
 
-	$.fn.dataTable.AlphabetSearch.column = options.column;
-	$.fn.dataTable.AlphabetSearch.caseSensitive = options.caseSensitive;
-	$.fn.dataTable.AlphabetSearch.addNumbers = options.numbers;
-
-	draw( table, alphabet );
+	draw( table, alphabet, options );
 
 	// Trigger a search
 	alphabet.on( 'click', 'span', function () {
@@ -192,8 +196,6 @@ $.fn.dataTable.AlphabetSearch = function ( context ) {
 		return alphabet;
 	};
 };
-
-$.fn.DataTable.AlphabetSearch = $.fn.dataTable.AlphabetSearch;
 
 // Register a search plug-in
 $.fn.dataTable.ext.feature.push( {
