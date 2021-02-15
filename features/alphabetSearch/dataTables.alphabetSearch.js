@@ -57,15 +57,15 @@ $.fn.dataTable.ext.search.push( function ( context, searchData ) {
 		var caseSensitive = false
 	}
 
-    if (caseSensitive) {
-        if ( searchData[columnId].charAt(0) === context.alphabetSearch ) {
-            return true;
-        }
-    } else {
-        if ( searchData[columnId].charAt(0).toUpperCase() === context.alphabetSearch ) {
-            return true;
-        }
-    }
+	if (caseSensitive) {
+		if ( searchData[columnId].charAt(0) === context.alphabetSearch ) {
+			return true;
+		}
+	} else {
+		if ( searchData[columnId].charAt(0).toUpperCase() === context.alphabetSearch ) {
+			return true;
+		}
+	}
 
 	return false;
 } );
@@ -76,17 +76,17 @@ function bin ( data, options ) {
 	var letter, bins = {};
 
 	for ( var i=0, ien=data.length ; i<ien ; i++ ) {
-        if (options.caseSensitive) {
-            letter = data[i]
-                .toString()
-                .replace(/<.*?>/g, '')
-                .charAt(0);
-        } else {
-            letter = data[i]
-                .toString()
-                .replace(/<.*?>/g, '')
-                .charAt(0).toUpperCase();
-        }
+		if (options.caseSensitive) {
+			letter = data[i]
+				.toString()
+				.replace(/<.*?>/g, '')
+				.charAt(0);
+		} else {
+			letter = data[i]
+				.toString()
+				.replace(/<.*?>/g, '')
+				.charAt(0).toUpperCase();
+		}
 		if ( bins[letter] ) {
 			bins[letter]++;
 		}
@@ -112,18 +112,18 @@ function draw ( table, alphabet, options )
 		.html( 'None' )
 		.appendTo( alphabet );
 
-    if (options.numbers) {
-        for (var i = 0; i < 10; i++) {
-            var letter = String.fromCharCode(48 + i);
+	if (options.numbers) {
+		for (var i = 0; i < 10; i++) {
+			var letter = String.fromCharCode(48 + i);
 
-            $('<span/>')
-                .data('letter', letter)
-                .data('match-count', bins[letter] || 0)
-                .addClass(!bins[letter] ? 'empty' : '')
-                .html(letter)
-                .appendTo(alphabet);
-        }
-    }
+			$('<span/>')
+				.data('letter', letter)
+				.data('match-count', bins[letter] || 0)
+				.addClass(!bins[letter] ? 'empty' : '')
+				.html(letter)
+				.appendTo(alphabet);
+		}
+	}
 	for ( var i=0 ; i<26 ; i++ ) {
 		var letter = String.fromCharCode( 65 + i );
 
@@ -134,18 +134,18 @@ function draw ( table, alphabet, options )
 			.html( letter )
 			.appendTo( alphabet );
 	}
-    if (options.caseSensitive) {
-        for (var i = 0; i < 26; i++) {
-            var letter = String.fromCharCode(97 + i);
+	if (options.caseSensitive) {
+		for (var i = 0; i < 26; i++) {
+			var letter = String.fromCharCode(97 + i);
 
-            $('<span/>')
-                .data('letter', letter)
-                .data('match-count', bins[letter] || 0)
-                .addClass(!bins[letter] ? 'empty' : '')
-                .html(letter)
-                .appendTo(alphabet);
-        }
-    }
+			$('<span/>')
+				.data('letter', letter)
+				.data('match-count', bins[letter] || 0)
+				.addClass(!bins[letter] ? 'empty' : '')
+				.html(letter)
+				.appendTo(alphabet);
+		}
+	}
 
 	$('<div class="alphabetInfo"></div>')
 		.appendTo( alphabet );
