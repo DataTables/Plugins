@@ -11,7 +11,7 @@
  * @author      SpryMedia Ltd (www.sprymedia.co.uk)
  * @contact     www.sprymedia.co.uk/contact
  * @copyright   Copyright 2014 SpryMedia Ltd.
- * 
+ *
  * License      MIT - http://datatables.net/license/mit
  *
  * For more detailed information please see:
@@ -49,8 +49,22 @@ $.fn.dataTable.ext.search.push( function ( context, searchData ) {
 		return true;
 	}
 
-	if ( searchData[0].charAt(0) === context.alphabetSearch ) {
-		return true;
+	if (context.oInit.alphabet !== undefined) {
+		var columnId = (context.oInit.alphabet.column !== undefined) ? context.oInit.alphabet.column : 0
+		var caseSensitive = (context.oInit.alphabet.caseSensitive !== undefined) ? context.oInit.alphabet.caseSensitive : false
+	} else {
+		var columnId = 0
+		var caseSensitive = false
+	}
+
+	if (caseSensitive) {
+		if ( searchData[columnId].charAt(0) === context.alphabetSearch ) {
+			return true;
+		}
+	} else {
+		if ( searchData[columnId].charAt(0).toUpperCase() === context.alphabetSearch ) {
+			return true;
+		}
 	}
 
 	return false;
@@ -58,15 +72,21 @@ $.fn.dataTable.ext.search.push( function ( context, searchData ) {
 
 
 // Private support methods
-function bin ( data ) {
+function bin ( data, options ) {
 	var letter, bins = {};
 
 	for ( var i=0, ien=data.length ; i<ien ; i++ ) {
-		letter = data[i]
-			.toString()
-			.replace(/<.*?>/g, '')
-			.charAt(0).toUpperCase();
-
+		if (options.caseSensitive) {
+			letter = data[i]
+				.toString()
+				.replace(/<.*?>/g, '')
+				.charAt(0);
+		} else {
+			letter = data[i]
+				.toString()
+				.replace(/<.*?>/g, '')
+				.charAt(0).toUpperCase();
+		}
 		if ( bins[letter] ) {
 			bins[letter]++;
 		}
@@ -78,13 +98,13 @@ function bin ( data ) {
 	return bins;
 }
 
-function draw ( table, alphabet )
+function draw ( table, alphabet, options )
 {
 	alphabet.empty();
 	alphabet.append( 'Search: ' );
 
-	var columnData = table.column(0).data();
-	var bins = bin( columnData );
+	var columnData = table.column(options.column).data();
+	var bins = bin( columnData, options );
 
 	$('<span class="clear active"/>')
 		.data( 'letter', '' )
@@ -92,6 +112,18 @@ function draw ( table, alphabet )
 		.html( 'None' )
 		.appendTo( alphabet );
 
+	if (options.numbers) {
+		for (var i = 0; i < 10; i++) {
+			var letter = String.fromCharCode(48 + i);
+
+			$('<span/>')
+				.data('letter', letter)
+				.data('match-count', bins[letter] || 0)
+				.addClass(!bins[letter] ? 'empty' : '')
+				.html(letter)
+				.appendTo(alphabet);
+		}
+	}
 	for ( var i=0 ; i<26 ; i++ ) {
 		var letter = String.fromCharCode( 65 + i );
 
@@ -102,6 +134,18 @@ function draw ( table, alphabet )
 			.html( letter )
 			.appendTo( alphabet );
 	}
+	if (options.caseSensitive) {
+		for (var i = 0; i < 26; i++) {
+			var letter = String.fromCharCode(97 + i);
+
+			$('<span/>')
+				.data('letter', letter)
+				.data('match-count', bins[letter] || 0)
+				.addClass(!bins[letter] ? 'empty' : '')
+				.html(letter)
+				.appendTo(alphabet);
+		}
+	}
 
 	$('<div class="alphabetInfo"></div>')
 		.appendTo( alphabet );
@@ -111,8 +155,13 @@ function draw ( table, alphabet )
 $.fn.dataTable.AlphabetSearch = function ( context ) {
 	var table = new $.fn.dataTable.Api( context );
 	var alphabet = $('<div class="alphabet"/>');
+	var options = $.extend({
+		column: 0,
+		caseSensitive: false,
+		numbers: false
+	}, table.init().alphabet);
 
-	draw( table, alphabet );
+	draw( table, alphabet, options );
 
 	// Trigger a search
 	alphabet.on( 'click', 'span', function () {
@@ -149,7 +198,6 @@ $.fn.dataTable.AlphabetSearch = function ( context ) {
 };
 
 $.fn.DataTable.AlphabetSearch = $.fn.dataTable.AlphabetSearch;
-
 
 // Register a search plug-in
 $.fn.dataTable.ext.feature.push( {
