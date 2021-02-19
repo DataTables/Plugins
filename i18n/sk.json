@@ -32,17 +32,19 @@
         "copy": "Kopírovať",
         "copySuccess": {
             "1": "Skopírovaný 1 riadok do schránky",
-            "_": "Skopírované %ds riadkov do schránky"
+            "_": "Skopírované %d riadkov do schránky"
         },
         "copyTitle": "Kopírovať do schránky",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
             "-1": "Zobraziť všetky riadky",
-            "_": "Zobraziť %d riadkov"
+            "_": "Zobraziť %d riadkov",
+            "1": "Zobraziť 1 riadok"
         },
         "pdf": "PDF",
-        "print": "Tlačiť"
+        "print": "Tlačiť",
+        "copyKeys": "Stlačte ctrl alebo u2318 + C pre kopírovanie dát tabuľky do systémovej schránky. Pre zrušenie kliknite na tuto správu alebo stlačte ESC."
     },
     "searchBuilder": {
         "add": "Pridať Podmienku",
@@ -91,10 +93,19 @@
         },
         "data": "Dáta",
         "deleteTitle": "Vymazať filtrovacie pravidlo",
-        "leftTitle": "Pravidlá odseku",
         "logicAnd": "A",
         "logicOr": "Alebo",
-        "value": "Hodnota"
+        "value": "Hodnota",
+        "button": {
+            "0": "Rozšírený filter",
+            "_": "Rozšírený filter (%d)"
+        },
+        "leftTitle": "Podmienky odseku",
+        "rightTitle": "Podmienky v odseku",
+        "title": {
+            "0": "Rozšírený filter",
+            "_": "Rozšírený filter (%d)"
+        }
     },
     "searchPanes": {
         "clearMessage": "Vymazať všetko",
@@ -109,7 +120,6 @@
         "title": "Aktívnych Filtrov - %"
     },
     "select": {
-        "1": "%d vybraných riadkov",
         "_": "%d vybraných riadkov",
         "cells": {
             "1": "1 zvolená bunka",
@@ -118,7 +128,52 @@
         "columns": {
             "1": "1 vybraný stĺpec",
             "_": "%d vybraných stĺpcov"
-        }
+        },
+        "1": "1 vybraný riadok",
+        "2": "%d vybraných riadkov"
     },
-    "thousands": " "
+    "thousands": " ",
+    "datetime": {
+        "previous": "Prechádzajúci",
+        "next": "Ďalší",
+        "hours": "Hodiny",
+        "minutes": "Minúty",
+        "seconds": "Sekundy",
+        "unknown": "Neznámy",
+        "amPm": [
+            "am",
+            "pm"
+        ]
+    },
+    "editor": {
+        "close": "Zavrieť",
+        "create": {
+            "button": "Nový",
+            "title": "Vytvoriť nový záznam",
+            "submit": "Vytvoriť"
+        },
+        "edit": {
+            "button": "Editovať",
+            "title": "Editovať záznam",
+            "submit": "Aktualizovať"
+        },
+        "remove": {
+            "button": "Vymazať",
+            "title": "Vymazať",
+            "submit": "Vymazať",
+            "confirm": {
+                "_": "Určite chcete vymazať %d riadkov?",
+                "1": "Určite chcete vymazať 1 riadok?"
+            }
+        },
+        "error": {
+            "system": "Vyskytla sa systémová chyba"
+        },
+        "multi": {
+            "title": "Niekoľko hodnôt",
+            "info": "Zvolený prvok obsahuje rozdielne hodnoty pre tento vstup. Na editovanie a nastavenie všetkých prvkov pre tento vstup na rovnakú hodnotu, kliknite alebo klepnite tu, inak si zachovajú individuálne hodnoty.",
+            "restore": "Vrátiť späť zmeny",
+            "noMulti": "Tento vstup môže byť editovaný samostatne, ale nie ako súčasť skupiny."
+        }
+    }
 }

@@ -4,7 +4,6 @@
     "infoEmpty": "Keine Daten vorhanden",
     "infoFiltered": "(gefiltert von _MAX_ Einträgen)",
     "infoThousands": ".",
-    "lengthMenu": "_MENU_ Einträge anzeigen",
     "loadingRecords": "Wird geladen ..",
     "processing": "Bitte warten ..",
     "paginate": {
@@ -70,7 +69,6 @@
             "0": "Such-Baukasten",
             "_": "Such-Baukasten (%d)"
         },
-        "clearAll": "Leeren",
         "condition": "Bedingung",
         "conditions": {
             "date": {
@@ -78,10 +76,10 @@
                 "before": "Vor",
                 "between": "Zwischen",
                 "empty": "Leer",
-                "equals": "Entspricht",
                 "not": "Nicht",
                 "notBetween": "Nicht zwischen",
-                "notEmpty": "Nicht leer"
+                "notEmpty": "Nicht leer",
+                "equals": "Gleich"
             },
             "number": {
                 "between": "Zwischen",
@@ -123,7 +121,8 @@
             "0": "Such-Baukasten",
             "_": "Such-Baukasten (%d)"
         },
-        "value": "Wert"
+        "value": "Wert",
+        "clearAll": "Alle löschen"
     },
     "searchPanes": {
         "clearMessage": "Leeren",
@@ -131,13 +130,53 @@
             "0": "Suchmasken",
             "_": "Suchmasken (%d)"
         },
-        "count": "{total}",
         "countFiltered": "{shown} ({total})",
         "emptyPanes": "Keine Suchmasken",
         "loadMessage": "Lade Suchmasken..",
-        "title": "Aktive Filter: %d"
+        "title": "Aktive Filter: %d",
+        "count": "Anzahl"
     },
     "searchPlaceholder": "Suchbegriff eingeben",
     "thousands": ".",
-    "zeroRecords": "Keine passenden Einträge gefunden"
+    "zeroRecords": "Keine passenden Einträge gefunden",
+    "lengthMenu": "_MENU_ Zeilen anzeigen",
+    "datetime": {
+        "previous": "Vorher",
+        "next": "Nachher",
+        "hours": "Stunden",
+        "minutes": "Minuten",
+        "seconds": "Sekunden",
+        "unknown": "Unbekannt"
+    },
+    "editor": {
+        "close": "Schließen",
+        "create": {
+            "button": "Neu",
+            "title": "Neuen Eintrag erstellen",
+            "submit": "Neu"
+        },
+        "edit": {
+            "button": "Ändern",
+            "title": "Eintrag ändern",
+            "submit": "ändern"
+        },
+        "remove": {
+            "button": "Löschen",
+            "title": "Löschen",
+            "submit": "Löschen",
+            "confirm": {
+                "_": "Sollen %d Zeilen gelöscht werden?",
+                "1": "Soll diese Zeile gelöscht werden?"
+            }
+        },
+        "error": {
+            "system": "Ein Systemfehler ist aufgetreten"
+        },
+        "multi": {
+            "title": "Mehrere Werte",
+            "info": "Die ausgewählten Elemente enthalten mehrere Werte für dieses Feld. Um alle Elemente für dieses Feld zu bearbeiten und auf denselben Wert zu setzen, klicken oder tippen Sie hier, andernfalls behalten diese ihre individuellen Werte bei.",
+            "restore": "Änderungen zurücksetzen",
+            "noMulti": "Dieses Feld kann nur einzeln bearbeitet werden, nicht als Teil einer Mengen-Änderung."
+        }
+    }
 }

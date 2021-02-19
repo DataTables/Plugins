@@ -131,5 +131,48 @@
             "1": "1 column selected",
             "_": "%d columns selected"
         }
+    },
+    "datetime": {
+        "previous": "Previous",
+        "next": "Next",
+        "hours": "Hour",
+        "minutes": "Minute",
+        "seconds": "Second",
+        "unknown": "-",
+        "amPm": [
+            "am",
+            "pm"
+        ]
+    },
+    "editor": {
+        "close": "Close",
+        "create": {
+            "button": "New",
+            "title": "Create new entry",
+            "submit": "Create"
+        },
+        "edit": {
+            "button": "Edit",
+            "title": "Edit Entry",
+            "submit": "Update"
+        },
+        "remove": {
+            "button": "Delete",
+            "title": "Delete",
+            "submit": "Delete",
+            "confirm": {
+                "_": "Are you sure you wish to delete %d rows?",
+                "1": "Are you sure you wish to delete 1 row?"
+            }
+        },
+        "error": {
+            "system": "A system error has occurred (<a target=\"\\\" rel=\"nofollow\" href=\"\\\">More information<\/a>)."
+        },
+        "multi": {
+            "title": "Multiple Values",
+            "info": "The selected items contain different values for this input. To edit and set all items for this input to the same value, click or tap here, otherwise they will retain their individual values.",
+            "restore": "Undo Changes",
+            "noMulti": "This input can be edited individually, but not part of a group. "
+        }
     }
 }

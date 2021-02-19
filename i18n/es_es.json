@@ -124,5 +124,10 @@
             "_": "%d columnas seleccionadas"
         }
     },
-    "thousands": "."
+    "thousands": ".",
+    "datetime": {
+        "previous": "Anterior",
+        "next": "Proximo",
+        "hours": "Horas"
+    }
 }
