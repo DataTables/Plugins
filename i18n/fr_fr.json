@@ -137,5 +137,12 @@
     "infoThousands": ".",
     "search": "Rechercher:",
     "searchPlaceholder": "...",
-    "thousands": "."
+    "thousands": ".",
+    "datetime": {
+        "previous": "précédent",
+        "next": "suivant",
+        "hours": "heures",
+        "minutes": "minutes",
+        "seconds": "secondes"
+    }
 }

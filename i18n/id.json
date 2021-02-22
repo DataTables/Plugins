@@ -30,7 +30,6 @@
         "colvis": "Visibilitas Kolom",
         "colvisRestore": "Kembalikan visibilitas",
         "copy": "Salin",
-        "copyKeys": "Tekan ctrl atau u2318 + C untuk menyalin tabel ke papan klip.<br><br>To membatalkan, klik pesan ini atau tekan esc.",
         "copySuccess": {
             "1": "1 baris disalin ke papan klip",
             "_": "%d baris disalin ke papan klip"
@@ -44,7 +43,8 @@
             "_": "Tampilkan %d baris"
         },
         "pdf": "PDF",
-        "print": "Cetak"
+        "print": "Cetak",
+        "copyKeys": "Tekan ctrl atau u2318 + C untuk menyalin tabel ke papan klip.<br \/><br \/>Untuk membatalkan, klik pesan ini atau tekan esc."
     },
     "searchBuilder": {
         "add": "Tambah Kondisi",
@@ -149,31 +149,31 @@
         "close": "Tutup",
         "create": {
             "button": "Tambah",
-            "title": "Tambah entri baru",
-            "submit": "Tambah"
-        },
-        "edit": {
-            "button": "Ubah",
-            "title": "Ubah entri",
-            "submit": "Simpan"
+            "submit": "Tambah",
+            "title": "Tambah inputan baru"
         },
         "remove": {
             "button": "Hapus",
-            "title": "Hapus",
             "submit": "Hapus",
             "confirm": {
                 "_": "Apakah Anda yakin untuk menghapus %d baris?",
                 "1": "Apakah Anda yakin untuk menghapus 1 baris?"
-            }
-        },
-        "error": {
-            "system": "Sistem terdapat error (<a target=\"\\\" rel=\"nofollow\" href=\"\\\">Informasi lebih lengkap<\/a>)."
+            },
+            "title": "Hapus inputan"
         },
         "multi": {
             "title": "Beberapa Nilai",
             "info": "Item yang dipilih berisi nilai yang berbeda untuk input ini. Untuk mengedit dan mengatur semua item untuk input ini ke nilai yang sama, klik atau tekan di sini, jika tidak maka akan mempertahankan nilai masing-masing.",
             "restore": "Batalkan Perubahan",
             "noMulti": "Masukan ini dapat diubah satu per satu, tetapi bukan bagian dari grup."
+        },
+        "edit": {
+            "title": "Edit inputan",
+            "submit": "Edit",
+            "button": "Edit"
+        },
+        "error": {
+            "system": "Terjadi kesalahan pada system. (<a target=\"\\\" rel=\"\\ nofollow\" href=\"\\\">Informasi Selebihnya<\/a>)."
         }
     }
 }
