@@ -1,133 +1,178 @@
 {
-    "processing": "Procesando...",
-    "lengthMenu": "Mostrar _MENU_ registros",
-    "zeroRecords": "No se encontraron resultados",
-    "emptyTable": "Ningún dato disponible en esta tabla",
-    "info": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
-    "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
-    "infoFiltered": "(filtrado de un total de _MAX_ registros)",
-    "search": "Buscar:",
-    "infoThousands": ",",
-    "loadingRecords": "Cargando...",
+    "emptyTable": "No hay datos disponibles en la tabla", 
+    "info": "Mostrando de _START_ a _END_ de _TOTAL_ registros", 
+    "infoEmpty": "Mostrando de 0 a 0 de 0 registros", 
+    "infoFiltered": "(Filtrado del total _MAX_ de registros)", 
+    "infoThousands": ",", 
+    "lengthMenu": "Mostrar _MENU_ de registros", 
+    "loadingRecords": "Cargando...", 
+    "processing": "Procesando...", 
+    "search": "Buscar:", 
+    "zeroRecords": "No se encontraron registros", 
+    "thousands": ",",
     "paginate": {
-        "first": "Primero",
-        "last": "Último",
-        "next": "Siguiente",
+        "first": "Primero", 
+        "last": "Último", 
+        "next": "Siguiente", 
         "previous": "Anterior"
     },
     "aria": {
-        "sortAscending": ": Activar para ordenar la columna de manera ascendente",
-        "sortDescending": ": Activar para ordenar la columna de manera descendente"
-    },
-    "buttons": {
-        "copy": "Copiar",
-        "colvis": "Visibilidad",
-        "collection": "Colección",
-        "colvisRestore": "Restaurar visibilidad",
-        "copyKeys": "Presione ctrl o u2318 + C para copiar los datos de la tabla al portapapeles del sistema. <br \/> <br \/> Para cancelar, haga clic en este mensaje o presione escape.",
-        "copySuccess": {
-            "1": "Copiada 1 fila al portapapeles",
-            "_": "Copiadas %d fila al portapapeles"
-        },
-        "copyTitle": "Copiar al portapapeles",
-        "csv": "CSV",
-        "excel": "Excel",
-        "pageLength": {
-            "-1": "Mostrar todas las filas",
-            "1": "Mostrar 1 fila",
-            "_": "Mostrar %d filas"
-        },
-        "pdf": "PDF",
-        "print": "Imprimir"
+        "sortAscending": ": Activar para ordenar la columna ascendente ", 
+        "sortDescending": ": Activar para ordenar la columna descendente" 
     },
     "autoFill": {
         "cancel": "Cancelar",
-        "fill": "Rellene todas las celdas con <i>%d<\/i>",
-        "fillHorizontal": "Rellenar celdas horizontalmente",
-        "fillVertical": "Rellenar celdas verticalmentemente"
+        "fill": "Llenar celdas con <i>%d<\/i>",
+        "fillHorizontal": "Llenar celdas horizontalmente", 
+        "fillVertical": "Llenar celdas verticalmente" 
     },
-    "decimal": ",",
-    "searchBuilder": {
-        "add": "Añadir condición",
-        "button": {
-            "0": "Constructor de búsqueda",
-            "_": "Constructor de búsqueda (%d)"
+    "buttons": {
+        "collection": "Colección <span class='ui-button-icon-primary ui-icon ui-icon-triangle-1-s'\/>",
+        "colvis": "Columnas visibles", 
+        "colvisRestore": "Restaurar visibilidad", 
+        "copy": "Copiar",
+        "copyKeys": "Presionar ctrl o u2318 + C para copiar la tabla de datos al portapapeles. .<br><br> Para cancelar hacer click en este mensaje o presionar escape.", 
+        "copySuccess": {
+            "1": "1 fila copiada al portapapeles", 
+            "_": "%d filas copiadas al portapapeles" 
         },
-        "clearAll": "Borrar todo",
-        "condition": "Condición",
+        "copyTitle": "Copiado al portapapeles", 
+        "csv": "CSV",
+        "excel": "Excel",
+        "pageLength": {
+            "-1": "Mostrar todas las filas", 
+            "1": "Mostrar 1 fila", 
+            "_": "Mostrar %d filas" 
+        },
+        "pdf": "PDF",
+        "print": "Imprimir" 
+    },
+    "searchBuilder": {
+        "add": "Agregar condición", 
+        "button": {
+            "0": "Constructor de búsqueda", 
+            "_": "Constructor de búsqueda (%d)" 
+        },
+        "clearAll": "Limpiar todo", 
+        "condition": "Condición", 
         "conditions": {
             "date": {
-                "after": "Despues",
-                "before": "Antes",
-                "between": "Entre",
-                "empty": "Vacío",
-                "equals": "Igual a",
+                "after": "Después", 
+                "before": "Antes", 
+                "between": "Entre",  
+                "empty": "Vacío", 
+                "equals": "Igual", 
                 "not": "No",
-                "notBetween": "No entre",
-                "notEmpty": "No Vacio"
+                "notBetween": "Fuera de",
+                "notEmpty": "No Vacío"
             },
             "number": {
-                "between": "Entre",
-                "empty": "Vacio",
-                "equals": "Igual a",
-                "gt": "Mayor a",
-                "gte": "Mayor o igual a",
-                "lt": "Menor que",
-                "lte": "Menor o igual que",
+                "between": "Entre", 
+                "empty": "Vacío",
+                "equals": "Igual",
+                "gt": "Mayor que", 
+                "gte": "Mayor o igual que", 
+                "lt": "Menor que",  
+                "lte": "Menor o igual que", 
                 "not": "No",
-                "notBetween": "No entre",
-                "notEmpty": "No vacío"
+                "notBetween": "Fuera de",
+                "notEmpty": "No Vacío" 
             },
             "string": {
                 "contains": "Contiene",
-                "empty": "Vacío",
-                "endsWith": "Termina en",
-                "equals": "Igual a",
+                "empty": "Vacío", 
+                "endsWith": "Termina con", 
+                "equals": "Igual", 
                 "not": "No",
-                "notEmpty": "No Vacio",
-                "startsWith": "Empieza con"
+                "notEmpty": "No Vacío",
+                "startsWith": "Empieza con" 
+            },
+            "array": {
+                "without": "Sin",
+                "notEmpty": "No Vacío",
+                "not": "No",
+                "contains": "Contiene",
+                "empty": "Vacío",
+                "equals": "Igual"
             }
         },
-        "data": "Data",
-        "deleteTitle": "Eliminar regla de filtrado",
-        "leftTitle": "Criterios anulados",
+        "data": "Datos",
+        "deleteTitle": "Eliminar regla de filtrado", 
+        "leftTitle": "Criterios anulados", 
         "logicAnd": "Y",
         "logicOr": "O",
-        "rightTitle": "Criterios de sangría",
+        "rightTitle": "Criterios de indentación", 
         "title": {
-            "0": "Constructor de búsqueda",
-            "_": "Constructor de búsqueda (%d)"
+            "0": "Constructor de Búsqueda", 
+            "_": "Constructor de Búsqueda (%d)" 
         },
         "value": "Valor"
     },
     "searchPanes": {
-        "clearMessage": "Borrar todo",
+        "clearMessage": "Limpiar Todo",
         "collapse": {
-            "0": "Paneles de búsqueda",
-            "_": "Paneles de búsqueda (%d)"
+            "0": "Paneles de Búsqueda", 
+            "_": "Paneles de Búsqueda (%d)" 
         },
         "count": "{total}",
         "countFiltered": "{shown} ({total})",
-        "emptyPanes": "Sin paneles de búsqueda",
-        "loadMessage": "Cargando paneles de búsqueda",
-        "title": "Filtros Activos - %d"
+        "emptyPanes": "Sin paneles de búsqueda", 
+        "loadMessage": "Cargando Paneles de Búsqueda", 
+        "title": "Filtros Activos - %d" 
     },
     "select": {
-        "1": "%d fila seleccionada",
-        "_": "%d filas seleccionadas",
-        "cells": {
-            "1": "1 celda seleccionada",
-            "_": "$d celdas seleccionadas"
+        "1": "%d fila seleccionada", 
+        "_": "%d filas seleccionada", 
+        "cells": { 
+            "1": "1 celda seleccionada", 
+            "_": "%d celdas seleccionadas" 
         },
         "columns": {
-            "1": "1 columna seleccionada",
-            "_": "%d columnas seleccionadas"
+            "1": "1 columna seleccionada", 
+            "_": "%d columna seleccionada" 
         }
     },
-    "thousands": ".",
     "datetime": {
         "previous": "Anterior",
-        "next": "Proximo",
-        "hours": "Horas"
+        "next": "Siguiente",
+        "hours": "Hora",
+        "minutes": "Minuto",
+        "seconds": "Segundo",
+        "unknown": "-", 
+        "amPm": [ 
+            "am",
+            "pm"
+        ]
+    },
+    "editor": {
+        "close": "Cerrar",
+        "create": {
+            "button": "Nuevo",
+            "title": "Crear Nuevo Registro",
+            "submit": "Crear"
+        },
+        "edit": {
+            "button": "Editar",
+            "title": "Editar Registro",
+            "submit": "Actualizar"
+        },
+        "remove": {
+            "button": "Eliminar",
+            "title": "Eliminar",
+            "submit": "Eliminar",
+            "confirm": {
+                "_": "¿Está seguro que desea eliminar %d filas?", 
+                "1": "¿Está seguro que desea eliminar 1 fila?" 
+            }
+        },
+        "error": {
+            "system": "Ha ocurrido un error en el sistema (<a target=\"\\\" rel=\"nofollow\" href=\"\\\">Más información<\/a>)." 
+        },
+        "multi": {
+            "title": "Múltiples Valores", 
+            "info": "Los elementos seleccionados contienen diferentes valores para este registro. Para editar y establecer todos los elementos de este registro con el mismo valor, hacer click o tap aquí, de lo contrario conservarán sus valores individuales.",   
+            "restore": "Deshacer Cambios", 
+            "noMulti": "Este registro puede ser editado individualmente, pero no como parte de un grupo." 
+        }
     }
-}
+}  
