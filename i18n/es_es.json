@@ -62,7 +62,7 @@
                 "between": "Entre",  
                 "empty": "Vacío", 
                 "equals": "Igual", 
-                "not": "No",
+                "not": "Diferente de",
                 "notBetween": "Fuera de",
                 "notEmpty": "No Vacío"
             },
@@ -74,7 +74,7 @@
                 "gte": "Mayor o igual que", 
                 "lt": "Menor que",  
                 "lte": "Menor o igual que", 
-                "not": "No",
+                "not": "Diferente de",
                 "notBetween": "Fuera de",
                 "notEmpty": "No Vacío" 
             },
@@ -83,14 +83,14 @@
                 "empty": "Vacío", 
                 "endsWith": "Termina con", 
                 "equals": "Igual", 
-                "not": "No",
+                "not": "Diferente de",
                 "notEmpty": "No Vacío",
                 "startsWith": "Empieza con" 
             },
             "array": {
                 "without": "Sin",
                 "notEmpty": "No Vacío",
-                "not": "No",
+                "not": "Diferente de",
                 "contains": "Contiene",
                 "empty": "Vacío",
                 "equals": "Igual"
