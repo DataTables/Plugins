@@ -18,7 +18,8 @@
         "cancel": "Annulla",
         "fill": "Riempi tutte le celle con <i>%d<\/i>",
         "fillHorizontal": "Riempi celle orizzontalmente",
-        "fillVertical": "Riempi celle verticalmente"
+        "fillVertical": "Riempi celle verticalmente",
+        "info": "Informazioni"
     },
     "buttons": {
         "collection": "Collezione <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
@@ -135,7 +136,54 @@
             "1": "1 riga selezionata",
             "_": "%d righe selezionate",
             "0": "%d righe selezionate"
+        },
+        "0": "Nessuna riga selezionata",
+        "2": "%d righe selezionate"
+    },
+    "zeroRecords": "Nessun elemento corrispondente trovato",
+    "datetime": {
+        "amPm": [
+            "am",
+            "pm"
+        ],
+        "hours": "ore",
+        "minutes": "minuti",
+        "next": "successivo",
+        "previous": "precedente",
+        "seconds": "secondi",
+        "unknown": "sconosciuto"
+    },
+    "editor": {
+        "close": "Chiudi",
+        "create": {
+            "button": "Nuovo",
+            "submit": "Aggiungi",
+            "title": "Aggiungi nuovo elemento"
+        },
+        "edit": {
+            "button": "Modifica",
+            "submit": "Modifica",
+            "title": "Modifica elemento"
+        },
+        "error": {
+            "system": "Errore del sistema."
+        },
+        "multi": {
+            "info": "Gli elementi selezionati contengono valori diversi. Per modificare e impostare tutti gli elementi per questa selezione allo stesso valore, premi o clicca qui, altrimenti ogni cella manterrà il suo valore attuale.",
+            "noMulti": "Questa selezione può essere modificata individualmente, ma non se fa parte di un gruppo.",
+            "restore": "Annulla le modifiche",
+            "title": "Valori multipli"
+        },
+        "remove": {
+            "button": "Rimuovi",
+            "confirm": {
+                "_": "Sei sicuro di voler cancellare %d righe?",
+                "1": "Sei sicuro di voler cancellare 1 riga?"
+            },
+            "submit": "Rimuovi",
+            "title": "Rimuovi"
         }
     },
-    "zeroRecords": "Nessun elemento corrispondente trovato"
+    "searchPlaceholder": "Valore di esempio",
+    "thousands": "."
 }

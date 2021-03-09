@@ -62,9 +62,9 @@
                 "between": "Entre",
                 "empty": "Vacío",
                 "equals": "Igual a",
-                "not": "No",
                 "notBetween": "No entre",
-                "notEmpty": "No Vacio"
+                "notEmpty": "No Vacio",
+                "not": "Diferente de"
             },
             "number": {
                 "between": "Entre",
@@ -74,18 +74,26 @@
                 "gte": "Mayor o igual a",
                 "lt": "Menor que",
                 "lte": "Menor o igual que",
-                "not": "No",
                 "notBetween": "No entre",
-                "notEmpty": "No vacío"
+                "notEmpty": "No vacío",
+                "not": "Diferente de"
             },
             "string": {
                 "contains": "Contiene",
                 "empty": "Vacío",
                 "endsWith": "Termina en",
                 "equals": "Igual a",
-                "not": "No",
                 "notEmpty": "No Vacio",
-                "startsWith": "Empieza con"
+                "startsWith": "Empieza con",
+                "not": "Diferente de"
+            },
+            "array": {
+                "not": "Diferente de",
+                "equals": "Igual",
+                "empty": "Vacío",
+                "contains": "Contiene",
+                "notEmpty": "No Vacío",
+                "without": "Sin"
             }
         },
         "data": "Data",
@@ -128,6 +136,44 @@
     "datetime": {
         "previous": "Anterior",
         "next": "Proximo",
-        "hours": "Horas"
+        "hours": "Horas",
+        "minutes": "Minutos",
+        "seconds": "Segundos",
+        "unknown": "-",
+        "amPm": [
+            "am",
+            "pm"
+        ]
+    },
+    "editor": {
+        "close": "Cerrar",
+        "create": {
+            "button": "Nuevo",
+            "title": "Crear Nuevo Registro",
+            "submit": "Crear"
+        },
+        "edit": {
+            "button": "Editar",
+            "title": "Editar Registro",
+            "submit": "Actualizar"
+        },
+        "remove": {
+            "button": "Eliminar",
+            "title": "Eliminar Registro",
+            "submit": "Eliminar",
+            "confirm": {
+                "_": "¿Está seguro que desea eliminar %d filas?",
+                "1": "¿Está seguro que desea eliminar 1 fila?"
+            }
+        },
+        "error": {
+            "system": "Ha ocurrido un error en el sistema (<a target=\"\\\" rel=\"\\ nofollow\" href=\"\\\">Más información&lt;\\\/a&gt;).<\/a>"
+        },
+        "multi": {
+            "title": "Múltiples Valores",
+            "info": "Los elementos seleccionados contienen diferentes valores para este registro. Para editar y establecer todos los elementos de este registro con el mismo valor, hacer click o tap aquí, de lo contrario conservarán sus valores individuales.",
+            "restore": "Deshacer Cambios",
+            "noMulti": "Este registro puede ser editado individualmente, pero no como parte de un grupo."
+        }
     }
 }

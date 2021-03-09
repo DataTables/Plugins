@@ -5,7 +5,6 @@
     "infoFiltered": "(فیلتر شده از _MAX_ ردیف)",
     "infoThousands": ",",
     "lengthMenu": "نمایش _MENU_ ردیف",
-    "loadingRecords": "در حال بارگزاری...",
     "processing": "در حال پردازش...",
     "search": "جستجو:",
     "zeroRecords": "رکوردی با این مشخصات پیدا نشد",
@@ -136,5 +135,38 @@
         "emptyPanes": "صفحه جستجو وجود ندارد",
         "loadMessage": "در حال بارگیری صفحات جستجو ...",
         "title": "فیلترهای فعال - %d"
+    },
+    "loadingRecords": "در حال بارگذاری...",
+    "datetime": {
+        "previous": "قبلی",
+        "next": "بعدی",
+        "hours": "ساعت",
+        "minutes": "دقیقه",
+        "seconds": "ثانیه",
+        "amPm": [
+            "صبح",
+            "عصر"
+        ]
+    },
+    "editor": {
+        "close": "بستن",
+        "create": {
+            "button": "جدید",
+            "title": "ثبت جدید",
+            "submit": "ایجــاد"
+        },
+        "edit": {
+            "button": "ویرایش",
+            "title": "ویرایش",
+            "submit": "به‌روزرسانی"
+        },
+        "remove": {
+            "button": "حذف",
+            "title": "حذف",
+            "submit": "حذف"
+        },
+        "multi": {
+            "restore": "واگرد"
+        }
     }
 }
