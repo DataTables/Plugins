@@ -127,5 +127,15 @@
         "title": "Filtros Ativos"
     },
     "searchPlaceholder": "Digite um termo para pesquisar",
-    "thousands": "."
+    "thousands": ".",
+    "datetime": {
+        "previous": "Anterior",
+        "next": "Próximo",
+        "hours": "Hora",
+        "minutes": "Minuto",
+        "seconds": "Segundo"
+    },
+    "editor": {
+        "close": "Fechar"
+    }
 }

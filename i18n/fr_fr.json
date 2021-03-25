@@ -7,8 +7,8 @@
     "paginate": {
         "first": "Premier",
         "last": "Dernier",
-        "next": "Suivant",
-        "previous": "Précédent"
+        "previous": "Précédent",
+        "next": "Suiv"
     },
     "aria": {
         "sortAscending": ": activer pour trier la colonne par ordre croissant",

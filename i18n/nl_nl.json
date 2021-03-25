@@ -24,7 +24,6 @@
         "info": "Informatie"
     },
     "buttons": {
-        "collection": "Collectie",
         "colvis": "Kolom zichtbaarheid",
         "colvisRestore": "Herstel zichtbaarheid",
         "copy": "Kopieer",
@@ -42,10 +41,9 @@
         },
         "pdf": "PDF",
         "print": "Print",
-        "copyKeys": "Klik ctrl of u2318 + C om de tabeldata to kopiëren naar je klembord. Om te annuleren klik hier of klik op escape."
+        "copyKeys": "Klik ctrl of u2318 + C om de tabeldata to kopiëren naar je klembord. Om te annuleren klik hier of klik op escape.",
+        "collection": "Verzameling"
     },
-    "info": "_START_ tot _END_ van _TOTAL_ regels",
-    "infoFiltered": " (gefilterd uit _MAX_ regels)",
     "processing": "Verwerken...",
     "decimal": ",",
     "searchBuilder": {
@@ -136,8 +134,55 @@
             "0": "%d rijen geselecteerd",
             "1": "1 rij geselecteerd",
             "_": "%d rijen geselecteerd"
-        }
+        },
+        "0": " Geen enkele rij geselecteerd.",
+        "2": "%d rijen geselecteerd"
     },
     "thousands": ".",
-    "searchPlaceholder": "Zoekterm"
+    "searchPlaceholder": "Zoekterm",
+    "info": "_START_ tot _END_ van _TOTAL_ resultaten",
+    "infoFiltered": " (gefilterd uit _MAX_ resultaten)",
+    "datetime": {
+        "previous": "Vorige",
+        "next": "Volgende",
+        "hours": "Uur",
+        "minutes": "Minuut",
+        "seconds": "Seconde",
+        "unknown": "Onbekend",
+        "amPm": [
+            "vm",
+            "nm"
+        ]
+    },
+    "editor": {
+        "close": "Sluiten",
+        "create": {
+            "button": "Nieuw",
+            "title": "Voeg nieuwe gegevens toe",
+            "submit": "Toevoegen"
+        },
+        "edit": {
+            "button": "Wijzigen",
+            "title": "Wijzig gegevens",
+            "submit": "Wijzigen"
+        },
+        "remove": {
+            "button": "Verwijderen",
+            "title": "Verwijder",
+            "submit": "Verwijder",
+            "confirm": {
+                "_": "Bent u zeker dat u %d rijen wil verwijderen?",
+                "1": "Bent u zeker dat u 1 rij wil verwijderen?"
+            }
+        },
+        "error": {
+            "system": "Er is een fout gebeurd"
+        },
+        "multi": {
+            "title": "Meerdere waarden",
+            "info": "De geselecteerde items bevatten verschillende waarden voor deze invoer. Om alle items voor deze invoer op dezelfde waarde te zetten, klik of tik hier, zoniet zullen de individuele waarden behouden blijven.",
+            "restore": "Wijzigingen ongedaan maken",
+            "noMulti": "Deze invoer kan individueel gewijzigd worden, maar niet als deel van een groep."
+        }
+    }
 }

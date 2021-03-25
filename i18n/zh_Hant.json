@@ -34,5 +34,38 @@
             "上午",
             "下午"
         ]
+    },
+    "searchBuilder": {
+        "add": "新增條件",
+        "clearAll": "清除",
+        "condition": "條件",
+        "deleteTitle": "刪除過濾條件",
+        "leftTitle": "升級",
+        "rightTitle": "降級"
+    },
+    "editor": {
+        "close": "關閉",
+        "create": {
+            "button": "新增",
+            "title": "建立新項目",
+            "submit": "建立"
+        },
+        "edit": {
+            "button": "編輯",
+            "title": "編輯項目",
+            "submit": "更新"
+        },
+        "remove": {
+            "button": "刪除",
+            "title": "刪除",
+            "submit": "刪除",
+            "confirm": {
+                "_": "您確定要刪除 %d 筆資料嗎？",
+                "1": "您確定要刪除 %d 筆資料嗎？"
+            }
+        },
+        "multi": {
+            "restore": "回復修改"
+        }
     }
 }

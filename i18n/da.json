@@ -45,7 +45,6 @@
     },
     "emptyTable": "Ingen data tilgængelige i tabellen",
     "infoThousands": ".",
-    "loadingRecords": "Loading",
     "select": {
         "1": "%d række valgt",
         "_": "%d rækker valgt",
@@ -56,7 +55,9 @@
         "columns": {
             "1": "1 kolonne valgt",
             "_": "%d kolonner valgt"
-        }
+        },
+        "0": "Ingen rækker valgt",
+        "2": "%d rækker valgt"
     },
     "thousands": ".",
     "decimal": ".",
@@ -69,7 +70,9 @@
         },
         "emptyPanes": "Ingen søgepaneler",
         "loadMessage": "Henter søgepaneler",
-        "title": "Filter aktive - %d"
+        "title": "Filter aktive - %d",
+        "count": "Antal",
+        "countFiltered": "Filtreret antal"
     },
     "datetime": {
         "previous": "Forrige",
@@ -107,5 +110,62 @@
             "title": "Flere værdier",
             "restore": "Fortryd ændringer"
         }
-    }
+    },
+    "loadingRecords": "Henter...",
+    "searchBuilder": {
+        "add": "Tilføj betingelse",
+        "button": {
+            "0": "Søg",
+            "_": "Søg (%d)"
+        },
+        "clearAll": "Nulstil",
+        "condition": "Betingelse",
+        "conditions": {
+            "date": {
+                "after": "Efter",
+                "before": "Før",
+                "between": "Mellem",
+                "empty": "Tom",
+                "equals": "Lig med",
+                "not": "Ikke",
+                "notBetween": "Ikke mellem",
+                "notEmpty": "Ikke tom"
+            },
+            "number": {
+                "between": "Mellem",
+                "empty": "Tom",
+                "equals": "Lig med",
+                "gt": "Større end",
+                "lt": "Mindre end",
+                "lte": "Mindre end eller lig med",
+                "not": "Ikke",
+                "notBetween": "Ikke mellem",
+                "notEmpty": "Ikke tom",
+                "gte": "Større end eller lig medLig med eller større end"
+            },
+            "string": {
+                "contains": "Indeholder",
+                "empty": "Tom",
+                "endsWith": "Slutter med",
+                "equals": "Lig med",
+                "not": "Ikke",
+                "notEmpty": "Ikke tom",
+                "startsWith": "Starter med"
+            },
+            "array": {
+                "equals": "Lig med",
+                "empty": "Tom",
+                "contains": "Indeholder",
+                "not": "Ikke",
+                "notEmpty": "Ikke tom",
+                "without": "Indeholder ikke"
+            }
+        },
+        "data": "Data",
+        "deleteTitle": "Slet filtrerings regel",
+        "logicAnd": "Og",
+        "logicOr": "Eller",
+        "value": "Værdi"
+    },
+    "searchPlaceholder": "Søg"
 }

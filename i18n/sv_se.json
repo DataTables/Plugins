@@ -104,7 +104,9 @@
             "0": "Avancerad sökning",
             "_": "Avancerad sökning (%d)"
         },
-        "value": "Värde"
+        "value": "Värde",
+        "leftTitle": "Omvänt indragskriterier",
+        "rightTitle": "Indragskriterier"
     },
     "searchPanes": {
         "clearMessage": "Rensa",
@@ -130,5 +132,48 @@
             "_": "%d kolumner markerade"
         }
     },
-    "thousands": " "
+    "thousands": " ",
+    "datetime": {
+        "previous": "Föregående",
+        "next": "Nästa",
+        "hours": "Timmar",
+        "minutes": "Minuter",
+        "seconds": "Sekunder",
+        "unknown": "-",
+        "amPm": [
+            "fm",
+            "em"
+        ]
+    },
+    "editor": {
+        "close": "Stäng",
+        "create": {
+            "button": "Ny",
+            "title": "Skapa ny post",
+            "submit": "Skapa"
+        },
+        "edit": {
+            "button": "Redigera",
+            "title": "Redigera post",
+            "submit": "Uppdatera"
+        },
+        "remove": {
+            "button": "Radera",
+            "title": "Radera",
+            "submit": "Radera",
+            "confirm": {
+                "_": "Är du säker på att du vill ta bort %d rader?",
+                "1": "Är du säker på att du vill ta bort 1 rad?"
+            }
+        },
+        "error": {
+            "system": "Ett systemfel har inträffat (<a target=\"\\\" rel=\"nofollow\" href=\"\\\">Mer information<\/a>)."
+        },
+        "multi": {
+            "title": "Flera värden",
+            "info": "De valda objekten har olika värden för detta fält. För att redigera och sätta alla objekt för detta fält till samma värde, klicka eller tryck här, annars behåller de sina individuella värden.",
+            "restore": "Ångra ändringar",
+            "noMulti": "Detta fält kan redigeras individuellt, men inte som en del av en grupp."
+        }
+    }
 }
