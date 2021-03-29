@@ -3,28 +3,195 @@
  *  @name Azerbaijan
  *  @anchor Azerbaijan
  *  @author H.Huseyn
+ *  @author Mahammad @mahammad
  *  @lcid az_az
  */
-
 {
-	"sEmptyTable":     "Cədvəldə heç bir məlumat yoxdur",
-	"sInfo":           " _TOTAL_ Nəticədən _START_ - _END_ Arası Nəticələr",
-	"sInfoEmpty":      "Nəticə Yoxdur",
-	"sInfoFiltered":   "( _MAX_ Nəticə İçindən Tapılanlar)",
-	"sInfoThousands":  ",",
-	"sLengthMenu":     "Səhifədə _MENU_ Nəticə Göstər",
-	"sLoadingRecords": "Yüklənir...",
-	"sProcessing":     "Gözləyin...",
-	"sSearch":         "Axtarış:",
-	"sZeroRecords":    "Nəticə Tapılmadı.",
-	"oPaginate": {
-		"sFirst":    "İlk",
-		"sLast":     "Axırıncı",
-		"sNext":     "Sonraki",
-		"sPrevious": "Öncəki"
-	},
-	"oAria": {
-		"sSortAscending":  ": sütunu artma sırası üzərə aktiv etmək",
-		"sSortDescending": ": sütunu azalma sırası üzərə aktiv etmək"
-	}
-}
+    "emptyTable": "Cədvəldə heç bir məlumat yoxdur",
+    "info": "_TOTAL_ Nəticədən _START_ - _END_ Arası Nəticələr",
+    "infoEmpty": "Nəticə Yoxdur",
+    "infoFiltered": "( _MAX_ Nəticə İçindən Tapılanlar)",
+    "infoThousands": ".",
+    "lengthMenu": "Səhifədə _MENU_ Nəticə Göstər",
+    "loadingRecords": "Yüklənir...",
+    "processing": "Gözləyin...",
+    "search": "Axtarış:",
+    "zeroRecords": "Nəticə Tapılmadı.",
+    "paginate": {
+        "first": "İlk",
+        "last": "Axırıncı",
+        "next": "Sonrakı",
+        "previous": "Öncəki"
+    },
+    "aria": {
+        "sortAscending": ": sütunu artma sırası üzərə aktiv etməkr",
+        "sortDescending": ": sütunu azalma sırası üzərə aktiv etmək"
+    },
+    "select": {
+        "rows": {
+            "_": "%d qeyd seçildi",
+            "1": "1 qeyd seçildi",
+            "0": "-"
+        },
+        "0": "-",
+        "1": "%d sətir seçildi",
+        "2": "-",
+        "_": "%d sətir seçildi",
+        "cells": {
+            "1": "1 hücrə seçildi",
+            "_": "%d hücrə seçildi"
+        },
+        "columns": {
+            "1": "1 sütun seçildi",
+            "_": "%d sütun seçildi"
+        }
+    },
+    "autoFill": {
+        "cancel": "Ləğv Et",
+        "fillHorizontal": "Hücrələri üfiqi olaraq doldur",
+        "fillVertical": "Hücrələri şaquli olara1 doldur",
+        "info": "-",
+        "fill": "Bütün hücrələri <i>%d<\/i> ile doldur"
+    },
+    "buttons": {
+        "collection": "Kolleksiya <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
+        "colvis": "Sütun baxışı",
+        "colvisRestore": "Baxışı əvvəlki vəziyyətinə gətir",
+        "copySuccess": {
+            "1": "1 sətir panoya kopyalandı",
+            "_": "%ds sətir panoya kopyalandı"
+        },
+        "copyTitle": "Panoya kopyala",
+        "csv": "CSV",
+        "excel": "Excel",
+        "pageLength": {
+            "-1": "Bütün sətirlari göstər",
+            "1": "-",
+            "_": "%d sətir göstər"
+        },
+        "pdf": "PDF",
+        "print": "Çap Et",
+        "copy": "Kopyala",
+        "copyKeys": "Cədvəldəki qeydi kopyalamaq üçün CTRL və ya u2318 + C düymələrinə basın. Ləğv etmək üçün bu mesajı vurun və ya ESC düyməsini vurun."
+    },
+    "infoPostFix": "-",
+    "searchBuilder": {
+        "add": "Koşul Ekle",
+        "button": {
+            "0": "Axtarış Yaradıcı",
+            "_": "Axtarış Yaradıcı (%d)"
+        },
+        "condition": "Şərt",
+        "conditions": {
+            "date": {
+                "after": "Növbəti",
+                "before": "Öncəki",
+                "between": "Arasında",
+                "empty": "Boş",
+                "equals": "Bərabərdir",
+                "not": "Deyildir",
+                "notBetween": "Xaricində",
+                "notEmpty": "Dolu"
+            },
+            "number": {
+                "between": "Arasında",
+                "empty": "Boş",
+                "equals": "Bərabərdir",
+                "gt": "Böyükdür",
+                "gte": "Böyük bərabərdir",
+                "lt": "Kiçikdir",
+                "lte": "Kiçik bərabərdir",
+                "not": "Deyildir",
+                "notBetween": "Xaricində",
+                "notEmpty": "Dolu"
+            },
+            "string": {
+                "contains": "Tərkibində",
+                "empty": "Boş",
+                "endsWith": "İlə bitər",
+                "equals": "Bərabərdir",
+                "not": "Deyildir",
+                "notEmpty": "Dolu",
+                "startsWith": "İlə başlayar"
+            },
+            "array": {
+                "contains": "Tərkibində",
+                "empty": "Boş",
+                "equals": "Bərabərdir",
+                "not": "Deyildir",
+                "notEmpty": "Dolu",
+                "without": "Xaric"
+            }
+        },
+        "data": "Qeyd",
+        "deleteTitle": "Filtrləmə qaydasını silin",
+        "leftTitle": "Meyarı xaricə çıxarmaq",
+        "logicAnd": "və",
+        "logicOr": "vəya",
+        "rightTitle": "Meyarı içəri al",
+        "title": {
+            "0": "Axtarış Yaradıcı",
+            "_": "Axtarış Yaradıcı (%d)"
+        },
+        "value": "Değer",
+        "clearAll": "Filtrləri Təmizlə"
+    },
+    "searchPanes": {
+        "clearMessage": "Hamısını Təmizlə",
+        "collapse": {
+            "0": "Axtarış Bölməsi",
+            "_": "Axtarış Bölməsi (%d)"
+        },
+        "count": "{total}",
+        "countFiltered": "{shown}\/{total}",
+        "emptyPanes": "Axtarış Bölməsi yoxdur",
+        "loadMessage": "Axtarış Bölməsi yüklənir ...",
+        "title": "Aktiv filtrlər - %d"
+    },
+    "searchPlaceholder": "Axtarış",
+    "thousands": ".",
+    "datetime": {
+        "amPm": [
+            "pm",
+            "am"
+        ],
+        "hours": "Saat",
+        "minutes": "Dəqiqə",
+        "next": "Növbəti",
+        "previous": "Öncəki",
+        "seconds": "Saniyə",
+        "unknown": "Naməlum"
+    },
+    "decimal": ",",
+    "editor": {
+        "close": "Bağla",
+        "create": {
+            "button": "Təzə",
+            "submit": "Qeyd Et",
+            "title": "Yeni qeyd yarat"
+        },
+        "edit": {
+            "button": "Redaktə Et",
+            "submit": "Yeniləyin",
+            "title": "Qeydi Redaktə Et"
+        },
+        "error": {
+            "system": "Sistem xətası baş verdi (Ətraflı Məlumat)"
+        },
+        "multi": {
+            "info": "Seçilmiş qeydlər bu sahədə fərqli dəyərlər ehtiva edir. Bütün seçilmiş qeydlər üçün bu sahəyə eyni dəyəri təyin etmək üçün buraya vurun; əks halda hər qeyd öz dəyərini saxlayacaqdır.",
+            "noMulti": "Bu sahə qrup şəklində deyil, ayrı-ayrılıqda təşkil edilə bilər.",
+            "restore": "Dəyişiklikləri geri qaytarın",
+            "title": "Çox dəyər"
+        },
+        "remove": {
+            "button": "Sil",
+            "confirm": {
+                "_": "%d ədəd qeydi silmək istədiyinizə əminsiniz?",
+                "1": "Bu qeydi silmək istədiyinizə əminsiniz?"
+            },
+            "submit": "Sil",
+            "title": "Qeydləri sil"
+        }
+    }
+} 
