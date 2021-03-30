@@ -11,5 +11,36 @@
         "previous": "Precedenta",
         "next": "Următoarea",
         "last": "Ultima"
+    },
+    "aria": {
+        "sortAscending": "Sortează ascendent",
+        "sortDescending": "Sortează descendent"
+    },
+    "autoFill": {
+        "cancel": "Anulează"
+    },
+    "buttons": {
+        "csv": "CSV",
+        "excel": "Excel",
+        "pageLength": {
+            "-1": "Arată toate rândurile",
+            "1": "Arată 1 rând",
+            "_": "Arată %d rânduri"
+        },
+        "pdf": "PDF",
+        "print": "Imprimă"
+    },
+    "searchBuilder": {
+        "add": "Adaugă",
+        "value": "Valoare"
+    },
+    "datetime": {
+        "hours": "ore",
+        "minutes": "minute",
+        "seconds": "secunde",
+        "unknown": "necunoscut"
+    },
+    "editor": {
+        "close": "inchide"
     }
 }

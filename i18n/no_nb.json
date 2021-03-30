@@ -134,5 +134,34 @@
     "infoEmpty": "Viser 0 til 0 av 0 oppf&oslash;ringer",
     "infoFiltered": "filtrert fra totalt _MAX_ oppf&oslash;ringer",
     "lengthMenu": "Vis _MENU_ oppf&oslash;ringer",
-    "zeroRecords": "Ingen rader samsvarer med s&oslash;ket"
+    "zeroRecords": "Ingen rader samsvarer med s&oslash;ket",
+    "datetime": {
+        "previous": "forrige",
+        "next": "neste",
+        "hours": "timer",
+        "minutes": "minutter",
+        "seconds": "sekunder",
+        "unknown": "ukjent"
+    },
+    "editor": {
+        "close": "Lukk",
+        "create": {
+            "button": "Ny",
+            "title": "Ny oppføring",
+            "submit": "Opprett"
+        },
+        "edit": {
+            "button": "Endre",
+            "title": "Endre oppføring",
+            "submit": "Oppdater"
+        },
+        "remove": {
+            "button": "Slett",
+            "title": "Sletting",
+            "submit": "Slett"
+        },
+        "error": {
+            "system": "En systemfeil har inntruffet (Mer informasjon)"
+        }
+    }
 }

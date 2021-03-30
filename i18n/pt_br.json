@@ -102,6 +102,14 @@
                 "not": "Não",
                 "notEmpty": "Não Vazio",
                 "startsWith": "Começa Com"
+            },
+            "array": {
+                "contains": "Contém",
+                "empty": "Vazio",
+                "equals": "Igual à",
+                "not": "Não",
+                "notEmpty": "Não vazio",
+                "without": "Não possui"
             }
         },
         "data": "Data",
@@ -133,9 +141,42 @@
         "next": "Próximo",
         "hours": "Hora",
         "minutes": "Minuto",
-        "seconds": "Segundo"
+        "seconds": "Segundo",
+        "amPm": [
+            "am",
+            "pm"
+        ],
+        "unknown": "-"
     },
     "editor": {
-        "close": "Fechar"
-    }
+        "close": "Fechar",
+        "create": {
+            "button": "Novo",
+            "submit": "Criar",
+            "title": "Criar novo registro"
+        },
+        "edit": {
+            "button": "Editar",
+            "submit": "Atualizar",
+            "title": "Editar registro"
+        },
+        "error": {
+            "system": "Ocorreu um erro no sistema (<a target=\"\\\" rel=\"nofollow\" href=\"\\\">Mais informações<\/a>)."
+        },
+        "multi": {
+            "noMulti": "Essa entrada pode ser editada individualmente, mas não como parte do grupo",
+            "restore": "Desfazer alterações",
+            "title": "Multiplos valores"
+        },
+        "remove": {
+            "button": "Remover",
+            "confirm": {
+                "_": "Tem certeza que quer deletar %d linhas?",
+                "1": "Tem certeza que quer deletar 1 linha?"
+            },
+            "submit": "Remover",
+            "title": "Remover registro"
+        }
+    },
+    "decimal": ","
 }
