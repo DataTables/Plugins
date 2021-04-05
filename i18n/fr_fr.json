@@ -133,16 +133,46 @@
     "decimal": ",",
     "info": "Affichage de _START_ à _END_ sur _TOTAL_ éléments",
     "infoEmpty": "Affichage de 0 à 0 sur 0 éléments",
-    "infoFiltered": "(filtrés de _MAX_ éléments au total)",
     "infoThousands": ".",
     "search": "Rechercher:",
     "searchPlaceholder": "...",
     "thousands": ".",
+    "infoFiltered": "(filtrés depuis un total de _MAX_ éléments)",
     "datetime": {
-        "previous": "précédent",
-        "next": "suivant",
-        "hours": "heures",
-        "minutes": "minutes",
-        "seconds": "secondes"
+        "previous": "Précédent",
+        "next": "Suivant",
+        "hours": "Heures",
+        "minutes": "Minutes",
+        "seconds": "Secondes",
+        "unknown": "-",
+        "amPm": [
+            "am",
+            "pm"
+        ]
+    },
+    "editor": {
+        "close": "Fermer",
+        "create": {
+            "button": "Nouveaux",
+            "title": "Créer une nouvelle entrée",
+            "submit": "Envoyer"
+        },
+        "edit": {
+            "button": "Editer",
+            "title": "Editer Entrée",
+            "submit": "Modifier"
+        },
+        "remove": {
+            "button": "Supprimer",
+            "title": "Supprimer",
+            "submit": "Supprimer"
+        },
+        "error": {
+            "system": "Une erreur système s'est produite"
+        },
+        "multi": {
+            "title": "Valeurs Multiples",
+            "restore": "Rétablir Modification"
+        }
     }
 }
