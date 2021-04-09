@@ -140,5 +140,46 @@
         "fillHorizontal": "napolni vodoravno",
         "fillVertical": "napolni navpično",
         "info": "informacije"
+    },
+    "datetime": {
+        "previous": "Prejšnji",
+        "next": "Naslednji",
+        "hours": "Ure",
+        "minutes": "Minute",
+        "seconds": "Sekunde",
+        "unknown": "Neznano",
+        "amPm": [
+            "am",
+            "pm"
+        ]
+    },
+    "editor": {
+        "close": "Prekliči",
+        "create": {
+            "button": "Dodaj",
+            "title": "Dodaj nov vnos",
+            "submit": "Shrani"
+        },
+        "edit": {
+            "button": "Uredi",
+            "title": "Uredi vnos",
+            "submit": "Shrani"
+        },
+        "remove": {
+            "button": "Izbriši",
+            "title": "Izbriši",
+            "submit": "Izbriši",
+            "confirm": {
+                "_": "Si prepričan, da želiš izbrisati %d vrstic?",
+                "1": "Si prepričan, da želiš izbrisati 1 vrstico?"
+            }
+        },
+        "error": {
+            "system": "Prišlo je do napake (Več informacij)."
+        },
+        "multi": {
+            "title": "Več vrednosti",
+            "restore": "Razveljavi spremembe"
+        }
     }
 }

@@ -32,7 +32,8 @@
         "pageLength": {
             "-1": "Mostra totes les files",
             "_": "Mostra %d files"
-        }
+        },
+        "pdf": "PDF"
     },
     "select": {
         "rows": {
@@ -40,5 +41,22 @@
             "0": "Cap fila seleccionada",
             "1": "1 fila seleccionada"
         }
+    },
+    "autoFill": {
+        "cancel": "Cancel·lar"
+    },
+    "thousands": ".",
+    "datetime": {
+        "hours": "Hora",
+        "minutes": "Minut",
+        "seconds": "Segons",
+        "unknown": "Desconegut",
+        "amPm": [
+            "am",
+            "pm"
+        ]
+    },
+    "editor": {
+        "close": "Tancar"
     }
 }
