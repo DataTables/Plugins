@@ -18,5 +18,68 @@
     "aria": {
         "sortAscending": ": virkja til að raða dálki í hækkandi röð",
         "sortDescending": ": virkja til að raða dálki lækkandi í röð"
-    }
+    },
+    "autoFill": {
+        "cancel": "Hætta við",
+        "fill": "Setja öll svæði með <i>%d<\/i>",
+        "fillHorizontal": "Setja öll svæði lárétt",
+        "fillVertical": "Setja öll svæði lóðrétt",
+        "info": "Nánari upplýsingar"
+    },
+    "buttons": {
+        "colvis": "Sýnileiki dálka",
+        "colvisRestore": "Endurstilla sýnileika",
+        "copy": "Afrita",
+        "copyKeys": "Smelltu á ctrl or u2318 + C til að afrita töfluna í klippiborðið.<br \/><br \/>Smelltu hér eða á  exape til að hætta við.",
+        "copySuccess": {
+            "_": "Afritaði %d línur yfir í klippiborðið",
+            "1": "Afritaði 1 línu yfir í klippiborðið"
+        },
+        "copyTitle": "Afrita í klippiborð",
+        "csv": "CSV",
+        "excel": "Escel",
+        "pageLength": {
+            "_": "Sýna %d línur",
+            "-1": "Sýna allar línur",
+            "1": "Sýna eina línu"
+        },
+        "pdf": "PDF",
+        "print": "Prenta"
+    },
+    "datetime": {
+        "amPm": [
+            "eh",
+            "fh"
+        ],
+        "hours": "Klst. ",
+        "minutes": "Mínúta",
+        "next": "Næsta",
+        "previous": "Fyrri",
+        "seconds": "Sekúnda",
+        "unknown": "-"
+    },
+    "decimal": ",",
+    "editor": {
+        "close": "Loka",
+        "create": {
+            "button": "Nýskrá",
+            "submit": "Vista",
+            "title": "Skrá nýja færslu"
+        },
+        "edit": {
+            "button": "Rita",
+            "submit": "Vista",
+            "title": "Breyta færslu"
+        },
+        "multi": {
+            "title": "Mörg gildi"
+        },
+        "remove": {
+            "button": "Eyða",
+            "submit": "Eyða",
+            "title": "Eyða"
+        }
+    },
+    "infoPostFix": "Færsla _START_ til _END_ af samtals _TOTAL_ ",
+    "thousands": "."
 }
