@@ -44,8 +44,6 @@
         "print": "Imprimir"
     },
     "decimal": ",",
-    "info": "Mostrando os registros _START_ a _END_ num total de _TOTAL_",
-    "infoEmpty": "Mostrando 0 os registros num total de 0",
     "infoFiltered": "(filtrado num total de _MAX_ registos)",
     "infoThousands": ".",
     "searchBuilder": {
@@ -131,5 +129,33 @@
             "_": "%d colunas seleccionadas"
         }
     },
-    "thousands": "."
+    "thousands": ".",
+    "editor": {
+        "close": "Fechar",
+        "create": {
+            "button": "Novo",
+            "title": "Criar novo registro",
+            "submit": "Criar"
+        },
+        "edit": {
+            "button": "Editar",
+            "title": "Editar registro",
+            "submit": "Atualizar"
+        },
+        "remove": {
+            "button": "Remover",
+            "title": "Remover",
+            "submit": "Remover"
+        },
+        "error": {
+            "system": "Um erro no sistema ocorreu"
+        },
+        "multi": {
+            "title": "Multiplos valores",
+            "info": "Os itens selecionados contêm valores diferentes para esta entrada. Para editar e definir todos os itens para esta entrada com o mesmo valor, clique ou toque aqui, caso contrário, eles manterão seus valores individuais.",
+            "restore": "Desfazer alterações"
+        }
+    },
+    "info": "Mostrando os registos _START_ a _END_ num total de _TOTAL_",
+    "infoEmpty": "Mostrando 0 os registos num total de 0"
 }

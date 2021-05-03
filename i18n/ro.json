@@ -28,19 +28,41 @@
             "_": "Arată %d rânduri"
         },
         "pdf": "PDF",
-        "print": "Imprimă"
+        "print": "Imprimă",
+        "collection": "Colecție",
+        "colvis": "Vizibilitate coloane",
+        "copy": "Copie",
+        "copyTitle": "Copie în Clipboard"
     },
     "searchBuilder": {
         "add": "Adaugă",
-        "value": "Valoare"
-    },
-    "datetime": {
-        "hours": "ore",
-        "minutes": "minute",
-        "seconds": "secunde",
-        "unknown": "necunoscut"
+        "value": "Valoare",
+        "condition": "Condiție",
+        "data": "Data",
+        "logicAnd": "Și",
+        "logicOr": "Sau"
     },
     "editor": {
-        "close": "inchide"
+        "close": "inchide",
+        "create": {
+            "button": "Nou"
+        },
+        "edit": {
+            "button": "Editează",
+            "submit": "Editează"
+        }
+    },
+    "loadingRecords": "Încarcă...",
+    "datetime": {
+        "previous": "Precedentă",
+        "next": "Următoare",
+        "hours": "Ore",
+        "minutes": "Minute",
+        "seconds": "Secunde",
+        "unknown": "Necunoscut",
+        "amPm": [
+            "AM",
+            "PM"
+        ]
     }
 }

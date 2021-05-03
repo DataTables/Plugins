@@ -32,13 +32,143 @@
         "pageLength": {
             "-1": "Mostra totes les files",
             "_": "Mostra %d files"
-        }
+        },
+        "pdf": "PDF",
+        "collection": "Col·lecció",
+        "colvisRestore": "Restaurar visibilitat",
+        "copyKeys": "Pressiona ctrl o poma + C per copiar les dades de la tabla al teu portapaper",
+        "csv": "CSV",
+        "excel": "Excel"
     },
     "select": {
         "rows": {
             "_": "%d files seleccionades",
             "0": "Cap fila seleccionada",
             "1": "1 fila seleccionada"
+        },
+        "_": "%d files seleccionades",
+        "cells": {
+            "1": "1 fila seleccionada",
+            "_": "%d files seleccionades"
+        },
+        "columns": {
+            "1": "1 columna seleccionada",
+            "_": "%d columnes seleccionades"
         }
-    }
+    },
+    "autoFill": {
+        "cancel": "Cancel·lar",
+        "fillHorizontal": "Omple les cel·les horitzontalment",
+        "fillVertical": "Omple les cel·les verticalment"
+    },
+    "thousands": ".",
+    "datetime": {
+        "hours": "Hora",
+        "minutes": "Minut",
+        "seconds": "Segons",
+        "unknown": "Desconegut",
+        "amPm": [
+            "am",
+            "pm"
+        ],
+        "previous": "Anterior",
+        "next": "Següent"
+    },
+    "editor": {
+        "close": "Tancar",
+        "create": {
+            "button": "Nou",
+            "title": "Crear nova entrada",
+            "submit": "Crear"
+        },
+        "edit": {
+            "button": "Editar",
+            "title": "Editar entrada",
+            "submit": "Actualitzar"
+        },
+        "remove": {
+            "button": "Eliminar",
+            "title": "Eliminar",
+            "submit": "Eliminar",
+            "confirm": {
+                "_": "Està segur de voler eliminar %d files?",
+                "1": "Està segir de voler elmiminar 1 fila?"
+            }
+        },
+        "error": {
+            "system": "Ha ocurregut un error de sistema (Més informació)"
+        },
+        "multi": {
+            "title": "Múltiples valors",
+            "info": "El ítems seleccionts contenen diferent valors per aquesta entrada. Per editar i configurar tots els ítems per a aquesta entrada al mateix valor, prem o clica tabular aquí, d'altra vanda, mantindrán els seus valors individuals",
+            "restore": "Desfés el canvi",
+            "noMulti": "Aquest camp pot ser editat indifidualment; però no com a part d'un grup"
+        }
+    },
+    "searchBuilder": {
+        "add": "Afegir condició",
+        "clearAll": "Eliminar tot",
+        "condition": "Condició",
+        "conditions": {
+            "date": {
+                "after": "Després",
+                "before": "Abans",
+                "between": "Entre",
+                "empty": "Buit",
+                "equals": "Iguals",
+                "not": "No",
+                "notBetween": "No entre",
+                "notEmpty": "No buit"
+            },
+            "number": {
+                "between": "Entre",
+                "empty": "Buit",
+                "equals": "Iguals",
+                "gt": "Major que",
+                "gte": "Mejor o igual a",
+                "lt": "Menor que",
+                "lte": "Menor o igual a",
+                "not": "No",
+                "notBetween": "No entre",
+                "notEmpty": "No buit"
+            },
+            "string": {
+                "contains": "Conté",
+                "empty": "Buit",
+                "endsWith": "Finalitza amb",
+                "equals": "Iguals",
+                "not": "No",
+                "notEmpty": "No buit",
+                "startsWith": "Comença amb"
+            },
+            "array": {
+                "equals": "Iguals",
+                "empty": "Buit",
+                "contains": "Conté",
+                "not": "No",
+                "notEmpty": "No buit",
+                "without": "Sense"
+            }
+        },
+        "data": "Data",
+        "deleteTitle": "Esborrar regla de filtrat",
+        "leftTitle": "Criteri de desindentació",
+        "logicAnd": "I",
+        "logicOr": "O",
+        "rightTitle": "Criteri d'indentació",
+        "value": "Valor"
+    },
+    "searchPanes": {
+        "clearMessage": "Eborrar tot",
+        "collapse": {
+            "0": "Panells de cerca",
+            "_": "Panells de cerca (%d)"
+        },
+        "count": "{total}",
+        "countFiltered": "{monstrat} ({total})",
+        "emptyPanes": "No panells de cerca",
+        "loadMessage": "Carregant panells de cerca",
+        "title": "Filtes actius - %d"
+    },
+    "searchPlaceholder": "Cerca"
 }
