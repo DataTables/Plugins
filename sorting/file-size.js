@@ -19,6 +19,10 @@
  */
 
 jQuery.fn.dataTable.ext.type.order['file-size-pre'] = function ( data ) {
+    if (data === null || data === '') {
+        return 0;
+    }
+
     var matches = data.match( /^(\d+(?:\.\d+)?)\s*([a-z]+)/i );
     var multipliers = {
         b:  1,
