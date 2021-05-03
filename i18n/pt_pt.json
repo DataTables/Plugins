@@ -127,6 +127,9 @@
         "columns": {
             "1": "1 coluna seleccionada",
             "_": "%d colunas seleccionadas"
+        },
+        "rows": {
+            "1": "%d linha seleccionada"
         }
     },
     "thousands": ".",

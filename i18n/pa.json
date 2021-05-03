@@ -18,5 +18,22 @@
     "aria": {
         "sortAscending": ": ਕਾਲਮ ਨੂੰ ਵੱਧਦੇ ਕ੍ਰਮ ਵਿਚ ਵੇਖੋ",
         "sortDescending": ": ਕਾਲਮ ਨੂੰ ਘਟਦੇ ਕ੍ਰਮ ਵਿਚ ਵੇਖੋ"
+    },
+    "buttons": {
+        "colvis": "ਕਾਲਮ ਦਿੱਖ"
+    },
+    "datetime": {
+        "previous": "ਪਿਛਲਾ",
+        "next": "ਅਗਲਾ",
+        "hours": "ਘੰਟੇ",
+        "minutes": "ਮਿੰਟ",
+        "seconds": "ਸਕਿੰਟ",
+        "amPm": [
+            "ਸਵੇਰੇ",
+            "ਸ਼ਾਮ"
+        ]
+    },
+    "editor": {
+        "close": "ਬੰਦ"
     }
 }

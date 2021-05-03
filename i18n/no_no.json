@@ -11,9 +11,9 @@
     "zeroRecords": "Inga linjer treff p&aring; s&oslash;ket",
     "paginate": {
         "first": "Fyrste",
-        "previous": "Forrige",
         "next": "Neste",
-        "last": "Siste"
+        "last": "Siste",
+        "previous": "Førre"
     },
     "aria": {
         "sortAscending": ": aktiver for å sortere kolonna stigande",
