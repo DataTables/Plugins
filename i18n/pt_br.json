@@ -166,7 +166,8 @@
         "multi": {
             "noMulti": "Essa entrada pode ser editada individualmente, mas não como parte do grupo",
             "restore": "Desfazer alterações",
-            "title": "Multiplos valores"
+            "title": "Multiplos valores",
+            "info": "Os itens selecionados contêm valores diferentes para esta entrada. Para editar e definir todos os itens para esta entrada com o mesmo valor, clique ou toque aqui, caso contrário, eles manterão seus valores individuais."
         },
         "remove": {
             "button": "Remover",

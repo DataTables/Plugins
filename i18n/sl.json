@@ -17,16 +17,16 @@
             "_": "%d izbrani stolpci"
         },
         "rows": {
-            "0": "2 izbrani vrstici",
             "1": "1 izbrana vrstica",
-            "_": "2 izbrani vrstici"
+            "0": "0 izbranih vrstic",
+            "_": "2 izbrane vrstice"
         },
         "1": "%d izbrana vrstica",
-        "_": "%d izbrani vrstici",
         "cells": {
             "1": "1 izbrano polje",
             "_": "%d izbrana polja"
-        }
+        },
+        "_": "%d izbrane vrstice"
     },
     "thousands": ".",
     "searchBuilder": {
@@ -140,5 +140,48 @@
         "fillHorizontal": "napolni vodoravno",
         "fillVertical": "napolni navpično",
         "info": "informacije"
+    },
+    "datetime": {
+        "previous": "Prejšnji",
+        "next": "Naslednji",
+        "hours": "Ure",
+        "minutes": "Minute",
+        "seconds": "Sekunde",
+        "unknown": "Neznano",
+        "amPm": [
+            "am",
+            "pm"
+        ]
+    },
+    "editor": {
+        "close": "Prekliči",
+        "create": {
+            "button": "Dodaj",
+            "title": "Dodaj nov vnos",
+            "submit": "Shrani"
+        },
+        "edit": {
+            "button": "Uredi",
+            "title": "Uredi vnos",
+            "submit": "Shrani"
+        },
+        "remove": {
+            "button": "Izbriši",
+            "title": "Izbriši",
+            "submit": "Izbriši",
+            "confirm": {
+                "_": "Si prepričan, da želiš izbrisati %d vrstic?",
+                "1": "Si prepričan, da želiš izbrisati 1 vrstico?"
+            }
+        },
+        "error": {
+            "system": "Prišlo je do napake (Več informacij)."
+        },
+        "multi": {
+            "title": "Več vrednosti",
+            "restore": "Razveljavi spremembe",
+            "info": "Izbrani elementi vsebujejo različne vrednosti za ta vnos. Če želite vse elemente za ta vnos urediti in nastaviti na enako vrednost, kliknite ali tapnite tukaj, sicer bodo ohranili svoje posamezne vrednosti.",
+            "noMulti": "Ta vnos lahko urejate posamično, vendar ne del skupine."
+        }
     }
 }

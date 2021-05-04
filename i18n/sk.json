@@ -27,12 +27,11 @@
     },
     "buttons": {
         "collection": "Kolekcia <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
-        "colvis": "VIditeľnosť stĺpcov",
         "colvisRestore": "Obnoviť viditeľnosť",
         "copy": "Kopírovať",
         "copySuccess": {
             "1": "Skopírovaný 1 riadok do schránky",
-            "_": "Skopírované %d riadkov do schránky"
+            "_": "Skopírovaných %d riadkov do schránky"
         },
         "copyTitle": "Kopírovať do schránky",
         "csv": "CSV",
@@ -44,7 +43,8 @@
         },
         "pdf": "PDF",
         "print": "Tlačiť",
-        "copyKeys": "Stlačte ctrl alebo u2318 + C pre kopírovanie dát tabuľky do systémovej schránky. Pre zrušenie kliknite na tuto správu alebo stlačte ESC."
+        "copyKeys": "Stlačte ctrl alebo u2318 + C pre kopírovanie dát tabuľky do systémovej schránky. Pre zrušenie kliknite na tuto správu alebo stlačte ESC.",
+        "colvis": "Viditeľnosť stĺpcov"
     },
     "searchBuilder": {
         "add": "Pridať Podmienku",
@@ -130,11 +130,10 @@
             "_": "%d vybraných stĺpcov"
         },
         "1": "1 vybraný riadok",
-        "2": "%d vybraných riadkov"
+        "2": "%d vybrané riadky"
     },
     "thousands": " ",
     "datetime": {
-        "previous": "Prechádzajúci",
         "next": "Ďalší",
         "hours": "Hodiny",
         "minutes": "Minúty",
@@ -143,7 +142,8 @@
         "amPm": [
             "am",
             "pm"
-        ]
+        ],
+        "previous": "Predchádzajúci"
     },
     "editor": {
         "close": "Zavrieť",

@@ -3,42 +3,13 @@
     "info": "Zobrazuji _START_ až _END_ z celkem _TOTAL_ záznamů",
     "infoEmpty": "Zobrazuji 0 až 0 z 0 záznamů",
     "infoFiltered": "(filtrováno z celkem _MAX_ záznamů)",
-    "infoThousands": " ",
-    "lengthMenu": "Zobraz záznamů _MENU_",
     "loadingRecords": "Načítám...",
-    "processing": "Provádím...",
-    "search": "Hledat:",
     "zeroRecords": "Žádné záznamy nebyly nalezeny",
     "paginate": {
         "first": "První",
         "last": "Poslední",
         "next": "Další",
         "previous": "Předchozí"
-    },
-    "aria": {
-        "sortAscending": ": aktivujte pro řazení sloupce vzestupně",
-        "sortDescending": ": aktivujte pro řazení sloupce sestupně"
-    },
-    "buttons": {
-        "colvis": "Zobrazení sloupců",
-        "colvisRestore": "Původní nastavení",
-        "collection": "Kolekce <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
-        "copy": "Kopírovat",
-        "copyKeys": "Stlačte ctrl nebo u2318 + C pro kopírování dat tabulky do systémové schránky. Pro zrušení klepněte na tuhle správne nebo stiskněte ESC.",
-        "copySuccess": {
-            "1": "Skopírován 1 řádek do schránky",
-            "_": "SKopírováno %d řádků do schránky"
-        },
-        "copyTitle": "Kopírovat do schránky",
-        "csv": "CSV",
-        "excel": "Excel",
-        "pageLength": {
-            "-1": "Zobrazit všechny řádky",
-            "1": "Zobrazit 1 řádek",
-            "_": "Zobrazit %d řádků"
-        },
-        "pdf": "PDF",
-        "print": "Tisknout"
     },
     "searchBuilder": {
         "add": "Přidat podmínku",
@@ -114,9 +85,30 @@
     },
     "autoFill": {
         "cancel": "Zrušit",
-        "fill": "Vyplnit všechny buňky s <i>%d<i><\/i><\/i>",
-        "fillHorizontal": "Vyplnit buňky horizontálne",
-        "fillVertical": "Vyplnit buňky vertikálne"
+        "fill": "Vyplň všechny buňky textem <i>%d<i><\/i><\/i>",
+        "fillHorizontal": "Vyplň všechny buňky horizontálně",
+        "fillVertical": "Vyplň všechny buňky vertikálně"
+    },
+    "buttons": {
+        "collection": "Kolekce <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
+        "copy": "Kopírovat",
+        "copySuccess": {
+            "1": "Skopírován 1 řádek do schránky",
+            "_": "SKopírováno %d řádků do schránky"
+        },
+        "copyTitle": "Kopírovat do schránky",
+        "csv": "CSV",
+        "excel": "Excel",
+        "pageLength": {
+            "-1": "Zobrazit všechny řádky",
+            "1": "Zobrazit 1 řádek",
+            "_": "Zobrazit %d řádků"
+        },
+        "pdf": "PDF",
+        "print": "Tisknout",
+        "colvis": "Viditelnost sloupců",
+        "colvisRestore": "Resetovat sloupce",
+        "copyKeys": "Zmáčkněte ctrl or u2318 + C pro zkopírování dat.  Pro zrušení klikněte na tuto zprávu nebo zmáčkněte esc.."
     },
     "searchPanes": {
         "clearMessage": "Smazat vše",
@@ -130,5 +122,37 @@
         "loadMessage": "Načítám Vyhledávací Panely",
         "title": "Aktivních filtrů - %d"
     },
-    "thousands": " "
+    "aria": {
+        "sortAscending": "Aktivujte pro seřazení vzestupně",
+        "sortDescending": "Aktivujte pro seřazení sestupně"
+    },
+    "infoThousands": ",",
+    "lengthMenu": "Zobrazit _MENU_ výsledků",
+    "processing": "Zpracovávání...",
+    "search": "Vyhledávání:",
+    "thousands": ",",
+    "datetime": {
+        "previous": "Předchozí",
+        "next": "Další",
+        "hours": "Hodiny",
+        "minutes": "Minuty",
+        "seconds": "Vteřiny",
+        "unknown": "-",
+        "amPm": [
+            "Dopoledne",
+            "Odpoledne"
+        ]
+    },
+    "editor": {
+        "close": "Zavřít",
+        "create": {
+            "button": "Nový",
+            "title": "Nový záznam",
+            "submit": "Vytvořit"
+        },
+        "edit": {
+            "button": "Změnit",
+            "title": "Změnit záznam"
+        }
+    }
 }
