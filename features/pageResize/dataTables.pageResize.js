@@ -171,7 +171,7 @@ $.fn.dataTable.PageResize = PageResize;
 $.fn.DataTable.PageResize = PageResize;
 
 // Automatic initialisation listener
-$(document).on( 'init.dt', function ( e, settings ) {
+$(document).on( 'preInit.dt', function ( e, settings ) {
 	if ( e.namespace !== 'dt' ) {
 		return;
 	}
