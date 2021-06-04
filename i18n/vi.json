@@ -1,17 +1,6 @@
 {
     "processing": "Đang xử lý...",
-    "lengthMenu": "Xem _MENU_ mục",
-    "zeroRecords": "Không tìm thấy dòng nào phù hợp",
-    "info": "Đang xem _START_ đến _END_ trong tổng số _TOTAL_ mục",
-    "infoEmpty": "Đang xem 0 đến 0 trong tổng số 0 mục",
     "infoFiltered": "(được lọc từ _MAX_ mục)",
-    "search": "Tìm:",
-    "paginate": {
-        "first": "Đầu",
-        "previous": "Trước",
-        "next": "Tiếp",
-        "last": "Cuối"
-    },
     "aria": {
         "sortAscending": ": Sắp xếp thứ tự tăng dần",
         "sortDescending": ": Sắp xếp thứ tự giảm dần"
@@ -44,10 +33,8 @@
         "pdf": "File PDF",
         "print": "In ấn"
     },
-    "emptyTable": "Không có dữ liệu nào để hiển thị",
     "infoPostFix": "Đang hiển thị dòng _START_ tới dòng _END_ trong tổng số _TOTAL_ mục",
     "infoThousands": "`",
-    "loadingRecords": "Loading...",
     "select": {
         "1": "%d dòng đang được chọn",
         "_": "%d dòng đang được chọn",
@@ -127,5 +114,25 @@
         },
         "title": "Bộ lọc đang hoạt động - %d",
         "count": "{total}"
-    }
+    },
+    "datetime": {
+        "hours": "Giờ",
+        "minutes": "Phút",
+        "next": "Sau",
+        "previous": "Trước",
+        "seconds": "Giây"
+    },
+    "emptyTable": "Không có dữ liệu",
+    "info": "Hiển thị _START_ tới _END_ của _TOTAL_ dữ liệu",
+    "infoEmpty": "Hiển thị 0 tới 0 của 0 dữ liệu",
+    "lengthMenu": "Hiển thị _MENU_ dữ liệu",
+    "loadingRecords": "Đang tải...",
+    "paginate": {
+        "first": "Đầu tiên",
+        "last": "Cuối cùng",
+        "next": "Sau",
+        "previous": "Trước"
+    },
+    "search": "Tìm kiếm:",
+    "zeroRecords": "Không tìm thấy kết quả"
 }

@@ -41,7 +41,6 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Show all rows",
-            "1": "Show 1 row",
             "_": "Show %d rows"
         },
         "pdf": "PDF",
