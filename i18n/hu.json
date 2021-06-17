@@ -125,5 +125,34 @@
         "loadMessage": "Szűrőpanelek betöltése",
         "title": "Aktív szűrőpanelek: %d"
     },
-    "searchPlaceholder": "keresés"
+    "searchPlaceholder": "keresés",
+    "datetime": {
+        "previous": "Előző",
+        "next": "Következő",
+        "hours": "Óra",
+        "minutes": "Perc",
+        "seconds": "Másodperc",
+        "amPm": [
+            "de.",
+            "du."
+        ]
+    },
+    "editor": {
+        "close": "Bezárás",
+        "create": {
+            "button": "Új",
+            "title": "Új",
+            "submit": "Létrehozás"
+        },
+        "edit": {
+            "button": "Módosítás",
+            "title": "Módosítás",
+            "submit": "Módosítás"
+        },
+        "remove": {
+            "button": "Törlés",
+            "title": "Törlés",
+            "submit": "Törlés"
+        }
+    }
 }

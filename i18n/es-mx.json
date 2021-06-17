@@ -7,7 +7,7 @@
         "cancel": "Cancelar",
         "fill": "Rellene todas las celdas con <i>%d&lt;\\\/i&gt;<\/i>",
         "fillHorizontal": "Rellenar celdas horizontalmente",
-        "fillVertical": "Rellenar celdas verticalmentemente"
+        "fillVertical": "Rellenar celdas verticalmente"
     },
     "buttons": {
         "collection": "Colección",
@@ -64,7 +64,48 @@
             "0": "Constructor de búsqueda",
             "_": "Constructor de búsqueda (%d)"
         },
-        "value": "Valor"
+        "value": "Valor",
+        "conditions": {
+            "date": {
+                "after": "Después",
+                "before": "Antes",
+                "between": "Entre",
+                "empty": "Vacío",
+                "equals": "Igual a",
+                "not": "Diferente de",
+                "notBetween": "No entre",
+                "notEmpty": "No vacío"
+            },
+            "number": {
+                "between": "Entre",
+                "empty": "Vacío",
+                "equals": "Igual a",
+                "gt": "Mayor a",
+                "gte": "Mayor o igual a",
+                "lt": "Menor que",
+                "lte": "Menor o igual a",
+                "not": "Diferente de",
+                "notBetween": "No entre",
+                "notEmpty": "No vacío"
+            },
+            "string": {
+                "contains": "Contiene",
+                "empty": "Vacío",
+                "endsWith": "Termina con",
+                "equals": "Igual a",
+                "not": "Diferente de",
+                "notEmpty": "Nop vacío",
+                "startsWith": "Inicia con"
+            },
+            "array": {
+                "equals": "Igual a",
+                "empty": "Vacío",
+                "contains": "Contiene",
+                "not": "Diferente",
+                "notEmpty": "No vacío",
+                "without": "Sin"
+            }
+        }
     },
     "searchPanes": {
         "clearMessage": "Borrar todo",
@@ -73,10 +114,10 @@
             "_": "Paneles de búsqueda (%d)"
         },
         "count": "{total}",
-        "countFiltered": "{shown} ({total}",
         "emptyPanes": "Sin paneles de búsqueda",
         "loadMessage": "Cargando paneles de búsqueda",
-        "title": "Filtros Activos - %d"
+        "title": "Filtros Activos - %d",
+        "countFiltered": "{shown} ({total})"
     },
     "select": {
         "1": "%d fila seleccionada",
@@ -94,7 +135,6 @@
     "zeroRecords": "No se encontraron resultados",
     "datetime": {
         "previous": "Anterior",
-        "next": "Proximo",
         "hours": "Horas",
         "minutes": "Minutos",
         "seconds": "Segundos",
@@ -102,7 +142,8 @@
         "amPm": [
             "am",
             "pm"
-        ]
+        ],
+        "next": "Siguiente"
     },
     "editor": {
         "close": "Cerrar",

@@ -33,7 +33,8 @@
         "columns": {
             "1": "1 coluna selecionada",
             "_": "%d colunas selecionadas"
-        }
+        },
+        "0": "Nenhuma linha selecionada"
     },
     "buttons": {
         "copySuccess": {
