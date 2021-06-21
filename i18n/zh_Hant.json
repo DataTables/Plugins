@@ -20,7 +20,11 @@
     "select": {
         "1": "%d 列已選擇",
         "2": "%d 列已選擇",
-        "_": "%d 列已選擇"
+        "_": "%d 列已選擇",
+        "rows": {
+            "_": "%d 列已選擇",
+            "1": "%d 列已選擇"
+        }
     },
     "emptyTable": "目前沒有資料",
     "searchPlaceholder": "請輸入關鍵字",
@@ -134,7 +138,8 @@
         "copyTitle": "已經複製到剪貼簿",
         "excel": "Excel",
         "pdf": "PDF",
-        "print": "列印"
+        "print": "列印",
+        "copy": "複製"
     },
     "searchPanes": {
         "collapse": {
