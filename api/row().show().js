@@ -1,5 +1,5 @@
 /**
- *  This plugin permits to show the right page of DataTable to show the selected row
+ *  This plugin jumps to the right page of the DataTable to show the required row
  *
  *  @version 1.0
  *  @name row().show()
