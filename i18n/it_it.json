@@ -151,7 +151,30 @@
         "next": "successivo",
         "previous": "precedente",
         "seconds": "secondi",
-        "unknown": "sconosciuto"
+        "unknown": "sconosciuto",
+        "weekdays": [
+            "Dom",
+            "Lun",
+            "Mar",
+            "Mer",
+            "Gio",
+            "Ven",
+            "Sab"
+        ],
+        "months": [
+            "Gennaio",
+            "Febbraio",
+            "Marzo",
+            "Aprile",
+            "Maggio",
+            "Giugno",
+            "Luglio",
+            "Agosto",
+            "Settembre",
+            "Ottobre",
+            "Novembre",
+            "Dicembre"
+        ]
     },
     "editor": {
         "close": "Chiudi",
