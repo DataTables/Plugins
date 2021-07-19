@@ -1,65 +1,174 @@
 {
     "emptyTable": "Nuk ka asnjë të dhënë në tabele",
-    "info": "Duke treguar _START_ deri _END_ prej _TOTAL_ reshtave",
-    "infoEmpty": "Duke treguar 0 deri 0 prej 0 reshtave",
-    "infoFiltered": "(të filtruara nga gjithësej _MAX_  reshtave)",
+    "info": "Duke treguar nga _START_ deri në _END_ prej _TOTAL_ reshtave",
+    "infoEmpty": "Duke treguar nga 0 deri në 0 prej 0 reshtave",
+    "infoFiltered": "(të filtruara nga gjithsej _MAX_  rreshta)",
     "infoThousands": ",",
-    "lengthMenu": "Shiko _MENU_ reshta",
+    "lengthMenu": "Shfaq _MENU_ rreshta",
     "search": "Kërkoni:",
-    "zeroRecords": "Asnjë e dhënë nuk u gjet",
+    "zeroRecords": "Nuk u gjet asnjë e dhënë",
     "paginate": {
         "first": "E para",
-        "last": "E Fundit",
+        "last": "E fundit",
         "next": "Tjetra",
-        "previous": "E Kaluara"
+        "previous": "E kaluara"
     },
     "aria": {
-        "sortAscending": ": aktivizo për të sortuar kolumnin me vlera në ngritje",
-        "sortDescending": ": aktivizo për të sortuar kolumnin me vlera në zbritje"
+        "sortAscending": ": aktivizo për të renditur kolonën me vlera në ngritje",
+        "sortDescending": ": aktivizo për të renditur kolonën me vlera në zbritje"
     },
     "autoFill": {
-        "cancel": "Anull",
-        "fill": "Ploteso",
-        "fillHorizontal": "Ploteso rrjeshtat",
-        "fillVertical": "Ploteso kolonat",
+        "cancel": "Anullo",
+        "fill": "Plotëso",
+        "fillHorizontal": "Plotëso rreshtat",
+        "fillVertical": "Plotëso kolonat",
         "info": "Info"
     },
     "buttons": {
-        "collection": "Te Dhenat",
-        "colvis": "Shfaq Kolonat",
-        "colvisRestore": "Rikthe Shfaqje",
+        "collection": "Te dhënat",
+        "colvis": "Shfaq kolonat",
+        "colvisRestore": "Rikthe shfaqje",
         "copy": "Kopjo",
-        "copyKeys": "Shtyp _ctr ose _⌘ + _C per te kopjuar te dhenat ne Clipboard. Per te Anulluar kliko mesazhin ose shtyp buton 'Escape'.",
-        "copyTitle": "Kopjo ne Clipboard",
+        "copyKeys": "Shtyp _ctr ose _⌘ + _C për të kopjuar të dhënat në Clipboard. Për të anulluar, kliko mesazhin ose shtyp buton 'Escape'.",
+		"copySuccess": {
+            "1": "U kojua 1 rresht në clipboard",
+            "_": "U kopjuan %d rreshta në clipboard"
+        },
+        "copyTitle": "Kopjo në Clipboard",
         "csv": "CSV",
         "excel": "EXCEL",
+		"pageLength": {
+            "-1": "Ahfaq të gjithë rreshtat",
+            "_": "Shfaq %d rreshta"
+        },
         "pdf": "PDF",
         "print": "Printo"
+    },
+	"searchBuilder": {
+        "add": "Shto kusht",
+        "clearAll": "Pastro të gjitha",
+        "condition": "Kusht",
+        "conditions": {
+            "date": {
+                "after": "pas",
+                "before": "para",
+                "between": "ndërmjet",
+                "empty": "bosh",
+                "equals": "i/e barabartë",
+                "not": "jo",
+                "notBetween": "jo ndërmjet",
+                "notEmpty": "jo bosh"
+            },
+            "number": {
+                "between": "ndërmjet",
+                "empty": "bosh",
+                "equals": "i/e barabartë",
+                "gt": "më i/e madh/e se",
+                "gte": "më i/e madh/e ose i/e barabartë me",
+                "lt": "më i/e vogël se",
+                "lte": "më i/e madh/e ose i/e barabartë me",
+                "not": "jo",
+                "notBetween": "jo ndërmjet",
+                "notEmpty": "jo bosh"
+            },
+            "string": {
+                "contains": "përmban",
+                "empty": "bosh",
+                "endsWith": "mbaron me",
+                "equals": "i/e barabartë",
+                "not": "jo",
+                "notEmpty": "jo bosh",
+                "startsWith": "fillon me"
+            },
+            "array": {
+                "without": "pa",
+                "notEmpty": "jo bosh",
+                "not": "jo",
+                "contains": "përmban",
+                "empty": "bosh",
+                "equals": "i/e barabartë"
+            }
+        },
+        "data": "Të dhëna",
+        "deleteTitle": "Fshi rregullin e filtrimit",
+        "logicAnd": "Edhe",
+        "logicOr": "Ose",
+        "value": "Vlerat"
+    },
+    "select": {
+        "1": "%d rresht i zgjedhur",
+        "_": "%d rreshta të zgjedhur",
+        "cells": {
+            "1": "1 qelizë e zgjedhur",
+            "_": "%d qeliza të zgjedhura"
+        },
+        "columns": {
+            "1": "1 kolonë e zgjedhur",
+            "_": "%d kolona të zgjedhura"
+        }
     },
     "datetime": {
         "amPm": [
             "am",
             "pm"
         ],
-        "hours": "Ora",
-        "minutes": "Minuta",
-        "next": "perpara",
+        "hours": "orë",
+        "minutes": "minuta",
+        "next": "përpara",
         "previous": "prapa",
-        "seconds": "Sekonda",
-        "unknown": "unknown",
+        "seconds": "sekonda",
+        "unknown": "-",
         "weekdays": [
-            "Hene",
-            "Marte ",
-            "Merkure",
-            "Enjte",
-            "Premte",
-            "Shtune"
+            "E hëne",
+            "E martë",
+            "E mërkurë",
+            "E enjte",
+            "E premte",
+            "E shtunë",
+            "E diel"
+        ],
+        "months": [
+            "Janar",
+            "Shkurt",
+            "Mars",
+            "Prill",
+            "Maj",
+            "Qershor",
+            "Korrik",
+            "Gusht",
+            "Shtator",
+            "Tetor",
+            "Nëntor",
+            "Dhjetor"
         ]
     },
-    "decimal": "dhjeteshifror",
-    "infoPostFix": "infoPostFix",
-    "loadingRecords": "Po merren te dhenat...",
-    "processing": "Po procesohen...",
-    "searchPlaceholder": "Shkruaj ç'po kerkon",
-    "thousands": ","
+	"editor": {
+        "close": "Mbyll",
+        "create": {
+            "button": "Krijo",
+            "title": "Krijo të dhënë të re",
+            "submit": "Krijojeni"
+        },
+        "edit": {
+            "button": "Modifiko",
+            "title": "Modifiko një të dhënë ekzistuese",
+            "submit": "Modifikojeni"
+        },
+        "remove": {
+            "button": "Fshi",
+            "title": "Fshi",
+            "submit": "Fshi",
+            "confirm": {
+                "_": "Jeni i sigurë që doni të fshini %d rreshta?",
+                "1": "Jeni i sigurë që doni të fshini 1 rresht?"
+            }
+        },
+        "error": {
+            "system": "Ka ndodhur një gabim në sistem. (<a target=\"\\\" rel=\"nofollow\" href=\"\\\">Më shumë informacion<\/a>)."
+        },
+        "multi": {
+            "title": "Vlera të shumëfishta",
+            "restore": "Zhbëj ndryshimet",
+        }
+    }
 }
