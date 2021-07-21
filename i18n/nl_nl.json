@@ -152,6 +152,29 @@
         "amPm": [
             "vm",
             "nm"
+        ],
+        "weekdays": [
+            "Zo",
+            "Ma",
+            "Di",
+            "Wo",
+            "Do",
+            "Vr",
+            "Za"
+        ],
+        "months": [
+            "Januari",
+            "Februari",
+            "Maart",
+            "April",
+            "Mei",
+            "Juni",
+            "Juli",
+            "Augustus",
+            "September",
+            "Oktober",
+            "November",
+            "December"
         ]
     },
     "editor": {

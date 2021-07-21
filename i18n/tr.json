@@ -152,7 +152,30 @@
         "next": "Sonraki",
         "previous": "Önceki",
         "seconds": "Saniye",
-        "unknown": "Bilinmeyen"
+        "unknown": "Bilinmeyen",
+        "weekdays": {
+            "6": "Paz",
+            "5": "Cmt",
+            "4": "Cum",
+            "3": "Per",
+            "2": "Çar",
+            "1": "Sal",
+            "0": "Pzt"
+        },
+        "months": {
+            "9": "Ekim",
+            "8": "Eylül",
+            "7": "Ağustos",
+            "6": "Temmuz",
+            "5": "Haziran",
+            "4": "Mayıs",
+            "3": "Nisan",
+            "2": "Mart",
+            "11": "Aralık",
+            "10": "Kasım",
+            "1": "Şubat",
+            "0": "Ocak"
+        }
     },
     "decimal": ",",
     "editor": {

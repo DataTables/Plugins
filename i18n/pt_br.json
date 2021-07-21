@@ -147,7 +147,30 @@
             "am",
             "pm"
         ],
-        "unknown": "-"
+        "unknown": "-",
+        "months": {
+            "0": "Janeiro",
+            "1": "Fevereiro",
+            "10": "Novembro",
+            "11": "Dezembro",
+            "2": "Março",
+            "3": "Abril",
+            "4": "Maio",
+            "5": "Junho",
+            "6": "Julho",
+            "7": "Agosto",
+            "8": "Setembro",
+            "9": "Outubro"
+        },
+        "weekdays": [
+            "Domingo",
+            "Segunda-feira",
+            "Terça-feira",
+            "Quarta-feira",
+            "Quinte-feira",
+            "Sexta-feira",
+            "Sábado"
+        ]
     },
     "editor": {
         "close": "Fechar",
