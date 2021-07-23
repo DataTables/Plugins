@@ -22,8 +22,7 @@
         "cancel": "Cancelar",
         "fill": "Rechea todas as celas con <i>%d<\/i>",
         "fillHorizontal": "Rechea celas horizontamente",
-        "fillVertical": "Rechea celas verticalmente",
-        "info": "Exemplo de recheado"
+        "fillVertical": "Rechea celas verticalmente"
     },
     "buttons": {
         "collection": "Colección",

@@ -34,7 +34,6 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Erakutsi lerro guztiak",
-            "1": "Erakutsi lerro bat",
             "_": "Erakutsi %d lerro"
         },
         "pdf": "PDF",
@@ -112,10 +111,7 @@
         "loadMessage": "Bilaketa panelak kargatzen...",
         "title": "Aktibo dauden filtroak - %d"
     },
-    "searchPlaceholder": "Idatzi hemen bilatu nahi duzun testua",
     "select": {
-        "1": "Lerro %d aukeratuta",
-        "_": "%d lerro aukeratuta",
         "cells": {
             "1": "Gelaxka 1 aukeratuta",
             "_": "%d gelaxka aukeratuta"

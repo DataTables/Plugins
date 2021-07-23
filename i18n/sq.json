@@ -7,13 +7,6 @@
         "next": "Tjetra",
         "previous": "E Kaluara"
     },
-    "autoFill": {
-        "info": "Info",
-        "cancel": "Anullo",
-        "fill": "Plotëso",
-        "fillHorizontal": "Plotëso rreshtat",
-        "fillVertical": "Plotëso kolonat"
-    },
     "buttons": {
         "copy": "Kopjo",
         "csv": "CSV",
@@ -31,8 +24,7 @@
         "copyTitle": "Kopjo në Clipboard",
         "pageLength": {
             "_": "Shfaq %d rreshta",
-            "-1": "Shfaq të gjithë rreshtat",
-            "1": "Shfaq 1 rresht"
+            "-1": "Shfaq të gjithë rreshtat"
         }
     },
     "datetime": {
@@ -76,6 +68,12 @@
         "sortAscending": ": aktivizo për të renditur kolonën me vlera në ngritje",
         "sortDescending": ": aktivizo për të renditur kolonën me vlera në zbritje"
     },
+    "autoFill": {
+        "cancel": "Anullo",
+        "fill": "Plotëso",
+        "fillHorizontal": "Plotëso rreshtat",
+        "fillVertical": "Plotëso kolonat"
+    },
     "decimal": ",",
     "editor": {
         "close": "Mbyll",
@@ -110,7 +108,6 @@
     "info": "Duke treguar _START_ deri _END_ prej _TOTAL_ rreshtave",
     "infoEmpty": "Duke treguar 0 deri 0 prej 0 rreshtave",
     "infoFiltered": "(të filtruara prej gjithsej _MAX_  reshtave)",
-    "infoPostFix": " ",
     "lengthMenu": "Shfaq _MENU_ rreshta",
     "loadingRecords": "Po merren te dhënat...",
     "searchBuilder": {
@@ -178,10 +175,7 @@
         "countFiltered": "{shown} ({total})",
         "title": "Filtra aktivë - %d"
     },
-    "searchPlaceholder": "Shkruaj ç'po kërkon",
     "select": {
-        "_": "%d rreshta të zgjedhur",
-        "1": "1 rresht i zgjedhur",
         "cells": {
             "_": "%d qeliza të zgjedhura",
             "1": "1 qelizë e zgjedhur"

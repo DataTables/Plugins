@@ -119,10 +119,7 @@
         "loadMessage": "Axtarış Bölməsi yüklənir ...",
         "title": "Aktiv filtrlər - %d"
     },
-    "searchPlaceholder": "Axtarış",
     "select": {
-        "1": "%d sətir seçildi",
-        "_": "%d sətir seçildi",
         "cells": {
             "1": "1 hücrə seçildi",
             "_": "%d hücrə seçildi"

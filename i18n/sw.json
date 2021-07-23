@@ -23,8 +23,7 @@
         "cancel": "Ghairi",
         "fill": "Jaza",
         "fillHorizontal": "Jaza kwa usawa",
-        "fillVertical": "Jaza kwa wima",
-        "info": "Maelezo"
+        "fillVertical": "Jaza kwa wima"
     },
     "buttons": {
         "collection": "Makusanyiko",
@@ -40,7 +39,6 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Onyesha safu zote",
-            "1": "Onyesha safu moja",
             "_": "Onyesha safu %d"
         },
         "pdf": "PDF",

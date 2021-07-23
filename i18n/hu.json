@@ -24,8 +24,6 @@
             "_": "%d sor kiválasztva",
             "1": "1 sor kiválasztva"
         },
-        "1": "%d sor kiválasztva",
-        "_": "%d sor kiválasztva",
         "cells": {
             "1": "1 cella kiválasztva",
             "_": "%d cella kiválasztva"
@@ -50,7 +48,6 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Összes sor megjelenítése",
-            "1": "1 sor megjelenítése",
             "_": "%d sor megjelenítése"
         },
         "pdf": "PDF",
@@ -125,7 +122,6 @@
         "loadMessage": "Szűrőpanelek betöltése",
         "title": "Aktív szűrőpanelek: %d"
     },
-    "searchPlaceholder": "keresés",
     "datetime": {
         "previous": "Előző",
         "next": "Következő",

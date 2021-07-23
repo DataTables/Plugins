@@ -24,10 +24,6 @@
             "_": "%d kayıt seçildi",
             "1": "1 kayıt seçildi"
         },
-        "0": "-",
-        "1": "%d satır seçildi",
-        "2": "-",
-        "_": "%d satır seçildi",
         "cells": {
             "1": "1 hücre seçildi",
             "_": "%d hücre seçildi"
@@ -41,7 +37,6 @@
         "cancel": "İptal",
         "fillHorizontal": "Hücreleri yatay olarak doldur",
         "fillVertical": "Hücreleri dikey olarak doldur",
-        "info": "-",
         "fill": "Bütün hücreleri <i>%d<\/i> ile doldur"
     },
     "buttons": {
@@ -57,7 +52,6 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Bütün satırları göster",
-            "1": "-",
             "_": "%d satır göster"
         },
         "pdf": "PDF",
@@ -65,7 +59,6 @@
         "copy": "Kopyala",
         "copyKeys": "Tablodaki veriyi kopyalamak için CTRL veya u2318 + C tuşlarına basınız. İptal etmek için bu mesaja tıklayın veya escape tuşuna basın."
     },
-    "infoPostFix": "-",
     "searchBuilder": {
         "add": "Koşul Ekle",
         "button": {
@@ -139,7 +132,6 @@
         "loadMessage": "Arama Bölmeleri yükleniyor ...",
         "title": "Etkin filtreler - %d"
     },
-    "searchPlaceholder": "Ara",
     "thousands": ".",
     "datetime": {
         "amPm": [

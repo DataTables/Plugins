@@ -19,8 +19,6 @@
             "_": "%d lignes sélectionnées",
             "1": "1 ligne sélectionnée"
         },
-        "1": "1 ligne selectionnée",
-        "_": "%d lignes selectionnées",
         "cells": {
             "1": "1 cellule sélectionnée",
             "_": "%d cellules sélectionnées"
@@ -34,8 +32,7 @@
         "cancel": "Annuler",
         "fill": "Remplir toutes les cellules avec <i>%d<\/i>",
         "fillHorizontal": "Remplir les cellules horizontalement",
-        "fillVertical": "Remplir les cellules verticalement",
-        "info": "Exemple de remplissage automatique"
+        "fillVertical": "Remplir les cellules verticalement"
     },
     "searchBuilder": {
         "conditions": {
@@ -123,7 +120,6 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Afficher toutes les lignes",
-            "1": "Afficher 1 ligne",
             "_": "Afficher %d lignes"
         },
         "pdf": "PDF",
@@ -134,7 +130,6 @@
     "infoEmpty": "Affichage de 0 à 0 sur 0 éléments",
     "infoThousands": ".",
     "search": "Rechercher:",
-    "searchPlaceholder": "...",
     "thousands": ".",
     "infoFiltered": "(filtrés depuis un total de _MAX_ éléments)",
     "datetime": {

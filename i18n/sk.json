@@ -38,8 +38,7 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Zobraziť všetky riadky",
-            "_": "Zobraziť %d riadkov",
-            "1": "Zobraziť 1 riadok"
+            "_": "Zobraziť %d riadkov"
         },
         "pdf": "PDF",
         "print": "Tlačiť",
@@ -120,7 +119,6 @@
         "title": "Aktívnych Filtrov - %"
     },
     "select": {
-        "_": "%d vybraných riadkov",
         "cells": {
             "1": "1 zvolená bunka",
             "_": "%d vybraných buniek"
@@ -128,9 +126,7 @@
         "columns": {
             "1": "1 vybraný stĺpec",
             "_": "%d vybraných stĺpcov"
-        },
-        "1": "1 vybraný riadok",
-        "2": "%d vybrané riadky"
+        }
     },
     "thousands": " ",
     "datetime": {

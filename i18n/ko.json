@@ -30,7 +30,6 @@
         "excel": "엑설",
         "pageLength": {
             "-1": "모든 행 보기",
-            "1": "1행 보기",
             "_": "%d행 보기"
         },
         "pdf": "PDF",
@@ -62,7 +61,6 @@
         "cancel": "취소",
         "fill": "모든 셀에서 <i>%d<i>을(를) 삽입<\/i><\/i>",
         "fillHorizontal": "수평 셀에서 값을 삽입",
-        "fillVertical": "수직 설에서 값을 삽입",
-        "info": "자동삽입 샘플 정보"
+        "fillVertical": "수직 설에서 값을 삽입"
     }
 }

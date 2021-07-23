@@ -8,11 +8,5 @@
     "buttons": {
         "colvis": "endabikaYolunyilili",
         "copy": "Koppa"
-    },
-    "select": {
-        "0": "0",
-        "1": "1",
-        "2": "2",
-        "_": "-"
     }
 }

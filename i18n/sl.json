@@ -20,12 +20,10 @@
             "1": "1 izbrana vrstica",
             "_": "2 izbrane vrstice"
         },
-        "1": "%d izbrana vrstica",
         "cells": {
             "1": "1 izbrano polje",
             "_": "%d izbrana polja"
-        },
-        "_": "%d izbrane vrstice"
+        }
     },
     "thousands": ".",
     "searchBuilder": {
@@ -101,7 +99,6 @@
         "title": "Aktivni filtri - %d",
         "countFiltered": "{shown} ({total})"
     },
-    "searchPlaceholder": "Vnesi iskalni pojem",
     "buttons": {
         "copySuccess": {
             "1": "1 vrstica prekopirana na odložišče.",
@@ -112,7 +109,6 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Prikaži vse vrstice",
-            "1": "Prikaži 1 vrstico",
             "_": "Prikaži %ds vrstic"
         },
         "pdf": "PDF",
@@ -124,7 +120,6 @@
         "collection": "Zbirka"
     },
     "decimal": ",",
-    "infoPostFix": "Prikazano 1 do 10 od 57 vnosov",
     "infoThousands": ".",
     "paginate": {
         "first": "Prva",
@@ -137,8 +132,7 @@
         "cancel": "prekliči",
         "fill": "napolni",
         "fillHorizontal": "napolni vodoravno",
-        "fillVertical": "napolni navpično",
-        "info": "informacije"
+        "fillVertical": "napolni navpično"
     },
     "datetime": {
         "previous": "Prejšnji",

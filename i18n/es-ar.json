@@ -50,7 +50,6 @@
         },
         "value": "Valor"
     },
-    "searchPlaceholder": "Ingrese caracteres de busqueda",
     "thousands": ".",
     "zeroRecords": "No se encontraron registros que coincidan con la búsqueda",
     "datetime": {

@@ -120,8 +120,6 @@
         "title": "Filters Active - %d"
     },
     "select": {
-        "1": "%d row selected",
-        "_": "%d rows selected",
         "cells": {
             "1": "1 cell selected",
             "_": "%d cells selected"

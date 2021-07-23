@@ -24,7 +24,6 @@
         "loadMessage": "מסנני חיפוש בטעינה",
         "title": "מסננים פעילים - %d"
     },
-    "searchPlaceholder": "חיפוש...",
     "aria": {
         "sortAscending": "מיון בסדר עולה",
         "sortDescending": "מיון בסדר יורד"
@@ -33,8 +32,7 @@
         "cancel": "ביטול",
         "fill": "מלא את כל התאים עם  <i>%d<i><\/i><\/i>",
         "fillHorizontal": "מלא תאים מאוזן",
-        "fillVertical": "מלא תאים מאונך",
-        "info": "פרטים"
+        "fillVertical": "מלא תאים מאונך"
     },
     "buttons": {
         "collection": "קולקציה",
@@ -50,7 +48,6 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "הצג את כל הרשומות",
-            "1": "הצג רשומה 1",
             "_": "הצג %d רשומות"
         },
         "pdf": "PDF",
@@ -163,7 +160,6 @@
         "value": "ערך"
     },
     "select": {
-        "_": "%d רשומות נבחרו",
         "cells": {
             "1": "תא אחד נבחר",
             "_": "%d תאים נבחרו"

@@ -38,11 +38,6 @@
         "condition": "Voorwaardes",
         "data": "Data"
     },
-    "select": [
-        "0",
-        "1",
-        "2"
-    ],
     "thousands": "duisende",
     "zeroRecords": "Geen gevind"
 }

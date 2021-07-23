@@ -70,19 +70,6 @@
         },
         "deleteTitle": "Smazat filtrovací pravidlo"
     },
-    "select": {
-        "1": "Vybrán %d záznam",
-        "2": "Vybrány %d záznamy",
-        "_": "Vybráno %d záznamů",
-        "cells": {
-            "1": "Vybrán 1 záznam",
-            "_": "Vybráno %d záznamů"
-        },
-        "columns": {
-            "1": "Vybrán 1 sloupec",
-            "_": "Vybráno %d sloupců"
-        }
-    },
     "autoFill": {
         "cancel": "Zrušit",
         "fill": "Vyplň všechny buňky textem <i>%d<i><\/i><\/i>",
@@ -101,7 +88,6 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Zobrazit všechny řádky",
-            "1": "Zobrazit 1 řádek",
             "_": "Zobrazit %d řádků"
         },
         "pdf": "PDF",
@@ -121,6 +107,16 @@
         "emptyPanes": "Žádné Vyhledávací Panely",
         "loadMessage": "Načítám Vyhledávací Panely",
         "title": "Aktivních filtrů - %d"
+    },
+    "select": {
+        "cells": {
+            "1": "Vybrán 1 záznam",
+            "_": "Vybráno %d záznamů"
+        },
+        "columns": {
+            "1": "Vybrán 1 sloupec",
+            "_": "Vybráno %d sloupců"
+        }
     },
     "aria": {
         "sortAscending": "Aktivujte pro seřazení vzestupně",

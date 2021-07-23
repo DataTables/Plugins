@@ -17,17 +17,7 @@
         "sortAscending": ": 升冪排列",
         "sortDescending": ": 降冪排列"
     },
-    "select": {
-        "1": "%d 列已選擇",
-        "2": "%d 列已選擇",
-        "_": "%d 列已選擇",
-        "rows": {
-            "_": "%d 列已選擇",
-            "1": "%d 列已選擇"
-        }
-    },
     "emptyTable": "目前沒有資料",
-    "searchPlaceholder": "請輸入關鍵字",
     "datetime": {
         "previous": "上一頁",
         "next": "下一頁",
@@ -149,5 +139,11 @@
         "emptyPanes": "沒搜尋面版",
         "loadMessage": "載入搜尋面版中...",
         "clearMessage": "清空"
+    },
+    "select": {
+        "rows": {
+            "_": "%d 列已選擇",
+            "1": "%d 列已選擇"
+        }
     }
 }

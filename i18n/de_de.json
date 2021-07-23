@@ -21,9 +21,6 @@
             "_": "%d Zeilen ausgewählt",
             "1": "1 Zeile ausgewählt"
         },
-        "1": "1 Eintrag ausgewählt",
-        "2": "2 Einträge ausgewählt",
-        "_": "%d Einträge ausgewählt",
         "cells": {
             "1": "1 Zelle ausgewählt",
             "_": "%d Zellen ausgewählt"
@@ -49,7 +46,6 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Alle Zeilen anzeigen",
-            "1": "Eine Zeile anzeigen",
             "_": "%d Zeilen anzeigen"
         },
         "pdf": "PDF"
@@ -58,8 +54,7 @@
         "cancel": "Abbrechen",
         "fill": "Alle Zellen mit <i>%d<i> füllen<\/i><\/i>",
         "fillHorizontal": "Alle horizontalen Zellen füllen",
-        "fillVertical": "Alle vertikalen Zellen füllen",
-        "info": "Bitte wählen Sie die gewünschte Aktion aus:"
+        "fillVertical": "Alle vertikalen Zellen füllen"
     },
     "decimal": ",",
     "search": "Suche:",
@@ -136,7 +131,6 @@
         "title": "Aktive Filter: %d",
         "count": "Anzahl"
     },
-    "searchPlaceholder": "Suchbegriff eingeben",
     "thousands": ".",
     "zeroRecords": "Keine passenden Einträge gefunden",
     "lengthMenu": "_MENU_ Zeilen anzeigen",

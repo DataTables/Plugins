@@ -24,7 +24,6 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Mostrar todas las filas",
-            "1": "Mostrar 1 fila",
             "_": "Mostrar %d filas"
         },
         "pdf": "PDF",
@@ -120,8 +119,6 @@
         "countFiltered": "{shown} ({total})"
     },
     "select": {
-        "1": "%d fila seleccionada",
-        "_": "%d filas seleccionadas",
         "cells": {
             "1": "1 celda seleccionada",
             "_": "$d celdas seleccionadas"

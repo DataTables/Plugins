@@ -39,7 +39,6 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Visa alla rader",
-            "1": "Visa 1 Rad",
             "_": "Visa %d rader"
         },
         "pdf": "PDF",
@@ -121,8 +120,6 @@
         "title": "Aktiva Filter - %d"
     },
     "select": {
-        "1": "Rad %d markerad",
-        "_": "%d rader markerade",
         "cells": {
             "1": "1 cell markerad",
             "_": "%d celler markerade"

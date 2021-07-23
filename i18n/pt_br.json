@@ -23,8 +23,6 @@
             "_": "Selecionado %d linhas",
             "1": "Selecionado 1 linha"
         },
-        "1": "%d linha selecionada",
-        "_": "%d linhas selecionadas",
         "cells": {
             "1": "1 célula selecionada",
             "_": "%d células selecionadas"
@@ -32,8 +30,7 @@
         "columns": {
             "1": "1 coluna selecionada",
             "_": "%d colunas selecionadas"
-        },
-        "0": "Nenhuma linha selecionada"
+        }
     },
     "buttons": {
         "copySuccess": {
@@ -50,7 +47,6 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Mostrar todos os registros",
-            "1": "Mostrar 1 registro",
             "_": "Mostrar %d registros"
         },
         "pdf": "PDF",
@@ -134,7 +130,6 @@
         "loadMessage": "Carregando Painéis de Pesquisa...",
         "title": "Filtros Ativos"
     },
-    "searchPlaceholder": "Digite um termo para pesquisar",
     "thousands": ".",
     "datetime": {
         "previous": "Anterior",
