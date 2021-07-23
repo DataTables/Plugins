@@ -22,8 +22,7 @@
     "select": {
         "rows": {
             "_": "%d kayıt seçildi",
-            "1": "1 kayıt seçildi",
-            "0": "-"
+            "1": "1 kayıt seçildi"
         },
         "0": "-",
         "1": "%d satır seçildi",

@@ -20,7 +20,6 @@
     "search": "Circà :",
     "select": {
         "rows": {
-            "0": "Nisuna linea selezziunata",
             "1": "1 linea selezziunata",
             "_": "%d linee selezziunate"
         }

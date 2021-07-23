@@ -17,7 +17,6 @@
     "select": {
         "rows": {
             "_": "%d lignes sélectionnées",
-            "0": "Aucune ligne sélectionnée",
             "1": "1 ligne sélectionnée"
         },
         "1": "1 ligne selectionnée",

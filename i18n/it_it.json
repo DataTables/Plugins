@@ -134,8 +134,7 @@
         },
         "rows": {
             "1": "1 riga selezionata",
-            "_": "%d righe selezionate",
-            "0": "%d righe selezionate"
+            "_": "%d righe selezionate"
         },
         "0": "Nessuna riga selezionata",
         "2": "%d righe selezionate"

@@ -18,7 +18,6 @@
         },
         "rows": {
             "1": "1 izbrana vrstica",
-            "0": "0 izbranih vrstic",
             "_": "2 izbrane vrstice"
         },
         "1": "%d izbrana vrstica",

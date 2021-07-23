@@ -43,7 +43,6 @@
     "select": {
         "rows": {
             "_": "%d files seleccionades",
-            "0": "Cap fila seleccionada",
             "1": "1 fila seleccionada"
         },
         "_": "%d files seleccionades",

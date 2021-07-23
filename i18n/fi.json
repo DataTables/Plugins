@@ -21,7 +21,6 @@
     "select": {
         "rows": {
             "_": "Valittuna %d riviä",
-            "0": "Klikkaa riviä valitaksesi sen",
             "1": "Valittuna vain yksi rivi"
         }
     },
