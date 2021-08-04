@@ -141,8 +141,31 @@
         "seconds": "Segundos",
         "unknown": "-",
         "amPm": [
-            "am",
-            "pm"
+            "AM",
+            "PM"
+        ],
+        "months": {
+            "0": "Enero",
+            "1": "Febrero",
+            "10": "Noviembre",
+            "11": "Diciembre",
+            "2": "Marzo",
+            "3": "Abril",
+            "4": "Mayo",
+            "5": "Junio",
+            "6": "Julio",
+            "7": "Agosto",
+            "8": "Septiembre",
+            "9": "Octubre"
+        },
+        "weekdays": [
+            "Dom",
+            "Lun",
+            "Mar",
+            "Mie",
+            "Jue",
+            "Vie",
+            "Sab"
         ]
     },
     "editor": {
@@ -176,5 +199,5 @@
             "noMulti": "Este registro puede ser editado individualmente, pero no como parte de un grupo."
         }
     },
-    "info": "Mostrando de _START_ a _END_ de _TOTAL_ entradas"
+    "info": "Mostrando _START_ a _END_ de _TOTAL_ registros"
 }

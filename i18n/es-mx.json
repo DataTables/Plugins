@@ -5,7 +5,7 @@
     },
     "autoFill": {
         "cancel": "Cancelar",
-        "fill": "Rellene todas las celdas con <i>%d&lt;\\\/i&gt;<\/i>",
+        "fill": "Rellene todas las celdas con <i>%d<\/i>",
         "fillHorizontal": "Rellenar celdas horizontalmente",
         "fillVertical": "Rellenar celdas verticalmente"
     },
@@ -29,9 +29,6 @@
         "pdf": "PDF",
         "print": "Imprimir"
     },
-    "decimal": ",",
-    "emptyTable": "No se encontraron resultados",
-    "info": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
     "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
     "infoFiltered": "(filtrado de un total de _MAX_ registros)",
     "infoThousands": ",",
@@ -53,7 +50,6 @@
         },
         "clearAll": "Borrar todo",
         "condition": "Condición",
-        "data": "Data",
         "deleteTitle": "Eliminar regla de filtrado",
         "leftTitle": "Criterios anulados",
         "logicAnd": "Y",
@@ -93,8 +89,8 @@
                 "endsWith": "Termina con",
                 "equals": "Igual a",
                 "not": "Diferente de",
-                "notEmpty": "Nop vacío",
-                "startsWith": "Inicia con"
+                "startsWith": "Inicia con",
+                "notEmpty": "No vacío"
             },
             "array": {
                 "equals": "Igual a",
@@ -104,7 +100,8 @@
                 "notEmpty": "No vacío",
                 "without": "Sin"
             }
-        }
+        },
+        "data": "Datos"
     },
     "searchPanes": {
         "clearMessage": "Borrar todo",
@@ -129,7 +126,6 @@
         }
     },
     "thousands": ",",
-    "zeroRecords": "No se encontraron resultados",
     "datetime": {
         "previous": "Anterior",
         "hours": "Horas",
@@ -140,7 +136,30 @@
             "am",
             "pm"
         ],
-        "next": "Siguiente"
+        "next": "Siguiente",
+        "months": {
+            "0": "Enero",
+            "1": "Febrero",
+            "10": "Noviembre",
+            "11": "Diciembre",
+            "2": "Marzo",
+            "3": "Abril",
+            "4": "Mayo",
+            "5": "Junio",
+            "6": "Julio",
+            "7": "Agosto",
+            "8": "Septiembre",
+            "9": "Octubre"
+        },
+        "weekdays": [
+            "Domingo",
+            "Lunes",
+            "Martes",
+            "Miércoles",
+            "Jueves",
+            "Viernes",
+            "Sábado"
+        ]
     },
     "editor": {
         "close": "Cerrar",
@@ -163,14 +182,18 @@
                 "1": "¿Está seguro que desea eliminar 1 fila?"
             }
         },
-        "error": {
-            "system": "Ha ocurrido un error en el sistema (<a target=\"\\\" rel=\"\\ nofollow\" href=\"\\\">Más información&lt;\\\\\\\/a&gt;).&lt;\\\/a&gt;<\/a>"
-        },
         "multi": {
             "title": "Múltiples Valores",
-            "info": "Los elementos seleccionados contienen diferentes valores para este registro. Para editar y establecer todos los elementos de este registro con el mismo valor, hacer click o tap aquí, de lo contrario conservarán sus valores individuales.",
             "restore": "Deshacer Cambios",
-            "noMulti": "Este registro puede ser editado individualmente, pero no como parte de un grupo."
+            "noMulti": "Este registro puede ser editado individualmente, pero no como parte de un grupo.",
+            "info": "Los elementos seleccionados contienen diferentes valores para este registro. Para editar y establecer todos los elementos de este registro con el mismo valor, haga click o toque aquí, de lo contrario conservarán sus valores individuales."
+        },
+        "error": {
+            "system": "Ha ocurrido un error en el sistema (<a target=\"\\\" rel=\"\\ nofollow\" href=\"\\\"> Más información<\/a>)."
         }
-    }
+    },
+    "decimal": ".",
+    "emptyTable": "No hay datos disponibles en la tabla",
+    "info": "Mostrando de _START_ al _END_ de  _TOTAL_ registros",
+    "zeroRecords": "No se encontraron coincidencias"
 }
