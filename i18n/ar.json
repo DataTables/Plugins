@@ -1,7 +1,6 @@
 {
     "emptyTable": "ليست هناك بيانات متاحة في الجدول",
     "loadingRecords": "جارٍ التحميل...",
-    "processing": "جارٍ التحميل...",
     "lengthMenu": "أظهر _MENU_ مدخلات",
     "zeroRecords": "لم يعثر على أية سجلات",
     "info": "إظهار _START_ إلى _END_ من أصل _TOTAL_ مدخل",
@@ -183,5 +182,6 @@
             "title": "قيم متعدية",
             "restore": "تراجع"
         }
-    }
+    },
+    "processing": "جارٍ المعالجة..."
 }
