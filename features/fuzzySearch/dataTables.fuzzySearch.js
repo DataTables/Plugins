@@ -42,7 +42,7 @@
                 that_j = that[j-1];
                 cost = (this_i === that_j) ? 0 : 1; // Step 5
                 // Calculate the minimum (much faster than Math.min(...)).
-                min    = matrix[i - 1][j    ] + 1; // Deletion.
+                min    = matrix[i - 1][j    ] + 1; // Devarion.
                 if ((t = matrix[i    ][j - 1] + 1   ) < min) min = t;   // Insertion.
                 if ((t = matrix[i - 1][j - 1] + cost) < min) min = t;   // Substitution.
     
@@ -127,16 +127,17 @@
                 for (var y = 0; y < splitData.length; y++){
                     // If this search Term word is the beginning of the word in the cell we want to pass this word
                     if(splitData[y].indexOf(splitSearch[x]) === 0){
+                        var newScore = splitSearch[x].length / splitData[y].length;
                         highest = {
                             pass: true,
-                            score: splitSearch[x].length / splitData[y].length
+                            score: highest.score < newScore ? newScore : highest.score
                         };
                     }
     
                     // Get the levenshtein similarity score for the two words
                     var steps = levenshtein(splitSearch[x], splitData[y]).similarity;
                     
-                    // If the levenshtein similarity score is better than a previous one for the search word then let's store it
+                    // If the levenshtein similarity score is better than a previous one for the search word then var's store it
                     if(steps > highest.score) {
                         highest.score = steps;
                     }
@@ -152,7 +153,7 @@
             }
         }
         
-        // Check that all of the rows have a score greater than 0.5
+        // Check that all of the search words have passed
         for(var i = 0; i < highestCollated.length; i++) {
             if(!highestCollated[i].pass) {
                 return {
@@ -176,24 +177,28 @@
             if (settings.aoData[dataIndex]._fuzzySearch !== undefined) {
                 // Read score to set the cell content and sort data
                 var score = settings.aoData[dataIndex]._fuzzySearch.score;
-                settings.aoData[dataIndex].anCells[initial.rankColumn].innerHTML = score;
-    
-                // Remove '%' from the end of the score so can sort on a number
-                settings.aoData[dataIndex]._aSortData[initial.rankColumn] = +score.substring(0, score.length - 1);
-    
+                
+                if (initial.rankColumn !== undefined) {
+                    settings.aoData[dataIndex].anCells[initial.rankColumn].innerHTML = score;
+                    
+                    // Remove '%' from the end of the score so can sort on a number
+                    settings.aoData[dataIndex]._aSortData[initial.rankColumn] = +score.substring(0, score.length - 1);
+                }
+                
                 // Return the value for the pass as decided by the fuzzySearch function
                 return settings.aoData[dataIndex]._fuzzySearch.pass;
             }
-            else {
+            else if (initial.rankColumn !== undefined) {
                 settings.aoData[dataIndex].anCells[initial.rankColumn].innerHTML = '';
                 settings.aoData[dataIndex]._aSortData[initial.rankColumn] = '';
             }
+
             return true;
         }
     );
     
     $(document).on('init.dt', function(e, settings) {
-        let api = new $.fn.dataTable.Api(settings);
+        var api = new $.fn.dataTable.Api(settings);
         var initial = api.init().fuzzySearch;
 
         // If this is not set then fuzzy searching is not enabled on the table so return.
@@ -202,17 +207,17 @@
         }
     
         // Find the input element
-        let input = $('div.dataTables_filter input', api.table().container())
+        var input = $('div.dataTables_filter input', api.table().container())
 
-        let fontBold = {
+        var fontBold = {
             'font-weight': '600',
             'background-color': 'rgba(255,255,255,0.1)'
         };
-        let fontNormal = {
+        var fontNormal = {
             'font-weight': '500',
             'background-color': 'transparent'
         };
-        let toggleCSS = {
+        var toggleCSS = {
             'border': 'none',
             'background': 'none',
             'font-size': '100%',
@@ -224,7 +229,7 @@
         }
         
         // Only going to set the toggle if it is enabled
-        let toggle, tooltip, exact, fuzzy, label;
+        var toggle, tooltip, exact, fuzzy, label;
         if(initial.toggleSmart) {
             toggle =$('<button class="toggleSearch">Abc</button>')
                 .insertAfter(input)
@@ -269,7 +274,7 @@
                 .append(label).append(exact).append(fuzzy);
         }
 
-        function toggleFuzzy() {
+        function toggleFuzzy(event) {
             if(toggle.attr('blurred')) {
                 toggle.css({'filter': 'blur(0px)'}).removeAttr('blurred');
                 fuzzy.removeAttr('highlighted').css(fontNormal);
@@ -280,7 +285,9 @@
                 exact.removeAttr('highlighted').css(fontNormal);
                 fuzzy.attr('highlighted', true).css(fontBold);
             }
-            triggerSearchFunction();
+
+            // Whenever the search mode is changed we need to re-search
+            triggerSearchFunction(event);
         }
 
         // Turn off the default datatables searching events
@@ -297,7 +304,6 @@
                         settings.aoData[rowIdx]._fuzzySearch = undefined;
                     })
                     api.search(input.val())
-                    api.draw();
                 }
                 // Otherwise perform a fuzzy search
                 else {
@@ -316,8 +322,9 @@
                     // Empty the datatables search and replace it with our own
                     api.search("");
                     input.val(searchVal);
-                    api.draw();
                 }
+
+                api.draw();
             }
         }
 
@@ -325,13 +332,9 @@
         // Set listeners to occur on toggle and typing
         if(toggle) {
             // Highlights one of the buttons in the tooltip and un-highlights the other
-            function highlightButton(toHighlight, noHighlight) {
+            function highlightButton(toHighlight, event) {
                 if(!toHighlight.attr('highlighted')){
-                    toHighlight.attr('highlighted', true);
-                    toHighlight.css(fontBold);
-                    noHighlight.css(fontNormal);
-                    noHighlight.removeAttr('highlighted');
-                    toggleFuzzy()
+                    toggleFuzzy(event)
                 }
             }
 
@@ -347,8 +350,8 @@
                     tooltip
                         .insertAfter(toggle)
                         .on('mouseleave', removeToolTip);
-                    exact.on('click',  () => highlightButton(exact, fuzzy));
-                    fuzzy.on('click', () => highlightButton(fuzzy, exact));
+                    exact.on('click',  (event) => highlightButton(exact, event));
+                    fuzzy.on('click', (event) => highlightButton(fuzzy, event));
                 })
                 .on('mouseleave', removeToolTip);
 
@@ -358,8 +361,8 @@
                     tooltip
                         .insertAfter(toggle)
                         .on('mouseleave', removeToolTip);
-                    exact.on('click',  () => highlightButton(exact, fuzzy))
-                    fuzzy.on('click', () => highlightButton(fuzzy, exact))
+                    exact.on('click',  (event) => highlightButton(exact, event))
+                    fuzzy.on('click', (event) => highlightButton(fuzzy, event))
                 })
                 .on('mouseleave', function() {
                     var inToolTip = false;
@@ -374,16 +377,17 @@
             
             var state = api.state.loaded();
 
-
-            if(state !== null && state._fuzzySearch === 'true') {
-                toggle.click();
-            }
-
             api.on('stateSaveParams', function(e, settings, data) {
-                data._fuzzySearch = toggle.attr('blurred');
+                data._fuzzySearch = {
+                    active: toggle.attr('blurred'),
+                    val: input.val()
+                }
             })
 
-            api.state.save();
+            if(state !== null && state._fuzzySearch !== undefined && state._fuzzySearch.active === 'true') {
+                input.val(state._fuzzySearch.val);
+                toggle.click();
+            }
         }
 
         // Always add this event no matter if toggling is enabled
