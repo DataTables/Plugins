@@ -70,7 +70,7 @@
         }
     }
     
-    fuzzySearch = function(searchVal, data, initial) {
+    function fuzzySearch(searchVal, data, initial) {
         // If no searchVal has been defined then return all rows.
         if(searchVal === undefined || searchVal.length === 0) {
             return {
@@ -195,191 +195,199 @@
     $(document).on('init.dt', function(e, settings) {
         let api = new $.fn.dataTable.Api(settings);
         var initial = api.init().fuzzySearch;
-    
-        // If this is set then fuzzy searching is enabled on the table.
-        if (initial) {
-            // Find the input element
-            let input = $('div.dataTables_filter input', api.table().container())
-    
-            let fontBold = {'font-weight': '600', 'background-color': 'rgba(255,255,255,0.1)'};
-            let fontNormal = {'font-weight': '500', 'background-color': 'transparent',};
-            let toggleCSS = {
-                'border': 'none',
-                'background': 'none',
-                'font-size': '100%',
-                'width': '50%',
-                'display': 'inline-block',
-                'color': 'white',
-                'cursor': 'pointer',
-                'padding': '0.5em'
-            }
-            
-            // Only going to set the toggle if it is enabled
-            let toggle, tooltip, exact, fuzzy, label;
-            if(initial.toggleSmart) {
-                toggle =$('<button class="toggleSearch">Abc</button>')
-                    .insertAfter(input)
-                    .css({
-                        'border': 'none',
-                        'background': 'none',
-                        'position': 'absolute',
-                        'right': '0px',
-                        'top': '4px',
-                        'cursor': 'pointer',
-                        'color': '#3b5e99',
-                        'margin-top': '1px'
-                    });
-                exact =$('<button class="toggleSearch">Exact</button>')
-                    .insertAfter(input)
-                    .css(toggleCSS)
-                    .css(fontBold)
-                    .attr('highlighted', true);
-                fuzzy =$('<button class="toggleSearch">Fuzzy</button>')
-                    .insertAfter(input)
-                    .css(toggleCSS);
-                input.css({
-                    'padding-right': '30px'
-                });
-                label = $('<div>Search Type<div>').css({'padding-bottom': '0.5em', 'font-size': '0.8em'})
-                tooltip = $('<div class="fuzzyToolTip"></div>')
-                    .css({
-                        'position': 'absolute',
-                        'right': '0px',
-                        'top': '2em',
-                        'background': 'white',
-                        'border-radius': '4px',
-                        'text-align': 'center',
-                        'padding': '0.5em',
-                        'background-color': '#16232a',
-                        'box-shadow': '4px 4px 4px rgba(0, 0, 0, 0.5)',
-                        'color': 'white',
-                        'transition': 'opacity 0.25s',					
-                        'z-index': '30001'
-                    })
-                    .width(input.outerWidth() - 3)
-                    .append(label).append(exact).append(fuzzy);
-            }
-    
-            function toggleFuzzy() {
-                if(toggle.attr('blurred')) {
-                    toggle.css({'filter': 'blur(0px)'}).removeAttr('blurred');
-                    fuzzy.removeAttr('highlighted').css(fontNormal);
-                    exact.attr('highlighted', true).css(fontBold);
-                }
-                else {
-                    toggle.css({'filter': 'blur(1px)'}).attr('blurred', true);
-                    exact.removeAttr('highlighted').css(fontNormal);
-                    fuzzy.attr('highlighted', true).css(fontBold);
-                }
-                triggerSearchFunction();
-            }
-    
-            // Turn off the default datatables searching events
-            $(settings.nTable).off('search.dt.DT');
-    
-            // The function that we want to run on search
-            var triggerSearchFunction = function(event){
-                // If the search is only to be triggered on return wait for that
-                if (!initial.returnSearch || event.key === "Enter") {
-                    var searchVal = '';
-                    // If the toggle is set and isn't checkd then perform a normal search
-                    if(toggle && !toggle.attr('blurred')) {
-                        api.rows().iterator('row', function(settings, rowIdx) {
-                            settings.aoData[rowIdx]._fuzzySearch = undefined;
-                        })
-                        api.search(input.val())
-                        api.draw();
-                    }
-                    // Otherwise perform a fuzzy search
-                    else {
-                        // Get the value from the input element and convert to lower case
-                        searchVal = input.val();
-                        
-                        if (searchVal !== undefined && searchVal.length === 0) {
-                            searchVal = searchVal.toLowerCase();
-                        }
-                        
-                        // For each row call the fuzzy search function to get result
-                        api.rows().iterator('row', function(settings, rowIdx) {
-                            settings.aoData[rowIdx]._fuzzySearch = fuzzySearch(searchVal, settings.aoData[rowIdx]._aFilterData, initial)
-                        });
-    
-                        // Empty the datatables search and replace it with our own
-                        api.search("");
-                        input.val(searchVal);
-                        api.draw();
-                    }
-                }
-            }
-    
-            input.off();
-            // Set listeners to occur on toggle and typing
-            if(toggle) {
-                // Highlights one of the buttons in the tooltip and un-highlights the other
-                function highlightButton(toHighlight, noHighlight) {
-                    if(!toHighlight.attr('highlighted')){
-                        toHighlight.attr('highlighted', true);
-                        toHighlight.css(fontBold);
-                        noHighlight.css(fontNormal);
-                        noHighlight.removeAttr('highlighted');
-                        toggleFuzzy()
-                    }
-                }
-    
-                // Removes the tooltip element
-                function removeToolTip() {
-                    tooltip.remove();
-                }
-    
-                // Actions for the toggle button
-                toggle
-                    .on('click', toggleFuzzy)
-                    .on('mouseenter', function() {
-                        tooltip
-                            .insertAfter(toggle)
-                            .on('mouseleave', removeToolTip);
-                        exact.on('click',  () => highlightButton(exact, fuzzy));
-                        fuzzy.on('click', () => highlightButton(fuzzy, exact));
-                    })
-                    .on('mouseleave', removeToolTip);
-    
-                // Actions for the input element
-                input
-                    .on('mouseenter', function() {
-                        tooltip
-                            .insertAfter(toggle)
-                            .on('mouseleave', removeToolTip);
-                        exact.on('click',  () => highlightButton(exact, fuzzy))
-                        fuzzy.on('click', () => highlightButton(fuzzy, exact))
-                    })
-                    .on('mouseleave', function() {
-                        var inToolTip = false;
-                        tooltip.on('mouseenter', () => inToolTip = true);
-                        toggle.on('mouseenter', () => inToolTip = true);
-                        setTimeout(function(){
-                            if(!inToolTip) {
-                                removeToolTip();
-                            }
-                        }, 50)
-                    });
-                
-                var state = api.state.loaded();
-    
-    
-                if(state !== null && state._fuzzySearch === 'true') {
-                    toggle.click();
-                }
-    
-                api.on('stateSaveParams', function(e, settings, data) {
-                    data._fuzzySearch = toggle.attr('blurred');
-                })
-    
-                api.state.save();
-            }
-    
-            // Always add this event no matter if toggling is enabled
-            input.on('input keydown', triggerSearchFunction);
+
+        // If this is not set then fuzzy searching is not enabled on the table so return.
+        if(!initial) {
+            return;
         }
+    
+        // Find the input element
+        let input = $('div.dataTables_filter input', api.table().container())
+
+        let fontBold = {
+            'font-weight': '600',
+            'background-color': 'rgba(255,255,255,0.1)'
+        };
+        let fontNormal = {
+            'font-weight': '500',
+            'background-color': 'transparent'
+        };
+        let toggleCSS = {
+            'border': 'none',
+            'background': 'none',
+            'font-size': '100%',
+            'width': '50%',
+            'display': 'inline-block',
+            'color': 'white',
+            'cursor': 'pointer',
+            'padding': '0.5em'
+        }
+        
+        // Only going to set the toggle if it is enabled
+        let toggle, tooltip, exact, fuzzy, label;
+        if(initial.toggleSmart) {
+            toggle =$('<button class="toggleSearch">Abc</button>')
+                .insertAfter(input)
+                .css({
+                    'border': 'none',
+                    'background': 'none',
+                    'position': 'absolute',
+                    'right': '0px',
+                    'top': '4px',
+                    'cursor': 'pointer',
+                    'color': '#3b5e99',
+                    'margin-top': '1px'
+                });
+            exact =$('<button class="toggleSearch">Exact</button>')
+                .insertAfter(input)
+                .css(toggleCSS)
+                .css(fontBold)
+                .attr('highlighted', true);
+            fuzzy =$('<button class="toggleSearch">Fuzzy</button>')
+                .insertAfter(input)
+                .css(toggleCSS);
+            input.css({
+                'padding-right': '30px'
+            });
+            label = $('<div>Search Type<div>').css({'padding-bottom': '0.5em', 'font-size': '0.8em'})
+            tooltip = $('<div class="fuzzyToolTip"></div>')
+                .css({
+                    'position': 'absolute',
+                    'right': '0px',
+                    'top': '2em',
+                    'background': 'white',
+                    'border-radius': '4px',
+                    'text-align': 'center',
+                    'padding': '0.5em',
+                    'background-color': '#16232a',
+                    'box-shadow': '4px 4px 4px rgba(0, 0, 0, 0.5)',
+                    'color': 'white',
+                    'transition': 'opacity 0.25s',					
+                    'z-index': '30001'
+                })
+                .width(input.outerWidth() - 3)
+                .append(label).append(exact).append(fuzzy);
+        }
+
+        function toggleFuzzy() {
+            if(toggle.attr('blurred')) {
+                toggle.css({'filter': 'blur(0px)'}).removeAttr('blurred');
+                fuzzy.removeAttr('highlighted').css(fontNormal);
+                exact.attr('highlighted', true).css(fontBold);
+            }
+            else {
+                toggle.css({'filter': 'blur(1px)'}).attr('blurred', true);
+                exact.removeAttr('highlighted').css(fontNormal);
+                fuzzy.attr('highlighted', true).css(fontBold);
+            }
+            triggerSearchFunction();
+        }
+
+        // Turn off the default datatables searching events
+        $(settings.nTable).off('search.dt.DT');
+
+        // The function that we want to run on search
+        var triggerSearchFunction = function(event){
+            // If the search is only to be triggered on return wait for that
+            if (!initial.returnSearch || event.key === "Enter") {
+                var searchVal = '';
+                // If the toggle is set and isn't checkd then perform a normal search
+                if(toggle && !toggle.attr('blurred')) {
+                    api.rows().iterator('row', function(settings, rowIdx) {
+                        settings.aoData[rowIdx]._fuzzySearch = undefined;
+                    })
+                    api.search(input.val())
+                    api.draw();
+                }
+                // Otherwise perform a fuzzy search
+                else {
+                    // Get the value from the input element and convert to lower case
+                    searchVal = input.val();
+                    
+                    if (searchVal !== undefined && searchVal.length === 0) {
+                        searchVal = searchVal.toLowerCase();
+                    }
+                    
+                    // For each row call the fuzzy search function to get result
+                    api.rows().iterator('row', function(settings, rowIdx) {
+                        settings.aoData[rowIdx]._fuzzySearch = fuzzySearch(searchVal, settings.aoData[rowIdx]._aFilterData, initial)
+                    });
+
+                    // Empty the datatables search and replace it with our own
+                    api.search("");
+                    input.val(searchVal);
+                    api.draw();
+                }
+            }
+        }
+
+        input.off();
+        // Set listeners to occur on toggle and typing
+        if(toggle) {
+            // Highlights one of the buttons in the tooltip and un-highlights the other
+            function highlightButton(toHighlight, noHighlight) {
+                if(!toHighlight.attr('highlighted')){
+                    toHighlight.attr('highlighted', true);
+                    toHighlight.css(fontBold);
+                    noHighlight.css(fontNormal);
+                    noHighlight.removeAttr('highlighted');
+                    toggleFuzzy()
+                }
+            }
+
+            // Removes the tooltip element
+            function removeToolTip() {
+                tooltip.remove();
+            }
+
+            // Actions for the toggle button
+            toggle
+                .on('click', toggleFuzzy)
+                .on('mouseenter', function() {
+                    tooltip
+                        .insertAfter(toggle)
+                        .on('mouseleave', removeToolTip);
+                    exact.on('click',  () => highlightButton(exact, fuzzy));
+                    fuzzy.on('click', () => highlightButton(fuzzy, exact));
+                })
+                .on('mouseleave', removeToolTip);
+
+            // Actions for the input element
+            input
+                .on('mouseenter', function() {
+                    tooltip
+                        .insertAfter(toggle)
+                        .on('mouseleave', removeToolTip);
+                    exact.on('click',  () => highlightButton(exact, fuzzy))
+                    fuzzy.on('click', () => highlightButton(fuzzy, exact))
+                })
+                .on('mouseleave', function() {
+                    var inToolTip = false;
+                    tooltip.on('mouseenter', () => inToolTip = true);
+                    toggle.on('mouseenter', () => inToolTip = true);
+                    setTimeout(function(){
+                        if(!inToolTip) {
+                            removeToolTip();
+                        }
+                    }, 50)
+                });
+            
+            var state = api.state.loaded();
+
+
+            if(state !== null && state._fuzzySearch === 'true') {
+                toggle.click();
+            }
+
+            api.on('stateSaveParams', function(e, settings, data) {
+                data._fuzzySearch = toggle.attr('blurred');
+            })
+
+            api.state.save();
+        }
+
+        // Always add this event no matter if toggling is enabled
+        input.on('input keydown', triggerSearchFunction);
     })
-    }());
+}());
     
