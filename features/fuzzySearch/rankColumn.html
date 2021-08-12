@@ -626,14 +626,13 @@ $(document).ready(function() {
 				</table>
 			</div>
 					<p>The Javascript shown below is used to initialise the table shown in this example:</p><code class="multiline language-js">$(document).ready(function() {
-	var table = $('#example').DataTable({
-		fuzzySearch: {
-			toggleSmart: true,
-			rankColumn: 6,
-			threshold: 0.5,
-			returnSearch: false
-		}
-	});
+						$(document).ready(function() {
+							var table = $('#example').DataTable({
+								fuzzySearch: {
+									rankColumn: 6
+								}
+							});
+						} );
 } );</code>
 		</div>
 	</section>
