@@ -205,6 +205,8 @@
         if(!initial) {
             return;
         }
+
+        var fromPlugin = false;
     
         // Find the input element
         var input = $('div.dataTables_filter input', api.table().container())
@@ -303,7 +305,9 @@
                     api.rows().iterator('row', function(settings, rowIdx) {
                         settings.aoData[rowIdx]._fuzzySearch = undefined;
                     })
-                    api.search(input.val())
+                    fromPlugin = true;
+                    api.search(input.val());
+                    fromPlugin = false;
                 }
                 // Otherwise perform a fuzzy search
                 else {
@@ -319,14 +323,30 @@
                         settings.aoData[rowIdx]._fuzzySearch = fuzzySearch(searchVal, settings.aoData[rowIdx]._aFilterData, initial)
                     });
 
+                    fromPlugin = true;
                     // Empty the datatables search and replace it with our own
                     api.search("");
                     input.val(searchVal);
+                    fromPlugin = false;
                 }
 
+                fromPlugin = true;
                 api.draw();
+                fromPlugin = false;
             }
         }
+
+        var apiRegister = $.fn.dataTable.Api.register;
+        apiRegister('search.fuzzy()', function(value) {
+            if(value === undefined) {
+                return input.val();
+            }
+            else {
+                input.val(value);
+                triggerSearchFunction({key: 'Enter'});
+                return this;
+            }
+        })
 
         input.off();
         // Set listeners to occur on toggle and typing
@@ -389,6 +409,12 @@
                 toggle.click();
             }
         }
+
+        api.on('search', function(){
+            if(!fromPlugin) {
+                input.val(api.search());
+            }
+        })
 
         // Always add this event no matter if toggling is enabled
         input.on('input keydown', triggerSearchFunction);
