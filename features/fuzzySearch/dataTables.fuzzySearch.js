@@ -82,7 +82,7 @@
         var threshold = initial.threshold !== undefined ? initial.threshold : 0.5;
     
         // Split the searchVal into individual words.
-        var splitSearch = searchVal.split(/[^(a-z|A-Z|0-9)]/g);
+        var splitSearch = searchVal.split(/ /g);
     
         // Array to keep scores in
         var highestCollated = [];
@@ -105,7 +105,7 @@
             data[i] = data[i].toLowerCase();
     
             // Split the data into individual words
-            var splitData = data[i].split(/[^(a-z|A-Z|0-9)]/g);
+            var splitData = data[i].split(/ /g);
     
             // Remove any empty words or spaces
             for (var y = 0; y < splitData.length; y++){
