@@ -86,9 +86,15 @@ $(document).ready(function() {
 				</ul>
 				<p>This example demonstrates the use of the <code>fuzzySearch.threshold</code> initialisation option. The default value for this option is 0.5. This value is used to
 				compare against the Damerau-Levenshtein similarity metric which is calculated by dividing the number of changes needed to make the words the same, by the length of
-				the longest word. This means that rows where each word in the search value matches a word in the row by at least 0.5 will be displayed. In this example
+				the longest word and subtracting that value from one. This means that rows where each word in the search value matches a word in the row by at least 0.5 will be displayed. In this example
 				<code>fuzzySearch.threshold</code> is set to <code>0.1</code>. This will mean that significantly more rows are displayed than normal. The value set here has to be
 				a decimal number between 0 and 1 with no limit on decimal places. Any greater than 1 and no results will be displayed, 0 will always display all results.</p>
+				<p>Let's consider an example of how these values are calculated. To do this let's walk through the comparison between a cell containing "Jackson" and a search value
+				of "sockssssssssssssssss". Here the longer of the two values is the search value, which is 20 characters long. There are 3 matching letters mid string - "cks".
+				The "Ja" preceeding the "cks" requires a substitution of 2 to make the strings match. The "on" following the "cks" also requres a substitution of 2 to make the
+				strings match. The remaining 13 "s"s are deleted, this gives a total change score of 17. Dividing that by the longest length (20) gives a value of 0.85. Subtracting
+				that value from one gives a similarity score of 0.15. This would therefore pass in the below example where the threshold is one. For obvious reasons, it is not
+				recommended that you set the threshold value that low.</p>
 			</div>
 			<div class="demo-html">
 				<table id="example" class="display" style="width:100%">
