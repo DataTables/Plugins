@@ -372,7 +372,7 @@
                         if(!inToolTip) {
                             removeToolTip();
                         }
-                    }, 50)
+                    }, 250)
                 });
             
             var state = api.state.loaded();
