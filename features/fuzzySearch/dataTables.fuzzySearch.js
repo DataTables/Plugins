@@ -296,7 +296,7 @@
         // The function that we want to run on search
         var triggerSearchFunction = function(event){
             // If the search is only to be triggered on return wait for that
-            if (!initial.returnSearch || event.key === "Enter") {
+            if ((event.type === 'input' && !initial.returnSearch) || event.key === "Enter") {
                 var searchVal = '';
                 // If the toggle is set and isn't checkd then perform a normal search
                 if(toggle && !toggle.attr('blurred')) {
@@ -372,7 +372,7 @@
                         if(!inToolTip) {
                             removeToolTip();
                         }
-                    }, 250)
+                    }, 250);
                 });
             
             var state = api.state.loaded();
