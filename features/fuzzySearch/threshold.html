@@ -637,14 +637,12 @@ $(document).ready(function() {
 				</table>
 			</div>
 					<p>The Javascript shown below is used to initialise the table shown in this example:</p><code class="multiline language-js">$(document).ready(function() {
-						$(document).ready(function() {
-							var table = $('#example').DataTable({
-								fuzzySearch: {
-									rankColumn: 6,
-									threshold: 0.1
-								}
-							});
-						} );
+	var table = $('#example').DataTable({
+		fuzzySearch: {
+			rankColumn: 6,
+			threshold: 0.1
+		}
+	});
 } );</code>
 		</div>
 	</section>
