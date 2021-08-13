@@ -301,7 +301,7 @@
         // The function that we want to run on search
         var triggerSearchFunction = function(event){
             // If the search is only to be triggered on return wait for that
-            if ((event.type === 'input' && !initial.search.return) || event.key === "Enter") {
+            if ((event.type === 'input' && (initial.search === undefined || !initial.search.return)) || event.key === "Enter") {
                 // If the toggle is set and isn't checkd then perform a normal search
                 if(toggle && !toggle.attr('blurred')) {
                     api.rows().iterator('row', function(settings, rowIdx) {
