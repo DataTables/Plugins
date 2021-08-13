@@ -75,7 +75,7 @@ $(document).ready(function() {
 				term. This allows spelling mistakes and typos to be accounted for. It also allows small changes in dialect not to affect search results. A commonly used example is
 				for surname searching. "Smith" and "Smythe" are pronounced the same way, but using conventional searching typing "Smith" would not return "Smythe".</p>
 				<p>This plug-in adds fuzzy search functionality to Datatables. It does this through a combination of exact matching and the <a href=
-				"https://github.com/tad-lispy/node-damerau-levenshtein">Damerau-Levenshtein algorithm</a>. There are four initialisation options that are associated with this
+				"https://github.com/tad-lispy/node-damerau-levenshtein">Damerau-Levenshtein algorithm</a>. There are three initialisation options that are associated with this
 				plugin.</p>
 				<ul class="markdown">
 					<li><code>fuzzySearch.toggleSmart</code> allows the searching to be changed from exact matching to fuzzy searching.</li>
@@ -83,7 +83,6 @@ $(document).ready(function() {
 					to the user. or to hide the column and order based on it - as a search engine would.</li>
 					<li><code>fuzzySearch.threshold</code> allows the value of similarity that is required from the Damerau-Levenshtein function to display the row to be
 					changed.</li>
-					<li><code>fuzzySearch.returnSearch</code> allows the option for searching to only occur when the enter key is pressed.</li>
 				</ul>
 				<p>This example shows how fuzzySearch integrates with <code>stateSave</code>. The search mode, the value within the search box and the search results are restored
 				as they were on reload. To display all of the <code>stateSave</code> functionality, <code>fuzzySearch.toggleSmart</code> and <code>fuzzySearch.rankColumn</code>
@@ -631,7 +630,6 @@ $(document).ready(function() {
 				</table>
 			</div>
 					<p>The Javascript shown below is used to initialise the table shown in this example:</p><code class="multiline language-js">$(document).ready(function() {
-						$(document).ready(function() {
 							var table = $('#example').DataTable({
 								fuzzySearch: {
 									rankColumn: 6,
@@ -639,7 +637,6 @@ $(document).ready(function() {
 								},
 								stateSave: true
 							});
-						} );
 } );</code>
 		</div>
 	</section>

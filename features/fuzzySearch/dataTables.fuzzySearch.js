@@ -199,10 +199,11 @@
     
     $(document).on('init.dt', function(e, settings) {
         var api = new $.fn.dataTable.Api(settings);
-        var initial = api.init().fuzzySearch;
+        var initial = api.init();
+        var initialFuzzy = initial.fuzzySearch;
 
         // If this is not set then fuzzy searching is not enabled on the table so return.
-        if(!initial) {
+        if(!initialFuzzy) {
             return;
         }
 
@@ -232,7 +233,7 @@
         
         // Only going to set the toggle if it is enabled
         var toggle, tooltip, exact, fuzzy, label;
-        if(initial.toggleSmart) {
+        if(initialFuzzy.toggleSmart) {
             toggle =$('<button class="toggleSearch">Abc</button>')
                 .insertAfter(input)
                 .css({
@@ -300,7 +301,7 @@
         // The function that we want to run on search
         var triggerSearchFunction = function(event){
             // If the search is only to be triggered on return wait for that
-            if ((event.type === 'input' && !initial.returnSearch) || event.key === "Enter") {
+            if ((event.type === 'input' && !initial.search.return) || event.key === "Enter") {
                 // If the toggle is set and isn't checkd then perform a normal search
                 if(toggle && !toggle.attr('blurred')) {
                     api.rows().iterator('row', function(settings, rowIdx) {
@@ -324,7 +325,7 @@
                     
                     // For each row call the fuzzy search function to get result
                     api.rows().iterator('row', function(settings, rowIdx) {
-                        settings.aoData[rowIdx]._fuzzySearch = fuzzySearch(fuzzySearchVal, settings.aoData[rowIdx]._aFilterData, initial)
+                        settings.aoData[rowIdx]._fuzzySearch = fuzzySearch(fuzzySearchVal, settings.aoData[rowIdx]._aFilterData, initialFuzzy)
                     });
 
                     fromPlugin = true;
@@ -352,7 +353,7 @@
                 
                 // For each row call the fuzzy search function to get result
                 api.rows().iterator('row', function(settings, rowIdx) {
-                    settings.aoData[rowIdx]._fuzzySearch = fuzzySearch(fuzzySearchVal, settings.aoData[rowIdx]._aFilterData, initial)
+                    settings.aoData[rowIdx]._fuzzySearch = fuzzySearch(fuzzySearchVal, settings.aoData[rowIdx]._aFilterData, initialFuzzy)
                 });
                 // triggerSearchFunction({key: 'Enter'});
                 return this;
