@@ -295,38 +295,42 @@
         // Turn off the default datatables searching events
         $(settings.nTable).off('search.dt.DT');
 
+        var fuzzySearchVal = '';
+        var searchVal = '';
         // The function that we want to run on search
         var triggerSearchFunction = function(event){
             // If the search is only to be triggered on return wait for that
             if ((event.type === 'input' && !initial.returnSearch) || event.key === "Enter") {
-                var searchVal = '';
                 // If the toggle is set and isn't checkd then perform a normal search
                 if(toggle && !toggle.attr('blurred')) {
                     api.rows().iterator('row', function(settings, rowIdx) {
                         settings.aoData[rowIdx]._fuzzySearch = undefined;
                     })
+                    searchVal = input.val();
+                    fuzzySearchVal = searchVal;
                     fromPlugin = true;
-                    api.search(input.val());
+                    api.search(searchVal);
                     fromPlugin = false;
                 }
                 // Otherwise perform a fuzzy search
                 else {
                     // Get the value from the input element and convert to lower case
-                    searchVal = input.val();
+                    fuzzySearchVal = input.val();
+                    searchVal = fuzzySearchVal;
                     
-                    if (searchVal !== undefined && searchVal.length === 0) {
-                        searchVal = searchVal.toLowerCase();
+                    if (fuzzySearchVal !== undefined && fuzzySearchVal.length !== 0) {
+                        fuzzySearchVal = fuzzySearchVal.toLowerCase();
                     }
                     
                     // For each row call the fuzzy search function to get result
                     api.rows().iterator('row', function(settings, rowIdx) {
-                        settings.aoData[rowIdx]._fuzzySearch = fuzzySearch(searchVal, settings.aoData[rowIdx]._aFilterData, initial)
+                        settings.aoData[rowIdx]._fuzzySearch = fuzzySearch(fuzzySearchVal, settings.aoData[rowIdx]._aFilterData, initial)
                     });
 
                     fromPlugin = true;
                     // Empty the datatables search and replace it with our own
                     api.search("");
-                    input.val(searchVal);
+                    input.val(fuzzySearchVal);
                     fromPlugin = false;
                 }
 
@@ -339,11 +343,18 @@
         var apiRegister = $.fn.dataTable.Api.register;
         apiRegister('search.fuzzy()', function(value) {
             if(value === undefined) {
-                return input.val();
+                return fuzzySearchVal;
             }
             else {
-                input.val(value);
-                triggerSearchFunction({key: 'Enter'});
+                fuzzySearchVal = value.toLowerCase();
+                searchVal = api.search();
+                input.val(fuzzySearchVal);
+                
+                // For each row call the fuzzy search function to get result
+                api.rows().iterator('row', function(settings, rowIdx) {
+                    settings.aoData[rowIdx]._fuzzySearch = fuzzySearch(fuzzySearchVal, settings.aoData[rowIdx]._aFilterData, initial)
+                });
+                // triggerSearchFunction({key: 'Enter'});
                 return this;
             }
         })
@@ -412,7 +423,7 @@
 
         api.on('search', function(){
             if(!fromPlugin) {
-                input.val(api.search());
+                input.val(api.search() !== searchVal ? api.search() : fuzzySearchVal);
             }
         })
 
