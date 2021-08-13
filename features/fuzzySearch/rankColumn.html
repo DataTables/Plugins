@@ -72,7 +72,7 @@ $(document).ready(function() {
 				<p>Fuzzy searching is used in search engines and databases to perform searches that will match results that are not necessarily exactly the same as the search
 				term. This allows spelling mistakes and typos to be accounted for. It also allows small changes in dialect not to affect search results. A commonly used example is
 				for surname searching. "Smith" and "Smythe" are pronounced the same way, but using conventional searching typing "Smith" would not return "Smythe".</p>
-				<p>This plug-in adds fuzzy search functionality to Datatables. It does this through a combination of exact matching and the <a href=
+				<p>This plug-in adds fuzzy search functionality to DataTables. It does this through a combination of exact matching and the <a href=
 				"https://github.com/tad-lispy/node-damerau-levenshtein">Damerau-Levenshtein algorithm</a>. There are three initialisation options that are associated with this
 				plugin.</p>
 				<ul class="markdown">
@@ -84,7 +84,7 @@ $(document).ready(function() {
 				</ul>
 				<p>This example demonstrates the use of the <code>fuzzySearch.rankColumn</code> initialisation option. The default value for this option is undefined which will lead to the
 				similarity not being displayed in any column. In this example <code>fuzzySearch.rankColumn</code> is set to <code>6</code> which is the column on the far right of
-				the table. When usingfuzzy searching this column will be updated with the similarity value found within the rows data. When normal searching is being used this
+				the table. When using fuzzy searching this column will be updated with the similarity value found within the rows data. When normal searching is being used this
 				column is not updated to include a value. The type that must be used for <code>fuzzySearch.rankColumn</code> is <code>number</code>. The full range of Datatables
 				column selectors cannot be used here as the value is used to index internal arrays rather than using the Datatables API</p>
 			</div>

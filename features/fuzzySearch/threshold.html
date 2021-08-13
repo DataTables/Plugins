@@ -73,7 +73,7 @@ $(document).ready(function() {
 				<p>Fuzzy searching is used in search engines and databases to perform searches that will match results that are not necessarily exactly the same as the search
 				term. This allows spelling mistakes and typos to be accounted for. It also allows small changes in dialect not to affect search results. A commonly used example is
 				for surname searching. "Smith" and "Smythe" are pronounced the same way, but using conventional searching typing "Smith" would not return "Smythe".</p>
-				<p>This plug-in adds fuzzy search functionality to Datatables. It does this through a combination of exact matching and the <a href=
+				<p>This plug-in adds fuzzy search functionality to DataTables. It does this through a combination of exact matching and the <a href=
 				"https://github.com/tad-lispy/node-damerau-levenshtein">Damerau-Levenshtein algorithm</a>. There are three initialisation options that are associated with this
 				plugin.</p>
 				<ul class="markdown">
@@ -92,7 +92,7 @@ $(document).ready(function() {
 				of "sockssssssssssssssss". Here the longer of the two values is the search value, which is 20 characters long. There are 3 matching letters mid string - "cks".
 				The "Ja" preceeding the "cks" requires a substitution of 2 to make the strings match. The "on" following the "cks" also requres a substitution of 2 to make the
 				strings match. The remaining 13 "s"s are deleted, this gives a total change score of 17. Dividing that by the longest length (20) gives a value of 0.85. Subtracting
-				that value from one gives a similarity score of 0.15. This would therefore pass in the below example where the threshold is one. For obvious reasons, it is not
+				that value from one gives a similarity score of 0.15. This would therefore pass in the below example where the threshold is 0.1. For obvious reasons, it is not
 				recommended that you set the threshold value that low.</p>
 			</div>
 			<div class="demo-html">
