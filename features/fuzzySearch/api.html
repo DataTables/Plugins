@@ -112,11 +112,13 @@ $(document).ready(function() {
 				<p>This example shows how the API methods can be used to work with fuzzy searching. There are 4 buttons below which implement the following actions</p>
 				<ul class="markdown">
 					<li><code>.search(value)</code>This button takes the value from the input element to the left of the buttons and passes it into the <code>.search()</code>
-					api method. Doing this should update the value in the tables input element, but not yet update the tables records.</li>
+					api method. Doing this should update the value in the tables input element, but not yet update the tables records. If instead an undefined value were to be
+					passed in this method would act as a getter and retrieve the most recent search value.</li>
 					<li><code>.search("")</code>This button again calls the <code>.search()</code> api method, this time with an empty string to clear that value that it stores.
 					Doing this should update the value in the tables input element, but not yet update the tables records.</li>
 					<li><code>.search.fuzzy(value)</code>This button takes the value from the input element to the left of the buttons and passes it into the <code>.search.fuzzy()</code>
-					api method. Doing this should update the value in the tables input element, but not yet update the tables records.</li>
+					api method. Doing this should update the value in the tables input element, but not yet update the tables records. If instead an undefined value were to be
+					passed in this method would act as a getter and retrieve the most recent fuzzy search value.</li>
 					<li><code>.search.fuzzy("")</code>This button again calls the <code>.search.fuzzy()</code> api method, this time with an empty string to clear that value that
 					it stores. Doing this should update the value in the tables input element, but not yet update the tables records.</li>
 					<li><code>.draw()</code>This button calls the <code>.draw()</code> api method. Doing this will update the table to display the values that have been returned
