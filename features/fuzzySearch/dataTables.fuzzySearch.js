@@ -301,7 +301,7 @@
         // The function that we want to run on search
         var triggerSearchFunction = function(event){
             // If the search is only to be triggered on return wait for that
-            if ((event.type === 'input' && (initial.search === undefined || !initial.search.return)) || event.key === "Enter") {
+            if ((event.type === 'input' && (initial.search === undefined || !initial.search.return)) || event.key === "Enter" || event.type === 'click') {
                 // If the toggle is set and isn't checkd then perform a normal search
                 if(toggle && !toggle.attr('blurred')) {
                     api.rows().iterator('row', function(settings, rowIdx) {
@@ -416,9 +416,12 @@
                 }
             })
 
-            if(state !== null && state._fuzzySearch !== undefined && state._fuzzySearch.active === 'true') {
+            if (state !== null && state._fuzzySearch !== undefined) {
                 input.val(state._fuzzySearch.val);
-                toggle.click();
+
+                if (state._fuzzySearch.active === 'true') {
+                    toggle.click();
+                }
             }
         }
 
