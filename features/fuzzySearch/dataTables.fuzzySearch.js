@@ -239,9 +239,9 @@
                 .css({
                     'border': 'none',
                     'background': 'none',
-                    'position': 'absolute',
-                    'right': '0px',
-                    'top': '4px',
+                    'position': 'relative',
+                    'right': '33px',
+                    'top': '0px',
                     'cursor': 'pointer',
                     'color': '#3b5e99',
                     'margin-top': '1px'
