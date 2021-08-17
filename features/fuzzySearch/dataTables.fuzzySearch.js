@@ -313,14 +313,12 @@
                     api.search(searchVal);
                     fromPlugin = false;
                     searchVal = "";
-                    console.log("toggle a", searchVal, fuzzySearchVal);
                 }
                 // Otherwise perform a fuzzy search
                 else {
                     // Get the value from the input element and convert to lower case
                     fuzzySearchVal = input.val();
                     searchVal = "";
-                    console.log("toggle b", searchVal, fuzzySearchVal);
                     
                     if (fuzzySearchVal !== undefined && fuzzySearchVal.length !== 0) {
                         fuzzySearchVal = fuzzySearchVal.toLowerCase();
@@ -334,7 +332,6 @@
                     fromPlugin = true;
                     // Empty the datatables search and replace it with our own
                     api.search("");
-                    console.log("type or click")
                     input.val(fuzzySearchVal);
                     fromPlugin = false;
                 }
@@ -354,7 +351,6 @@
                 fuzzySearchVal = value.toLowerCase();
                 searchVal = api.search();
                 input.val(fuzzySearchVal);
-                console.log("set fuzzy", searchVal, fuzzySearchVal);
                 
                 // For each row call the fuzzy search function to get result
                 api.rows().iterator('row', function(settings, rowIdx) {
