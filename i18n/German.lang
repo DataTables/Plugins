@@ -1,13 +1,3 @@
-/**
- * German translation
- *  @name German
- *  @anchor German
- *  @author Joerg Holz
- *  @author DJmRek - Markus Bergt
- *  @author OSWorX https://osworx.net
- *  @lcid de_de
- */
-
 {
 	"sEmptyTable":   	"Keine Daten in der Tabelle vorhanden",
 	"sInfo":         	"_START_ bis _END_ von _TOTAL_ Einträgen",
