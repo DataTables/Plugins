@@ -116,7 +116,9 @@
             "0": "Construtor de Pesquisa",
             "_": "Construtor de Pesquisa (%d)"
         },
-        "value": "Valor"
+        "value": "Valor",
+        "leftTitle": "Critérios Externos",
+        "rightTitle": "Critérios Internos"
     },
     "searchPanes": {
         "clearMessage": "Limpar Tudo",
