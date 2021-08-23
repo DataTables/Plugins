@@ -8,7 +8,7 @@
     "processing": "Sedang memproses...",
     "search": "Cari:",
     "zeroRecords": "Tidak ditemukan data yang sesuai",
-    "thousands": "'",
+    "thousands": ".",
     "paginate": {
         "first": "Pertama",
         "last": "Terakhir",
