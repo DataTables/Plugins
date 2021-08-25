@@ -21,11 +21,8 @@
     "select": {
         "rows": {
             "_": "Selecionado %d linhas",
-            "0": "Nenhuma linha selecionada",
             "1": "Selecionado 1 linha"
         },
-        "1": "%d linha selecionada",
-        "_": "%d linhas selecionadas",
         "cells": {
             "1": "1 célula selecionada",
             "_": "%d células selecionadas"
@@ -50,7 +47,6 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Mostrar todos os registros",
-            "1": "Mostrar 1 registro",
             "_": "Mostrar %d registros"
         },
         "pdf": "PDF",
@@ -120,7 +116,9 @@
             "0": "Construtor de Pesquisa",
             "_": "Construtor de Pesquisa (%d)"
         },
-        "value": "Valor"
+        "value": "Valor",
+        "leftTitle": "Critérios Externos",
+        "rightTitle": "Critérios Internos"
     },
     "searchPanes": {
         "clearMessage": "Limpar Tudo",
@@ -134,7 +132,6 @@
         "loadMessage": "Carregando Painéis de Pesquisa...",
         "title": "Filtros Ativos"
     },
-    "searchPlaceholder": "Digite um termo para pesquisar",
     "thousands": ".",
     "datetime": {
         "previous": "Anterior",
@@ -146,7 +143,30 @@
             "am",
             "pm"
         ],
-        "unknown": "-"
+        "unknown": "-",
+        "months": {
+            "0": "Janeiro",
+            "1": "Fevereiro",
+            "10": "Novembro",
+            "11": "Dezembro",
+            "2": "Março",
+            "3": "Abril",
+            "4": "Maio",
+            "5": "Junho",
+            "6": "Julho",
+            "7": "Agosto",
+            "8": "Setembro",
+            "9": "Outubro"
+        },
+        "weekdays": [
+            "Domingo",
+            "Segunda-feira",
+            "Terça-feira",
+            "Quarta-feira",
+            "Quinte-feira",
+            "Sexta-feira",
+            "Sábado"
+        ]
     },
     "editor": {
         "close": "Fechar",

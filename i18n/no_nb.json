@@ -18,8 +18,7 @@
         "cancel": "Avbryt",
         "fillHorizontal": "Fyll celler horisontalt",
         "fillVertical": "Fyll celler vertikalt",
-        "fill": "Fyll alle celler med <i>%d<\/i>",
-        "info": "Eksempel autofyll info"
+        "fill": "Fyll alle celler med <i>%d<\/i>"
     },
     "buttons": {
         "colvisRestore": "Gjennopprett synlighet",
@@ -32,7 +31,6 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Vis alle rader",
-            "1": "Vis 1 Rad",
             "_": "Vis %d rader"
         },
         "pdf": "PDF",
@@ -117,7 +115,6 @@
         "title": "Aktive filter - %d"
     },
     "select": {
-        "_": "%d rader er valgt",
         "cells": {
             "1": "1 celle er valgt",
             "_": "%d celler er valgt"
@@ -125,9 +122,7 @@
         "columns": {
             "1": "1 kolonne er valgt",
             "_": "%d kolonner er valgt"
-        },
-        "1": "%d rad er valgt",
-        "2": "%d rader er valgt"
+        }
     },
     "thousands": " ",
     "info": "Viser _START_ til _END_ av _TOTAL_ oppf&oslash;ringer",

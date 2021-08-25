@@ -39,7 +39,6 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Tampilkan semua baris",
-            "1": "Tampilkan 1 baris",
             "_": "Tampilkan %d baris"
         },
         "pdf": "PDF",
@@ -120,10 +119,7 @@
         "loadMessage": "Memuat Panel Pencarian"
     },
     "infoThousands": ",",
-    "searchPlaceholder": "Masukkan kata kunci yang dicari",
     "select": {
-        "1": "%d baris terpilih",
-        "_": "%d baris terpilih",
         "cells": {
             "1": "1 sel terpilih",
             "_": "%d sel terpilih"
@@ -143,6 +139,29 @@
         "amPm": [
             "am",
             "pm"
+        ],
+        "weekdays": [
+            "Min",
+            "Sen",
+            "Sel",
+            "Rab",
+            "Kam",
+            "Jum",
+            "Sab"
+        ],
+        "months": [
+            "Januari",
+            "Februari",
+            "Maret",
+            "April",
+            "Mei",
+            "Juni",
+            "Juli",
+            "Agustus",
+            "September",
+            "Oktober",
+            "November",
+            "Desember"
         ]
     },
     "editor": {

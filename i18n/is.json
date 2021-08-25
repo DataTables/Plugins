@@ -23,8 +23,7 @@
         "cancel": "Hætta við",
         "fill": "Setja öll svæði með <i>%d<\/i>",
         "fillHorizontal": "Setja öll svæði lárétt",
-        "fillVertical": "Setja öll svæði lóðrétt",
-        "info": "Nánari upplýsingar"
+        "fillVertical": "Setja öll svæði lóðrétt"
     },
     "buttons": {
         "colvis": "Sýnileiki dálka",
@@ -40,8 +39,7 @@
         "excel": "Escel",
         "pageLength": {
             "_": "Sýna %d línur",
-            "-1": "Sýna allar línur",
-            "1": "Sýna eina línu"
+            "-1": "Sýna allar línur"
         },
         "pdf": "PDF",
         "print": "Prenta"
@@ -80,6 +78,5 @@
             "title": "Eyða"
         }
     },
-    "infoPostFix": "Færsla _START_ til _END_ af samtals _TOTAL_ ",
     "thousands": "."
 }

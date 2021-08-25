@@ -1,5 +1,4 @@
 {
-    "emptyTable": "Nie sú k dispozícii žiadne dáta",
     "info": "Záznamy _START_ až _END_ z celkom _TOTAL_",
     "infoEmpty": "Záznamy 0 až 0 z celkom 0 ",
     "infoFiltered": "(vyfiltrované spomedzi _MAX_ záznamov)",
@@ -38,13 +37,12 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Zobraziť všetky riadky",
-            "_": "Zobraziť %d riadkov",
-            "1": "Zobraziť 1 riadok"
+            "_": "Zobraziť %d riadkov"
         },
         "pdf": "PDF",
         "print": "Tlačiť",
-        "copyKeys": "Stlačte ctrl alebo u2318 + C pre kopírovanie dát tabuľky do systémovej schránky. Pre zrušenie kliknite na tuto správu alebo stlačte ESC.",
-        "colvis": "Viditeľnosť stĺpcov"
+        "colvis": "Viditeľnosť stĺpcov",
+        "copyKeys": "Stlačte CTRL alebo u2318 + C pre kopírovanie dát tabuľky do systémovej schránky. Pre zrušenie kliknite na túto správu alebo stlačte ESC."
     },
     "searchBuilder": {
         "add": "Pridať Podmienku",
@@ -120,7 +118,6 @@
         "title": "Aktívnych Filtrov - %"
     },
     "select": {
-        "_": "%d vybraných riadkov",
         "cells": {
             "1": "1 zvolená bunka",
             "_": "%d vybraných buniek"
@@ -128,9 +125,7 @@
         "columns": {
             "1": "1 vybraný stĺpec",
             "_": "%d vybraných stĺpcov"
-        },
-        "1": "1 vybraný riadok",
-        "2": "%d vybrané riadky"
+        }
     },
     "thousands": " ",
     "datetime": {
@@ -143,7 +138,30 @@
             "am",
             "pm"
         ],
-        "previous": "Predchádzajúci"
+        "previous": "Predchádzajúci",
+        "months": {
+            "0": "Január",
+            "1": "Feburár",
+            "10": "November",
+            "11": "December",
+            "2": "Marec",
+            "3": "Apríl",
+            "4": "Máj",
+            "5": "Jún",
+            "6": "Júl",
+            "7": "August",
+            "8": "September",
+            "9": "Október"
+        },
+        "weekdays": [
+            "Nedeľa",
+            "Pondelok",
+            "Utorok",
+            "Streda",
+            "Štvrtok",
+            "Piatok",
+            "Sobota"
+        ]
     },
     "editor": {
         "close": "Zavrieť",
@@ -166,14 +184,16 @@
                 "1": "Určite chcete vymazať 1 riadok?"
             }
         },
-        "error": {
-            "system": "Vyskytla sa systémová chyba"
-        },
         "multi": {
             "title": "Niekoľko hodnôt",
             "info": "Zvolený prvok obsahuje rozdielne hodnoty pre tento vstup. Na editovanie a nastavenie všetkých prvkov pre tento vstup na rovnakú hodnotu, kliknite alebo klepnite tu, inak si zachovajú individuálne hodnoty.",
             "restore": "Vrátiť späť zmeny",
             "noMulti": "Tento vstup môže byť editovaný samostatne, ale nie ako súčasť skupiny."
+        },
+        "error": {
+            "system": "Vyskytla sa systémová chyba."
         }
-    }
+    },
+    "decimal": ",",
+    "emptyTable": "Nie sú k dispozícii žiadne dáta."
 }

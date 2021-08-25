@@ -21,8 +21,7 @@
         "cancel": "Anuluj",
         "fill": "Wypełnij wszystkie komórki <i>%d<\/i>",
         "fillHorizontal": "Wypełnij komórki w poziomie",
-        "fillVertical": "Wypełnij komórki w pionie",
-        "info": "Informacje"
+        "fillVertical": "Wypełnij komórki w pionie"
     },
     "buttons": {
         "collection": "Zbiór <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
@@ -39,7 +38,6 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Pokaż wszystkie wiersze",
-            "1": "Pokaż 1 wiersz",
             "_": "Pokaż %d wierszy"
         },
         "pdf": "PDF",
@@ -162,10 +160,7 @@
         "loadMessage": "Ładuję panele wyszukań",
         "title": "Aktywne filtry"
     },
-    "searchPlaceholder": "podaj wartość",
     "select": {
-        "_": "zaznaczono %d wierszy",
-        "1": "zaznaczono %d wiersz",
         "cells": {
             "_": "zaznaczono %d komórek",
             "1": "zaznaczono %d komórkę"

@@ -19,8 +19,7 @@
         "cancel": "cancelar",
         "fill": "preencher",
         "fillHorizontal": "preencher células na horizontal",
-        "fillVertical": "preencher células na vertical",
-        "info": "Exemplo de Auto Preenchimento"
+        "fillVertical": "preencher células na vertical"
     },
     "buttons": {
         "collection": "Coleção",
@@ -37,7 +36,6 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Mostrar todas as linhas",
-            "1": "Mostrar 1 linha",
             "_": "Mostrar %d linhas"
         },
         "pdf": "PDF",
@@ -118,8 +116,6 @@
         "title": "Filtros ativos"
     },
     "select": {
-        "1": "%d linha seleccionada",
-        "_": "%d linhas seleccionadas",
         "cells": {
             "1": "1 célula seleccionada",
             "_": "%d células seleccionadas"
@@ -148,17 +144,57 @@
         "remove": {
             "button": "Remover",
             "title": "Remover",
-            "submit": "Remover"
-        },
-        "error": {
-            "system": "Um erro no sistema ocorreu"
+            "submit": "Remover",
+            "confirm": {
+                "_": "Tem certeza que quer apagar %d entradas?",
+                "1": "Tem certeza que quer apagar esta entrada?"
+            }
         },
         "multi": {
             "title": "Multiplos valores",
             "info": "Os itens selecionados contêm valores diferentes para esta entrada. Para editar e definir todos os itens para esta entrada com o mesmo valor, clique ou toque aqui, caso contrário, eles manterão seus valores individuais.",
-            "restore": "Desfazer alterações"
+            "restore": "Desfazer alterações",
+            "noMulti": "Este campo não pode ser editado em grupo"
+        },
+        "error": {
+            "system": "Ocorreu um erro no sistema"
         }
     },
     "info": "Mostrando os registos _START_ a _END_ num total de _TOTAL_",
-    "infoEmpty": "Mostrando 0 os registos num total de 0"
+    "infoEmpty": "Mostrando 0 os registos num total de 0",
+    "datetime": {
+        "previous": "anterior",
+        "next": "próximo",
+        "hours": "horas",
+        "minutes": "minutos",
+        "seconds": "segundos",
+        "unknown": "desconhecido",
+        "amPm": [
+            "am",
+            "pm"
+        ],
+        "weekdays": [
+            "Seg",
+            "Ter",
+            "Qua",
+            "Qui",
+            "Sex",
+            "Sáb",
+            "Dom"
+        ],
+        "months": [
+            "Janeiro",
+            "Fevereiro",
+            "Março",
+            "Abril",
+            "Maio",
+            "Junho",
+            "Julho",
+            "Agosto",
+            "Setembro",
+            "Outubro",
+            "Novembro",
+            "Dezembro"
+        ]
+    }
 }

@@ -21,8 +21,7 @@
         "cancel": "取消",
         "fill": "用 <i>%d<\/i> 填充所有单元格",
         "fillHorizontal": "水平填充单元格",
-        "fillVertical": "垂直填充单元格",
-        "info": "自动填充示例"
+        "fillVertical": "垂直填充单元格"
     },
     "buttons": {
         "collection": "集合 <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
@@ -40,7 +39,6 @@
         },
         "pageLength": {
             "-1": "显示所有行",
-            "1": "显示 1 行",
             "_": "显示 %d 行"
         },
         "print": "打印"
@@ -97,9 +95,7 @@
         "emptyPanes": "没有搜索栏",
         "loadMessage": "正在加载搜索栏"
     },
-    "searchPlaceholder": "请输入查询关键字",
     "select": {
-        "_": "选择了%d行",
         "cells": {
             "1": "选择了1个单元格",
             "_": "选择了%d个单元格"
@@ -108,15 +104,12 @@
             "1": "选择了1列",
             "_": "选择了%d列"
         },
-        "0": "没有选中数据行的文字说明",
-        "1": "选中一行的文字说明",
         "rows": {
             "1": "被选中一行的说明",
             "_": "被选中多行的说明"
         }
     },
     "decimal": "用于标记小数位的字符",
-    "infoPostFix": "分页数据信息说明",
     "infoThousands": "千分数分隔符，默认值是英文逗号",
     "loadingRecords": "数据加载提示信息，例如：数据加载中...",
     "thousands": "千位分隔符，默认值是英文逗号"

@@ -24,7 +24,6 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Arată toate rândurile",
-            "1": "Arată 1 rând",
             "_": "Arată %d rânduri"
         },
         "pdf": "PDF",

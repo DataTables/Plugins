@@ -9,8 +9,7 @@
         "cancel": "Hủy",
         "fill": "Điền tất cả ô với <i>%d<\/i>",
         "fillHorizontal": "Điền theo hàng ngang",
-        "fillVertical": "Điền theo hàng dọc",
-        "info": "Mẫu thông tin tự động điền"
+        "fillVertical": "Điền theo hàng dọc"
     },
     "buttons": {
         "collection": "Chọn lọc <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
@@ -27,17 +26,13 @@
         "excel": "File Excel",
         "pageLength": {
             "-1": "Xem tất cả các dòng",
-            "1": "Hiển thị 1 dòng",
             "_": "Hiển thị %d dòng"
         },
         "pdf": "File PDF",
         "print": "In ấn"
     },
-    "infoPostFix": "Đang hiển thị dòng _START_ tới dòng _END_ trong tổng số _TOTAL_ mục",
     "infoThousands": "`",
     "select": {
-        "1": "%d dòng đang được chọn",
-        "_": "%d dòng đang được chọn",
         "cells": {
             "1": "1 ô đang được chọn",
             "_": "%d ô đang được chọn"

@@ -17,11 +17,8 @@
     "select": {
         "rows": {
             "_": "%d lignes sélectionnées",
-            "0": "Aucune ligne sélectionnée",
             "1": "1 ligne sélectionnée"
         },
-        "1": "1 ligne selectionnée",
-        "_": "%d lignes selectionnées",
         "cells": {
             "1": "1 cellule sélectionnée",
             "_": "%d cellules sélectionnées"
@@ -35,8 +32,7 @@
         "cancel": "Annuler",
         "fill": "Remplir toutes les cellules avec <i>%d<\/i>",
         "fillHorizontal": "Remplir les cellules horizontalement",
-        "fillVertical": "Remplir les cellules verticalement",
-        "info": "Exemple de remplissage automatique"
+        "fillVertical": "Remplir les cellules verticalement"
     },
     "searchBuilder": {
         "conditions": {
@@ -124,7 +120,6 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Afficher toutes les lignes",
-            "1": "Afficher 1 ligne",
             "_": "Afficher %d lignes"
         },
         "pdf": "PDF",
@@ -135,7 +130,6 @@
     "infoEmpty": "Affichage de 0 à 0 sur 0 éléments",
     "infoThousands": ".",
     "search": "Rechercher:",
-    "searchPlaceholder": "...",
     "thousands": ".",
     "infoFiltered": "(filtrés depuis un total de _MAX_ éléments)",
     "datetime": {
@@ -148,6 +142,29 @@
         "amPm": [
             "am",
             "pm"
+        ],
+        "months": [
+            "Janvier",
+            "Fevrier",
+            "Mars",
+            "Avril",
+            "Mai",
+            "Juin",
+            "Juillet",
+            "Aout",
+            "Septembre",
+            "Octobre",
+            "Novembre",
+            "Decembre"
+        ],
+        "weekdays": [
+            "Dim",
+            "Lun",
+            "Mar",
+            "Mer",
+            "Jeu",
+            "Ven",
+            "Sam"
         ]
     },
     "editor": {
@@ -165,14 +182,20 @@
         "remove": {
             "button": "Supprimer",
             "title": "Supprimer",
-            "submit": "Supprimer"
+            "submit": "Supprimer",
+            "confirm": {
+                "1": "etes-vous sure de vouloir supprimer 1 ligne?",
+                "_": "etes-vous sure de vouloir supprimer %d lignes?"
+            }
         },
         "error": {
             "system": "Une erreur système s'est produite"
         },
         "multi": {
             "title": "Valeurs Multiples",
-            "restore": "Rétablir Modification"
+            "restore": "Rétablir Modification",
+            "noMulti": "Ce champ peut être édité individuellement, mais ne fait pas partie d'un groupe. ",
+            "info": "Les éléments sélectionnés contiennent différentes valeurs pour ce champ. Pour  modifier et "
         }
     }
 }

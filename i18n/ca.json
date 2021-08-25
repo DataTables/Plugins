@@ -43,10 +43,8 @@
     "select": {
         "rows": {
             "_": "%d files seleccionades",
-            "0": "Cap fila seleccionada",
             "1": "1 fila seleccionada"
         },
-        "_": "%d files seleccionades",
         "cells": {
             "1": "1 fila seleccionada",
             "_": "%d files seleccionades"
@@ -169,6 +167,5 @@
         "emptyPanes": "No panells de cerca",
         "loadMessage": "Carregant panells de cerca",
         "title": "Filtes actius - %d"
-    },
-    "searchPlaceholder": "Cerca"
+    }
 }

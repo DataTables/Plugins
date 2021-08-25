@@ -19,8 +19,7 @@
         "fill": "Fyld alle celler med <i>%d<i><\/i><\/i>",
         "fillHorizontal": "Fyld celler horisontalt",
         "fillVertical": "Fyld celler vertikalt",
-        "cancel": "Annuller",
-        "info": "Eksempel"
+        "cancel": "Annuller"
     },
     "buttons": {
         "copy": "Kopi",
@@ -29,8 +28,7 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Vis alle rækker",
-            "_": "Vis %d rækker",
-            "1": "Vis 1 række"
+            "_": "Vis %d rækker"
         },
         "pdf": "PDF",
         "print": "Udskriv",
@@ -46,8 +44,6 @@
     "emptyTable": "Ingen data tilgængelige i tabellen",
     "infoThousands": ".",
     "select": {
-        "1": "%d række valgt",
-        "_": "%d rækker valgt",
         "cells": {
             "1": "1 celle valgt",
             "_": "%d celler valgt"
@@ -55,9 +51,7 @@
         "columns": {
             "1": "1 kolonne valgt",
             "_": "%d kolonner valgt"
-        },
-        "0": "Ingen rækker valgt",
-        "2": "%d rækker valgt"
+        }
     },
     "thousands": ".",
     "decimal": ".",
@@ -166,6 +160,5 @@
         "logicAnd": "Og",
         "logicOr": "Eller",
         "value": "Værdi"
-    },
-    "searchPlaceholder": "Søg"
+    }
 }

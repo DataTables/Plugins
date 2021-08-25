@@ -24,7 +24,6 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Prikaži sve redove",
-            "1": "Prikaži 1 red",
             "_": "Prikaži %d redova"
         },
         "pdf": "PDF",
@@ -62,7 +61,6 @@
         "title": "Aktivni filteri - %d"
     },
     "select": {
-        "_": "Broj odabranih redova: %d ",
         "cells": {
             "1": "Odabran je 1 red",
             "_": "Broj odabranih redova: %d"

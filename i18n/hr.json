@@ -39,7 +39,6 @@
         "print": "Isprintaj",
         "pageLength": {
             "-1": "Prikaži sve redove",
-            "1": "Prikaži 1 red",
             "_": "Prikaži %d redova"
         }
     },
@@ -53,8 +52,6 @@
         "title": "Filtera aktivno - %d"
     },
     "select": {
-        "_": "%d redova odabrano",
-        "1": "%d red odabran",
         "cells": {
             "_": "%d ćelija odabrano",
             "1": "1 ćelija odabrana"

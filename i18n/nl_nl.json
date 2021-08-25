@@ -20,8 +20,7 @@
         "fill": "Vul alle cellen met <i>%d<\/i>",
         "fillHorizontal": "Vul cellen horizontaal",
         "fillVertical": "Vul cellen verticaal",
-        "cancel": "Annuleren",
-        "info": "Informatie"
+        "cancel": "Annuleren"
     },
     "buttons": {
         "colvis": "Kolom zichtbaarheid",
@@ -36,8 +35,7 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Toon alle regels",
-            "_": "Toon %d regels",
-            "1": "Toon 1 regel"
+            "_": "Toon %d regels"
         },
         "pdf": "PDF",
         "print": "Print",
@@ -120,8 +118,6 @@
         "title": "%d filters actief"
     },
     "select": {
-        "1": "%d rij geselecteerd",
-        "_": "%d rijen geselecteerd",
         "cells": {
             "1": "1 cel geselecteerd",
             "_": "%d cellen geselecteerd"
@@ -131,15 +127,11 @@
             "_": "%d kolommen geselecteerd"
         },
         "rows": {
-            "0": "%d rijen geselecteerd",
             "1": "1 rij geselecteerd",
             "_": "%d rijen geselecteerd"
-        },
-        "0": " Geen enkele rij geselecteerd.",
-        "2": "%d rijen geselecteerd"
+        }
     },
     "thousands": ".",
-    "searchPlaceholder": "Zoekterm",
     "info": "_START_ tot _END_ van _TOTAL_ resultaten",
     "infoFiltered": " (gefilterd uit _MAX_ resultaten)",
     "datetime": {
@@ -152,6 +144,29 @@
         "amPm": [
             "vm",
             "nm"
+        ],
+        "weekdays": [
+            "Zo",
+            "Ma",
+            "Di",
+            "Wo",
+            "Do",
+            "Vr",
+            "Za"
+        ],
+        "months": [
+            "Januari",
+            "Februari",
+            "Maart",
+            "April",
+            "Mei",
+            "Juni",
+            "Juli",
+            "Augustus",
+            "September",
+            "Oktober",
+            "November",
+            "December"
         ]
     },
     "editor": {

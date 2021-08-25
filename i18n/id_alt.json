@@ -37,7 +37,6 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Tampilkan semua row",
-            "1": "Tampilkan 1 row",
             "_": "Tampilkan %d row"
         },
         "pdf": "PDF",
