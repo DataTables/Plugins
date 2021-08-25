@@ -110,7 +110,7 @@
         }
     },
     "decimal": "用于标记小数位的字符",
-    "infoThousands": "千分数分隔符，默认值是英文逗号",
     "loadingRecords": "数据加载提示信息，例如：数据加载中...",
-    "thousands": "千位分隔符，默认值是英文逗号"
+    "infoThousands": ",",
+    "thousands": ","
 }
