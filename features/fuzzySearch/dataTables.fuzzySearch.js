@@ -254,9 +254,10 @@
             fuzzy =$('<button class="toggleSearch">Fuzzy</button>')
                 .insertAfter(input)
                 .css(toggleCSS);
-            input.css({
-                'padding-right': '30px'
-            });
+                input.css({
+                    'padding-right': '30px'
+                });
+            $(input.parent()).css('right', '-33px').css('position', 'relative');
             label = $('<div>Search Type<div>').css({'padding-bottom': '0.5em', 'font-size': '0.8em'})
             tooltip = $('<div class="fuzzyToolTip"></div>')
                 .css({
