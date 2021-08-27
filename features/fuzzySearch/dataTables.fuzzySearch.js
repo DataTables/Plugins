@@ -383,7 +383,7 @@
                     tooltip
                         .insertAfter(toggle)
                         .on('mouseleave', removeToolTip);
-                    tooltip.css('left', input.offset().left - tooltip.offset().left)
+                    tooltip.css('left', input.position().left + 3)
                     exact.on('click',  (event) => highlightButton(exact, event));
                     fuzzy.on('click', (event) => highlightButton(fuzzy, event));
                 })
@@ -395,7 +395,7 @@
                     tooltip
                         .insertAfter(toggle)
                         .on('mouseleave', removeToolTip);
-                    tooltip.css('left', input.offset().left - tooltip.offset().left)
+                    tooltip.css('left', input.position().left + 3)
                     exact.on('click',  (event) => highlightButton(exact, event))
                     fuzzy.on('click', (event) => highlightButton(fuzzy, event))
                 })
