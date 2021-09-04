@@ -254,14 +254,14 @@
             fuzzy =$('<button class="toggleSearch">Fuzzy</button>')
                 .insertAfter(input)
                 .css(toggleCSS);
-            input.css({
-                'padding-right': '30px'
-            });
+                input.css({
+                    'padding-right': '30px'
+                });
+            $(input.parent()).css('right', '-33px').css('position', 'relative');
             label = $('<div>Search Type<div>').css({'padding-bottom': '0.5em', 'font-size': '0.8em'})
             tooltip = $('<div class="fuzzyToolTip"></div>')
                 .css({
                     'position': 'absolute',
-                    'right': '0px',
                     'top': '2em',
                     'background': 'white',
                     'border-radius': '4px',
@@ -271,9 +271,9 @@
                     'box-shadow': '4px 4px 4px rgba(0, 0, 0, 0.5)',
                     'color': 'white',
                     'transition': 'opacity 0.25s',					
-                    'z-index': '30001'
+                    'z-index': '30001',
+                    'width': input.outerWidth() - 3,
                 })
-                .width(input.outerWidth() - 3)
                 .append(label).append(exact).append(fuzzy);
         }
 
@@ -383,6 +383,7 @@
                     tooltip
                         .insertAfter(toggle)
                         .on('mouseleave', removeToolTip);
+                    tooltip.css('left', input.position().left + 3)
                     exact.on('click',  (event) => highlightButton(exact, event));
                     fuzzy.on('click', (event) => highlightButton(fuzzy, event));
                 })
@@ -394,6 +395,7 @@
                     tooltip
                         .insertAfter(toggle)
                         .on('mouseleave', removeToolTip);
+                    tooltip.css('left', input.position().left + 3)
                     exact.on('click',  (event) => highlightButton(exact, event))
                     fuzzy.on('click', (event) => highlightButton(fuzzy, event))
                 })
