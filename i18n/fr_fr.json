@@ -106,7 +106,6 @@
         "loadMessage": "Chargement du volet de recherche..."
     },
     "buttons": {
-        "copyKeys": "Appuyer sur ctrl ou u2318 + C pour copier les données du tableau dans votre presse-papier.",
         "collection": "Collection",
         "colvis": "Visibilité colonnes",
         "colvisRestore": "Rétablir visibilité",
@@ -123,7 +122,8 @@
             "_": "Afficher %d lignes"
         },
         "pdf": "PDF",
-        "print": "Imprimer"
+        "print": "Imprimer",
+        "copyKeys": "Appuyez sur ctrl ou u2318 + C pour copier les données du tableau dans votre presse-papier."
     },
     "decimal": ",",
     "info": "Affichage de _START_ à _END_ sur _TOTAL_ éléments",
@@ -143,20 +143,20 @@
             "am",
             "pm"
         ],
-        "months": [
-            "Janvier",
-            "Fevrier",
-            "Mars",
-            "Avril",
-            "Mai",
-            "Juin",
-            "Juillet",
-            "Aout",
-            "Septembre",
-            "Octobre",
-            "Novembre",
-            "Decembre"
-        ],
+        "months": {
+            "0": "Janvier",
+            "2": "Mars",
+            "3": "Avril",
+            "4": "Mai",
+            "5": "Juin",
+            "6": "Juillet",
+            "7": "Aout",
+            "8": "Septembre",
+            "9": "Octobre",
+            "10": "Novembre",
+            "1": "Février",
+            "11": "Décembre"
+        },
         "weekdays": [
             "Dim",
             "Lun",
@@ -170,9 +170,9 @@
     "editor": {
         "close": "Fermer",
         "create": {
-            "button": "Nouveaux",
             "title": "Créer une nouvelle entrée",
-            "submit": "Envoyer"
+            "submit": "Envoyer",
+            "button": "Nouveau"
         },
         "edit": {
             "button": "Editer",
@@ -184,18 +184,18 @@
             "title": "Supprimer",
             "submit": "Supprimer",
             "confirm": {
-                "1": "etes-vous sure de vouloir supprimer 1 ligne?",
-                "_": "etes-vous sure de vouloir supprimer %d lignes?"
+                "_": "Êtes-vous sûr de vouloir supprimer %d lignes ?",
+                "1": "Êtes-vous sûr de vouloir supprimer 1 ligne ?"
             }
         },
         "error": {
             "system": "Une erreur système s'est produite"
         },
         "multi": {
-            "title": "Valeurs Multiples",
-            "restore": "Rétablir Modification",
             "noMulti": "Ce champ peut être édité individuellement, mais ne fait pas partie d'un groupe. ",
-            "info": "Les éléments sélectionnés contiennent différentes valeurs pour ce champ. Pour  modifier et "
+            "info": "Les éléments sélectionnés contiennent différentes valeurs pour ce champ. Pour  modifier et ",
+            "title": "Valeurs multiples",
+            "restore": "Rétablir modification"
         }
     }
 }

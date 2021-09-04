@@ -18,5 +18,6 @@
     "aria": {
         "sortAscending": ": 列を昇順に並べ替えるにはアクティブにする",
         "sortDescending": ": 列を降順に並べ替えるにはアクティブにする"
-    }
+    },
+    "thousands": ","
 }
