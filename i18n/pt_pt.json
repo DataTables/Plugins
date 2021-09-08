@@ -26,7 +26,6 @@
         "colvis": "Visibilidade de colunas",
         "colvisRestore": "Restaurar visibilidade",
         "copy": "Copiar",
-        "copyKeys": "Pressiona CTRL ou u2318 + C para copiar a informação para a área de transferência. Para cancelar, clica neste mensagem ou pressiona ESC.",
         "copySuccess": {
             "1": "Uma linha copiada para a área de transferência",
             "_": "%ds linhas copiadas para a área de transferência"
@@ -39,7 +38,8 @@
             "_": "Mostrar %d linhas"
         },
         "pdf": "PDF",
-        "print": "Imprimir"
+        "print": "Imprimir",
+        "copyKeys": "Pressionar CTRL ou u2318 + C para copiar a informação para a área de transferência. Para cancelar, clique nesta mensagem ou pressione ESC."
     },
     "decimal": ",",
     "infoFiltered": "(filtrado num total de _MAX_ registos)",
@@ -101,7 +101,9 @@
             "0": "Construtor de pesquisa",
             "_": "Construtor de pesquisa (%d)"
         },
-        "value": "Valor"
+        "value": "Valor",
+        "leftTitle": "Excluir critério",
+        "rightTitle": "Incluir critério"
     },
     "searchPanes": {
         "clearMessage": "Limpar tudo",
@@ -125,7 +127,8 @@
             "_": "%d colunas seleccionadas"
         },
         "rows": {
-            "1": "%d linha seleccionada"
+            "1": "%d linha seleccionada",
+            "_": "%d linhas seleccionadas"
         }
     },
     "thousands": ".",
@@ -152,9 +155,9 @@
         },
         "multi": {
             "title": "Multiplos valores",
-            "info": "Os itens selecionados contêm valores diferentes para esta entrada. Para editar e definir todos os itens para esta entrada com o mesmo valor, clique ou toque aqui, caso contrário, eles manterão seus valores individuais.",
             "restore": "Desfazer alterações",
-            "noMulti": "Este campo não pode ser editado em grupo"
+            "info": "Os itens selecionados contêm valores diferentes para esta entrada. Para editar e definir todos os itens nesta entrada com o mesmo valor, clique ou toque aqui, caso contrário, eles manterão os seus valores individuais.",
+            "noMulti": "Este campo pode ser editado individualmente mas não pode ser editado em grupo"
         },
         "error": {
             "system": "Ocorreu um erro no sistema"
