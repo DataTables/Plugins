@@ -1,7 +1,13 @@
+/*!
+ * Fuzzy Search for DataTables
+ * 2021 SpryMedia Ltd - datatables.net/license MIT license
+ * 
+ * Damerau-Levenshtein function courtesy of https://github.com/tad-lispy/node-damerau-levenshtein
+ * BSD 2-Clause License
+ * Copyright (c) 2018, Tadeusz Łazurski
+ * All rights reserved.
+ */
 (function() {
-    /**
-     * Levenshtein function courtesy of https://github.com/tad-lispy/node-damerau-levenshtein / https://www.npmjs.com/package/damerau-levenshtein
-     */
     function levenshtein(__this, that, limit) {
     
         var thisLength = __this.length,
@@ -53,9 +59,6 @@
     
         return prepare (matrix[thisLength][thatLength]);
     
-        /**
-         *
-         */
         function prepare(steps) {
             var length = Math.max(thisLength, thatLength)
             var relative = length === 0
