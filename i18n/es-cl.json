@@ -191,6 +191,10 @@
         "columns": {
             "_": "%d columnas seleccionadas",
             "1": "Una columna seleccionada"
+        },
+        "rows": {
+            "1": "Una fila seleccionada",
+            "_": "%d filas seleccionadas"
         }
     },
     "thousands": ".",
