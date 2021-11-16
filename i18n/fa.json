@@ -77,12 +77,15 @@
             },
             "string": {
                 "contains": "حاوی",
+                "notContains": "بدون",
                 "empty": "خالی",
                 "endsWith": "به پایان می رسد با",
+                "notEndsWith": "به پایان نمی رسد با",
                 "equals": "برابر",
                 "not": "نباشد",
                 "notEmpty": "خالی نباشد",
-                "startsWith": "شروع  شود با"
+                "startsWith": "شروع  شود با",
+                "notStartsWith": "شروع نشود با"
             },
             "array": {
                 "equals": "برابر",
@@ -165,3 +168,4 @@
         }
     }
 }
+
