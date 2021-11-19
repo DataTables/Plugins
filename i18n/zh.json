@@ -64,13 +64,14 @@
         "value": "值",
         "conditions": {
             "date": {
-                "after": "日期条件查询为after条件名称：大于",
-                "before": "日期条件查询为before条件名称：小于",
-                "between": "日期条件查询为between条件名称：介于2个日期之间",
-                "empty": "日期条件查询为empty条件名称：日期为空",
-                "equals": "日期条件查询为equals条件名称：等于",
                 "notBetween": "日期条件查询为notBetween条件名称：不介于2个日期之间",
-                "notEmpty": "日期条件查询为notEmpty条件名称：日期不为空"
+                "notEmpty": "日期条件查询为notEmpty条件名称：日期不为空",
+                "after": "大于",
+                "before": "小于",
+                "between": "之间",
+                "empty": "空",
+                "equals": "等于",
+                "not": "不等于"
             },
             "string": {
                 "contains": "文本包含",
@@ -112,5 +113,21 @@
     "decimal": "用于标记小数位的字符",
     "loadingRecords": "数据加载提示信息，例如：数据加载中...",
     "infoThousands": ",",
-    "thousands": ","
+    "thousands": ",",
+    "datetime": {
+        "months": {
+            "0": "一月",
+            "1": "二月",
+            "10": "十一月",
+            "11": "十二月",
+            "2": "三月",
+            "3": "四月",
+            "4": "五月",
+            "5": "六月",
+            "6": "七月",
+            "7": "八月",
+            "8": "九月",
+            "9": "十月"
+        }
+    }
 }
