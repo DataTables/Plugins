@@ -176,6 +176,11 @@
     $.fn.dataTable.ext.search.push(
         function( settings, data, dataIndex ) {
             var initial = settings.oInit.fuzzySearch;
+
+            if (! initial) {
+                return true;
+            }
+
             // If fuzzy searching has not been implemented then pass all rows for this function
             if (settings.aoData[dataIndex]._fuzzySearch !== undefined) {
                 // Read score to set the cell content and sort data
