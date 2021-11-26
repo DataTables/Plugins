@@ -90,6 +90,14 @@
                 "not": "Không phải",
                 "notEmpty": "Không rỗng",
                 "startsWith": "Bắt đầu với"
+            },
+            "array": {
+                "equals": "Bằng",
+                "empty": "Trống",
+                "contains": "Chứa",
+                "not": "Không",
+                "notEmpty": "Không được rỗng",
+                "without": "không chứa"
             }
         },
         "logicAnd": "Và",
@@ -129,5 +137,6 @@
         "previous": "Trước"
     },
     "search": "Tìm kiếm:",
-    "zeroRecords": "Không tìm thấy kết quả"
+    "zeroRecords": "Không tìm thấy kết quả",
+    "searchPlaceholder": "Tìm kiếm"
 }

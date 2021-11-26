@@ -7,7 +7,6 @@
     "lengthMenu": "_MENU_ காண்பி",
     "loadingRecords": "ஏற்றுகிறது ...",
     "processing": "செயலாக்க ...",
-    "search": "தேடல்:",
     "zeroRecords": "பொருத்தமான பதிவுகள் இல்லை",
     "paginate": {
         "first": "முதல்",
@@ -18,5 +17,6 @@
     "aria": {
         "sortAscending": ": நிரலை ஏறுவரிசையில் வரிசைப்படுத்த செயல்படுத்த",
         "sortDescending": ": நிரலை இறங்கு வரிசைப்படுத்த செயல்படுத்த"
-    }
+    },
+    "search": "தேடு"
 }
