@@ -38,7 +38,8 @@
         "colvisRestore": "Restaurar visibilitat",
         "copyKeys": "Pressiona ctrl o poma + C per copiar les dades de la tabla al teu portapaper",
         "csv": "CSV",
-        "excel": "Excel"
+        "excel": "Excel",
+        "renameState": "Cambiar nom"
     },
     "select": {
         "rows": {
@@ -57,7 +58,8 @@
     "autoFill": {
         "cancel": "Cancel·lar",
         "fillHorizontal": "Omple les cel·les horitzontalment",
-        "fillVertical": "Omple les cel·les verticalment"
+        "fillVertical": "Omple les cel·les verticalment",
+        "fill": "Omple totes les cel·les amb <i>%d<\/i>"
     },
     "thousands": ".",
     "datetime": {
@@ -70,7 +72,21 @@
             "pm"
         ],
         "previous": "Anterior",
-        "next": "Següent"
+        "next": "Següent",
+        "months": {
+            "11": "Desembre",
+            "10": "Novembre",
+            "9": "Octubre",
+            "7": "Agost",
+            "5": "Juny",
+            "4": "Maig",
+            "3": "Abril",
+            "2": "Març",
+            "1": "Febrer",
+            "0": "Gener",
+            "8": "Septembre",
+            "6": "Julio"
+        }
     },
     "editor": {
         "close": "Tancar",
@@ -137,7 +153,10 @@
                 "equals": "Iguals",
                 "not": "No",
                 "notEmpty": "No buit",
-                "startsWith": "Comença amb"
+                "startsWith": "Comença amb",
+                "notEnds": "No acaba amb",
+                "notStarts": "No comença amb",
+                "notContains": "No inclou"
             },
             "array": {
                 "equals": "Iguals",
@@ -154,7 +173,15 @@
         "logicAnd": "I",
         "logicOr": "O",
         "rightTitle": "Criteri d'indentació",
-        "value": "Valor"
+        "value": "Valor",
+        "title": {
+            "_": "Constructor de cerca (%d)",
+            "0": "Constructor de cerca"
+        },
+        "button": {
+            "_": "Constructor de cerca (%d)",
+            "0": "Constructor de cerca"
+        }
     },
     "searchPanes": {
         "clearMessage": "Eborrar tot",
@@ -166,6 +193,17 @@
         "countFiltered": "{monstrat} ({total})",
         "emptyPanes": "No panells de cerca",
         "loadMessage": "Carregant panells de cerca",
-        "title": "Filtes actius - %d"
+        "title": "Filtes actius - %d",
+        "collapseMessage": "Colapsar Tot",
+        "showMessage": "Mostrar tot"
+    },
+    "stateRestore": {
+        "renameLabel": "Nuevo nomm perpara %s",
+        "renameButton": "Cambiar nom",
+        "removeSubmit": "Eliminar",
+        "removeJoiner": "i",
+        "removeError": "Error eliminant el registre",
+        "removeConfirm": "¿Segur que vol eliminar aquest %s?",
+        "emptyError": "El nom no pot estar buit"
     }
 }

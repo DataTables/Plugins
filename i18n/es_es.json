@@ -26,7 +26,7 @@
         "copyKeys": "Presione ctrl o u2318 + C para copiar los datos de la tabla al portapapeles del sistema. <br \/> <br \/> Para cancelar, haga clic en este mensaje o presione escape.",
         "copySuccess": {
             "1": "Copiada 1 fila al portapapeles",
-            "_": "Copiadas %d fila al portapapeles"
+            "_": "Copiadas %ds fila al portapapeles"
         },
         "copyTitle": "Copiar al portapapeles",
         "csv": "CSV",
@@ -36,7 +36,9 @@
             "_": "Mostrar %d filas"
         },
         "pdf": "PDF",
-        "print": "Imprimir"
+        "print": "Imprimir",
+        "renameState": "Cambiar nombre",
+        "updateState": "Actualizar"
     },
     "autoFill": {
         "cancel": "Cancelar",
@@ -83,7 +85,10 @@
                 "equals": "Igual a",
                 "notEmpty": "No Vacio",
                 "startsWith": "Empieza con",
-                "not": "Diferente de"
+                "not": "Diferente de",
+                "notContains": "No Contiene",
+                "notStarts": "No empieza con",
+                "notEnds": "No termina con"
             },
             "array": {
                 "not": "Diferente de",
@@ -116,7 +121,9 @@
         "countFiltered": "{shown} ({total})",
         "emptyPanes": "Sin paneles de búsqueda",
         "loadMessage": "Cargando paneles de búsqueda",
-        "title": "Filtros Activos - %d"
+        "title": "Filtros Activos - %d",
+        "showMessage": "Mostrar Todo",
+        "collapseMessage": "Colapsar Todo"
     },
     "select": {
         "cells": {
@@ -199,5 +206,22 @@
             "noMulti": "Este registro puede ser editado individualmente, pero no como parte de un grupo."
         }
     },
-    "info": "Mostrando _START_ a _END_ de _TOTAL_ registros"
+    "info": "Mostrando _START_ a _END_ de _TOTAL_ registros",
+    "stateRestore": {
+        "creationModal": {
+            "button": "Crear",
+            "name": "Nombre:",
+            "order": "Clasificación",
+            "paging": "Paginación",
+            "search": "Busqueda",
+            "select": "Seleccionar"
+        },
+        "emptyError": "El nombre no puede estar vacio",
+        "removeConfirm": "¿Seguro que quiere eliminar este %s?",
+        "removeError": "Error al eliminar el registro",
+        "removeJoiner": "y",
+        "removeSubmit": "Eliminar",
+        "renameButton": "Cambiar Nombre",
+        "renameLabel": "Nuevo nombre para %s"
+    }
 }

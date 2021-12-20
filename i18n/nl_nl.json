@@ -115,7 +115,9 @@
         "countFiltered": "{shown} ({total})",
         "emptyPanes": "Geen zoekpanelen",
         "loadMessage": "Zoekpanelen laden...",
-        "title": "%d filters actief"
+        "title": "%d filters actief",
+        "showMessage": "Alles weergeven",
+        "collapseMessage": "Instorten"
     },
     "select": {
         "cells": {

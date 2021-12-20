@@ -122,7 +122,6 @@
         "sortAscending": "Aktivujte pro seřazení vzestupně",
         "sortDescending": "Aktivujte pro seřazení sestupně"
     },
-    "infoThousands": ",",
     "lengthMenu": "Zobrazit _MENU_ výsledků",
     "processing": "Zpracovávání...",
     "search": "Vyhledávání:",
@@ -150,5 +149,6 @@
             "button": "Změnit",
             "title": "Změnit záznam"
         }
-    }
+    },
+    "infoThousands": " "
 }

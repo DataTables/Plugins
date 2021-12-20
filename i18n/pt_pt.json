@@ -39,7 +39,14 @@
         },
         "pdf": "PDF",
         "print": "Imprimir",
-        "copyKeys": "Pressionar CTRL ou u2318 + C para copiar a informação para a área de transferência. Para cancelar, clique nesta mensagem ou pressione ESC."
+        "copyKeys": "Pressionar CTRL ou u2318 + C para copiar a informação para a área de transferência. Para cancelar, clique nesta mensagem ou pressione ESC.",
+        "createState": "Criar",
+        "removeAllStates": "Remover Todos",
+        "removeState": "Remover",
+        "renameState": "Renomear",
+        "savedStates": "Gravados",
+        "stateRestore": "Estado %d",
+        "updateState": "Atualizar"
     },
     "decimal": ",",
     "infoFiltered": "(filtrado num total de _MAX_ registos)",
@@ -82,7 +89,10 @@
                 "equals": "Igual",
                 "not": "Diferente",
                 "notEmpty": "Não está vazio",
-                "startsWith": "Começa em"
+                "startsWith": "Começa em",
+                "notContains": "Não contém",
+                "notStarts": "Não começa com",
+                "notEnds": "Não termina com"
             },
             "array": {
                 "equals": "Igual",
@@ -90,7 +100,7 @@
                 "contains": "Contém",
                 "not": "Diferente",
                 "notEmpty": "Não está vazio",
-                "without": "Não contém"
+                "without": "Sem"
             }
         },
         "data": "Dados",
@@ -115,7 +125,9 @@
         "countFiltered": "{shown} ({total})",
         "emptyPanes": "Sem painéis de pesquisa",
         "loadMessage": "A carregar painéis de pesquisa",
-        "title": "Filtros ativos"
+        "title": "Filtros ativos",
+        "showMessage": "Mostrar todos",
+        "collapseMessage": "Ocultar Todos"
     },
     "select": {
         "cells": {

@@ -159,6 +159,9 @@
         "deleteTitle": "Slet filtrerings regel",
         "logicAnd": "Og",
         "logicOr": "Eller",
-        "value": "Værdi"
+        "value": "Værdi",
+        "title": {
+            "_": "Brugerdefineret filtrering"
+        }
     }
 }

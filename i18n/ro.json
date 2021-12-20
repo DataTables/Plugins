@@ -17,7 +17,10 @@
         "sortDescending": "Sortează descendent"
     },
     "autoFill": {
-        "cancel": "Anulează"
+        "cancel": "Anulează",
+        "fill": "Completează",
+        "fillHorizontal": "Completeză celule orizonatl",
+        "fillVertical": "Completează celule vertical"
     },
     "buttons": {
         "csv": "CSV",
@@ -31,7 +34,8 @@
         "collection": "Colecție",
         "colvis": "Vizibilitate coloane",
         "copy": "Copie",
-        "copyTitle": "Copie în Clipboard"
+        "copyTitle": "Copie în Clipboard",
+        "colvisRestore": "Resetare vizibilitate"
     },
     "searchBuilder": {
         "add": "Adaugă",
@@ -44,11 +48,22 @@
     "editor": {
         "close": "inchide",
         "create": {
-            "button": "Nou"
+            "button": "Nou",
+            "title": "Crează o intrare nouă",
+            "submit": "Crează"
         },
         "edit": {
             "button": "Editează",
-            "submit": "Editează"
+            "submit": "Editează",
+            "title": "Editează rând"
+        },
+        "remove": {
+            "button": "Șterge",
+            "title": "Șterge",
+            "submit": "Șterge"
+        },
+        "error": {
+            "system": "O eroare a apărut."
         }
     },
     "loadingRecords": "Încarcă...",
@@ -63,5 +78,9 @@
             "AM",
             "PM"
         ]
-    }
+    },
+    "decimal": ",",
+    "emptyTable": "Nu există date în tabel",
+    "searchPlaceholder": "Caută în tabel",
+    "thousands": "."
 }

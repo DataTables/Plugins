@@ -50,7 +50,14 @@
             "_": "Mostrar %d registros"
         },
         "pdf": "PDF",
-        "print": "Imprimir"
+        "print": "Imprimir",
+        "createState": "Criar estado",
+        "removeAllStates": "Remover todos os estados",
+        "removeState": "Remover",
+        "renameState": "Renomear",
+        "savedStates": "Estados salvos",
+        "stateRestore": "Estado %d",
+        "updateState": "Atualizar"
     },
     "autoFill": {
         "cancel": "Cancelar",
@@ -97,7 +104,10 @@
                 "equals": "Igual",
                 "not": "Não",
                 "notEmpty": "Não Vazio",
-                "startsWith": "Começa Com"
+                "startsWith": "Começa Com",
+                "notContains": "Não contém",
+                "notStarts": "Não começa com",
+                "notEnds": "Não termina com"
             },
             "array": {
                 "contains": "Contém",
@@ -130,7 +140,9 @@
         "countFiltered": "{shown} ({total})",
         "emptyPanes": "Nenhum Painel de Pesquisa",
         "loadMessage": "Carregando Painéis de Pesquisa...",
-        "title": "Filtros Ativos"
+        "title": "Filtros Ativos",
+        "showMessage": "Mostrar todos",
+        "collapseMessage": "Fechar todos"
     },
     "thousands": ".",
     "datetime": {
@@ -199,5 +211,34 @@
             "title": "Remover registro"
         }
     },
-    "decimal": ","
+    "decimal": ",",
+    "stateRestore": {
+        "creationModal": {
+            "button": "Criar",
+            "columns": {
+                "search": "Busca de colunas",
+                "visible": "Visibilidade da coluna"
+            },
+            "name": "Nome:",
+            "order": "Ordernar",
+            "paging": "Paginação",
+            "scroller": "Posição da barra de rolagem",
+            "search": "Busca",
+            "searchBuilder": "Mecanismo de busca",
+            "select": "Selecionar",
+            "title": "Criar novo estado",
+            "toggleLabel": "Inclui:"
+        },
+        "duplicateError": "Já existe um estado com esse nome",
+        "emptyError": "Não pode ser vazio",
+        "emptyStates": "Nenhum estado salvo",
+        "removeConfirm": "Confirma remover %s?",
+        "removeError": "Falha ao remover estado",
+        "removeJoiner": "e",
+        "removeSubmit": "Remover",
+        "removeTitle": "Remover estado",
+        "renameButton": "Renomear",
+        "renameLabel": "Novo nome para %s:",
+        "renameTitle": "Renomear estado"
+    }
 }

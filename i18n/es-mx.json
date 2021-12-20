@@ -27,7 +27,14 @@
             "_": "Mostrar %d filas"
         },
         "pdf": "PDF",
-        "print": "Imprimir"
+        "print": "Imprimir",
+        "createState": "Crear Estado",
+        "removeAllStates": "Borrar Todos los Estados",
+        "removeState": "Borrar Estado",
+        "renameState": "Renombrar Estado",
+        "savedStates": "Guardar Estado",
+        "stateRestore": "Restaurar Estado",
+        "updateState": "Actualizar Estado"
     },
     "infoThousands": ",",
     "loadingRecords": "Cargando...",
@@ -87,7 +94,10 @@
                 "equals": "Igual a",
                 "not": "Diferente de",
                 "startsWith": "Inicia con",
-                "notEmpty": "No vacío"
+                "notEmpty": "No vacío",
+                "notContains": "No Contiene",
+                "notEnds": "No Termina",
+                "notStarts": "No Comienza"
             },
             "array": {
                 "equals": "Igual a",
@@ -110,7 +120,9 @@
         "emptyPanes": "Sin paneles de búsqueda",
         "loadMessage": "Cargando paneles de búsqueda",
         "title": "Filtros Activos - %d",
-        "countFiltered": "{shown} ({total})"
+        "countFiltered": "{shown} ({total})",
+        "collapseMessage": "Colapsar",
+        "showMessage": "Mostrar Todo"
     },
     "select": {
         "cells": {
@@ -195,5 +207,11 @@
     "info": "Mostrando _START_ a _END_ de _TOTAL_ entradas",
     "infoEmpty": "Mostrando 0 a 0 de 0 entradas",
     "infoFiltered": "(Filtrado de _MAX_ total de entradas)",
-    "lengthMenu": "Mostrar _MENU_ entradas"
+    "lengthMenu": "Mostrar _MENU_ entradas",
+    "stateRestore": {
+        "removeTitle": "Eliminar",
+        "creationModal": {
+            "search": "Busccar"
+        }
+    }
 }

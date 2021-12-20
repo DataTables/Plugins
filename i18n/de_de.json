@@ -95,7 +95,10 @@
                 "equals": "Entspricht",
                 "not": "Nicht",
                 "notEmpty": "Nicht leer",
-                "startsWith": "Startet mit"
+                "startsWith": "Startet mit",
+                "notContains": "enthält nicht",
+                "notStarts": "startet nicht mit",
+                "notEnds": "endet nicht mit"
             },
             "array": {
                 "equals": "ist gleich",
@@ -129,7 +132,9 @@
         "emptyPanes": "Keine Suchmasken",
         "loadMessage": "Lade Suchmasken..",
         "title": "Aktive Filter: %d",
-        "count": "Anzahl"
+        "count": "Anzahl",
+        "showMessage": "zeige Alle",
+        "collapseMessage": "Alle ausklappen"
     },
     "thousands": ".",
     "zeroRecords": "Keine passenden Einträge gefunden",
