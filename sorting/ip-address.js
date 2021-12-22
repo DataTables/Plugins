@@ -25,7 +25,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 		var x, xa;
 
 		if (!a) {
-			return 0
+			return '000000000000';
 		}
 
 		a = a.replace(/<[\s\S]*?>/g, "");
