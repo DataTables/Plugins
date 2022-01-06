@@ -1,22 +1,104 @@
 {
-    "emptyTable": "Нема података у табели",
-    "info": "Приказ _START_ до _END_ од укупно _TOTAL_ записа",
-    "infoEmpty": "Приказ 0 до 0 од укупно 0 записа",
-    "infoFiltered": "(филтрирано од укупно _MAX_ записа)",
     "infoThousands": ".",
-    "lengthMenu": "Прикажи _MENU_ записа",
     "loadingRecords": "Учитавање...",
     "processing": "Обрада...",
-    "search": "Претрага:",
-    "zeroRecords": "Нису пронађени одговарајући записи",
-    "paginate": {
-        "first": "Почетна",
-        "last": "Последња",
-        "next": "Следећа",
-        "previous": "Претходна"
-    },
     "aria": {
         "sortAscending": ": активирајте да сортирате колону узлазно",
         "sortDescending": ": активирајте да сортирате колону силазно"
-    }
+    },
+    "buttons": {
+        "copyTitle": "Kopirano u klipboard",
+        "colvis": "Видљивост колона",
+        "colvisRestore": "Поврати видљивост",
+        "copy": "Копирај",
+        "copyKeys": "Притисните &lt;i&gt;ctrl&lt;\/i&gt; или &lt;i&gt;u2318&lt;\/i&gt; + &lt;i&gt;C&lt;\/i&gt; да копирате податке из табеле&lt;br&gt;на ваш клипборд.&lt;br&gt;&lt;br&gt;Да откажете, кликните на ову поруку или стисните тастер \"escape\".",
+        "copySuccess": {
+            "_": "Копирано %ds ред(ова) у клипборд",
+            "1": "Копиран 1 ред у клипборд"
+        },
+        "pageLength": {
+            "_": "Прикажи %d редова",
+            "-1": "Прикажи све редове"
+        },
+        "removeState": "Уклони",
+        "print": "Штампај",
+        "renameState": "Преименуј",
+        "savedStates": "Сачувана стања",
+        "updateState": "Ажурирај"
+    },
+    "paginate": {
+        "first": "Prva",
+        "last": "Poslednja",
+        "next": "Sledeća",
+        "previous": "Prethodna"
+    },
+    "searchPanes": {
+        "clearMessage": "Ukloni Filtere",
+        "collapseMessage": "Zatvori sve",
+        "emptyPanes": "Nije pronađen nijedan zapis",
+        "loadMessage": "Učitavanje zapisa",
+        "showMessage": "Prikaži sve",
+        "title": "Aktivni Filteri - %d"
+    },
+    "autoFill": {
+        "cancel": "Откажи",
+        "fill": "Попуни све  <i>%d<\/i>",
+        "fillHorizontal": "Попуни ћелије хоризонтално",
+        "fillVertical": "Попуни ћелије вертикално"
+    },
+    "datetime": {
+        "hours": "Сат",
+        "minutes": "Минут",
+        "months": {
+            "0": "Јануар",
+            "1": "Фебруар",
+            "10": "Новембар",
+            "11": "Децембар",
+            "2": "Март",
+            "3": "Април",
+            "4": "Мај",
+            "5": "Јун",
+            "6": "Јул",
+            "7": "Август",
+            "8": "Септембар",
+            "9": "Октобар"
+        },
+        "next": "Следећи",
+        "previous": "Претходни",
+        "seconds": "Секунда",
+        "unknown": "-",
+        "weekdays": [
+            "Нед",
+            "Пон",
+            "Уто",
+            "Сре",
+            "Чет",
+            "Пет",
+            "Суб"
+        ]
+    },
+    "editor": {
+        "close": "Затвори",
+        "create": {
+            "button": "Ново",
+            "submit": "Направи",
+            "title": "Направите нови унос"
+        },
+        "edit": {
+            "button": "Измени",
+            "submit": "Измени",
+            "title": "Измени унос"
+        },
+        "remove": {
+            "button": "Обриши"
+        }
+    },
+    "emptyTable": "Нема података у табели.",
+    "info": "Приказано _START_ до _END_ од _TOTAL_ уноса",
+    "infoEmpty": "Приказано 0 до 0 од 0 уноса",
+    "infoFiltered": "филтрирано од укупно _MAX_ уноса",
+    "lengthMenu": "Прикажи _MENU_ уноса",
+    "search": "Претрага:",
+    "thousands": ",",
+    "zeroRecords": "Није пронађен ниједан одговарајући запис"
 }

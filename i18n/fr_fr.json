@@ -103,7 +103,9 @@
         },
         "countFiltered": "{shown} ({total})",
         "emptyPanes": "Pas de volet de recherche",
-        "loadMessage": "Chargement du volet de recherche..."
+        "loadMessage": "Chargement du volet de recherche...",
+        "collapseMessage": "Réduire tout",
+        "showMessage": "Montrer tout"
     },
     "buttons": {
         "collection": "Collection",
