@@ -8,6 +8,7 @@
  *  @author Dominique Fournier
  *  @author Brad Wasson
  *  @author Peter Vilhan
+ *  @author Kevin Gilkey-Graham
  *
  *  @example
  *    $('#example').dataTable( {
@@ -21,11 +22,11 @@
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 	"ip-address-pre": function ( a ) {
 		var i, item;
-		var m, n, t;
+		var m, n, t, p;
 		var x, xa;
 
 		if (!a) {
-			return 0
+			return '000000000000';
 		}
 
 		a = a.replace(/<[\s\S]*?>/g, "");
@@ -33,6 +34,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
                 t = a.split(":");
                 if (t.length == 2){
                         m = t[0].split(".");
+			p = t[1];
                 }
                 else {
                         m = a.split(".");
@@ -45,16 +47,10 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 			// IPV4
 			for(i = 0; i < m.length; i++) {
 				item = m[i];
-
-				if(item.length == 1) {
-					x += "00" + item;
-				}
-				else if(item.length == 2) {
-					x += "0" + item;
-				}
-				else {
-					x += item;
-				}
+				x += "000".substr(item.length) + item;
+			}
+			if (p) {
+				x += ":" + "00000".substr(p.length) + p;
 			}
 		}
 		else if (n.length > 0) {
@@ -70,20 +66,8 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
 				if(item.length === 0) {
 					count += 0;
 				}
-				else if(item.length == 1) {
-					xa += "000" + item;
-					count += 4;
-				}
-				else if(item.length == 2) {
-					xa += "00" + item;
-					count += 4;
-				}
-				else if(item.length == 3) {
-					xa += "0" + item;
-					count += 4;
-				}
 				else {
-					xa += item;
+					xa += "0000".substr(item.length) + item;
 					count += 4;
 				}
 			}
