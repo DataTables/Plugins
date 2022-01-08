@@ -107,10 +107,6 @@ ScrollResize.prototype = {
 			maxHeight: availableHeight,
 			height: availableHeight
 		} );
-
-		if ( dt.fixedColumns ) {
-			dt.fixedColumns().relayout();
-		}
 	},
 
 	_attach: function () {
