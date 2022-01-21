@@ -74,7 +74,8 @@
             "বৃহস্পতিবার",
             "শুক্রবার",
             "শনিবার"
-        ]
+        ],
+        "unknown": "অজানা"
     },
     "editor": {
         "create": {
@@ -102,7 +103,8 @@
             },
             "button": "মুছে ফেলা",
             "submit": "মুছে ফেলা"
-        }
+        },
+        "close": "বন্ধ করুন"
     },
     "stateRestore": {
         "creationModal": {
@@ -126,6 +128,16 @@
         "removeConfirm": "আপনি নিশ্চিত ভাবে সরাতে চান হয় %s?",
         "removeError": "স্টেট সরাতে ব্যর্থ হয়েছে৷",
         "removeJoiner": "এবং",
-        "removeSubmit": "অপসারণ"
+        "removeSubmit": "অপসারণ",
+        "renameButton": "নাম পরিবর্তন করুন",
+        "renameLabel": "নতুন নাম এর জন্য %s:",
+        "renameTitle": "রাজ্যের নাম পরিবর্তন করুন"
+    },
+    "thousands": ",",
+    "emptyTable": "খালি টেবিল",
+    "searchBuilder": {
+        "clearAll": "সব মুছে ফেলুন",
+        "condition": "অবস্থা",
+        "data": "ডাটা"
     }
 }

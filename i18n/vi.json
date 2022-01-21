@@ -1,6 +1,5 @@
 {
     "processing": "Đang xử lý...",
-    "infoFiltered": "(được lọc từ _MAX_ mục)",
     "aria": {
         "sortAscending": ": Sắp xếp thứ tự tăng dần",
         "sortDescending": ": Sắp xếp thứ tự giảm dần"
@@ -22,14 +21,21 @@
             "_": "Đã sao chép %d dòng vào clipboard"
         },
         "copyTitle": "Sao chép vào clipboard",
-        "csv": "File CSV",
-        "excel": "File Excel",
         "pageLength": {
             "-1": "Xem tất cả các dòng",
             "_": "Hiển thị %d dòng"
         },
-        "pdf": "File PDF",
-        "print": "In ấn"
+        "print": "In ấn",
+        "createState": "Tạo trạng thái",
+        "csv": "CSV",
+        "excel": "Excel",
+        "pdf": "PDF",
+        "removeAllStates": "Xóa hết trạng thái",
+        "removeState": "Xóa",
+        "renameState": "Đổi tên",
+        "savedStates": "Trạng thái đã lưu",
+        "stateRestore": "Trạng thái %d",
+        "updateState": "Cập nhật"
     },
     "infoThousands": "`",
     "select": {
@@ -89,7 +95,10 @@
                 "equals": "Bằng",
                 "not": "Không phải",
                 "notEmpty": "Không rỗng",
-                "startsWith": "Bắt đầu với"
+                "startsWith": "Bắt đầu với",
+                "notContains": "Không chứa",
+                "notEnds": "Không kết thúc với",
+                "notStarts": "Không bắt đầu với"
             },
             "array": {
                 "equals": "Bằng",
@@ -104,7 +113,9 @@
         "logicOr": "Hoặc",
         "add": "Thêm điều kiện",
         "data": "Dữ liệu",
-        "deleteTitle": "Xóa quy tắc lọc"
+        "deleteTitle": "Xóa quy tắc lọc",
+        "leftTitle": "Giảm thụt lề",
+        "rightTitle": "Tăng thụt lề"
     },
     "searchPanes": {
         "countFiltered": "{shown} ({total})",
@@ -116,14 +127,24 @@
             "_": "Phần tìm kiếm (%d)"
         },
         "title": "Bộ lọc đang hoạt động - %d",
-        "count": "{total}"
+        "count": "{total}",
+        "collapseMessage": "Thu gọn tất cả",
+        "showMessage": "Hiện tất cả"
     },
     "datetime": {
         "hours": "Giờ",
         "minutes": "Phút",
         "next": "Sau",
         "previous": "Trước",
-        "seconds": "Giây"
+        "seconds": "Giây",
+        "amPm": [
+            "am",
+            "pm"
+        ],
+        "unknown": "-",
+        "weekdays": [
+            "Chủ nhật"
+        ]
     },
     "emptyTable": "Không có dữ liệu",
     "info": "Hiển thị _START_ tới _END_ của _TOTAL_ dữ liệu",
@@ -138,5 +159,67 @@
     },
     "search": "Tìm kiếm:",
     "zeroRecords": "Không tìm thấy kết quả",
-    "searchPlaceholder": "Tìm kiếm"
+    "decimal": ",",
+    "editor": {
+        "close": "Đóng",
+        "create": {
+            "button": "Thêm",
+            "submit": "Thêm",
+            "title": "Thêm mục mới"
+        },
+        "edit": {
+            "button": "Sửa",
+            "submit": "Cập nhật",
+            "title": "Sửa mục"
+        },
+        "error": {
+            "system": "Đã xảy ra lỗi hệ thống (&lt;a target=\"\\\" rel=\"nofollow\" href=\"\\\"&gt;Thêm thông tin&lt;\/a&gt;)."
+        },
+        "multi": {
+            "info": "Các mục đã chọn chứa các giá trị khác nhau cho đầu vào này. Để chỉnh sửa và đặt tất cả các mục cho đầu vào này thành cùng một giá trị, hãy nhấp hoặc nhấn vào đây, nếu không chúng sẽ giữ lại các giá trị riêng lẻ của chúng.",
+            "noMulti": "Đầu vào này có thể được chỉnh sửa riêng lẻ, nhưng không phải là một phần của một nhóm.",
+            "restore": "Hoàn tác thay đổi",
+            "title": "Nhiều giá trị"
+        },
+        "remove": {
+            "button": "Xóa",
+            "confirm": {
+                "_": "Bạn có chắc chắn muốn xóa %d hàng không?",
+                "1": "Bạn có chắc chắn muốn xóa 1 hàng không?"
+            },
+            "submit": "Xóa",
+            "title": "Xóa"
+        }
+    },
+    "infoFiltered": "(được lọc từ _MAX_ dữ liệu)",
+    "searchPlaceholder": "Nhập tìm kiếm...",
+    "stateRestore": {
+        "creationModal": {
+            "button": "Thêm",
+            "columns": {
+                "search": "Tìm kiếm cột",
+                "visible": "Khả năng hiển thị cột"
+            },
+            "name": "Tên:",
+            "order": "Sắp xếp",
+            "paging": "Phân trang",
+            "scroller": "Cuộn vị trí",
+            "search": "Tìm kiếm",
+            "searchBuilder": "Trình tạo tìm kiếm",
+            "select": "Chọn",
+            "title": "Thêm trạng thái",
+            "toggleLabel": "Bao gồm:"
+        },
+        "duplicateError": "Trạng thái có tên này đã tồn tại.",
+        "emptyError": "Tên không được để trống.",
+        "emptyStates": "Không có trạng thái đã lưu",
+        "removeConfirm": "Bạn có chắc chắn muốn xóa %s không?",
+        "removeError": "Không xóa được trạng thái.",
+        "removeJoiner": "và",
+        "removeSubmit": "Xóa",
+        "removeTitle": "Xóa trạng thái",
+        "renameButton": "Đổi tên",
+        "renameLabel": "Tên mới cho %s:",
+        "renameTitle": "Đổi tên trạng thái"
+    }
 }
