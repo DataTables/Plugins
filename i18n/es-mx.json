@@ -127,7 +127,7 @@
     "select": {
         "cells": {
             "1": "1 celda seleccionada",
-            "_": "$d celdas seleccionadas"
+            "_": "%d celdas seleccionadas"
         },
         "columns": {
             "1": "1 columna seleccionada",
