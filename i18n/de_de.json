@@ -134,7 +134,7 @@
         "title": "Aktive Filter: %d",
         "count": "Anzahl",
         "showMessage": "zeige Alle",
-        "collapseMessage": "Alle ausklappen"
+        "collapseMessage": "Alle einklappen"
     },
     "thousands": ".",
     "zeroRecords": "Keine passenden Einträge gefunden",

@@ -41,7 +41,10 @@
                 "endsWith": "Заканчивается на",
                 "equals": "Равно",
                 "not": "Не",
-                "notEmpty": "Не пусто"
+                "notEmpty": "Не пусто",
+                "notContains": "Не содержит",
+                "notStarts": "Не начинается на",
+                "notEnds": "Не заканчивается на"
             },
             "date": {
                 "after": "После",
@@ -103,7 +106,9 @@
         "countFiltered": "{shown} ({total})",
         "emptyPanes": "Нет панелей поиска",
         "loadMessage": "Загрузка панелей поиска",
-        "title": "Фильтры активны - %d"
+        "title": "Фильтры активны - %d",
+        "showMessage": "Показать все",
+        "collapseMessage": "Скрыть все"
     },
     "thousands": ",",
     "buttons": {

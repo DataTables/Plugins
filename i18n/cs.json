@@ -79,10 +79,6 @@
     "buttons": {
         "collection": "Kolekce <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
         "copy": "Kopírovat",
-        "copySuccess": {
-            "1": "Skopírován 1 řádek do schránky",
-            "_": "SKopírováno %d řádků do schránky"
-        },
         "copyTitle": "Kopírovat do schránky",
         "csv": "CSV",
         "excel": "Excel",
@@ -94,7 +90,11 @@
         "print": "Tisknout",
         "colvis": "Viditelnost sloupců",
         "colvisRestore": "Resetovat sloupce",
-        "copyKeys": "Zmáčkněte ctrl or u2318 + C pro zkopírování dat.  Pro zrušení klikněte na tuto zprávu nebo zmáčkněte esc.."
+        "copyKeys": "Zmáčkněte ctrl or u2318 + C pro zkopírování dat.  Pro zrušení klikněte na tuto zprávu nebo zmáčkněte esc..",
+        "copySuccess": {
+            "1": "Zkopírován 1 řádek do schránky",
+            "_": "Zkopírováno %d řádků do schránky"
+        }
     },
     "searchPanes": {
         "clearMessage": "Smazat vše",
@@ -125,7 +125,6 @@
     "lengthMenu": "Zobrazit _MENU_ výsledků",
     "processing": "Zpracovávání...",
     "search": "Vyhledávání:",
-    "thousands": ",",
     "datetime": {
         "previous": "Předchozí",
         "next": "Další",
@@ -136,6 +135,29 @@
         "amPm": [
             "Dopoledne",
             "Odpoledne"
+        ],
+        "weekdays": [
+            "Po",
+            "Út",
+            "St",
+            "Čt",
+            "Pá",
+            "So",
+            "Ne"
+        ],
+        "months": [
+            "Leden",
+            "Únor",
+            "Březen",
+            "Duben",
+            "Květen",
+            "Červen",
+            "Červenec",
+            "Srpen",
+            "Září",
+            "Říjen",
+            "Listopad",
+            "Prosinec"
         ]
     },
     "editor": {
@@ -150,5 +172,7 @@
             "title": "Změnit záznam"
         }
     },
-    "infoThousands": " "
+    "infoThousands": " ",
+    "decimal": ",",
+    "thousands": " "
 }

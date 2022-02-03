@@ -114,7 +114,9 @@
         "count": "عدد",
         "countFiltered": "عدد المفلتر",
         "loadMessage": "جارِ التحميل ...",
-        "title": "الفلاتر النشطة"
+        "title": "الفلاتر النشطة",
+        "showMessage": "إظهار الجميع",
+        "collapseMessage": "إخفاء الجميع"
     },
     "infoThousands": ",",
     "datetime": {
@@ -184,5 +186,14 @@
     "processing": "جارٍ المعالجة...",
     "emptyTable": "لا يوجد بيانات متاحة في الجدول",
     "infoEmpty": "يعرض 0 إلى 0 من أصل 0 مُدخل",
-    "thousands": "."
+    "thousands": ".",
+    "stateRestore": {
+        "creationModal": {
+            "columns": {
+                "search": "إمكانية البحث للعمود",
+                "visible": "إظهار العمود"
+            },
+            "toggleLabel": "تتضمن"
+        }
+    }
 }
