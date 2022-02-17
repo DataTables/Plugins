@@ -40,7 +40,13 @@
         "pdf": "PDF",
         "print": "Print",
         "copyKeys": "Klik ctrl of u2318 + C om de tabeldata to kopiëren naar je klembord. Om te annuleren klik hier of klik op escape.",
-        "collection": "Verzameling"
+        "collection": "Verzameling",
+        "createState": "Maak staat",
+        "removeAllStates": "Verwijder alle",
+        "removeState": "Verwijder",
+        "renameState": "Hernoem",
+        "savedStates": "Opgeslagen",
+        "updateState": "Bijwerken"
     },
     "processing": "Verwerken...",
     "decimal": ",",
@@ -81,7 +87,10 @@
                 "equals": "Gelijk aan",
                 "not": "Niet",
                 "notEmpty": "Niet leeg",
-                "startsWith": "Start met"
+                "startsWith": "Start met",
+                "notContains": "Zonder",
+                "notEnds": "Eindigt niet met",
+                "notStarts": "Begint niet met"
             },
             "array": {
                 "equals": "Gelijk aan",
@@ -201,5 +210,34 @@
             "restore": "Wijzigingen ongedaan maken",
             "noMulti": "Deze invoer kan individueel gewijzigd worden, maar niet als deel van een groep."
         }
+    },
+    "stateRestore": {
+        "creationModal": {
+            "button": "Aanmaken",
+            "columns": {
+                "search": "Zoeken in kolom",
+                "visible": "Kolom tonen"
+            },
+            "name": "Naam",
+            "order": "Sorteervolgorde",
+            "paging": "Paginering",
+            "scroller": "Meescrollen",
+            "search": "Zoeken",
+            "searchBuilder": "SearchBuilder",
+            "select": "Selecteer",
+            "title": "Nieuwe staat aanmaken",
+            "toggleLabel": "Bevat"
+        },
+        "duplicateError": "Staat bestaat al",
+        "emptyError": "Naam kan niet leeg zijn",
+        "emptyStates": "Geen beschikbare staten",
+        "removeConfirm": "Weet u zeker dat u deze wil verwijderen:",
+        "removeError": "De verwijdering is mislukt",
+        "removeJoiner": "en",
+        "removeSubmit": "Verwijder",
+        "removeTitle": "Verwijder staat",
+        "renameButton": "Hernoem",
+        "renameLabel": "Nieuwe naam voor staat",
+        "renameTitle": "Hernoem staat"
     }
 }

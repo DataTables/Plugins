@@ -38,7 +38,12 @@
         "pdf": "PDF",
         "print": "Imprimir",
         "renameState": "Cambiar nombre",
-        "updateState": "Actualizar"
+        "updateState": "Actualizar",
+        "createState": "Crear Estado",
+        "removeAllStates": "Remover Estados",
+        "removeState": "Remover",
+        "savedStates": "Estados Guardados",
+        "stateRestore": "Estado %d"
     },
     "autoFill": {
         "cancel": "Cancelar",
@@ -214,7 +219,13 @@
             "order": "Clasificación",
             "paging": "Paginación",
             "search": "Busqueda",
-            "select": "Seleccionar"
+            "select": "Seleccionar",
+            "columns": {
+                "search": "Búsqueda de Columna",
+                "visible": "Visibilidad de Columna"
+            },
+            "title": "Crear Nuevo Estado",
+            "toggleLabel": "Incluir:"
         },
         "emptyError": "El nombre no puede estar vacio",
         "removeConfirm": "¿Seguro que quiere eliminar este %s?",
@@ -222,6 +233,10 @@
         "removeJoiner": "y",
         "removeSubmit": "Eliminar",
         "renameButton": "Cambiar Nombre",
-        "renameLabel": "Nuevo nombre para %s"
+        "renameLabel": "Nuevo nombre para %s",
+        "duplicateError": "Ya existe un Estado con este nombre.",
+        "emptyStates": "No hay Estados guardados",
+        "removeTitle": "Remover Estado",
+        "renameTitle": "Cambiar Nombre Estado"
     }
 }

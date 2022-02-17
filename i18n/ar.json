@@ -49,12 +49,6 @@
             "_": "تم نسخ %ds أسطر الى الحافظة"
         }
     },
-    "autoFill": {
-        "cancel": "إلغاء",
-        "fill": "املأ جميع الحقول بـ <i>%d&lt;\\\/i&gt;<\/i>",
-        "fillHorizontal": "تعبئة الحقول أفقيًا",
-        "fillVertical": "تعبئة الحقول عموديا"
-    },
     "searchBuilder": {
         "add": "اضافة شرط",
         "clearAll": "ازالة الكل",
@@ -195,5 +189,12 @@
             },
             "toggleLabel": "تتضمن"
         }
-    }
+    },
+    "autoFill": {
+        "cancel": "إلغاء الامر",
+        "fill": "املأ كل الخلايا بـ <i>%d<\/i>",
+        "fillHorizontal": "تعبئة الخلايا أفقيًا",
+        "fillVertical": "تعبئة الخلايا عموديا"
+    },
+    "decimal": ","
 }

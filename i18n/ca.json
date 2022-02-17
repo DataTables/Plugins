@@ -86,7 +86,16 @@
             "0": "Gener",
             "8": "Septembre",
             "6": "Julio"
-        }
+        },
+        "weekdays": [
+            "Dg",
+            "Dil",
+            "Dt",
+            "Dc",
+            "Dj",
+            "Dv",
+            "Ds"
+        ]
     },
     "editor": {
         "close": "Tancar",
@@ -198,12 +207,22 @@
         "showMessage": "Mostrar tot"
     },
     "stateRestore": {
-        "renameLabel": "Nuevo nomm perpara %s",
         "renameButton": "Cambiar nom",
         "removeSubmit": "Eliminar",
         "removeJoiner": "i",
         "removeError": "Error eliminant el registre",
         "removeConfirm": "¿Segur que vol eliminar aquest %s?",
-        "emptyError": "El nom no pot estar buit"
+        "emptyError": "El nom no pot estar buit",
+        "creationModal": {
+            "button": "Crear",
+            "columns": {
+                "search": "Cerca per columnes",
+                "visible": "Visibilitat de columnes"
+            },
+            "name": "Nom",
+            "order": "Ordenar",
+            "toggleLabel": "Inclou:"
+        },
+        "renameLabel": "Nou nom per %s"
     }
 }

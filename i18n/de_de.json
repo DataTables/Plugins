@@ -132,9 +132,9 @@
         "emptyPanes": "Keine Suchmasken",
         "loadMessage": "Lade Suchmasken..",
         "title": "Aktive Filter: %d",
-        "count": "Anzahl",
         "showMessage": "zeige Alle",
-        "collapseMessage": "Alle einklappen"
+        "collapseMessage": "Alle einklappen",
+        "count": "{total}"
     },
     "thousands": ".",
     "zeroRecords": "Keine passenden Einträge gefunden",

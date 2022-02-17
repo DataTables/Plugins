@@ -57,7 +57,14 @@
         "pdf": "PDF",
         "print": "Yazdır",
         "copy": "Kopyala",
-        "copyKeys": "Tablodaki veriyi kopyalamak için CTRL veya u2318 + C tuşlarına basınız. İptal etmek için bu mesaja tıklayın veya escape tuşuna basın."
+        "copyKeys": "Tablodaki veriyi kopyalamak için CTRL veya u2318 + C tuşlarına basınız. İptal etmek için bu mesaja tıklayın veya escape tuşuna basın.",
+        "createState": "Şuanki Görünümü Kaydet",
+        "removeAllStates": "Tüm Görünümleri Sil",
+        "removeState": "Aktif Görünümü Sil",
+        "renameState": "Aktif Görünümün Adını Değiştir",
+        "savedStates": "Kaydedilmiş Görünümler",
+        "stateRestore": "Görünüm -&gt; %d",
+        "updateState": "Aktif Görünümün Güncelle"
     },
     "searchBuilder": {
         "add": "Koşul Ekle",
@@ -96,7 +103,10 @@
                 "equals": "Eşittir",
                 "not": "Değildir",
                 "notEmpty": "Dolu",
-                "startsWith": "İle başlar"
+                "startsWith": "İle başlar",
+                "notContains": "İçermeyen",
+                "notStarts": "Başlamayan",
+                "notEnds": "Bitmeyen"
             },
             "array": {
                 "contains": "İçerir",
@@ -130,7 +140,9 @@
         "countFiltered": "{shown}\/{total}",
         "emptyPanes": "Arama Bölmesi yok",
         "loadMessage": "Arama Bölmeleri yükleniyor ...",
-        "title": "Etkin filtreler - %d"
+        "title": "Etkin filtreler - %d",
+        "showMessage": "Tümünü Göster",
+        "collapseMessage": "Tümünü Gizle"
     },
     "thousands": ".",
     "datetime": {
@@ -199,5 +211,34 @@
             "submit": "Sil",
             "title": "Kayıtları sil"
         }
+    },
+    "stateRestore": {
+        "creationModal": {
+            "button": "Kaydet",
+            "columns": {
+                "search": "Kolon Araması",
+                "visible": "Kolon Görünümü"
+            },
+            "name": "Görünüm İsmi",
+            "order": "Sıralama",
+            "paging": "Sayfalama",
+            "scroller": "Kaydırma (Scrool)",
+            "search": "Arama",
+            "searchBuilder": "Arama Oluşturucu",
+            "select": "Seçimler",
+            "title": "Yeni Görünüm Oluştur",
+            "toggleLabel": "Kaydedilecek Olanlar"
+        },
+        "duplicateError": "Bu Görünüm Daha Önce Tanımlanmış",
+        "emptyError": "Görünüm Boş Olamaz",
+        "emptyStates": "Herhangi Bir Görünüm Yok",
+        "removeConfirm": "Görünümü Silmek İstediğinize Eminminisiniz?",
+        "removeError": "Görünüm Silinemedi",
+        "removeJoiner": "ve",
+        "removeSubmit": "Sil",
+        "removeTitle": "Görünüm Sil",
+        "renameButton": "Değiştir",
+        "renameLabel": "Görünüme Yeni İsim Ver -&gt; %s:",
+        "renameTitle": "Görünüm İsmini Değiştir"
     }
 }
