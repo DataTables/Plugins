@@ -19,5 +19,60 @@
         "sortAscending": ": 列を昇順に並べ替えるにはアクティブにする",
         "sortDescending": ": 列を降順に並べ替えるにはアクティブにする"
     },
-    "thousands": ","
+    "thousands": ",",
+    "buttons": {
+        "colvis": "項目の表示\/非表示",
+        "csv": "CSVをダウンロード"
+    },
+    "searchBuilder": {
+        "add": "条件を追加",
+        "button": {
+            "0": "カスタムサーチ",
+            "_": "カスタムサーチ (%d)"
+        },
+        "clearAll": "すべての条件をクリア",
+        "condition": "条件",
+        "conditions": {
+            "date": {
+                "after": "次の日付以降",
+                "before": "次の日付以前",
+                "between": "次の期間に含まれる",
+                "empty": "空白",
+                "equals": "次の日付と等しい",
+                "not": "次の日付と等しくない",
+                "notBetween": "次の期間に含まれない",
+                "notEmpty": "空白ではない"
+            },
+            "number": {
+                "between": "次の値の間に含まれる",
+                "empty": "空白",
+                "equals": "次の値と等しい",
+                "gt": "次の値よりも大きい",
+                "gte": "次の値以上",
+                "lt": "次の値未満",
+                "lte": "次の値以下",
+                "not": "次の値と等しくない",
+                "notBetween": "次の値の間に含まれない",
+                "notEmpty": "空白ではない"
+            },
+            "string": {
+                "contains": "次の文字を含む",
+                "empty": "空白",
+                "endsWith": "次の文字で終わる",
+                "equals": "次の文字と等しい",
+                "not": "次の文字と等しくない",
+                "notEmpty": "空白ではない",
+                "startsWith": "次の文字から始まる",
+                "notContains": "次の文字を含まない",
+                "notStarts": "次の文字で始まらない",
+                "notEnds": "次の文字で終わらない"
+            }
+        },
+        "data": "項目",
+        "title": {
+            "0": "カスタムサーチ",
+            "_": "カスタムサーチ (%d)"
+        },
+        "value": "値"
+    }
 }
