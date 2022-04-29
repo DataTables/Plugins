@@ -52,10 +52,6 @@ $.fn.dataTable.luxon = function ( format, locale, reverseEmpties ) {
 			return 'luxon-'+format;
 		}
 
-		if(!luxon.DateTime.fromFormat( d, format).isValid) {
-			console.log("pause")
-		}
-
 		return luxon.DateTime.fromFormat( d, format).isValid ?
 			'luxon-'+format :
 			null;
