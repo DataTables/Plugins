@@ -16,7 +16,8 @@
         "createState": "Crear estado",
         "pageLength": {
             "_": "ver %d filas",
-            "-1": "Ver todas las Filas"
+            "-1": "Ver todas las Filas",
+            "1": "Ver solo una fila"
         },
         "print": "Impresion",
         "removeAllStates": "Remover todos los estados",
@@ -24,7 +25,10 @@
         "renameState": "Renombrar",
         "savedStates": "Guardar Estado",
         "stateRestore": "Restaurar %d",
-        "updateState": "Actualizar"
+        "updateState": "Actualizar",
+        "csv": "CSV",
+        "excel": "Excel",
+        "pdf": "PDF"
     },
     "datetime": {
         "hours": "hora",
@@ -54,6 +58,11 @@
             "Jue",
             "Vie",
             "sab"
+        ],
+        "unknown": "desconocido",
+        "amPm": [
+            "am",
+            "pm"
         ]
     },
     "editor": {
@@ -72,7 +81,9 @@
             "system": "a ocurrido un error "
         },
         "multi": {
-            "restore": "revertir cambios"
+            "restore": "revertir cambios",
+            "info": "Los elementos seleccionados contienen diferentes valores para esta entrada. Para editar y configurar todos los elementos de esta entrada en el mismo valor, haga clic o toque aquí, de lo contrario, conservar sus valores individuales.",
+            "noMulti": "Múltiples valores"
         },
         "remove": {
             "button": "Borrar",

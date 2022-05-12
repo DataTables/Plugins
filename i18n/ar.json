@@ -3,7 +3,6 @@
     "lengthMenu": "أظهر _MENU_ مدخلات",
     "zeroRecords": "لم يعثر على أية سجلات",
     "info": "إظهار _START_ إلى _END_ من أصل _TOTAL_ مدخل",
-    "infoFiltered": "(منتقاة من مجموع _MAX_ مُدخل)",
     "search": "ابحث:",
     "paginate": {
         "first": "الأول",
@@ -67,30 +66,41 @@
                 "between": "بين",
                 "empty": "فارغ",
                 "equals": "تساوي",
-                "not": "ليس",
                 "notBetween": "ليست بين",
-                "notEmpty": "ليست فارغة"
+                "notEmpty": "ليست فارغة",
+                "not": "ليست "
             },
             "number": {
                 "between": "بين",
                 "empty": "فارغة",
                 "equals": "تساوي",
                 "gt": "أكبر من",
-                "gte": "أكبر وتساوي",
                 "lt": "أقل من",
-                "lte": "أقل وتساوي",
                 "not": "ليست",
                 "notBetween": "ليست بين",
-                "notEmpty": "ليست فارغة"
+                "notEmpty": "ليست فارغة",
+                "gte": "أكبر أو تساوي",
+                "lte": "أقل أو تساوي"
             },
             "string": {
-                "contains": "يحتوي",
-                "empty": "فاغ",
-                "endsWith": "ينتهي ب",
-                "equals": "يساوي",
                 "not": "ليست",
                 "notEmpty": "ليست فارغة",
-                "startsWith": " تبدأ بـ "
+                "startsWith": " تبدأ بـ ",
+                "contains": "تحتوي",
+                "empty": "فارغة",
+                "endsWith": "تنتهي ب",
+                "equals": "تساوي",
+                "notContains": "لا تحتوي",
+                "notStarts": "لا تبدأ بـ",
+                "notEnds": "لا تنتهي بـ"
+            },
+            "array": {
+                "equals": "تساوي",
+                "empty": "فارغة",
+                "contains": "تحتوي",
+                "not": "ليست",
+                "notEmpty": "ليست فارغة",
+                "without": "بدون"
             }
         },
         "button": {
@@ -196,5 +206,6 @@
         "fillHorizontal": "تعبئة الخلايا أفقيًا",
         "fillVertical": "تعبئة الخلايا عموديا"
     },
-    "decimal": ","
+    "decimal": ",",
+    "infoFiltered": "(مرشحة من مجموع _MAX_ مُدخل)"
 }

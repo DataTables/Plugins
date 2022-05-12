@@ -38,7 +38,14 @@
             "_": "Mostra %d righe"
         },
         "pdf": "PDF",
-        "print": "Stampa"
+        "print": "Stampa",
+        "createState": "Crea stato",
+        "removeAllStates": "Rimuovi tutti gli stati",
+        "removeState": "Rimuovi",
+        "renameState": "Rinomina",
+        "savedStates": "Salva stato",
+        "stateRestore": "Ripristina stato",
+        "updateState": "Aggiorna"
     },
     "emptyTable": "Nessun dato disponibile nella tabella",
     "info": "Risultati da _START_ a _END_ di _TOTAL_ elementi",
@@ -118,7 +125,9 @@
         "countFiltered": "{shown} ({total})",
         "emptyPanes": "Nessun Pannello di Ricerca",
         "loadMessage": "Caricamento Pannello di Ricerca",
-        "title": "Filtri Attivi - %d"
+        "title": "Filtri Attivi - %d",
+        "showMessage": "Mostra tutto",
+        "collapseMessage": "Espandi tutto"
     },
     "select": {
         "cells": {
@@ -202,5 +211,34 @@
         }
     },
     "thousands": ".",
-    "decimal": ","
+    "decimal": ",",
+    "stateRestore": {
+        "creationModal": {
+            "button": "Crea",
+            "columns": {
+                "search": "Colonna Cerca",
+                "visible": "Colonna Visibilità"
+            },
+            "name": "Nome:",
+            "order": "Ordinamento",
+            "paging": "Paginazione",
+            "scroller": "Scorri posizione",
+            "search": "Ricerca",
+            "searchBuilder": "Form di Ricerca",
+            "select": "Seleziona",
+            "title": "Crea nuovo Stato",
+            "toggleLabel": "Includi:"
+        },
+        "duplicateError": "Nome stato già presente",
+        "emptyError": "Il nome è obbligatorio",
+        "emptyStates": "Non ci sono stati salvati",
+        "removeConfirm": "Sei sicuro di eliminare lo Stato %s?",
+        "removeError": "Errore durante l'eliminazione dello Stato",
+        "removeJoiner": "e",
+        "removeSubmit": "Elimina",
+        "removeTitle": "Elimina Stato",
+        "renameButton": "Rinomina",
+        "renameLabel": "Nuovo nome per %s:",
+        "renameTitle": "Rinomina Stato"
+    }
 }

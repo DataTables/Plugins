@@ -211,5 +211,34 @@
             "Novembro",
             "Dezembro"
         ]
+    },
+    "stateRestore": {
+        "creationModal": {
+            "button": "Criar",
+            "columns": {
+                "search": "Pesquisa por Colunas",
+                "visible": "Visibilidade das Colunas"
+            },
+            "name": "Nome:",
+            "order": "Ordenar",
+            "paging": "Paginação",
+            "scroller": "Posição da barra de Scroll",
+            "search": "Pesquisa",
+            "searchBuilder": "Pesquisa Avançada",
+            "select": "Selecionar",
+            "title": "Criar Novo Estado",
+            "toggleLabel": "Incluir:"
+        },
+        "duplicateError": "Já existe um estado com o mesmo nome",
+        "emptyError": "Não pode estar a vazio",
+        "emptyStates": "Não existem estados gravados",
+        "removeConfirm": "Deseja mesmo remover o estado %s?",
+        "removeError": "Erro ao remover o estado.",
+        "removeJoiner": " e ",
+        "removeSubmit": "Apagar",
+        "removeTitle": "Apagar Estado",
+        "renameButton": "Renomear",
+        "renameLabel": "Novo nome para %s:",
+        "renameTitle": "Renomear Estado"
     }
 }

@@ -42,7 +42,12 @@
             "_": "Onyesha safu %d"
         },
         "pdf": "PDF",
-        "print": "Chapisha"
+        "print": "Chapisha",
+        "createState": "Ongeza Jimbo",
+        "removeAllStates": "Ondosha Majimbo yote",
+        "removeState": "Ondosha",
+        "renameState": "Sasiha Jina",
+        "updateState": "sasisha"
     },
     "decimal": ".",
     "searchBuilder": {
@@ -55,5 +60,47 @@
         "logicAnd": "Pamoja na",
         "logicOr": "Au",
         "value": "Thamani"
+    },
+    "datetime": {
+        "amPm": [
+            "AM",
+            "PM"
+        ],
+        "hours": "Saa",
+        "minutes": "Dakika",
+        "months": {
+            "0": "Januari",
+            "1": "Febuari",
+            "10": "Novemba",
+            "11": "Disemba",
+            "2": "Machi",
+            "3": "Aprili",
+            "4": "Mei",
+            "5": "Juni",
+            "6": "Julai",
+            "7": "Agosti",
+            "8": "Septemba",
+            "9": "Oktoba"
+        },
+        "next": "Kesho",
+        "previous": "Jana",
+        "seconds": "Sekunde",
+        "unknown": "-"
+    },
+    "editor": {
+        "close": "Funga",
+        "create": {
+            "button": "Mpya",
+            "submit": "Ongeza",
+            "title": "Ongeza rekodi mpya"
+        },
+        "edit": {
+            "button": "Sasisha",
+            "submit": "Sasisha",
+            "title": "Sasisha rekodi"
+        },
+        "remove": {
+            "button": "Futa"
+        }
     }
 }
