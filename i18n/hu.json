@@ -1,7 +1,7 @@
 {
     "emptyTable": "Nincs rendelkezésre álló adat",
     "info": "Találatok: _START_ - _END_ Összesen: _TOTAL_",
-    "infoEmpty": "Nulla találat",
+    "infoEmpty": "Nincs találat",
     "infoFiltered": "(_MAX_ összes rekord közül szűrve)",
     "infoThousands": " ",
     "lengthMenu": "_MENU_ találat oldalanként",
@@ -43,7 +43,7 @@
         },
         "collection": "Gyűjtemény",
         "colvisRestore": "Oszlopok visszaállítása",
-        "copyKeys": "Nyomja meg a CTRL vagy u2318 + C gombokat a táblázat adatainak a vágólapra másolásához.<br \/><br \/>A megszakításhoz kattintson az üzenetre vagy nyomja meg az ESC billentyűt.",
+        "copyKeys": "A táblázat adatainak a vágólapra másolásához nyomja meg a CTRL vagy u2318 + C gombokat!<br \/><br \/>A megszakításhoz kattintson az üzenetre, vagy nyomja meg az ESC billentyűt!",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
