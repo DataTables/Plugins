@@ -24,21 +24,10 @@
         "print": "Штампај",
         "renameState": "Преименуј",
         "savedStates": "Сачувана стања",
-        "updateState": "Ажурирај"
-    },
-    "paginate": {
-        "first": "Prva",
-        "last": "Poslednja",
-        "next": "Sledeća",
-        "previous": "Prethodna"
-    },
-    "searchPanes": {
-        "clearMessage": "Ukloni Filtere",
-        "collapseMessage": "Zatvori sve",
-        "emptyPanes": "Nije pronađen nijedan zapis",
-        "loadMessage": "Učitavanje zapisa",
-        "showMessage": "Prikaži sve",
-        "title": "Aktivni Filteri - %d"
+        "updateState": "Ажурирај",
+        "csv": "CSV",
+        "excel": "Ексел",
+        "pdf": "PDF"
     },
     "autoFill": {
         "cancel": "Откажи",
@@ -100,5 +89,27 @@
     "lengthMenu": "Прикажи _MENU_ уноса",
     "search": "Претрага:",
     "thousands": ",",
-    "zeroRecords": "Није пронађен ниједан одговарајући запис"
+    "zeroRecords": "Није пронађен ниједан одговарајући запис",
+    "paginate": {
+        "first": "Прва",
+        "last": "Последња",
+        "next": "Следећа",
+        "previous": "Претходна"
+    },
+    "searchBuilder": {
+        "add": "Додај услов",
+        "clearAll": "Почисти све",
+        "condition": "Услов",
+        "logicAnd": "И",
+        "logicOr": "ИЛИ",
+        "value": "Вредност"
+    },
+    "searchPanes": {
+        "clearMessage": "Уклони филтере",
+        "collapseMessage": "Затвори све",
+        "emptyPanes": "Није пронађен ниједан запис",
+        "loadMessage": "Учитавање...",
+        "showMessage": "Прикажи све",
+        "title": "Активни филтери - %d"
+    }
 }

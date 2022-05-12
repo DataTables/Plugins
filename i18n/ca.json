@@ -2,7 +2,6 @@
     "processing": "Processant...",
     "lengthMenu": "Mostra _MENU_ registres",
     "zeroRecords": "No s'han trobat registres",
-    "emptyTable": "No hi ha registres disponible en aquesta taula",
     "info": "Mostrant del _START_ al _END_ d'un total de _TOTAL_ registres",
     "infoEmpty": "No hi ha registres disponibles",
     "infoFiltered": "(filtrat de _MAX_ registres)",
@@ -14,7 +13,7 @@
         "first": "Primer",
         "previous": "Anterior",
         "next": "Següent",
-        "last": "Últim"
+        "last": "Darrer"
     },
     "aria": {
         "sortAscending": ": Activa per ordenar la columna de manera ascendent",
@@ -39,7 +38,13 @@
         "copyKeys": "Pressiona ctrl o poma + C per copiar les dades de la tabla al teu portapaper",
         "csv": "CSV",
         "excel": "Excel",
-        "renameState": "Cambiar nom"
+        "createState": "Crear Estat",
+        "removeAllStates": "Borrar tots els Estats",
+        "removeState": "Borra",
+        "renameState": "Canviar nom",
+        "savedStates": "Estats gravats",
+        "stateRestore": "Restaura",
+        "updateState": "Actualitza"
     },
     "select": {
         "rows": {
@@ -64,7 +69,6 @@
     "thousands": ".",
     "datetime": {
         "hours": "Hora",
-        "minutes": "Minut",
         "seconds": "Segons",
         "unknown": "Desconegut",
         "amPm": [
@@ -84,18 +88,19 @@
             "2": "Març",
             "1": "Febrer",
             "0": "Gener",
-            "8": "Septembre",
-            "6": "Julio"
+            "6": "Juliol",
+            "8": "Setembre"
         },
-        "weekdays": [
-            "Dg",
-            "Dil",
-            "Dt",
-            "Dc",
-            "Dj",
-            "Dv",
-            "Ds"
-        ]
+        "weekdays": {
+            "0": "Dg",
+            "2": "Dt",
+            "3": "Dc",
+            "4": "Dj",
+            "5": "Dv",
+            "6": "Ds",
+            "1": "Dl"
+        },
+        "minutes": "Minuts"
     },
     "editor": {
         "close": "Tancar",
@@ -115,7 +120,7 @@
             "submit": "Eliminar",
             "confirm": {
                 "_": "Està segur de voler eliminar %d files?",
-                "1": "Està segir de voler elmiminar 1 fila?"
+                "1": "Està segur de voler elmiminar 1 fila?"
             }
         },
         "error": {
@@ -123,9 +128,9 @@
         },
         "multi": {
             "title": "Múltiples valors",
-            "info": "El ítems seleccionts contenen diferent valors per aquesta entrada. Per editar i configurar tots els ítems per a aquesta entrada al mateix valor, prem o clica tabular aquí, d'altra vanda, mantindrán els seus valors individuals",
             "restore": "Desfés el canvi",
-            "noMulti": "Aquest camp pot ser editat indifidualment; però no com a part d'un grup"
+            "info": "El ítems seleccionats contenen diferents valors per aquesta entrada. Per editar i configurar tots els ítems per a aquesta entrada al mateix valor, prem o clica tabular aquí, sino, mantindran els seus valors individuals",
+            "noMulti": "Aquest camp pot ser editat individualment; però no com a part d'un grup"
         }
     },
     "searchBuilder": {
@@ -193,21 +198,20 @@
         }
     },
     "searchPanes": {
-        "clearMessage": "Eborrar tot",
         "collapse": {
             "0": "Panells de cerca",
             "_": "Panells de cerca (%d)"
         },
         "count": "{total}",
         "countFiltered": "{monstrat} ({total})",
-        "emptyPanes": "No panells de cerca",
         "loadMessage": "Carregant panells de cerca",
-        "title": "Filtes actius - %d",
         "collapseMessage": "Colapsar Tot",
-        "showMessage": "Mostrar tot"
+        "clearMessage": "Esborrar tot",
+        "emptyPanes": "No hi ha panells de cerca",
+        "showMessage": "Mostrar-ho tot",
+        "title": "Filtres actius - %d"
     },
     "stateRestore": {
-        "renameButton": "Cambiar nom",
         "removeSubmit": "Eliminar",
         "removeJoiner": "i",
         "removeError": "Error eliminant el registre",
@@ -221,8 +225,20 @@
             },
             "name": "Nom",
             "order": "Ordenar",
-            "toggleLabel": "Inclou:"
+            "toggleLabel": "Inclou:",
+            "paging": "Paginació",
+            "scroller": "Posició Scroll",
+            "search": "Bñusqueda",
+            "searchBuilder": "Generador Búsquedes",
+            "title": "Crear nou Estat",
+            "select": "Sel·lecció"
         },
-        "renameLabel": "Nou nom per %s"
-    }
+        "renameLabel": "Nou nom per %s",
+        "duplicateError": "Ja existeix un estat amb aquest nom",
+        "emptyStates": "No hi ha estats gravats",
+        "removeTitle": "Borrar Estat",
+        "renameButton": "Canviar nom",
+        "renameTitle": "Canviar nom"
+    },
+    "emptyTable": "No hi ha registres disponibles en aquesta taula"
 }

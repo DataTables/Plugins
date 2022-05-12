@@ -120,11 +120,17 @@
         },
         "pdf": "PDF",
         "print": "Imprimer",
-        "copyKeys": "Appuyez sur ctrl ou u2318 + C pour copier les données du tableau dans votre presse-papier."
+        "copyKeys": "Appuyez sur ctrl ou u2318 + C pour copier les données du tableau dans votre presse-papier.",
+        "createState": "Créer un état",
+        "removeAllStates": "Supprimer tous les états",
+        "removeState": "Supprimer",
+        "renameState": "Renommer",
+        "savedStates": "États sauvegardés",
+        "stateRestore": "État %d",
+        "updateState": "Mettre à jour"
     },
     "decimal": ",",
     "search": "Rechercher:",
-    "thousands": ".",
     "datetime": {
         "previous": "Précédent",
         "next": "Suivant",
@@ -181,29 +187,44 @@
                 "1": "Êtes-vous sûr de vouloir supprimer 1 ligne ?"
             }
         },
-        "error": {
-            "system": "Une erreur système s'est produite"
-        },
         "multi": {
-            "noMulti": "Ce champ peut être édité individuellement, mais ne fait pas partie d'un groupe. ",
             "title": "Valeurs multiples",
-            "restore": "Rétablir modification",
-            "info": "Les éléments sélectionnés contiennent différentes valeurs pour cette entrée. Pour modifier et définir tous les éléments de cette entrée à la même valeur, cliquez ou tapez ici, sinon ils conserveront leurs valeurs individuelles."
+            "info": "Les éléments sélectionnés contiennent différentes valeurs pour cette entrée. Pour modifier et définir tous les éléments de cette entrée à la même valeur, cliquez ou tapez ici, sinon ils conserveront leurs valeurs individuelles.",
+            "restore": "Annuler les modifications",
+            "noMulti": "Ce champ peut être modifié individuellement, mais ne fait pas partie d'un groupe. "
+        },
+        "error": {
+            "system": "Une erreur système s'est produite (<a target=\"\\\" rel=\"nofollow\" href=\"\\\">Plus d'information<\/a>)."
         }
     },
     "stateRestore": {
         "removeSubmit": "Supprimer",
         "creationModal": {
             "button": "Créer",
-            "name": "Nom :",
             "order": "Tri",
             "paging": "Pagination",
             "scroller": "Position du défilement",
             "search": "Recherche",
             "select": "Sélection",
-            "toggleLabel": "Inclus :"
+            "columns": {
+                "search": "Recherche par colonne",
+                "visible": "Visibilité des colonnes"
+            },
+            "name": "Nom :",
+            "searchBuilder": "Recherche avancée",
+            "title": "Créer un nouvel état",
+            "toggleLabel": "Inclus :"
         },
-        "renameButton": "Renommer"
+        "renameButton": "Renommer",
+        "duplicateError": "Il existe déjà un état avec ce nom.",
+        "emptyError": "Le nom ne peut pas être vide.",
+        "emptyStates": "Aucun état sauvegardé",
+        "removeConfirm": "Voulez vous vraiment supprimer %s ?",
+        "removeError": "Échec de la suppression de l'état.",
+        "removeJoiner": "et",
+        "removeTitle": "Supprimer l'état",
+        "renameLabel": "Nouveau nom pour %s :",
+        "renameTitle": "Renommer l'état"
     },
     "info": "Affichage de _START_ à _END_ sur _TOTAL_ entrées",
     "infoEmpty": "Affichage de 0 à 0 sur 0 entrées",
@@ -215,5 +236,6 @@
         "next": "Suivante",
         "previous": "Précédente"
     },
-    "zeroRecords": "Aucune entrée correspondante trouvée"
+    "zeroRecords": "Aucune entrée correspondante trouvée",
+    "thousands": " "
 }

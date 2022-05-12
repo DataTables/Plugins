@@ -1,7 +1,6 @@
 {
     "emptyTable": "Nincs rendelkezésre álló adat",
     "info": "Találatok: _START_ - _END_ Összesen: _TOTAL_",
-    "infoEmpty": "Nulla találat",
     "infoFiltered": "(_MAX_ összes rekord közül szűrve)",
     "infoThousands": " ",
     "lengthMenu": "_MENU_ találat oldalanként",
@@ -43,7 +42,6 @@
         },
         "collection": "Gyűjtemény",
         "colvisRestore": "Oszlopok visszaállítása",
-        "copyKeys": "Nyomja meg a CTRL vagy u2318 + C gombokat a táblázat adatainak a vágólapra másolásához.<br \/><br \/>A megszakításhoz kattintson az üzenetre vagy nyomja meg az ESC billentyűt.",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -51,7 +49,8 @@
             "_": "%d sor megjelenítése"
         },
         "pdf": "PDF",
-        "print": "Nyomtat"
+        "print": "Nyomtat",
+        "copyKeys": "A táblázat adatainak vágólapra másolásához nyomja meg a CTRL vagy u2318 + C billentyűt!<br \/><br \/>A megszakításhoz kattintson az üzenetre, vagy nyomja meg az ESC billentyűt!"
     },
     "autoFill": {
         "cancel": "Megszakítás",
@@ -98,6 +97,14 @@
                 "not": "Nem",
                 "notEmpty": "Nem üres",
                 "startsWith": "Kezdődik"
+            },
+            "array": {
+                "equals": "Egyenlő",
+                "empty": "Üres",
+                "contains": "Tartalmazza",
+                "not": "Nem",
+                "notEmpty": "Nem üres",
+                "without": "Nélkül"
             }
         },
         "data": "Adat",
@@ -120,7 +127,8 @@
         "countFiltered": "{shown} ({total})",
         "emptyPanes": "Nincsenek szűrőpanelek",
         "loadMessage": "Szűrőpanelek betöltése",
-        "title": "Aktív szűrőpanelek: %d"
+        "title": "Aktív szűrőpanelek: %d",
+        "showMessage": "Mindet megmutat"
     },
     "datetime": {
         "previous": "Előző",
@@ -131,6 +139,29 @@
         "amPm": [
             "de.",
             "du."
+        ],
+        "weekdays": [
+            "H",
+            "K",
+            "Sze",
+            "Cs",
+            "P",
+            "Szo",
+            "V"
+        ],
+        "months": [
+            "Január",
+            "Február",
+            "Március",
+            "Április",
+            "Május",
+            "Június",
+            "Július",
+            "Augusztus",
+            "Szeptember",
+            "Október",
+            "November",
+            "December"
         ]
     },
     "editor": {
@@ -149,6 +180,11 @@
             "button": "Törlés",
             "title": "Törlés",
             "submit": "Törlés"
+        },
+        "error": {
+            "system": "Technikai hiba történt."
         }
-    }
+    },
+    "infoEmpty": "Nincs találat",
+    "thousands": "&nbsp;"
 }

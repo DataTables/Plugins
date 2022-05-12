@@ -13,5 +13,28 @@
         "last": "अंतिम"
     },
     "decimal": ".",
-    "emptyTable": "तालिका में आंकड़े उपलब्ध नहीं है"
+    "emptyTable": "तालिका में आंकड़े उपलब्ध नहीं है",
+    "aria": {
+        "sortAscending": "आरोही क्रम",
+        "sortDescending": "अवरोही क्रम"
+    },
+    "autoFill": {
+        "cancel": "रद्द करें",
+        "fill": "भरें",
+        "fillHorizontal": "क्षैतिज भरें",
+        "fillVertical": "लंबवत भरें",
+        "info": "जानकारी"
+    },
+    "buttons": {
+        "collection": "संग्रह",
+        "colvis": "स्तंभ दृश्यता",
+        "colvisRestore": "दृश्यता बहाल करें",
+        "copy": "प्रतिलिपि",
+        "copyTitle": "शीर्षक प्रतिलिपि",
+        "csv": "सीएसवी",
+        "excel": "एक्सेल",
+        "pdf": "पीडीएफ",
+        "print": "छपाई"
+    },
+    "thousands": "हज़ार"
 }

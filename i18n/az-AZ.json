@@ -2,7 +2,6 @@
     "emptyTable": "Cədvəldə heç bir məlumat yoxdur",
     "infoEmpty": "Nəticə Yoxdur",
     "infoFiltered": "( _MAX_ Nəticə İçindən Tapılanlar)",
-    "lengthMenu": "Səhifədə _MENU_ Nəticə Göstər",
     "loadingRecords": "Yüklənir...",
     "processing": "Gözləyin...",
     "search": "Axtarış:",
@@ -15,13 +14,13 @@
     },
     "aria": {
         "sortDescending": ": sütunu azalma sırası üzərə aktiv etmək",
-        "sortAscending": ": sütunu artma sırası üzərə aktiv etməkr"
+        "sortAscending": ": sütunu artma sırası üzərə aktiv etmək"
     },
     "autoFill": {
-        "cancel": "Ləğv Et",
         "fill": "Bütün hücrələri <i>%d<\/i> ile doldur",
         "fillHorizontal": "Hücrələri üfiqi olaraq doldur",
-        "fillVertical": "Hücrələri şaquli olara1 doldur"
+        "fillVertical": "Hücrələri şaquli olara1 doldur",
+        "cancel": "Ləğv et"
     },
     "buttons": {
         "collection": "Kolleksiya <span class=\"\\\"><\/span>",
@@ -176,5 +175,7 @@
             "restore": "Dəyişiklikləri geri qaytarın",
             "noMulti": "Bu sahə qrup şəklində deyil, ayrı-ayrılıqda təşkil edilə bilər."
         }
-    }
+    },
+    "lengthMenu": "Səhifədə _MENU_ nəticə göstər",
+    "searchPlaceholder": "Nəyi axtarırsınız?"
 }
