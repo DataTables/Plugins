@@ -83,6 +83,12 @@ var PageResize = function ( dt, pageResizeManualDelta )
 		host.css( 'position', 'relative' );
 	}
 
+    var onDestroy = function () {
+        dt.off('.pageResize', onDestroy);
+        this.s.obj && this.s.obj.remove();
+    }.bind(this);
+    dt.on('destroy.pageResize', onDestroy);
+
 	this._attach();
 	this._size();
 };
@@ -162,8 +168,10 @@ PageResize.prototype = {
 
 		obj
 			.appendTo( this.s.host )
-			.attr( 'data', 'about:blank' );
-	}
+            .attr( 'data', 'about:blank' );
+
+        this.s.obj = obj;
+    }
 };
 
 
