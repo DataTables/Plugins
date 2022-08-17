@@ -43,8 +43,8 @@
                 "not": "Не",
                 "notEmpty": "Не пусто",
                 "notContains": "Не содержит",
-                "notStarts": "Не начинается на",
-                "notEnds": "Не заканчивается на"
+                "notStartsWith": "Не начинается на",
+                "notEndsWith": "Не заканчивается на"
             },
             "date": {
                 "after": "После",

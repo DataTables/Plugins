@@ -59,8 +59,8 @@
                 "startsWith": "Commence par",
                 "equals": "Égal à",
                 "notContains": "Ne contient pas",
-                "notEnds": "Ne termine pas par",
-                "notStarts": "Ne commence pas par"
+                "notEndsWith": "Ne termine pas par",
+                "notStartsWith": "Ne commence pas par"
             },
             "array": {
                 "empty": "Vide",

@@ -163,8 +163,8 @@
                 "notEmpty": "לא ריק",
                 "startsWith": "מתחיל ב",
                 "notContains": "לא מכיל",
-                "notEnds": "לא מסתיים ב",
-                "notStarts": "לא מתחיל ב"
+                "notEndsWith": "לא מסתיים ב",
+                "notStartsWith": "לא מתחיל ב"
             },
             "array": {
                 "equals": "שווה",

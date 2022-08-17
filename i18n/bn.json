@@ -187,8 +187,8 @@
                 "notEmpty": "খালি নয়",
                 "startsWith": "শুরু হয়",
                 "notContains": "বিদ্যমান নয়",
-                "notStarts": "শুরু হয় না",
-                "notEnds": "শেষ হয় না"
+                "notStartsWith": "শুরু হয় না",
+                "notEndsWith": "শেষ হয় না"
             },
             "array": {
                 "equals": "সমান",

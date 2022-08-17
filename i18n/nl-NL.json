@@ -89,8 +89,8 @@
                 "notEmpty": "Niet leeg",
                 "startsWith": "Start met",
                 "notContains": "Zonder",
-                "notEnds": "Eindigt niet met",
-                "notStarts": "Begint niet met"
+                "notEndsWith": "Eindigt niet met",
+                "notStartsWith": "Begint niet met"
             },
             "array": {
                 "equals": "Gelijk aan",

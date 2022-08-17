@@ -47,8 +47,8 @@
                 "notEmpty": "není prázdné",
                 "startsWith": "začíná na",
                 "notContains": "Podmínka",
-                "notStarts": "Nezačíná",
-                "notEnds": "Nekončí"
+                "notStartsWith": "Nezačíná",
+                "notEndsWith": "Nekončí"
             },
             "array": {
                 "equals": "rovno",

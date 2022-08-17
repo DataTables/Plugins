@@ -96,8 +96,8 @@
                 "startsWith": "Inicia con",
                 "notEmpty": "No vacío",
                 "notContains": "No Contiene",
-                "notEnds": "No Termina",
-                "notStarts": "No Comienza"
+                "notEndsWith": "No Termina",
+                "notStartsWith": "No Comienza"
             },
             "array": {
                 "equals": "Igual a",

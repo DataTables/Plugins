@@ -101,8 +101,8 @@
                 "notEmpty": "不為空",
                 "startsWith": "字首為",
                 "notContains": "不含",
-                "notStarts": "開頭不是",
-                "notEnds": "結尾不是"
+                "notStartsWith": "開頭不是",
+                "notEndsWith": "結尾不是"
             }
         },
         "data": "欄位",

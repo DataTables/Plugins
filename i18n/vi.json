@@ -97,8 +97,8 @@
                 "notEmpty": "Không rỗng",
                 "startsWith": "Bắt đầu với",
                 "notContains": "Không chứa",
-                "notEnds": "Không kết thúc với",
-                "notStarts": "Không bắt đầu với"
+                "notEndsWith": "Không kết thúc với",
+                "notStartsWith": "Không bắt đầu với"
             },
             "array": {
                 "equals": "Bằng",

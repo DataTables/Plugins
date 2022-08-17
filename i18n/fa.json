@@ -86,8 +86,8 @@
                 "notEmpty": "خالی نباشد",
                 "startsWith": "شروع  شود با",
                 "notContains": "نباشد حاوی",
-                "notEnds": "پایان نیابد با",
-                "notStarts": "شروع نشود با"
+                "notEndsWith": "پایان نیابد با",
+                "notStartsWith": "شروع نشود با"
             },
             "array": {
                 "equals": "برابر",

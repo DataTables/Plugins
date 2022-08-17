@@ -97,8 +97,8 @@
                 "notEmpty": "Nicht leer",
                 "startsWith": "Startet mit",
                 "notContains": "enthält nicht",
-                "notStarts": "startet nicht mit",
-                "notEnds": "endet nicht mit"
+                "notStartsWith": "startet nicht mit",
+                "notEndsWith": "endet nicht mit"
             },
             "array": {
                 "equals": "ist gleich",
