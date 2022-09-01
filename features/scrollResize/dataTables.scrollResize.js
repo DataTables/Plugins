@@ -83,6 +83,12 @@ var ScrollResize = function ( dt )
 		that._size();
 	} );
 
+	var onDestroy = function () {
+		dt.off('.pageResize', onDestroy);
+		this.s.obj && this.s.obj.remove();
+	}.bind(this);
+	dt.on('destroy.pageResize', onDestroy);
+
 	this._attach();
 	this._size();
 };
@@ -154,7 +160,9 @@ ScrollResize.prototype = {
 		obj
 			.appendTo( this.s.host )
 			.attr( 'data', 'about:blank' );
-	}
+
+		this.s.obj = obj;
+    }
 };
 
 
