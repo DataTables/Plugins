@@ -79,15 +79,14 @@ var ScrollResize = function ( dt )
 		host.css( 'position', 'relative' );
 	}
 
-	dt.on( 'draw', function () {
+	dt.on( 'draw.scrollResize', function () {
 		that._size();
 	} );
 
-	var onDestroy = function () {
-		dt.off('.pageResize', onDestroy);
+	dt.on('destroy.scrollResize', function () {
+		dt.off('.scrollResize');
 		this.s.obj && this.s.obj.remove();
-	}.bind(this);
-	dt.on('destroy.pageResize', onDestroy);
+	}.bind(this));
 
 	this._attach();
 	this._size();
