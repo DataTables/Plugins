@@ -90,6 +90,17 @@ var ScrollResize = function ( dt )
 
 	this._attach();
 	this._size();
+
+	// Redraw the header if the scrollbar was visible before feature
+	// initialization, but no longer after initialization. Otherwise,
+	// the header width would differ from the body width, because the
+	// scrollbar is no longer present.
+	var settings = dt.settings()[0];
+	var divBodyEl = settings.nScrollBody;
+	var scrollBarVis = divBodyEl.scrollHeight > divBodyEl.clientHeight;
+	if (settings.scrollBarVis && !scrollBarVis) {
+		dt.columns.adjust();
+	}
 };
 
 
