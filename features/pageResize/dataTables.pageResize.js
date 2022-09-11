@@ -98,7 +98,15 @@ var PageResize = function ( dt, pageResizeManualDelta )
     dt.on('destroy.pageResize', onDestroy);
 
 	this._attach();
-	this._size();
+
+	// Delay the initial sizing until the table is fully initialized
+	// such that the pagination element is also added and can be taken
+	// into account.
+	var initEvent = 'init.pageResize';
+	dt.on(initEvent, function () {
+		dt.off(initEvent);
+		this._size();
+	}.bind(this));
 };
 
 
