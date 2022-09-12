@@ -47,43 +47,59 @@
  *    } );
  */
 
-jQuery.fn.dataTable.render.ellipsis = function ( cutoff, wordbreak, escapeHtml ) {
-	var esc = function ( t ) {
-		return t
-			.replace( /&/g, '&amp;' )
-			.replace( /</g, '&lt;' )
-			.replace( />/g, '&gt;' )
-			.replace( /"/g, '&quot;' );
-	};
+jQuery.fn.dataTable.render.ellipsis = function ( cutoff, maxLength, wordbreak, escapeHtml ) {
+    var esc = function ( t ) {
+        return t
+            .replace( /&/g, '&amp;' )
+            .replace( /</g, '&lt;' )
+            .replace( />/g, '&gt;' )
+            .replace( /"/g, '&quot;' );
+    };
 
-	return function ( d, type, row ) {
-		// Order, search and type get the original data
-		if ( type !== 'display' ) {
-			return d;
-		}
+    return function ( d, type, row ) {
+        // Order, search and type get the original data
+        if ( type !== 'display' ) {
+            return d;
+        }
+ 
+        if ( typeof d !== 'number' && typeof d !== 'string' ) {
+            return d;
+        }
+ 
+        d = d.toString(); // cast numbers
+ 
+        if ( d.length <= maxLength) {
+            return d;
+        }
+        var shortened = d.substr(0, cutoff-1);
+        
+        // Find the last white space character in the string
+        if ( wordbreak ) {
+            shortened = shortened.replace(/\s([^\s]*)$/, '');
+        }
+        var remainder = d.substr(shortened.length);
+        // Protect against uncontrolled HTML input
+        if ( escapeHtml ) {
+            shortened = esc( shortened );
+            remainder = esc(remainder);
+        }
 
-		if ( typeof d !== 'number' && typeof d !== 'string' ) {
-			return d;
-		}
-
-		d = d.toString(); // cast numbers
-
-		if ( d.length <= cutoff ) {
-			return d;
-		}
-
-		var shortened = d.substr(0, cutoff-1);
-
-		// Find the last white space character in the string
-		if ( wordbreak ) {
-			shortened = shortened.replace(/\s([^\s]*)$/, '');
-		}
-
-		// Protect against uncontrolled HTML input
-		if ( escapeHtml ) {
-			shortened = esc( shortened );
-		}
-
-		return '<span class="ellipsis" title="'+esc(d)+'">'+shortened+'&#8230;</span>';
-	};
+        return '<span class="ellipsis" title="'+esc(d)+'">' + 
+        shortened +
+        '</span><a  onclick="toggleVisibility(this)" class="ellipsis" style="font-style: italic"> &#8230more</a><span style="display:none">' +
+        remainder + '</span></span>';
+    };
 };
+
+
+// eslint-disable-next-line no-unused-vars
+function toggleVisibility(thisElement){
+    if(thisElement.innerText === " …more") {
+        thisElement.style  = "font-style: inherit";
+        thisElement.innerText = thisElement.nextSibling.innerText;
+    }
+    else {
+        thisElement.innerText = " …more";
+        thisElement.style = "font-style: italic";
+    }
+} 
