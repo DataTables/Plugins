@@ -49,7 +49,7 @@
 
 jQuery.fn.dataTable.render.ellipsis = function ( cutoff, wordbreak, escapeHtml ) {
 	var esc = function ( t ) {
-		return t
+		return ('' + t)
 			.replace( /&/g, '&amp;' )
 			.replace( /</g, '&lt;' )
 			.replace( />/g, '&gt;' )
