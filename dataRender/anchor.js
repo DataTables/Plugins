@@ -7,7 +7,7 @@
  *  @param {string} type The anchor type: 'link'(by default), 'phone' or 'email'
  *  @param {object|function} attributes The attributes of the anchor tag or the
  *       callback function returning the tag attributes, the callback syntax:
- *      `function (mixed data, object|array row[, object meta]): object`
+ *      `function (mixed data, object|array row, object meta): object`
  *  @param {string|null} innerText The inner text of the anchor tag or `null` to
  *      set text by column `data` (by default)
  *  @returns {string}
@@ -35,7 +35,7 @@ jQuery.fn.dataTable.render.anchor = function (
   attributes = {},
   innerText = null
 ) {
-  return function (data, type, row, meta) {
+  return function (data, type, row, meta = {}) {
     // restriction only for table display rendering
     if (type !== 'display') {
       return data;
