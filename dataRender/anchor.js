@@ -69,9 +69,9 @@ jQuery.fn.dataTable.render.anchor = function (
       }
     }
 
-    var $a = jQuery('<a></a>');
-    $a.attr(tagAttributes).text(innerText === null ? data : innerText).get(0).outerText;
+    var $a = jQuery('</a>');
+    $a.attr(tagAttributes).text(innerText === null ? data : innerText);
 
-    return $a[0];
+    return $a[0].outerText;
   };
 };
