@@ -45,32 +45,28 @@ jQuery.fn.dataTable.render.anchor = function (
       innerText = data;
     }
 
-    if (attributes typeof 'function') {
-      var tagAttributes = attributes(data, row, meta);
-    } else {
-      var tagAttributes = attributes;
-    }
+    var attributes = attributes typeof 'function' ? attributes(data, row, meta) : attributes;
 
-    if (!tagAttributes.href) {
+    if (!attributes.href) {
       switch (type) {
         case 'mail':
-          tagAttributes.href = 'mailto:' + data;
+          attributes.href = 'mailto:' + data;
           break;
         case 'phone':
-          tagAttributes.href = 'tel:' + data.replace(/[^+\d]+/g, '');
+          attributes.href = 'tel:' + data.replace(/[^+\d]+/g, '');
           break;
         case 'link':
         case default:
           try {
-            tagAttributes.href = new URL(data);
+            attributes.href = new URL(data);
           } catch (e) {
-            tagAttributes.href = data;
+            attributes.href = data;
           }
       }
     }
 
     var anchorEl = jQuery('</a>');
-    anchorEl.attr(tagAttributes).text(innerText === null ? data : innerText);
+    anchorEl.attr(attributes).text(innerText);
 
     return anchorEl[0].outerText;
   };
