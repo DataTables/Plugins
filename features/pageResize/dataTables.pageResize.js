@@ -76,15 +76,37 @@ var PageResize = function ( dt, pageResizeManualDelta )
 		container: $(table.container()),
 		table:     $(table.node()),
 		delta:     pageResizeManualDelta
-	};
+    };
+
+    this.sizes = {
+        offsetTop: this._getOffsetTop(),
+        tableHeight: this._getTableHeight(),
+        containerHeight: this._getContainerHeight(),
+        headerHeight: this._getHeaderHeight(),
+        footerHeight: this._getFooterHeight()
+    };
 
 	var host = this.s.host;
 	if ( host.css('position') === 'static' ) {
 		host.css( 'position', 'relative' );
 	}
 
+    var onDestroy = function () {
+        dt.off('.pageResize', onDestroy);
+        this.s.obj && this.s.obj.remove();
+    }.bind(this);
+    dt.on('destroy.pageResize', onDestroy);
+
 	this._attach();
-	this._size();
+
+	// Delay the initial sizing until the table is fully initialized
+	// such that the pagination element is also added and can be taken
+	// into account.
+	var initEvent = 'init.pageResize';
+	dt.on(initEvent, function () {
+		dt.off(initEvent);
+		this._size();
+	}.bind(this));
 };
 
 
@@ -94,25 +116,30 @@ PageResize.prototype = {
 		var settings = this.s;
 		var dt = settings.dt;
 		var t = dt.table();
-		var offsetTop = $( settings.table ).offset().top;
 		var rows = $( 'tr', settings.body );
 		var rowHeight = rows.eq( rows.length > 1 ? 1 : 0 ).height(); // Attempt to use the second row if poss, for top and bottom border
 		var availableHeight = settings.host.height();
 		var scrolling = t.header().parentNode !== t.body().parentNode;
-		var delta = settings.delta;
+        var delta = settings.delta;
+
+        var offsetTop = this.sizes.offsetTop = this._getOffsetTop();
+        var tableHeight = this.sizes.tableHeight = this._getTableHeight();
+        var containerHeight = this.sizes.containerHeight = this._getContainerHeight();
+        var headerHeight = this.sizes.headerHeight = this._getHeaderHeight();
+        var footerHeight = this.sizes.footerHeight = this._getFooterHeight();
 
 		// Subtract the height of the header, footer and the elements
 		// surrounding the table
 		if ( ! scrolling ) {
 			if ( t.header() ) {
-			    availableHeight -= settings.header.height();
+			    availableHeight -= headerHeight;
 			}
 			if ( t.footer() ) {
-			    availableHeight -= settings.footer.height();
+			    availableHeight -= footerHeight;
 			}
 		}
 		availableHeight -= offsetTop;
-		availableHeight -= settings.container.height() - ( offsetTop + settings.table.height() );
+		availableHeight -= containerHeight - ( offsetTop + tableHeight );
 
 		if ( !isNaN( parseFloat( delta ) ) && isFinite( delta ) ) {
 			availableHeight -= delta;
@@ -149,21 +176,42 @@ PageResize.prototype = {
 			var body = this.contentDocument.body;
 			var height = body.offsetHeight;
 
-			this.contentDocument.defaultView.onresize = function () {
-				var newHeight = body.clientHeight || body.offsetHeight;
+            this.contentDocument.defaultView.onresize = function () {
 
-				if ( newHeight !== height ) {
-					height = newHeight;
+                var newHeight = body.clientHeight || body.offsetHeight;
+                if (newHeight !== height) {
+                    height = newHeight;
+                    that._size();
+                    return;
+                }
 
-					that._size();
-				}
+                // Width changes might lead to layout changes, which might require
+                // resizing the table
+                if (that.sizes.offsetTop !== that._getOffsetTop()
+                    || that.sizes.containerHeight !== that._getContainerHeight()
+                    || that.sizes.tableHeight !== that._getTableHeight()
+                    || that.sizes.headerHeight !== that._getHeaderHeight()
+                    || that.sizes.footerHeight !== that._getFooterHeight()) {
+                    that._size();
+                    return;
+                }
+
 			};
 		};
 
 		obj
 			.appendTo( this.s.host )
 			.attr( 'data', 'about:blank' );
-	}
+
+		this.s.obj = obj;
+	},
+
+    _getOffsetTop: function () { return $(this.s.table).offset().top; },
+    _getTableHeight: function () { return this.s.table.height(); },
+    _getContainerHeight: function () { return this.s.container.height(); },
+    _getHeaderHeight: function () { return this.s.dt.table().header() ? this.s.header.height() : 0; },
+    _getFooterHeight: function () { return this.s.dt.table().footer() ? this.s.footer.height() : 0; }
+
 };
 
 

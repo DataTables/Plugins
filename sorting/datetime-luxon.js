@@ -29,13 +29,11 @@
 }(function ($, luxon) {
 
 function strip (d) {
-	if ( typeof d === 'string' ) {
-		// Strip HTML tags and newline characters if possible
-		d = d.replace(/(<.*?>)|(\r?\n|\r)/g, '');
+	// Strip HTML tags and newline characters if possible
+	d = d.replace(/(<.*?>)|(\r?\n|\r)/g, '');
 
-		// Strip out surrounding white space
-		d = d.trim();
-	}
+	// Strip out surrounding white space
+	d = d.trim();
 
 	return d;
 }
@@ -45,25 +43,37 @@ $.fn.dataTable.luxon = function ( format, locale, reverseEmpties ) {
 
 	// Add type detection
 	types.detect.unshift( function ( d ) {
-		d = strip(d);
-
-		// Null and empty values are acceptable
-		if ( d === '' || d === null ) {
+		// Null values are acceptable
+		if ( d === null ) {
 			return 'luxon-'+format;
-		}
+                }
+		if ( typeof d === 'string' ) {
+			d = strip(d);
 
-		return luxon.DateTime.fromFormat( d, format).isValid ?
-			'luxon-'+format :
-			null;
+			// Empty values are acceptable
+			if ( d === '' ) {
+				return 'luxon-'+format;
+			}
+
+			return luxon.DateTime.fromFormat( d, format).isValid ?
+				'luxon-'+format :
+				null;
+		} else {
+			return null;
+                }
 	} );
 
 	// Add sorting method - use an integer for the sorting
 	types.order[ 'luxon-'+format+'-pre' ] = function ( d ) {
-		d = strip(d);
-		
-		return !luxon.DateTime.fromFormat(d, format).isValid ?
-			(reverseEmpties ? -Infinity : Infinity) :
-			parseInt( luxon.DateTime.fromFormat( d, format).ts, 10 );
+		if ( typeof d === 'string' ) {
+			d = strip(d);
+
+			return !luxon.DateTime.fromFormat(d, format).isValid ?
+				(reverseEmpties ? -Infinity : Infinity) :
+				parseInt( luxon.DateTime.fromFormat( d, format).ts, 10 );
+		} else {
+			return null;
+                }
 	};
 };
 

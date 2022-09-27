@@ -97,12 +97,8 @@
 $.fn.dataTable.render.moment = function ( from, to, locale ) {
 	// Argument shifting
 	if ( arguments.length === 1 ) {
-		locale = 'en';
 		to = from;
 		from = 'YYYY-MM-DD';
-	}
-	else if ( arguments.length === 2 ) {
-		locale = 'en';
 	}
 
 	return function ( d, type, row ) {
