@@ -6,12 +6,6 @@
     "infoEmpty": "Afișate de la 0 la 0 din 0 înregistrări",
     "infoFiltered": "(filtrate dintr-un total de _MAX_ înregistrări)",
     "search": "Caută:",
-    "paginate": {
-        "first": "Prima",
-        "previous": "Precedenta",
-        "next": "Următoarea",
-        "last": "Ultima"
-    },
     "aria": {
         "sortAscending": "Sortează ascendent",
         "sortDescending": "Sortează descendent"
@@ -19,8 +13,8 @@
     "autoFill": {
         "cancel": "Anulează",
         "fill": "Completează",
-        "fillHorizontal": "Completeză celule orizonatl",
-        "fillVertical": "Completează celule vertical"
+        "fillVertical": "Completează celule vertical",
+        "fillHorizontal": "Completeză celule orizonal"
     },
     "buttons": {
         "csv": "CSV",
@@ -35,7 +29,13 @@
         "colvis": "Vizibilitate coloane",
         "copy": "Copie",
         "copyTitle": "Copie în Clipboard",
-        "colvisRestore": "Resetare vizibilitate"
+        "colvisRestore": "Resetare vizibilitate",
+        "copyKeys": "Apasă ctrl sau u2318 + C pentru a copia datele din tabel în clipboard-ul sistemului.<br \/><br \/>Pentru a anula, dați clic pe acest mesaj sau apăsați pe Escape.",
+        "createState": "Creează Stare",
+        "removeAllStates": "Înlătură Toate Stările",
+        "removeState": "Înlătură",
+        "renameState": "Redenumește",
+        "savedStates": "Salvează Stări"
     },
     "searchBuilder": {
         "add": "Adaugă",
@@ -45,8 +45,20 @@
         "logicAnd": "Și",
         "logicOr": "Sau"
     },
+    "loadingRecords": "Încarcă...",
+    "datetime": {
+        "previous": "Precedentă",
+        "next": "Următoare",
+        "hours": "Ore",
+        "minutes": "Minute",
+        "seconds": "Secunde",
+        "unknown": "Necunoscut",
+        "amPm": [
+            "AM",
+            "PM"
+        ]
+    },
     "editor": {
-        "close": "inchide",
         "create": {
             "button": "Nou",
             "title": "Crează o intrare nouă",
@@ -62,25 +74,20 @@
             "title": "Șterge",
             "submit": "Șterge"
         },
+        "close": "Închide",
         "error": {
-            "system": "O eroare a apărut."
+            "system": "A apărut o eroare."
         }
-    },
-    "loadingRecords": "Încarcă...",
-    "datetime": {
-        "previous": "Precedentă",
-        "next": "Următoare",
-        "hours": "Ore",
-        "minutes": "Minute",
-        "seconds": "Secunde",
-        "unknown": "Necunoscut",
-        "amPm": [
-            "AM",
-            "PM"
-        ]
     },
     "decimal": ",",
     "emptyTable": "Nu există date în tabel",
     "searchPlaceholder": "Caută în tabel",
-    "thousands": "."
+    "thousands": ".",
+    "infoThousands": ".",
+    "paginate": {
+        "first": "Prima pagină",
+        "last": "Ultima pagină",
+        "next": "Pagina următoare",
+        "previous": "Pagina precedentă"
+    }
 }

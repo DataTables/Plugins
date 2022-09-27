@@ -46,9 +46,17 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Alle Zeilen anzeigen",
-            "_": "%d Zeilen anzeigen"
+            "_": "%d Zeilen anzeigen",
+            "1": "Zeige 1 Zeile"
         },
-        "pdf": "PDF"
+        "pdf": "PDF",
+        "createState": "Ansicht erstellen",
+        "removeAllStates": "Alle Ansichten entfernen",
+        "removeState": "Entfernen",
+        "renameState": "Umbenennen",
+        "savedStates": "Gespeicherte Ansicht",
+        "stateRestore": "Ansicht %d",
+        "updateState": "Aktualisieren"
     },
     "autoFill": {
         "cancel": "Abbrechen",
@@ -97,8 +105,8 @@
                 "notEmpty": "Nicht leer",
                 "startsWith": "Startet mit",
                 "notContains": "enthält nicht",
-                "notStarts": "startet nicht mit",
-                "notEnds": "endet nicht mit"
+                "notStartsWith": "startet nicht mit",
+                "notEndsWith": "endet nicht mit"
             },
             "array": {
                 "equals": "ist gleich",
@@ -200,5 +208,35 @@
             "restore": "Änderungen zurücksetzen",
             "noMulti": "Dieses Feld kann nur einzeln bearbeitet werden, nicht als Teil einer Mengen-Änderung."
         }
+    },
+    "searchPlaceholder": "Suchen...",
+    "stateRestore": {
+        "creationModal": {
+            "button": "Erstellen",
+            "columns": {
+                "search": "Spalten Suche",
+                "visible": "Spalten Sichtbarkeit"
+            },
+            "name": "Name:",
+            "order": "Sortieren",
+            "paging": "Seiten",
+            "scroller": "Scroll Position",
+            "search": "Suche",
+            "searchBuilder": "Such-Baukasten",
+            "select": "Auswahl",
+            "title": "Neue Ansicht erstellen",
+            "toggleLabel": "Inkludiert:"
+        },
+        "duplicateError": "Eine Ansicht mit diesem Namen existiert bereits.",
+        "emptyError": "Name darf nicht leer sein.",
+        "emptyStates": "Keine gespeicherten Ansichten",
+        "removeConfirm": "Bist du dir sicher, dass du %s entfernen möchtest?",
+        "removeError": "Entfernen der Ansicht fehlgeschlagen.",
+        "removeJoiner": " und ",
+        "removeSubmit": "Entfernen",
+        "removeTitle": "Ansicht entfernen",
+        "renameButton": "Umbenennen",
+        "renameLabel": "Neuer Name für %s:",
+        "renameTitle": "Ansicht umbenennen"
     }
 }

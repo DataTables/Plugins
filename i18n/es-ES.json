@@ -92,8 +92,8 @@
                 "startsWith": "Empieza con",
                 "not": "Diferente de",
                 "notContains": "No Contiene",
-                "notStarts": "No empieza con",
-                "notEnds": "No termina con"
+                "notStartsWith": "No empieza con",
+                "notEndsWith": "No termina con"
             },
             "array": {
                 "not": "Diferente de",

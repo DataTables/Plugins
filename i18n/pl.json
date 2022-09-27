@@ -41,7 +41,14 @@
             "_": "Pokaż %d wierszy"
         },
         "pdf": "PDF",
-        "print": "Drukuj"
+        "print": "Drukuj",
+        "createState": "Utwórz stan",
+        "removeAllStates": "Usuń wszystkie stany",
+        "removeState": "Usuń",
+        "renameState": "Zmień nazwę",
+        "savedStates": "Zapisane stany",
+        "stateRestore": "Stan %d",
+        "updateState": "Aktualizuj"
     },
     "emptyTable": "Brak danych w tabeli",
     "searchBuilder": {
@@ -91,7 +98,10 @@
                 "equals": "Równa się",
                 "not": "Nie",
                 "notEmpty": "Nie pusty",
-                "startsWith": "Zaczyna się od"
+                "startsWith": "Zaczyna się od",
+                "notContains": "Nie zawiera",
+                "notStartsWith": "Nie zaczyna się od",
+                "notEndsWith": "Nie kończy się na"
             }
         },
         "deleteTitle": "Czyszczenie",
@@ -181,7 +191,9 @@
         "countFiltered": "{shown} ({total})",
         "emptyPanes": "Brak paneli wyszukań",
         "loadMessage": "Ładuję panele wyszukań",
-        "title": "Aktywne filtry"
+        "title": "Aktywne filtry",
+        "showMessage": "Pokaż wszystko",
+        "collapseMessage": "Rozwiń wszystko"
     },
     "select": {
         "cells": {
@@ -192,5 +204,37 @@
             "_": "zaznaczono %d kolumn",
             "1": "zaznaczono %d kolumnę"
         }
-    }
+    },
+    "stateRestore": {
+        "creationModal": {
+            "button": "Utwórz",
+            "columns": {
+                "search": "Wyszukiwanie kolumny",
+                "visible": "Widoczność kolumny"
+            },
+            "name": "Nazwa:",
+            "order": "Sortowanie",
+            "paging": "Stronicowanie",
+            "scroller": "Przewijanie",
+            "search": "Szukanie",
+            "searchBuilder": "Tworzenie zapytań",
+            "select": "Wybieranie",
+            "title": "Utwórz nowy stan",
+            "toggleLabel": "Zawiera:"
+        },
+        "duplicateError": "Stan o tej nazwie już istnieje.",
+        "emptyError": "Nazwa nie może być pusta.",
+        "emptyStates": "Brak zapisanych stanów",
+        "removeConfirm": "Czy na pewno chcesz usunąć %s?",
+        "removeError": "Nie udało się usunąć stanu.",
+        "removeJoiner": "oraz",
+        "removeSubmit": "Usuń",
+        "removeTitle": "Usuń stan",
+        "renameButton": "Zmień nazwę",
+        "renameLabel": "Nowa nazwa dla %s:",
+        "renameTitle": "Zmień nazwę stanu"
+    },
+    "decimal": ",",
+    "infoThousands": " ",
+    "thousands": " "
 }

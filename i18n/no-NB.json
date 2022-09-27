@@ -112,7 +112,9 @@
         },
         "emptyPanes": "Ingen s&oslash;kerute",
         "loadMessage": "Laster inn s&oslash;kerute...",
-        "title": "Aktive filter - %d"
+        "title": "Aktive filter - %d",
+        "showMessage": "Vis alle",
+        "collapseMessage": "Komprimer Alle"
     },
     "select": {
         "cells": {
@@ -153,10 +155,18 @@
         "remove": {
             "button": "Slett",
             "title": "Sletting",
-            "submit": "Slett"
+            "submit": "Slett",
+            "confirm": {
+                "_": "Er du sikker på at du vil slette %d rader?",
+                "1": "Er du sikker på at du vil slette 1 rad?"
+            }
         },
         "error": {
             "system": "En systemfeil har inntruffet (Mer informasjon)"
+        },
+        "multi": {
+            "restore": "Gjør om endringer",
+            "noMulti": "Dette feltet kan redigeres individuelt men ikke som del av en gruppe."
         }
     }
 }

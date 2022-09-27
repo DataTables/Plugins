@@ -168,8 +168,8 @@
                 "not": "No",
                 "notEmpty": "No buit",
                 "startsWith": "Comença amb",
-                "notEnds": "No acaba amb",
-                "notStarts": "No comença amb",
+                "notEndsWith": "No acaba amb",
+                "notStartsWith": "No comença amb",
                 "notContains": "No inclou"
             },
             "array": {

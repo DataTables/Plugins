@@ -123,8 +123,8 @@
                 "notEmpty": "Nije prazan",
                 "startsWith": "Počinje sa",
                 "notContains": "Ne sadrži",
-                "notStarts": "Ne počinje sa",
-                "notEnds": "Ne završava se sa"
+                "notStartsWith": "Ne počinje sa",
+                "notEndsWith": "Ne završava se sa"
             },
             "array": {
                 "equals": "Jednako",

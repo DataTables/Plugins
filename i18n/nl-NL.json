@@ -20,7 +20,8 @@
         "fill": "Vul alle cellen met <i>%d<\/i>",
         "fillHorizontal": "Vul cellen horizontaal",
         "fillVertical": "Vul cellen verticaal",
-        "cancel": "Annuleren"
+        "cancel": "Annuleren",
+        "info": "Voorbeeld automatisch aanvullen info"
     },
     "buttons": {
         "colvis": "Kolom zichtbaarheid",
@@ -35,7 +36,8 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Toon alle regels",
-            "_": "Toon %d regels"
+            "_": "Toon %d regels",
+            "1": "Toon 1 rij"
         },
         "pdf": "PDF",
         "print": "Print",
@@ -46,7 +48,8 @@
         "removeState": "Verwijder",
         "renameState": "Hernoem",
         "savedStates": "Opgeslagen",
-        "updateState": "Bijwerken"
+        "updateState": "Bijwerken",
+        "stateRestore": "Preset %d"
     },
     "processing": "Verwerken...",
     "decimal": ",",
@@ -89,8 +92,8 @@
                 "notEmpty": "Niet leeg",
                 "startsWith": "Start met",
                 "notContains": "Zonder",
-                "notEnds": "Eindigt niet met",
-                "notStarts": "Begint niet met"
+                "notEndsWith": "Eindigt niet met",
+                "notStartsWith": "Begint niet met"
             },
             "array": {
                 "equals": "Gelijk aan",

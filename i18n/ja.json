@@ -64,8 +64,8 @@
                 "notEmpty": "空白ではない",
                 "startsWith": "次の文字から始まる",
                 "notContains": "次の文字を含まない",
-                "notStarts": "次の文字で始まらない",
-                "notEnds": "次の文字で終わらない"
+                "notStartsWith": "次の文字で始まらない",
+                "notEndsWith": "次の文字で終わらない"
             }
         },
         "data": "項目",

@@ -135,8 +135,8 @@
                 "not": "Ei ole",
                 "notContains": "Ei sisalda",
                 "notEmpty": "Ei ole tühi",
-                "notEnds": "Ei lõppe",
-                "notStarts": "Ei alga",
+                "notEndsWith": "Ei lõppe",
+                "notStartsWith": "Ei alga",
                 "startsWith": "Algab"
             }
         },

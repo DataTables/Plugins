@@ -1,9 +1,6 @@
 {
-    "processing": "Sedang proses...",
-    "lengthMenu": "Tampilan _MENU_ entri",
     "zeroRecords": "Tidak ditemukan data yang sesuai",
     "info": "Tampilan _START_ sampai _END_ dari _TOTAL_ entri",
-    "infoEmpty": "Tampilan 0 hingga 0 dari 0 entri",
     "infoFiltered": "(disaring dari _MAX_ entri keseluruhan)",
     "search": "Cari:",
     "paginate": {
@@ -43,5 +40,12 @@
         "print": "Cetak"
     },
     "decimal": ",",
-    "emptyTable": "Tidak ada data di tabel"
+    "emptyTable": "Tidak ada data di tabel",
+    "infoEmpty": "Menampilkan 0 entri",
+    "infoPostFix": "Menampilkan _START_ sampai _END_ dari _TOTAL_ entri",
+    "infoThousands": ".",
+    "lengthMenu": "Tampilkan _MENU_ entri",
+    "loadingRecords": "Memuat . . .",
+    "processing": "Sedang memproses...",
+    "thousands": "."
 }

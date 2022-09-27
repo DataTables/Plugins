@@ -105,8 +105,8 @@
                 "notEmpty": "Dolu",
                 "startsWith": "İle başlar",
                 "notContains": "İçermeyen",
-                "notStarts": "Başlamayan",
-                "notEnds": "Bitmeyen"
+                "notStartsWith": "Başlamayan",
+                "notEndsWith": "Bitmeyen"
             },
             "array": {
                 "contains": "İçerir",

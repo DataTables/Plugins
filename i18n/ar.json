@@ -33,7 +33,8 @@
         "copyKeys": "زر <i>ctrl<\/i> أو <i>⌘<\/i> + <i>C<\/i> من الجدول<br>ليتم نسخها إلى الحافظة<br><br>للإلغاء اضغط على الرسالة أو اضغط على زر الخروج.",
         "pageLength": {
             "-1": "اظهار الكل",
-            "_": "إظهار %d أسطر"
+            "_": "إظهار %d أسطر",
+            "1": "اظهار سطر واحد"
         },
         "collection": "مجموعة",
         "copy": "نسخ",
@@ -46,7 +47,14 @@
         "copySuccess": {
             "1": "تم نسخ سطر واحد الى الحافظة",
             "_": "تم نسخ %ds أسطر الى الحافظة"
-        }
+        },
+        "createState": "تكوين حالة",
+        "removeAllStates": "ازالة جميع الحالات",
+        "removeState": "ازالة حالة",
+        "renameState": "تغيير اسم حالة",
+        "savedStates": "الحالات المحفوظة",
+        "stateRestore": "استرجاع حالة",
+        "updateState": "تحديث حالة"
     },
     "searchBuilder": {
         "add": "اضافة شرط",
@@ -55,9 +63,6 @@
         "data": "المعلومة",
         "logicAnd": "و",
         "logicOr": "أو",
-        "title": [
-            "منشئ البحث"
-        ],
         "value": "القيمة",
         "conditions": {
             "date": {
@@ -91,8 +96,8 @@
                 "endsWith": "تنتهي ب",
                 "equals": "تساوي",
                 "notContains": "لا تحتوي",
-                "notStarts": "لا تبدأ بـ",
-                "notEnds": "لا تنتهي بـ"
+                "notStartsWith": "لا تبدأ بـ",
+                "notEndsWith": "لا تنتهي بـ"
             },
             "array": {
                 "equals": "تساوي",
@@ -107,7 +112,13 @@
             "0": "فلاتر البحث",
             "_": "فلاتر البحث (%d)"
         },
-        "deleteTitle": "حذف فلاتر"
+        "deleteTitle": "حذف فلاتر",
+        "leftTitle": "محاذاة يسار",
+        "rightTitle": "محاذاة يمين",
+        "title": {
+            "0": "البحث المتقدم",
+            "_": "البحث المتقدم (فعال)"
+        }
     },
     "searchPanes": {
         "clearMessage": "ازالة الكل",
@@ -120,7 +131,8 @@
         "loadMessage": "جارِ التحميل ...",
         "title": "الفلاتر النشطة",
         "showMessage": "إظهار الجميع",
-        "collapseMessage": "إخفاء الجميع"
+        "collapseMessage": "إخفاء الجميع",
+        "emptyPanes": "لا يوجد مربع بحث"
     },
     "infoThousands": ",",
     "datetime": {
@@ -184,7 +196,9 @@
         },
         "multi": {
             "title": "قيم متعدية",
-            "restore": "تراجع"
+            "restore": "تراجع",
+            "info": "القيم المختارة تحتوى على عدة قيم لهذا المدخل. لتعديل وتحديد جميع القيم لهذا المدخل، اضغط او انتقل هنا، عدا ذلك سيبقى نفس القيم",
+            "noMulti": "هذا المدخل مفرد وليس ضمن مجموعة"
         }
     },
     "processing": "جارٍ المعالجة...",
@@ -197,15 +211,37 @@
                 "search": "إمكانية البحث للعمود",
                 "visible": "إظهار العمود"
             },
-            "toggleLabel": "تتضمن"
-        }
+            "toggleLabel": "تتضمن",
+            "button": "تكوين الحالة",
+            "name": "اسم الحالة",
+            "order": "فرز",
+            "paging": "تصحيف",
+            "scroller": "مكان السحب",
+            "search": "بحث",
+            "searchBuilder": "مكون البحث",
+            "select": "تحديد",
+            "title": "تكوين حالة جديدة"
+        },
+        "duplicateError": "حالة مكررة بنفس الاسم",
+        "emptyError": "لا يسمح بأن يكون اسم الحالة فارغة.",
+        "emptyStates": "لا توجد حالة محفوظة",
+        "removeConfirm": "هل أنت متأكد من حذف الحالة %s؟",
+        "removeError": "لم استطع ازالة الحالة.",
+        "removeJoiner": "و",
+        "removeSubmit": "حذف",
+        "removeTitle": "حذف حالة",
+        "renameButton": "تغيير اسم حالة",
+        "renameLabel": "الاسم الجديد للحالة %s:",
+        "renameTitle": "تغيير اسم الحالة"
     },
     "autoFill": {
         "cancel": "إلغاء الامر",
         "fill": "املأ كل الخلايا بـ <i>%d<\/i>",
         "fillHorizontal": "تعبئة الخلايا أفقيًا",
-        "fillVertical": "تعبئة الخلايا عموديا"
+        "fillVertical": "تعبئة الخلايا عموديا",
+        "info": "تعبئة تلقائية"
     },
     "decimal": ",",
-    "infoFiltered": "(مرشحة من مجموع _MAX_ مُدخل)"
+    "infoFiltered": "(مرشحة من مجموع _MAX_ مُدخل)",
+    "searchPlaceholder": "مثال بحث"
 }

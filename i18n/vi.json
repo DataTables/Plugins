@@ -23,7 +23,8 @@
         "copyTitle": "Sao chép vào clipboard",
         "pageLength": {
             "-1": "Xem tất cả các dòng",
-            "_": "Hiển thị %d dòng"
+            "_": "Hiển thị %d dòng",
+            "1": "Hiển thị 1 dòng"
         },
         "print": "In ấn",
         "createState": "Tạo trạng thái",
@@ -37,7 +38,6 @@
         "stateRestore": "Trạng thái %d",
         "updateState": "Cập nhật"
     },
-    "infoThousands": "`",
     "select": {
         "cells": {
             "1": "1 ô đang được chọn",
@@ -52,7 +52,6 @@
             "_": "%d dòng đang được chọn"
         }
     },
-    "thousands": "`",
     "searchBuilder": {
         "title": {
             "_": "Thiết lập tìm kiếm (%d)",
@@ -97,8 +96,8 @@
                 "notEmpty": "Không rỗng",
                 "startsWith": "Bắt đầu với",
                 "notContains": "Không chứa",
-                "notEnds": "Không kết thúc với",
-                "notStarts": "Không bắt đầu với"
+                "notEndsWith": "Không kết thúc với",
+                "notStartsWith": "Không bắt đầu với"
             },
             "array": {
                 "equals": "Bằng",
@@ -144,6 +143,20 @@
         "unknown": "-",
         "weekdays": [
             "Chủ nhật"
+        ],
+        "months": [
+            "Tháng Một",
+            "Tháng Hai",
+            "Tháng Ba",
+            "Tháng Tư",
+            "Tháng Năm",
+            "Tháng Sáu",
+            "Tháng Bảy",
+            "Tháng Tám",
+            "Tháng Chín",
+            "Tháng Mười",
+            "Tháng Mười Một",
+            "Tháng Mười Hai"
         ]
     },
     "emptyTable": "Không có dữ liệu",
@@ -221,5 +234,7 @@
         "renameButton": "Đổi tên",
         "renameLabel": "Tên mới cho %s:",
         "renameTitle": "Đổi tên trạng thái"
-    }
+    },
+    "infoThousands": ".",
+    "thousands": "."
 }

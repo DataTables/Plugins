@@ -93,8 +93,8 @@
                 "notEmpty": "Not Empty",
                 "startsWith": "Starts With",
                 "notContains": "Does Not Contain",
-                "notStarts": "Does Not Start With",
-                "notEnds": "Does Not End With"
+                "notStartsWith": "Does Not Start With",
+                "notEndsWith": "Does Not End With"
             },
             "array": {
                 "without": "Without",

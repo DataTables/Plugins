@@ -2,10 +2,6 @@
     "emptyTable": "Aucune donnée disponible dans le tableau",
     "loadingRecords": "Chargement...",
     "processing": "Traitement...",
-    "aria": {
-        "sortAscending": ": activer pour trier la colonne par ordre croissant",
-        "sortDescending": ": activer pour trier la colonne par ordre décroissant"
-    },
     "select": {
         "rows": {
             "_": "%d lignes sélectionnées",
@@ -59,8 +55,8 @@
                 "startsWith": "Commence par",
                 "equals": "Égal à",
                 "notContains": "Ne contient pas",
-                "notEnds": "Ne termine pas par",
-                "notStarts": "Ne commence pas par"
+                "notEndsWith": "Ne termine pas par",
+                "notStartsWith": "Ne commence pas par"
             },
             "array": {
                 "empty": "Vide",
@@ -86,7 +82,9 @@
             "0": "Recherche avancée",
             "_": "Recherche avancée (%d)"
         },
-        "value": "Valeur"
+        "value": "Valeur",
+        "leftTitle": "Désindenter le critère",
+        "rightTitle": "Indenter le critère"
     },
     "searchPanes": {
         "clearMessage": "Effacer tout",
@@ -109,14 +107,15 @@
         "copy": "Copier",
         "copySuccess": {
             "1": "1 ligne copiée dans le presse-papier",
-            "_": "%ds lignes copiées dans le presse-papier"
+            "_": "%d lignes copiées dans le presse-papier"
         },
         "copyTitle": "Copier dans le presse-papier",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
             "-1": "Afficher toutes les lignes",
-            "_": "Afficher %d lignes"
+            "_": "Afficher %d lignes",
+            "1": "Afficher 1 ligne"
         },
         "pdf": "PDF",
         "print": "Imprimer",
@@ -130,7 +129,6 @@
         "updateState": "Mettre à jour"
     },
     "decimal": ",",
-    "search": "Rechercher:",
     "datetime": {
         "previous": "Précédent",
         "next": "Suivant",
@@ -237,5 +235,11 @@
         "previous": "Précédente"
     },
     "zeroRecords": "Aucune entrée correspondante trouvée",
-    "thousands": " "
+    "aria": {
+        "sortAscending": " : activer pour trier la colonne par ordre croissant",
+        "sortDescending": " : activer pour trier la colonne par ordre décroissant"
+    },
+    "infoThousands": " ",
+    "search": "Rechercher :",
+    "thousands": " "
 }

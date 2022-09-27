@@ -1,11 +1,9 @@
 {
     "emptyTable": "Nenhum registro encontrado",
     "info": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
-    "infoEmpty": "Mostrando 0 até 0 de 0 registros",
     "infoFiltered": "(Filtrados de _MAX_ registros)",
     "infoThousands": ".",
     "loadingRecords": "Carregando...",
-    "processing": "Processando...",
     "zeroRecords": "Nenhum registro encontrado",
     "search": "Pesquisar",
     "paginate": {
@@ -106,8 +104,8 @@
                 "notEmpty": "Não Vazio",
                 "startsWith": "Começa Com",
                 "notContains": "Não contém",
-                "notStarts": "Não começa com",
-                "notEnds": "Não termina com"
+                "notStartsWith": "Não começa com",
+                "notEndsWith": "Não termina com"
             },
             "array": {
                 "contains": "Contém",
@@ -229,16 +227,19 @@
             "title": "Criar novo estado",
             "toggleLabel": "Inclui:"
         },
-        "duplicateError": "Já existe um estado com esse nome",
-        "emptyError": "Não pode ser vazio",
         "emptyStates": "Nenhum estado salvo",
         "removeConfirm": "Confirma remover %s?",
-        "removeError": "Falha ao remover estado",
         "removeJoiner": "e",
         "removeSubmit": "Remover",
         "removeTitle": "Remover estado",
         "renameButton": "Renomear",
         "renameLabel": "Novo nome para %s:",
-        "renameTitle": "Renomear estado"
-    }
+        "renameTitle": "Renomear estado",
+        "duplicateError": "Já existe um estado com esse nome!",
+        "emptyError": "Não pode ser vazio!",
+        "removeError": "Falha ao remover estado!"
+    },
+    "infoEmpty": "Mostrando 0 até 0 de 0 registro(s)",
+    "processing": "Carregando...",
+    "searchPlaceholder": "Buscar registros"
 }

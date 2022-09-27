@@ -19,7 +19,8 @@
         "fill": "Fyld alle celler med <i>%d<i><\/i><\/i>",
         "fillHorizontal": "Fyld celler horisontalt",
         "fillVertical": "Fyld celler vertikalt",
-        "cancel": "Annuller"
+        "cancel": "Annuller",
+        "info": "information"
     },
     "buttons": {
         "copy": "Kopi",
@@ -28,7 +29,8 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Vis alle rækker",
-            "_": "Vis %d rækker"
+            "_": "Vis %d rækker",
+            "1": "Vis 1 række"
         },
         "pdf": "PDF",
         "print": "Udskriv",
@@ -39,7 +41,14 @@
         "copySuccess": {
             "1": "Kopieret en række til udklipsholder",
             "_": "Kopieret %ds rækker til udklipsholder"
-        }
+        },
+        "createState": "Opret stat",
+        "removeAllStates": "Fjern alle stater",
+        "removeState": "Fjern",
+        "renameState": "Omdøb",
+        "savedStates": "Gemte stater",
+        "stateRestore": "Stat %d",
+        "updateState": "Opdatér"
     },
     "emptyTable": "Ingen data tilgængelige i tabellen",
     "infoThousands": ".",
@@ -51,6 +60,10 @@
         "columns": {
             "1": "1 kolonne valgt",
             "_": "%d kolonner valgt"
+        },
+        "rows": {
+            "1": "1 række valgt",
+            "_": "%d rækker valgt"
         }
     },
     "thousands": ".",
@@ -74,14 +87,37 @@
         "hours": "Timer",
         "minutes": "Minutter",
         "seconds": "Sekunder",
-        "unknown": "-"
+        "unknown": "-",
+        "weekdays": {
+            "0": "Søn",
+            "1": "Man",
+            "3": "Ons",
+            "5": "Fre",
+            "6": "Lør",
+            "2": "Tir",
+            "4": "Tor"
+        },
+        "months": {
+            "0": "Januar",
+            "2": "Marts",
+            "3": "April",
+            "4": "Maj",
+            "5": "Juni",
+            "6": "Juli",
+            "7": "August",
+            "8": "September",
+            "9": "Oktober",
+            "10": "November",
+            "11": "December",
+            "1": "Febuar"
+        }
     },
     "editor": {
         "close": "Luk",
         "create": {
-            "button": "Ny",
             "title": "Opret ny række",
-            "submit": "Opret"
+            "submit": "Opret",
+            "button": "Opret"
         },
         "edit": {
             "button": "Ret",
@@ -102,7 +138,9 @@
         },
         "multi": {
             "title": "Flere værdier",
-            "restore": "Fortryd ændringer"
+            "restore": "Fortryd ændringer",
+            "info": "De valgte elementer indeholder flere værdier for dette felt. For at rette valgte til samme værdi klik eller tab her. Hvis feltet ikke berørs beholder felterne deres værdi",
+            "noMulti": "Dette felt kan ikke blive masse redigeret"
         }
     },
     "loadingRecords": "Henter...",
@@ -135,7 +173,7 @@
                 "not": "Ikke",
                 "notBetween": "Ikke mellem",
                 "notEmpty": "Ikke tom",
-                "gte": "Større end eller lig medLig med eller større end"
+                "gte": "Større end eller lig med"
             },
             "string": {
                 "contains": "Indeholder",
@@ -144,7 +182,10 @@
                 "equals": "Lig med",
                 "not": "Ikke",
                 "notEmpty": "Ikke tom",
-                "startsWith": "Starter med"
+                "startsWith": "Starter med",
+                "notContains": "Indeholder ikke",
+                "notStartsWith": "Starter ikke med",
+                "notEndsWith": "Ender ikke med"
             },
             "array": {
                 "equals": "Lig med",
@@ -161,7 +202,10 @@
         "logicOr": "Eller",
         "value": "Værdi",
         "title": {
-            "_": "Brugerdefineret filtrering"
+            "_": "Brugerdefineret filtrering",
+            "0": "Søge bygger"
         }
-    }
+    },
+    "infoPostFix": " ",
+    "searchPlaceholder": "søg.."
 }

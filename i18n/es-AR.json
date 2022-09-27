@@ -33,7 +33,29 @@
                 "before": "Luego",
                 "between": "Entre",
                 "empty": "Vacio",
-                "equals": "Igual"
+                "equals": "Igual",
+                "notBetween": "No entre"
+            },
+            "number": {
+                "between": "Entre",
+                "empty": "Vacío",
+                "equals": "Igual",
+                "gt": "Mayor a",
+                "gte": "Mayor o igual a",
+                "lt": "Menor a ",
+                "lte": "Menor o igual a ",
+                "not": "No",
+                "notBetween": "No entre",
+                "notEmpty": "No vacío"
+            },
+            "string": {
+                "contains": "Contiene",
+                "empty": "Vacío",
+                "endsWith": "Termina en ",
+                "equals": "Igual a ",
+                "not": "No",
+                "notEmpty": "No vacío",
+                "startsWith": "Comenza con "
             }
         },
         "data": "Datos",
@@ -121,5 +143,20 @@
         "sortDescending": ": orden descendente"
     },
     "info": "Mostrando _START_ a _END_ de _TOTAL_ entradas",
-    "infoEmpty": "Mostrando 0 a 0 de 0 entradas"
+    "infoEmpty": "Mostrando 0 a 0 de 0 entradas",
+    "buttons": {
+        "copy": "Copiar",
+        "copyTitle": "Copiar al portapapeles",
+        "csv": "CSV",
+        "excel": "Excel",
+        "pdf": "PDF",
+        "print": "Imprimir",
+        "createState": "Crear estado",
+        "removeAllStates": "Eliminar todos los estados",
+        "removeState": "Eliminar estado",
+        "renameState": "Renombrar estado",
+        "savedStates": "Estados guardados",
+        "stateRestore": "Estado %d",
+        "updateState": "Actualizar"
+    }
 }

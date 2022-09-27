@@ -34,17 +34,23 @@
             "_": "%ds ردیف داخل حافظه کپی شد"
         },
         "copyTitle": "کپی در حافظه",
-        "excel": "اکسل",
         "pageLength": {
             "-1": "نمایش همه ردیف‌ها",
-            "_": "نمایش %d ردیف"
+            "_": "نمایش %d ردیف",
+            "1": "نمایش 1 ردیف"
         },
         "print": "چاپ",
         "copyKeys": "برای کپی داده جدول در حافظه سیستم کلید های ctrl یا ⌘ + C را فشار دهید",
         "csv": "فایل CSV",
         "pdf": "فایل PDF",
         "renameState": "تغییر نام",
-        "updateState": "به روز رسانی"
+        "updateState": "به روز رسانی",
+        "excel": "فایل اکسل",
+        "createState": "ایجاد وضعیت جدول",
+        "removeAllStates": "حذف همه وضعیت ها",
+        "removeState": "حذف",
+        "savedStates": "وضعیت های ذخیره شده",
+        "stateRestore": "بازگشت به وضعیت %d"
     },
     "searchBuilder": {
         "add": "افزودن شرط",
@@ -60,42 +66,42 @@
                 "before": "بعد از",
                 "between": "میان",
                 "empty": "خالی",
-                "equals": "برابر",
                 "not": "نباشد",
                 "notBetween": "میان نباشد",
-                "notEmpty": "خالی نباشد"
+                "notEmpty": "خالی نباشد",
+                "equals": "برابر باشد با"
             },
             "number": {
                 "between": "میان",
                 "empty": "خالی",
-                "equals": "برابر",
                 "gt": "بزرگتر از",
                 "gte": "برابر یا بزرگتر از",
                 "lt": "کمتر از",
                 "lte": "برابر یا کمتر از",
                 "not": "نباشد",
                 "notBetween": "میان نباشد",
-                "notEmpty": "خالی نباشد"
+                "notEmpty": "خالی نباشد",
+                "equals": "برابر باشد با"
             },
             "string": {
                 "contains": "حاوی",
                 "empty": "خالی",
                 "endsWith": "به پایان می رسد با",
-                "equals": "برابر",
                 "not": "نباشد",
                 "notEmpty": "خالی نباشد",
                 "startsWith": "شروع  شود با",
                 "notContains": "نباشد حاوی",
-                "notEnds": "پایان نیابد با",
-                "notStarts": "شروع نشود با"
+                "notEndsWith": "پایان نیابد با",
+                "notStartsWith": "شروع نشود با",
+                "equals": "برابر باشد با"
             },
             "array": {
-                "equals": "برابر",
                 "empty": "خالی",
                 "contains": "حاوی",
                 "not": "نباشد",
                 "notEmpty": "خالی نباشد",
-                "without": "بدون"
+                "without": "بدون",
+                "equals": "برابر باشد با"
             }
         },
         "data": "اطلاعات",
@@ -136,7 +142,8 @@
         "emptyPanes": "صفحه جستجو وجود ندارد",
         "loadMessage": "در حال بارگیری صفحات جستجو ...",
         "title": "فیلترهای فعال - %d",
-        "showMessage": "نمایش همه"
+        "showMessage": "نمایش همه",
+        "collapseMessage": "بستن همه"
     },
     "loadingRecords": "در حال بارگذاری...",
     "datetime": {
@@ -160,8 +167,8 @@
             "11": "دسامبر",
             "3": "آوریل",
             "5": "جون",
-            "7": "آست",
-            "9": "اکتبر"
+            "9": "اکتبر",
+            "7": "اوت"
         },
         "unknown": "-",
         "weekdays": [
@@ -184,7 +191,7 @@
         "edit": {
             "button": "ویرایش",
             "title": "ویرایش",
-            "submit": "به‌روزرسانی"
+            "submit": "به روز رسانی"
         },
         "remove": {
             "button": "حذف",
@@ -197,7 +204,12 @@
         },
         "multi": {
             "restore": "واگرد",
-            "noMulti": "این ورودی را می توان به صورت جداگانه ویرایش کرد، اما نه بخشی از یک گروه"
+            "noMulti": "این ورودی را می توان به صورت جداگانه ویرایش کرد، اما نه بخشی از یک گروه",
+            "title": "مقادیر متعدد",
+            "info": "مقادیر متعدد"
+        },
+        "error": {
+            "system": "خطایی رخ داده (اطلاعات بیشتر)"
         }
     },
     "decimal": ".",
@@ -214,13 +226,20 @@
             "search": "جستجو",
             "select": "انتخاب",
             "title": "ایجاد وضعیت جدید",
-            "toggleLabel": "شامل:"
+            "toggleLabel": "شامل:",
+            "scroller": "موقعیت جدول (اسکرول)",
+            "searchBuilder": "صفحه جستجو"
         },
         "emptyError": "نام نمیتواند خالی باشد.",
         "removeConfirm": "آیا از حذف %s مطمئنید؟",
         "removeJoiner": "و",
-        "removeSubmit": "حذف",
         "renameButton": "تغییر نام",
-        "renameLabel": "نام جدید برای $s :"
+        "renameLabel": "نام جدید برای $s :",
+        "duplicateError": "وضعیتی با این نام از پیش ذخیره شده.",
+        "emptyStates": "هیچ وضعیتی ذخیره نشده",
+        "removeError": "حذف با خطا موماجه شد",
+        "removeSubmit": "حذف وضعیت",
+        "removeTitle": "حذف وضعیت جدول",
+        "renameTitle": "تغییر نام وضعیت"
     }
 }

@@ -120,7 +120,6 @@
     },
     "datetime": {
         "previous": "Prethodno",
-        "next": "Slijedeće",
         "hours": "Sati",
         "minutes": "Minute",
         "seconds": "Sekunde",
@@ -128,6 +127,21 @@
         "amPm": [
             "AM",
             "PM"
+        ],
+        "next": "Sljedeće",
+        "months": [
+            "siječanj",
+            "veljača",
+            "ožujak",
+            "travanj",
+            "svibanj",
+            "lipanj",
+            "srpanj",
+            "kolovoz",
+            "rujan",
+            "listopad",
+            "studeni",
+            "prosinac"
         ]
     },
     "editor": {
@@ -160,5 +174,6 @@
             "restore": "Poništi promjene",
             "noMulti": "Ovaj unos može biti uređen samostalno, ali ne kao dio grupe."
         }
-    }
+    },
+    "decimal": ","
 }

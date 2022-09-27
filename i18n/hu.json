@@ -50,7 +50,14 @@
         },
         "pdf": "PDF",
         "print": "Nyomtat",
-        "copyKeys": "A táblázat adatainak vágólapra másolásához nyomja meg a CTRL vagy u2318 + C billentyűt!<br \/><br \/>A megszakításhoz kattintson az üzenetre, vagy nyomja meg az ESC billentyűt!"
+        "copyKeys": "A táblázat adatainak vágólapra másolásához nyomja meg a CTRL vagy u2318 + C billentyűt!<br \/><br \/>A megszakításhoz kattintson az üzenetre, vagy nyomja meg az ESC billentyűt!",
+        "createState": "Állapot mentése",
+        "removeAllStates": "Mentett állapotok törlése",
+        "removeState": "Törlés",
+        "renameState": "Átnevezés",
+        "savedStates": "Mentett állapotok",
+        "stateRestore": "%d. állapot",
+        "updateState": "Frissítés"
     },
     "autoFill": {
         "cancel": "Megszakítás",
@@ -96,7 +103,10 @@
                 "equals": "Egyenlő",
                 "not": "Nem",
                 "notEmpty": "Nem üres",
-                "startsWith": "Kezdődik"
+                "startsWith": "Kezdődik",
+                "notContains": "Nem tartalmazza",
+                "notStartsWith": "Nem kezdődik",
+                "notEndsWith": "Nem végződik"
             },
             "array": {
                 "equals": "Egyenlő",
@@ -128,7 +138,8 @@
         "emptyPanes": "Nincsenek szűrőpanelek",
         "loadMessage": "Szűrőpanelek betöltése",
         "title": "Aktív szűrőpanelek: %d",
-        "showMessage": "Mindet megmutat"
+        "showMessage": "Mindet megmutat",
+        "collapseMessage": "Mindet összecsuk"
     },
     "datetime": {
         "previous": "Előző",
@@ -186,5 +197,34 @@
         }
     },
     "infoEmpty": "Nincs találat",
-    "thousands": "&nbsp;"
+    "thousands": "&nbsp;",
+    "stateRestore": {
+        "creationModal": {
+            "button": "Létrehozás",
+            "columns": {
+                "search": "Oszlopkeresők",
+                "visible": "Oszlop láthatóság"
+            },
+            "name": "Név:",
+            "order": "Rendezés",
+            "paging": "Oldalszám",
+            "scroller": "Görgetés pozíciója",
+            "search": "Kereső",
+            "searchBuilder": "Keresési feltételek",
+            "select": "Kijelölések",
+            "title": "Állapot mentése",
+            "toggleLabel": "Tartalmazza:"
+        },
+        "duplicateError": "Ilyen névvel már létezik mentett állapot.",
+        "emptyError": "A név nem lehet üres.",
+        "emptyStates": "Nincs mentett állapot",
+        "removeConfirm": "Biztos törlöd %s állapotot?",
+        "removeError": "Nem sikerült törölni a mentett állapotot.",
+        "removeJoiner": "és",
+        "removeSubmit": "Törlés",
+        "removeTitle": "Mentett állapot törlése",
+        "renameButton": "Átnevezés",
+        "renameLabel": "%s új neve:",
+        "renameTitle": "Mentett állapot átnevezése"
+    }
 }
