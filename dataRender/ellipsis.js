@@ -78,6 +78,13 @@ jQuery.fn.dataTable.render.ellipsis = function ( cutoff, wordbreak, escapeHtml )
 			return d;
 		}
 
+		var outerTag = false
+		if (d.includes("href")) {
+			var wrapper = $(d).clone().empty().prop('outerHTML'); 
+			d = jQuery(d).text();
+			outerTag = true			
+		}
+
 		var shortened = d.substr(0, cutoff-1);
 
 		// Find the last white space character in the string
@@ -90,6 +97,10 @@ jQuery.fn.dataTable.render.ellipsis = function ( cutoff, wordbreak, escapeHtml )
 			shortened = esc( shortened );
 		}
 
-		return '<span class="ellipsis" title="'+esc(d)+'">'+shortened+'&#8230;</span>';
+		if (outerTag) {
+			return $(wrapper).html('<span class="ellipsis" title="'+esc(d)+'">'+shortened+'&#8230;</span>')[0].outerHTML
+		} else {
+			return '<span class="ellipsis" title="'+esc(d)+'">'+shortened+'&#8230;</span>';
+		}		
 	};
 };
