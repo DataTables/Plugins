@@ -21,14 +21,19 @@
  *    $('#myTable').DataTable({
  *        conditionalPaging: {
  *            style: 'fade',
- *            speed: 500 // optional
+ *            speed: 500, // optional
+ *            showPaginate: false, // show Page-Navigation ("Previous", "1", "Next"), default false
+ *            showInfo: false, // show "Showing page 1 of x", default false
+ *            showLength: false, // show "Display 10 records per page", default false
+ *            showFilter: true, // show "Search", default true
+ *            keepVisible: true // if the pagination was showed once, it stays visible - e.g. on searching, default true
  *        }
  *    });
  */
 
-(function(window, document, $) {
-    $(document).on('init.dt', function(e, dtSettings) {
-        if ( e.namespace !== 'dt' ) {
+(function (window, document, $) {
+    $(document).on('init.dt', function (e, dtSettings) {
+        if (e.namespace !== 'dt') {
             return;
         }
 
@@ -38,34 +43,50 @@
             var config = $.isPlainObject(options) ? options : {},
                 api = new $.fn.dataTable.Api(dtSettings),
                 speed = 'slow',
-                conditionalPaging = function(e) {
-                    var $paging = $(api.table().container()).find('div.dataTables_paginate'),
+                conditionalPaging = function (e) {
+                    var $elementsToHide = $(),
+                        $paging = $(api.table().container()).find('div.dataTables_paginate'),
+                        $info = $(api.table().container()).find('div.dataTables_info'),
+                        $length = $(api.table().container()).find('div.dataTables_length'),
+                        $filter = $(api.table().container()).find('div.dataTables_filter'),
                         pages = api.page.info().pages;
 
+                    if (config.showPaginate === 'undefined' || config.showPaginate !== true)
+                        $elementsToHide.push($paging[0]);
+                    if (config.showInfo === 'undefined' || config.showInfo !== true)
+                        $elementsToHide.push($info[0]);
+                    if (config.showLength === 'undefined' || config.showLength !== true)
+                        $elementsToHide.push($length[0]);
+                    if ((config.showFilter !== 'undefined' && config.showFilter === false))
+                        $elementsToHide.push($filter[0]);
+                    if ((config.keepVisible !== 'undefined' && config.keepVisible === false))
+                        config._keepVisible = false;
+
                     if (e instanceof $.Event) {
-                        if (pages <= 1) {
+                        if (pages <= 1 && !config._keepVisible) {
                             if (config.style === 'fade') {
-                                $paging.stop().fadeTo(speed, 0);
+                                $elementsToHide.stop().fadeTo(speed, 0);
                             }
                             else {
-                                $paging.css('visibility', 'hidden');
+                                $elementsToHide.css('visibility', 'hidden');
                             }
                         }
                         else {
                             if (config.style === 'fade') {
-                                $paging.stop().fadeTo(speed, 1);
+                                $elementsToHide.stop().fadeTo(speed, 1);
                             }
                             else {
-                                $paging.css('visibility', '');
+                                $elementsToHide.css('visibility', '');
                             }
+                            config._keepVisible = true;
                         }
                     }
                     else if (pages <= 1) {
                         if (config.style === 'fade') {
-                            $paging.css('opacity', 0);
+                            $elementsToHide.css('opacity', 0);
                         }
                         else {
-                            $paging.css('visibility', 'hidden');
+                            $elementsToHide.css('visibility', 'hidden');
                         }
                     }
                 };
