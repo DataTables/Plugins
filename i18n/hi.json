@@ -12,7 +12,6 @@
         "next": "अगला",
         "last": "अंतिम"
     },
-    "decimal": ".",
     "emptyTable": "तालिका में आंकड़े उपलब्ध नहीं है",
     "aria": {
         "sortAscending": "आरोही क्रम",
@@ -36,5 +35,37 @@
         "pdf": "पीडीएफ",
         "print": "छपाई"
     },
-    "thousands": "हज़ार"
+    "thousands": "हज़ार",
+    "decimal": "दशमलव",
+    "searchBuilder": {
+        "add": "जोड़ना",
+        "clearAll": "सभी साफ करें",
+        "condition": "शर्त",
+        "data": "जानकारी",
+        "leftTitle": "बायां शीर्षक",
+        "rightTitle": "सही शीर्षक",
+        "value": "कीमत"
+    },
+    "searchPanes": {
+        "count": "गिनती करना",
+        "title": "शीर्षक",
+        "showMessage": "संदेश दिखाओ"
+    },
+    "datetime": {
+        "previous": "पहले का",
+        "next": "अगला",
+        "hours": "घंटे",
+        "minutes": "मिनट",
+        "seconds": "सेकंड"
+    },
+    "editor": {
+        "error": {
+            "system": "त्रुटि प्रणाली"
+        },
+        "multi": {
+            "title": "बहु शीर्षक"
+        }
+    },
+    "loadingRecords": "प्रगति पे हैं ...",
+    "searchPlaceholder": "खोजें ..."
 }

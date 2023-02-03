@@ -139,6 +139,10 @@
         "columns": {
             "1": "1 column selected",
             "_": "%d columns selected"
+        },
+        "rows": {
+            "1": "1 row selected",
+            "_": "%d rows selected"
         }
     },
     "datetime": {

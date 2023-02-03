@@ -82,7 +82,18 @@
                 "equals": "Дорівнює",
                 "not": "Не",
                 "notEmpty": "Не пусто",
-                "startsWith": "Починається з"
+                "startsWith": "Починається з",
+                "notContains": "Не містить",
+                "notStartsWith": "Не починається з",
+                "notEndsWith": "Не закінчується на"
+            },
+            "array": {
+                "equals": "Дорівнює",
+                "empty": "Пустий",
+                "contains": "Містить",
+                "not": "Не",
+                "notEmpty": "Не пустий",
+                "without": "Без"
             }
         },
         "data": "Дата",
@@ -107,7 +118,9 @@
         "countFiltered": "{shown} ({total})",
         "emptyPanes": "Немає Пошукових Панелей",
         "loadMessage": "Завантаження Пошукових Панелей",
-        "title": "Активній фільтри - %d"
+        "title": "Активній фільтри - %d",
+        "showMessage": "Показати всі",
+        "collapseMessage": "Приховати всі"
     },
     "select": {
         "cells": {
@@ -168,5 +181,6 @@
             "П'ятниця",
             "Субота"
         ]
-    }
+    },
+    "searchPlaceholder": "Пошук"
 }

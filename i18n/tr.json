@@ -232,13 +232,13 @@
         "duplicateError": "Bu Görünüm Daha Önce Tanımlanmış",
         "emptyError": "Görünüm Boş Olamaz",
         "emptyStates": "Herhangi Bir Görünüm Yok",
-        "removeConfirm": "Görünümü Silmek İstediğinize Eminminisiniz?",
-        "removeError": "Görünüm Silinemedi",
         "removeJoiner": "ve",
         "removeSubmit": "Sil",
         "removeTitle": "Görünüm Sil",
         "renameButton": "Değiştir",
         "renameLabel": "Görünüme Yeni İsim Ver -&gt; %s:",
-        "renameTitle": "Görünüm İsmini Değiştir"
+        "renameTitle": "Görünüm İsmini Değiştir",
+        "removeConfirm": "Görünümü silmek istediğinize emin misiniz?",
+        "removeError": "Görünüm silinemedi"
     }
 }

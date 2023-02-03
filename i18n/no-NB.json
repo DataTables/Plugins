@@ -18,7 +18,8 @@
         "cancel": "Avbryt",
         "fillHorizontal": "Fyll celler horisontalt",
         "fillVertical": "Fyll celler vertikalt",
-        "fill": "Fyll alle celler med <i>%d<\/i>"
+        "fill": "Fyll alle celler med <i>%d<\/i>",
+        "info": "&lt;i&gt;Tom streng&lt;\/i&gt;"
     },
     "buttons": {
         "colvisRestore": "Gjennopprett synlighet",
@@ -31,14 +32,22 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Vis alle rader",
-            "_": "Vis %d rader"
+            "_": "Vis %d rader",
+            "1": "Vis én rad"
         },
         "pdf": "PDF",
         "print": "Utskrift",
         "collection": "Samling <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
         "colvis": "Kolonne-synlighet",
         "copyKeys": "Trykk ctrl eller u2318 + C for &aring; kopiere tabelldata til systemets utklippstavle.<br \/><br \/>For &aring; avbryte, klikk p&aring; denne meldingen eller trykk p&aring; escape.",
-        "copyTitle": "Kopier til utklippstavle"
+        "copyTitle": "Kopier til utklippstavle",
+        "createState": "Opprett tilstand",
+        "removeAllStates": "Fjern alle tilstander",
+        "removeState": "Fjern",
+        "renameState": "Nytt navn",
+        "savedStates": "Lagrede tilstander",
+        "stateRestore": "Tilstand %d",
+        "updateState": "Oppdater"
     },
     "decimal": ",",
     "searchBuilder": {
@@ -72,7 +81,10 @@
                 "not": "Ikke",
                 "notEmpty": "Ikke tom",
                 "startsWith": "Starter med",
-                "endsWith": "Slutter med"
+                "endsWith": "Slutter med",
+                "notContains": "Inneholder ikke",
+                "notStartsWith": "Starter ikke med",
+                "notEndsWith": "Slutter ikke med"
             },
             "array": {
                 "equals": "Er lik",
@@ -124,9 +136,12 @@
         "columns": {
             "1": "1 kolonne er valgt",
             "_": "%d kolonner er valgt"
+        },
+        "rows": {
+            "1": "1 rad valgt",
+            "_": "%d rader valgt"
         }
     },
-    "thousands": " ",
     "info": "Viser _START_ til _END_ av _TOTAL_ oppf&oslash;ringer",
     "infoEmpty": "Viser 0 til 0 av 0 oppf&oslash;ringer",
     "infoFiltered": "filtrert fra totalt _MAX_ oppf&oslash;ringer",
@@ -138,7 +153,34 @@
         "hours": "timer",
         "minutes": "minutter",
         "seconds": "sekunder",
-        "unknown": "ukjent"
+        "unknown": "ukjent",
+        "amPm": [
+            "am",
+            "pm"
+        ],
+        "weekdays": [
+            "Søn",
+            "Man",
+            "Tir",
+            "Ons",
+            "Tor",
+            "Fre",
+            "Lør"
+        ],
+        "months": [
+            "Januar",
+            "Februar",
+            "Mars",
+            "April",
+            "Mai",
+            "Juni",
+            "Juli",
+            "August",
+            "September",
+            "Oktober",
+            "November",
+            "Desember"
+        ]
     },
     "editor": {
         "close": "Lukk",
@@ -166,7 +208,9 @@
         },
         "multi": {
             "restore": "Gjør om endringer",
-            "noMulti": "Dette feltet kan redigeres individuelt men ikke som del av en gruppe."
+            "noMulti": "Dette feltet kan redigeres individuelt men ikke som del av en gruppe.",
+            "title": "Flere verdier"
         }
-    }
+    },
+    "thousands": " tusener"
 }

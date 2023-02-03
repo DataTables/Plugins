@@ -39,7 +39,8 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Onyesha safu zote",
-            "_": "Onyesha safu %d"
+            "_": "Onyesha safu %d",
+            "1": "Onyesha safu %d"
         },
         "pdf": "PDF",
         "print": "Chapisha",
@@ -47,7 +48,8 @@
         "removeAllStates": "Ondosha Majimbo yote",
         "removeState": "Ondosha",
         "renameState": "Sasiha Jina",
-        "updateState": "sasisha"
+        "updateState": "sasisha",
+        "savedStates": "Majimbo Yaliyohifadhiwa"
     },
     "decimal": ".",
     "searchBuilder": {
@@ -85,7 +87,16 @@
         "next": "Kesho",
         "previous": "Jana",
         "seconds": "Sekunde",
-        "unknown": "-"
+        "unknown": "-",
+        "weekdays": [
+            "J3",
+            "J4",
+            "J5",
+            "Alh",
+            "Ij",
+            "J1",
+            "J2"
+        ]
     },
     "editor": {
         "close": "Funga",
@@ -100,7 +111,9 @@
             "title": "Sasisha rekodi"
         },
         "remove": {
-            "button": "Futa"
+            "button": "Futa",
+            "title": "Futa",
+            "submit": "Futa"
         }
     }
 }

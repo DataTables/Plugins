@@ -31,7 +31,64 @@
             "_": "%d riviä kopioitu leikepöydälle"
         },
         "copyTitle": "Kopioi leikepöydälle",
-        "copyKeys": "Paina <i>ctrl<\/i> tai <i>⌘<\/i> + <i>C<\/i> kopioidaksesi taulukon arvot<br> leikepöydälle. <br><br>Peruuttaaksesi klikkaa tähän tai Esc."
+        "copyKeys": "Paina <i>ctrl<\/i> tai <i>⌘<\/i> + <i>C<\/i> kopioidaksesi taulukon arvot<br> leikepöydälle. <br><br>Peruuttaaksesi klikkaa tähän tai Esc.",
+        "colvisRestore": "Palauta oletusasetukset"
     },
-    "info": "Näytetään rivit _START_ - _END_ (yhteensä _TOTAL_)"
+    "info": "Näytetään rivit _START_ - _END_ (yhteensä _TOTAL_)",
+    "autoFill": {
+        "cancel": "Peruuta"
+    },
+    "datetime": {
+        "previous": "Edellinen",
+        "next": "Seuraava",
+        "hours": "Tunnit",
+        "minutes": "Minuutit",
+        "seconds": "Sekunnit",
+        "unknown": "-",
+        "amPm": [
+            "ap",
+            "ip"
+        ],
+        "weekdays": [
+            "Su",
+            "Ma",
+            "Ti",
+            "Ke",
+            "To",
+            "Pe",
+            "La"
+        ],
+        "months": [
+            "Tammikuu",
+            "Helmikuu",
+            "Maaliskuu",
+            "Huhtikuu",
+            "Toukokuu",
+            "Kesäkuu",
+            "Heinäkuu",
+            "Elokuu",
+            "Syyskuu",
+            "Lokakuu",
+            "Marraskuu",
+            "Joulukuu"
+        ]
+    },
+    "editor": {
+        "close": "Sulje",
+        "create": {
+            "button": "Uusi",
+            "title": "Otsikko",
+            "submit": "Tallenna"
+        },
+        "edit": {
+            "button": "Muokkaa",
+            "title": "Otsikko",
+            "submit": "Tallenna"
+        },
+        "remove": {
+            "button": "Poista",
+            "title": "Otsikko",
+            "submit": "Poista"
+        }
+    }
 }

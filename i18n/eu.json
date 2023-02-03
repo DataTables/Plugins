@@ -37,7 +37,14 @@
             "_": "Erakutsi %d lerro"
         },
         "pdf": "PDF",
-        "print": "Inprimatu"
+        "print": "Inprimatu",
+        "createState": "Sortu egoera",
+        "removeAllStates": "Ezabatu egoera guztiak",
+        "removeState": "Ezabatu",
+        "renameState": "Berrizendatu",
+        "savedStates": "Gordetako egoerak",
+        "stateRestore": "%d egoera",
+        "updateState": "Eguneratu"
     },
     "decimal": ",",
     "emptyTable": "Taula honetan ez dago datu erabilgarririk",
@@ -84,7 +91,18 @@
                 "equals": "berdina da",
                 "not": "ez da",
                 "notEmpty": "ez dago hutsik",
-                "startsWith": "Honekin hasten da"
+                "startsWith": "Honekin hasten da",
+                "notContains": "ez dauka hau",
+                "notStartsWith": "ez da honekin hasten",
+                "notEndsWith": "ez da honekin amaitzen"
+            },
+            "array": {
+                "equals": "da",
+                "empty": "hutsik",
+                "contains": "hau dauka",
+                "not": "ez da",
+                "notEmpty": "ez dago hutsik",
+                "without": "ez du hau"
             }
         },
         "data": "Datua",
@@ -109,7 +127,9 @@
         "countFiltered": "{shown} ({total})",
         "emptyPanes": "Ez dago bilaketa panelik",
         "loadMessage": "Bilaketa panelak kargatzen...",
-        "title": "Aktibo dauden filtroak - %d"
+        "title": "Aktibo dauden filtroak - %d",
+        "showMessage": "Erakutsi guztiak",
+        "collapseMessage": "Itxi guztiak"
     },
     "select": {
         "cells": {
@@ -121,5 +141,71 @@
             "_": "%d zutabe aukeratuta"
         }
     },
-    "thousands": "."
+    "thousands": ".",
+    "datetime": {
+        "previous": "Aurrekoa",
+        "next": "Hurrengoa",
+        "amPm": [
+            "am",
+            "pm"
+        ],
+        "weekdays": [
+            "Iga",
+            "Asl",
+            "Asr",
+            "Asz",
+            "Osg",
+            "Osr",
+            "Lar"
+        ],
+        "hours": "Orduak",
+        "minutes": "Minutu",
+        "seconds": "Segundoak",
+        "unknown": "-",
+        "months": [
+            "Urtarril",
+            "Otsail ",
+            "Martxo ",
+            "Apiril ",
+            "Maiatz ",
+            "Ekain ",
+            "Uztail ",
+            "Abuztu ",
+            "Irail ",
+            "Urri ",
+            "Azaro ",
+            "Abendu "
+        ]
+    },
+    "editor": {
+        "close": "Itxi",
+        "create": {
+            "button": "Berria",
+            "title": "Sarrera berria sortu",
+            "submit": "Sortu"
+        },
+        "edit": {
+            "button": "Aldatu",
+            "title": "Sarrera aldatu",
+            "submit": "Gorde"
+        },
+        "remove": {
+            "button": "Ezabatu",
+            "title": "Ezabatu",
+            "submit": "Ezabatu",
+            "confirm": {
+                "_": "Ziur zaude %d lerro ezabatu nahi dituzula?",
+                "1": "Ziur zaude lerro 1 ezabatu nahi duzula?"
+            }
+        },
+        "error": {
+            "system": "Sistemaren errorea gertatu da (&lt;a target=\"\\\" rel=\"nofollow\" href=\"\\\"&gt;More information&lt;\/a&gt;)."
+        },
+        "multi": {
+            "title": "Balio asko",
+            "info": "Aukeratutako elementuek hainbat balio dituzte eremu honentzat. Balio hori aldatu eta elementu guztiei berbera jartzeko egin klik edo sakatu hemen, bestela beren jatorrizko balioa gordeko dute.",
+            "restore": "Desegin aldaketak",
+            "noMulti": "Elementu hau bakarka aldatu daiteke baina ez talde baten parte gisa."
+        }
+    }
 }

@@ -132,6 +132,10 @@
         "columns": {
             "1": "1 columna seleccionada",
             "_": "%d columnas seleccionadas"
+        },
+        "rows": {
+            "1": "1 fila seleccionada",
+            "_": "%d filas seleccionadas"
         }
     },
     "thousands": ",",
@@ -210,8 +214,31 @@
     "stateRestore": {
         "removeTitle": "Eliminar",
         "creationModal": {
-            "search": "Buscar"
-        }
+            "search": "Buscar",
+            "button": "Crear",
+            "columns": {
+                "search": "Columna de búsqueda",
+                "visible": "Columna de visibilidad"
+            },
+            "name": "Nombre:",
+            "order": "Ordenar",
+            "paging": "Paginar",
+            "scroller": "Posición de desplazamiento",
+            "searchBuilder": "Creador de búsquedas",
+            "select": "Selector",
+            "title": "Crear nuevo",
+            "toggleLabel": "Incluye:"
+        },
+        "duplicateError": "Ya existe un valor con el mismo nombre",
+        "emptyError": "No puede ser vacío",
+        "emptyStates": "No se han guardado",
+        "removeConfirm": "Esta seguro de eliminar %s?",
+        "removeError": "Fallo al eliminar",
+        "removeJoiner": "y",
+        "removeSubmit": "Eliminar",
+        "renameButton": "Renombrar",
+        "renameLabel": "Nuevo nombre para %s:",
+        "renameTitle": "Renombrar"
     },
     "infoEmpty": "No hay datos para mostrar"
 }

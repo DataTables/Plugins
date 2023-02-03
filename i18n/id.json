@@ -194,5 +194,34 @@
         "error": {
             "system": "Terjadi kesalahan pada system. (<a target=\"\\\" rel=\"\\ nofollow\" href=\"\\\">Informasi Selebihnya<\/a>)."
         }
+    },
+    "stateRestore": {
+        "creationModal": {
+            "button": "Buat",
+            "columns": {
+                "search": "Pencarian Kolom",
+                "visible": "Visibilitas Kolom"
+            },
+            "name": "Nama:",
+            "order": "Penyortiran",
+            "paging": "Penomoran",
+            "scroller": "Posisi Scroll",
+            "search": "Pencarian",
+            "searchBuilder": "Pembangun Pencarian",
+            "select": "Pemilihan",
+            "title": "Buat State Baru",
+            "toggleLabel": "Termasuk:"
+        },
+        "duplicateError": "State dengan nama ini sudah ada.",
+        "emptyError": "Nama tidak boleh kosong.",
+        "emptyStates": "Tidak ada state yang disimpan.",
+        "removeConfirm": "Apakah Anda yakin ingin menghapus %s?",
+        "removeError": "Gagal menghapus state.",
+        "removeJoiner": "dan",
+        "removeSubmit": "Hapus",
+        "removeTitle": "Hapus State",
+        "renameButton": "Ganti Nama",
+        "renameLabel": "Nama Baru untuk %s:",
+        "renameTitle": "Ganti Nama State"
     }
 }

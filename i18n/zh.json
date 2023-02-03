@@ -169,8 +169,8 @@
         "multi": {
             "restore": "撤销更改",
             "title": "多个值",
-            "info": "选择的多个记录的此字段含有不同的值。要编辑并将所有记录的此字段设为相同的值，请单击或点按这里，否则它们会保留各自的值。",
-            "noMulti": "此字段可以单独编辑，不可以组合编辑。"
+            "noMulti": "此字段可以单独编辑，不可以组合编辑。",
+            "info": "选择的多条记录的此字段含有不同的值。要编辑并将所有记录的此字段都设为相同的值，请单击或点按这里，否则它们会保持各自的值不变。"
         },
         "remove": {
             "button": "删除",
@@ -185,9 +185,6 @@
             "system": "出现了系统错误 (<a target=\"\\\" rel=\"\\ nofollow\" href=\"\\\">更多信息&lt;\\\/a&gt;)。<\/a>"
         }
     },
-    "infoEmpty": "正在显示第 0 至 0 项数据，共 0 项",
-    "infoFiltered": "(筛选自全部_MAX_项数据)",
-    "lengthMenu": "显示 _MENU_ 项数据",
     "loadingRecords": "正在加载...",
     "processing": "正在处理...",
     "aria": {
@@ -196,7 +193,6 @@
     },
     "decimal": ".",
     "emptyTable": "表中没有数据",
-    "info": "正在显示第 _START_ 至 _END_ 项数据，共 _TOTAL_ 项",
     "select": {
         "cells": {
             "1": "已选择 1 个单元格",
@@ -222,12 +218,12 @@
             "name": "名称:",
             "order": "排序",
             "paging": "分页",
-            "scroller": "滚动位置",
             "search": "搜索",
             "searchBuilder": "搜索生成器",
             "select": "选择",
             "title": "创建新状态",
-            "toggleLabel": "包括:"
+            "toggleLabel": "包括:",
+            "scroller": "滚动定位"
         },
         "duplicateError": "已存在使用此名称的状态。",
         "emptyError": "名称不能为空。",
@@ -240,5 +236,9 @@
         "renameButton": "重命名",
         "renameLabel": "%s 的新名称:",
         "renameTitle": "重命名状态"
-    }
+    },
+    "info": "正在显示第 _START_ 至 _END_ 条记录，共 _TOTAL_ 条",
+    "infoEmpty": "正在显示第 0 至 0 条记录，共 0 条",
+    "infoFiltered": "(筛选自全部 _MAX_ 条记录)",
+    "lengthMenu": "显示 _MENU_ 条记录"
 }

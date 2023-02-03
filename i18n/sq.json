@@ -19,13 +19,20 @@
         "copyKeys": "Shtyp _ctr ose _⌘ + _C për të kopjuar të dhënat në Clipboard. Për të anulluar, kliko mesazhin ose shtyp butonin 'Escape'.",
         "copySuccess": {
             "_": "U kopjuan %d rreshta në clipboard",
-            "1": "U kojua 1 rresht në clipboard"
+            "1": "U kopjua 1 rresht në clipboard"
         },
         "copyTitle": "Kopjo në Clipboard",
         "pageLength": {
             "_": "Shfaq %d rreshta",
             "-1": "Shfaq të gjithë rreshtat"
-        }
+        },
+        "createState": "Krijo Gjendje",
+        "removeAllStates": "Shlyej Të Gjitha Gjendjet",
+        "removeState": "Shlyej",
+        "renameState": "Riemërto",
+        "savedStates": "Gjendjet e Ruajtura",
+        "stateRestore": "Shteti %d",
+        "updateState": "Përditëso"
     },
     "datetime": {
         "amPm": [
@@ -69,10 +76,10 @@
         "sortDescending": ": aktivizo për të renditur kolonën me vlera në zbritje"
     },
     "autoFill": {
-        "cancel": "Anullo",
         "fill": "Plotëso",
         "fillHorizontal": "Plotëso rreshtat",
-        "fillVertical": "Plotëso kolonat"
+        "fillVertical": "Plotëso kolonat",
+        "cancel": "Anulo"
     },
     "decimal": ",",
     "editor": {
@@ -92,7 +99,9 @@
         },
         "multi": {
             "restore": "Zhbëj ndryshimet",
-            "title": "Vlera të shumëfishta"
+            "title": "Vlera të shumëfishta",
+            "info": "Artikujt e selektuar përmbajnë vlera të ndryshme për këtë input. Për të edituar dhe t'i rivendosur të gjithë artikujt për këtë input me vlerën e njejtë, klikoni këtu, përndryshe ato do të mbajnë vlerat e tyre individuale.",
+            "noMulti": "Ky input mund të përditësohet individualisht, por jo si pjesë e një grupi."
         },
         "remove": {
             "button": "Fshi",
@@ -173,7 +182,13 @@
         "clearMessage": "Pastro të gjitha",
         "count": "{total}",
         "countFiltered": "{shown} ({total})",
-        "title": "Filtra aktivë - %d"
+        "title": "Filtra aktivë - %d",
+        "collapse": {
+            "0": "DritaretKerkimit",
+            "_": "DritaretKerkimit (%d)"
+        },
+        "emptyPanes": "Nuk ka dritare të kërkimit",
+        "loadMessage": "Duke ngarkuar dritaret e kërkimit"
     },
     "select": {
         "cells": {
@@ -185,5 +200,26 @@
             "1": "1 kolonë e zgjedhur"
         }
     },
-    "zeroRecords": "Nuk u gjet asnjë e dhënë"
+    "zeroRecords": "Nuk u gjet asnjë e dhënë",
+    "searchPlaceholder": "Vendmbajtës shembull",
+    "stateRestore": {
+        "creationModal": {
+            "button": "Krijo",
+            "columns": {
+                "search": "Kërkimi Kolonës",
+                "visible": "Pamja Kolonës"
+            },
+            "name": "Emri:",
+            "order": "Renditja",
+            "paging": "Faqezimi",
+            "scroller": "Pozicioni i lëvizjes",
+            "search": "Kërkimi",
+            "searchBuilder": "NdertuesiKerkimit",
+            "select": "Selekto",
+            "title": "Krijo Gjendje Të Re",
+            "toggleLabel": "Përfshin:"
+        },
+        "duplicateError": "Ekziton një gjendje me këtë emër.",
+        "emptyError": "Emri nuk mund të jetë i zbrazët."
+    }
 }

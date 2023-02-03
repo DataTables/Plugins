@@ -71,13 +71,16 @@
             "0": "Rozšířený filtr",
             "_": "Rozšířený filtr (%d)"
         },
-        "deleteTitle": "Smazat filtrovací pravidlo"
+        "deleteTitle": "Smazat filtrovací pravidlo",
+        "leftTitle": "Zrušení odsazení podmínky",
+        "rightTitle": "Odsazení podmínky"
     },
     "autoFill": {
         "cancel": "Zrušit",
         "fill": "Vyplň všechny buňky textem <i>%d<i><\/i><\/i>",
         "fillHorizontal": "Vyplň všechny buňky horizontálně",
-        "fillVertical": "Vyplň všechny buňky vertikálně"
+        "fillVertical": "Vyplň všechny buňky vertikálně",
+        "info": "Příklad automatického vyplňování"
     },
     "buttons": {
         "collection": "Kolekce <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
@@ -87,7 +90,8 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Zobrazit všechny řádky",
-            "_": "Zobrazit %d řádků"
+            "_": "Zobrazit %d řádků",
+            "1": "Zobraz 1 řádek"
         },
         "pdf": "PDF",
         "print": "Tisknout",
@@ -128,6 +132,10 @@
         "columns": {
             "1": "Vybrán 1 sloupec",
             "_": "Vybráno %d sloupců"
+        },
+        "rows": {
+            "1": "Vybrán 1 řádek",
+            "_": "Vybráno %d řádků"
         }
     },
     "aria": {
@@ -196,7 +204,11 @@
         "multi": {
             "title": "Mnohočetný výběr",
             "restore": "Vrátit změny",
-            "noMulti": "Toto pole může být editováno individuálně, ale ne jako soušást skupiny."
+            "noMulti": "Toto pole může být editováno individuálně, ale ne jako soušást skupiny.",
+            "info": "Vybrané položky obsahují různé hodnoty pro tento vstup. Chcete-li upravit a nastavit všechny položky tohoto vstupu na stejnou hodnotu, klikněte nebo klepněte sem, jinak si zachovají své individuální hodnoty."
+        },
+        "error": {
+            "system": "Došlo k systémové chybě (&lt;a target=\"\\\" rel=\"nofollow\" href=\"\\\"&gt;Více informací&lt;\/a&gt;)."
         }
     },
     "infoThousands": " ",
@@ -213,11 +225,11 @@
             "order": "Řazení",
             "paging": "Stránkování",
             "scroller": "Pozice skrolování",
-            "search": "Hledání",
-            "searchBuilder": "SearchBuilder",
             "select": "Výběr",
             "title": "Vytvořit nový Stav",
-            "toggleLabel": "Zahrnout"
+            "toggleLabel": "Zahrnout",
+            "search": "Filtrování",
+            "searchBuilder": "Rozšířené filtrování"
         },
         "duplicateError": "Stav s tímto názvem ji existuje.",
         "emptyError": "Název nemůže být prázný.",
@@ -230,5 +242,6 @@
         "renameButton": "Vymazat",
         "renameLabel": "Nové jméno pro %s:",
         "renameTitle": "Přejmenování Stavu"
-    }
+    },
+    "searchPlaceholder": "Příklad zástupného prvku"
 }

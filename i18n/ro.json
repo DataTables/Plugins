@@ -43,7 +43,27 @@
         "condition": "Condiție",
         "data": "Data",
         "logicAnd": "Și",
-        "logicOr": "Sau"
+        "logicOr": "Sau",
+        "button": {
+            "0": "Generator de căutare",
+            "_": "Generator de căutare (%d)"
+        },
+        "clearAll": "Curata tot",
+        "conditions": {
+            "date": {
+                "after": "După",
+                "before": "Inainte de",
+                "between": "Între",
+                "empty": "Gol"
+            }
+        },
+        "deleteTitle": "Ștergeți regula de filtrare",
+        "leftTitle": "Criterii Outdent",
+        "rightTitle": "Criterii de indentare",
+        "title": {
+            "0": "Generator de căutare",
+            "_": "Generator de căutare (%d)"
+        }
     },
     "loadingRecords": "Încarcă...",
     "datetime": {
@@ -56,6 +76,29 @@
         "amPm": [
             "AM",
             "PM"
+        ],
+        "weekdays": [
+            "lun",
+            "Mar",
+            "Mer",
+            "Joi",
+            "Vin",
+            "Sam",
+            "Dum"
+        ],
+        "months": [
+            "Ianuarie",
+            "Februarie",
+            "Martie",
+            "Aprilie",
+            "Mai",
+            "Iunie",
+            "Iulie",
+            "August",
+            "Septembrie",
+            "Octombrie",
+            "Noiembrie",
+            "Decembrie"
         ]
     },
     "editor": {
@@ -72,11 +115,21 @@
         "remove": {
             "button": "Șterge",
             "title": "Șterge",
-            "submit": "Șterge"
+            "submit": "Șterge",
+            "confirm": {
+                "_": "Sigur doriți să ștergeți %d rânduri?",
+                "1": "Sigur doriți să ștergeți 1 rând?"
+            }
         },
         "close": "Închide",
         "error": {
             "system": "A apărut o eroare."
+        },
+        "multi": {
+            "title": "Valori multiple",
+            "info": "Elementele selectate conțin valori diferite pentru această intrare. Pentru a edita și a seta toate elementele pentru această intrare la aceeași valoare, faceți clic sau atingeți aici, altfel își vor păstra valorile individuale.",
+            "restore": "Anulează modificările",
+            "noMulti": "Această intrare poate fi editată individual, dar nu face parte dintr-un grup."
         }
     },
     "decimal": ",",

@@ -3,7 +3,6 @@
     "lengthMenu": "הצג _MENU_ פריטים",
     "zeroRecords": "לא נמצאו רשומות מתאימות",
     "emptyTable": "לא נמצאו רשומות מתאימות",
-    "info": "_START_ עד _END_ מתוך _TOTAL_ רשומות",
     "infoEmpty": "0 עד 0 מתוך 0 רשומות",
     "infoFiltered": "(מסונן מסך _MAX_  רשומות)",
     "search": "חפש:",
@@ -22,7 +21,10 @@
         "count": "ספירה",
         "emptyPanes": "אין מסנני חיפוש",
         "loadMessage": "מסנני חיפוש בטעינה",
-        "title": "מסננים פעילים - %d"
+        "title": "מסננים פעילים - %d",
+        "showMessage": "הצג הכל",
+        "countFiltered": "{מוצג} ({סה\"כ})",
+        "collapseMessage": "מוטט הכל"
     },
     "aria": {
         "sortAscending": "מיון בסדר עולה",
@@ -31,11 +33,11 @@
     "autoFill": {
         "cancel": "ביטול",
         "fill": "מלא את כל התאים עם  <i>%d<i><\/i><\/i>",
-        "fillHorizontal": "מלא תאים מאוזן",
-        "fillVertical": "מלא תאים מאונך"
+        "fillHorizontal": "מלא תאים במאוזן",
+        "fillVertical": "מלא תאים במאונך",
+        "info": "מילוי אוטומטי"
     },
     "buttons": {
-        "collection": "קולקציה",
         "colvis": "נראות עמודות",
         "colvisRestore": "שחזור נראות",
         "copy": "העתק",
@@ -48,11 +50,20 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "הצג את כל הרשומות",
-            "_": "הצג %d רשומות"
+            "_": "הצג %d רשומות",
+            "1": "הצג רשומה אחת"
         },
         "pdf": "PDF",
         "print": "הדפס",
-        "copyKeys": "לחץ ctrl או u2318 + C על מנת להעתיק את תוכן הטבלה."
+        "copyKeys": "לחץ ctrl או u2318 + C על מנת להעתיק את תוכן הטבלה.",
+        "collection": "אוסף",
+        "createState": "צור מצב",
+        "removeAllStates": "הסר את כל המצבים",
+        "removeState": "הסר",
+        "renameState": "שנה שם",
+        "savedStates": "מצבים שמורים",
+        "stateRestore": "מצב %d",
+        "updateState": "עדכן"
     },
     "thousands": ",",
     "datetime": {
@@ -183,7 +194,9 @@
             "0": "בניית חיפוש",
             "_": "בניית חיפוש (%d)"
         },
-        "value": "ערך"
+        "value": "ערך",
+        "leftTitle": "הזח קריטריונים החוצה",
+        "rightTitle": "הזח קריטריונים פנימה"
     },
     "select": {
         "cells": {
@@ -198,5 +211,38 @@
             "1": "שורה אחת נבחרה",
             "_": "%d שורות נבחרו"
         }
-    }
+    },
+    "stateRestore": {
+        "creationModal": {
+            "button": "צור",
+            "columns": {
+                "search": "חיפוש עמודות",
+                "visible": "נראות עמודות"
+            },
+            "name": "שם:",
+            "order": "מיון",
+            "paging": "דפדוף",
+            "scroller": "מיקום גלילה",
+            "search": "חיפוש",
+            "searchBuilder": "בניית חיפוש",
+            "select": "בחירה",
+            "title": "צור מצב חדש",
+            "toggleLabel": "כולל:"
+        },
+        "emptyStates": "אין מצבים שמורים",
+        "removeSubmit": "הסר",
+        "removeTitle": "הסר מצב",
+        "renameButton": "שנה שם",
+        "renameLabel": "שם חדש עבור %s:",
+        "renameTitle": "שינוי שם מצב",
+        "duplicateError": "מצב עם השם הזה כבר קיים.",
+        "emptyError": "השם לא יכול להיות ריק.",
+        "removeConfirm": "האם אתה בטוח שברצונך להסיר %s?",
+        "removeError": "כשל בהסרת מצב.",
+        "removeJoiner": " וגם "
+    },
+    "infoThousands": ",",
+    "searchPlaceholder": "טקסט לחיפוש",
+    "info": "מציג _START_ עד _END_ מתוך _TOTAL_ רשומות",
+    "infoPostFix": "מציג _START_ עד _END_ מתוך _TOTAL_ רשומות"
 }
