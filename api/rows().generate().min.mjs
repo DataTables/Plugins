@@ -1,0 +1,2 @@
+/*! © SpryMedia Ltd - datatables.net/license */
+import DataTable from"datatables.net";DataTable.Api.register("rows().generate()",function(){return this.iterator("row",function(t,a){t.oApi._fnCreateTr(t,a)})});export default DataTable;

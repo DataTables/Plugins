@@ -1,0 +1,2 @@
+/*! © SpryMedia Ltd - datatables.net/license */
+import DataTable from"datatables.net";DataTable.Api.register("average()",function(){var t=this.flatten();return t.reduce(function(t,a){return+t+ +a},0)/t.length});export default DataTable;

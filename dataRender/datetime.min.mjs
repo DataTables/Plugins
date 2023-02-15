@@ -1,0 +1,2 @@
+/*! © SpryMedia Ltd - datatables.net/license */
+import DataTable from"datatables.net";DataTable.render.moment=function(n,r,o){return 1===arguments.length&&(r=n,n="YYYY-MM-DD"),function(t,e,a){return t?window.moment(t,n,o,!0).format("sort"===e||"type"===e?"x":r):"sort"===e||"type"===e?0:t}};export default DateTime;
