@@ -32,13 +32,13 @@ import DataTable from 'datatables.net';
 DataTable.render.multi = function (renderArray) {
     return function (d, type, row, meta) {
         for (var r = 0; r < renderArray.length; r++) {
-            if (typeof renderArray[r] === "function") {
+            if (typeof renderArray[r] === 'function') {
                 d = renderArray[r](d, type, row, meta);
             }
-            else if (typeof renderArray[r][type] === "function") {
+            else if (typeof renderArray[r][type] === 'function') {
                 d = renderArray[r][type](d, type, row, meta);
             }
-            else if (typeof renderArray[r]._ === "function") {
+            else if (typeof renderArray[r]._ === 'function') {
                 d = renderArray[r]._(d, type, row, meta);
             }
         }

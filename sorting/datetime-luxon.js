@@ -12,6 +12,7 @@
  * @summary Sort date and time in any format using luxon
  * @author [Allan Jardine](//datatables.net)
  * @depends DataTables 1.10+, luxon.js 1.0+
+ * @deprecated
  *
  * @example
  *    $.fn.dataTable.luxon( 'HH:mm MMM d, yy' );

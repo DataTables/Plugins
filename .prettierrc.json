@@ -1,5 +1,7 @@
 {
-	"arrowParens": "always",
+	"arrowParens": "avoid",
+	"breakBeforeElse": true,
+	"indentChains": true,
 	"printWidth": 80,
 	"proseWrap": "preserve",
 	"quoteProps": "as-needed",

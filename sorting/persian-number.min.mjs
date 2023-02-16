@@ -1,0 +1,2 @@
+/*! © SpryMedia Ltd, Khorshid - datatables.net/license */
+import DataTable from"datatables.net";function toEnglishNumber(e){for(var a=["۰","۱","۲","۳","۴","۵","۶","۷","۸","۹"],r=["0","1","2","3","4","5","6","7","8","9"],t=e,n=0;n<10;n++)var o=new RegExp(a[n],"g"),t=t.replace(o,r[n]);return t}DataTable.ext.order["kh-persian-numbers-pre"]=function(e,a){return parseFloat(toEnglishNumber(e))};export default DataTable;

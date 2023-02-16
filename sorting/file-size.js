@@ -1,3 +1,37 @@
+/*! © SpryMedia Ltd - datatables.net/license */
+
+(function( factory ){
+	if ( typeof define === 'function' && define.amd ) {
+		// AMD
+		define( ['datatables.net'], function ( $ ) {
+			return factory( $, window, document );
+		} );
+	}
+	else if ( typeof exports === 'object' ) {
+		// CommonJS
+		module.exports = function (root, $) {
+			if ( ! root ) {
+				// CommonJS environments without a window global must pass a
+				// root. This will give an error otherwise
+				root = window;
+			}
+
+			if ( ! $.fn.dataTable ) {
+				require('datatables.net')(root, $);
+			}
+
+			return factory( $, root, root.document );
+		};
+	}
+	else {
+		// Browser
+		factory( jQuery, window, document );
+	}
+}(function( $, window, document, undefined ) {
+'use strict';
+var DataTable = $.fn.dataTable;
+
+
 /**
  * When dealing with computer file sizes, it is common to append a post fix
  * such as B, KB, MB or GB to a string in order to easily denote the order of
@@ -17,15 +51,13 @@
  *       ]
  *    } );
  */
-
-jQuery.fn.dataTable.ext.type.order['file-size-pre'] = function ( data ) {
+DataTable.ext.type.order['file-size-pre'] = function (data) {
     if (data === null || data === '') {
         return 0;
     }
-
-    var matches = data.match( /^(\d+(?:\.\d+)?)\s*([a-z]+)/i );
+    var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
     var multipliers = {
-        b:  1,
+        b: 1,
         bytes: 1,
         kb: 1000,
         kib: 1024,
@@ -36,13 +68,15 @@ jQuery.fn.dataTable.ext.type.order['file-size-pre'] = function ( data ) {
         tb: 1000000000000,
         tib: 1099511627776,
         pb: 1000000000000000,
-        pib: 1125899906842624
+        pib: 1125899906842624,
     };
-
     if (matches) {
         var multiplier = multipliers[matches[2].toLowerCase()];
-        return parseFloat( matches[1] ) * multiplier;
-    } else {
-        return -1;
-    };
+        return parseFloat(matches[1]) * multiplier;
+    }
+    return -1;
 };
+
+
+return DataTable;
+}));

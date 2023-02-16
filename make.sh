@@ -31,6 +31,7 @@ function ts_plugin {
 		--moduleResolution node \
 		--outDir $DEST_DIR \
 		--declaration \
+		--allowSyntheticDefaultImports \
 		$SRC_FILE
 
 	# Remove import statements - the wrap will add them
@@ -70,34 +71,26 @@ PLUGINS="${DT_SRC}/extensions/Plugins"
 # 	ts_plugin $file
 # done
 
-for file in $PLUGINS/dataRender/src/*.ts; do
+# for file in $PLUGINS/dataRender/src/*.ts; do
+# 	ts_plugin $file
+# done
+
+# for file in $PLUGINS/features/*/src/*.ts; do
+# 	ts_plugin $file "jquery datatables.net"
+# done
+
+# for file in $PLUGINS/sorting/src/*.ts; do
+# 	ts_plugin $file
+# done
+
+# for file in $PLUGINS/type-detection/src/*.ts; do
+# 	ts_plugin $file
+# done
+
+for file in $PLUGINS/filtering/type-based/src/*.ts; do
 	ts_plugin $file
 done
 
-
-# scss_compile $PLUGINS/integration/jqueryui/dataTables.jqueryui.scss
-
-# js_compress $PLUGINS/features/searchHighlight/dataTables.searchHighlight.js
-# js_compress $PLUGINS/features/alphabetSearch/dataTables.alphabetSearch.js
-# js_compress $PLUGINS/features/lengthLinks/dataTables.lengthLinks.js
-# js_compress $PLUGINS/features/pageResize/dataTables.pageResize.js
-# js_compress $PLUGINS/features/scrollResize/dataTables.scrollResize.js
-# js_compress $PLUGINS/features/deepLink/dataTables.deepLink.js
-
-# js_compress $PLUGINS/integration/bootstrap/2/dataTables.bootstrap.js
-# js_compress $PLUGINS/integration/bootstrap/3/dataTables.bootstrap.js
-# js_compress $PLUGINS/integration/foundation/dataTables.foundation.js
-# js_compress $PLUGINS/integration/jqueryui/dataTables.jqueryui.js
-
-# js_compress $PLUGINS/features/searchPane/dataTables.searchPane.js
-# scss_compile $PLUGINS/features/searchPane/dataTables.searchPane.scss
-
-# js_compress $PLUGINS/features/searchFade/dataTables.searchFade.js
-# css_compress $PLUGINS/features/searchFade/dataTables.searchFade
-
-# js_compress $PLUGINS/features/slidingChild/dataTables.slidingChild.js
-
-# js_compress $PLUGINS/features/rowFill/dataTables.rowFill.js
 
 # # Only copying the integration files
 # rsync -r integration     $OUT_DIR

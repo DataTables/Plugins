@@ -1,3 +1,37 @@
+/*! © SpryMedia Ltd - datatables.net/license */
+
+(function( factory ){
+	if ( typeof define === 'function' && define.amd ) {
+		// AMD
+		define( ['datatables.net'], function ( $ ) {
+			return factory( $, window, document );
+		} );
+	}
+	else if ( typeof exports === 'object' ) {
+		// CommonJS
+		module.exports = function (root, $) {
+			if ( ! root ) {
+				// CommonJS environments without a window global must pass a
+				// root. This will give an error otherwise
+				root = window;
+			}
+
+			if ( ! $.fn.dataTable ) {
+				require('datatables.net')(root, $);
+			}
+
+			return factory( $, root, root.document );
+		};
+	}
+	else {
+		// Browser
+		factory( jQuery, window, document );
+	}
+}(function( $, window, document, undefined ) {
+'use strict';
+var DataTable = $.fn.dataTable;
+
+
 /**
  * This sorting type will replace DataTables' default string sort with one that
  * will use a locale aware collator. This is supported by IE11, Edge, Chrome,
@@ -21,66 +55,30 @@
  *
  * @example
  *    // Host's current locale
- *    $.fn.dataTable.ext.order.intl();
+ *    DataTable.intlOrder();
  *
  * @example
  *    // Explicit locale
- *    $.fn.dataTable.ext.order.intl('de-u-co-phonebk');
+ *    DataTable.intlOrder('de-u-co-phonebk');
  *
  * @example
  *    // Locale with configuration options
- *    $.fn.dataTable.ext.order.intl('fr', {
+ *    DataTable.intlOrder('fr', {
  *      sensitivity: 'base'
  *    } );
  */
-
-
-// UMD
-(function( factory ) {
-	"use strict";
-
-	if ( typeof define === 'function' && define.amd ) {
-		// AMD
-		define( ['jquery'], function ( $ ) {
-			return factory( $, window, document );
-		} );
-	}
-	else if ( typeof exports === 'object' ) {
-		// CommonJS
-		module.exports = function (root, $) {
-			if ( ! root ) {
-				root = window;
-			}
-
-			if ( ! $ ) {
-				$ = typeof window !== 'undefined' ?
-					require('jquery') :
-					require('jquery')( root );
-			}
-
-			return factory( $, root, root.document );
-		};
-	}
-	else {
-		// Browser
-		factory( jQuery, window, document );
-	}
-}
-(function( $, window, document ) {
-
-
-$.fn.dataTable.ext.order.intl = function ( locales, options ) {
-	if ( window.Intl ) {
-		var collator = new Intl.Collator( locales, options );
-		var types = $.fn.dataTable.ext.type;
-
-		delete types.order['string-pre'];
-		types.order['string-asc'] = collator.compare;
-		types.order['string-desc'] = function ( a, b ) {
-			return collator.compare( a, b ) * -1;
-		};
-	}
+DataTable.intlOrder = function (locales, options) {
+    if (window.Intl) {
+        var collator = new Intl.Collator(locales, options);
+        var types = DataTable.ext.type;
+        delete types.order['string-pre'];
+        types.order['string-asc'] = collator.compare;
+        types.order['string-desc'] = function (a, b) {
+            return collator.compare(a, b) * -1;
+        };
+    }
 };
 
 
+return DataTable;
 }));

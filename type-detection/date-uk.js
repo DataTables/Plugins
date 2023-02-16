@@ -1,10 +1,13 @@
 /**
  * Automatically detect British (`dd/mm/yyyy`) date types. Goes with the UK 
  * date sorting plug-in.
+ * 
+ * Deprecated - use [the built in `datetime` helper](https://datatables.net/manual/data/renderers#Date-and-time-helpers).
  *
- *  @name Date (`dd/mm/yyyy`)
- *  @summary Detect data which is in the date format `dd/mm/yyyy`
- *  @author Andy McMaster
+ * @name Date (`dd/mm/yyyy`)
+ * @summary Detect data which is in the date format `dd/mm/yyyy`
+ * @author Andy McMaster
+ * @deprecated Use the built in `datetime` helper
  */
 
 jQuery.fn.dataTableExt.aTypes.unshift(

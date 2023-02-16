@@ -1,0 +1,2 @@
+/*! © SpryMedia Ltd - datatables.net/license */
+import DataTable from"datatables.net";DataTable.ext.order["signed-num-pre"]=function(a){return"-"==a||""===a?0:+a.replace("+","")};export default DataTable;

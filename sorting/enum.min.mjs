@@ -1,0 +1,2 @@
+/*! © SpryMedia Ltd - datatables.net/license */
+import DataTable from"datatables.net";var unique=0,types=DataTable.ext.type;DataTable.enum=function(e){for(var t="enum-"+unique++,a=window.Map?new Map:{},n=0,u=e.length;n<u;n++)a[e[n]]=n;types.detect.unshift(function(e){return void 0!==a[e]?t:null}),types.order[t+"-pre"]=function(e){return a[e]}};export default DataTable;

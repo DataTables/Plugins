@@ -1,4 +1,4 @@
-/*
+/**
  * Adds a new sorting option to dataTables called `date-dd-mmm-yyyy`. Also
  * includes a type detection plug-in. Matches and sorts date strings in
  * the format: `dd/mmm/yyyy`. For example:
@@ -11,10 +11,10 @@
  * [datetime](//datatables.net/blog/2014-12-18) plug-in provides enhanced
  * functionality and flexibility.
  *
- *  @name Date (dd-mmm-yyyy)
- *  @summary Sort dates in the format `dd-mmm-yyyy`
- *  @author [Jeromy French](http://www.appliedinter.net/jeromy_works/)
- *  @deprecated
+ * @name Date (dd-mmm-yyyy)
+ * @summary Sort dates in the format `dd-mmm-yyyy`
+ * @author [Jeromy French](http://www.appliedinter.net/jeromy_works/)
+ * @deprecated
  *
  *  @example
  *    $('#example').dataTable( {

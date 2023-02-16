@@ -77,7 +77,7 @@ DataTable.ext.buttons.download = {
             .css({
             border: 'none',
             height: 0,
-            width: 0
+            width: 0,
         })
             .appendTo(document.body);
         var contentDoc = iframe[0].contentWindow.document;
@@ -99,7 +99,7 @@ DataTable.ext.buttons.download = {
     },
     url: '',
     type: 'POST',
-    data: {}
+    data: {},
 };
 
 

@@ -82,7 +82,8 @@ DataTable.render.intlDateTime = function (locale, options) {
 
 			if (typeof data === 'string') {
 				date = Date.parse(data);
-			} else if (data instanceof Date) {
+			}
+			else if (data instanceof Date) {
 				date = data;
 			}
 
@@ -92,7 +93,8 @@ DataTable.render.intlDateTime = function (locale, options) {
 
 			return formatter.format(date);
 		};
-	} else {
+	}
+	else {
 		return function (d) {
 			return d;
 		};
@@ -106,12 +108,14 @@ DataTable.render.intlNumber = function (locale, options) {
 		return function (d, type) {
 			if (type === 'display') {
 				return formatter.format(d);
-			} else if (type === 'filter') {
+			}
+			else if (type === 'filter') {
 				return d + ' ' + formatter.format(d);
 			}
 			return d;
 		};
-	} else {
+	}
+	else {
 		return function (d) {
 			return d;
 		};

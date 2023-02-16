@@ -1,6 +1,40 @@
+/*! © SpryMedia Ltd, Afshin Mehrabani - datatables.net/license */
+
+(function( factory ){
+	if ( typeof define === 'function' && define.amd ) {
+		// AMD
+		define( ['datatables.net'], function ( $ ) {
+			return factory( $, window, document );
+		} );
+	}
+	else if ( typeof exports === 'object' ) {
+		// CommonJS
+		module.exports = function (root, $) {
+			if ( ! root ) {
+				// CommonJS environments without a window global must pass a
+				// root. This will give an error otherwise
+				root = window;
+			}
+
+			if ( ! $.fn.dataTable ) {
+				require('datatables.net')(root, $);
+			}
+
+			return factory( $, root, root.document );
+		};
+	}
+	else {
+		// Browser
+		factory( jQuery, window, document );
+	}
+}(function( $, window, document, undefined ) {
+'use strict';
+var DataTable = $.fn.dataTable;
+
+
 /**
- * Sorting in Javascript can be difficult to get right with non-Roman 
- * characters - for which special consideration must be made. This plug-in 
+ * Sorting in Javascript can be difficult to get right with non-Roman
+ * characters - for which special consideration must be made. This plug-in
  * performs correct sorting on Persian characters.
  *
  *  @name Persian
@@ -14,46 +48,61 @@
  *       ]
  *    } );
  */
-
-(function(){
-
-var persianSort = [ 'آ', 'ا', 'ب', 'پ', 'ت', 'ث', 'ج', 'چ', 'ح', 'خ', 'د', 'ذ', 'ر', 'ز', 'ژ',
-					'س', 'ش', 'ص', 'ط', 'ظ', 'ع', 'غ', 'ف', 'ق', 'ک', 'گ', 'ل', 'م', 'ن', 'و', 'ه', 'ی', 'ي' ];
-
+var persianSort = [
+    'آ',
+    'ا',
+    'ب',
+    'پ',
+    'ت',
+    'ث',
+    'ج',
+    'چ',
+    'ح',
+    'خ',
+    'د',
+    'ذ',
+    'ر',
+    'ز',
+    'ژ',
+    'س',
+    'ش',
+    'ص',
+    'ط',
+    'ظ',
+    'ع',
+    'غ',
+    'ف',
+    'ق',
+    'ک',
+    'گ',
+    'ل',
+    'م',
+    'ن',
+    'و',
+    'ه',
+    'ی',
+    'ي',
+];
 function GetUniCode(source) {
-	source = source.trim();
-	var result = '';
-	var i, index;
-	for (i = 0; i < source.length; i++) {
-		//Check and fix IE indexOf bug
-		if (!Array.indexOf) {
-			index = jQuery.inArray(source.charAt(i), persianSort);
-		}else{
-			index = persianSort.indexOf(source.charAt(i));
-		}
-		if (index < 0) {
-			index = source.charCodeAt(i);
-		}
-		if (index < 10) {
-			index = '0' + index;
-		}
-		result += '00' + index;
-	}
-	return 'a' + result;
+    source = source.trim();
+    var result = '';
+    var i, index;
+    for (i = 0; i < source.length; i++) {
+        index = persianSort.indexOf(source.charAt(i));
+        if (index < 0) {
+            index = source.charCodeAt(i);
+        }
+        if (index < 10) {
+            index = '0' + index;
+        }
+        result += '00' + index;
+    }
+    return 'a' + result;
 }
+DataTable.ext.order['pstring-pre'] = function (a, b) {
+    return GetUniCode(a.toLowerCase());
+};
 
-jQuery.extend( jQuery.fn.dataTableExt.oSort, {
-	"pstring-pre": function ( a ) {
-		return GetUniCode(a.toLowerCase());
-	},
 
-	"pstring-asc": function ( a, b ) {
-		return ((a < b) ? -1 : ((a > b) ? 1 : 0));
-	},
-
-	"pstring-desc": function ( a, b ) {
-		return ((a < b) ? 1 : ((a > b) ? -1 : 0));
-	}
-} );
-
-}());
+return DataTable;
+}));

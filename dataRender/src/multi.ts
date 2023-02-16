@@ -3,7 +3,7 @@
 /**
  * This renderer doesn't format the output itself, but rather allows multiple
  * renderers to be easily called, which will render the content in sequence.
- * 
+ *
  * Pass the renderers you wish to chain together as elements in an array to
  * this function. Important - you should pass the renderer as if you were
  * going to give it to the `render` property directly (i.e. if it is just a
@@ -39,11 +39,13 @@ declare module 'datatables.net' {
 DataTable.render.multi = function (renderArray: any[]) {
 	return function (d, type, row, meta) {
 		for (var r = 0; r < renderArray.length; r++) {
-			if (typeof renderArray[r] === "function") {
+			if (typeof renderArray[r] === 'function') {
 				d = renderArray[r](d, type, row, meta);
-			} else if (typeof renderArray[r][type] === "function") {
+			}
+			else if (typeof renderArray[r][type] === 'function') {
 				d = renderArray[r][type](d, type, row, meta);
-			} else if (typeof renderArray[r]._ === "function") {
+			}
+			else if (typeof renderArray[r]._ === 'function') {
 				d = renderArray[r]._(d, type, row, meta);
 			}
 		}

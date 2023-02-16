@@ -1,3 +1,37 @@
+/*! © SpryMedia Ltd - datatables.net/license */
+
+(function( factory ){
+	if ( typeof define === 'function' && define.amd ) {
+		// AMD
+		define( ['datatables.net'], function ( $ ) {
+			return factory( $, window, document );
+		} );
+	}
+	else if ( typeof exports === 'object' ) {
+		// CommonJS
+		module.exports = function (root, $) {
+			if ( ! root ) {
+				// CommonJS environments without a window global must pass a
+				// root. This will give an error otherwise
+				root = window;
+			}
+
+			if ( ! $.fn.dataTable ) {
+				require('datatables.net')(root, $);
+			}
+
+			return factory( $, root, root.document );
+		};
+	}
+	else {
+		// Browser
+		factory( jQuery, window, document );
+	}
+}(function( $, window, document, undefined ) {
+'use strict';
+var DataTable = $.fn.dataTable;
+
+
 /**
  * An alternative to the formatted number sorting function above (particularly
  * useful when considering localisation which uses dots / periods for 10^3
@@ -10,7 +44,7 @@
  * Note that the HTML5 `data-sort` attribute can be [used to supply sorting data
  * to DataTables](//datatables.net/manual/orthogonal-data) and is preferable to
  * using this method, which is therefore marked as deprecated.
- * 
+ *
  *  @name Hidden title numeric sorting
  *  @summary Sort data numerically based on an attribute on an empty element.
  *  @deprecated
@@ -23,18 +57,11 @@
  *       ]
  *    } );
  */
+DataTable.ext.order['title-numeric-pre'] = function (a) {
+    var x = a.match(/title="*(-?[0-9\.]+)/)[1];
+    return parseFloat(x);
+};
 
-jQuery.extend( jQuery.fn.dataTableExt.oSort, {
-	"title-numeric-pre": function ( a ) {
-		var x = a.match(/title="*(-?[0-9\.]+)/)[1];
-		return parseFloat( x );
-	},
 
-	"title-numeric-asc": function ( a, b ) {
-		return ((a < b) ? -1 : ((a > b) ? 1 : 0));
-	},
-
-	"title-numeric-desc": function ( a, b ) {
-		return ((a < b) ? 1 : ((a > b) ? -1 : 0));
-	}
-} );
+return DataTable;
+}));

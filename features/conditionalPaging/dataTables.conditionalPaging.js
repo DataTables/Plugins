@@ -1,10 +1,48 @@
+/*! © SpryMedia Ltd, Matthew Hasbach - datatables.net/license */
+
+(function( factory ){
+	if ( typeof define === 'function' && define.amd ) {
+		// AMD
+		define( ['jquery', 'datatables.net'], function ( $ ) {
+			return factory( $, window, document );
+		} );
+	}
+	else if ( typeof exports === 'object' ) {
+		// CommonJS
+		module.exports = function (root, $) {
+			if ( ! root ) {
+				// CommonJS environments without a window global must pass a
+				// root. This will give an error otherwise
+				root = window;
+			}
+
+			if ( ! $ ) {
+				$ = typeof window !== 'undefined' ? // jQuery's factory checks for a global window
+					require('jquery') :
+					require('jquery')( root );
+			}
+
+			if ( ! $.fn.dataTable ) {
+				require('datatables.net')(root, $);
+			}
+
+			return factory( $, root, root.document );
+		};
+	}
+	else {
+		// Browser
+		factory( jQuery, window, document );
+	}
+}(function( $, window, document, undefined ) {
+'use strict';
+var DataTable = $.fn.dataTable;
+
+
 /**
  * @summary     ConditionalPaging
  * @description Hide paging controls when the amount of pages is <= 1
  * @version     1.0.0
- * @file        dataTables.conditionalPaging.js
  * @author      Matthew Hasbach (https://github.com/mjhasbach)
- * @contact     hasbach.git@gmail.com
  * @copyright   Copyright 2015 Matthew Hasbach
  *
  * License      MIT - http://datatables.net/license/mit
@@ -25,58 +63,50 @@
  *        }
  *    });
  */
-
-(function(window, document, $) {
-    $(document).on('init.dt', function(e, dtSettings) {
-        if ( e.namespace !== 'dt' ) {
-            return;
-        }
-
-        var options = dtSettings.oInit.conditionalPaging || $.fn.dataTable.defaults.conditionalPaging;
-
-        if ($.isPlainObject(options) || options === true) {
-            var config = $.isPlainObject(options) ? options : {},
-                api = new $.fn.dataTable.Api(dtSettings),
-                speed = 'slow',
-                conditionalPaging = function(e) {
-                    var $paging = $(api.table().container()).find('div.dataTables_paginate'),
-                        pages = api.page.info().pages;
-
-                    if (e instanceof $.Event) {
-                        if (pages <= 1) {
-                            if (config.style === 'fade') {
-                                $paging.stop().fadeTo(speed, 0);
-                            }
-                            else {
-                                $paging.css('visibility', 'hidden');
-                            }
-                        }
-                        else {
-                            if (config.style === 'fade') {
-                                $paging.stop().fadeTo(speed, 1);
-                            }
-                            else {
-                                $paging.css('visibility', '');
-                            }
-                        }
+$(document).on('init.dt', function (e, dtSettings) {
+    if (e.namespace !== 'dt') {
+        return;
+    }
+    var options = dtSettings.oInit.conditionalPaging ||
+        DataTable.defaults.conditionalPaging;
+    if ($.isPlainObject(options) || options === true) {
+        var config = $.isPlainObject(options) ? options : {}, api = new DataTable.Api(dtSettings), speed = 500, conditionalPaging = function (e) {
+            var $paging = $(api.table().container()).find('div.dataTables_paginate'), pages = api.page.info().pages;
+            if (e instanceof $.Event) {
+                if (pages <= 1) {
+                    if (config.style === 'fade') {
+                        $paging.stop().fadeTo(speed, 0);
                     }
-                    else if (pages <= 1) {
-                        if (config.style === 'fade') {
-                            $paging.css('opacity', 0);
-                        }
-                        else {
-                            $paging.css('visibility', 'hidden');
-                        }
+                    else {
+                        $paging.css('visibility', 'hidden');
                     }
-                };
-
-            if ( config.speed !== undefined ) {
-                speed = config.speed;
+                }
+                else {
+                    if (config.style === 'fade') {
+                        $paging.stop().fadeTo(speed, 1);
+                    }
+                    else {
+                        $paging.css('visibility', '');
+                    }
+                }
             }
-
-            conditionalPaging();
-
-            api.on('draw.dt', conditionalPaging);
+            else if (pages <= 1) {
+                if (config.style === 'fade') {
+                    $paging.css('opacity', 0);
+                }
+                else {
+                    $paging.css('visibility', 'hidden');
+                }
+            }
+        };
+        if (config.speed !== undefined) {
+            speed = config.speed;
         }
-    });
-})(window, document, jQuery);
+        conditionalPaging(null);
+        api.on('draw.dt', conditionalPaging);
+    }
+});
+
+
+return DataTable;
+}));

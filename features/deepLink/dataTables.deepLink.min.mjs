@@ -1,0 +1,2 @@
+/*! © SpryMedia Ltd - datatables.net/license */
+import $ from"jquery";import DataTable from"datatables.net";DataTable.ext.deepLink=function(e){for(var a=location.search.replace(/^\?/,"").split("&"),t={},r=0,l=a.length;r<l;r++){var i=a[r].split("="),o=decodeURIComponent(i[0]),i=decodeURIComponent(i[1]);if("true"===i)i=!0;else if("false"===i)i=!1;else if(i.match(/[^\d]/)||"search.search"===o){if(0===i.indexOf("{")||0===i.indexOf("["))try{i=$.parseJSON(i)}catch(e){}}else i=+i;"all"!==e&&-1===$.inArray(o,e)||DataTable.util.set(o)(t,i,{})}return t};export default DataTable;

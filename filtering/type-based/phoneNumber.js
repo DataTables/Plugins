@@ -1,3 +1,37 @@
+/*! © SpryMedia Ltd - datatables.net/license */
+
+(function( factory ){
+	if ( typeof define === 'function' && define.amd ) {
+		// AMD
+		define( ['datatables.net'], function ( $ ) {
+			return factory( $, window, document );
+		} );
+	}
+	else if ( typeof exports === 'object' ) {
+		// CommonJS
+		module.exports = function (root, $) {
+			if ( ! root ) {
+				// CommonJS environments without a window global must pass a
+				// root. This will give an error otherwise
+				root = window;
+			}
+
+			if ( ! $.fn.dataTable ) {
+				require('datatables.net')(root, $);
+			}
+
+			return factory( $, root, root.document );
+		};
+	}
+	else {
+		// Browser
+		factory( jQuery, window, document );
+	}
+}(function( $, window, document, undefined ) {
+'use strict';
+var DataTable = $.fn.dataTable;
+
+
 /**
  * Telephone numbers are a common data point to display in HTML tables, and are
  * often formatted (e.g. `dt-string 555-1234`). Typically, when searching a
@@ -7,7 +41,7 @@
  *
  * This filtering plug-in will allow both forms to be matched be providing both
  * the formatted and de-formatted data to the table's search.
- * 
+ *
  *  @summary Make phone numbers searchable formatted or unformatted
  *  @name Phone number
  *  @author Allan Jardine
@@ -21,11 +55,14 @@
  *      } );
  *    } );
  */
-
-jQuery.fn.DataTable.ext.type.search.phoneNumber = function ( data ) {
-    return ! data ?
-        '' :
-        typeof data === 'string' ?
-            data + data.replace(/[ \-]/g, '') :
-            data;
+DataTable.ext.type.search.phoneNumber = function (data) {
+    return !data
+        ? ''
+        : typeof data === 'string'
+            ? data + data.replace(/[ \-]/g, '')
+            : data;
 };
+
+
+return DataTable;
+}));

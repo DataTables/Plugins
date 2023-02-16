@@ -1,0 +1,2 @@
+/*! © SpryMedia Ltd - datatables.net/license */
+import DataTable from"datatables.net";DataTable.intlOrder=function(e,t){var a;window.Intl&&(a=new Intl.Collator(e,t),delete(e=DataTable.ext.type).order["string-pre"],e.order["string-asc"]=a.compare,e.order["string-desc"]=function(e,t){return-1*a.compare(e,t)})};export default DataTable;

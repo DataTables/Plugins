@@ -1,0 +1,2 @@
+/*! © SpryMedia Ltd, Jumpy - datatables.net/license */
+import DataTable from"datatables.net";DataTable.ext.order["alt-string-pre"]=function(a){return a.match(/alt="(.*?)"/)[1].toLowerCase()};export default DataTable;

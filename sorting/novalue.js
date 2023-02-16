@@ -12,6 +12,7 @@
  * @name novalue.js
  * @summary Sort any "novalue" pattern as max or min (e.g. '-' treat as -1000 or 1000).
  * @author Darek L https://github.com/dprojects
+ * @deprecated
  * 
  * @example
  * 

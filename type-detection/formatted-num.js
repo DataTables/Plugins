@@ -1,3 +1,37 @@
+/*! © SpryMedia Ltd - datatables.net/license */
+
+(function( factory ){
+	if ( typeof define === 'function' && define.amd ) {
+		// AMD
+		define( ['datatables.net'], function ( $ ) {
+			return factory( $, window, document );
+		} );
+	}
+	else if ( typeof exports === 'object' ) {
+		// CommonJS
+		module.exports = function (root, $) {
+			if ( ! root ) {
+				// CommonJS environments without a window global must pass a
+				// root. This will give an error otherwise
+				root = window;
+			}
+
+			if ( ! $.fn.dataTable ) {
+				require('datatables.net')(root, $);
+			}
+
+			return factory( $, root, root.document );
+		};
+	}
+	else {
+		// Browser
+		factory( jQuery, window, document );
+	}
+}(function( $, window, document, undefined ) {
+'use strict';
+var DataTable = $.fn.dataTable;
+
+
 /**
  * This plug-in will strip out non-numeric formatting characters such that a
  * formatted number (for example 1,000,000) can be detected automatically and
@@ -14,15 +48,12 @@
  *  @deprecated
  *  @author [Allan Jardine](http://sprymedia.co.uk)
  */
+DataTable.ext.type.detect.unshift(function (data) {
+    var deformatted = data.replace(/[^\d\-\.\/a-zA-Z]/g, '');
+    var isNumeric = !isNaN(deformatted - parseFloat(deformatted));
+    return isNumeric || deformatted === '-' ? 'formatted-num' : null;
+});
 
-jQuery.fn.dataTableExt.aTypes.unshift(
-	function ( sData )
-	{
-		var deformatted = sData.replace(/[^\d\-\.\/a-zA-Z]/g,'');
-		var isNumeric = !isNaN( deformatted - parseFloat( deformatted ) );
 
-		return isNumeric || deformatted === "-" ?
-			'formatted-num' :
-			null;
-	}
-);
+return DataTable;
+}));

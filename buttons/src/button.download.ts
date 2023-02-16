@@ -54,11 +54,13 @@ function flattenJson(data, name?, flattened?) {
 		$.each(data, function (idx, val) {
 			if (name === '') {
 				flattenJson(val, idx, flattened);
-			} else {
+			}
+			else {
 				flattenJson(val, name + '[' + idx.toString() + ']', flattened);
 			}
 		});
-	} else {
+	}
+	else {
 		flattened[name] = data;
 	}
 
@@ -77,7 +79,8 @@ DataTable.ext.buttons.download = {
 
 		if (typeof config.data === 'function') {
 			config.data(data);
-		} else if (typeof config.data === 'object') {
+		}
+		else if (typeof config.data === 'object') {
 			$.extend(data, config.data);
 		}
 

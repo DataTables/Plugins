@@ -10,7 +10,7 @@
  *
  *  @name Numbers with HTML
  *  @summary Detect data which is a mix of HTML and numeric data.
- *  @deprecated
+ *  @deprecated DataTables 1.10+ has built in support for this data type
  *  @author [Allan Jardine](http://sprymedia.co.uk)
  */
 

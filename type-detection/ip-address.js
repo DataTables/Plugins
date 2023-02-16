@@ -1,3 +1,37 @@
+/*! © SpryMedia Ltd, Brad Wasson - datatables.net/license */
+
+(function( factory ){
+	if ( typeof define === 'function' && define.amd ) {
+		// AMD
+		define( ['datatables.net'], function ( $ ) {
+			return factory( $, window, document );
+		} );
+	}
+	else if ( typeof exports === 'object' ) {
+		// CommonJS
+		module.exports = function (root, $) {
+			if ( ! root ) {
+				// CommonJS environments without a window global must pass a
+				// root. This will give an error otherwise
+				root = window;
+			}
+
+			if ( ! $.fn.dataTable ) {
+				require('datatables.net')(root, $);
+			}
+
+			return factory( $, root, root.document );
+		};
+	}
+	else {
+		// Browser
+		factory( jQuery, window, document );
+	}
+}(function( $, window, document, undefined ) {
+'use strict';
+var DataTable = $.fn.dataTable;
+
+
 /**
  * Automatically detect IP addresses in dot notation. Goes perfectly with the
  * IP address sorting function.
@@ -6,13 +40,13 @@
  *  @summary Detect data which is in IP address notation
  *  @author Brad Wasson
  */
+DataTable.ext.type.detect.unshift(function (data) {
+    if (/^\d{1,3}[\.]\d{1,3}[\.]\d{1,3}[\.]\d{1,3}$/.test(data)) {
+        return 'ip-address';
+    }
+    return null;
+});
 
-jQuery.fn.dataTableExt.aTypes.unshift(
-	function ( sData )
-	{
-		if (/^\d{1,3}[\.]\d{1,3}[\.]\d{1,3}[\.]\d{1,3}$/.test(sData)) {
-			return 'ip-address';
-		}
-		return null;
-	}
-);
+
+return DataTable;
+}));
