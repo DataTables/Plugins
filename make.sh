@@ -50,6 +50,35 @@ function js_plugin {
 	js_wrap $DEST_DIR/$FILE_NAME "$REQUIRE"
 }
 
+function lang_plugin {
+	local SRC_FILE=$1
+	local DEST_DIR=$(dirname $SRC_FILE)
+	local FILE_NAME=$(basename $SRC_FILE)
+
+	FILE_NAME="${FILE_NAME%.*}"
+
+	echo_msg "  Language $FILE_NAME"
+	JSON=$(cat $SRC_FILE)
+
+	echo "export default $JSON;" > $DEST_DIR/$FILE_NAME.mjs
+	cat << EOF > $DEST_DIR/$FILE_NAME.js
+(function( factory ) {
+	if ( typeof define === 'function' && define.amd ) {
+		// AMD
+		define( [], factory);
+	}
+	else if ( typeof exports === 'object' ) {
+		// CommonJS
+		module.exports = factory();
+	}
+	// No browser loader - use JSON, ESM, CJS or AMD
+}
+(function() {
+    return $JSON;
+}));
+EOF
+}
+
 # Change into script's own dir
 cd $(dirname $0)
 
@@ -87,11 +116,12 @@ PLUGINS="${DT_SRC}/extensions/Plugins"
 # 	ts_plugin $file
 # done
 
-for file in $PLUGINS/filtering/type-based/src/*.ts; do
-	ts_plugin $file
+# for file in $PLUGINS/filtering/type-based/src/*.ts; do
+# 	ts_plugin $file
+# done
+
+echo_section "  Languages"
+for file in $PLUGINS/i18n/*.json; do
+	lang_plugin $file
 done
-
-
-# # Only copying the integration files
-# rsync -r integration     $OUT_DIR
 
