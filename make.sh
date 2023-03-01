@@ -19,7 +19,7 @@ fi
 
 function ts_plugin {
 	local SRC_FILE=$1
-	local REQUIRE=${2:-'datatables.net'}
+	local REQUIRE=${2:-'jquery datatables.net'}
 	local DEST_DIR=$(dirname $(dirname $SRC_FILE))
 	local FILE_NAME=$(basename $SRC_FILE)
 
@@ -42,7 +42,7 @@ function ts_plugin {
 
 function js_plugin {
 	local SRC_FILE=$1
-	local REQUIRE=${2:-'datatables.net'}
+	local REQUIRE=${2:-'jquery datatables.net'}
 	local DEST_DIR=$(dirname $(dirname $SRC_FILE))
 	local FILE_NAME=$(basename $SRC_FILE)
 
@@ -96,32 +96,32 @@ PLUGINS="${DT_SRC}/extensions/Plugins"
 # 	ts_plugin $file
 # done
 
-# for file in $PLUGINS/buttons/src/*.ts; do
-# 	ts_plugin $file
-# done
-
-# for file in $PLUGINS/dataRender/src/*.ts; do
-# 	ts_plugin $file
-# done
-
-# for file in $PLUGINS/features/*/src/*.ts; do
-# 	ts_plugin $file "jquery datatables.net"
-# done
-
-# for file in $PLUGINS/sorting/src/*.ts; do
-# 	ts_plugin $file
-# done
-
-# for file in $PLUGINS/type-detection/src/*.ts; do
-# 	ts_plugin $file
-# done
-
-# for file in $PLUGINS/filtering/type-based/src/*.ts; do
-# 	ts_plugin $file
-# done
-
-echo_section "  Languages"
-for file in $PLUGINS/i18n/*.json; do
-	lang_plugin $file
+for file in $PLUGINS/buttons/src/*.ts; do
+	ts_plugin $file
 done
+
+for file in $PLUGINS/dataRender/src/*.ts; do
+	ts_plugin $file
+done
+
+for file in $PLUGINS/features/*/src/*.ts; do
+	ts_plugin $file
+done
+
+for file in $PLUGINS/sorting/src/*.ts; do
+	ts_plugin $file
+done
+
+for file in $PLUGINS/type-detection/src/*.ts; do
+	ts_plugin $file
+done
+
+for file in $PLUGINS/filtering/type-based/src/*.ts; do
+	ts_plugin $file
+done
+
+# echo_section "  Languages"
+# for file in $PLUGINS/i18n/*.json; do
+# 	lang_plugin $file
+# done
 

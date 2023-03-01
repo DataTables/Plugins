@@ -1,5 +1,6 @@
 /*! © SpryMedia Ltd, Jim Palmer, Michael Buehler, Mike Grier, Clint Priest, Kyle Adams, guillermo - datatables.net/license */
 
+import $ from 'jquery';
 import DataTable from 'datatables.net';
 
 

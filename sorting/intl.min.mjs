@@ -1,2 +1,2 @@
 /*! © SpryMedia Ltd - datatables.net/license */
-import DataTable from"datatables.net";DataTable.intlOrder=function(e,t){var a;window.Intl&&(a=new Intl.Collator(e,t),delete(e=DataTable.ext.type).order["string-pre"],e.order["string-asc"]=a.compare,e.order["string-desc"]=function(e,t){return-1*a.compare(e,t)})};export default DataTable;
+import $ from"jquery";import DataTable from"datatables.net";DataTable.intlOrder=function(e,r){var t;window.Intl&&(t=new Intl.Collator(e,r),delete(e=DataTable.ext.type).order["string-pre"],e.order["string-asc"]=t.compare,e.order["string-desc"]=function(e,r){return-1*t.compare(e,r)})};export default DataTable;

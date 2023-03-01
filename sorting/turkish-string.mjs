@@ -1,5 +1,6 @@
 /*! © SpryMedia Ltd, Yuksel Beyti - datatables.net/license */
 
+import $ from 'jquery';
 import DataTable from 'datatables.net';
 
 

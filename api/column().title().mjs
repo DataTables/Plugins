@@ -1,5 +1,6 @@
 /*! © Alejandro Navarro - datatables.net/license */
 
+import $ from 'jquery';
 import DataTable from 'datatables.net';
 
 

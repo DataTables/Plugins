@@ -1,2 +1,2 @@
 /*! © SpryMedia Ltd - datatables.net/license */
-import DataTable from"datatables.net";DataTable.render.multi=function(f){return function(t,e,n,a){for(var o=0;o<f.length;o++)"function"==typeof f[o]?t=f[o](t,e,n,a):"function"==typeof f[o][e]?t=f[o][e](t,e,n,a):"function"==typeof f[o]._&&(t=f[o]._(t,e,n,a));return t}};export default DataTable;
+import $ from"jquery";import DataTable from"datatables.net";DataTable.render.multi=function(r){return function(t,e,n,a){for(var o=0;o<r.length;o++)"function"==typeof r[o]?t=r[o](t,e,n,a):"function"==typeof r[o][e]?t=r[o][e](t,e,n,a):"function"==typeof r[o]._&&(t=r[o]._(t,e,n,a));return t}};export default DataTable;

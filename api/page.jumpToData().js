@@ -3,7 +3,7 @@
 (function( factory ){
 	if ( typeof define === 'function' && define.amd ) {
 		// AMD
-		define( ['datatables.net'], function ( $ ) {
+		define( ['jquery', 'datatables.net'], function ( $ ) {
 			return factory( $, window, document );
 		} );
 	}
@@ -14,6 +14,12 @@
 				// CommonJS environments without a window global must pass a
 				// root. This will give an error otherwise
 				root = window;
+			}
+
+			if ( ! $ ) {
+				$ = typeof window !== 'undefined' ? // jQuery's factory checks for a global window
+					require('jquery') :
+					require('jquery')( root );
 			}
 
 			if ( ! $.fn.dataTable ) {

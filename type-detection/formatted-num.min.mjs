@@ -1,2 +1,2 @@
 /*! © SpryMedia Ltd - datatables.net/license */
-import DataTable from"datatables.net";DataTable.ext.type.detect.unshift(function(a){a=a.replace(/[^\d\-\.\/a-zA-Z]/g,"");return!isNaN(a-parseFloat(a))||"-"===a?"formatted-num":null});export default DataTable;
+import $ from"jquery";import DataTable from"datatables.net";DataTable.ext.type.detect.unshift(function(t){t=t.replace(/[^\d\-\.\/a-zA-Z]/g,"");return!isNaN(t-parseFloat(t))||"-"===t?"formatted-num":null});export default DataTable;

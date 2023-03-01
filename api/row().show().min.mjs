@@ -1,2 +1,2 @@
 /*! © Edouard Labre - datatables.net/license */
-import DataTable from"datatables.net";DataTable.Api.register("row().show()",function(){var a=this.table().page.info(),t=this.index(),t=this.table().rows({search:"applied"})[0].indexOf(t);return t>=a.start&&t<a.end||t<0||(a=Math.floor(t/this.table().page.len()),this.table().page(a)),this});export default DataTable;
+import $ from"jquery";import DataTable from"datatables.net";DataTable.Api.register("row().show()",function(){var t=this.table().page.info(),a=this.index(),a=this.table().rows({search:"applied"})[0].indexOf(a);return a>=t.start&&a<t.end||a<0||(t=Math.floor(a/this.table().page.len()),this.table().page(t)),this});export default DataTable;
