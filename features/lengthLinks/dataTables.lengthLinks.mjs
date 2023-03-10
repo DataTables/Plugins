@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * @summary     LengthLinks
  * @description Page length control via links for DataTables

@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * NOTE - As of DataTables 1.12, DataTables has a built in date / time renderer
  * which should be used in place of this renderer. See

@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * Sort data by a defined enumerated (enum) list. The options for the values in
  * the enum are defined by passing the values in an array to the method

@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * This function will restore the order in which data was read into a DataTable
  * (for example from an HTML source). Although you can set `dt-api order()` to

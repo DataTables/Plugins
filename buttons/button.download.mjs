@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * @summary     Download Button
  * @author      SpryMedia Ltd (www.datatables.net)

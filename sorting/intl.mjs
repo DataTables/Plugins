@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * This sorting type will replace DataTables' default string sort with one that
  * will use a locale aware collator. This is supported by IE11, Edge, Chrome,

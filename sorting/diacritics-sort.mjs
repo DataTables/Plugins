@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * This plug-in will provide diacritics neutral sorting of strings.
  *

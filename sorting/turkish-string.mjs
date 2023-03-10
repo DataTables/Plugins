@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * Sorting in Javascript for Turkish Characters. This plug-in will replace the special
  * turkish letters (non english characters) and replace in English.

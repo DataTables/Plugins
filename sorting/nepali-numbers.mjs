@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * Sorts a column containing nepali numbers. Nepali numbers can easily be
  * mapped 1:1 to latin numbers - १ = 1, २ = 2, १२ = 12 and so on.

@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * Fairly simply, this plug-in will take the data from an API result set
  * and sum it, returning the summed value. The data can come from any data

@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * @summary     SlidingChild
  * @description Show / Hide row child plugin

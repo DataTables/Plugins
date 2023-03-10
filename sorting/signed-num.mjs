@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * Although DataTables' internal numeric sorting works no problem on negative
  * numbers, it does not accept positively signed numbers. This plug-in will

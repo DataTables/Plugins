@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * Just like the _hidden title numeric sorting_ plug-in, this sorting plug-in
  * will take the information to be sorted on from the title attribute of a span

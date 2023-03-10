@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * Detect file size type columns automatically. Commonly used for computer
  * file sizes, this can allow sorting to take the order of magnitude indicated

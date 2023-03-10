@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * This renderer doesn't format the output itself, but rather allows multiple
  * renderers to be easily called, which will render the content in sequence.

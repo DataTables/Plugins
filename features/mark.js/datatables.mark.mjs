@@ -8,7 +8,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 class MarkDataTables {
     instance;
     options;

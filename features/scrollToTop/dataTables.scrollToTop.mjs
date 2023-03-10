@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * @summary     scrollToTop
  * @description Always return to top of table when page changed

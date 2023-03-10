@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * Automatically detect IP addresses in dot notation. Goes perfectly with the
  * IP address sorting function.

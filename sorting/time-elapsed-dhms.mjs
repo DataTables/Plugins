@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * When dealing with time elapsed, it is common to append a post fix
  * such as d(day), h(hour), m(minute) or s(second) to a string in order to easily denote the brief duration

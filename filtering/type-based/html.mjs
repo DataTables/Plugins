@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * DataTables has a built in type called `html` which will strip HTML tags
  * from a search string, but it doesn't cope with nested HTML inside another

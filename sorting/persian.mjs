@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * Sorting in Javascript can be difficult to get right with non-Roman
  * characters - for which special consideration must be made. This plug-in

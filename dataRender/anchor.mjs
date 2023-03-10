@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  *  @name anchor
  *  @summary Renders the column data as HTML anchor (`a` tag)

@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * This plug-in allows sorting of human readable time delta, viz.,
  * "1 week", "2 weeks 3 days", "4 weeks 5 days 6 hours", etc.

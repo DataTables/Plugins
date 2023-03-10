@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * When searching a table with accented characters, it can be frustrating to have
  * an input such as _Zurich_ not match _Zürich_ in the table (`u !== ü`). This

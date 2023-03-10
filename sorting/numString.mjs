@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  *
  * This plug in will sort only on the number value that is included anywhere in a Regex.

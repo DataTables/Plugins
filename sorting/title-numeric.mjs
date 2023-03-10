@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * An alternative to the formatted number sorting function above (particularly
  * useful when considering localisation which uses dots / periods for 10^3

@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * The DataTables core library provides the ability to set the ordering via the
  * `dt-api column().order()` method, but there is no plural equivalent. While

@@ -96,17 +96,17 @@ PLUGINS="${DT_SRC}/extensions/Plugins"
 # 	ts_plugin $file
 # done
 
-for file in $PLUGINS/buttons/src/*.ts; do
-	ts_plugin $file
-done
+# for file in $PLUGINS/buttons/src/*.ts; do
+# 	ts_plugin $file
+# done
 
-for file in $PLUGINS/dataRender/src/*.ts; do
-	ts_plugin $file
-done
+# for file in $PLUGINS/dataRender/src/*.ts; do
+# 	ts_plugin $file
+# done
 
-for file in $PLUGINS/features/*/src/*.ts; do
-	ts_plugin $file
-done
+# for file in $PLUGINS/features/*/src/*.ts; do
+# 	ts_plugin $file
+# done
 
 for file in $PLUGINS/sorting/src/*.ts; do
 	ts_plugin $file

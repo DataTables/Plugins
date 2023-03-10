@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * When using `-init deferRender` you might find that under a specific set of circumstances you
  * need the `-tag tr` element for a row which hasn't yet been drawn. This method can be used to

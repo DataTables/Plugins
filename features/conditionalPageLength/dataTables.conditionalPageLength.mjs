@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * @summary     ConditionalPageLength
  * @description Hide the page length control when the amount of pages is <= 1

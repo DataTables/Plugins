@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * This plugin jumps to the right page of the DataTable to show the required row
  *

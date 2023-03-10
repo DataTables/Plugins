@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * @summary     ScrollResize
  * @description Automatically alter the DataTables page length to fit the table

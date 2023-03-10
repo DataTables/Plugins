@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * This plug-in will read the text from the header cell of a column, returning
  * that value.

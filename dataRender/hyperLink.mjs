@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * This data rendering helper method can be useful when a hyperLink with custom
  * anchorText has to rendered. The data for the column is still fully searchable and sortable, based on the hyperLink value,

@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * This data rendering helper method will convert percentage values into a bar.
  * Values can either have the % sign or not and decimals get rounded to the

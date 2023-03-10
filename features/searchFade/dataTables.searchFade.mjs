@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * @summary     SearchFade
  * @description Search and Fade unmatching rows in a DataTables

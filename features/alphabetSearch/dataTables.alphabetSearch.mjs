@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * @summary     AlphabetSearch
  * @description Show an set of alphabet buttons alongside a table providing

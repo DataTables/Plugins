@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * Often a list of data which has titles in it (books, albums etc) will have
  * the word "the" at the start of some individual titles, which you don't want

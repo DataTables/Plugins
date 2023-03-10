@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * Sorts columns by any number, ignoring text. This plugin is useful if you have
  * mixed content in a column, but still want to sort by numbers. Any number means

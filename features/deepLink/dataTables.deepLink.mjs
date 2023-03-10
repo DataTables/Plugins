@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * @summary     LengthLinks
  * @description Deep linking options parsing support for DataTables

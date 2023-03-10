@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * It can sometimes be useful to get the average of data in an API result set,
  * be it from a column, or a collection of cells. This method provides exactly

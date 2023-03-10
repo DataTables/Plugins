@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  *
  *This plug in will sort data taking into account upper and lower case. In ascending order it will prioritise

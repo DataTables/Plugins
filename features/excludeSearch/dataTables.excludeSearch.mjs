@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * @summary     ExcludeSearch
  * @description Add an input box that will remove matching items from the table

@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * This plug-in will add automatic negative currency detection for currency columns to
  * DataTables. Note that only $, c, £ and € symbols are detected with this code,

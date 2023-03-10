@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * Sorting in Javascript for Chinese Character. The Chinese Characters are
  * sorted on the radical and number of strokes. This plug-in performs sorting

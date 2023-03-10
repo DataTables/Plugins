@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * Convert numbers to farsi, english, arabic.
  * تبدیل عداد به فارسی, انگلیسی, عربی

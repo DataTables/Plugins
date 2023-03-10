@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * Externally trigger the display of DataTables' "processing" indicator.
  *

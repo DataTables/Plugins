@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * This plug-in will provide numeric sorting for numeric columns which have
  * extra formatting, such as thousands separators, currency symbols or any other

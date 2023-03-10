@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * When filtering a table with accented characters (letters with diacritical marks)
  * it can be frustrating to have an input such as _Zurich_ not match _Zürich_ in

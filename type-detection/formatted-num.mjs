@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * This plug-in will strip out non-numeric formatting characters such that a
  * formatted number (for example 1,000,000) can be detected automatically and

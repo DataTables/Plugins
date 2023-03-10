@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * When dealing with computer file sizes, it is common to append a post fix
  * such as B, KB, MB or GB to a string in order to easily denote the order of

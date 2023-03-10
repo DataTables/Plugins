@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * Telephone numbers are a common data point to display in HTML tables, and are
  * often formatted (e.g. `dt-string 555-1234`). Typically, when searching a

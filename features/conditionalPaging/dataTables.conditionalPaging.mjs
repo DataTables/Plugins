@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * @summary     ConditionalPaging
  * @description Hide paging controls when the amount of pages is <= 1

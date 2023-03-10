@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * Sorts a column containing chapter numbers. This can be most useful when
  * using DataTables for a book or book reference style application. By

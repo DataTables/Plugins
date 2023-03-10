@@ -11,7 +11,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 function levenshtein(__this, that, limit) {
     var thisLength = __this.length, thatLength = that.length, matrix = [];
     // If the limit is not defined it will be calculate from this and that args.

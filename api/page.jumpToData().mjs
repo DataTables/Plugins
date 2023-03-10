@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * It can be quite useful to jump straight to a page which contains a certain
  * piece of data (a user name for example). This plug-in provides exactly that

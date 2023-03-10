@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * When sorting a DataTable you might find that you want to keep a specific
  * item at the top or bottom of the table. For example when sorting a column

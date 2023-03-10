@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * Data can often be a complicated mix of numbers and letters (file names
  * are a common example) and sorting them in a natural manner is quite a

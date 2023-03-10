@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * This data rendering helper method can be useful for cases where you have
  * potentially large data strings to be shown in a column that is restricted by

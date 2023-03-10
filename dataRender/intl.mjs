@@ -3,7 +3,6 @@
 import $ from 'jquery';
 import DataTable from 'datatables.net';
 
-
 /**
  * Rendering methods using the Javascript Intl API. This is supported by IE11,
  * Edge, Chrome, Firefox and Safari 10+. Any browser that does not support the
