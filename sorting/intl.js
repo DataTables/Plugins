@@ -92,6 +92,8 @@ DataTable.intlOrder = function (locales, options) {
         };
     }
 };
+// Old style originally introduced in the blog post
+DataTable.ext.order.intl = DataTable.intlOrder;
 
 
 return DataTable;
