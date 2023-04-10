@@ -1,0 +1,2 @@
+/*! © SpryMedia Ltd - datatables.net/license */
+import $ from"jquery";import DataTable from"datatables.net";DataTable.ext.order["chapter-pre"]=function(t){for(var a,e="",r=t.split("."),l=0;l<5;l++)e=(e+=0==(a=l<r.length?4-r[l].length:4)?"":Array(1+a).join("0"))+(l<r.length?r[l]:"");return e};export default DataTable;

@@ -1,0 +1,2 @@
+/*! © SpryMedia Ltd, Brad Wasson - datatables.net/license */
+import $ from"jquery";import DataTable from"datatables.net";DataTable.ext.type.detect.unshift(function(t){return/^\d{1,3}[\.]\d{1,3}[\.]\d{1,3}[\.]\d{1,3}$/.test(t)?"ip-address":null});export default DataTable;

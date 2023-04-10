@@ -1,0 +1,2 @@
+/*! © SpryMedia Ltd - datatables.net/license */
+import $ from"jquery";import DataTable from"datatables.net";DataTable.render.ellipsis=function(r,l,n){function p(e){return(""+e).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}return function(e,t,a){return"display"!==t?e:"number"!=typeof e&&"string"!=typeof e||(e=e.toString()).length<=r?n?p(e):e:(t=e.substr(0,r-1),l&&(t=t.replace(/\s([^\s]*)$/,"")),n&&(t=p(t)),'<span class="ellipsis" title="'+p(e)+'">'+t+"&#8230;</span>")}};export default DataTable;

@@ -12,6 +12,7 @@
  * @summary Sort date and time in any format using Moment.js
  * @author [Allan Jardine](//datatables.net)
  * @depends DataTables 1.10+, Moment.js 1.7+
+ * @deprecated
  *
  * @example
  *    $.fn.dataTable.moment( 'HH:mm MMM D, YY' );

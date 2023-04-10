@@ -19,5 +19,13 @@
 	"bugs": {
 		"url": "https://github.com/DataTables/Plugins/issues"
 	},
-	"homepage": "https://datatables.net/plug-ins"
+	"homepage": "https://datatables.net/plug-ins",
+	"dependencies": {
+		"@types/jquery": "^3.5.16",
+		"datatables.net": "^1.13.2"
+	},
+	"devDependencies": {
+		"prettier-plugin-x": "^0.0.10",
+		"typescript": "^4.9.5"
+	}
 }

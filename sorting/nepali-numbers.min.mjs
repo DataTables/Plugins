@@ -1,0 +1,2 @@
+/*! © SpryMedia Ltd, David Konrad - datatables.net/license */
+import $ from"jquery";import DataTable from"datatables.net";function nepaliToLatin(e){switch(e){case"०":return 0;case"१":return 1;case"२":return 2;case"३":return 3;case"४":return 4;case"५":return 5;case"६":return 6;case"७":return 7;case"८":return 8;case"९":return 9;default:return 0}}DataTable.ext.order["nepali-numbers-pre"]=function(e){for(var r="",a=0;a<e.length;a++)r+=nepaliToLatin(e.charAt(a));return parseInt(r,10)};export default DataTable;

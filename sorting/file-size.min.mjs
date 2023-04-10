@@ -1,0 +1,2 @@
+/*! © SpryMedia Ltd - datatables.net/license */
+import $ from"jquery";import DataTable from"datatables.net";DataTable.ext.type.order["file-size-pre"]=function(e){var t;return null===e||""===e?0:(e=e.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i))?(t={b:1,bytes:1,kb:1e3,kib:1024,mb:1e6,mib:1048576,gb:1e9,gib:1073741824,tb:1e12,tib:1099511627776,pb:1e15,pib:0x4000000000000}[e[2].toLowerCase()],parseFloat(e[1])*t):-1};export default DataTable;

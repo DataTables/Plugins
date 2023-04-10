@@ -1,0 +1,2 @@
+/*! © SpryMedia Ltd - datatables.net/license */
+import $ from"jquery";import DataTable from"datatables.net";DataTable.ext.order["formatted-num-pre"]=function(a){return a="-"===a||""===a?0:a.replace(/[^\d\-\.]/g,""),parseFloat(a)};export default DataTable;

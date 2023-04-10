@@ -1,0 +1,2 @@
+/*! © SpryMedia Ltd, Afshin Mehrabani - datatables.net/license */
+import $ from"jquery";import DataTable from"datatables.net";var persianSort=["آ","ا","ب","پ","ت","ث","ج","چ","ح","خ","د","ذ","ر","ز","ژ","س","ش","ص","ط","ظ","ع","غ","ف","ق","ک","گ","ل","م","ن","و","ه","ی","ي"];function GetUniCode(r){r=r.trim();for(var t,e="",a=0;a<r.length;a++)e+="00"+(t=(t=(t=persianSort.indexOf(r.charAt(a)))<0?r.charCodeAt(a):t)<10?"0"+t:t);return"a"+e}DataTable.ext.order["pstring-pre"]=function(r,t){return GetUniCode(r.toLowerCase())};export default DataTable;

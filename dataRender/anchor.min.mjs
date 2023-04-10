@@ -1,0 +1,2 @@
+/*! © Fedonyuk Anton - datatables.net/license */
+import $ from"jquery";import DataTable from"datatables.net";DataTable.render.anchor=function(e=0,f={},l=null){return function(t,e,r,a={}){if("display"!==e)return t;null===l&&(l=t);var n="function"==typeof f?f(t,r,a):f;if(!n.href)switch(e){case"mail":n.href="mailto:"+t;break;case"phone":n.href="tel:"+t.replace(/[^+\d]+/g,"");break;default:try{n.href=new URL(t)}catch(e){n.href=t}}return jQuery("<a/>").attr(n).text(l||"")[0].outerText}};export default DataTable;

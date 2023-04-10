@@ -1,4 +1,6 @@
-﻿/**
+﻿/*! © SpryMedia Ltd - datatables.net/license */
+
+/**
  * This sorting plug-in will sort, in calendar order, data which
  * is in the format "MMM yyyy" or "MMMM yyyy". Inspired by forum discussion:
  * http://datatables.net/forums/discussion/1242/sorting-dates-with-only-month-and-year

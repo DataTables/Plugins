@@ -1,0 +1,2 @@
+/*! © SpryMedia Ltd, - datatables.net/license */
+import $ from"jquery";import DataTable from"datatables.net";var validChars="$£€c0123456789.-,()'",str=DataTable.util.escapeRegex(validChars),re=new RegExp("[^"+str+"]");DataTable.ext.type.detect.unshift(function(e){return"string"!=typeof e||re.test(e)?null:"currency"}),DataTable.ext.type.order["currency-pre"]=function(e){return""===e?0:(e=e.match(/[\()]/g)?!0!==e.match(/[\-]/g)?"-"+e.replace(/[\$£€c\(\),]/g,""):e.replace(/[^\d\-\.]/g,""):e.replace(/[\$£€\,]/g,""),parseFloat(e))};export default DataTable;

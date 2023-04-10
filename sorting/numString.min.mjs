@@ -1,0 +1,2 @@
+/*! © SpryMedia Ltd - datatables.net/license */
+import $ from"jquery";import DataTable from"datatables.net";DataTable.numString=function(e){DataTable.ext.type.detect.unshift(function(t){return"string"==typeof t&&t.match(e)?"numString-"+e.source:null}),DataTable.ext.type.order["numString-"+e.source+"-pre"]=function(t){return+t.replace(/\D/g,"")}};export default DataTable;

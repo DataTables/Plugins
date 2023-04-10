@@ -1,0 +1,2 @@
+/*! © SpryMedia Ltd - datatables.net/license */
+import $ from"jquery";import DataTable from"datatables.net";function removeAccents(e){return e.normalize?e+" "+e.normalize("NFD").replace(/[\u0300-\u036f]/g,""):e}var searchType=DataTable.ext.type.search;searchType.string=function(e){return e?"string"==typeof e?removeAccents(e):e:""},searchType.html=function(e){return e?"string"==typeof e?removeAccents(e.replace(/<.*?>/g,"")):e:""};export default DataTable;

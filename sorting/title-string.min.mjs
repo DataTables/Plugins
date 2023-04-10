@@ -1,0 +1,2 @@
+/*! © SpryMedia Ltd - datatables.net/license */
+import $ from"jquery";import DataTable from"datatables.net";DataTable.ext.order["title-string-pre"]=function(t){return t.match(/title="(.*?)"/)[1].toLowerCase()};export default DataTable;

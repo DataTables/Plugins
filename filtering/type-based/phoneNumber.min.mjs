@@ -1,0 +1,2 @@
+/*! © SpryMedia Ltd - datatables.net/license */
+import $ from"jquery";import DataTable from"datatables.net";DataTable.ext.type.search.phoneNumber=function(e){return e?"string"==typeof e?e+e.replace(/[ \-]/g,""):e:""};export default DataTable;

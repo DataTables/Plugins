@@ -1,0 +1,2 @@
+/*! © Alejandro Navarro - datatables.net/license */
+import $ from"jquery";import DataTable from"datatables.net";DataTable.Api.register("column().title()",function(){var t=this.header();return $(t).text().trim()});export default DataTable;

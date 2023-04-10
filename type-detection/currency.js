@@ -10,7 +10,7 @@
  *
  *  @name Currency
  *  @summary Detect data of numeric type with a leading currency symbol.
- *  @deprecated
+ *  @deprecated DataTables 1.10+ has currency support built in
  *  @author [Allan Jardine](http://sprymedia.co.uk), Nuno Gomes
  */
 

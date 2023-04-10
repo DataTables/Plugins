@@ -1,0 +1,2 @@
+/*! © SpryMedia Ltd - datatables.net/license */
+import $ from"jquery";import DataTable from"datatables.net";DataTable.Api.register("processing()",function(a){return this.iterator("table",function(t){t.oApi._fnProcessingDisplay(t,a)})});export default DataTable;
