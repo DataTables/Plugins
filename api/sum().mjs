@@ -1,7 +1,10 @@
 /*! © SpryMedia Ltd - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  * Fairly simply, this plug-in will take the data from an API result set

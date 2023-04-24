@@ -1,2 +1,2 @@
 /*! © SpryMedia Ltd - datatables.net/license */
-import $ from"jquery";import DataTable from"datatables.net";DataTable.Api.register("rows().generate()",function(){return this.iterator("row",function(t,e){t.oApi._fnCreateTr(t,e)})});export default DataTable;
+import jQuery from"jquery";import DataTable from"datatables.net";let $=jQuery;DataTable.Api.register("rows().generate()",function(){return this.iterator("row",function(e,t){e.oApi._fnCreateTr(e,t)})});export default DataTable;

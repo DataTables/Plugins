@@ -92,9 +92,9 @@ DT_BUILT="${DT_SRC}/built/DataTables"
 
 PLUGINS="${DT_SRC}/extensions/Plugins"
 
-# for file in $PLUGINS/api/src/*.ts; do
-# 	ts_plugin $file
-# done
+for file in $PLUGINS/api/src/*.ts; do
+	ts_plugin $file
+done
 
 # for file in $PLUGINS/buttons/src/*.ts; do
 # 	ts_plugin $file
@@ -108,17 +108,17 @@ PLUGINS="${DT_SRC}/extensions/Plugins"
 # 	ts_plugin $file
 # done
 
-for file in $PLUGINS/sorting/src/*.ts; do
-	ts_plugin $file
-done
+# for file in $PLUGINS/sorting/src/*.ts; do
+# 	ts_plugin $file
+# done
 
-for file in $PLUGINS/type-detection/src/*.ts; do
-	ts_plugin $file
-done
+# for file in $PLUGINS/type-detection/src/*.ts; do
+# 	ts_plugin $file
+# done
 
-for file in $PLUGINS/filtering/type-based/src/*.ts; do
-	ts_plugin $file
-done
+# for file in $PLUGINS/filtering/type-based/src/*.ts; do
+# 	ts_plugin $file
+# done
 
 # echo_section "  Languages"
 # for file in $PLUGINS/i18n/*.json; do

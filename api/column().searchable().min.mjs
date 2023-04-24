@@ -1,0 +1,2 @@
+/*! © SpryMedia Ltd - datatables.net/license */
+import jQuery from"jquery";import DataTable from"datatables.net";let $=jQuery;DataTable.Api.registerPlural("columns().searchable()","column().searchable()",function(a,e){return this.iterator("column",function(a,e){return a.aoColumns[e].bSearchable},1)});export default DataTable;

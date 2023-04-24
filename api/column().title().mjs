@@ -1,7 +1,10 @@
 /*! © Alejandro Navarro - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  * This plug-in will read the text from the header cell of a column, returning
