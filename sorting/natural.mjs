@@ -1,7 +1,10 @@
 /*! © SpryMedia Ltd, Jim Palmer, Michael Buehler, Mike Grier, Clint Priest, Kyle Adams, guillermo - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  * Data can often be a complicated mix of numbers and letters (file names
@@ -95,24 +98,24 @@ function naturalSort(a, b, html) {
     }
     return 0;
 }
-DataTable.ext.order['natural-asc'] = function (a, b) {
+DataTable.ext.type.order['natural-asc'] = function (a, b) {
     return naturalSort(a, b, true);
 };
-DataTable.ext.order['natural-desc'] = function (a, b) {
+DataTable.ext.type.order['natural-desc'] = function (a, b) {
     return naturalSort(a, b, true) * -1;
 };
-DataTable.ext.order['natural-nohtml-asc'] = function (a, b) {
+DataTable.ext.type.order['natural-nohtml-asc'] = function (a, b) {
     return naturalSort(a, b, false);
 };
-DataTable.ext.order['natural-nohtml-asc'] = function (a, b) {
+DataTable.ext.type.order['natural-nohtml-asc'] = function (a, b) {
     return naturalSort(a, b, false) * -1;
 };
-DataTable.ext.order['natural-ci-asc'] = function (a, b) {
+DataTable.ext.type.order['natural-ci-asc'] = function (a, b) {
     a = a.toString().toLowerCase();
     b = b.toString().toLowerCase();
     return naturalSort(a, b, true);
 };
-DataTable.ext.order['natural-ci-asc'] = function (a, b) {
+DataTable.ext.type.order['natural-ci-asc'] = function (a, b) {
     a = a.toString().toLowerCase();
     b = b.toString().toLowerCase();
     return naturalSort(a, b, true) * -1;

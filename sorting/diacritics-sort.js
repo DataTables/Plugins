@@ -16,7 +16,7 @@
 			}
 		};
 
-		if (typeof window !== 'undefined') {
+		if (typeof window === 'undefined') {
 			module.exports = function (root, $) {
 				if ( ! root ) {
 					// CommonJS environments without a window global must pass a
@@ -316,7 +316,7 @@ DataTable.ext.type.search.allowDiacritics = function (array) {
         }
     }
 };
-DataTable.ext.order['diacritics-neutralise-pre'] = function (a) {
+DataTable.ext.type.order['diacritics-neutralise-pre'] = function (a) {
     return removeDiacritics(a.toString().toLowerCase());
 };
 

@@ -1,7 +1,10 @@
 /*! © SpryMedia Ltd, David Konrad - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  * Sorts columns by any number, ignoring text. This plugin is useful if you have
@@ -39,10 +42,10 @@ function _anyNumberSort(a, b, high) {
     b = b !== null ? parseFloat(b[0]) : high;
     return a < b ? -1 : a > b ? 1 : 0;
 }
-DataTable.ext.order['any-number-asc'] = function (a, b) {
+DataTable.ext.type.order['any-number-asc'] = function (a, b) {
     return _anyNumberSort(a, b, Number.POSITIVE_INFINITY);
 };
-DataTable.ext.order['any-number-desc'] = function (a, b) {
+DataTable.ext.type.order['any-number-desc'] = function (a, b) {
     return _anyNumberSort(a, b, Number.NEGATIVE_INFINITY) * -1;
 };
 

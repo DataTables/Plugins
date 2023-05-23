@@ -1,7 +1,10 @@
 /*! © SpryMedia Ltd, Shodhan Save - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  * This plug-in allows sorting of human readable time delta, viz.,
@@ -22,7 +25,7 @@ import DataTable from 'datatables.net';
  *       ]
  *    });
  */
-DataTable.ext.order['natural-time-delta-pre'] = function (data) {
+DataTable.ext.type.order['natural-time-delta-pre'] = function (data) {
     var result = 0;
     var pattern = /(\d+\s*decades?\s*)?(\d+\s*years?\s*)?(\d+\s*months?\s*)?(\d+\s*weeks?\s*)?(\d+\s*days?\s*)?(\d+\s*hours?\s*)?(\d+\s*minutes?\s*)?(\d+\s*seconds?\s*)?(\d+\s*milliseconds?\s*)?(\d+\s*microseconds?\s*)?/i;
     var format_time_element = function (el, splitter, mul) {

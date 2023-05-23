@@ -1,2 +1,2 @@
 /*! © SpryMedia Ltd, Patrik Lindström - datatables.net/license */
-import $ from"jquery";import DataTable from"datatables.net";DataTable.ext.order["chinese-string-asc"]=function(e,a){return e.localeCompare(a)},DataTable.ext.order["chinese-string-desc"]=function(e,a){return a.localeCompare(e)};export default DataTable;
+import jQuery from"jquery";import DataTable from"datatables.net";let $=jQuery;DataTable.ext.type.order["chinese-string-asc"]=function(e,t){return e.localeCompare(t)},DataTable.ext.type.order["chinese-string-desc"]=function(e,t){return t.localeCompare(e)};export default DataTable;

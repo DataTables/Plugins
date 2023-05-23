@@ -28,7 +28,7 @@
 
 import DataTable from 'datatables.net';
 
-DataTable.ext.order['formatted-num-pre'] = function (a) {
+DataTable.ext.type.order['formatted-num-pre'] = function (a) {
 	a = a === '-' || a === '' ? 0 : a.replace(/[^\d\-\.]/g, '');
 	return parseFloat(a);
 };

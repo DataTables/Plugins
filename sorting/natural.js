@@ -16,7 +16,7 @@
 			}
 		};
 
-		if (typeof window !== 'undefined') {
+		if (typeof window === 'undefined') {
 			module.exports = function (root, $) {
 				if ( ! root ) {
 					// CommonJS environments without a window global must pass a
@@ -138,24 +138,24 @@ function naturalSort(a, b, html) {
     }
     return 0;
 }
-DataTable.ext.order['natural-asc'] = function (a, b) {
+DataTable.ext.type.order['natural-asc'] = function (a, b) {
     return naturalSort(a, b, true);
 };
-DataTable.ext.order['natural-desc'] = function (a, b) {
+DataTable.ext.type.order['natural-desc'] = function (a, b) {
     return naturalSort(a, b, true) * -1;
 };
-DataTable.ext.order['natural-nohtml-asc'] = function (a, b) {
+DataTable.ext.type.order['natural-nohtml-asc'] = function (a, b) {
     return naturalSort(a, b, false);
 };
-DataTable.ext.order['natural-nohtml-asc'] = function (a, b) {
+DataTable.ext.type.order['natural-nohtml-asc'] = function (a, b) {
     return naturalSort(a, b, false) * -1;
 };
-DataTable.ext.order['natural-ci-asc'] = function (a, b) {
+DataTable.ext.type.order['natural-ci-asc'] = function (a, b) {
     a = a.toString().toLowerCase();
     b = b.toString().toLowerCase();
     return naturalSort(a, b, true);
 };
-DataTable.ext.order['natural-ci-asc'] = function (a, b) {
+DataTable.ext.type.order['natural-ci-asc'] = function (a, b) {
     a = a.toString().toLowerCase();
     b = b.toString().toLowerCase();
     return naturalSort(a, b, true) * -1;

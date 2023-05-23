@@ -16,7 +16,7 @@
 			}
 		};
 
-		if (typeof window !== 'undefined') {
+		if (typeof window === 'undefined') {
 			module.exports = function (root, $) {
 				if ( ! root ) {
 					// CommonJS environments without a window global must pass a
@@ -65,7 +65,7 @@ var DataTable = $.fn.dataTable;
  *       ]
  *    } );
  */
-DataTable.ext.order['time-elapsed-dhms-pre'] = function (data) {
+DataTable.ext.type.order['time-elapsed-dhms-pre'] = function (data) {
     var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
     var multipliers = {
         s: 1,

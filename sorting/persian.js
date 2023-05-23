@@ -16,7 +16,7 @@
 			}
 		};
 
-		if (typeof window !== 'undefined') {
+		if (typeof window === 'undefined') {
 			module.exports = function (root, $) {
 				if ( ! root ) {
 					// CommonJS environments without a window global must pass a
@@ -113,7 +113,7 @@ function GetUniCode(source) {
     }
     return 'a' + result;
 }
-DataTable.ext.order['pstring-pre'] = function (a, b) {
+DataTable.ext.type.order['pstring-pre'] = function (a, b) {
     return GetUniCode(a.toLowerCase());
 };
 

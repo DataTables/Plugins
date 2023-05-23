@@ -1,7 +1,10 @@
 /*! © SpryMedia Ltd, caochenghua - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  * When dealing with time elapsed, it is common to append a post fix
@@ -22,7 +25,7 @@ import DataTable from 'datatables.net';
  *       ]
  *    } );
  */
-DataTable.ext.order['time-elapsed-dhms-pre'] = function (data) {
+DataTable.ext.type.order['time-elapsed-dhms-pre'] = function (data) {
     var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
     var multipliers = {
         s: 1,

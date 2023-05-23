@@ -25,6 +25,6 @@
 
 import DataTable from 'datatables.net';
 
-DataTable.ext.order['title-string-pre'] = function (a) {
+DataTable.ext.type.order['title-string-pre'] = function (a) {
 	return a.match(/title="(.*?)"/)[1].toLowerCase();
 };

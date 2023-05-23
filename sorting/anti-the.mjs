@@ -1,7 +1,10 @@
 /*! © SpryMedia Ltd - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  * Often a list of data which has titles in it (books, albums etc) will have
@@ -20,7 +23,7 @@ import DataTable from 'datatables.net';
  *       ]
  *    } );
  */
-DataTable.ext.order['anti-the-pre'] = function (a) {
+DataTable.ext.type.order['anti-the-pre'] = function (a) {
     return a.replace(/^the /i, '');
 };
 

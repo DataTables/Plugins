@@ -16,7 +16,7 @@
 			}
 		};
 
-		if (typeof window !== 'undefined') {
+		if (typeof window === 'undefined') {
 			module.exports = function (root, $) {
 				if ( ! root ) {
 					// CommonJS environments without a window global must pass a
@@ -65,7 +65,7 @@ var DataTable = $.fn.dataTable;
  *       ]
  *    });
  */
-DataTable.ext.order['natural-time-delta-pre'] = function (data) {
+DataTable.ext.type.order['natural-time-delta-pre'] = function (data) {
     var result = 0;
     var pattern = /(\d+\s*decades?\s*)?(\d+\s*years?\s*)?(\d+\s*months?\s*)?(\d+\s*weeks?\s*)?(\d+\s*days?\s*)?(\d+\s*hours?\s*)?(\d+\s*minutes?\s*)?(\d+\s*seconds?\s*)?(\d+\s*milliseconds?\s*)?(\d+\s*microseconds?\s*)?/i;
     var format_time_element = function (el, splitter, mul) {

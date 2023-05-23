@@ -1,7 +1,10 @@
 /*! © SpryMedia Ltd - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  *
@@ -23,7 +26,7 @@ import DataTable from 'datatables.net';
  *       ]
  *   });
  **/
-DataTable.ext.order['case-sensitive-asc'] = function (a, b) {
+DataTable.ext.type.order['case-sensitive-asc'] = function (a, b) {
     if (a < b) {
         return -1;
     }
@@ -32,7 +35,7 @@ DataTable.ext.order['case-sensitive-asc'] = function (a, b) {
     }
     return 0;
 };
-DataTable.ext.order['case-sensitive-desc'] = function (a, b) {
+DataTable.ext.type.order['case-sensitive-desc'] = function (a, b) {
     if (a > b) {
         return -1;
     }

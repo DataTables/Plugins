@@ -1,7 +1,10 @@
 /*! © SpryMedia Ltd, Behrooz Janfada - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  * Sorts a column containing Farsi numbers. Farsi numbers can easily be
@@ -56,7 +59,7 @@ function farsiToLatin(farsi) {
             break;
     }
 }
-DataTable.ext.order['farsi-numbers-pre'] = function (a) {
+DataTable.ext.type.order['farsi-numbers-pre'] = function (a) {
     var latin = '', i = 0;
     for (i; i < a.length; i++) {
         latin += farsiToLatin(a.charAt(i));

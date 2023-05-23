@@ -1,2 +1,2 @@
 /*! © SpryMedia Ltd - datatables.net/license */
-import $ from"jquery";import DataTable from"datatables.net";DataTable.ext.order["chapter-pre"]=function(t){for(var a,e="",r=t.split("."),l=0;l<5;l++)e=(e+=0==(a=l<r.length?4-r[l].length:4)?"":Array(1+a).join("0"))+(l<r.length?r[l]:"");return e};export default DataTable;
+import jQuery from"jquery";import DataTable from"datatables.net";let $=jQuery;DataTable.ext.type.order["chapter-pre"]=function(e){for(var t,r="",a=e.split("."),l=0;l<5;l++)r=(r+=0==(t=l<a.length?4-a[l].length:4)?"":Array(1+t).join("0"))+(l<a.length?a[l]:"");return r};export default DataTable;

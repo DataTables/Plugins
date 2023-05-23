@@ -17,7 +17,7 @@
 
 import DataTable from 'datatables.net';
 
-DataTable.ext.order['czech-pre'] = function (a) {
+DataTable.ext.type.order['czech-pre'] = function (a) {
 	var special_letters = {
 		A: 'Aa',
 		a: 'aa',

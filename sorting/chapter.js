@@ -16,7 +16,7 @@
 			}
 		};
 
-		if (typeof window !== 'undefined') {
+		if (typeof window === 'undefined') {
 			module.exports = function (root, $) {
 				if ( ! root ) {
 					// CommonJS environments without a window global must pass a
@@ -64,7 +64,7 @@ var DataTable = $.fn.dataTable;
  *       ]
  *    } );
  */
-DataTable.ext.order['chapter-pre'] = function (a) {
+DataTable.ext.type.order['chapter-pre'] = function (a) {
     var constMaxSections = 5;
     var constMaxSectionDigits = 4;
     var filler;

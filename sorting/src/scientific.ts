@@ -18,6 +18,6 @@
 
 import DataTable from 'datatables.net';
 
-DataTable.ext.order['scientific-pre'] = function (a) {
+DataTable.ext.type.order['scientific-pre'] = function (a) {
 	return parseFloat(a);
 };

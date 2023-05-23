@@ -16,7 +16,7 @@
 			}
 		};
 
-		if (typeof window !== 'undefined') {
+		if (typeof window === 'undefined') {
 			module.exports = function (root, $) {
 				if ( ! root ) {
 					// CommonJS environments without a window global must pass a
@@ -66,10 +66,10 @@ var DataTable = $.fn.dataTable;
  *       ]
  *    } );
  */
-DataTable.ext.order['chinese-string-asc'] = function (s1, s2) {
+DataTable.ext.type.order['chinese-string-asc'] = function (s1, s2) {
     return s1.localeCompare(s2);
 };
-DataTable.ext.order['chinese-string-desc'] = function (s1, s2) {
+DataTable.ext.type.order['chinese-string-desc'] = function (s1, s2) {
     return s2.localeCompare(s1);
 };
 

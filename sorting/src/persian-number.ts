@@ -31,6 +31,6 @@ function toEnglishNumber(strNum) {
 	return cache;
 }
 
-DataTable.ext.order['kh-persian-numbers-pre'] = function (a, b) {
+DataTable.ext.type.order['kh-persian-numbers-pre'] = function (a, b) {
 	return parseFloat(toEnglishNumber(a));
 };

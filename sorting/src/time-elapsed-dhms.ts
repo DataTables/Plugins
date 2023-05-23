@@ -22,7 +22,7 @@
 
 import DataTable from 'datatables.net';
 
-DataTable.ext.order['time-elapsed-dhms-pre'] = function (data) {
+DataTable.ext.type.order['time-elapsed-dhms-pre'] = function (data) {
 	var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
 	var multipliers = {
 		s: 1,

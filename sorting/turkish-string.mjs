@@ -1,7 +1,10 @@
 /*! © SpryMedia Ltd, Yuksel Beyti - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  * Sorting in Javascript for Turkish Characters. This plug-in will replace the special
@@ -19,7 +22,7 @@ import DataTable from 'datatables.net';
  *       ]
  *   });
  */
-DataTable.ext.order['turkish-pre'] = function (a) {
+DataTable.ext.type.order['turkish-pre'] = function (a) {
     var special_letters = {
         C: 'Ca',
         c: 'ca',

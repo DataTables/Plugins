@@ -1,2 +1,2 @@
 /*! © SpryMedia Ltd, Nick Schurch - datatables.net/license */
-import $ from"jquery";import DataTable from"datatables.net";DataTable.ext.order["scientific-pre"]=function(a){return parseFloat(a)};export default DataTable;
+import jQuery from"jquery";import DataTable from"datatables.net";let $=jQuery;DataTable.ext.type.order["scientific-pre"]=function(e){return parseFloat(e)};export default DataTable;

@@ -16,7 +16,7 @@
 			}
 		};
 
-		if (typeof window !== 'undefined') {
+		if (typeof window === 'undefined') {
 			module.exports = function (root, $) {
 				if ( ! root ) {
 					// CommonJS environments without a window global must pass a
@@ -79,7 +79,7 @@ DataTable['enum'] = function (arr) {
         return lookup[d] !== undefined ? name : null;
     });
     // Add sorting method
-    types.order[name + '-pre'] = function (d) {
+    types.type.order[name + '-pre'] = function (d) {
         return lookup[d];
     };
 };

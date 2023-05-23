@@ -1,7 +1,10 @@
 /*! © SpryMedia Ltd - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  * An alternative to the formatted number sorting function above (particularly
@@ -28,7 +31,7 @@ import DataTable from 'datatables.net';
  *       ]
  *    } );
  */
-DataTable.ext.order['title-numeric-pre'] = function (a) {
+DataTable.ext.type.order['title-numeric-pre'] = function (a) {
     var x = a.match(/title="*(-?[0-9\.]+)/)[1];
     return parseFloat(x);
 };

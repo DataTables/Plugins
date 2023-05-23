@@ -76,6 +76,6 @@ function GetUniCode(source) {
 	return 'a' + result;
 }
 
-DataTable.ext.order['pstring-pre'] = function (a, b) {
+DataTable.ext.type.order['pstring-pre'] = function (a, b) {
 	return GetUniCode(a.toLowerCase());
 };

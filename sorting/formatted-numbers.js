@@ -16,7 +16,7 @@
 			}
 		};
 
-		if (typeof window !== 'undefined') {
+		if (typeof window === 'undefined') {
 			module.exports = function (root, $) {
 				if ( ! root ) {
 					// CommonJS environments without a window global must pass a
@@ -71,7 +71,7 @@ var DataTable = $.fn.dataTable;
  *       ]
  *    } );
  */
-DataTable.ext.order['formatted-num-pre'] = function (a) {
+DataTable.ext.type.order['formatted-num-pre'] = function (a) {
     a = a === '-' || a === '' ? 0 : a.replace(/[^\d\-\.]/g, '');
     return parseFloat(a);
 };

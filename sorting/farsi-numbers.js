@@ -16,7 +16,7 @@
 			}
 		};
 
-		if (typeof window !== 'undefined') {
+		if (typeof window === 'undefined') {
 			module.exports = function (root, $) {
 				if ( ! root ) {
 					// CommonJS environments without a window global must pass a
@@ -99,7 +99,7 @@ function farsiToLatin(farsi) {
             break;
     }
 }
-DataTable.ext.order['farsi-numbers-pre'] = function (a) {
+DataTable.ext.type.order['farsi-numbers-pre'] = function (a) {
     var latin = '', i = 0;
     for (i; i < a.length; i++) {
         latin += farsiToLatin(a.charAt(i));

@@ -19,6 +19,6 @@
 
 import DataTable from 'datatables.net';
 
-DataTable.ext.order['alt-string-pre'] = function (a) {
+DataTable.ext.type.order['alt-string-pre'] = function (a) {
 	return a.match(/alt="(.*?)"/)[1].toLowerCase();
 };

@@ -1,7 +1,10 @@
 /*! © SpryMedia Ltd - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  * This plug-in will provide numeric sorting for numeric columns which have
@@ -28,7 +31,7 @@ import DataTable from 'datatables.net';
  *       ]
  *    } );
  */
-DataTable.ext.order['formatted-num-pre'] = function (a) {
+DataTable.ext.type.order['formatted-num-pre'] = function (a) {
     a = a === '-' || a === '' ? 0 : a.replace(/[^\d\-\.]/g, '');
     return parseFloat(a);
 };

@@ -16,7 +16,7 @@
 			}
 		};
 
-		if (typeof window !== 'undefined') {
+		if (typeof window === 'undefined') {
 			module.exports = function (root, $) {
 				if ( ! root ) {
 					// CommonJS environments without a window global must pass a
@@ -82,10 +82,10 @@ function _anyNumberSort(a, b, high) {
     b = b !== null ? parseFloat(b[0]) : high;
     return a < b ? -1 : a > b ? 1 : 0;
 }
-DataTable.ext.order['any-number-asc'] = function (a, b) {
+DataTable.ext.type.order['any-number-asc'] = function (a, b) {
     return _anyNumberSort(a, b, Number.POSITIVE_INFINITY);
 };
-DataTable.ext.order['any-number-desc'] = function (a, b) {
+DataTable.ext.type.order['any-number-desc'] = function (a, b) {
     return _anyNumberSort(a, b, Number.NEGATIVE_INFINITY) * -1;
 };
 

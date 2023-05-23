@@ -1,7 +1,10 @@
 /*! © SpryMedia Ltd - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  * Sort data by a defined enumerated (enum) list. The options for the values in
@@ -36,7 +39,7 @@ DataTable['enum'] = function (arr) {
         return lookup[d] !== undefined ? name : null;
     });
     // Add sorting method
-    types.order[name + '-pre'] = function (d) {
+    types.type.order[name + '-pre'] = function (d) {
         return lookup[d];
     };
 };

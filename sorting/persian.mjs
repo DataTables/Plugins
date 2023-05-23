@@ -1,7 +1,10 @@
 /*! © SpryMedia Ltd, Afshin Mehrabani - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  * Sorting in Javascript can be difficult to get right with non-Roman
@@ -70,7 +73,7 @@ function GetUniCode(source) {
     }
     return 'a' + result;
 }
-DataTable.ext.order['pstring-pre'] = function (a, b) {
+DataTable.ext.type.order['pstring-pre'] = function (a, b) {
     return GetUniCode(a.toLowerCase());
 };
 

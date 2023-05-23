@@ -1,7 +1,10 @@
 /*! © SpryMedia Ltd, Jumpy - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  * Sort on the 'alt' tag of images in a column. This is particularly useful if
@@ -19,7 +22,7 @@ import DataTable from 'datatables.net';
  *       ]
  *    } );
  */
-DataTable.ext.order['alt-string-pre'] = function (a) {
+DataTable.ext.type.order['alt-string-pre'] = function (a) {
     return a.match(/alt="(.*?)"/)[1].toLowerCase();
 };
 

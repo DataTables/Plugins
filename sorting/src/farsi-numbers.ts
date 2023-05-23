@@ -57,7 +57,7 @@ function farsiToLatin(farsi) {
 	}
 }
 
-DataTable.ext.order['farsi-numbers-pre'] = function (a) {
+DataTable.ext.type.order['farsi-numbers-pre'] = function (a) {
 	var latin = '',
 		i = 0;
 

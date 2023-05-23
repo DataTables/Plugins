@@ -1,7 +1,10 @@
 /*! © SpryMedia Ltd - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  * This plug-in provides locale aware sorting for Czech.
@@ -17,7 +20,7 @@ import DataTable from 'datatables.net';
  *       ]
  *    } );
  */
-DataTable.ext.order['czech-pre'] = function (a) {
+DataTable.ext.type.order['czech-pre'] = function (a) {
     var special_letters = {
         A: 'Aa',
         a: 'aa',

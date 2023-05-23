@@ -1,7 +1,10 @@
 /*! © SpryMedia Ltd, David Konrad - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  * This plug-in will provide diacritics neutral sorting of strings.
@@ -273,7 +276,7 @@ DataTable.ext.type.search.allowDiacritics = function (array) {
         }
     }
 };
-DataTable.ext.order['diacritics-neutralise-pre'] = function (a) {
+DataTable.ext.type.order['diacritics-neutralise-pre'] = function (a) {
     return removeDiacritics(a.toString().toLowerCase());
 };
 

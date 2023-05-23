@@ -16,7 +16,7 @@
 			}
 		};
 
-		if (typeof window !== 'undefined') {
+		if (typeof window === 'undefined') {
 			module.exports = function (root, $) {
 				if ( ! root ) {
 					// CommonJS environments without a window global must pass a
@@ -60,7 +60,7 @@ var DataTable = $.fn.dataTable;
  *       ]
  *    } );
  */
-DataTable.ext.order['czech-pre'] = function (a) {
+DataTable.ext.type.order['czech-pre'] = function (a) {
     var special_letters = {
         A: 'Aa',
         a: 'aa',

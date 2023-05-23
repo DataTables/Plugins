@@ -1,7 +1,10 @@
 /*! © SpryMedia Ltd - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  * Sorts a column containing chapter numbers. This can be most useful when
@@ -21,7 +24,7 @@ import DataTable from 'datatables.net';
  *       ]
  *    } );
  */
-DataTable.ext.order['chapter-pre'] = function (a) {
+DataTable.ext.type.order['chapter-pre'] = function (a) {
     var constMaxSections = 5;
     var constMaxSectionDigits = 4;
     var filler;

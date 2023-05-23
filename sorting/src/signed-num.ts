@@ -19,6 +19,6 @@
 
 import DataTable from 'datatables.net';
 
-DataTable.ext.order['signed-num-pre'] = function (a) {
+DataTable.ext.type.order['signed-num-pre'] = function (a) {
 	return a == '-' || a === '' ? 0 : a.replace('+', '') * 1;
 };

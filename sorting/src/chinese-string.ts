@@ -23,10 +23,10 @@
 
 import DataTable from 'datatables.net';
 
-DataTable.ext.order['chinese-string-asc'] = function (s1, s2) {
+DataTable.ext.type.order['chinese-string-asc'] = function (s1, s2) {
 	return s1.localeCompare(s2);
 };
 
-DataTable.ext.order['chinese-string-desc'] = function (s1, s2) {
+DataTable.ext.type.order['chinese-string-desc'] = function (s1, s2) {
 	return s2.localeCompare(s1);
 };

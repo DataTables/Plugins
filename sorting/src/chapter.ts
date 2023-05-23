@@ -21,7 +21,7 @@
 
 import DataTable from 'datatables.net';
 
-DataTable.ext.order['chapter-pre'] = function (a) {
+DataTable.ext.type.order['chapter-pre'] = function (a) {
 	var constMaxSections = 5;
 	var constMaxSectionDigits = 4;
 

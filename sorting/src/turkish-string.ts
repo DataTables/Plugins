@@ -19,7 +19,7 @@
 
 import DataTable from 'datatables.net';
 
-DataTable.ext.order['turkish-pre'] = function (a) {
+DataTable.ext.type.order['turkish-pre'] = function (a) {
 	var special_letters = {
 		C: 'Ca',
 		c: 'ca',

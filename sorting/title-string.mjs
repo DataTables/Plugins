@@ -1,7 +1,10 @@
 /*! © SpryMedia Ltd - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  * Just like the _hidden title numeric sorting_ plug-in, this sorting plug-in
@@ -25,7 +28,7 @@ import DataTable from 'datatables.net';
  *       ]
  *    } );
  */
-DataTable.ext.order['title-string-pre'] = function (a) {
+DataTable.ext.type.order['title-string-pre'] = function (a) {
     return a.match(/title="(.*?)"/)[1].toLowerCase();
 };
 

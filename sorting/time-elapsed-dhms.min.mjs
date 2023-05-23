@@ -1,2 +1,2 @@
 /*! © SpryMedia Ltd, caochenghua - datatables.net/license */
-import $ from"jquery";import DataTable from"datatables.net";DataTable.ext.order["time-elapsed-dhms-pre"]=function(a){var e,a=a.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);return a?(e={s:1,m:60,h:3600,d:86400}[a[2].toLowerCase()],parseFloat(a[1])*e):-1};export default DataTable;
+import jQuery from"jquery";import DataTable from"datatables.net";let $=jQuery;DataTable.ext.type.order["time-elapsed-dhms-pre"]=function(e){var a,e=e.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);return e?(a={s:1,m:60,h:3600,d:86400}[e[2].toLowerCase()],parseFloat(e[1])*a):-1};export default DataTable;

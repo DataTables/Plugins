@@ -16,7 +16,7 @@
 			}
 		};
 
-		if (typeof window !== 'undefined') {
+		if (typeof window === 'undefined') {
 			module.exports = function (root, $) {
 				if ( ! root ) {
 					// CommonJS environments without a window global must pass a
@@ -65,7 +65,7 @@ var DataTable = $.fn.dataTable;
  *       ]
  *    } );
  */
-DataTable.ext.order['ip-address-pre'] = function (a) {
+DataTable.ext.type.order['ip-address-pre'] = function (a) {
     var i, item;
     var m, n, t, p;
     var x, xa;

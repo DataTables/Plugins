@@ -22,7 +22,7 @@
 
 import DataTable from 'datatables.net';
 
-DataTable.ext.order['ip-address-pre'] = function (a) {
+DataTable.ext.type.order['ip-address-pre'] = function (a) {
 	var i, item;
 	var m, n, t, p;
 	var x, xa;

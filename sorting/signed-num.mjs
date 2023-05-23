@@ -1,7 +1,10 @@
 /*! © SpryMedia Ltd - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  * Although DataTables' internal numeric sorting works no problem on negative
@@ -19,7 +22,7 @@ import DataTable from 'datatables.net';
  *       ]
  *    } );
  */
-DataTable.ext.order['signed-num-pre'] = function (a) {
+DataTable.ext.type.order['signed-num-pre'] = function (a) {
     return a == '-' || a === '' ? 0 : a.replace('+', '') * 1;
 };
 

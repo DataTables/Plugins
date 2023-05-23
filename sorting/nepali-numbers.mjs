@@ -1,7 +1,10 @@
 /*! © SpryMedia Ltd, David Konrad - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  * Sorts a column containing nepali numbers. Nepali numbers can easily be
@@ -60,7 +63,7 @@ function nepaliToLatin(nepali) {
             break;
     }
 }
-DataTable.ext.order['nepali-numbers-pre'] = function (a) {
+DataTable.ext.type.order['nepali-numbers-pre'] = function (a) {
     var latin = '', i = 0;
     for (i; i < a.length; i++) {
         latin += nepaliToLatin(a.charAt(i));

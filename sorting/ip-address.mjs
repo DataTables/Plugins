@@ -1,7 +1,10 @@
 /*! © SpryMedia Ltd, Dominique Fournier, Brad Wasson, Peter Vilhan, Kevin Gilkey-Graham - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  * Sorts a column containing IP addresses (IPv4 and IPv6) or IPv4 address and port delimited by ':' in typical dot
@@ -22,7 +25,7 @@ import DataTable from 'datatables.net';
  *       ]
  *    } );
  */
-DataTable.ext.order['ip-address-pre'] = function (a) {
+DataTable.ext.type.order['ip-address-pre'] = function (a) {
     var i, item;
     var m, n, t, p;
     var x, xa;

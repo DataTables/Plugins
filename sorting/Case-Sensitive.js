@@ -16,7 +16,7 @@
 			}
 		};
 
-		if (typeof window !== 'undefined') {
+		if (typeof window === 'undefined') {
 			module.exports = function (root, $) {
 				if ( ! root ) {
 					// CommonJS environments without a window global must pass a
@@ -66,7 +66,7 @@ var DataTable = $.fn.dataTable;
  *       ]
  *   });
  **/
-DataTable.ext.order['case-sensitive-asc'] = function (a, b) {
+DataTable.ext.type.order['case-sensitive-asc'] = function (a, b) {
     if (a < b) {
         return -1;
     }
@@ -75,7 +75,7 @@ DataTable.ext.order['case-sensitive-asc'] = function (a, b) {
     }
     return 0;
 };
-DataTable.ext.order['case-sensitive-desc'] = function (a, b) {
+DataTable.ext.type.order['case-sensitive-desc'] = function (a, b) {
     if (a > b) {
         return -1;
     }

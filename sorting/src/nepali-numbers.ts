@@ -61,7 +61,7 @@ function nepaliToLatin(nepali) {
 	}
 }
 
-DataTable.ext.order['nepali-numbers-pre'] = function (a) {
+DataTable.ext.type.order['nepali-numbers-pre'] = function (a) {
 	var latin = '',
 		i = 0;
 

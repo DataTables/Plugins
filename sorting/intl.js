@@ -16,7 +16,7 @@
 			}
 		};
 
-		if (typeof window !== 'undefined') {
+		if (typeof window === 'undefined') {
 			module.exports = function (root, $) {
 				if ( ! root ) {
 					// CommonJS environments without a window global must pass a
@@ -93,7 +93,7 @@ DataTable.intlOrder = function (locales, options) {
     }
 };
 // Old style originally introduced in the blog post
-DataTable.ext.order.intl = DataTable.intlOrder;
+DataTable.ext.type.order.intl = DataTable.intlOrder;
 
 
 return DataTable;

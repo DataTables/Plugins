@@ -1,7 +1,10 @@
 /*! © SpryMedia Ltd, Nick Schurch - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  * This plug-in will treat numbers which are in scientific notation (for
@@ -18,7 +21,7 @@ import DataTable from 'datatables.net';
  *       ]
  *    } );
  */
-DataTable.ext.order['scientific-pre'] = function (a) {
+DataTable.ext.type.order['scientific-pre'] = function (a) {
     return parseFloat(a);
 };
 

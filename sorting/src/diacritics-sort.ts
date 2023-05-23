@@ -316,6 +316,6 @@ DataTable.ext.type.search.allowDiacritics = function (array) {
 	}
 };
 
-DataTable.ext.order['diacritics-neutralise-pre'] = function (a) {
+DataTable.ext.type.order['diacritics-neutralise-pre'] = function (a) {
 	return removeDiacritics(a.toString().toLowerCase());
 };

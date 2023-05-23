@@ -1,2 +1,2 @@
 /*! © SpryMedia Ltd - datatables.net/license */
-import $ from"jquery";import DataTable from"datatables.net";DataTable.ext.order["case-sensitive-asc"]=function(e,a){return e<a?-1:a<e?1:0},DataTable.ext.order["case-sensitive-desc"]=function(e,a){return a<e?-1:e<a?1:0};export default DataTable;
+import jQuery from"jquery";import DataTable from"datatables.net";let $=jQuery;DataTable.ext.type.order["case-sensitive-asc"]=function(e,t){return e<t?-1:t<e?1:0},DataTable.ext.type.order["case-sensitive-desc"]=function(e,t){return t<e?-1:e<t?1:0};export default DataTable;

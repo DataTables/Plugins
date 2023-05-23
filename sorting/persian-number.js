@@ -16,7 +16,7 @@
 			}
 		};
 
-		if (typeof window !== 'undefined') {
+		if (typeof window === 'undefined') {
 			module.exports = function (root, $) {
 				if ( ! root ) {
 					// CommonJS environments without a window global must pass a
@@ -71,7 +71,7 @@ function toEnglishNumber(strNum) {
     }
     return cache;
 }
-DataTable.ext.order['kh-persian-numbers-pre'] = function (a, b) {
+DataTable.ext.type.order['kh-persian-numbers-pre'] = function (a, b) {
     return parseFloat(toEnglishNumber(a));
 };
 
