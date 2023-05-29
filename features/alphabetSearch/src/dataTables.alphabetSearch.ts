@@ -226,6 +226,10 @@ DataTable.AlphabetSearch = function (context) {
 		.on('mouseleave', 'span', function () {
 			alphabet.find('div.alphabetInfo').css('opacity', 0);
 		});
+
+	this.node = function () {
+		return alphabet;
+	};
 };
 
 // Register a search plug-in

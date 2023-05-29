@@ -1,7 +1,10 @@
 /*! © SpryMedia Ltd - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  * @summary     AlphabetSearch
@@ -162,6 +165,9 @@ DataTable.AlphabetSearch = function (context) {
         .on('mouseleave', 'span', function () {
         alphabet.find('div.alphabetInfo').css('opacity', 0);
     });
+    this.node = function () {
+        return alphabet;
+    };
 };
 // Register a search plug-in
 DataTable.ext.feature.push({

@@ -16,7 +16,7 @@
 			}
 		};
 
-		if (typeof window !== 'undefined') {
+		if (typeof window === 'undefined') {
 			module.exports = function (root, $) {
 				if ( ! root ) {
 					// CommonJS environments without a window global must pass a
@@ -205,6 +205,9 @@ DataTable.AlphabetSearch = function (context) {
         .on('mouseleave', 'span', function () {
         alphabet.find('div.alphabetInfo').css('opacity', 0);
     });
+    this.node = function () {
+        return alphabet;
+    };
 };
 // Register a search plug-in
 DataTable.ext.feature.push({
