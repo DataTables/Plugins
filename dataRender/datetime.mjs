@@ -1,7 +1,10 @@
 /*! © SpryMedia Ltd - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  * NOTE - As of DataTables 1.12, DataTables has a built in date / time renderer

@@ -1,7 +1,10 @@
 /*! © SpryMedia Ltd - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  * Rendering methods using the Javascript Intl API. This is supported by IE11,

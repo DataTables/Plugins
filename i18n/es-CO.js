@@ -113,7 +113,6 @@
         }
     },
     "emptyTable": "Tabla Vacia",
-    "info": "informacion",
     "infoEmpty": "Sin informacion",
     "lengthMenu": "Entradas",
     "loadingRecords": "Cargando...",
@@ -216,7 +215,6 @@
     },
     "decimal": ".",
     "infoFiltered": "filtrado de _MAX_ entradas totales",
-    "infoPostFix": "Mostrando %d a %d de %d entradas",
     "infoThousands": ",",
     "paginate": {
         "first": "Primero",
@@ -256,6 +254,8 @@
         "renameButton": "Eliminar",
         "renameLabel": "Nuevo nombre para %s",
         "renameTitle": "Renombrar Estado"
-    }
+    },
+    "info": "Mostrando _START_ a _END_ de _TOTAL_ entradas",
+    "infoPostFix": ""
 };
 }));

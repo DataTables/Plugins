@@ -1,7 +1,10 @@
 /*! © guillimon, SpryMedia Ltd - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  * DataTables has a built in type called `html` which will strip HTML tags

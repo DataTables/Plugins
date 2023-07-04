@@ -99,7 +99,7 @@ export default {
         },
         "multi": {
             "restore": "Zhbëj ndryshimet",
-            "title": "Vlera të shumÀ�fishta",
+            "title": "Vlera të shumëfishta",
             "info": "Artikujt e selektuar përmbajnë vlera të ndryshme për këtë input. Për të edituar dhe t'i rivendosur të gjithë artikujt për këtë input me vlerën e njejtë, klikoni këtu, përndryshe ato do të mbajnë vlerat e tyre individuale.",
             "noMulti": "Ky input mund të përditësohet individualisht, por jo si pjesë e një grupi."
         },
@@ -165,7 +165,10 @@ export default {
                 "equals": "i\/e barabartë",
                 "not": "jo",
                 "notEmpty": "jo bosh",
-                "startsWith": "fillon me"
+                "startsWith": "fillon me",
+                "notContains": "Nuk Përmban",
+                "notStartsWith": "Nuk Fillon Me",
+                "notEndsWith": "Nuk Përfundon Me"
             }
         },
         "data": "Të dhëna",
@@ -188,7 +191,9 @@ export default {
             "_": "DritaretKerkimit (%d)"
         },
         "emptyPanes": "Nuk ka dritare të kërkimit",
-        "loadMessage": "Duke ngarkuar dritaret e kërkimit"
+        "loadMessage": "Duke ngarkuar dritaret e kërkimit",
+        "showMessage": "Shfaq të gjitha",
+        "collapseMessage": "Mbyll të gjitha"
     },
     "select": {
         "cells": {
@@ -220,6 +225,15 @@ export default {
             "toggleLabel": "Përfshin:"
         },
         "duplicateError": "Ekziton një gjendje me këtë emër.",
-        "emptyError": "Emri nuk mund të jetë i zbrazët."
+        "emptyError": "Emri nuk mund të jetë i zbrazët.",
+        "emptyStates": "Nuk ka gjendje të ruajtura.",
+        "removeConfirm": "A jeni i sigurtë që doni të shlyeni %s?",
+        "removeError": "Shlyerja e gjendjes dështoi.",
+        "removeJoiner": "dhe",
+        "removeSubmit": "Shlyej",
+        "removeTitle": "Shlyej Gjendje",
+        "renameButton": "Riemërto",
+        "renameLabel": "Emri i ri për %s:",
+        "renameTitle": "Riemërto Gjendje"
     }
 };

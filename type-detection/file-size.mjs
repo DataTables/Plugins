@@ -1,7 +1,10 @@
 /*! © SpryMedia Ltd - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  * Detect file size type columns automatically. Commonly used for computer

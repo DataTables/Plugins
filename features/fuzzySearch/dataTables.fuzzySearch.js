@@ -24,7 +24,7 @@
 			}
 		};
 
-		if (typeof window !== 'undefined') {
+		if (typeof window === 'undefined') {
 			module.exports = function (root, $) {
 				if ( ! root ) {
 					// CommonJS environments without a window global must pass a

@@ -8,8 +8,11 @@
  * All rights reserved.
  */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 function levenshtein(__this, that, limit) {
     var thisLength = __this.length, thatLength = that.length, matrix = [];

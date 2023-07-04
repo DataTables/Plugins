@@ -1,7 +1,10 @@
 /*! © SpryMedia Ltd, Alireza Mohammadi Doost - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  * Convert numbers to farsi, english, arabic.

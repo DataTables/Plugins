@@ -1,7 +1,10 @@
 /*! © Lokesh Babu - datatables.net/license */
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 /**
  * This data rendering helper method can be useful when a hyperLink with custom

@@ -5,8 +5,11 @@
  * Released under the MIT license https://git.io/voRZ7
  *****************************************************/
 
-import $ from 'jquery';
+import jQuery from 'jquery';
 import DataTable from 'datatables.net';
+
+// Allow reassignment of the $ variable
+let $ = jQuery;
 
 class MarkDataTables {
     instance;
