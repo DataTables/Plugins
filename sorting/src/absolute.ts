@@ -40,7 +40,7 @@
 import DataTable from 'datatables.net';
 
 declare module 'datatables.net' {
-	interface DataTablesStatic {
+	interface ApiStatic {
 		/** Define an absolute sort with string based sorting */
 		absoluteOrder(values: any[]);
 

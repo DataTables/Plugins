@@ -1,6 +1,6 @@
 /*! © SpryMedia Ltd - datatables.net/license */
 declare module 'datatables.net' {
-    interface DataTablesStatic {
+    interface ApiStatic {
         intlOrder(locals: string, options: Intl.CollatorOptions): any;
     }
 }

@@ -39,7 +39,7 @@
 import DataTable from 'datatables.net';
 
 declare module 'datatables.net' {
-	interface DataTablesStatic {
+	interface ApiStatic {
 		intlOrder(locals: string, options: Intl.CollatorOptions);
 	}
 }
@@ -58,4 +58,4 @@ DataTable.intlOrder = function (locales, options) {
 };
 
 // Old style originally introduced in the blog post
-(DataTable.ext.type.order as any).intl = DataTable.intlOrder;
+DataTable.ext.type.order.intl = DataTable.intlOrder;
