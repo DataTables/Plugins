@@ -79,7 +79,7 @@ DataTable['enum'] = function (arr) {
         return lookup[d] !== undefined ? name : null;
     });
     // Add sorting method
-    types.type.order[name + '-pre'] = function (d) {
+    types.order[name + '-pre'] = function (d) {
         return lookup[d];
     };
 };
