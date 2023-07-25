@@ -132,7 +132,7 @@ DataTable.ext.type.order['natural-nohtml-asc'] = function (a, b) {
 	return naturalSort(a, b, false);
 };
 
-DataTable.ext.type.order['natural-nohtml-asc'] = function (a, b) {
+DataTable.ext.type.order['natural-nohtml-desc'] = function (a, b) {
 	return naturalSort(a, b, false) * -1;
 };
 
@@ -143,7 +143,7 @@ DataTable.ext.type.order['natural-ci-asc'] = function (a, b) {
 	return naturalSort(a, b, true);
 };
 
-DataTable.ext.type.order['natural-ci-asc'] = function (a, b) {
+DataTable.ext.type.order['natural-ci-desc'] = function (a, b) {
 	a = a.toString().toLowerCase();
 	b = b.toString().toLowerCase();
 
