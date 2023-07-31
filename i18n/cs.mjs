@@ -55,7 +55,7 @@ export default {
                 "empty": "prázdné",
                 "contains": "obsahuje",
                 "not": "není",
-                "notEmpty": "není prázdnÀ�",
+                "notEmpty": "není prázdné",
                 "without": "neobsahuje"
             }
         },
@@ -143,7 +143,7 @@ export default {
         "sortDescending": "Aktivujte pro seřazení sestupně"
     },
     "lengthMenu": "Zobrazit _MENU_ výsledků",
-    "processing": "ZpracovÀ�vání...",
+    "processing": "Zpracovávání...",
     "search": "Vyhledávání:",
     "datetime": {
         "previous": "Předchozí",

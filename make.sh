@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 DT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/../.."
 if [ "$1" = "debug" ]; then
@@ -58,8 +58,9 @@ function lang_plugin {
 	FILE_NAME="${FILE_NAME%.*}"
 
 	echo_msg "  Language $FILE_NAME"
-	JSON=$(cat $SRC_FILE)
+	JSON=$(<$SRC_FILE)
 
+	echo -n " " # ??? Without this the echo below outputs non-utf8 characters
 	echo "export default $JSON;" > $DEST_DIR/$FILE_NAME.mjs
 	cat << EOF > $DEST_DIR/$FILE_NAME.js
 (function( factory ) {
@@ -92,33 +93,33 @@ DT_BUILT="${DT_SRC}/built/DataTables"
 
 PLUGINS="${DT_SRC}/extensions/Plugins"
 
-for file in $PLUGINS/api/src/*.ts; do
-	ts_plugin $file
-done
+# for file in $PLUGINS/api/src/*.ts; do
+# 	ts_plugin $file
+# done
 
-for file in $PLUGINS/buttons/src/*.ts; do
-	ts_plugin $file
-done
+# for file in $PLUGINS/buttons/src/*.ts; do
+# 	ts_plugin $file
+# done
 
-for file in $PLUGINS/dataRender/src/*.ts; do
-	ts_plugin $file
-done
+# for file in $PLUGINS/dataRender/src/*.ts; do
+# 	ts_plugin $file
+# done
 
-for file in $PLUGINS/features/*/src/*.ts; do
-	ts_plugin $file
-done
+# for file in $PLUGINS/features/*/src/*.ts; do
+# 	ts_plugin $file
+# done
 
-for file in $PLUGINS/sorting/src/*.ts; do
-	ts_plugin $file
-done
+# for file in $PLUGINS/sorting/src/*.ts; do
+# 	ts_plugin $file
+# done
 
-for file in $PLUGINS/type-detection/src/*.ts; do
-	ts_plugin $file
-done
+# for file in $PLUGINS/type-detection/src/*.ts; do
+# 	ts_plugin $file
+# done
 
-for file in $PLUGINS/filtering/type-based/src/*.ts; do
-	ts_plugin $file
-done
+# for file in $PLUGINS/filtering/type-based/src/*.ts; do
+# 	ts_plugin $file
+# done
 
 echo_section "  Languages"
 for file in $PLUGINS/i18n/*.json; do

@@ -97,7 +97,7 @@
                 "notEmpty": "Nem üres"
             },
             "number": {
-                "between": "KözÀ�tt",
+                "between": "Között",
                 "empty": "Üres",
                 "equals": "Egyenlő",
                 "gt": "Nagyobb mint",

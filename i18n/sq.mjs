@@ -99,7 +99,7 @@ export default {
         },
         "multi": {
             "restore": "Zhbëj ndryshimet",
-            "title": "Vlera të shumëfishta",
+            "title": "Vlera të shumÀ�fishta",
             "info": "Artikujt e selektuar përmbajnë vlera të ndryshme për këtë input. Për të edituar dhe t'i rivendosur të gjithë artikujt për këtë input me vlerën e njejtë, klikoni këtu, përndryshe ato do të mbajnë vlerat e tyre individuale.",
             "noMulti": "Ky input mund të përditësohet individualisht, por jo si pjesë e një grupi."
         },
@@ -224,7 +224,7 @@ export default {
             "title": "Krijo Gjendje Të Re",
             "toggleLabel": "Përfshin:"
         },
-        "duplicateError": "Ekziton një gjendje me këtë emër.",
+        "duplicateError": "Ekziton njÀ� gjendje me këtë emër.",
         "emptyError": "Emri nuk mund të jetë i zbrazët.",
         "emptyStates": "Nuk ka gjendje të ruajtura.",
         "removeConfirm": "A jeni i sigurtë që doni të shlyeni %s?",
