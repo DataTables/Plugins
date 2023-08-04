@@ -169,13 +169,13 @@
             "9": "Outubro"
         },
         "weekdays": [
-            "Domingo",
-            "Segunda-feira",
-            "Terça-feira",
-            "Quarta-feira",
-            "Quinte-feira",
-            "Sexta-feira",
-            "Sábado"
+            "Dom",
+            "Seg",
+            "Ter",
+            "Qua",
+            "Qui",
+            "Sex",
+            "Sáb"
         ]
     },
     "editor": {

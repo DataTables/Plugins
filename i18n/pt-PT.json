@@ -188,15 +188,6 @@
             "am",
             "pm"
         ],
-        "weekdays": [
-            "Seg",
-            "Ter",
-            "Qua",
-            "Qui",
-            "Sex",
-            "Sáb",
-            "Dom"
-        ],
         "months": [
             "Janeiro",
             "Fevereiro",
@@ -210,6 +201,15 @@
             "Outubro",
             "Novembro",
             "Dezembro"
+        ],
+        "weekdays": [
+            "Dom",
+            "Seg",
+            "Ter",
+            "Qua",
+            "Qui",
+            "Sex",
+            "Sáb"
         ]
     },
     "stateRestore": {
