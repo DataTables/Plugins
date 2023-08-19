@@ -56,7 +56,7 @@ export default {
         "savedStates": "Gespeicherte Ansicht",
         "stateRestore": "Ansicht %d",
         "updateState": "Aktualisieren",
-        "copyKeys": "Drücken Sie die Taste <i>STRG<\/i> oder <i>⌘<\/i> + <i>C<\/i> um die Tabelle<br \/>in den Zwischenspeicher zu kopieren.<br \/><br \/>Um den Vorgang abzubrechen, klicken Sie die Nachricht an oder drücken Sie die Escape-Taste."
+        "copyKeys": "Taste <i>STRG<\/i> oder <i>⌘<\/i> + <i>C<\/i> drücken um die Tabelle<br \/>in den Zwischenspeicher zu kopieren.<br \/><br \/>Um den Vorgang abzubrechen, Nachricht anklicken oder Escape-Taste drücken."
     },
     "autoFill": {
         "cancel": "Abbrechen",
@@ -143,7 +143,7 @@ export default {
         "showMessage": "zeige Alle",
         "collapseMessage": "Alle einklappen",
         "count": "{total}",
-        "loadMessage": "Lade Suchmasken..."
+        "loadMessage": "Lade Suchmasken .."
     },
     "thousands": ".",
     "zeroRecords": "Keine passenden Einträge gefunden",
@@ -200,7 +200,7 @@ export default {
         },
         "multi": {
             "title": "Mehrere Werte",
-            "info": "Die ausgewählten Elemente enthalten mehrere Werte für dieses Feld. Um alle Elemente für dieses Feld zu bearbeiten und auf denselben Wert zu setzen, klicken oder tippen Sie hier, andernfalls behalten diese ihre individuellen Werte bei.",
+            "info": "Die ausgewählten Elemente enthalten mehrere Werte für dieses Feld. Um alle Elemente für dieses Feld zu bearbeiten und auf denselben Wert zu setzen, hier klicken oder tippen, andernfalls behalten diese ihre individuellen Werte bei.",
             "restore": "Änderungen zurücksetzen",
             "noMulti": "Dieses Feld kann nur einzeln bearbeitet werden, nicht als Teil einer Mengen-Änderung."
         },
@@ -210,7 +210,7 @@ export default {
             "submit": "Bearbeiten"
         }
     },
-    "searchPlaceholder": "Suchen...",
+    "searchPlaceholder": "Suchen ..",
     "stateRestore": {
         "creationModal": {
             "button": "Erstellen",
@@ -231,7 +231,7 @@ export default {
         "duplicateError": "Eine Ansicht mit diesem Namen existiert bereits.",
         "emptyError": "Name darf nicht leer sein.",
         "emptyStates": "Keine gespeicherten Ansichten",
-        "removeConfirm": "Bist du dir sicher, dass du %s entfernen möchtest?",
+        "removeConfirm": "Sicher dass %s entfernt werden soll?",
         "removeError": "Entfernen der Ansicht fehlgeschlagen.",
         "removeJoiner": " und ",
         "removeSubmit": "Entfernen",
