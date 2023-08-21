@@ -79,7 +79,8 @@ export default {
         "loadMessage": "Henter søgepaneler",
         "title": "Filter aktive - %d",
         "count": "Antal",
-        "countFiltered": "Filtreret antal"
+        "countFiltered": "Filtreret antal",
+        "showMessage": "Vis alle"
     },
     "datetime": {
         "previous": "Forrige",
@@ -109,7 +110,7 @@ export default {
             "9": "Oktober",
             "10": "November",
             "11": "December",
-            "1": "Febuar"
+            "1": "Februar"
         }
     },
     "editor": {
@@ -207,5 +208,10 @@ export default {
         }
     },
     "infoPostFix": " ",
-    "searchPlaceholder": "søg.."
+    "searchPlaceholder": "søg..",
+    "stateRestore": {
+        "duplicateError": "En tilstand med dette navn eksisterer allerede.",
+        "emptyError": "Navn kan ikke være tomt",
+        "emptyStates": "Ingen gemte tilstande"
+    }
 };

@@ -34,7 +34,8 @@
     "thousands": ",",
     "buttons": {
         "colvis": "項目の表示\/非表示",
-        "csv": "CSVをダウンロード"
+        "csv": "CSVをダウンロード",
+        "collection": "コレクション"
     },
     "searchBuilder": {
         "add": "条件を追加",
@@ -86,6 +87,11 @@
             "_": "カスタムサーチ (%d)"
         },
         "value": "値"
+    },
+    "autoFill": {
+        "cancel": "キャンセル",
+        "fillHorizontal": "横でセルを書き込む",
+        "fillVertical": "縦でセルを書き込む"
     }
 };
 }));

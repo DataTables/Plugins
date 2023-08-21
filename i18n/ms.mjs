@@ -23,13 +23,15 @@ export default {
         "cancel": "batal",
         "fill": "Isi semua sel dengan <i>%d<\/i>",
         "fillHorizontal": "Isi sel secara mendatar",
-        "fillVertical": "Isi sel secara menegak"
+        "fillVertical": "Isi sel secara menegak",
+        "info": "Maklumat"
     },
     "buttons": {
         "collection": "Koleksi <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
         "copy": "Salin",
         "print": "Cetak",
-        "colvis": "Kolum Pilihan"
+        "colvis": "Kolum Pilihan",
+        "colvisRestore": "Kembalikan Penglihatan"
     },
     "thousands": ",",
     "select": {
@@ -48,5 +50,7 @@ export default {
     },
     "editor": {
         "close": "Tutup"
-    }
+    },
+    "decimal": ".",
+    "searchPlaceholder": "Contoh"
 };

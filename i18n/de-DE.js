@@ -68,7 +68,7 @@
         "savedStates": "Gespeicherte Ansicht",
         "stateRestore": "Ansicht %d",
         "updateState": "Aktualisieren",
-        "copyKeys": "Drücken Sie die Taste <i>STRG<\/i> oder <i>⌘<\/i> + <i>C<\/i> um die Tabelle<br \/>in den Zwischenspeicher zu kopieren.<br \/><br \/>Um den Vorgang abzubrechen, klicken Sie die Nachricht an oder drücken Sie die Escape-Taste."
+        "copyKeys": "Taste <i>STRG&lt;\\\/i&gt; oder <i>⌘&lt;\\\/i&gt; + <i>C&lt;\\\/i&gt; drücken um die Tabelle<br \/>in den Zwischenspeicher zu kopieren.<br \/><br \/>Um den Vorgang abzubrechen, Nachricht anklicken oder Escape-Taste drücken.<\/i><\/i><\/i>"
     },
     "autoFill": {
         "cancel": "Abbrechen",
@@ -155,7 +155,7 @@
         "showMessage": "zeige Alle",
         "collapseMessage": "Alle einklappen",
         "count": "{total}",
-        "loadMessage": "Lade Suchmasken..."
+        "loadMessage": "Lade Suchmasken .."
     },
     "thousands": ".",
     "zeroRecords": "Keine passenden Einträge gefunden",
@@ -212,9 +212,9 @@
         },
         "multi": {
             "title": "Mehrere Werte",
-            "info": "Die ausgewählten Elemente enthalten mehrere Werte für dieses Feld. Um alle Elemente für dieses Feld zu bearbeiten und auf denselben Wert zu setzen, klicken oder tippen Sie hier, andernfalls behalten diese ihre individuellen Werte bei.",
             "restore": "Änderungen zurücksetzen",
-            "noMulti": "Dieses Feld kann nur einzeln bearbeitet werden, nicht als Teil einer Mengen-Änderung."
+            "noMulti": "Dieses Feld kann nur einzeln bearbeitet werden, nicht als Teil einer Mengen-Änderung.",
+            "info": "Die ausgewählten Elemente enthalten mehrere Werte für dieses Feld. Um alle Elemente für dieses Feld zu bearbeiten und auf denselben Wert zu setzen, hier klicken oder tippen, andernfalls behalten diese ihre individuellen Werte bei."
         },
         "edit": {
             "button": "Bearbeiten",
@@ -243,14 +243,14 @@
         "duplicateError": "Eine Ansicht mit diesem Namen existiert bereits.",
         "emptyError": "Name darf nicht leer sein.",
         "emptyStates": "Keine gespeicherten Ansichten",
-        "removeConfirm": "Bist du dir sicher, dass du %s entfernen möchtest?",
         "removeError": "Entfernen der Ansicht fehlgeschlagen.",
         "removeJoiner": " und ",
         "removeSubmit": "Entfernen",
         "removeTitle": "Ansicht entfernen",
         "renameButton": "Umbenennen",
         "renameLabel": "Neuer Name für %s:",
-        "renameTitle": "Ansicht umbenennen"
+        "renameTitle": "Ansicht umbenennen",
+        "removeConfirm": "Sicher dass %s entfernt werden soll?"
     }
 };
 }));

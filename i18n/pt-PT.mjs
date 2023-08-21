@@ -188,15 +188,6 @@ export default {
             "am",
             "pm"
         ],
-        "weekdays": [
-            "Seg",
-            "Ter",
-            "Qua",
-            "Qui",
-            "Sex",
-            "Sáb",
-            "Dom"
-        ],
         "months": [
             "Janeiro",
             "Fevereiro",
@@ -210,6 +201,15 @@ export default {
             "Outubro",
             "Novembro",
             "Dezembro"
+        ],
+        "weekdays": [
+            "Dom",
+            "Seg",
+            "Ter",
+            "Qua",
+            "Qui",
+            "Sex",
+            "Sáb"
         ]
     },
     "stateRestore": {
@@ -230,7 +230,7 @@ export default {
             "toggleLabel": "Incluir:"
         },
         "duplicateError": "Já existe um estado com o mesmo nome",
-        "emptyError": "NÀ�o pode estar a vazio",
+        "emptyError": "Não pode estar a vazio",
         "emptyStates": "Não existem estados gravados",
         "removeConfirm": "Deseja mesmo remover o estado %s?",
         "removeError": "Erro ao remover o estado.",

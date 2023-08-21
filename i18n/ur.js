@@ -26,7 +26,7 @@
     },
     "aria": {
         "sortAscending": "چڑھائی ترتیب دیں",
-        "sortDescending": "نزولی ترتیب دیں"
+        "sortDescending": "ترتیب نزولی"
     },
     "autoFill": {
         "cancel": "منسوخ کریں",

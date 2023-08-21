@@ -34,7 +34,8 @@
         "cancel": "Zrušiť",
         "fill": "Vyplniť všetky bunky s <i>%d<i><\/i><\/i>",
         "fillHorizontal": "Vyplniť bunky horizontálne",
-        "fillVertical": "Vyplniť bunky vertikálne"
+        "fillVertical": "Vyplniť bunky vertikálne",
+        "info": "Príklad automatického vypĺňania"
     },
     "buttons": {
         "collection": "Kolekcia <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
@@ -49,12 +50,20 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Zobraziť všetky riadky",
-            "_": "Zobraziť %d riadkov"
+            "_": "Zobraziť %d riadkov",
+            "1": "Zobraziť 1 riadok"
         },
         "pdf": "PDF",
         "print": "Tlačiť",
         "colvis": "Viditeľnosť stĺpcov",
-        "copyKeys": "Stlačte CTRL alebo u2318 + C pre kopírovanie dát tabuľky do systémovej schránky. Pre zrušenie kliknite na túto správu alebo stlačte ESC."
+        "copyKeys": "Stlačte CTRL alebo u2318 + C pre kopírovanie dát tabuľky do systémovej schránky. Pre zrušenie kliknite na túto správu alebo stlačte ESC.",
+        "createState": "Vytvoriť stav",
+        "removeAllStates": "Vymazať všetky stavy",
+        "removeState": "Odstrániť",
+        "renameState": "Premenovať",
+        "savedStates": "Uložené stavy",
+        "stateRestore": "Stav %d",
+        "updateState": "Aktualizovať"
     },
     "searchBuilder": {
         "add": "Pridať Podmienku",
@@ -130,7 +139,9 @@
         "countFiltered": "{shown} ({total})",
         "emptyPanes": "Žiadne Vyhľadávacie Panely",
         "loadMessage": "Načítavam Vyhľadávacie Panely",
-        "title": "Aktívnych Filtrov - %"
+        "title": "Aktívnych Filtrov - %",
+        "showMessage": "Zobraziť všetko",
+        "collapseMessage": "Zbaliť všetko"
     },
     "select": {
         "cells": {
@@ -139,7 +150,7 @@
         },
         "columns": {
             "1": "1 vybraný stĺpec",
-            "_": "%d vybraných stĀ�pcov"
+            "_": "%d vybraných stĺpcov"
         }
     },
     "thousands": " ",
@@ -182,7 +193,7 @@
         "close": "Zavrieť",
         "create": {
             "button": "Nový",
-            "title": "Vytvoriť nový zÀ�znam",
+            "title": "Vytvoriť nový záznam",
             "submit": "Vytvoriť"
         },
         "edit": {
@@ -210,6 +221,36 @@
         }
     },
     "decimal": ",",
-    "emptyTable": "Nie sú k dispozícii žiadne dáta."
+    "emptyTable": "Nie sú k dispozícii žiadne dáta.",
+    "searchPlaceholder": "Príklad vyhľadávania",
+    "stateRestore": {
+        "creationModal": {
+            "button": "Vytvoriť",
+            "columns": {
+                "search": "Vyhľadanie v stĺpci",
+                "visible": "Viditeľnosť stĺpca"
+            },
+            "name": "Názov:",
+            "order": "Zoradenie",
+            "paging": "Stránkovanie",
+            "scroller": "Pozícia skrolovania",
+            "search": "Hľadať",
+            "searchBuilder": "Pokročilé Vyhľadávanie",
+            "select": "Výber",
+            "title": "Vytvoriť nový stav",
+            "toggleLabel": "Zahrnúť:"
+        },
+        "duplicateError": "Stav s týmto názvom už existuje.",
+        "emptyError": "Názov nesmie byť prázdny.",
+        "emptyStates": "Žiadne uložené stavy",
+        "removeConfirm": "Ste si istí, že chcete odstrániť stav %s?",
+        "removeError": "Nepodarilo sa odstrániť stav.",
+        "removeJoiner": " a ",
+        "removeSubmit": "Odstrániť",
+        "removeTitle": "Odstrániť stav",
+        "renameButton": "Premenovať",
+        "renameLabel": "Nový názov pre %s:",
+        "renameTitle": "Premenovať stav"
+    }
 };
 }));

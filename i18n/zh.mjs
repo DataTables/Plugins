@@ -10,7 +10,8 @@ export default {
         "cancel": "取消",
         "fill": "用 <i>%d<\/i> 填充所有单元格",
         "fillHorizontal": "水平填充单元格",
-        "fillVertical": "垂直填充单元格"
+        "fillVertical": "垂直填充单元格",
+        "info": "示例:自动填充信息"
     },
     "buttons": {
         "colvis": "列可见性",
@@ -21,11 +22,11 @@ export default {
         "pdf": "PDF",
         "pageLength": {
             "-1": "显示所有行",
-            "_": "显示 %d 行"
+            "_": "显示 %d 行",
+            "1": "显示1行"
         },
         "print": "打印",
         "collection": "集合 <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
-        "colvisRestore": "还原可见性",
         "copyKeys": "按 Ctrl 或 u2318 + C 键将表中数据复制到系统剪贴板。<br \/><br \/>要取消，请单击此消息或按 Escape 键。",
         "copySuccess": {
             "1": "已复制 1 行到剪贴板",
@@ -35,9 +36,10 @@ export default {
         "removeAllStates": "删除所有状态",
         "removeState": "删除",
         "renameState": "重命名",
-        "savedStates": "保存的状态",
         "stateRestore": "状态 %d",
-        "updateState": "更新"
+        "updateState": "更新",
+        "colvisRestore": "恢复可见",
+        "savedStates": "保存状态"
     },
     "searchBuilder": {
         "button": {
@@ -90,7 +92,7 @@ export default {
             "array": {
                 "equals": "等于",
                 "empty": "为空",
-                "contains": "吀�有",
+                "contains": "含有",
                 "not": "非",
                 "notEmpty": "非空",
                 "without": "无"
@@ -187,10 +189,6 @@ export default {
     },
     "loadingRecords": "正在加载...",
     "processing": "正在处理...",
-    "aria": {
-        "sortAscending": ": 激活以升序排序此列",
-        "sortDescending": ": 激活以降序排序此列"
-    },
     "decimal": ".",
     "emptyTable": "表中没有数据",
     "select": {
@@ -227,7 +225,7 @@ export default {
         },
         "duplicateError": "已存在使用此名称的状态。",
         "emptyError": "名称不能为空。",
-        "emptyStates": "没有俀�存的状态",
+        "emptyStates": "没有保存的状态",
         "removeConfirm": "确定要删除 %s？",
         "removeError": "删除状态失败。",
         "removeJoiner": "和",
@@ -240,5 +238,9 @@ export default {
     "info": "正在显示第 _START_ 至 _END_ 条记录，共 _TOTAL_ 条",
     "infoEmpty": "正在显示第 0 至 0 条记录，共 0 条",
     "infoFiltered": "(筛选自全部 _MAX_ 条记录)",
-    "lengthMenu": "显示 _MENU_ 条记录"
+    "lengthMenu": "显示 _MENU_ 条记录",
+    "aria": {
+        "sortAscending": ": 按升序排序此列",
+        "sortDescending": ": 按降序排序此列"
+    }
 };

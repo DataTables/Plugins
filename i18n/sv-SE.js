@@ -34,7 +34,8 @@
         "cancel": "Avbryt",
         "fill": "Fyll alla celler med <i>%d<\/i>",
         "fillHorizontal": "Fyll celler horisontalt",
-        "fillVertical": "Fyll celler vertikalt"
+        "fillVertical": "Fyll celler vertikalt",
+        "info": "Exempel Autofyll Info"
     },
     "buttons": {
         "collection": "Samling <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
@@ -51,10 +52,18 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Visa alla rader",
-            "_": "Visa %d rader"
+            "_": "Visa %d rader",
+            "1": "Visa 1 rad"
         },
         "pdf": "PDF",
-        "print": "Skriv ut"
+        "print": "Skriv ut",
+        "createState": "Skapa urval",
+        "removeAllStates": "Sparade urval",
+        "removeState": "Ta bort",
+        "renameState": "Döp om",
+        "savedStates": "Sparade urval",
+        "stateRestore": "Urval",
+        "updateState": "Uppdatera"
     },
     "decimal": ",",
     "emptyTable": "Tabellen innehåller ingen data",
@@ -96,7 +105,10 @@
                 "equals": "Lika med",
                 "not": "Inte",
                 "notEmpty": "Inte Tom",
-                "startsWith": "Börjar med"
+                "startsWith": "Börjar med",
+                "notContains": "Innehåller inte",
+                "notStartsWith": "Börjar ej med",
+                "notEndsWith": "Slutar ej med"
             },
             "array": {
                 "equals": "Lika med",
@@ -129,7 +141,9 @@
         "countFiltered": "{shown} ({total})",
         "emptyPanes": "Sökrutor saknas",
         "loadMessage": "Laddar Sökrutor...",
-        "title": "Aktiva Filter - %d"
+        "title": "Aktiva Filter - %d",
+        "showMessage": "Visa alla",
+        "collapseMessage": "Dölj alla"
     },
     "select": {
         "cells": {
@@ -139,6 +153,10 @@
         "columns": {
             "1": "1 kolumn markerad",
             "_": "%d kolumner markerade"
+        },
+        "rows": {
+            "1": "1 rad vald",
+            "_": "%d rader valda"
         }
     },
     "thousands": " ",
@@ -207,6 +225,36 @@
             "restore": "Ångra ändringar",
             "noMulti": "Detta fält kan redigeras individuellt, men inte som en del av en grupp."
         }
+    },
+    "searchPlaceholder": "ange sökord",
+    "stateRestore": {
+        "creationModal": {
+            "button": "Skapa",
+            "columns": {
+                "search": "Sök kolumn",
+                "visible": "Visa kolumn"
+            },
+            "name": "Namn:",
+            "order": "Sortera",
+            "paging": "Sidor",
+            "scroller": "Skroll position",
+            "search": "Sök",
+            "searchBuilder": "Sökbyggare",
+            "select": "Välj",
+            "title": "Skapa Nytt Urval",
+            "toggleLabel": "Innehåller:"
+        },
+        "duplicateError": "Ett urval med detta namn finns redan",
+        "emptyError": "Namn måste anges",
+        "emptyStates": "Inga sparade urval",
+        "removeConfirm": "Är du säker på att du vill ta bort %s?",
+        "removeError": "Misslyckades radera urval.",
+        "removeJoiner": "Är du säker på att du vill ta bort urval %s och %s?",
+        "removeSubmit": "Är du säker på att du vill ta bort %s?",
+        "removeTitle": "Radera Urval",
+        "renameButton": "Byt namn",
+        "renameLabel": "Nytt namn för %s:",
+        "renameTitle": "Byt namn på urval"
     }
 };
 }));

@@ -11,7 +11,6 @@
 }
 (function() {
     return {
-    "emptyTable": "Tabloda herhangi bir veri mevcut değil",
     "info": "_TOTAL_ kayıttan _START_ - _END_ arasındaki kayıtlar gösteriliyor",
     "infoEmpty": "Kayıt yok",
     "infoFiltered": "(_MAX_ kayıt içerisinden bulunan)",
@@ -49,7 +48,8 @@
         "cancel": "İptal",
         "fillHorizontal": "Hücreleri yatay olarak doldur",
         "fillVertical": "Hücreleri dikey olarak doldur",
-        "fill": "Bütün hücreleri <i>%d<\/i> ile doldur"
+        "fill": "Bütün hücreleri <i>%d<\/i> ile doldur",
+        "info": "Detayı"
     },
     "buttons": {
         "collection": "Koleksiyon <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
@@ -64,7 +64,8 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Bütün satırları göster",
-            "_": "%d satır göster"
+            "_": "%d satır göster",
+            "1": "1 Satır Göster"
         },
         "pdf": "PDF",
         "print": "Yazdır",
@@ -252,6 +253,9 @@
         "renameTitle": "Görünüm İsmini Değiştir",
         "removeConfirm": "Görünümü silmek istediğinize emin misiniz?",
         "removeError": "Görünüm silinemedi"
-    }
+    },
+    "emptyTable": "Tabloda veri bulunmuyor",
+    "infoPostFix": "_TOTAL_ kayıttan _START_ - _END_ arasındaki kayıtlar gösteriliyor",
+    "searchPlaceholder": "Arayın..."
 };
 }));

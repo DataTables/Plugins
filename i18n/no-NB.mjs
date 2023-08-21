@@ -212,5 +212,5 @@ export default {
             "title": "Flere verdier"
         }
     },
-    "thousands": " tusener"
+    "thousands": " ."
 };
