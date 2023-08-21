@@ -6,7 +6,6 @@
     "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
     "infoFiltered": "(filtrado de un total de _MAX_ registros)",
     "search": "Buscar:",
-    "infoThousands": ",",
     "loadingRecords": "Cargando...",
     "paginate": {
         "first": "Primero",
@@ -49,7 +48,7 @@
         "cancel": "Cancelar",
         "fill": "Rellene todas las celdas con <i>%d<\/i>",
         "fillHorizontal": "Rellenar celdas horizontalmente",
-        "fillVertical": "Rellenar celdas verticalmentemente"
+        "fillVertical": "Rellenar celdas verticalmente"
     },
     "decimal": ",",
     "searchBuilder": {
@@ -62,18 +61,17 @@
         "condition": "Condición",
         "conditions": {
             "date": {
-                "after": "Despues",
                 "before": "Antes",
                 "between": "Entre",
                 "empty": "Vacío",
                 "equals": "Igual a",
                 "notBetween": "No entre",
-                "notEmpty": "No Vacio",
-                "not": "Diferente de"
+                "not": "Diferente de",
+                "after": "Después",
+                "notEmpty": "No Vacío"
             },
             "number": {
                 "between": "Entre",
-                "empty": "Vacio",
                 "equals": "Igual a",
                 "gt": "Mayor a",
                 "gte": "Mayor o igual a",
@@ -81,19 +79,20 @@
                 "lte": "Menor o igual que",
                 "notBetween": "No entre",
                 "notEmpty": "No vacío",
-                "not": "Diferente de"
+                "not": "Diferente de",
+                "empty": "Vacío"
             },
             "string": {
                 "contains": "Contiene",
                 "empty": "Vacío",
                 "endsWith": "Termina en",
                 "equals": "Igual a",
-                "notEmpty": "No Vacio",
                 "startsWith": "Empieza con",
                 "not": "Diferente de",
                 "notContains": "No Contiene",
                 "notStartsWith": "No empieza con",
-                "notEndsWith": "No termina con"
+                "notEndsWith": "No termina con",
+                "notEmpty": "No Vacío"
             },
             "array": {
                 "not": "Diferente de",
@@ -147,7 +146,6 @@
     "thousands": ".",
     "datetime": {
         "previous": "Anterior",
-        "next": "Proximo",
         "hours": "Horas",
         "minutes": "Minutos",
         "seconds": "Segundos",
@@ -170,15 +168,16 @@
             "8": "Septiembre",
             "9": "Octubre"
         },
-        "weekdays": [
-            "Dom",
-            "Lun",
-            "Mar",
-            "Mie",
-            "Jue",
-            "Vie",
-            "Sab"
-        ]
+        "weekdays": {
+            "0": "Dom",
+            "1": "Lun",
+            "2": "Mar",
+            "4": "Jue",
+            "5": "Vie",
+            "3": "Mié",
+            "6": "Sáb"
+        },
+        "next": "Próximo"
     },
     "editor": {
         "close": "Cerrar",
@@ -197,8 +196,8 @@
             "title": "Eliminar Registro",
             "submit": "Eliminar",
             "confirm": {
-                "_": "¿Está seguro que desea eliminar %d filas?",
-                "1": "¿Está seguro que desea eliminar 1 fila?"
+                "_": "¿Está seguro de que desea eliminar %d filas?",
+                "1": "¿Está seguro de que desea eliminar 1 fila?"
             }
         },
         "error": {
@@ -206,9 +205,9 @@
         },
         "multi": {
             "title": "Múltiples Valores",
-            "info": "Los elementos seleccionados contienen diferentes valores para este registro. Para editar y establecer todos los elementos de este registro con el mismo valor, hacer click o tap aquí, de lo contrario conservarán sus valores individuales.",
             "restore": "Deshacer Cambios",
-            "noMulti": "Este registro puede ser editado individualmente, pero no como parte de un grupo."
+            "noMulti": "Este registro puede ser editado individualmente, pero no como parte de un grupo.",
+            "info": "Los elementos seleccionados contienen diferentes valores para este registro. Para editar y establecer todos los elementos de este registro con el mismo valor, haga clic o pulse aquí, de lo contrario conservarán sus valores individuales."
         }
     },
     "info": "Mostrando _START_ a _END_ de _TOTAL_ registros",
@@ -218,25 +217,28 @@
             "name": "Nombre:",
             "order": "Clasificación",
             "paging": "Paginación",
-            "search": "Busqueda",
             "select": "Seleccionar",
             "columns": {
                 "search": "Búsqueda de Columna",
                 "visible": "Visibilidad de Columna"
             },
             "title": "Crear Nuevo Estado",
-            "toggleLabel": "Incluir:"
+            "toggleLabel": "Incluir:",
+            "scroller": "Posición de desplazamiento",
+            "search": "Búsqueda",
+            "searchBuilder": "Búsqueda avanzada"
         },
-        "emptyError": "El nombre no puede estar vacio",
-        "removeConfirm": "¿Seguro que quiere eliminar este %s?",
-        "removeError": "Error al eliminar el registro",
         "removeJoiner": "y",
         "removeSubmit": "Eliminar",
         "renameButton": "Cambiar Nombre",
-        "renameLabel": "Nuevo nombre para %s",
         "duplicateError": "Ya existe un Estado con este nombre.",
         "emptyStates": "No hay Estados guardados",
         "removeTitle": "Remover Estado",
-        "renameTitle": "Cambiar Nombre Estado"
-    }
+        "renameTitle": "Cambiar Nombre Estado",
+        "emptyError": "El nombre no puede estar vacío.",
+        "removeConfirm": "¿Seguro que quiere eliminar %s?",
+        "removeError": "Error al eliminar el Estado",
+        "renameLabel": "Nuevo nombre para %s:"
+    },
+    "infoThousands": "."
 }

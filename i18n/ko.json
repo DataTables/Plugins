@@ -27,7 +27,6 @@
         },
         "copyTitle": "복사판에서 복사",
         "csv": "CSV",
-        "excel": "엑설",
         "pageLength": {
             "-1": "모든 행 보기",
             "_": "%d행 보기"
@@ -37,7 +36,8 @@
         "collection": "집합 <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
         "colvis": "컬럼 보기",
         "colvisRestore": "보기 복원",
-        "copy": "복사"
+        "copy": "복사",
+        "excel": "엑셀"
     },
     "searchBuilder": {
         "add": "조건 추가",
@@ -62,5 +62,61 @@
         "fill": "모든 셀에서 <i>%d<i>을(를) 삽입<\/i><\/i>",
         "fillHorizontal": "수평 셀에서 값을 삽입",
         "fillVertical": "수직 설에서 값을 삽입"
+    },
+    "datetime": {
+        "previous": "이전",
+        "next": "다음",
+        "hours": "시",
+        "minutes": "분",
+        "seconds": "초",
+        "unknown": "-",
+        "amPm": [
+            "오전",
+            "오후"
+        ],
+        "weekdays": [
+            "일",
+            "월",
+            "화",
+            "수",
+            "목",
+            "금",
+            "토"
+        ],
+        "months": [
+            "1월",
+            "2월",
+            "3월",
+            "4월",
+            "5월",
+            "6월",
+            "7월",
+            "8월",
+            "9월",
+            "10월",
+            "11월",
+            "12월"
+        ]
+    },
+    "editor": {
+        "close": "닫기",
+        "create": {
+            "button": "추가",
+            "title": "항목 추가",
+            "submit": "완료"
+        },
+        "edit": {
+            "button": "수정",
+            "title": "항목 수정",
+            "submit": "완료"
+        },
+        "remove": {
+            "button": "삭제",
+            "title": "항목 삭제",
+            "submit": "완료"
+        },
+        "error": {
+            "system": "에러가 발생하였습니다 (&lt;a target=\"\\\" rel=\"nofollow\" href=\"\\\"&gt;자세한 정보&lt;\/a&gt;)."
+        }
     }
 }
