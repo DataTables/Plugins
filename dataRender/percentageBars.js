@@ -107,7 +107,6 @@ DataTable.render.percentBar = function (pShape, cText, cBorder, cBar, cBack, vRo
     bType = bType || 'ridge';
     //Bar templates
     var styleRule1 = 'max-width:100px;height:12px;margin:0 auto;';
-
     return function (d, type, row) {
         //Remove % if found in the value
         //Round to the given parameter vRound
@@ -123,7 +122,6 @@ DataTable.render.percentBar = function (pShape, cText, cBorder, cBar, cBack, vRo
         if (typeof d !== 'number' && typeof d !== 'string') {
             return d;
         }
-
         var cBackConditional;
         var cBarConditional;
         var cTextConditional;
@@ -133,39 +131,43 @@ DataTable.render.percentBar = function (pShape, cText, cBorder, cBar, cBack, vRo
                 if (s >= conditionalColors[i].min && s <= conditionalColors[i].max) {
                     if (conditionalColors[i].barColor) {
                         cBarConditional = conditionalColors[i].barColor;
-                    } else {
+                    }
+                    else {
                         cBarConditional = cBar;
                     }
                     if (conditionalColors[i].backgroundColor) {
                         cBackConditional = conditionalColors[i].backgroundColor;
-                    } else {
+                    }
+                    else {
                         cBackConditional = cBack;
                     }
                     if (conditionalColors[i].textColor) {
                         cTextConditional = conditionalColors[i].textColor;
-                    } else {
+                    }
+                    else {
                         cTextConditional = cText;
                     }
                     break;
                 }
             }
-        } else {
+        }
+        else {
             cBackConditional = cBack;
             cBarConditional = cBar;
             cTextConditional = cText;
         }
         var styleRule2 = 'border:2px ' +
-        bType +
-        ' ' +
-        cBorder +
-        ';line-height:12px;font-size:14px;color:' +
-        cText +
-        ';background:' +
-        cBackConditional +
-        ';position:relative;';
+            bType +
+            ' ' +
+            cBorder +
+            ';line-height:12px;font-size:14px;color:' +
+            cText +
+            ';background:' +
+            cBackConditional +
+            ';position:relative;';
         //Bar template
         var styleRule3 = 'height:12px;line-height:12px;text-align:center;background-color:' +
-        cBarConditional + ';padding:auto 6px;';
+            cBarConditional + ';padding:auto 6px;';
         //Square is default, make template round if pShape == round
         if (pShape == 'round') {
             styleRule2 += 'border-radius:5px;';
