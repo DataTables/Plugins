@@ -36,10 +36,14 @@ let $ = jQuery;
  */
 function _anyNumberSort(a, b, high) {
     var reg = /[+-]?((\d+(\.\d*)?)|\.\d+)([eE][+-]?[0-9]+)?/;
-    a = a.replace(',', '.').match(reg);
-    a = a !== null ? parseFloat(a[0]) : high;
-    b = b.replace(',', '.').match(reg);
-    b = b !== null ? parseFloat(b[0]) : high;
+    if (typeof a === 'string') {
+        a = a.replace(',', '.').match(reg);
+        a = a !== null ? parseFloat(a[0]) : high;
+    }
+    if (typeof b === 'string') {
+        b = b.replace(',', '.').match(reg);
+        b = b !== null ? parseFloat(b[0]) : high;
+    }
     return a < b ? -1 : a > b ? 1 : 0;
 }
 DataTable.ext.type.order['any-number-asc'] = function (a, b) {

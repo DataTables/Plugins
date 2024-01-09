@@ -101,9 +101,9 @@ PLUGINS="${DT_SRC}/extensions/Plugins"
 # 	ts_plugin $file
 # done
 
-# for file in $PLUGINS/dataRender/src/*.ts; do
-# 	ts_plugin $file
-# done
+for file in $PLUGINS/dataRender/src/*.ts; do
+	ts_plugin $file
+done
 
 # for file in $PLUGINS/features/*/src/*.ts; do
 # 	ts_plugin $file
@@ -121,8 +121,8 @@ PLUGINS="${DT_SRC}/extensions/Plugins"
 # 	ts_plugin $file
 # done
 
-echo_section "  Languages"
-for file in $PLUGINS/i18n/*.json; do
-	lang_plugin $file
-done
+# echo_section "  Languages"
+# for file in $PLUGINS/i18n/*.json; do
+# 	lang_plugin $file
+# done
 
