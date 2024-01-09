@@ -18,7 +18,11 @@
         "sortDescending": ": aktivizēt kolonnu, lai kārtotu dilstoši"
     },
     "autoFill": {
-        "cancel": "Atcelt"
+        "cancel": "Atcelt",
+        "fillHorizontal": "Aizpildīt šūnas horizontāli",
+        "fillVertical": "Aizpildīt šūnas vertikāli",
+        "fill": "Aizpildīt visas šūnas ar <i>%d<\/i>",
+        "info": "Informācija"
     },
     "buttons": {
         "collection": "Saraksts",
@@ -27,8 +31,26 @@
         "csv": "CSV",
         "excel": "Excel",
         "pdf": "PDF",
-        "print": "Printēt",
-        "copyTitle": "Kopēt starpliktuvē"
+        "copyTitle": "Kopēt starpliktuvē",
+        "colvisRestore": "Atjaunot redzamību",
+        "createState": "Izveidot Stāvokli",
+        "removeAllStates": "Dzēst Visus Stāvokļus",
+        "removeState": "Dzēst",
+        "renameState": "Pārsaukt",
+        "savedStates": "Saglabātie Stāvokļi",
+        "copyKeys": "Spiediet CTRL vai u2318 + C, lai kopētu tabulas datus sistēmas starpliktuvē.<br \/><br \/>Lai atceltu, klikšķiniet uz šī ziņojuma vai spiediet taustiņu Escape.",
+        "copySuccess": {
+            "1": "1 rinda ir kopēta starpliktuvē",
+            "_": "%d rindas ir kopētas starpliktuvē"
+        },
+        "pageLength": {
+            "-1": "Rādīt visas rindas",
+            "1": "Rādīt 1 rindu",
+            "_": "Rādīt %d rindas"
+        },
+        "print": "Drukāt",
+        "stateRestore": "Stāvoklis %d",
+        "updateState": "Atjaunināt"
     },
     "searchBuilder": {
         "add": "Pievienot",
@@ -110,8 +132,41 @@
             "system": "Kļūda sistēmā (<a target=\"\\\" rel=\"nofollow\" href=\"\\\">Vairāk informācijas<\/a>)."
         },
         "multi": {
-            "title": "Vairākas izvēles",
-            "restore": "Atsaukt izmaiņas"
+            "restore": "Atsaukt izmaiņas",
+            "title": "Vairākas vērtības",
+            "info": "Atlasītie vienumi satur dažādas vērtības šai ievadei. Lai rediģētu un iestatītu visus šīs ievades vienumus uz vienādu vērtību, noklikšķiniet vai pieskarieties šeit, pretējā gadījumā tie saglabās savas individuālās vērtības.",
+            "noMulti": "Šo ievadi var rediģēt atsevišķi, bet ne daļu no grupas."
         }
-    }
+    },
+    "infoThousands": ",",
+    "stateRestore": {
+        "removeJoiner": "un",
+        "removeSubmit": "Dzēst",
+        "removeTitle": "Dzēst Stāvokli",
+        "renameButton": "Pārsaukt",
+        "renameLabel": "Jaunais %s nosaukums:",
+        "renameTitle": "Pārsaukt Stāvokli",
+        "creationModal": {
+            "button": "Izveidot",
+            "columns": {
+                "search": "Meklēšana Kolonnās",
+                "visible": "Kolonnu Redzamība"
+            },
+            "name": "Nosaukums:",
+            "order": "Šķirošana",
+            "paging": "Lapošana",
+            "scroller": "Ritināšanas Pozīcija",
+            "search": "Meklēšana",
+            "searchBuilder": "Meklešanas Redaktors",
+            "select": "Atzīmēšana",
+            "title": "Izveidot Jaunu Stāvokli",
+            "toggleLabel": "Iekļauj:"
+        },
+        "duplicateError": "Stāvoklis ar šādu nosaukumu jau eksistē.",
+        "emptyError": "Nosaukums nedrīkst būt tukš.",
+        "emptyStates": "Nav saglabātu stāvokļu",
+        "removeConfirm": "Vai tiešām vēlaties dzēst %s?",
+        "removeError": "Neizdevās dzēst stāvokli."
+    },
+    "thousands": ","
 }

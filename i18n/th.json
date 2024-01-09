@@ -51,7 +51,6 @@
         "updateState": "แก้ไขสถานะ"
     },
     "infoEmpty": "แสดงทั้งหมด 0 to 0 of 0 รายการ",
-    "search": "ค้นหา :",
     "thousands": ",",
     "datetime": {
         "amPm": [
@@ -88,7 +87,6 @@
         ],
         "previous": "ก่อนหน้า"
     },
-    "decimal": "จุดทศนิยม",
     "editor": {
         "close": "ปิด",
         "create": {
@@ -139,7 +137,9 @@
                 "between": "ระหว่าง",
                 "equals": "เท่ากับ",
                 "not": "ไม่",
-                "notEmpty": "ไม่ใช่ระหว่าง"
+                "empty": "ค่าว่าง",
+                "notBetween": "ไม่ใช่ระหว่าง",
+                "notEmpty": "ไม่ใช่ค่าว่าง"
             },
             "number": {
                 "between": "ระหว่าง",
@@ -149,7 +149,9 @@
                 "lt": "น้อยกว่า",
                 "lte": "น้อยกว่าเท่ากับ",
                 "not": "ไม่",
-                "notBetween": "ไม่ใช่ระหว่าง"
+                "notBetween": "ไม่ใช่ระหว่าง",
+                "empty": "ค่าว่าง",
+                "notEmpty": "ไม่ใช่ค่าว่าง"
             },
             "string": {
                 "contains": "ประกอบด้วย",
@@ -159,12 +161,17 @@
                 "startsWith": "เริ่มต้นด้วย",
                 "notContains": "ไม่มี",
                 "notStartsWith": "ไม่เริ่มต้นด้วย",
-                "notEndsWith": "ไม่ลงท้ายด้วย"
+                "notEndsWith": "ไม่ลงท้ายด้วย",
+                "empty": "ค่าว่าง",
+                "notEmpty": "ไม่ใช่ค่าว่าง"
             },
             "array": {
                 "equals": "เท่ากับ",
                 "contains": "เงื้อนไข",
-                "not": "ไม่"
+                "not": "ไม่",
+                "empty": "ค่าว่าง",
+                "notEmpty": "ไม่ใช่ค่าว่าง",
+                "without": "ไม่มี"
             }
         },
         "title": {
@@ -188,6 +195,18 @@
         "emptyError": "ชื่อต้องไม่เป็นค่าว่าง",
         "emptyStates": "ไม่มีสถานะที่บันทึกไว้",
         "removeConfirm": "คุณแน่ใจหรือไม่ว่าต้องการลบ %s",
-        "removeError": "ไม่สามารถลบสถานะ"
-    }
+        "removeError": "ไม่สามารถลบสถานะ",
+        "creationModal": {
+            "button": "สร้าง",
+            "name": "ชื่อ:"
+        },
+        "removeJoiner": "และ",
+        "removeSubmit": "ลบ",
+        "removeTitle": "ลบสถานะ",
+        "renameButton": "เปลี่ยนชื่อ",
+        "renameLabel": "ชื่อใหม่สำหรับ %s:",
+        "renameTitle": "เปลี่ยนชื่อสถานะ"
+    },
+    "decimal": "Empty string",
+    "search": "ค้นหา:"
 }

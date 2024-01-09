@@ -20,7 +20,9 @@
         "sortDescending": ": aktiviraj za padajući poredak"
     },
     "autoFill": {
-        "cancel": "Poništi"
+        "cancel": "Poništi",
+        "fillHorizontal": "Ispuni ćelije vodoravno",
+        "fillVertical": "Ispuni ćelije okomito"
     },
     "buttons": {
         "collection": "Kolekcija",
@@ -39,8 +41,12 @@
         "print": "Isprintaj",
         "pageLength": {
             "-1": "Prikaži sve redove",
-            "_": "Prikaži %d redova"
-        }
+            "_": "Prikaži %d redova",
+            "1": "Prikaži 1 red"
+        },
+        "removeState": "Ukloni",
+        "renameState": "Preimenuj",
+        "updateState": "Ažuriraj"
     },
     "searchPanes": {
         "collapse": [
@@ -49,7 +55,9 @@
         "clearMessage": "Obriši sve",
         "emptyPanes": "Nema okna za pretraživanje",
         "loadMessage": "Učitavanje okna za pretraživanje...",
-        "title": "Filtera aktivno - %d"
+        "title": "Filtera aktivno - %d",
+        "showMessage": "Prikaži sve",
+        "collapseMessage": "Sažmi sve"
     },
     "select": {
         "cells": {
@@ -59,6 +67,10 @@
         "columns": {
             "_": "%d stupaca odabrano",
             "1": "1 stupac odabran"
+        },
+        "rows": {
+            "1": "1 red odabran",
+            "_": "%d redova odabrano"
         }
     },
     "searchBuilder": {
@@ -76,7 +88,8 @@
                 "equals": "Jednako",
                 "not": "Ne",
                 "notBetween": "Nije između",
-                "notEmpty": "Nije prazno"
+                "notEmpty": "Nije prazno",
+                "before": "Prije"
             },
             "number": {
                 "between": "Između",
@@ -97,7 +110,10 @@
                 "equals": "Jednako",
                 "not": "Ne",
                 "notEmpty": "Nije prazno",
-                "startsWith": "Počinje sa"
+                "startsWith": "Počinje sa",
+                "notContains": "Ne sadrži",
+                "notStartsWith": "Ne počinje sa",
+                "notEndsWith": "Ne završava sa"
             },
             "array": {
                 "equals": "Jednako je",
@@ -116,7 +132,8 @@
             "0": "Graditelj pretraživanja",
             "_": "Graditelj pretraživanja (%d)"
         },
-        "value": "Vrijednost"
+        "value": "Vrijednost",
+        "condition": "Uvjet"
     },
     "datetime": {
         "previous": "Prethodno",
@@ -142,6 +159,15 @@
             "listopad",
             "studeni",
             "prosinac"
+        ],
+        "weekdays": [
+            "Ned",
+            "Pon",
+            "Uto",
+            "Sri",
+            "Čet",
+            "Pet",
+            "Sub"
         ]
     },
     "editor": {
@@ -175,5 +201,6 @@
             "noMulti": "Ovaj unos može biti uređen samostalno, ali ne kao dio grupe."
         }
     },
-    "decimal": ","
+    "decimal": ",",
+    "thousands": "."
 }

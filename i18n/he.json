@@ -244,5 +244,5 @@
     "infoThousands": ",",
     "searchPlaceholder": "טקסט לחיפוש",
     "info": "מציג _START_ עד _END_ מתוך _TOTAL_ רשומות",
-    "infoPostFix": "מציג _START_ עד _END_ מתוך _TOTAL_ רשומות"
+    "infoPostFix": ""
 }

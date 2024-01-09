@@ -3,12 +3,15 @@
         "cancel": "batal",
         "fill": "tambah sedoyo sell",
         "fillHorizontal": "tambah sell mlumah",
-        "fillVertical": "tambah sell ngaceng"
+        "fillVertical": "tambah sell ngaceng",
+        "info": "info"
     },
     "buttons": {
         "copy": "nyalin",
         "collection": "koleksi",
-        "colvis": "kolum ingkang ketok"
+        "colvis": "kolum ingkang ketok",
+        "copyTitle": "nyalinJudul",
+        "print": "cetak"
     },
     "datetime": {
         "hours": "jam",
@@ -50,7 +53,10 @@
     "stateRestore": {
         "emptyError": "salahKosong",
         "removeConfirm": "pindahKonfirmasi",
-        "renameTitle": "gantiJudul"
+        "renameTitle": "gantiJudul",
+        "duplicateError": "salahDobel",
+        "emptyStates": "kosongStates",
+        "removeError": "pindahSalah"
     },
     "thousands": ".",
     "zeroRecords": "mboten wonten data ingkang dipun padosi"

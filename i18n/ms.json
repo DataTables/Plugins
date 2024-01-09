@@ -31,7 +31,18 @@
         "copy": "Salin",
         "print": "Cetak",
         "colvis": "Kolum Pilihan",
-        "colvisRestore": "Kembalikan Penglihatan"
+        "colvisRestore": "Kembalikan Penglihatan",
+        "copyKeys": "Tekan &lt;i&gt;ctrl&lt;\/i&gt; atau &lt;i&gt;u2318&lt;\/i&gt; + &lt;i&gt;C&lt;\/i&gt; untuk menyalin maklumat jadual ke papan keratan sistem anda.&lt;br&gt;&lt;br&gt;Untuk batak, tekan mesej ini atau tekan escape.",
+        "copySuccess": {
+            "1": "1 baris disalian ke papan keratan",
+            "_": "%ds baris disalin ke papan keratan"
+        },
+        "copyTitle": "Salin ke Papan Klip",
+        "pageLength": {
+            "-1": "Paparkan semua baris",
+            "1": "Papar 1 baris",
+            "_": "Paparkan %d baris"
+        }
     },
     "thousands": ",",
     "select": {
@@ -49,8 +60,66 @@
         }
     },
     "editor": {
-        "close": "Tutup"
+        "close": "Tutup",
+        "create": {
+            "button": "Tambah",
+            "title": "Cipta entri baru",
+            "submit": "Cipta"
+        },
+        "edit": {
+            "button": "Pinda",
+            "title": "Pinda entri",
+            "submit": "Kemaskini"
+        },
+        "remove": {
+            "button": "Padam",
+            "title": "Padam",
+            "submit": "Padam",
+            "confirm": {
+                "_": "Adakah anda pasti untuk menghapus %d baris?",
+                "1": "Adakah anda pasti untuk menghapus 1 baris?"
+            }
+        },
+        "error": {
+            "system": "Terdapat ralat sistem berlaku (&lt;a target=\"\\\" rel=\"nofollow\" href=\"\\\"&gt;Maklumat Lanjut&lt;\/a&gt;)."
+        },
+        "multi": {
+            "title": "Pelbagai nilai",
+            "info": "Item ini mengandungi pelbagai nilai untuk input ini. Untuk pinda and setkan kesemua item untuk input ini kepada nilai yang sama, tekan sini, sebaliknya, maklumat setiap satu akan dikekalkan",
+            "restore": "Buat Asal",
+            "noMulti": "Input ini boleh di ubah setiap satu, tetapi bukan sebahagian daripada kumpulan"
+        }
     },
     "decimal": ".",
-    "searchPlaceholder": "Contoh"
+    "searchPlaceholder": "Contoh",
+    "datetime": {
+        "previous": "Sebelum",
+        "next": "Seterusnya",
+        "hours": "Jam",
+        "minutes": "Minit",
+        "seconds": "Saat",
+        "weekdays": [
+            "Ahd",
+            "Isn",
+            "Sel",
+            "Rab",
+            "Kha",
+            "Jum",
+            "Sab"
+        ],
+        "months": [
+            "Januari",
+            "Februari",
+            "Mac",
+            "April",
+            "Mei",
+            "Jun",
+            "Julai",
+            "Ogos",
+            "September",
+            "Oktober",
+            "November",
+            "Disember"
+        ]
+    }
 }
