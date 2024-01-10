@@ -52,10 +52,6 @@
         "stateRestore": "Stāvoklis %d",
         "updateState": "Atjaunināt"
     },
-    "searchBuilder": {
-        "add": "Pievienot",
-        "clearAll": "Attīrīt visu"
-    },
     "info": "Atlasīti _START_ līdz _END_ no _TOTAL_ ierakstiem",
     "searchPlaceholder": "vārds vai frāze",
     "select": {
@@ -110,23 +106,18 @@
     "editor": {
         "close": "Aizvērt",
         "create": {
-            "button": "Izveidot",
             "title": "Izveidot jaunu ierakstu",
-            "submit": "Izveidot"
-        },
-        "edit": {
-            "button": "Rediģēt",
-            "title": "Rediģēt ierakstu",
-            "submit": "Atjaunot"
+            "submit": "Izveidot",
+            "button": "Jauns"
         },
         "remove": {
-            "button": "Izdzēst",
-            "title": "Izdzēst",
-            "submit": "Izdzēst",
             "confirm": {
                 "_": "Vai tiešām dzēst %d rindas?",
                 "1": "Vai tiešām dzēst 1 rindu?"
-            }
+            },
+            "button": "Dzēst",
+            "title": "Dzēst",
+            "submit": "Dzēst"
         },
         "error": {
             "system": "Kļūda sistēmā (<a target=\"\\\" rel=\"nofollow\" href=\"\\\">Vairāk informācijas<\/a>)."
@@ -134,8 +125,13 @@
         "multi": {
             "restore": "Atsaukt izmaiņas",
             "title": "Vairākas vērtības",
-            "info": "Atlasītie vienumi satur dažādas vērtības šai ievadei. Lai rediģētu un iestatītu visus šīs ievades vienumus uz vienādu vērtību, noklikšķiniet vai pieskarieties šeit, pretējā gadījumā tie saglabās savas individuālās vērtības.",
-            "noMulti": "Šo ievadi var rediģēt atsevišķi, bet ne daļu no grupas."
+            "noMulti": "Šo ievadi var rediģēt atsevišķi, bet ne daļu no grupas.",
+            "info": "Atlasītie vienumi satur dažādas vērtības šai ievadei. Lai rediģētu un iestatītu visiem šīs ievades vienumiem vienādas vērtības, klikšķiniet vai pieskarieties šeit, pretējā gadījumā tiks saglabātas to individuālās vērtības."
+        },
+        "edit": {
+            "button": "Labot",
+            "title": "Labot ierakstu",
+            "submit": "Saglabāt"
         }
     },
     "infoThousands": ",",
@@ -153,20 +149,98 @@
                 "visible": "Kolonnu Redzamība"
             },
             "name": "Nosaukums:",
-            "order": "Šķirošana",
             "paging": "Lapošana",
             "scroller": "Ritināšanas Pozīcija",
             "search": "Meklēšana",
-            "searchBuilder": "Meklešanas Redaktors",
-            "select": "Atzīmēšana",
             "title": "Izveidot Jaunu Stāvokli",
-            "toggleLabel": "Iekļauj:"
+            "toggleLabel": "Iekļauj:",
+            "order": "Kārtošana",
+            "searchBuilder": "Atlases Konstruktors",
+            "select": "Atlase"
         },
         "duplicateError": "Stāvoklis ar šādu nosaukumu jau eksistē.",
-        "emptyError": "Nosaukums nedrīkst būt tukš.",
         "emptyStates": "Nav saglabātu stāvokļu",
         "removeConfirm": "Vai tiešām vēlaties dzēst %s?",
-        "removeError": "Neizdevās dzēst stāvokli."
+        "removeError": "Neizdevās dzēst stāvokli.",
+        "emptyError": "Nosaukums nedrīkst būt tukšs."
     },
-    "thousands": ","
+    "thousands": ",",
+    "searchBuilder": {
+        "add": "Pievienot Nosacījumu",
+        "button": {
+            "0": "Atlases Konstruktors",
+            "_": "Atlases Konstruktors (%d)"
+        },
+        "clearAll": "Notīrīt Visu",
+        "condition": "Nosacījums",
+        "conditions": {
+            "date": {
+                "after": "Pēc",
+                "before": "Pirms",
+                "between": "Starp",
+                "empty": "Tukšs",
+                "equals": "Vienāds",
+                "not": "Nav",
+                "notBetween": "Nav Starp",
+                "notEmpty": "Nav Tukšs"
+            },
+            "number": {
+                "between": "Starp",
+                "empty": "Tukšs",
+                "equals": "Vienāds",
+                "gt": "Lielāks Par",
+                "gte": "Lielāks Par Vienāds Ar",
+                "lt": "Mazāks Par",
+                "lte": "Mazāks Par Vienāds Ar",
+                "not": "Nav",
+                "notBetween": "Nav Starp",
+                "notEmpty": "Nav Tukšs"
+            },
+            "string": {
+                "contains": "Satur",
+                "empty": "Tukšs",
+                "endsWith": "Beidzas Ar",
+                "equals": "Vienāds",
+                "not": "Nav",
+                "notEmpty": "Nav Tukšs",
+                "startsWith": "Sākas Ar",
+                "notContains": "Nesatur",
+                "notStartsWith": "Nesākas Ar",
+                "notEndsWith": "Nebeidzas Ar"
+            },
+            "array": {
+                "equals": "Vienāds",
+                "empty": "Tukšs",
+                "contains": "Satur",
+                "not": "Nav",
+                "notEmpty": "Nav Tukšs",
+                "without": "Bez"
+            }
+        },
+        "data": "Dati",
+        "deleteTitle": "Dzēst atlases noteikumu",
+        "leftTitle": "Izņemtie Kritēriji",
+        "logicAnd": "Un",
+        "logicOr": "Vai",
+        "rightTitle": "Atkāpes Kritēriji",
+        "title": {
+            "0": "Atlases Konstruktors",
+            "_": "Atlases Konstruktors (%d)"
+        },
+        "value": "Vērtība"
+    },
+    "searchPanes": {
+        "clearMessage": "Notīrīt Visu",
+        "collapse": {
+            "0": "Meklēšanas Paneļi",
+            "_": "Meklēšanas Paneļi (%d)"
+        },
+        "count": "{total}",
+        "countFiltered": "{shown} ({total})",
+        "emptyPanes": "Nav Meklēšanas Paneļu",
+        "loadMessage": "Ielādē Meklēšanas Paneļus...",
+        "title": "Aktīvie Filtri - %d",
+        "showMessage": "Rādīt Visu",
+        "collapseMessage": "Sakļaut Visu"
+    }
 }
