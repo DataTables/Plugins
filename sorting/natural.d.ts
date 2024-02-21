@@ -1,2 +1,2 @@
-/*! © SpryMedia Ltd, Jim Palmer, Michael Buehler, Mike Grier, Clint Priest, Kyle Adams, guillermo - datatables.net/license */
+/*! © SpryMedia Ltd - datatables.net/license */
 export {};
