@@ -72,13 +72,13 @@ ScrollResize.prototype = {
         var t = dt.table();
         var offsetTop = $(settings.table).offset().top;
         var availableHeight = settings.host.height();
-        var scrollBody = $('div.dataTables_scrollBody', t.container());
+        var scrollBody = $('div.dt-scroll-body', t.container());
         // Subtract the height of the header, footer and the elements
         // surrounding the table
         availableHeight -= offsetTop;
         availableHeight -=
             settings.container.height() - (offsetTop + scrollBody.height());
-        $('div.dataTables_scrollBody', t.container()).css({
+        $('div.dt-scroll-body', t.container()).css({
             maxHeight: availableHeight,
             height: availableHeight,
         });
