@@ -53,11 +53,14 @@ var DataTable = $.fn.dataTable;
  * This source file is free software, available under the following license:
  *   MIT license - http://datatables.net/license/mit
  *
- * This source file is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
- * or FITNESS FOR A PARTICULAR PURPOSE. See the license files for details.
+ * This feature will fade out rows which don't match from the input
  *
- * For details please refer to: http://www.datatables.net
+ * @example
+ *   $('#myTable').DataTable( {
+ *     layout: {
+ *       topStart: 'searchFade;
+ *     }
+ *   } );
  */
 DataTable.Api.register('searchFade()', function () {
     return this;
@@ -107,6 +110,10 @@ DataTable.ext.feature.push({
         return search.node();
     },
     cFeature: 'F',
+});
+DataTable.feature.register('searchFade', function (settings) {
+    var search = new DataTable.SearchFade(settings);
+    return search.node();
 });
 $(document).on('init.dt', function (e, settings) {
     if (e.namespace !== 'dt') {

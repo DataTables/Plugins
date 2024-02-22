@@ -50,7 +50,7 @@ $(document).on('init.dt', function (e, dtSettings) {
 			speed = 500,
 			conditionalPaging = function (e) {
 				var $paging = $(api.table().container()).find(
-						'div.dataTables_paginate'
+						'div.dt-paging'
 					),
 					pages = api.page.info().pages;
 

@@ -4,5 +4,8 @@ declare module 'datatables.net' {
         /** Page length control via links for DataTables */
         LengthLinks(settings: any): void;
     }
+    interface Feature {
+        lengthLinks?: {};
+    }
 }
 export {};

@@ -39,7 +39,7 @@ $(document).on('init.dt', function (e, dtSettings) {
         DataTable.defaults.conditionalPaging;
     if ($.isPlainObject(options) || options === true) {
         var config = $.isPlainObject(options) ? options : {}, api = new DataTable.Api(dtSettings), speed = 500, conditionalPaging = function (e) {
-            var $paging = $(api.table().container()).find('div.dataTables_paginate'), pages = api.page.info().pages;
+            var $paging = $(api.table().container()).find('div.dt-paging'), pages = api.page.info().pages;
             if (e instanceof $.Event) {
                 if (pages <= 1) {
                     if (config.style === 'fade') {

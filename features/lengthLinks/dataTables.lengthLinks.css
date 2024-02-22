@@ -1,4 +1,6 @@
 
-div.dataTables_length a.active {
+div.dt-lengthLinks a.active {
 	color: black;
+	text-decoration: underline;
+	cursor: pointer;
 }

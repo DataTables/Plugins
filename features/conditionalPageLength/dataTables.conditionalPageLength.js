@@ -96,7 +96,7 @@ $(document).on('init.dt', function (e, dtSettings) {
     var smallestLength = Math.min.apply(Math, lengthMenuValues);
     if ($.isPlainObject(options) || options === true) {
         var config = $.isPlainObject(options) ? options : {}, api = new DataTable.Api(dtSettings), speed = 500, conditionalPageLength = function (e) {
-            var $paging = $(api.table().container()).find('div.dataTables_length'), pages = api.page.info().pages, size = api.rows({ search: 'applied' }).count();
+            var $paging = $(api.table().container()).find('div.dt-length'), pages = api.page.info().pages, size = api.rows({ search: 'applied' }).count();
             if (e instanceof $.Event) {
                 if (pages <= 1 && size <= smallestLength) {
                     if (config.style === 'fade') {

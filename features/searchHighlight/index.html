@@ -7,19 +7,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no">
 	<title>DataTables example - Fuzzy Searching</title>
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.0.0/css/dataTables.dataTables.min.css">
-	<link rel="stylesheet" type="text/css" href="dataTables.alphabetSearch.css">
+	<link rel="stylesheet" type="text/css" href="dataTables.searchHighlight.css">
 
 	<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.7.1.js"></script>
 	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/2.0.0/js/dataTables.min.js"></script>
-	<script type="text/javascript" language="javascript" src="dataTables.alphabetSearch.js"></script>
+	<script type="text/javascript" language="javascript" src=" http://bartaz.github.io/sandbox.js/jquery.highlight.js"></script>
+	<script type="text/javascript" language="javascript" src="dataTables.searchHighlight.js"></script>
 	<script type="text/javascript" language="javascript" class="init">
 	
 
 $(document).ready(function() {
 	var table = $('#example').DataTable({
-		layout: {
-			top: 'alphabetSearch'
-		}
+		searchHighlight: true
 	});
 } );
 
@@ -29,7 +28,7 @@ $(document).ready(function() {
 <body class="dt-example">
 	<div class="container">
 		<section>
-			<h1>DataTables example <span>Alphabet Search</span></h1>
+			<h1>DataTables example <span>Search Highlight</span></h1>
 			<div class="info">
 			</div>
 			<div class="demo-html">
@@ -514,16 +513,11 @@ $(document).ready(function() {
 					</tfoot>
 				</table>
 			</div>
-					<p>The Javascript shown below is used to initialise the table shown in this example:</p>
-					<code class="multiline language-js">
-$(document).ready(function() {
+					<p>The Javascript shown below is used to initialise the table shown in this example:</p><code class="multiline language-js">$(document).ready(function() {
 	var table = $('#example').DataTable({
-		layout: {
-			top: 'alphabetSearch'
-		}
+		searchHighlight: true
 	});
-} );
-					</code>
+} );</code>
 		</div>
 	</section>
 </body>

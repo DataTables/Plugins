@@ -18,9 +18,16 @@ let $ = jQuery;
  *
  * License      MIT - http://datatables.net/license/mit
  *
- * For more detailed information please see:
- *     http://datatables.net/blog/2014-09-22
+ * Please see [this blog post](http://datatables.net/blog/2014-09-22).
+ *
+ * @example
+ *   $('#myTable').DataTable( {
+ *     layout: {
+ *       topStart: 'alphabetSearch;
+ *     }
+ *   } );
  */
+;
 // Search function
 DataTable.Api.register('alphabetSearch()', function (searchTerm) {
     this.iterator('table', function (context) {
@@ -176,6 +183,10 @@ DataTable.ext.feature.push({
         return search.node();
     },
     cFeature: 'A',
+});
+DataTable.feature.register('alphabetSearch', function (settings, opts) {
+    var search = new DataTable.AlphabetSearch(settings);
+    return search.node();
 });
 
 

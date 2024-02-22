@@ -16,5 +16,8 @@ declare module 'datatables.net' {
     interface ApiSearchFadeMethods<T> extends Api<T> {
         node(): JQuery | null;
     }
+    interface Feature {
+        searchFade?: {};
+    }
 }
 export {};

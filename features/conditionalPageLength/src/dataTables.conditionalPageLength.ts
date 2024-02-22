@@ -70,7 +70,7 @@ $(document).on('init.dt', function (e, dtSettings) {
 			api = new DataTable.Api(dtSettings),
 			speed = 500,
 			conditionalPageLength = function (e) {
-				var $paging = $(api.table().container()).find('div.dataTables_length'),
+				var $paging = $(api.table().container()).find('div.dt-length'),
 					pages = api.page.info().pages,
 					size = api.rows({ search: 'applied' }).count();
 

@@ -13,25 +13,28 @@ let $ = jQuery;
  * @author      Allan Jardine
  *
  * This feature plug-in for DataTables adds page length control links to the
- * DataTable. The `dom` option can be used to insert the control using the `L`
- * character option and it uses the `lengthMenu` options of DataTables to
- * determine what to display.
+ * DataTable. The `-init layout` option can be used to insert the control
+ * using the `lengthLinks` option.
  *
  * @example
  *   $('#myTable').DataTable( {
- *     dom: 'Lfrtip'
+ *     layout: {
+ *       topStart: 'lengthLinks;
+ *     }
  *   } );
  *
  * @example
  *   $('#myTable').DataTable( {
+ *     layout: {
+ *       topStart: 'lengthLinks;
+ *     },
  *     lengthMenu: [ [10, 25, 50, -1], [10, 25, 50, "All"] ]
- *     dom: 'Lfrtip'
  *   } );
  */
 DataTable.LengthLinks = function (inst) {
     var api = new DataTable.Api(inst);
     var settings = api.settings()[0];
-    var container = $('<div></div>').addClass(settings.oClasses.sLength);
+    var container = $('<div></div>').addClass('dt-lengthLinks');
     var lastLength = null;
     // API so the feature wrapper can return the node to insert
     this.container = function () {
@@ -56,7 +59,9 @@ DataTable.LengthLinks = function (inst) {
                 ? '<a class="active" data-length="' + lens[i] + '">' + lang[i] + '</a>'
                 : '<a data-length="' + lens[i] + '">' + lang[i] + '</a>';
         });
-        container.html(settings.oLanguage.sLengthMenu.replace('_MENU_', out.join(' | ')));
+        container.html(settings.oLanguage.sLengthMenu
+            .replace('_MENU_', out.join(' | '))
+            .replace('_ENTRIES_', api.i18n('entries', '', 10)));
         lastLength = api.page.len();
     });
     api.on('destroy', function () {
@@ -71,6 +76,10 @@ DataTable.ext.feature.push({
     },
     cFeature: 'L',
     sFeature: 'LengthLinks',
+});
+DataTable.feature.register('lengthLinks', function (settings) {
+    var l = new DataTable.LengthLinks(settings);
+    return l.container();
 });
 
 

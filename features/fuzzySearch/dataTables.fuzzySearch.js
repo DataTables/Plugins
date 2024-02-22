@@ -210,22 +210,24 @@ DataTable.ext.search.push(function (settings, data, dataIndex) {
     if (!initial) {
         return true;
     }
-    // If fuzzy searching has not been implemented then pass all rows for this function
-    if (settings.aoData[dataIndex]._fuzzySearch !== undefined) {
-        // Read score to set the cell content and sort data
-        var score = settings.aoData[dataIndex]._fuzzySearch.score;
-        if (initial.rankColumn !== undefined) {
-            settings.aoData[dataIndex].anCells[initial.rankColumn].innerHTML = score;
-            // Remove '%' from the end of the score so can sort on a number
-            settings.aoData[dataIndex]._aSortData[initial.rankColumn] =
-                +score.substring(0, score.length - 1);
+    if (settings.aoData[dataIndex]) {
+        // If fuzzy searching has not been implemented then pass all rows for this function
+        if (settings.aoData[dataIndex]._fuzzySearch !== undefined) {
+            // Read score to set the cell content and sort data
+            var score = settings.aoData[dataIndex]._fuzzySearch.score;
+            if (initial.rankColumn !== undefined) {
+                settings.aoData[dataIndex].anCells[initial.rankColumn].innerHTML = score;
+                // Remove '%' from the end of the score so can sort on a number
+                settings.aoData[dataIndex]._aSortData[initial.rankColumn] =
+                    +score.substring(0, score.length - 1);
+            }
+            // Return the value for the pass as decided by the fuzzySearch function
+            return settings.aoData[dataIndex]._fuzzySearch.pass;
         }
-        // Return the value for the pass as decided by the fuzzySearch function
-        return settings.aoData[dataIndex]._fuzzySearch.pass;
-    }
-    else if (initial.rankColumn !== undefined) {
-        settings.aoData[dataIndex].anCells[initial.rankColumn].innerHTML = '';
-        settings.aoData[dataIndex]._aSortData[initial.rankColumn] = '';
+        else if (initial.rankColumn !== undefined) {
+            settings.aoData[dataIndex].anCells[initial.rankColumn].innerHTML = '';
+            settings.aoData[dataIndex]._aSortData[initial.rankColumn] = '';
+        }
     }
     return true;
 });
@@ -239,7 +241,7 @@ $(document).on('init.dt', function (e, settings) {
     }
     var fromPlugin = false;
     // Find the input element
-    var input = $('div.dataTables_filter input', api.table().container());
+    var input = $('div.dt-search input', api.table().container());
     var fontBold = {
         'font-weight': '600',
         'background-color': 'rgba(255,255,255,0.1)',
@@ -260,7 +262,7 @@ $(document).on('init.dt', function (e, settings) {
     };
     // Only going to set the toggle if it is enabled
     var toggle, tooltip, exact, fuzzy, label;
-    if (typeof initialFuzzy === 'object' && initialFuzzy.toggleSmart) {
+    if (initialFuzzy === true || initialFuzzy.toggleSmart) {
         toggle = $('<button class="toggleSearch">Abc</button>')
             .insertAfter(input)
             .css({

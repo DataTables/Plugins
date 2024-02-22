@@ -7,11 +7,14 @@
  * This source file is free software, available under the following license:
  *   MIT license - http://datatables.net/license/mit
  *
- * This source file is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
- * or FITNESS FOR A PARTICULAR PURPOSE. See the license files for details.
- *
- * For details please refer to: http://www.datatables.net
+ * This feature will fade out rows which don't match from the input
+ * 
+ * @example
+ *   $('#myTable').DataTable( {
+ *     layout: {
+ *       topStart: 'searchFade;
+ *     }
+ *   } );
  */
 
 import $ from 'jquery';
@@ -37,6 +40,10 @@ declare module 'datatables.net' {
 
 	interface ApiSearchFadeMethods<T> extends Api<T> {
 		node(): JQuery | null;
+	}
+
+	interface Feature {
+		searchFade?: {}
 	}
 }
 
@@ -104,6 +111,12 @@ DataTable.ext.feature.push({
 	},
 	cFeature: 'F',
 });
+
+DataTable.feature.register('searchFade', function (settings) {
+	var search = new DataTable.SearchFade(settings);
+	return search.node();
+});
+
 
 $(document).on('init.dt', function (e, settings) {
 	if (e.namespace !== 'dt') {

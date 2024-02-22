@@ -12,11 +12,23 @@
  *
  * License      MIT - http://datatables.net/license/mit
  *
- * For more detailed information please see:
- *     http://datatables.net/blog/2014-09-22
+ * Please see [this blog post](http://datatables.net/blog/2014-09-22).
+ *
+ * @example
+ *   $('#myTable').DataTable( {
+ *     layout: {
+ *       topStart: 'alphabetSearch;
+ *     }
+ *   } );
  */
 
 import DataTable from 'datatables.net';
+
+interface AlphabetSearchOptions {
+	column?: number;
+	caseSensitive?: boolean;
+	numbers?: boolean;
+};
 
 declare module 'datatables.net' {
 	interface DataTablesStatic {
@@ -25,11 +37,7 @@ declare module 'datatables.net' {
 	}
 
 	interface Config {
-		alphabet?: {
-			column: number;
-			caseSensitive: boolean;
-			numbers: boolean;
-		};
+		alphabet?: AlphabetSearchOptions;
 	}
 
 	interface Api<T> {
@@ -44,6 +52,10 @@ declare module 'datatables.net' {
 		node(): JQuery | null;
 
 		recalc(): Api<T>;
+	}
+
+	interface Feature {
+		alphabetSearch?: AlphabetSearchOptions;
 	}
 }
 
@@ -239,4 +251,10 @@ DataTable.ext.feature.push({
 		return search.node();
 	},
 	cFeature: 'A',
+});
+
+DataTable.feature.register('alphabetSearch', function (settings, opts) {
+	var search = new DataTable.AlphabetSearch(settings);
+
+	return search.node();
 });
