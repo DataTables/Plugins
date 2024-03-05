@@ -169,13 +169,13 @@
             "Odpoledne"
         ],
         "weekdays": [
+            "Ne",
             "Po",
             "Út",
             "St",
             "Čt",
             "Pá",
-            "So",
-            "Ne"
+            "So"
         ],
         "months": [
             "Leden",
