@@ -46,7 +46,6 @@
     "searchBuilder": {
         "add": "新增條件",
         "condition": "條件",
-        "deleteTitle": "刪除過濾條件",
         "button": {
             "_": "複合查詢 (%d)",
             "0": "複合查詢"
@@ -105,7 +104,8 @@
             "_": "複合查詢 (%d)",
             "0": "複合查詢"
         },
-        "value": "內容"
+        "value": "內容",
+        "deleteTitle": "刪除篩選條件"
     },
     "editor": {
         "close": "關閉",
@@ -164,7 +164,8 @@
         "renameState": "重新命名",
         "savedStates": "儲存狀態",
         "stateRestore": "狀態 %d",
-        "updateState": "更新"
+        "updateState": "更新",
+        "collection": "更多"
     },
     "searchPanes": {
         "collapse": {
@@ -176,9 +177,9 @@
         "clearMessage": "清空",
         "count": "{total}",
         "countFiltered": "{shown} ({total})",
-        "title": "過濾條件 - %d",
         "showMessage": "顯示全部",
-        "collapseMessage": "摺疊全部"
+        "collapseMessage": "摺疊全部",
+        "title": "篩選條件 - %d"
     },
     "stateRestore": {
         "emptyError": "名稱不能空白。",
@@ -230,10 +231,10 @@
     },
     "info": "顯示第 _START_ 至 _END_ 筆結果，共 _TOTAL_ 筆",
     "infoEmpty": "顯示第 0 至 0 筆結果，共 0 筆",
-    "infoFiltered": "(從 _MAX_ 筆結果中過濾)",
     "infoThousands": ",",
     "lengthMenu": "顯示 _MENU_ 筆結果",
     "search": "搜尋：",
     "searchPlaceholder": "請輸入關鍵字",
-    "thousands": ","
+    "thousands": ",",
+    "infoFiltered": "(從 _MAX_ 筆結果中篩選)"
 }

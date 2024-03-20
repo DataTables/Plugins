@@ -121,10 +121,9 @@
         }
     },
     "searchBuilder": {
-        "add": "Pridėti sąlyga",
         "button": {
             "0": "Aktyvios užklausos",
-            "_": "Užklausos kūrimas"
+            "_": "Užklausos kūrimas (%d)"
         },
         "clearAll": "Išvalyti viską",
         "condition": "Būklė",
@@ -180,9 +179,10 @@
         "rightTitle": "Dešinė",
         "title": {
             "0": "Aktyvios užklausos",
-            "_": "Užklausos kūrimas"
+            "_": "Užklausos kūrimas (%d)"
         },
-        "value": "Reikšmė"
+        "value": "Reikšmė",
+        "add": "Pridėti sąlygą"
     },
     "searchPanes": {
         "clearMessage": "Išvalyti viską",

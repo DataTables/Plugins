@@ -1,10 +1,7 @@
 {
-    "processing": "Uzgaidiet ...",
     "search": "Meklēt:",
     "lengthMenu": "Rādīt _MENU_ ierakstus",
     "infoEmpty": "Nav ierakstu",
-    "infoFiltered": "(atlasīts no pavisam _MAX_ ierakstiem)",
-    "loadingRecords": "Notiek ielāde ...",
     "zeroRecords": "Nav atrasti vaicājumam atbilstoši ieraksti",
     "emptyTable": "Tabulā nav datu",
     "paginate": {
@@ -242,5 +239,8 @@
         "title": "Aktīvie Filtri - %d",
         "showMessage": "Rādīt Visu",
         "collapseMessage": "Sakļaut Visu"
-    }
+    },
+    "loadingRecords": "Notiek ielāde...",
+    "processing": "Uzgaidiet...",
+    "infoFiltered": "atlasīts no pavisam _MAX_ ierakstiem"
 }

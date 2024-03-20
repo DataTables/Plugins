@@ -33,11 +33,11 @@
         },
         "remove": {
             "button": "Obriši",
-            "title": "Obriši",
             "submit": "Obriši",
+            "title": "Brisanje",
             "confirm": {
-                "_": "Da li želiš da obrišeš %d redova?",
-                "1": "Da li želiš da obrišeš 1 red?"
+                "_": "Da li želite da obrišete %d redova?",
+                "1": "Da li želite da obrišete 1 red?"
             }
         },
         "error": {
@@ -58,7 +58,6 @@
     },
     "buttons": {
         "collection": "Kolekcija <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
-        "colvis": "Vidljivost kolone",
         "colvisRestore": "Vrati vidljivost",
         "copy": "Kopiraj",
         "copyKeys": "Pritsni ctrl ili u2318 + C da kopiraš tabelu sa podacima u sistemski beležnik <br \/><br \/>Da otkažeš akciju, klikni na ovu poruku ili pritisni ESC na tastaturi.",
@@ -71,7 +70,8 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Prikaži sve redove",
-            "_": "Prikaži %d red\/a\/ova"
+            "1": "Prikaži 1 red",
+            "_": "Prikaži %d reda"
         },
         "pdf": "PDF",
         "print": "Štampa",
@@ -80,27 +80,24 @@
         "removeState": "Ukloni",
         "renameState": "Preimenuj",
         "savedStates": "Sačuvana stanja",
-        "stateRestore": "Obnovi stanje %d",
-        "updateState": "Ažuriraj"
+        "updateState": "Ažuriraj",
+        "colvis": "Vidljivost kolona",
+        "stateRestore": "Stanje %d"
     },
     "searchBuilder": {
         "add": "Dodaj uslov",
-        "button": {
-            "0": "Kreiraj pretragu",
-            "_": "Kreirane pretrage (%d)"
-        },
         "clearAll": "Očisti sve",
         "condition": "Uslov",
         "conditions": {
             "date": {
-                "after": "Pre",
-                "before": "Posle",
                 "between": "Između",
-                "empty": "Prazno",
                 "equals": "Jednako",
                 "not": "Nije",
                 "notBetween": "Nije između",
-                "notEmpty": "Nije prazan"
+                "after": "Posle",
+                "before": "Pre",
+                "empty": "Prazan",
+                "notEmpty": "Nije prazao"
             },
             "number": {
                 "between": "Između",
@@ -118,13 +115,13 @@
                 "contains": "Sadrži",
                 "empty": "Prazno",
                 "endsWith": "Se završava na",
-                "equals": "Jednako",
                 "not": "Nije",
                 "notEmpty": "Nije prazan",
                 "startsWith": "Počinje sa",
                 "notContains": "Ne sadrži",
                 "notStartsWith": "Ne počinje sa",
-                "notEndsWith": "Ne završava se sa"
+                "notEndsWith": "Ne završava se sa",
+                "equals": "Jednak"
             },
             "array": {
                 "equals": "Jednako",
@@ -141,35 +138,29 @@
         "logicAnd": "I",
         "logicOr": "ili",
         "rightTitle": "Indent kriterijum",
-        "title": {
-            "0": "Kreiraj pretragu",
-            "_": "Kreirane pretrage (%d)"
+        "value": "Vrednost",
+        "button": {
+            "0": "Kreator pretraga",
+            "_": "Kreator pretraga (%d)"
         },
-        "value": "Vrednost"
+        "title": {
+            "0": "Kreator pretraga",
+            "_": "Kreator pretraga (%d)"
+        }
     },
     "searchPanes": {
         "clearMessage": "Ukloni sve",
-        "collapse": {
-            "0": "SearchPanes",
-            "_": "SearchPanes (%d)"
-        },
         "count": "{total}",
         "countFiltered": "{shown} ({total})",
-        "emptyPanes": "Nema pretrage",
-        "loadMessage": "Učitavanje",
         "title": "Aktivni filteri - %d",
         "showMessage": "Prikaži sve",
-        "collapseMessage": "Sakrij sve"
-    },
-    "select": {
-        "cells": {
-            "1": "1 ćelija je selektovana",
-            "_": "%d selektovane ćelije"
+        "collapseMessage": "Sakrij sve",
+        "collapse": {
+            "0": "Paneli pretrage",
+            "_": "Paneli pretrage (%d)"
         },
-        "columns": {
-            "1": "1 kolona je selektovana",
-            "_": "%d selektovane kolone"
-        }
+        "emptyPanes": "Nema panela pretage",
+        "loadMessage": "Učitavanje panela pretrage..."
     },
     "datetime": {
         "previous": "Prethodni",
@@ -208,31 +199,47 @@
     },
     "stateRestore": {
         "creationModal": {
-            "button": "Kreiraj:",
             "columns": {
                 "search": "Pretraga kolone",
                 "visible": "Vidljivost kolone"
             },
-            "name": "Ime",
             "order": "Sortiranje",
             "paging": "Paginacija",
             "scroller": "Pozicija skrola",
             "search": "Pretraga",
-            "searchBuilder": "SearchBuilder",
-            "select": "Selektuj",
             "title": "Kreiraj novo stanje",
-            "toggleLabel": "Uključuje:"
+            "toggleLabel": "Uključuje:",
+            "searchBuilder": "Kreator pretraga",
+            "select": "Odabir",
+            "button": "Kreiraj",
+            "name": "Ime:"
         },
         "duplicateError": "Stanje sa ovim imenom već postoji",
         "emptyError": "Ime ne može biti prazno.",
         "emptyStates": "Nema sačuvanih stanja",
-        "removeConfirm": "Da li ste sigurni?",
-        "removeError": "Uklanjanje stanja nije uspelo.",
         "removeJoiner": "i",
-        "removeSubmit": "Ukloni",
-        "removeTitle": "Ukloni stanje",
         "renameButton": "Preimenuj",
         "renameLabel": "Novo ime za %s:",
-        "renameTitle": "Preimenuj stanje"
-    }
+        "renameTitle": "Preimenuj stanje",
+        "removeConfirm": "Da li ste sigurni da zelite obrisati stanje %s?",
+        "removeError": "Brisanje stanja nije uspelo.",
+        "removeSubmit": "Obriši",
+        "removeTitle": "Obriši stanje"
+    },
+    "decimal": ",",
+    "select": {
+        "cells": {
+            "1": "1 ćelija je izabrana",
+            "_": "%d izabrane ćelije"
+        },
+        "columns": {
+            "1": "1 kolona je izabrana",
+            "_": "%d izabrane kolone"
+        },
+        "rows": {
+            "1": "1 red je izabran",
+            "_": "%d izabrana reda"
+        }
+    },
+    "thousands": "."
 }

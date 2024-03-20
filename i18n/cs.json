@@ -156,15 +156,6 @@
             "Dopoledne",
             "Odpoledne"
         ],
-        "weekdays": [
-            "Po",
-            "Út",
-            "St",
-            "Čt",
-            "Pá",
-            "So",
-            "Ne"
-        ],
         "months": [
             "Leden",
             "Únor",
@@ -178,6 +169,15 @@
             "Říjen",
             "Listopad",
             "Prosinec"
+        ],
+        "weekdays": [
+            "Ne",
+            "Po",
+            "Út",
+            "St",
+            "Čt",
+            "Pá",
+            "So"
         ]
     },
     "editor": {

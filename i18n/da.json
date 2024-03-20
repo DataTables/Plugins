@@ -23,7 +23,6 @@
         "info": "information"
     },
     "buttons": {
-        "copy": "Kopi",
         "copyTitle": "Kopier til udklipsholder",
         "csv": "CSV",
         "excel": "Excel",
@@ -48,7 +47,8 @@
         "renameState": "Omdøb",
         "savedStates": "Gemte stater",
         "stateRestore": "Stat %d",
-        "updateState": "Opdatér"
+        "updateState": "Opdatér",
+        "copy": "Kopier"
     },
     "emptyTable": "Ingen data tilgængelige i tabellen",
     "infoThousands": ".",
@@ -68,7 +68,6 @@
     },
     "thousands": ".",
     "decimal": ".",
-    "search": "Søg",
     "searchPanes": {
         "clearMessage": "Fjern alle",
         "collapse": {
@@ -77,10 +76,11 @@
         },
         "emptyPanes": "Ingen søgepaneler",
         "loadMessage": "Henter søgepaneler",
-        "title": "Filter aktive - %d",
-        "count": "Antal",
-        "countFiltered": "Filtreret antal",
-        "showMessage": "Vis alle"
+        "showMessage": "Vis alle",
+        "collapseMessage": "Skjul alle",
+        "count": "{total}",
+        "countFiltered": "{shown} ({total})",
+        "title": "Aktive filtrer - %d"
     },
     "datetime": {
         "previous": "Forrige",
@@ -111,7 +111,11 @@
             "10": "November",
             "11": "December",
             "1": "Februar"
-        }
+        },
+        "amPm": [
+            "am",
+            "pm"
+        ]
     },
     "editor": {
         "close": "Luk",
@@ -211,7 +215,32 @@
     "searchPlaceholder": "søg..",
     "stateRestore": {
         "duplicateError": "En tilstand med dette navn eksisterer allerede.",
-        "emptyError": "Navn kan ikke være tomt",
-        "emptyStates": "Ingen gemte tilstande"
-    }
+        "emptyStates": "Ingen gemte tilstande",
+        "creationModal": {
+            "button": "Opret",
+            "columns": {
+                "search": "Kolonne søgning",
+                "visible": "Kolonne synlighed"
+            },
+            "name": "Navn:",
+            "order": "Sortering",
+            "paging": "Paginering",
+            "scroller": "Scroll position",
+            "search": "Søgning",
+            "searchBuilder": "Søge bygger",
+            "select": "Vælg",
+            "title": "Opret ny tilstand",
+            "toggleLabel": "Indeholder:"
+        },
+        "emptyError": "Navn kan ikke være tomt.",
+        "removeConfirm": "Er du sikker på, at du vil fjerne %s?",
+        "removeError": "Fejl ved fjernelse af tilstand.",
+        "removeJoiner": " og ",
+        "removeSubmit": "Fjern",
+        "removeTitle": "Fjern tilstand",
+        "renameButton": "Omdøb",
+        "renameLabel": "Nyt navn til %s:",
+        "renameTitle": "Omdøb tilstand"
+    },
+    "search": "Søg:"
 }

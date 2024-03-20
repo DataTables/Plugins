@@ -243,6 +243,6 @@
         "removeError": "Görünüm silinemedi"
     },
     "emptyTable": "Tabloda veri bulunmuyor",
-    "infoPostFix": "_TOTAL_ kayıttan _START_ - _END_ arasındaki kayıtlar gösteriliyor",
-    "searchPlaceholder": "Arayın..."
+    "searchPlaceholder": "Arayın...",
+    "infoPostFix": " "
 }
