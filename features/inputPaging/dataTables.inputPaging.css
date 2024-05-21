@@ -1,0 +1,10 @@
+
+div.dt-paging-input {
+	display: inline-block;
+	margin: 0 0.25rem;
+}
+
+div.dt-paging-input input {
+	width: 2rem;
+	text-align: center;
+}
