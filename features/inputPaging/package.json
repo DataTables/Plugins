@@ -1,0 +1,33 @@
+{
+	"name": "datatables.net-feature-inputpaging",
+	"version": "2.0.7",
+	"description": "Paging control with a page number input for DataTables",
+    "main": "dist/dataTables.inputPaging.js",
+    "module": "dist/dataTables.inputPaging.mjs",
+    "style": "dist/dataTables.inputPaging.css",
+    "types": "dist/dataTables.inputPaging.d.ts",
+    "files": [
+        "dist/*.css",
+        "dist/*.js",
+        "dist/*.mjs",
+        "dist/*.d.ts"
+    ],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/DataTables/Plugins.git"
+	},
+	"keywords": [
+		"DataTables",
+		"jQuery",
+		"plugins"
+	],
+	"author": "SpryMedia Ltd",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://datatables.net/forums"
+	},
+	"homepage": "https://datatables.net",
+	"dependencies": {
+		"datatables.net": "^2.0.7"
+	}
+}

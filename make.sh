@@ -106,7 +106,20 @@ PLUGINS="${DT_SRC}/extensions/Plugins"
 # done
 
 for file in $PLUGINS/features/*/src/*.ts; do
-	ts_plugin $file
+	DIR=$(basename $file)
+
+	if [ -e "$DIR/../examples" ]; then
+		# Newer - more complete style
+		## Build TS if there is a ts file
+		# ts_plugin $file $PLUGINS/features/inputPaging/src/*.ts;
+
+		## Build SCSS
+
+		## Build examples
+	else
+		# Old style
+		# ts_plugin $file
+	fi
 done
 
 # for file in $PLUGINS/sorting/src/*.ts; do
