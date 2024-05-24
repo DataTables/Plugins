@@ -89,7 +89,7 @@ ScrollResize.prototype = {
 		var settings = this.s;
 		var dt = settings.dt;
 		var t = dt.table();
-		var offsetTop = $(settings.table).offset()!.top;
+		var offsetTop = $(settings.table).offset()!.top + $(settings.host).offset()!.top;
 		var availableHeight = settings.host.height();
 		var scrollBody = $('div.dt-scroll-body', t.container());
 
