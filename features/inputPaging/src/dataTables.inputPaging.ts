@@ -1,8 +1,15 @@
 import DataTable from 'datatables.net';
 
-(DataTable as any).feature.register('inputPaging', function (settings, opts) {
+DataTable.feature.register('inputPaging', function (settings, opts) {
 	let api = new DataTable.Api(settings);
-	let tags = stylingStructure();
+	let tags = stylingStructure(api);
+	let options = Object.assign({
+		firstLast: true,
+		previousNext: true,
+		pageOf: true
+	}, opts);
+
+	// Create the DOM elements for the paging control
 	let wrapper = createElement(tags.wrapper);
 	let first = createElement(
 		tags.item,
@@ -28,39 +35,105 @@ import DataTable from 'datatables.net';
 	let input = createElement(tags.input);
 	let of = createElement({tag: 'span', className: ''});
 
+	input.setAttribute('inputmode', 'numeric');
+	input.setAttribute('pattern', '[0-9]*');
+
+	// Assemble the DOM structure
+	if (options.firstLast) {
+		wrapper.appendChild(first);
+	}
+
+	if (options.previousNext) {
+		wrapper.appendChild(previous);
+	}
+
+	wrapper.appendChild(box);
+
+	if (options.previousNext) {
+		wrapper.appendChild(next);
+	}
+
+	if (options.firstLast) {
+		wrapper.appendChild(last);
+	}
+
+	box.appendChild(input);
+
+	if (options.pageOf) {
+		box.appendChild(of);
+	}
+
+	// Block characters other than numbers
+	input.addEventListener('keypress', function (e) {
+		if (e.charCode < 48 || e.charCode > 57) {
+			e.preventDefault();
+		}
+	});
+
+	// On new value, redraw the table
 	input.addEventListener('input', function () {
 		if (input.value) {
 			api.page(input.value - 1).draw(false);
 		}
-	});
 
-	wrapper.appendChild(first);
-	wrapper.appendChild(previous);
-	wrapper.appendChild(box);
-	wrapper.appendChild(next);
-	wrapper.appendChild(last);
-	box.appendChild(input);
-	box.appendChild(of);
+		// Auto adjust the width so the content is visible
+		input.style.width = (input.value.length + 2) + 'ch';
+	});
 
 	api.on('draw', () => {
 		let info = api.page.info();
 
+		// Update the classes for the "jump" buttons to show what is available
 		first.classList.toggle(tags.item.disabled, info.page === 0);
 		previous.classList.toggle(tags.item.disabled, info.page === 0);
 		next.classList.toggle(tags.item.disabled, info.page === info.pages-1);
 		last.classList.toggle(tags.item.disabled, info.page === info.pages-1);
 
+		// Set the new page value into the input box
 		if (input.value !== info.page + 1) {
 			input.value = info.page + 1;
 		}
 
+		// Show how many pages there are
 		of.textContent = ' / ' + info.pages;
 	});
 
 	return wrapper;
 });
 
-function stylingStructure() {
+/**
+ * Get details about the DOM structure that input paging needs to build
+ * @returns DOM information object
+ */
+function stylingStructure(api) {
+	let container = api.table().container();
+
+	if (container.classList.contains('dt-bootstrap5')) {
+		return {
+			wrapper: {
+				tag: 'ul',
+				className: 'pagination',
+			},
+			item: {
+				tag: 'li',
+				className: 'page-item',
+				disabled: 'disabled',
+				liner: {
+					tag: 'a',
+					className: 'page-link',
+				}
+			},
+			inputItem: {
+				tag: 'li',
+				className: 'page-item page-link dt-paging-input'
+			},
+			input: {
+				tag: 'input',
+				className: '',
+			}
+		};
+	}
+
 	return {
 		wrapper: {
 			tag: 'div',
@@ -70,11 +143,14 @@ function stylingStructure() {
 			tag: 'button',
 			className: 'dt-paging-button',
 			disabled: 'disabled',
-			enabled: '',
 		},
 		inputItem: {
 			tag: 'div',
 			className: 'dt-paging-input',
+			liner: {
+				tag: '',
+				className: ''
+			}
 		},
 		input: {
 			tag: 'input',
@@ -83,14 +159,31 @@ function stylingStructure() {
 	};
 }
 
+/**
+ * Create a new element
+ *
+ * @param opts Tag and class name
+ * @param text Text to show in the element
+ * @param fn Click event handler
+ * @returns Element
+ */
 function createElement(opts, text?, fn?) {
-	var el = document.createElement(opts.tag);
+	let el = document.createElement(opts.tag);
 	el.className = opts.className;
 
-	if (text) {
-		el.textContent = text;
+	if (opts.liner) {
+		let liner = createElement(opts.liner, text);
+
+		el.appendChild(liner);
+	}
+	else {
+		// Bottom nesting level
+		if (text) {
+			el.textContent = text;
+		}
 	}
 
+	// Top level only
 	if (fn) {
 		el.addEventListener('click', fn);
 	}

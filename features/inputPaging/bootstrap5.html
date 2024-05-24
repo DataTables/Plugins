@@ -7,8 +7,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no">
 	<title>DataTables example - InputPaging</title>
 	
-	<link href="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-2.0.7/datatables.min.css" rel="stylesheet">
-	<script src="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-2.0.7/datatables.min.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.datatables.net/v/bs5/jq-3.7.0/dt-2.0.7/datatables.min.css" rel="stylesheet">
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.datatables.net/v/bs5/jq-3.7.0/dt-2.0.7/datatables.min.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="dataTables.inputPaging.css">
 	<script type="text/javascript" language="javascript" src="dataTables.inputPaging.js"></script>
@@ -28,11 +31,11 @@ addEventListener("DOMContentLoaded", function () {
 <body class="dt-example">
 	<div class="container">
 		<section>
-			<h1>DataTables example <span>InputPaging</span></h1>
+			<h1>DataTables example <span>InputPaging - Bootstrap 5</span></h1>
 			<div class="info">
 			</div>
 			<div class="demo-html">
-				<table id="example" class="display" style="width:100%">
+				<table id="example" class="table table-striped" style="width:100%">
 					<thead>
 						<tr>
 							<th>Name</th>
