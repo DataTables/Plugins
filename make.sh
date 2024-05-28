@@ -19,12 +19,16 @@ fi
 
 function ts_plugin {
 	local SRC_FILE=$1
-	local REQUIRE=${2:-'jquery datatables.net'}
-	local DEST_DIR=$(dirname $(dirname $SRC_FILE))
+	local DEST_DIR=$2
+	local REQUIRE=${3:-'jquery datatables.net'}
 	local FILE_NAME=$(basename $SRC_FILE)
 
 	# Remove extension
 	FILE_NAME="${FILE_NAME%.*}"
+
+	if [ -z "$DEST_DIR" ]; then
+		DEST_DIR=$(dirname $(dirname $SRC_FILE))
+	fi
 
 	./node_modules/.bin/tsc \
 		--target esnext \
@@ -93,6 +97,10 @@ DT_BUILT="${DT_SRC}/built/DataTables"
 
 PLUGINS="${DT_SRC}/extensions/Plugins"
 
+if [ ! -e $DT_BUILT/extensions/Plugins ]; then
+	ln -s $PLUGINS $DT_BUILT/extensions/Plugins
+fi
+
 # for file in $PLUGINS/api/src/*.ts; do
 # 	ts_plugin $file
 # done
@@ -105,20 +113,34 @@ PLUGINS="${DT_SRC}/extensions/Plugins"
 # 	ts_plugin $file
 # done
 
-for file in $PLUGINS/features/*/src/*.ts; do
-	DIR=$(basename $file)
-
-	if [ -e "$DIR/../examples" ]; then
+for FEATURE_DIR in $PLUGINS/features/*; do
+	if [ -e "$FEATURE_DIR/examples" ]; then
 		# Newer - more complete style
+		NAME=$(basename $FEATURE_DIR)
+
 		## Build TS if there is a ts file
-		# ts_plugin $file $PLUGINS/features/inputPaging/src/*.ts;
+		ts_plugin $FEATURE_DIR/src/dataTables.$NAME.ts $FEATURE_DIR/dist
+
+		cp $FEATURE_DIR/src/types.d.ts $FEATURE_DIR/dist
 
 		## Build SCSS
+		cp $FEATURE_DIR/src/dataTables.$NAME.scss $FEATURE_DIR/dist
+		scss_compile $FEATURE_DIR/dist/dataTables.$NAME.scss
+		rm $FEATURE_DIR/dist/dataTables.$NAME.scss
 
 		## Build examples
-	else
-		# Old style
-		# ts_plugin $file
+		if [ -d $FEATURE_DIR/dist/examples ]; then
+			rm -r $FEATURE_DIR/dist/examples
+		fi
+
+		# Build happens in the path that is http available, despite it just being a symlink
+		cp -r $FEATURE_DIR/examples $FEATURE_DIR/dist/examples
+		examples_process $DT_BUILT/extensions/Plugins/features/$NAME/dist
+	# else
+	# 	# Old style
+	# 	for file in $FEATURE_DIR/src/*.ts; do
+	# 		ts_plugin $file
+	# 	done
 	fi
 done
 

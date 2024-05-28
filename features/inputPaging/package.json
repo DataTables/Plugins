@@ -1,6 +1,6 @@
 {
 	"name": "datatables.net-feature-inputpaging",
-	"version": "2.0.7",
+	"version": "1.0.0",
 	"description": "Paging control with a page number input for DataTables",
     "main": "dist/dataTables.inputPaging.js",
     "module": "dist/dataTables.inputPaging.mjs",

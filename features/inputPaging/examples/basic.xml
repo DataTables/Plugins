@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="html" order="1">
+
+<css lib="datatables feature-inputPaging" />
+<js lib="jquery datatables feature-inputPaging">
+<![CDATA[
+$('#example').DataTable({
+	layout: {
+		bottomEnd: 'inputPaging'
+	}
+});
+]]>
+</js>
+<js-vanilla>
+<![CDATA[
+new DataTable('#example', {
+	layout: {
+		bottomEnd: 'inputPaging'
+	}
+});
+]]>
+</js-vanilla>
+
+<title lib="InputPaging">Basic example</title>
+
+<info><![CDATA[
+
+This example demonstrates the input paging control, which can be used in place of (or alongside if you really wanted!) the built in `-feature paging` control. It provides an `-tag input` element that is used to show the current page and allow the end user to type in the page number they want to view.
+
+]]></info>
+
+</dt-example>

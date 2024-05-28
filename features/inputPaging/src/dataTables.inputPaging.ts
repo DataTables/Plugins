@@ -171,7 +171,7 @@ function createElement(opts, text?, fn?) {
 	let el = document.createElement(opts.tag);
 	el.className = opts.className;
 
-	if (opts.liner) {
+	if (opts.liner && opts.liner.tag) {
 		let liner = createElement(opts.liner, text);
 
 		el.appendChild(liner);
