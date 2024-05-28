@@ -35,6 +35,7 @@ DataTable.feature.register('inputPaging', function (settings, opts) {
 	let input = createElement(tags.input);
 	let of = createElement({tag: 'span', className: ''});
 
+	input.setAttribute('type', 'text');
 	input.setAttribute('inputmode', 'numeric');
 	input.setAttribute('pattern', '[0-9]*');
 
@@ -84,10 +85,10 @@ DataTable.feature.register('inputPaging', function (settings, opts) {
 		let info = api.page.info();
 
 		// Update the classes for the "jump" buttons to show what is available
-		first.classList.toggle(tags.item.disabled, info.page === 0);
-		previous.classList.toggle(tags.item.disabled, info.page === 0);
-		next.classList.toggle(tags.item.disabled, info.page === info.pages-1);
-		last.classList.toggle(tags.item.disabled, info.page === info.pages-1);
+		setState(first, tags.item.disabled, info.page === 0);
+		setState(previous, tags.item.disabled, info.page === 0);
+		setState(next, tags.item.disabled, info.page === info.pages-1);
+		setState(last, tags.item.disabled, info.page === info.pages-1);
 
 		// Set the new page value into the input box
 		if (input.value !== info.page + 1) {
@@ -101,18 +102,38 @@ DataTable.feature.register('inputPaging', function (settings, opts) {
 	return wrapper;
 });
 
+function setState(el, disabledClass, disabled) {
+	el.classList.toggle(disabledClass, disabled);
+
+	let a = el.querySelector('a');
+
+	if (a) {
+		if (disabled) {
+			a.setAttribute('disabled', 'disabled');
+		}
+		else {
+			a.removeAttribute('disabled');
+		}
+	}
+}
+
 /**
  * Get details about the DOM structure that input paging needs to build
  * @returns DOM information object
  */
 function stylingStructure(api) {
 	let container = api.table().container();
+	let classList = container.classList;
 
-	if (container.classList.contains('dt-bootstrap5')) {
+	if (
+		classList.contains('dt-bootstrap5') ||
+		classList.contains('dt-bootstrap4') ||
+		classList.contains('dt-bootstrap')
+	) {
 		return {
 			wrapper: {
 				tag: 'ul',
-				className: 'pagination',
+				className: 'dt-inputpaging pagination',
 			},
 			item: {
 				tag: 'li',
@@ -125,7 +146,7 @@ function stylingStructure(api) {
 			},
 			inputItem: {
 				tag: 'li',
-				className: 'page-item page-link dt-paging-input'
+				className: 'page-item dt-paging-input'
 			},
 			input: {
 				tag: 'input',
@@ -133,11 +154,82 @@ function stylingStructure(api) {
 			}
 		};
 	}
+	else if (classList.contains('dt-bulma')) {
+		return {
+			wrapper: {
+				tag: 'ul',
+				className: 'dt-inputpaging pagination-list',
+			},
+			item: {
+				tag: 'li',
+				className: '',
+				disabled: 'disabled',
+				liner: {
+					tag: 'a',
+					className: 'pagination-link',
+				}
+			},
+			inputItem: {
+				tag: 'li',
+				className: 'dt-paging-input'
+			},
+			input: {
+				tag: 'input',
+				className: '',
+			}
+		};
+	}
+	else if (classList.contains('dt-foundation')) {
+		return {
+			wrapper: {
+				tag: 'ul',
+				className: 'dt-inputpaging pagination',
+			},
+			item: {
+				tag: 'li',
+				className: '',
+				disabled: 'disabled',
+				liner: {
+					tag: 'a',
+					className: '',
+				}
+			},
+			inputItem: {
+				tag: 'li',
+				className: 'dt-paging-input'
+			},
+			input: {
+				tag: 'input',
+				className: '',
+			}
+		};
+	}
+	else if (classList.contains('dt-semanticUI')) {
+		return {
+			wrapper: {
+				tag: 'div',
+				className: 'dt-inputpaging ui unstackable pagination menu',
+			},
+			item: {
+				tag: 'a',
+				className: 'page-link item',
+				disabled: 'disabled'
+			},
+			inputItem: {
+				tag: 'div',
+				className: 'dt-paging-input'
+			},
+			input: {
+				tag: 'input',
+				className: 'ui input',
+			}
+		};
+	}
 
 	return {
 		wrapper: {
 			tag: 'div',
-			className: 'dt-paging',
+			className: 'dt-inputpaging dt-paging',
 		},
 		item: {
 			tag: 'button',
