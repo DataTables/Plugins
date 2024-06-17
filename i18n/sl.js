@@ -109,7 +109,9 @@
         "emptyPanes": "Ni vnosnega polja za iskanje",
         "loadMessage": "Nalagam iskalnik ...",
         "title": "Aktivni filtri - %d",
-        "countFiltered": "{shown} ({total})"
+        "countFiltered": "{shown} ({total})",
+        "showMessage": "Prikaži vse",
+        "collapseMessage": "Skrij vse"
     },
     "buttons": {
         "copySuccess": {
