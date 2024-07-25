@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="html" order="1">
+
+<css lib="datatables feature-orderNumbers" />
+<js lib="jquery datatables feature-orderNumbers">
+<![CDATA[
+$('#example').DataTable({
+	order: [
+		{idx: 0, dir: 'asc'},
+		{idx: 1, dir: 'asc'}
+	],
+	orderNumbers: true
+});
+]]>
+</js>
+<js-vanilla>
+<![CDATA[
+new DataTable('#example', {
+	order: [
+		{idx: 0, dir: 'asc'},
+		{idx: 1, dir: 'asc'}
+	],
+	orderNumbers: true
+});
+]]>
+</js-vanilla>
+
+<title lib="OrderNumbers">Basic example</title>
+
+<info><![CDATA[
+
+This example demonstrates the _OrderNumbers_ plugin. Shift clicking on a table header in DataTables will add the column to the existing ordering sequence, allowing multi-column ordering. This plug-in visually shows to the end user what the sequence is.
+
+]]></info>
+
+</dt-example>

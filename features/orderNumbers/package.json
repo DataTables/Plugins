@@ -1,0 +1,33 @@
+{
+	"name": "datatables.net-feature-ordernumbers",
+	"version": "1.0.0",
+	"description": "Display multi-column ordering information as an indicator",
+    "main": "dist/dataTables.orderNumbers.js",
+    "module": "dist/dataTables.orderNumbers.mjs",
+    "style": "dist/dataTables.orderNumbers.css",
+    "types": "dist/types.d.ts",
+    "files": [
+        "dist/*.css",
+        "dist/*.js",
+        "dist/*.mjs",
+        "dist/*.d.ts"
+    ],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/DataTables/Plugins.git"
+	},
+	"keywords": [
+		"DataTables",
+		"jQuery",
+		"plugins"
+	],
+	"author": "SpryMedia Ltd",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://datatables.net/forums"
+	},
+	"homepage": "https://datatables.net",
+	"dependencies": {
+		"datatables.net": "^2.0.7"
+	}
+}

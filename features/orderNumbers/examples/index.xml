@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example order="0">
+
+<title>OrderNumbers plugin</title>
+
+<info><![CDATA[
+
+The OrderNumbers plugin for DataTables displays a number in the table header when multi-column ordering, so the end user can quickly see what sequence the order is being applied in.
+
+]]></info>
+
+</dt-example>
