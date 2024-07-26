@@ -86,7 +86,7 @@ function draw(table) {
 }
 // Listen for DataTable's initialisation's so we can check if the plug-in should
 // be automatically activated or not.
-$('body').on('init.dt', function (e, settings) {
+$(document).on('init.dt', function (e, settings) {
     if (e.namespace !== 'dt') {
         return;
     }
