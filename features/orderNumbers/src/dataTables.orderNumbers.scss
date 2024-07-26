@@ -1,10 +1,18 @@
 
+
+:root {
+	--dt-order-numbers-light-color: white;
+	--dt-order-numbers-light-background: #555;
+	--dt-order-numbers-dark-color: black;
+	--dt-order-numbers-dark-background: #d3d3d3;
+}
+
 table.dataTable thead span.dt-order-number {
 	position: absolute;
 	top: 2px;
 	right: 19px;
-	color: white;
-	background: #555;
+	color: var(--dt-order-numbers-light-color);
+	background: var(--dt-order-numbers-light-background);
 	border-radius: 10px;
 	width: 1.5em;
 	text-align: center;
@@ -17,7 +25,7 @@ table.dataTable thead span.dt-order-number {
 :root[data-theme=dark],
 :root[data-bs-theme=dark] {
 	table.dataTable thead span.dt-order-number {
-		color: black;
-		background: #d3d3d3;
+		color: var(--dt-order-numbers-dark-color);
+		background: var(--dt-order-numbers-dark-background);
 	}
 }

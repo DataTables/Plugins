@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<dt-example table-type="html" order="1">
+<dt-example table-type="html" order="2">
 
 <css lib="datatables feature-orderNumbers">
 
-table.dataTable thead span.dt-order-number {
-	color: white;
-	background: #db5c00;
-}
-
-:root.dark,
-:root[data-theme=dark],
-:root[data-bs-theme=dark] {
-	table.dataTable thead span.dt-order-number {
-		color: black;
-		background: #9dbf23;
-	}
+table {
+	--dt-order-numbers-light-background: #db5c00;
+	--dt-order-numbers-dark-background: #9dbf23;
 }
 
 </css>
@@ -45,7 +36,7 @@ new DataTable('#example', {
 
 <info><![CDATA[
 
-This example shows that the styling for the ordering indicators can be easily modified to suit your needs.
+This example shows that the styling for the ordering indicators can be easily modified to suit your needs through CSS variables.
 
 ]]></info>
 
