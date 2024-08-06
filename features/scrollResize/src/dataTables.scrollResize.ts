@@ -120,6 +120,7 @@ ScrollResize.prototype = {
 				width: '100%',
 				zIndex: -1,
 				border: 0,
+				opacity: 0,
 			})
 			.attr('frameBorder', '0')
 			.attr('src', 'about:blank');
