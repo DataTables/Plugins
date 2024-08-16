@@ -1,4 +1,4 @@
-/*! © SpryMedia Ltd - datatables.net/license */
+/*! © StudioSouth IT Solutions Hub - datatables.net/license */
 
 (function( factory ){
 	if ( typeof define === 'function' && define.amd ) {
@@ -53,7 +53,7 @@ var DataTable = $.fn.dataTable;
  *
  *  @name Case-Sensitive
  *  @summary Sort based on case of data, In ascending order capitals are prioritised over lower case.
- *  @author [Sandy Galloway](http://datatables.net)
+ *  @author [Obinna Felix](http://datatables.net)
  *
  *
  *  @example
