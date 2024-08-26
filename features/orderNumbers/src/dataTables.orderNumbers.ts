@@ -25,11 +25,13 @@ function orderNumbers(src) {
 
 /** Remove all existing indicators */
 function remove(table) {
-	$('span.dt-order-number', table.table().header()).remove();
+	let className = (table.init().orderNumbers && table.init().orderNumbers.className) ? table.init().orderNumbers.className : 'dt-order-number';
+	$('span.' + className, table.table().header()).remove();
 }
 
 /** Draw in new indicators for the currently applied order */
 function draw(table) {
+	let className = (table.init().orderNumbers && table.init().orderNumbers.className) ? table.init().orderNumbers.className : 'dt-order-number';
 	var order = table.order();
 
 	if (order.length > 1) {
@@ -42,7 +44,7 @@ function draw(table) {
 			}
 
 			$('<span>')
-				.addClass('dt-order-number')
+				.addClass(className)
 				.text(i + 1)
 				.appendTo(cell);
 		}
