@@ -1,6 +1,6 @@
 {
 	"name": "datatables.net-feature-ordernumbers",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Display multi-column ordering information as an indicator",
     "main": "dist/dataTables.orderNumbers.js",
     "module": "dist/dataTables.orderNumbers.mjs",
