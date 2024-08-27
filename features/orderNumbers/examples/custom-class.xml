@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="html" order="2">
+
+<css lib="datatables feature-orderNumbers">
+
+table.dataTable thead span.orderNumbers {
+	position: absolute;
+	top: 2px;
+	right: 19px;
+	color: black;
+	width: 1.5em;
+	text-align: center;
+	height: 1.5em;
+	font-size: 11px;
+	line-height: 15px;
+}
+
+</css>
+<js lib="jquery datatables feature-orderNumbers">
+<![CDATA[
+$('#example').DataTable({
+	order: [
+		{idx: 0, dir: 'asc'},
+		{idx: 1, dir: 'asc'}
+	],
+	orderNumbers: {
+		className: 'orderNumbers'
+	}
+});
+]]>
+</js>
+<js-vanilla>
+<![CDATA[
+new DataTable('#example', {
+	order: [
+		{idx: 0, dir: 'asc'},
+		{idx: 1, dir: 'asc'}
+	],
+	orderNumbers: {
+		className: 'orderNumbers'
+	}
+});
+]]>
+</js-vanilla>
+
+<title lib="OrderNumbers">Custom class name</title>
+
+<info><![CDATA[
+
+This example shows how a custom class name can be set for the `orderNumbers` display.
+
+]]></info>
+
+</dt-example>

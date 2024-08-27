@@ -4,11 +4,25 @@
 	<meta charset="utf-8">
 	<link rel="shortcut icon" type="image/ico" href="https://www.datatables.net/favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no">
-	<title>OrderNumbers example - Basic example</title>
+	<title>OrderNumbers example - Custom class name</title>
 	<link rel="stylesheet" type="text/css" href="../../../../../../examples/resources/syntax/shCore.css">
 	<link rel="stylesheet" type="text/css" href="../../../../../../examples/resources/demo.css">
 	<style type="text/css" class="init">
 	
+
+table.dataTable thead span.orderNumbers {
+	position: absolute;
+	top: 2px;
+	right: 19px;
+	color: black;
+	width: 1.5em;
+	text-align: center;
+	height: 1.5em;
+	font-size: 11px;
+	line-height: 15px;
+}
+
+
 	</style>
 	<script type="text/javascript" language="javascript" src="../../../../../../examples/resources/syntax/shCore.js"></script>
 	<script type="text/javascript" language="javascript" src="../../../../../../examples/resources/demo.js"></script>
@@ -23,7 +37,9 @@ $('#example').DataTable({
 		{idx: 0, dir: 'asc'},
 		{idx: 1, dir: 'asc'}
 	],
-	orderNumbers: true
+	orderNumbers: {
+		className: 'orderNumbers'
+	}
 });
 
 
@@ -36,7 +52,9 @@ new DataTable('#example', {
 		{idx: 0, dir: 'asc'},
 		{idx: 1, dir: 'asc'}
 	],
-	orderNumbers: true
+	orderNumbers: {
+		className: 'orderNumbers'
+	}
 });
 
 
@@ -47,10 +65,9 @@ new DataTable('#example', {
 <body class="dt-example">
 	<div class="container">
 		<section>
-			<h1>OrderNumbers example <span>Basic example</span></h1>
+			<h1>OrderNumbers example <span>Custom class name</span></h1>
 			<div class="info">
-				<p>This example demonstrates the <em>OrderNumbers</em> plugin. Shift clicking on a table header in DataTables will add the column to the existing ordering
-				sequence, allowing multi-column ordering. This plug-in visually shows to the end user what the sequence is.</p>
+				<p>This example shows how a custom class name can be set for the <code>orderNumbers</code> display.</p>
 			</div>
 			<div class="demo-html">
 				<table id="example" class="display" style="width:100%">
@@ -550,7 +567,9 @@ new DataTable('#example', {
 		{idx: 0, dir: &#039;asc&#039;},
 		{idx: 1, dir: &#039;asc&#039;}
 	],
-	orderNumbers: true
+	orderNumbers: {
+		className: &#039;orderNumbers&#039;
+	}
 });</code>
 					</div>
 					<div id="js-vanilla">
@@ -559,7 +578,9 @@ new DataTable('#example', {
 		{idx: 0, dir: &#039;asc&#039;},
 		{idx: 1, dir: &#039;asc&#039;}
 	],
-	orderNumbers: true
+	orderNumbers: {
+		className: &#039;orderNumbers&#039;
+	}
 });</code>
 					</div>
 					<p>In addition to the above code, the following Javascript library files are loaded for use in this example:</p>
@@ -571,7 +592,17 @@ new DataTable('#example', {
 				<div class="css">
 					<div>
 						<p>This example uses a little bit of additional CSS beyond what is loaded from the library files (below), in order to correctly display the table. The
-						additional CSS used is shown below:</p><code class="multiline language-css"></code>
+						additional CSS used is shown below:</p><code class="multiline language-css">table.dataTable thead span.orderNumbers {
+	position: absolute;
+	top: 2px;
+	right: 19px;
+	color: black;
+	width: 1.5em;
+	text-align: center;
+	height: 1.5em;
+	font-size: 11px;
+	line-height: 15px;
+}</code>
 					</div>
 					<p>The following CSS library files are loaded for use in this example to provide the styling of the table:</p>
 					<ul id="css-lib-files"></ul>
@@ -597,13 +628,13 @@ new DataTable('#example', {
 					<div class="toc-group">
 						<h3><a href="./index.html">Examples</a></h3>
 						<ul class="toc active">
-							<li class="active">
+							<li>
 								<a href="./basic.html">Basic example</a>
 							</li>
 							<li>
 								<a href="./custom-css.html">Custom CSS</a>
 							</li>
-							<li>
+							<li class="active">
 								<a href="./custom-class.html">Custom class name</a>
 							</li>
 						</ul>
