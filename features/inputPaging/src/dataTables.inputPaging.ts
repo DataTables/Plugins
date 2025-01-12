@@ -82,23 +82,31 @@ DataTable.feature.register('inputPaging', function (settings, opts) {
 	});
 
 	api.on('draw', () => {
-		let info = api.page.info();
-
-		// Update the classes for the "jump" buttons to show what is available
-		setState(first, tags.item.disabled, info.page === 0);
-		setState(previous, tags.item.disabled, info.page === 0);
-		setState(next, tags.item.disabled, info.page === info.pages-1);
-		setState(last, tags.item.disabled, info.page === info.pages-1);
-
-		// Set the new page value into the input box
-		if (input.value !== info.page + 1) {
-			input.value = info.page + 1;
-		}
-
-		// Show how many pages there are
-		of.textContent = ' / ' + info.pages;
+	    let info = api.page.info();
+	    // Update the classes for the "jump" buttons to show what is available
+	    setState(first, tags.item.disabled, info.page === 0);
+	    setState(previous, tags.item.disabled, info.page === 0);
+	 
+	    // Set previous page to 0 if no records else to current page -1
+	    let prevPage = info.recordsTotal === 0 || info.recordsDisplay === 0 ? 0 : info.pages - 1;
+	    setState(next, tags.item.disabled, info.page === prevPage);
+	    setState(last, tags.item.disabled, info.page === prevPage);
+	 
+	    // If no records empty input value and disable input
+	    if (info.recordsTotal === 0 || info.recordsDisplay === 0) {
+	        input.value = '';
+	        input.disabled = true;
+	    }
+	 
+	    // Set the new page value into the input box
+	    else if (input.value !== info.page + 1) {
+	        input.value = info.page + 1;
+	        input.disabled = false;  // Make sure input is enabled
+	    }
+	    // Show how many pages there are
+	    of.textContent = ' / ' + info.pages;
 	});
-
+	
 	return wrapper;
 });
 
