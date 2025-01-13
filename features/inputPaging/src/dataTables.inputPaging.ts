@@ -3,37 +3,32 @@ import DataTable from 'datatables.net';
 DataTable.feature.register('inputPaging', function (settings, opts) {
 	let api = new DataTable.Api(settings);
 	let tags = stylingStructure(api);
-	let options = Object.assign({
-		firstLast: true,
-		previousNext: true,
-		pageOf: true
-	}, opts);
+	let options = Object.assign(
+		{
+			firstLast: true,
+			previousNext: true,
+			pageOf: true
+		},
+		opts
+	);
 
 	// Create the DOM elements for the paging control
 	let wrapper = createElement(tags.wrapper);
-	let first = createElement(
-		tags.item,
-		api.i18n('oPaginate.sFirst', '\u00AB'),
-		() => api.page('first').draw(false)
+	let first = createElement(tags.item, api.i18n('oPaginate.sFirst', '\u00AB'), () =>
+		api.page('first').draw(false)
 	);
-	let previous = createElement(
-		tags.item,
-		api.i18n('oPaginate.sPrevious', '\u2039'),
-		() => api.page('previous').draw(false)
+	let previous = createElement(tags.item, api.i18n('oPaginate.sPrevious', '\u2039'), () =>
+		api.page('previous').draw(false)
 	);
-	let next = createElement(
-		tags.item,
-		api.i18n('oPaginate.sNext', '\u203A'),
-		() => api.page('next').draw(false)
+	let next = createElement(tags.item, api.i18n('oPaginate.sNext', '\u203A'), () =>
+		api.page('next').draw(false)
 	);
-	let last = createElement(
-		tags.item,
-		api.i18n('oPaginate.sLast', '\u00BB'),
-		() => api.page('last').draw(false)
+	let last = createElement(tags.item, api.i18n('oPaginate.sLast', '\u00BB'), () =>
+		api.page('last').draw(false)
 	);
 	let box = createElement(tags.inputItem);
 	let input = createElement(tags.input);
-	let of = createElement({tag: 'span', className: ''});
+	let of = createElement({ tag: 'span', className: '' });
 
 	input.setAttribute('type', 'text');
 	input.setAttribute('inputmode', 'numeric');
@@ -78,35 +73,35 @@ DataTable.feature.register('inputPaging', function (settings, opts) {
 		}
 
 		// Auto adjust the width so the content is visible
-		input.style.width = (input.value.length + 2) + 'ch';
+		input.style.width = input.value.length + 2 + 'ch';
 	});
 
 	api.on('draw', () => {
-	    let info = api.page.info();
-	    // Update the classes for the "jump" buttons to show what is available
-	    setState(first, tags.item.disabled, info.page === 0);
-	    setState(previous, tags.item.disabled, info.page === 0);
-	 
-	    // Set previous page to 0 if no records else to current page -1
-	    let prevPage = info.recordsTotal === 0 || info.recordsDisplay === 0 ? 0 : info.pages - 1;
-	    setState(next, tags.item.disabled, info.page === prevPage);
-	    setState(last, tags.item.disabled, info.page === prevPage);
-	 
-	    // If no records empty input value and disable input
-	    if (info.recordsTotal === 0 || info.recordsDisplay === 0) {
-	        input.value = '';
-	        input.disabled = true;
-	    }
-	 
-	    // Set the new page value into the input box
-	    else if (input.value !== info.page + 1) {
-	        input.value = info.page + 1;
-	        input.disabled = false;  // Make sure input is enabled
-	    }
-	    // Show how many pages there are
-	    of.textContent = ' / ' + info.pages;
+		let info = api.page.info();
+		// Update the classes for the "jump" buttons to show what is available
+		setState(first, tags.item.disabled, info.page === 0);
+		setState(previous, tags.item.disabled, info.page === 0);
+
+		// Set previous page to 0 if no records else to current page -1
+		let prevPage = info.recordsTotal === 0 || info.recordsDisplay === 0 ? 0 : info.pages - 1;
+		setState(next, tags.item.disabled, info.page === prevPage);
+		setState(last, tags.item.disabled, info.page === prevPage);
+
+		// If no records empty input value and disable input
+		if (info.recordsTotal === 0 || info.recordsDisplay === 0) {
+			input.value = '';
+			input.disabled = true;
+		}
+		// Set the new page value into the input box
+		else if (input.value !== info.page + 1) {
+			input.value = info.page + 1;
+			input.disabled = false; // Make sure input is enabled
+		}
+
+		// Show how many pages there are
+		of.textContent = ' / ' + info.pages;
 	});
-	
+
 	return wrapper;
 });
 
@@ -141,7 +136,7 @@ function stylingStructure(api) {
 		return {
 			wrapper: {
 				tag: 'ul',
-				className: 'dt-inputpaging pagination',
+				className: 'dt-inputpaging pagination'
 			},
 			item: {
 				tag: 'li',
@@ -149,7 +144,7 @@ function stylingStructure(api) {
 				disabled: 'disabled',
 				liner: {
 					tag: 'a',
-					className: 'page-link',
+					className: 'page-link'
 				}
 			},
 			inputItem: {
@@ -158,7 +153,7 @@ function stylingStructure(api) {
 			},
 			input: {
 				tag: 'input',
-				className: '',
+				className: ''
 			}
 		};
 	}
@@ -166,7 +161,7 @@ function stylingStructure(api) {
 		return {
 			wrapper: {
 				tag: 'ul',
-				className: 'dt-inputpaging pagination-list',
+				className: 'dt-inputpaging pagination-list'
 			},
 			item: {
 				tag: 'li',
@@ -174,7 +169,7 @@ function stylingStructure(api) {
 				disabled: 'disabled',
 				liner: {
 					tag: 'a',
-					className: 'pagination-link',
+					className: 'pagination-link'
 				}
 			},
 			inputItem: {
@@ -183,7 +178,7 @@ function stylingStructure(api) {
 			},
 			input: {
 				tag: 'input',
-				className: '',
+				className: ''
 			}
 		};
 	}
@@ -191,7 +186,7 @@ function stylingStructure(api) {
 		return {
 			wrapper: {
 				tag: 'ul',
-				className: 'dt-inputpaging pagination',
+				className: 'dt-inputpaging pagination'
 			},
 			item: {
 				tag: 'li',
@@ -199,7 +194,7 @@ function stylingStructure(api) {
 				disabled: 'disabled',
 				liner: {
 					tag: 'a',
-					className: '',
+					className: ''
 				}
 			},
 			inputItem: {
@@ -208,7 +203,7 @@ function stylingStructure(api) {
 			},
 			input: {
 				tag: 'input',
-				className: '',
+				className: ''
 			}
 		};
 	}
@@ -216,7 +211,7 @@ function stylingStructure(api) {
 		return {
 			wrapper: {
 				tag: 'div',
-				className: 'dt-inputpaging ui unstackable pagination menu',
+				className: 'dt-inputpaging ui unstackable pagination menu'
 			},
 			item: {
 				tag: 'a',
@@ -229,7 +224,7 @@ function stylingStructure(api) {
 			},
 			input: {
 				tag: 'input',
-				className: 'ui input',
+				className: 'ui input'
 			}
 		};
 	}
@@ -237,12 +232,12 @@ function stylingStructure(api) {
 	return {
 		wrapper: {
 			tag: 'div',
-			className: 'dt-inputpaging dt-paging',
+			className: 'dt-inputpaging dt-paging'
 		},
 		item: {
 			tag: 'button',
 			className: 'dt-paging-button',
-			disabled: 'disabled',
+			disabled: 'disabled'
 		},
 		inputItem: {
 			tag: 'div',
@@ -254,7 +249,7 @@ function stylingStructure(api) {
 		},
 		input: {
 			tag: 'input',
-			className: '',
+			className: ''
 		}
 	};
 }
