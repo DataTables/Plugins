@@ -2,11 +2,11 @@
 	"arrowParens": "avoid",
 	"breakBeforeElse": true,
 	"indentChains": true,
-	"printWidth": 80,
+	"printWidth": 100,
 	"proseWrap": "preserve",
 	"quoteProps": "as-needed",
 	"semi": true,
 	"singleQuote": true,
-	"trailingComma": "es5",
+	"trailingComma": "none",
 	"useTabs": true
 }
