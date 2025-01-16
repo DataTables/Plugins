@@ -75,7 +75,7 @@ DataTable.feature.register('inputPaging', function (settings, opts) {
 	});
 
 	// On new value, redraw the table
-	input.addEventListener('input', function () {
+	input.addEventListener('change', function () {
 		if (input.value) {
 			api.page(input.value - 1).draw(false);
 		}
