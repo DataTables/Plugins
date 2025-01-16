@@ -282,7 +282,7 @@ function createElement(opts, text?, fn?) {
 	else {
 		// Bottom nesting level
 		if (text) {
-			el.textContent = text;
+			el.innerHTML = text;
 		}
 	}
 
