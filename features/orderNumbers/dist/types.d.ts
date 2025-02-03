@@ -15,7 +15,7 @@ export interface OrderNumbers {
  */
 declare module 'datatables.net' {
 	interface Config {
-		orderNumbers?: undefined | boolean | Partial<OrderNumbers>;
+		orderNumbers?: boolean | Partial<OrderNumbers>;
 	}
 
 	interface DataTablesStatic {
