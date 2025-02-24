@@ -144,15 +144,15 @@ function stylingStructure(api) {
 		return {
 			wrapper: {
 				tag: 'ul',
-				className: 'dt-inputpaging pagination'
+				className: 'dt-paging pagination'
 			},
 			item: {
 				tag: 'li',
 				className: 'page-item',
 				disabled: 'disabled',
 				liner: {
-					tag: 'a',
-					className: 'page-link'
+					tag: 'button',
+					className: 'page-link shadow-none'
 				}
 			},
 			inputItem: {
