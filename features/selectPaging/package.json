@@ -1,0 +1,33 @@
+{
+	"name": "datatables.net-feature-selectpaging",
+	"version": "1.0.0",
+	"description": "Paging control with a 'select' list for DataTables",
+    "main": "dist/dataTables.selectPaging.js",
+    "module": "dist/dataTables.selectPaging.mjs",
+    "style": "dist/dataTables.selectPaging.css",
+    "types": "dist/types.d.ts",
+    "files": [
+        "dist/*.css",
+        "dist/*.js",
+        "dist/*.mjs",
+        "dist/*.d.ts"
+    ],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/DataTables/Plugins.git"
+	},
+	"keywords": [
+		"DataTables",
+		"jQuery",
+		"plugins"
+	],
+	"author": "SpryMedia Ltd",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://datatables.net/forums"
+	},
+	"homepage": "https://datatables.net",
+	"dependencies": {
+		"datatables.net": "^2.1"
+	}
+}

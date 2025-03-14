@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="html" order="1">
+
+<css lib="datatables feature-selectPaging" />
+<js lib="jquery datatables feature-selectPaging">
+<![CDATA[
+$('#example').DataTable({
+	layout: {
+		bottomEnd: 'selectPaging'
+	}
+});
+]]>
+</js>
+<js-vanilla>
+<![CDATA[
+new DataTable('#example', {
+	layout: {
+		bottomEnd: 'selectPaging'
+	}
+});
+]]>
+</js-vanilla>
+
+<title lib="SelectPaging">Basic example</title>
+
+<info><![CDATA[
+
+This example demonstrates the select paging control, which can be used in place of (or alongside if you really wanted!) the built in `-feature paging` control. It provides a `-tag select` element that is used to show the current page and allow the end user to select from the dropdown the page number they want to view.
+
+]]></info>
+
+</dt-example>

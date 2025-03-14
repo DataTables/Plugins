@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="html" order="2">
+
+<css lib="datatables feature-selectPaging" />
+<js lib="jquery datatables feature-selectPaging">
+<![CDATA[
+$('#example').DataTable({
+	layout: {
+		bottomEnd: {
+			selectPaging: {
+				pageOf: false
+			}
+		}
+	}
+});
+]]>
+</js>
+<js-vanilla>
+<![CDATA[
+new DataTable('#example', {
+	layout: {
+		bottomEnd: {
+			selectPaging: {
+				pageOf: false
+			}
+		}
+	}
+});
+]]>
+</js-vanilla>
+
+<title lib="SelectPaging">Disable "page of"</title>
+
+<info><![CDATA[
+
+This example shows the select paging control with the `pageOf` option disabled, so the `-tag select` element is not followed by the total number of pages in the DataTable.
+
+]]></info>
+
+</dt-example>

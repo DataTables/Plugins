@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example order="0">
+
+<title>SelectPaging feature plugin</title>
+
+<info><![CDATA[
+
+The SelectPaging plugin for DataTables which adds a _feature_ to DataTables for use in the `-init layout` option. The `selectPaging` feature provides the ability to show a paging control with an `-tag select` element that will show the current page and also allow the end user to select from the dropdown the page number they want to view.
+
+]]></info>
+
+</dt-example>
