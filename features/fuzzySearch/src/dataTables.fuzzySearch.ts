@@ -8,13 +8,14 @@
  * All rights reserved.
  */
 
-import DataTable from 'datatables.net';
+import DataTable, {ColumnSelector} from 'datatables.net';
 
 declare module 'datatables.net' {
 	interface Config {
 		fuzzySearch?:
 			| boolean
 			| {
+					columns?: ColumnSelector;
 					rankColumn?: number;
 					threshold?: number;
 					toggleSmart?: boolean;
@@ -107,6 +108,8 @@ function fuzzySearch(searchVal, data, initial) {
 		};
 	}
 
+	var columns = initial.columns !== undefined ? initial.columns : null;
+
 	var threshold = initial.threshold !== undefined ? initial.threshold : 0.5;
 
 	// Split the searchVal into individual words.
@@ -129,57 +132,59 @@ function fuzzySearch(searchVal, data, initial) {
 
 	// Going to check each cell for potential matches
 	for (var i = 0; i < data.length; i++) {
-		// Convert all data points to lower case fo insensitive sorting
-		data[i] = data[i].toLowerCase();
+		if ( columns === null || columns.includes(i) ) {
+			// Convert all data points to lower case fo insensitive sorting
+			data[i] = data[i].toLowerCase();
 
-		// Split the data into individual words
-		var splitData = data[i].split(/ /g);
+			// Split the data into individual words
+			var splitData = data[i].split(/ /g);
 
-		// Remove any empty words or spaces
-		for (var y = 0; y < splitData.length; y++) {
-			if (splitData[y].length === 0 || splitData[y] === ' ') {
-				splitData.splice(y, 1);
-				x--;
-			}
-		}
-
-		// Check each search term word
-		for (var x = 0; x < splitSearch.length; x++) {
-			// Reset highest score
-			var highest: { pass?: boolean; score: number } = {
-				pass: undefined,
-				score: 0,
-			};
-
-			// Against each word in the cell
+			// Remove any empty words or spaces
 			for (var y = 0; y < splitData.length; y++) {
-				// If this search Term word is the beginning of the word in the cell we want to pass this word
-				if (splitData[y].indexOf(splitSearch[x]) === 0) {
-					var newScore = splitSearch[x].length / splitData[y].length;
-					highest = {
-						pass: true,
-						score: highest.score < newScore ? newScore : highest.score,
+				if (splitData[y].length === 0 || splitData[y] === ' ') {
+					splitData.splice(y, 1);
+					x--;
+				}
+			}
+
+			// Check each search term word
+			for (var x = 0; x < splitSearch.length; x++) {
+				// Reset highest score
+				var highest: { pass?: boolean; score: number } = {
+					pass: undefined,
+					score: 0,
+				};
+
+				// Against each word in the cell
+				for (var y = 0; y < splitData.length; y++) {
+					// If this search Term word is the beginning of the word in the cell we want to pass this word
+					if (splitData[y].indexOf(splitSearch[x]) === 0) {
+						var newScore = splitSearch[x].length / splitData[y].length;
+						highest = {
+							pass: true,
+							score: highest.score < newScore ? newScore : highest.score,
+						};
+					}
+
+					// Get the levenshtein similarity score for the two words
+					var steps = levenshtein(splitSearch[x], splitData[y]).similarity;
+
+					// If the levenshtein similarity score is better than a previous one for the search word then var's store it
+					if (steps > highest.score) {
+						highest.score = steps;
+					}
+				}
+
+				// If this cell has a higher scoring word than previously found to the search term in the row, store it
+				if (highestCollated[x].score < highest.score || highest.pass) {
+					highestCollated[x] = {
+						pass:
+							highest.pass || highestCollated[x].pass
+								? true
+								: highest.score > threshold,
+						score: highest.score,
 					};
 				}
-
-				// Get the levenshtein similarity score for the two words
-				var steps = levenshtein(splitSearch[x], splitData[y]).similarity;
-
-				// If the levenshtein similarity score is better than a previous one for the search word then var's store it
-				if (steps > highest.score) {
-					highest.score = steps;
-				}
-			}
-
-			// If this cell has a higher scoring word than previously found to the search term in the row, store it
-			if (highestCollated[x].score < highest.score || highest.pass) {
-				highestCollated[x] = {
-					pass:
-						highest.pass || highestCollated[x].pass
-							? true
-							: highest.score > threshold,
-					score: highest.score,
-				};
 			}
 		}
 	}
