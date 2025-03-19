@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="html" order="1">
+
+<css lib="datatables feature-fuzzySearch" />
+<js lib="jquery datatables feature-fuzzySearch">
+<![CDATA[
+$('#example').DataTable({
+	layout: {
+		topEnd: 'fuzzySearch'
+	}
+});
+]]>
+</js>
+<js-vanilla>
+<![CDATA[
+new DataTable('#example', {
+	layout: {
+		topEnd: 'fuzzySearch'
+	}
+});
+]]>
+</js-vanilla>
+
+<title lib="FuzzySearch">Basic example</title>
+
+<info><![CDATA[
+
+This example demonstrates the fuzzy search input control, which allows the end user to fuzzy match on data in a table.
+
+]]></info>
+
+</dt-example>

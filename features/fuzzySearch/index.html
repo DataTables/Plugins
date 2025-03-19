@@ -55,7 +55,9 @@
 
 $(document).ready(function() {
 	var table = $('#example').DataTable({
-		fuzzySearch: true
+		fuzzySearch: {
+			columns: [0, 1]
+		}
 	});
 } );
 
