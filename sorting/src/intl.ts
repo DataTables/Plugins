@@ -54,6 +54,9 @@ DataTable.intlOrder = function (locales, options) {
 		types.order['string-desc'] = function (a, b) {
 			return collator.compare(a, b) * -1;
 		};
+
+        types.order['string-utf8-asc'] = types.order['string-asc'];
+        types.order['string-utf8-desc'] = types.order['string-desc'];
 	}
 };
 
