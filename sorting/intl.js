@@ -85,13 +85,22 @@ DataTable.intlOrder = function (locales, options) {
     if (window.Intl) {
         var collator = new Intl.Collator(locales, options);
         var types = DataTable.ext.type;
-        delete types.order['string-pre'];
-        types.order['string-asc'] = collator.compare;
-        types.order['string-desc'] = function (a, b) {
+        var asc = collator.compare;
+        var desc = function (a, b) {
             return collator.compare(a, b) * -1;
         };
-        types.order['string-utf8-asc'] = types.order['string-asc'];
-        types.order['string-utf8-desc'] = types.order['string-desc'];
+        delete types.order['string-pre'];
+        types.order['string-asc'] = asc;
+        types.order['string-desc'] = desc;
+        // The utf8 data type variant uses the same sorting methods
+        types.order['string-utf8-asc'] = asc;
+        types.order['string-utf8-desc'] = desc;
+        types.order['html-pre'] = DataTable.util.stripHtml;
+        types.order['html-asc'] = asc;
+        types.order['html-desc'] = desc;
+        types.order['html-utf8-pre'] = DataTable.util.stripHtml;
+        types.order['html-utf8-asc'] = asc;
+        types.order['html-utf8-desc'] = desc;
     }
 };
 // Old style originally introduced in the blog post
