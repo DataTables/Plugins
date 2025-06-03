@@ -180,5 +180,65 @@
             "Novembro",
             "Decembro"
         ]
+    },
+    "editor": {
+        "close": "Pechar",
+        "create": {
+            "button": "Novo",
+            "title": "Crear nova entrada",
+            "submit": "Crear"
+        },
+        "edit": {
+            "button": "Editar",
+            "title": "Editar entrada",
+            "submit": "Actualizar"
+        },
+        "remove": {
+            "button": "Eliminar",
+            "title": "Eliminar",
+            "submit": "Eliminar",
+            "confirm": {
+                "_": "Seguro que quere eliminar %d filas?",
+                "1": "Seguro que quere eliminar 1 fila?"
+            }
+        },
+        "error": {
+            "system": "Ocurríu un erro no sistema (&lt;a target=\"\\\" rel=\"nofollow\" href=\"\\\"&gt;Máis información&lt;\/a&gt;)."
+        },
+        "multi": {
+            "title": "Multiples valores",
+            "info": "Os elementos seleccionados conteñen valores diferentes para este control. Para editar e poñer o mesmo valor en todos os elementos deste control, prema ou toque aquí, do contrario quedarán cos seus valores individuais.",
+            "restore": "Desfacer cambios",
+            "noMulti": "Este control pode ser editado individualmente, pero non parte dun grupo."
+        }
+    },
+    "stateRestore": {
+        "creationModal": {
+            "button": "Crear",
+            "columns": {
+                "search": "Busca de columnas",
+                "visible": "Visibilidade de columnas"
+            },
+            "name": "Nome:",
+            "order": "Ordenación",
+            "paging": "Paxinación",
+            "scroller": "Posición de scroll",
+            "search": "Busca",
+            "searchBuilder": "SearchBuilder",
+            "select": "Selección",
+            "title": "Crear novo estado",
+            "toggleLabel": "Inclue:"
+        },
+        "duplicateError": "Un estado con este nome xa existe.",
+        "emptyError": "O nome non pode estar baleiro.",
+        "emptyStates": "Sen estados gardados",
+        "removeConfirm": "Seguro que quere eliminar %s?",
+        "removeError": "Fallo ao eliminar o estado.",
+        "removeJoiner": "e",
+        "removeSubmit": "Eliminar",
+        "removeTitle": "Eliminar estado",
+        "renameButton": "Renomear",
+        "renameLabel": "Novo nome para %s:",
+        "renameTitle": "Renomear estado"
     }
 }

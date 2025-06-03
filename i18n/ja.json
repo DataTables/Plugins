@@ -80,5 +80,24 @@
         "cancel": "キャンセル",
         "fillHorizontal": "横でセルを書き込む",
         "fillVertical": "縦でセルを書き込む"
+    },
+    "searchPanes": {
+        "clearMessage": "リセット",
+        "collapse": {
+            "0": "検索窓",
+            "_": "検索窓"
+        },
+        "count": "個数",
+        "countFiltered": "抽出数",
+        "emptyPanes": "パネルが空です",
+        "loadMessage": "検索パネルを読込中",
+        "showMessage": "全表示",
+        "collapseMessage": "折りたたむ"
+    },
+    "select": {
+        "rows": {
+            "1": "行が選択されました",
+            "_": "行が選択されました"
+        }
     }
 }

@@ -141,15 +141,15 @@
             "pm"
         ],
         "unknown": "-",
-        "weekdays": [
-            "Chủ nhật",
-            "Thứ hai",
-            "Thứ 3",
-            "Thứ 4",
-            "Thứ 5",
-            "Thứ 6",
-            "Thứ 7"
-        ],
+        "weekdays": {
+            "0": "Chủ nhật",
+            "2": "Thứ 3",
+            "3": "Thứ 4",
+            "4": "Thứ 5",
+            "5": "Thứ 6",
+            "6": "Thứ 7",
+            "1": "Thứ 2"
+        },
         "months": [
             "Tháng Một",
             "Tháng Hai",
@@ -165,10 +165,6 @@
             "Tháng Mười Hai"
         ]
     },
-    "emptyTable": "Không có dữ liệu",
-    "info": "Hiển thị _START_ tới _END_ của _TOTAL_ dữ liệu",
-    "infoEmpty": "Hiển thị 0 tới 0 của 0 dữ liệu",
-    "lengthMenu": "Hiển thị _MENU_ dữ liệu",
     "loadingRecords": "Đang tải...",
     "paginate": {
         "first": "Đầu tiên",
@@ -207,31 +203,29 @@
                 "1": "Bạn có chắc chắn muốn xóa 1 hàng không?"
             },
             "submit": "Xóa",
-            "title": "Xóa"
+            "title": "Xóa mục"
         }
     },
-    "infoFiltered": "(được lọc từ _MAX_ dữ liệu)",
     "searchPlaceholder": "Nhập tìm kiếm...",
     "stateRestore": {
         "creationModal": {
             "button": "Thêm",
-            "columns": {
-                "search": "Tìm kiếm cột",
-                "visible": "Khả năng hiển thị cột"
-            },
             "name": "Tên:",
             "order": "Sắp xếp",
             "paging": "Phân trang",
             "scroller": "Cuộn vị trí",
             "search": "Tìm kiếm",
             "searchBuilder": "Trình tạo tìm kiếm",
-            "select": "Chọn",
             "title": "Thêm trạng thái",
-            "toggleLabel": "Bao gồm:"
+            "toggleLabel": "Bao gồm:",
+            "columns": {
+                "search": "Tìm kiếm thèo cột",
+                "visible": "Hiển thị theo cột"
+            },
+            "select": "Lựa chọn"
         },
         "duplicateError": "Trạng thái có tên này đã tồn tại.",
         "emptyError": "Tên không được để trống.",
-        "emptyStates": "Không có trạng thái đã lưu",
         "removeConfirm": "Bạn có chắc chắn muốn xóa %s không?",
         "removeError": "Không xóa được trạng thái.",
         "removeJoiner": "và",
@@ -239,8 +233,14 @@
         "removeTitle": "Xóa trạng thái",
         "renameButton": "Đổi tên",
         "renameLabel": "Tên mới cho %s:",
-        "renameTitle": "Đổi tên trạng thái"
+        "renameTitle": "Đổi tên trạng thái",
+        "emptyStates": "Không có trạng thái nào được lưu"
     },
     "infoThousands": ".",
-    "thousands": "."
+    "thousands": ".",
+    "emptyTable": "Không có dữ liệu trong bảng",
+    "info": "Hiển thị _START_ đến _END_ của _TOTAL_ mục",
+    "infoEmpty": "Hiển thị 0 đến 0 của 0 mục",
+    "infoFiltered": "(được lọc từ _MAX_ mục)",
+    "lengthMenu": "Hiển thị _MENU_ mục"
 }

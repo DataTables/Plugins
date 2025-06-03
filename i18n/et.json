@@ -17,7 +17,10 @@
         "sortDescending": ": sorteeri kahanevalt"
     },
     "autoFill": {
-        "cancel": "Tühista"
+        "cancel": "Tühista",
+        "fill": "Eeltäida kõik väljad tekstiga <i>%d<\/i>",
+        "fillHorizontal": "Eeltäida väljad horisontaalselt",
+        "fillVertical": "Eeltäida väljad vertikaalselt"
     },
     "buttons": {
         "copy": "Kopeeri",
@@ -27,11 +30,25 @@
         "excel": "Excel",
         "pageLength": {
             "_": "Kuvan %d rida",
-            "-1": "Kuva kõik read",
-            "1": "Kuvan ühte rida"
+            "1": "Kuvan ühte rida",
+            "-1": "Kuvan kõik read"
         },
         "pdf": "PDF",
-        "print": "Prindi"
+        "print": "Prindi",
+        "collection": "Kogumik <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
+        "colvis": "Veeru nähtavus",
+        "colvisRestore": "Nähtavuse taastamine",
+        "copySuccess": {
+            "1": "Kopeeri 1 rida lõikelauale",
+            "_": "Kopeeri %d rida lõikelauale"
+        },
+        "createState": "Loo otsing",
+        "removeAllStates": "Eemalda otsingud",
+        "removeState": "Eemalda",
+        "renameState": "Nimeta ümber",
+        "savedStates": "Salvestatud otsingud",
+        "stateRestore": "Taasta otsing",
+        "updateState": "Uuenda"
     },
     "datetime": {
         "amPm": [
@@ -85,10 +102,17 @@
             "button": "Kustuta",
             "submit": "Kustuta",
             "title": "Kustuta rida"
+        },
+        "error": {
+            "system": "Süsteemiviga (<a target=\"\\\" rel=\"nofollow\" href=\"\\\">Rohkem infot<\/a>)."
+        },
+        "multi": {
+            "title": "Mitu väärtust",
+            "restore": "Pööra tagasi",
+            "noMulti": "Antud sisendit saab muuta ükshaaval."
         }
     },
     "emptyTable": "Andmed puuduvad",
-    "loadingRecords": "Laen...",
     "searchBuilder": {
         "add": "Lisa tingimus",
         "button": {
@@ -155,5 +179,6 @@
         "count": "{total}",
         "countFiltered": "{shown} ({total})"
     },
-    "searchPlaceholder": "Otsi..."
+    "searchPlaceholder": "Otsi...",
+    "loadingRecords": "Laadin..."
 }

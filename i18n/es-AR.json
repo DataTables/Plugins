@@ -34,7 +34,8 @@
                 "between": "Entre",
                 "empty": "Vacio",
                 "equals": "Igual",
-                "notBetween": "No entre"
+                "notBetween": "No entre",
+                "notEmpty": "No vacio"
             },
             "number": {
                 "between": "Entre",
@@ -55,7 +56,18 @@
                 "equals": "Igual a ",
                 "not": "No",
                 "notEmpty": "No vacío",
-                "startsWith": "Comenza con "
+                "startsWith": "Comenza con ",
+                "notContains": "No contiene",
+                "notStartsWith": "No empieza con",
+                "notEndsWith": "No termina con"
+            },
+            "array": {
+                "equals": "Igual",
+                "empty": "Vacio",
+                "contains": "Contiene",
+                "not": "Diferente de",
+                "notEmpty": "No vacio",
+                "without": "Sin"
             }
         },
         "data": "Datos",
@@ -158,5 +170,62 @@
         "savedStates": "Estados guardados",
         "stateRestore": "Estado %d",
         "updateState": "Actualizar"
+    },
+    "searchPanes": {
+        "clearMessage": "Limpiar todo",
+        "collapse": {
+            "0": "Paneles de búsqueda",
+            "_": "Paneles de búsqueda (%d)"
+        },
+        "count": "{total}",
+        "countFiltered": "{shown} ({total})",
+        "emptyPanes": "Sin paneles de búsqueda",
+        "loadMessage": "Cargando paneles de búsqueda",
+        "title": "Filtros Activos - %d",
+        "showMessage": "Mostrar Todo",
+        "collapseMessage": "Colapsar Todo"
+    },
+    "select": {
+        "cells": {
+            "1": "1 celda seleccionada",
+            "_": "%d celdas seleccionadas"
+        },
+        "columns": {
+            "1": "1 columna seleccionada",
+            "_": "%d columnas seleccionadas"
+        },
+        "rows": {
+            "1": "1 fila seleccionada",
+            "_": "%d filas seleccionadas"
+        }
+    },
+    "stateRestore": {
+        "creationModal": {
+            "button": "Crear",
+            "columns": {
+                "search": "Busqueda de la columna",
+                "visible": "Visibilidad de la columna"
+            },
+            "name": "Nombre",
+            "order": "Clasificación",
+            "paging": "Paginación",
+            "scroller": "Posición de desplazamiento",
+            "search": "Búsqueda",
+            "searchBuilder": "Generador de búsqueda",
+            "select": "Seleccionar",
+            "title": "Crear nuevo estado",
+            "toggleLabel": "Incluir:"
+        },
+        "duplicateError": "Ya existe un estado con este nombre",
+        "emptyError": "Debe indicar un nombre para el estado",
+        "emptyStates": "No hay estados guardados",
+        "removeConfirm": "¿Está seguro de que quiere remover el estado %s?",
+        "removeError": "Error al remover el estado",
+        "removeJoiner": "y",
+        "removeSubmit": "Borrar",
+        "removeTitle": "Borrar estado",
+        "renameButton": "Renombrar",
+        "renameLabel": "Nuevo nombre para el estado %s",
+        "renameTitle": "Renombrar estado"
     }
 }

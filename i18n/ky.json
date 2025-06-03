@@ -18,5 +18,21 @@
     "aria": {
         "sortAscending": ": иретте",
         "sortDescending": ": тескери иретте"
+    },
+    "autoFill": {
+        "cancel": "Жокко чыгаруу"
+    },
+    "buttons": {
+        "collection": "Топтом",
+        "colvis": "Мамычанын көрүнүшү",
+        "colvisRestore": "Көрүнүүнү калыбына келтирүү",
+        "copy": "Көчүрүү",
+        "print": "Басып чыгаруу"
+    },
+    "searchBuilder": {
+        "add": "Коллекцияны кошуу",
+        "clearAll": "Бардыгын тазалоо",
+        "data": "маалымат",
+        "deleteTitle": "Аталышын өчүрүү"
     }
 }

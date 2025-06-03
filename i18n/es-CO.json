@@ -102,7 +102,6 @@
     },
     "emptyTable": "Tabla Vacia",
     "infoEmpty": "Sin informacion",
-    "lengthMenu": "Entradas",
     "loadingRecords": "Cargando...",
     "searchBuilder": {
         "button": {
@@ -244,5 +243,6 @@
         "renameTitle": "Renombrar Estado"
     },
     "info": "Mostrando _START_ a _END_ de _TOTAL_ entradas",
-    "infoPostFix": ""
+    "infoPostFix": "",
+    "lengthMenu": "Mostrando _MENU_ Entradas"
 }

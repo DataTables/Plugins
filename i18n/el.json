@@ -159,7 +159,10 @@
                 "equals": "Ίσο",
                 "not": "Όχι",
                 "notEmpty": "Όχι κενό",
-                "startsWith": "Αρχίζει με"
+                "startsWith": "Αρχίζει με",
+                "notContains": "Δεν περιέχει",
+                "notStartsWith": "Δεν αρχίζει με",
+                "notEndsWith": "Δεν τελειώνει με"
             }
         },
         "data": "Δεδομένα",

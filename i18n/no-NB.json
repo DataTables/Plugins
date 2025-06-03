@@ -24,10 +24,6 @@
     "buttons": {
         "colvisRestore": "Gjennopprett synlighet",
         "copy": "Kopier",
-        "copySuccess": {
-            "_": "Kopierte %ds rader til utklippstavle",
-            "1": "Kopierte én rad til utklippstavle"
-        },
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -40,6 +36,10 @@
         "collection": "Samling <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
         "colvis": "Kolonne-synlighet",
         "copyKeys": "Trykk ctrl eller u2318 + C for &aring; kopiere tabelldata til systemets utklippstavle.<br \/><br \/>For &aring; avbryte, klikk p&aring; denne meldingen eller trykk p&aring; escape.",
+        "copySuccess": {
+            "1": "Kopierte én rad til utklippstavle",
+            "_": "Kopierte %d rader til utklippstavle"
+        },
         "copyTitle": "Kopier til utklippstavle",
         "createState": "Opprett tilstand",
         "removeAllStates": "Fjern alle tilstander",

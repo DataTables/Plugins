@@ -190,10 +190,18 @@
         "remove": {
             "button": "Törlés",
             "title": "Törlés",
-            "submit": "Törlés"
+            "submit": "Törlés",
+            "confirm": {
+                "_": "Biztosan törölni kíván %d sort?",
+                "1": "Biztosan törölni kíván 1 sort?"
+            }
         },
         "error": {
             "system": "Technikai hiba történt."
+        },
+        "multi": {
+            "title": "Több érték",
+            "restore": "Változtatások visszavonása"
         }
     },
     "infoEmpty": "Nincs találat",
@@ -226,5 +234,7 @@
         "renameButton": "Átnevezés",
         "renameLabel": "%s új neve:",
         "renameTitle": "Mentett állapot átnevezése"
-    }
+    },
+    "decimal": ",",
+    "searchPlaceholder": "Keresés"
 }
