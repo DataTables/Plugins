@@ -20,11 +20,6 @@
         "sortDescending": ": 列を降順に並べ替えるにはアクティブにする"
     },
     "thousands": ",",
-    "buttons": {
-        "colvis": "項目の表示\/非表示",
-        "csv": "CSVをダウンロード",
-        "collection": "コレクション"
-    },
     "searchBuilder": {
         "add": "条件を追加",
         "button": {
@@ -35,69 +30,215 @@
         "condition": "条件",
         "conditions": {
             "date": {
-                "after": "次の日付以降",
-                "before": "次の日付以前",
-                "between": "次の期間に含まれる",
                 "empty": "空白",
-                "equals": "次の日付と等しい",
-                "not": "次の日付と等しくない",
-                "notBetween": "次の期間に含まれない",
-                "notEmpty": "空白ではない"
+                "notEmpty": "空白ではない",
+                "after": "指定日以後",
+                "before": "指定日以前",
+                "between": "指定日範囲内",
+                "equals": "等しい",
+                "not": "等しくない",
+                "notBetween": "指定日範囲外"
             },
             "number": {
-                "between": "次の値の間に含まれる",
                 "empty": "空白",
-                "equals": "次の値と等しい",
-                "gt": "次の値よりも大きい",
-                "gte": "次の値以上",
-                "lt": "次の値未満",
-                "lte": "次の値以下",
-                "not": "次の値と等しくない",
-                "notBetween": "次の値の間に含まれない",
-                "notEmpty": "空白ではない"
+                "notEmpty": "空白ではない",
+                "between": "範囲内",
+                "equals": "等しい",
+                "gt": "より大きい",
+                "gte": "以上",
+                "lt": "より小さい",
+                "lte": "以下",
+                "not": "等しくない",
+                "notBetween": "範囲外"
             },
             "string": {
-                "contains": "次の文字を含む",
                 "empty": "空白",
                 "endsWith": "次の文字で終わる",
                 "equals": "次の文字と等しい",
                 "not": "次の文字と等しくない",
                 "notEmpty": "空白ではない",
-                "startsWith": "次の文字から始まる",
-                "notContains": "次の文字を含まない",
-                "notStartsWith": "次の文字で始まらない",
-                "notEndsWith": "次の文字で終わらない"
+                "contains": "含む",
+                "startsWith": "で始まる",
+                "notContains": "含まない",
+                "notStartsWith": "で始まらない",
+                "notEndsWith": "で終わらない"
+            },
+            "array": {
+                "equals": "等しい",
+                "empty": "空",
+                "contains": "含む",
+                "not": "等しくない",
+                "notEmpty": "空ではない",
+                "without": "を含まない"
             }
         },
-        "data": "項目",
         "title": {
             "0": "カスタムサーチ",
             "_": "カスタムサーチ (%d)"
         },
-        "value": "値"
+        "data": "カラム",
+        "deleteTitle": "絞り込みルールを削除",
+        "leftTitle": "インデントを解除",
+        "logicAnd": "And",
+        "logicOr": "Or",
+        "rightTitle": "インデント",
+        "value": "Value"
     },
     "autoFill": {
         "cancel": "キャンセル",
-        "fillHorizontal": "横でセルを書き込む",
-        "fillVertical": "縦でセルを書き込む"
+        "fill": "すべてのセルを <i>%d<\/i> で埋める",
+        "fillHorizontal": "横方向にセルを埋める",
+        "fillVertical": "縦方向にセルを埋める"
+    },
+    "buttons": {
+        "collection": "コレクション <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
+        "colvis": "カラム表示\/非表示",
+        "colvisRestore": "カラム表示のリセット",
+        "copy": "コピー",
+        "copyKeys": "Ctrl または ⌘ + C でテーブルのデータをクリップボードにコピーできます。<br \/><br \/>キャンセルするには、このメッセージをクリックするか、Esc キーを押してください。",
+        "copySuccess": {
+            "1": "1 行をクリップボードにコピーしました",
+            "_": "%d 行をクリップボードにコピーしました"
+        },
+        "copyTitle": "クリップボードにコピー",
+        "csv": "CSV",
+        "excel": "Excel",
+        "pageLength": {
+            "-1": "すべての行を表示",
+            "1": "1 行を表示",
+            "_": "%d 行を表示"
+        },
+        "pdf": "PDF",
+        "print": "印刷",
+        "createState": "Stateを作成",
+        "removeAllStates": "Stateを全て削除",
+        "removeState": "削除",
+        "renameState": "名前を変更",
+        "savedStates": "State一覧",
+        "stateRestore": "State %d",
+        "updateState": "更新"
     },
     "searchPanes": {
-        "clearMessage": "リセット",
+        "clearMessage": "すべてクリア",
         "collapse": {
-            "0": "検索窓",
-            "_": "検索窓"
+            "0": "検索ペイン",
+            "_": "検索ペイン (%d)"
         },
-        "count": "個数",
-        "countFiltered": "抽出数",
-        "emptyPanes": "パネルが空です",
-        "loadMessage": "検索パネルを読込中",
-        "showMessage": "全表示",
-        "collapseMessage": "折りたたむ"
+        "count": "{total}",
+        "countFiltered": "{shown} ({total})",
+        "emptyPanes": "検索ペインがありません",
+        "loadMessage": "検索ペインを読み込み中",
+        "title": "有効なフィルター - %d",
+        "showMessage": "すべて表示",
+        "collapseMessage": "すべて折りたたむ"
     },
     "select": {
+        "cells": {
+            "1": "1 個のセルが選択されました",
+            "_": "%d 個のセルが選択されました"
+        },
+        "columns": {
+            "1": "1 列が選択されました",
+            "_": "%d 列が選択されました"
+        },
         "rows": {
-            "1": "行が選択されました",
-            "_": "行が選択されました"
+            "1": "1 行が選択されました",
+            "_": "%d 行が選択されました"
         }
+    },
+    "datetime": {
+        "previous": "前",
+        "next": "次",
+        "hours": "時",
+        "minutes": "分",
+        "seconds": "秒",
+        "unknown": "-",
+        "amPm": [
+            "午前",
+            "午後"
+        ],
+        "weekdays": [
+            "日",
+            "月",
+            "火",
+            "水",
+            "木",
+            "金",
+            "土"
+        ],
+        "months": [
+            "1月",
+            "2月",
+            "3月",
+            "4月",
+            "5月",
+            "6月",
+            "7月",
+            "8月",
+            "9月",
+            "10月",
+            "11月",
+            "12月"
+        ]
+    },
+    "editor": {
+        "close": "閉じる",
+        "create": {
+            "button": "新規",
+            "title": "新しいエントリーを作成",
+            "submit": "作成"
+        },
+        "edit": {
+            "button": "編集",
+            "title": "エントリーの編集",
+            "submit": "更新"
+        },
+        "remove": {
+            "button": "削除",
+            "title": "削除",
+            "submit": "削除",
+            "confirm": {
+                "_": "%d 行を削除しますか？",
+                "1": "1 行を削除しますか？"
+            }
+        },
+        "error": {
+            "system": "システムエラーが発生しました (<a target=\"\\\" rel=\"nofollow\" href=\"\\\">詳細<\/a>)。"
+        },
+        "multi": {
+            "title": "複数の値",
+            "info": "選択されたアイテムにはこの入力に対して異なる値が含まれています。同じ値を設定する場合はクリック（またはタップ）してください。それ以外の場合は個別の値が維持されます。",
+            "restore": "元に戻す",
+            "noMulti": "この入力は個別には編集できますが、グループの一部としては編集できません。"
+        }
+    },
+    "stateRestore": {
+        "creationModal": {
+            "button": "作成",
+            "columns": {
+                "search": "列の検索",
+                "visible": "列の表示"
+            },
+            "name": "名前:",
+            "order": "ソート",
+            "paging": "ページング",
+            "scroller": "スクロール位置",
+            "search": "検索",
+            "searchBuilder": "カスタムサーチ",
+            "select": "検索",
+            "title": "新しいStateを作成",
+            "toggleLabel": "含む:"
+        },
+        "duplicateError": "この名前のStateはすでに存在します。",
+        "emptyError": "名前を空にすることはできません。",
+        "emptyStates": "保存されたStateはありません",
+        "removeConfirm": "%s を削除してよろしいですか？",
+        "removeError": "Stateの削除に失敗しました。",
+        "removeJoiner": " と ",
+        "removeSubmit": "削除",
+        "removeTitle": "Stateを削除",
+        "renameButton": "名前を変更",
+        "renameLabel": "%s の新しい名前:",
+        "renameTitle": "名前を変更"
     }
 }

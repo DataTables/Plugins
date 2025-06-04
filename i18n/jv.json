@@ -11,17 +11,63 @@
         "collection": "koleksi",
         "colvis": "kolum ingkang ketok",
         "copyTitle": "nyalinJudul",
-        "print": "cetak"
-    },
-    "datetime": {
-        "hours": "jam",
-        "minutes": "menit",
-        "next": "terus",
-        "seconds": "detik",
-        "previous": "sakderenge",
-        "unknown": "mboten dikenal"
+        "print": "cetak",
+        "colvisRestore": "kolomAmbyar",
+        "copySuccess": {
+            "1": "Nyalin sak baris ke clipboard",
+            "_": "Nyalin baris ke cipboard"
+        },
+        "csv": "csv",
+        "excel": "eksel",
+        "pageLength": {
+            "-1": "Munculke Kabeh Baris",
+            "1": "Munculke 1 Baris",
+            "_": "Munculke 10 Baris"
+        },
+        "pdf": "pdf",
+        "createState": "Gawe Keadaan",
+        "removeAllStates": "Buwang Kabeh Keadaan",
+        "removeState": "Buwang",
+        "renameState": "Ganti",
+        "savedStates": "Simpen Keadaan",
+        "updateState": "Anyari Keadaan"
     },
     "emptyTable": "mbonten wonten datanipun",
+    "datetime": {
+        "previous": "sakderenge",
+        "next": "Terus",
+        "hours": "Tabuh",
+        "minutes": "Manit",
+        "seconds": "Detik",
+        "unknown": "Ora dikenal",
+        "amPm": [
+            "awan",
+            "bengi"
+        ],
+        "weekdays": [
+            "Senen",
+            "Seloso",
+            "Rebo",
+            "Kemis",
+            "Jemuah",
+            "Setu",
+            "Ngaad"
+        ],
+        "months": [
+            "Januari",
+            "Febuari",
+            "Maret",
+            "April",
+            "Mei",
+            "Juni",
+            "Juli",
+            "Agustus",
+            "September",
+            "Oktober",
+            "November",
+            "Desember"
+        ]
+    },
     "decimal": ".",
     "infoEmpty": "nunjukakan kosong",
     "infoFiltered": "sampun kesaring",
@@ -41,13 +87,38 @@
         "condition": "Kondisi",
         "data": "Data",
         "leftTitle": "judulKiwo",
-        "value": "nilai"
+        "button": {
+            "0": "Mbangun Search",
+            "_": "Mbagun Search (1)"
+        },
+        "conditions": {
+            "date": {
+                "after": "Kahanan Sakdurunge",
+                "before": "Kahanan Sakwise",
+                "between": "Kahanan Antarane",
+                "empty": "Kahanan kosong",
+                "equals": "Kahanan podo",
+                "not": "Kahanan dudu"
+            }
+        },
+        "logicAnd": "Lan",
+        "logicOr": "Utowo",
+        "title": {
+            "0": "Mbangun Search",
+            "_": "Mbagun Search (1)"
+        },
+        "value": "Isine"
     },
     "searchPanes": {
         "clearMessage": "busek kabeh",
         "collapseMessage": "pesenAmbyar",
         "showMessage": "pesenCendak",
-        "title": "judul"
+        "title": "judul",
+        "collapse": [
+            "GolekiPanes"
+        ],
+        "emptyPanes": "Ora ono ",
+        "loadMessage": "lagi loding"
     },
     "searchPlaceholder": "papan kagem madosi",
     "stateRestore": {
@@ -59,5 +130,30 @@
         "removeError": "pindahSalah"
     },
     "thousands": ".",
-    "zeroRecords": "mboten wonten data ingkang dipun padosi"
+    "zeroRecords": "mboten wonten data ingkang dipun padosi",
+    "infoThousands": "infoEwon",
+    "editor": {
+        "close": "Tutup",
+        "create": {
+            "button": "Anyar",
+            "title": "Gawe Entri Anyar",
+            "submit": "Gawe"
+        },
+        "edit": {
+            "button": "Uwah",
+            "title": "Uwahi Entri",
+            "submit": "Anyari"
+        },
+        "remove": {
+            "button": "Ilangi",
+            "title": "Ilangi",
+            "submit": "Ilangi",
+            "confirm": {
+                "1": "Opo yakin arep guwang sak baris"
+            }
+        },
+        "error": {
+            "system": "Ono kesalahan sistem"
+        }
+    }
 }

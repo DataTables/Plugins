@@ -19,7 +19,8 @@
         "cancel": "cancelar",
         "fill": "preencher",
         "fillHorizontal": "preencher células na horizontal",
-        "fillVertical": "preencher células na vertical"
+        "fillVertical": "preencher células na vertical",
+        "info": "Preenchimento automático"
     },
     "buttons": {
         "collection": "Coleção",
@@ -35,7 +36,8 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Mostrar todas as linhas",
-            "_": "Mostrar %d linhas"
+            "_": "Mostrar %d linhas",
+            "1": "Mostrar linha"
         },
         "pdf": "PDF",
         "print": "Imprimir",

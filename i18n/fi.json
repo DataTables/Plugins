@@ -1,13 +1,10 @@
 {
-    "emptyTable": "Ei näytettäviä tuloksia.",
     "infoEmpty": "Näytetään 0 - 0 (yhteensä 0)",
     "infoFiltered": "(suodatettu _MAX_ tuloksen joukosta)",
-    "infoThousands": ",",
     "lengthMenu": "Näytä kerralla _MENU_ riviä",
     "loadingRecords": "Ladataan...",
     "processing": "Hetkinen...",
     "search": "Etsi:",
-    "zeroRecords": "Tietoja ei löytynyt",
     "paginate": {
         "first": "Ensimmäinen",
         "last": "Viimeinen",
@@ -22,6 +19,14 @@
         "rows": {
             "_": "Valittuna %d riviä",
             "1": "Valittuna vain yksi rivi"
+        },
+        "cells": {
+            "1": "Yksi solu valittuna",
+            "_": "%d solua valittuna"
+        },
+        "columns": {
+            "1": "Yksi sarake valittuna",
+            "_": "%d saraketta valittuna"
         }
     },
     "buttons": {
@@ -31,12 +36,30 @@
             "_": "%d riviä kopioitu leikepöydälle"
         },
         "copyTitle": "Kopioi leikepöydälle",
-        "copyKeys": "Paina <i>ctrl<\/i> tai <i>⌘<\/i> + <i>C<\/i> kopioidaksesi taulukon arvot<br> leikepöydälle. <br><br>Peruuttaaksesi klikkaa tähän tai Esc.",
-        "colvisRestore": "Palauta oletusasetukset"
+        "collection": "Toiminnot",
+        "colvis": "Sarakkeiden näkyvyys",
+        "colvisRestore": "Palauta oletusanäkyvyys",
+        "copyKeys": "Paina <i>ctrl<\/i> tai <i>⌘<\/i> + <i>C<\/i> kopioidaksesi taulukon arvot<br \/> leikepöydälle. <br \/><br \/>Peruuttaaksesi klikkaa tästä tai paina Esc.",
+        "pageLength": {
+            "-1": "Näytä kaikki rivit",
+            "1": "Näytä yksi rivi",
+            "_": "Näytä %d riviä"
+        },
+        "print": "Tulosta",
+        "createState": "Tallenna tila",
+        "removeAllStates": "Poista kaikki tilat",
+        "removeState": "Poista tila",
+        "renameState": "Nimeä tila",
+        "savedStates": "Tallennetut tilat",
+        "stateRestore": "Tila %d",
+        "updateState": "Päivitä tila"
     },
     "info": "Näytetään rivit _START_ - _END_ (yhteensä _TOTAL_)",
     "autoFill": {
-        "cancel": "Peruuta"
+        "cancel": "Peruuta",
+        "fill": "Täytä kaikki solut käyttäen %d<i><\/i>;",
+        "fillHorizontal": "Täytä solut vaakasuunnassa",
+        "fillVertical": "Täytä solut pystysuunnassa"
     },
     "datetime": {
         "previous": "Edellinen",
@@ -77,18 +100,75 @@
         "close": "Sulje",
         "create": {
             "button": "Uusi",
-            "title": "Otsikko",
-            "submit": "Tallenna"
+            "title": "Luo uusi tietue",
+            "submit": "Luo"
         },
         "edit": {
             "button": "Muokkaa",
-            "title": "Otsikko",
-            "submit": "Tallenna"
+            "title": "Muokkaa tietuetta",
+            "submit": "Päivitä"
         },
         "remove": {
             "button": "Poista",
-            "title": "Otsikko",
-            "submit": "Poista"
+            "submit": "Poista",
+            "title": "Poista",
+            "confirm": {
+                "_": "Oletko varma, että haluat poistaa %d riviä?",
+                "1": "Oletko varma, että haluat poistaa yhden rivin?"
+            }
+        },
+        "error": {
+            "system": "Tapahtui järjestelmävirhe (<a target=\"\\\" rel=\"\\ nofollow\" href=\"\\\">Lisätietoa&lt;\\\/a&gt;).\"<\/a>"
+        },
+        "multi": {
+            "title": "Useita eri arvoja",
+            "info": "Valitut tietueet sisältävät eri arvoja tälle kentälle. Klikkaa tästä asettaaksesi kaikkien tietueiden arvot samoiksi.",
+            "restore": "Peru muutokset",
+            "noMulti": "Tätä arvoa voi muokata yhdelle tietueelle, muttei koko ryhmälle kerralla."
         }
+    },
+    "decimal": ",",
+    "emptyTable": "Taulukko on tyhjä",
+    "infoThousands": ".",
+    "searchPanes": {
+        "clearMessage": "Tyhjennä kaikki",
+        "collapse": {
+            "0": "Hakupaneelit",
+            "_": "Hakupaneelit (%d)"
+        },
+        "emptyPanes": "Ei hakupaneeleja",
+        "loadMessage": "Ladataan hakupaneeleja",
+        "title": "Aktiiviset suodattimet: %d",
+        "showMessage": "Näytä kaikki",
+        "collapseMessage": "Piilota kaikki"
+    },
+    "zeroRecords": "Ei hakua vastaavia tuloksia",
+    "stateRestore": {
+        "creationModal": {
+            "button": "Luo",
+            "columns": {
+                "search": "Sarakehaut",
+                "visible": "Sarakkeiden näkyvyys"
+            },
+            "name": "Nimi:",
+            "order": "Järjestys",
+            "paging": "Sivutus",
+            "scroller": "Paikka sivulla",
+            "search": "Aktiivinen haku",
+            "select": "Valinnat",
+            "title": "Luo uusi tila",
+            "toggleLabel": "Sisältäen:"
+        },
+        "duplicateError": "Tällä nimellä on jo tallennettu tila",
+        "emptyError": "Nimi ei voi olla tyhjä",
+        "emptyStates": "Ei tallennettuja tiloja",
+        "removeConfirm": "Oletko varma, että haluat poistaa tilan %s?",
+        "removeError": "Tilan poistaminen epäonnistui",
+        "removeJoiner": "ja",
+        "removeSubmit": "Poista",
+        "removeTitle": "Poista tila",
+        "renameButton": "Nimeä uudelleen",
+        "renameLabel": "Uusi nimi tilalle %s:",
+        "renameTitle": "Nimeä tila uudelleen"
     }
 }
