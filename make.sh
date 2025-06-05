@@ -113,40 +113,40 @@ fi
 # 	ts_plugin $file
 # done
 
-for FEATURE_DIR in $PLUGINS/features/*; do
-	if [ -e "$FEATURE_DIR/examples" ]; then
-		# Newer - more complete style
-		NAME=$(basename $FEATURE_DIR)
+# for FEATURE_DIR in $PLUGINS/features/*; do
+# 	if [ -e "$FEATURE_DIR/examples" ]; then
+# 		# Newer - more complete style
+# 		NAME=$(basename $FEATURE_DIR)
 
-		## Build TS if there is a ts file
-		ts_plugin $FEATURE_DIR/src/dataTables.$NAME.ts $FEATURE_DIR/dist
+# 		## Build TS if there is a ts file
+# 		ts_plugin $FEATURE_DIR/src/dataTables.$NAME.ts $FEATURE_DIR/dist
 
-		cp $FEATURE_DIR/src/types.d.ts $FEATURE_DIR/dist
+# 		cp $FEATURE_DIR/src/types.d.ts $FEATURE_DIR/dist
 
-		## Build SCSS
-		cp $FEATURE_DIR/src/dataTables.$NAME.scss $FEATURE_DIR/dist
-		scss_compile $FEATURE_DIR/dist/dataTables.$NAME.scss
-		rm $FEATURE_DIR/dist/dataTables.$NAME.scss
+# 		## Build SCSS
+# 		cp $FEATURE_DIR/src/dataTables.$NAME.scss $FEATURE_DIR/dist
+# 		scss_compile $FEATURE_DIR/dist/dataTables.$NAME.scss
+# 		rm $FEATURE_DIR/dist/dataTables.$NAME.scss
 
-		## Build examples
-		if [ -d $FEATURE_DIR/dist/examples ]; then
-			rm -r $FEATURE_DIR/dist/examples
-		fi
+# 		## Build examples
+# 		if [ -d $FEATURE_DIR/dist/examples ]; then
+# 			rm -r $FEATURE_DIR/dist/examples
+# 		fi
 
-		# Build happens in the path that is http available, despite it just being a symlink
-		cp -r $FEATURE_DIR/examples $FEATURE_DIR/dist/examples
-		examples_process $DT_BUILT/extensions/Plugins/features/$NAME/dist
-	# else
-	# 	# Old style
-	# 	for file in $FEATURE_DIR/src/*.ts; do
-	# 		ts_plugin $file
-	# 	done
-	fi
-done
-
-# for file in $PLUGINS/sorting/src/*.ts; do
-# 	ts_plugin $file
+# 		# Build happens in the path that is http available, despite it just being a symlink
+# 		cp -r $FEATURE_DIR/examples $FEATURE_DIR/dist/examples
+# 		examples_process $DT_BUILT/extensions/Plugins/features/$NAME/dist
+# 	# else
+# 	# 	# Old style
+# 	# 	for file in $FEATURE_DIR/src/*.ts; do
+# 	# 		ts_plugin $file
+# 	# 	done
+# 	fi
 # done
+
+for file in $PLUGINS/sorting/src/*.ts; do
+	ts_plugin $file
+done
 
 # for file in $PLUGINS/type-detection/src/*.ts; do
 # 	ts_plugin $file
