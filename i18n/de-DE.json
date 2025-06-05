@@ -239,5 +239,26 @@
         "renameLabel": "Neuer Name für %s:",
         "renameTitle": "Ansicht umbenennen",
         "removeConfirm": "Sicher dass %s entfernt werden soll?"
-    }
+    },
+    "columnControl": {
+        "colVis": "Sichtbarkeit der Spalte",
+        "colVisDropdown": "Sichtbarkeit der Spalte",
+        "dropdown": "Mehr...",
+        "orderAddAsc": "Aufsteigende Sortierung hinzufügen",
+        "orderAddDesc": "Absteigende Sortierung hinzufügen",
+        "orderAsc": "Aufsteigend sortieren",
+        "orderDesc": "Absteigend sortieren",
+        "orderRemove": "Aus Sortierung löschen",
+        "reorder": "Spalten neu sortieren",
+        "reorderLeft": "Spalte nach links verschieben",
+        "reorderRight": "Spalte nach rechts verschieben",
+        "searchClear": "Suche leeren",
+        "searchDropdown": "Suchen",
+        "list": {
+            "add": "Alle auswählen",
+            "none": "Nichts auswählen",
+            "search": "Suche..."
+        }
+    },
+    "orderClear": "Sortierung leeren"
 }

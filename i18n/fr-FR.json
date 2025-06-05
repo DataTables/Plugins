@@ -241,5 +241,25 @@
     },
     "infoThousands": " ",
     "search": "Rechercher :",
-    "thousands": " "
+    "thousands": " ",
+    "columnControl": {
+        "colVis": "Visibilité colonnes",
+        "colVisDropdown": "Visibilité colonnes",
+        "dropdown": "Plus...",
+        "orderAddAsc": "Ajouter tri croissant",
+        "orderAddDesc": "Ajouter tri décroissant",
+        "orderAsc": "Tri croissant",
+        "orderDesc": "Tri décroissant",
+        "orderRemove": "Supprimer du tri",
+        "reorder": "Réorganiser les colonnes",
+        "reorderLeft": "Déplacer la colonne vers la gauche",
+        "reorderRight": "Déplacer la colonne vers la droite",
+        "searchClear": "Effacer la recherche",
+        "searchDropdown": "Rechercher",
+        "list": {
+            "add": "Tout sélectionner",
+            "none": "Désélectionner",
+            "search": "Rechercher..."
+        }
+    }
 }

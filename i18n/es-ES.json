@@ -32,7 +32,8 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Mostrar todas las filas",
-            "_": "Mostrar %d filas"
+            "_": "Mostrar %d filas",
+            "1": "Mostrar 1 Fila"
         },
         "pdf": "PDF",
         "print": "Imprimir",
@@ -240,5 +241,27 @@
         "removeError": "Error al eliminar el Estado",
         "renameLabel": "Nuevo nombre para %s:"
     },
-    "infoThousands": "."
+    "infoThousands": ".",
+    "searchPlaceholder": "Ejemplo búsqueda...",
+    "columnControl": {
+        "colVis": "Visibilidad",
+        "colVisDropdown": "Desplegable visibilidad",
+        "dropdown": "Desplegable",
+        "orderAddAsc": "Añadir a ordenación ascendente",
+        "orderAddDesc": "Añadir a ordenación descencente",
+        "orderAsc": "Ordenar ascendentemente",
+        "orderDesc": "Ordenar descendentemente",
+        "orderRemove": "Borrar de ordenación",
+        "reorder": "Reordenar",
+        "reorderLeft": "Mover a la izquierda",
+        "reorderRight": "Mover a la derecha",
+        "searchClear": "Borrar búsqueda",
+        "searchDropdown": "Buscar",
+        "list": {
+            "add": "Añadir",
+            "none": "Ninguno",
+            "search": "Buscar.."
+        }
+    },
+    "orderClear": "Limpiar ordenación de toda la tabla"
 }
