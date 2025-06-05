@@ -5,7 +5,7 @@
     "info": "Mostrant del _START_ al _END_ d'un total de _TOTAL_ registres",
     "infoEmpty": "No hi ha registres disponibles",
     "infoFiltered": "(filtrat de _MAX_ registres)",
-    "search": "Cerca:",
+    "search": "Cercar:",
     "infoThousands": ".",
     "decimal": ",",
     "loadingRecords": "Carregant...",
