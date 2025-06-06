@@ -259,7 +259,9 @@
         "list": {
             "add": "Tout sélectionner",
             "none": "Désélectionner",
-            "search": "Rechercher..."
+            "search": "Rechercher...",
+            "empty": "Vide"
         }
-    }
+    },
+    "orderClear": "Effacer le tri"
 }

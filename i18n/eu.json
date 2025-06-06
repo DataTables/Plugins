@@ -34,7 +34,8 @@
         "excel": "Excel",
         "pageLength": {
             "-1": "Erakutsi lerro guztiak",
-            "_": "Erakutsi %d lerro"
+            "_": "Erakutsi %d lerro",
+            "1": "Erakutsi lerro bat"
         },
         "pdf": "PDF",
         "print": "Inprimatu",
@@ -139,6 +140,10 @@
         "columns": {
             "1": "Zutabe 1 aukeratuta",
             "_": "%d zutabe aukeratuta"
+        },
+        "rows": {
+            "1": "Lerro bat aukeratuta",
+            "_": "%d lerro aukeratuta"
         }
     },
     "thousands": ".",
@@ -207,5 +212,40 @@
             "restore": "Desegin aldaketak",
             "noMulti": "Elementu hau bakarka aldatu daiteke baina ez talde baten parte gisa."
         }
+    },
+    "infoPostFix": "_TOTAL_ erregistrotik _START_ - _END_ ikusgai",
+    "stateRestore": {
+        "creationModal": {
+            "button": "Sortu",
+            "columns": {
+                "search": "Zutabe bilaketa",
+                "visible": "Zutabe ikusgaitasuna"
+            },
+            "name": "Izena",
+            "order": "Ordenazioa",
+            "paging": "Orrikatzea",
+            "scroller": "Desplazamentu posizioa",
+            "search": "Bilaketa",
+            "searchBuilder": "Bilaketa aurreratua",
+            "select": "Aukeraketa",
+            "title": "Egoera berria sortu",
+            "toggleLabel": "Gehitu:"
+        },
+        "duplicateError": "Izen berdina duen egoera bat existitzen da jada",
+        "emptyError": "Izena ezin da hutsik egon",
+        "emptyStates": "Ez daude Egoerarik gordeta",
+        "removeConfirm": "Ziur al zaude %s hau ezabatu nahi duzula?",
+        "removeError": "Lerroa ezabatzean errorea",
+        "removeJoiner": "eta",
+        "removeSubmit": "Ezabatu",
+        "removeTitle": "Egoera ezabatu",
+        "renameButton": "Izena aldatu",
+        "renameLabel": "%s egoerarentzako izen berria",
+        "renameTitle": "Egoerari izena aldatu"
+    },
+    "columnControl": {
+        "colVis": "Ikusgaitasuna",
+        "colVisDropdown": "Ikusgaitasun menu zabalgarria",
+        "dropdown": "menu zabalgarria"
     }
 }

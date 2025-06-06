@@ -242,5 +242,6 @@
     "aria": {
         "sortAscending": ": 激活以按升序排序此列",
         "sortDescending": ": 激活以按降序排序此列"
-    }
+    },
+    "searchPlaceholder": "按回车键搜索..."
 }
