@@ -263,5 +263,37 @@
             "empty": "Vide"
         }
     },
-    "orderClear": "Effacer le tri"
+    "orderClear": "Effacer le tri",
+    "language": {
+        "columnControl": {
+            "search": {
+                "datetime": {
+                    "equal": "Égal à",
+                    "notEqual": "Différent de",
+                    "greater": "Après le",
+                    "less": "Avant le",
+                    "empty": "Vide",
+                    "notEmpty": "Non vide"
+                },
+                "text": {
+                    "equal": "Égal à",
+                    "notEqual": "Différent de",
+                    "starts": "Commence par",
+                    "ends": "Se termine par",
+                    "empty": "Vide",
+                    "notEmpty": "Non vide"
+                },
+                "number": {
+                    "equal": "Égal à",
+                    "notEqual": "Différent de",
+                    "greater": "Supérieur à",
+                    "greaterOrEqual": "Supérieur ou égal à",
+                    "less": "Inférieur à",
+                    "lessOrEqual": "Inférieur ou égal à",
+                    "empty": "Vide",
+                    "notEmpty": "Non vide"
+                }
+            }
+        }
+    }
 }

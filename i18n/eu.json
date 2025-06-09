@@ -246,6 +246,22 @@
     "columnControl": {
         "colVis": "Ikusgaitasuna",
         "colVisDropdown": "Ikusgaitasun menu zabalgarria",
-        "dropdown": "menu zabalgarria"
+        "dropdown": "menu zabalgarria",
+        "orderAddAsc": "Gehitu goranzko ordenazioari",
+        "orderAddDesc": "Gehitu beheranzko ordenazioari",
+        "orderAsc": "Goranzka ordenatu",
+        "orderDesc": "Beheranzka ordenatu",
+        "orderRemove": "Ordenazioa ezabatu",
+        "reorder": "Berordenatu",
+        "reorderLeft": "Ezkerrera mugitu",
+        "reorderRight": "Eskumara mugitu",
+        "searchClear": "Bilaketa ezabatu",
+        "searchDropdown": "Bilatu",
+        "list": {
+            "add": "Gehitu",
+            "none": "Bat ere ez",
+            "search": "Bilatu...",
+            "empty": "Hustu"
+        }
     }
 }

@@ -263,5 +263,37 @@
             "search": "Buscar.."
         }
     },
-    "orderClear": "Limpiar ordenación de toda la tabla"
+    "orderClear": "Limpiar ordenación de toda la tabla",
+    "language": {
+        "columnControl": {
+            "search": {
+                "datetime": {
+                    "equal": "Igual a",
+                    "notEqual": "Diferente de",
+                    "greater": "Mayor que",
+                    "less": "Menor que",
+                    "empty": "Vacío",
+                    "notEmpty": "No vacío"
+                },
+                "text": {
+                    "equal": "Igual a",
+                    "notEqual": "Diferente de",
+                    "starts": "Empieza con",
+                    "ends": "Finaliza con",
+                    "empty": "Vacío",
+                    "notEmpty": "No vacío"
+                },
+                "number": {
+                    "equal": "Igual a",
+                    "notEqual": "Diferente de",
+                    "greater": "Mayor que",
+                    "greaterOrEqual": "Mayor o igual a",
+                    "less": "Menor que",
+                    "lessOrEqual": "Menor o igual a",
+                    "empty": "Vacío",
+                    "notEmpty": "No vacío"
+                }
+            }
+        }
+    }
 }
