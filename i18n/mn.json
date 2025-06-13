@@ -1,22 +1,39 @@
 {
+    "aria": {
+        "sortAscending": ": цагаан толгойн дарааллаар эрэмбэлэх",
+        "sortDescending": ": цагаан толгойн эсрэг дарааллаар эрэмбэлэх"
+    },
+    "autoFill": {
+        "info": ""
+    },
+    "decimal": "",
     "emptyTable": "Хүснэгт хоосон байна",
     "info": "Нийт _TOTAL_ бичлэгээс _START_ - _END_ харуулж байна",
     "infoEmpty": "Тохирох үр дүн алга",
     "infoFiltered": "(нийт _MAX_ бичлэгээс шүүв)",
+    "infoPostFix": "",
     "infoThousands": ",",
     "lengthMenu": "Дэлгэцэд _MENU_ бичлэг харуулна",
     "loadingRecords": "Ачааллаж байна...",
-    "processing": "Боловсруулж байна...",
-    "search": "Хайлт:",
-    "zeroRecords": "Тохирох бичлэг олдсонгүй",
     "paginate": {
         "first": "Эхнийх",
         "last": "Сүүлийнх",
         "next": "Дараах",
         "previous": "Өмнөх"
     },
-    "aria": {
-        "sortAscending": ": цагаан толгойн дарааллаар эрэмбэлэх",
-        "sortDescending": ": цагаан толгойн эсрэг дарааллаар эрэмбэлэх"
-    }
+    "processing": "Боловсруулж байна...",
+    "search": "Хайлт:",
+    "searchPlaceholder": "",
+    "select": {
+        "cells": {
+            "0": ""
+        },
+        "columns": {
+            "0": ""
+        },
+        "rows": {
+            "0": ""
+        }
+    },
+    "zeroRecords": "Тохирох бичлэг олдсонгүй"
 }

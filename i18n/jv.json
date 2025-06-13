@@ -4,73 +4,98 @@
         "fill": "tambah sedoyo sell",
         "fillHorizontal": "tambah sell mlumah",
         "fillVertical": "tambah sell ngaceng",
-        "info": "info"
+        "info": ""
     },
     "buttons": {
-        "copy": "nyalin",
         "collection": "koleksi",
         "colvis": "kolum ingkang ketok",
-        "copyTitle": "nyalinJudul",
-        "print": "cetak",
         "colvisRestore": "kolomAmbyar",
+        "copy": "nyalin",
         "copySuccess": {
-            "1": "Nyalin sak baris ke clipboard",
-            "_": "Nyalin baris ke cipboard"
+            "_": "Nyalin baris ke cipboard",
+            "1": "Nyalin sak baris ke clipboard"
         },
+        "copyTitle": "nyalinJudul",
+        "createState": "Gawe Keadaan",
         "csv": "csv",
         "excel": "eksel",
         "pageLength": {
-            "-1": "Munculke Kabeh Baris",
-            "1": "Munculke 1 Baris",
-            "_": "Munculke 10 Baris"
+            "_": "Munculke 10 Baris",
+            "-1": "Munculke Kabeh Baris"
         },
         "pdf": "pdf",
-        "createState": "Gawe Keadaan",
+        "print": "cetak",
         "removeAllStates": "Buwang Kabeh Keadaan",
         "removeState": "Buwang",
         "renameState": "Ganti",
         "savedStates": "Simpen Keadaan",
         "updateState": "Anyari Keadaan"
     },
-    "emptyTable": "mbonten wonten datanipun",
     "datetime": {
-        "previous": "sakderenge",
-        "next": "Terus",
+        "amPm": {
+            "0": "awan",
+            "1": "bengi"
+        },
         "hours": "Tabuh",
         "minutes": "Manit",
+        "months": {
+            "0": "Januari",
+            "1": "Febuari",
+            "10": "November",
+            "11": "Desember",
+            "2": "Maret",
+            "3": "April",
+            "4": "Mei",
+            "5": "Juni",
+            "6": "Juli",
+            "7": "Agustus",
+            "8": "September",
+            "9": "Oktober"
+        },
+        "next": "Terus",
+        "previous": "sakderenge",
         "seconds": "Detik",
         "unknown": "Ora dikenal",
-        "amPm": [
-            "awan",
-            "bengi"
-        ],
-        "weekdays": [
-            "Senen",
-            "Seloso",
-            "Rebo",
-            "Kemis",
-            "Jemuah",
-            "Setu",
-            "Ngaad"
-        ],
-        "months": [
-            "Januari",
-            "Febuari",
-            "Maret",
-            "April",
-            "Mei",
-            "Juni",
-            "Juli",
-            "Agustus",
-            "September",
-            "Oktober",
-            "November",
-            "Desember"
-        ]
+        "weekdays": {
+            "0": "Senen",
+            "1": "Seloso",
+            "2": "Rebo",
+            "3": "Kemis",
+            "4": "Jemuah",
+            "5": "Setu",
+            "6": "Ngaad"
+        }
     },
-    "decimal": ".",
+    "decimal": "",
+    "editor": {
+        "close": "Tutup",
+        "create": {
+            "button": "Anyar",
+            "submit": "Gawe",
+            "title": "Gawe Entri Anyar"
+        },
+        "edit": {
+            "button": "Uwah",
+            "submit": "Anyari",
+            "title": "Uwahi Entri"
+        },
+        "error": {
+            "system": "Ono kesalahan sistem"
+        },
+        "remove": {
+            "button": "Ilangi",
+            "confirm": {
+                "1": "Opo yakin arep guwang sak baris"
+            },
+            "submit": "Ilangi",
+            "title": "Ilangi"
+        }
+    },
+    "emptyTable": "mbonten wonten datanipun",
     "infoEmpty": "nunjukakan kosong",
     "infoFiltered": "sampun kesaring",
+    "infoPostFix": "",
+    "infoThousands": "infoEwon",
     "lengthMenu": "sedoso",
     "loadingRecords": "saweg mikir",
     "paginate": {
@@ -83,14 +108,12 @@
     "search": "madosi",
     "searchBuilder": {
         "add": "Tambah Kondisi",
+        "button": {
+            "_": "Mbagun Search (1)",
+            "0": "Mbangun Search"
+        },
         "clearAll": "Busek Kabeh",
         "condition": "Kondisi",
-        "data": "Data",
-        "leftTitle": "judulKiwo",
-        "button": {
-            "0": "Mbangun Search",
-            "_": "Mbagun Search (1)"
-        },
         "conditions": {
             "date": {
                 "after": "Kahanan Sakdurunge",
@@ -101,59 +124,47 @@
                 "not": "Kahanan dudu"
             }
         },
+        "data": "Data",
+        "leftTitle": "judulKiwo",
         "logicAnd": "Lan",
         "logicOr": "Utowo",
         "title": {
-            "0": "Mbangun Search",
-            "_": "Mbagun Search (1)"
+            "_": "Mbagun Search (1)",
+            "0": "Mbangun Search"
         },
         "value": "Isine"
     },
     "searchPanes": {
         "clearMessage": "busek kabeh",
+        "collapse": {
+            "0": "GolekiPanes"
+        },
         "collapseMessage": "pesenAmbyar",
-        "showMessage": "pesenCendak",
-        "title": "judul",
-        "collapse": [
-            "GolekiPanes"
-        ],
         "emptyPanes": "Ora ono ",
-        "loadMessage": "lagi loding"
+        "loadMessage": "lagi loding",
+        "showMessage": "pesenCendak",
+        "title": "judul"
     },
-    "searchPlaceholder": "papan kagem madosi",
+    "searchPlaceholder": "",
+    "select": {
+        "cells": {
+            "0": ""
+        },
+        "columns": {
+            "0": ""
+        },
+        "rows": {
+            "0": ""
+        }
+    },
     "stateRestore": {
-        "emptyError": "salahKosong",
-        "removeConfirm": "pindahKonfirmasi",
-        "renameTitle": "gantiJudul",
         "duplicateError": "salahDobel",
+        "emptyError": "salahKosong",
         "emptyStates": "kosongStates",
-        "removeError": "pindahSalah"
+        "removeConfirm": "pindahKonfirmasi",
+        "removeError": "pindahSalah",
+        "renameTitle": "gantiJudul"
     },
     "thousands": ".",
-    "zeroRecords": "mboten wonten data ingkang dipun padosi",
-    "infoThousands": "infoEwon",
-    "editor": {
-        "close": "Tutup",
-        "create": {
-            "button": "Anyar",
-            "title": "Gawe Entri Anyar",
-            "submit": "Gawe"
-        },
-        "edit": {
-            "button": "Uwah",
-            "title": "Uwahi Entri",
-            "submit": "Anyari"
-        },
-        "remove": {
-            "button": "Ilangi",
-            "title": "Ilangi",
-            "submit": "Ilangi",
-            "confirm": {
-                "1": "Opo yakin arep guwang sak baris"
-            }
-        },
-        "error": {
-            "system": "Ono kesalahan sistem"
-        }
-    }
+    "zeroRecords": "mboten wonten data ingkang dipun padosi"
 }

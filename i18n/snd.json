@@ -1,6 +1,7 @@
 {
     "autoFill": {
-        "cancel": "منسوخ"
+        "cancel": "منسوخ",
+        "info": ""
     },
     "buttons": {
         "collection": "سھيڙ",
@@ -13,7 +14,9 @@
         "pdf": "پي.ڊي.ايف",
         "print": "پرنٽ"
     },
+    "decimal": "",
     "emptyTable": "ٽيبل ۾ ڪوبہ مواد ناھي",
+    "infoPostFix": "",
     "paginate": {
         "first": "پھريون",
         "last": "آخري",
@@ -26,5 +29,17 @@
         "add": "سھيڙ شامل ڪريو",
         "clearAll": "سڀ صاف ڪريو",
         "data": "ڊيٽا"
+    },
+    "searchPlaceholder": "",
+    "select": {
+        "cells": {
+            "0": ""
+        },
+        "columns": {
+            "0": ""
+        },
+        "rows": {
+            "0": ""
+        }
     }
 }

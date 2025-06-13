@@ -1,72 +1,147 @@
 {
-    "infoFiltered": "(_MAX_ yozuvlardan filtrlandi)",
-    "search": "Izlash:",
-    "paginate": {
-        "first": "Birinchi",
-        "next": "Keyingi",
-        "last": "Oxirgi",
-        "previous": "Oldingi"
-    },
     "aria": {
-        "sortDescending": ": teskari tartiblash",
-        "sortAscending": ": to‘g‘ri tartiblash"
+        "sortAscending": ": to‘g‘ri tartiblash",
+        "sortDescending": ": teskari tartiblash"
     },
     "autoFill": {
         "cancel": "Bekor qilish",
         "fill": "Barcha kataklarni &lt;i&gt;%d&lt;i&gt;&lt;\/i&gt;&lt;\/i&gt; bilan to'ldirish",
         "fillHorizontal": "Kataklarni gorizontal to‘ldirish",
-        "fillVertical": "Kataklarni vertikal to‘ldirish"
+        "fillVertical": "Kataklarni vertikal to‘ldirish",
+        "info": ""
     },
     "buttons": {
-        "copy": "Nusxalash",
-        "csv": "CSV",
-        "excel": "Excel",
-        "pdf": "PDF",
-        "print": "Chop etish",
-        "createState": "Holat yaratish",
-        "renameState": "Qayta nomlash",
-        "savedStates": "Saqlangan holatlar",
-        "stateRestore": "Holat %d",
-        "updateState": "Yangilash",
         "collection": "To‘plam",
         "colvis": "Ustun ko‘rinishi",
         "colvisRestore": "Tiklash ko‘rinishi",
+        "copy": "Nusxalash",
         "copyKeys": "Ma‘lumotlarni vaqtinchalik xotiraga ko‘chirib olish uchun &lt;i&gt;ctrl&lt;\/i&gt; ni yoki &lt;i&gt;u2318&lt;\/i&gt; + &lt;i&gt;C&lt;\/i&gt; ni bosing.&lt;br&gt;&lt;br&gt; Bekor qilish uchun xabarni bosing yoki esc tugmasini bosing.",
         "copySuccess": {
-            "1": "1 ta qator vaqtinchalik xotiraga ko‘chirib olindi",
-            "_": "%d ta qator vaqtinchalik xotiraga ko‘chirib olindi"
+            "_": "%d ta qator vaqtinchalik xotiraga ko‘chirib olindi",
+            "1": "1 ta qator vaqtinchalik xotiraga ko‘chirib olindi"
         },
         "copyTitle": "Vaqtinchalik xotiraga ko‘chirib olish",
+        "createState": "Holat yaratish",
+        "csv": "CSV",
+        "excel": "Excel",
         "pageLength": {
-            "-1": "Barcha qatorlarni ko‘rsatish",
-            "1": "1 ta qatorni ko‘rsatish",
-            "_": "%d ta qatorni ko‘rsatish"
+            "_": "%d ta qatorni ko‘rsatish",
+            "-1": "Barcha qatorlarni ko‘rsatish"
         },
+        "pdf": "PDF",
+        "print": "Chop etish",
         "removeAllStates": "Barcha holatlarni o‘chirish",
-        "removeState": "O‘chirish"
+        "removeState": "O‘chirish",
+        "renameState": "Qayta nomlash",
+        "savedStates": "Saqlangan holatlar",
+        "stateRestore": "Holat %d",
+        "updateState": "Yangilash"
     },
-    "decimal": ".",
+    "datetime": {
+        "hours": "Soat",
+        "minutes": "Daqiqa",
+        "months": {
+            "0": "Yanvar",
+            "1": "Fevral",
+            "10": "Noyabr",
+            "11": "Dekabr",
+            "2": "Mart",
+            "3": "Aprel",
+            "4": "May",
+            "5": "Iyun",
+            "6": "Iyul",
+            "7": "Avgust",
+            "8": "Sentabr",
+            "9": "Oktabr"
+        },
+        "next": "Keyingi",
+        "previous": "Oldingi",
+        "seconds": "Soniya",
+        "unknown": "-",
+        "weekdays": {
+            "0": "Yak",
+            "1": "Du",
+            "2": "Se",
+            "3": "Chor",
+            "4": "Pay",
+            "5": "Ju",
+            "6": "Shan"
+        }
+    },
+    "decimal": "",
+    "editor": {
+        "close": "Yopish",
+        "create": {
+            "button": "Yangi",
+            "submit": "Yaratish",
+            "title": "Yangi ma‘lumot yaratish"
+        },
+        "edit": {
+            "button": "O‘zgartirish",
+            "submit": "Yangilash",
+            "title": "Ma‘lumotni o‘zgartirish"
+        },
+        "error": {
+            "system": "Tizimda xatolik yuz berdi (&lt;a target=\"\\\" rel=\"nofollow\" href=\"\\\"&gt;To'liqroq ma'lumot&lt;\/a&gt;)."
+        },
+        "multi": {
+            "info": "Tanlangan elementlarda ushbu kiritish uchun turli qiymatlar mavjud. Ushbu kiritish uchun barcha elementlarni tahrirlash va bir xil qiymatga oʻrnatish uchun bu yerni bosing, aks holda ular oʻzlarining shaxsiy qiymatlarini saqlab qoladilar.",
+            "noMulti": "Bu kiritish alohida tahrirlanishi mumkin, lekin guruhning bir qismi emas.",
+            "restore": "O‘zgarishlarni bekor qilish",
+            "title": "Bir nechta ma‘lumot"
+        },
+        "remove": {
+            "button": "O‘chirish",
+            "confirm": {
+                "_": "Ushbu %d ta ma‘lumotlarni o‘chirishni hohlaysizmi?",
+                "1": "Ushbu 1 ta ma‘lumotni o‘chirishni hohlaysizmi?"
+            },
+            "submit": "O‘chirish",
+            "title": "O‘chirish"
+        }
+    },
+    "emptyTable": "Jadvalda ma‘lumot mavjud emas",
+    "info": "Umumiy _TOTAL_ yozuvlarlardan _START_ dan _END_ gachasi ko‘rsatilmoqda",
+    "infoEmpty": "Umumiy 0 yozuvlardan 0 dan 0 gachasi ko‘rsatilmoqda",
+    "infoFiltered": "(_MAX_ yozuvlardan filtrlandi)",
+    "infoPostFix": "",
     "infoThousands": ",",
+    "lengthMenu": "_MENU_ ta yozuvlarni ko‘rsatish",
     "loadingRecords": "Yuklanmoqda...",
+    "paginate": {
+        "first": "Birinchi",
+        "last": "Oxirgi",
+        "next": "Keyingi",
+        "previous": "Oldingi"
+    },
     "processing": "Yuklanmoqda...",
+    "search": "Izlash:",
     "searchBuilder": {
+        "add": "Holat qo‘shish",
         "clearAll": "Barchasini tozalash",
         "condition": "Holat",
         "conditions": {
-            "date": {
+            "array": {
+                "contains": "Tarkibida",
+                "empty": "Bo‘sh",
                 "equals": "Teng",
+                "not": "Yo‘q",
+                "notEmpty": "Bo‘sh emas"
+            },
+            "date": {
                 "after": "Keyin",
                 "before": "Oldin",
                 "between": "Orasida",
                 "empty": "Bo‘sh",
+                "equals": "Teng",
                 "not": "Yo‘q",
                 "notBetween": "Orasida emas",
                 "notEmpty": "Bo‘sh emas"
             },
             "number": {
-                "equals": "Teng",
                 "between": "Orasida",
                 "empty": "Bo‘sh",
+                "equals": "Teng",
                 "gt": "Kattaroq",
                 "gte": "Kattaroq yoki teng",
                 "lt": "Kamroq",
@@ -76,115 +151,47 @@
                 "notEmpty": "Bo‘sh emas"
             },
             "string": {
-                "equals": "Teng",
                 "contains": "Tarkibida",
                 "empty": "Bo‘sh",
+                "equals": "Teng",
                 "not": "Tugaydi",
-                "notEmpty": "Bo‘sh emas",
-                "startsWith": "Boshlanadi",
                 "notContains": "Tarkibiga kirmaydi",
+                "notEmpty": "Bo‘sh emas",
+                "notEndsWith": "Bilan tugamaydi",
                 "notStartsWith": "Bilan boshlanmaydi",
-                "notEndsWith": "Bilan tugamaydi"
-            },
-            "array": {
-                "equals": "Teng",
-                "empty": "Bo‘sh",
-                "contains": "Tarkibida",
-                "not": "Yo‘q",
-                "notEmpty": "Bo‘sh emas"
+                "startsWith": "Boshlanadi"
             }
         },
+        "data": "Ma‘lumot",
         "deleteTitle": "Filtrlash qoidalarini tozalash",
         "logicAnd": "Va",
         "logicOr": "Yoki",
-        "value": "Qiymat",
-        "add": "Holat qo‘shish",
-        "data": "Ma‘lumot"
+        "value": "Qiymat"
     },
     "searchPanes": {
         "clearMessage": "Barchasini tozalash",
+        "collapseMessage": "Barchasini yopish",
         "count": "{total}",
         "countFiltered": "{shown} ({total})",
-        "title": "Faol filtrlar - %d",
-        "collapseMessage": "Barchasini yopish",
-        "showMessage": "Barchasini ko‘rsatish"
+        "showMessage": "Barchasini ko‘rsatish",
+        "title": "Faol filtrlar - %d"
     },
-    "searchPlaceholder": "Nima izlayapsiz?",
+    "searchPlaceholder": "",
     "select": {
         "cells": {
-            "1": "1 ta katak tanlandi",
-            "_": "%d ta kataklar tanlandi"
+            "_": "%d ta kataklar tanlandi",
+            "0": "",
+            "1": "1 ta katak tanlandi"
         },
         "columns": {
-            "1": "1 ta ustun tanlandi",
-            "_": "%d ta ustunlar tanlandi"
+            "_": "%d ta ustunlar tanlandi",
+            "0": "",
+            "1": "1 ta ustun tanlandi"
         },
         "rows": {
-            "1": "1 ta qator tanlandi",
-            "_": "%d ta qatorlar tanlandi"
-        }
-    },
-    "thousands": ",",
-    "datetime": {
-        "previous": "Oldingi",
-        "next": "Keyingi",
-        "hours": "Soat",
-        "minutes": "Daqiqa",
-        "seconds": "Soniya",
-        "unknown": "-",
-        "weekdays": [
-            "Yak",
-            "Du",
-            "Se",
-            "Chor",
-            "Pay",
-            "Ju",
-            "Shan"
-        ],
-        "months": [
-            "Yanvar",
-            "Fevral",
-            "Mart",
-            "Aprel",
-            "May",
-            "Iyun",
-            "Iyul",
-            "Avgust",
-            "Sentabr",
-            "Oktabr",
-            "Noyabr",
-            "Dekabr"
-        ]
-    },
-    "editor": {
-        "close": "Yopish",
-        "create": {
-            "button": "Yangi",
-            "submit": "Yaratish",
-            "title": "Yangi ma‘lumot yaratish"
-        },
-        "edit": {
-            "submit": "Yangilash",
-            "button": "O‘zgartirish",
-            "title": "Ma‘lumotni o‘zgartirish"
-        },
-        "error": {
-            "system": "Tizimda xatolik yuz berdi (&lt;a target=\"\\\" rel=\"nofollow\" href=\"\\\"&gt;To'liqroq ma'lumot&lt;\/a&gt;)."
-        },
-        "remove": {
-            "button": "O‘chirish",
-            "title": "O‘chirish",
-            "submit": "O‘chirish",
-            "confirm": {
-                "_": "Ushbu %d ta ma‘lumotlarni o‘chirishni hohlaysizmi?",
-                "1": "Ushbu 1 ta ma‘lumotni o‘chirishni hohlaysizmi?"
-            }
-        },
-        "multi": {
-            "title": "Bir nechta ma‘lumot",
-            "info": "Tanlangan elementlarda ushbu kiritish uchun turli qiymatlar mavjud. Ushbu kiritish uchun barcha elementlarni tahrirlash va bir xil qiymatga oʻrnatish uchun bu yerni bosing, aks holda ular oʻzlarining shaxsiy qiymatlarini saqlab qoladilar.",
-            "restore": "O‘zgarishlarni bekor qilish",
-            "noMulti": "Bu kiritish alohida tahrirlanishi mumkin, lekin guruhning bir qismi emas."
+            "_": "%d ta qatorlar tanlandi",
+            "0": "",
+            "1": "1 ta qator tanlandi"
         }
     },
     "stateRestore": {
@@ -203,20 +210,17 @@
             "toggleLabel": "Shularni o‘z ichiga oladi:"
         },
         "duplicateError": "Ushbu nomdagi holat mavjud.",
-        "emptyStates": "Saqlangan holatlar mavjud emas",
-        "removeJoiner": "va",
-        "renameButton": "Qayta nomlash",
-        "renameLabel": "%s uchun yangi nom:",
-        "renameTitle": "Qayta nomlash holati",
         "emptyError": "Nomi bo‘sh bo‘lishi mumkin emas.",
+        "emptyStates": "Saqlangan holatlar mavjud emas",
         "removeConfirm": "%s ni o‘chirmoqchimisiz?",
         "removeError": "Holatni o‘chirishda xatolik yuz berdi.",
+        "removeJoiner": "va",
         "removeSubmit": "O‘chirish",
-        "removeTitle": "O‘chirish holati"
+        "removeTitle": "O‘chirish holati",
+        "renameButton": "Qayta nomlash",
+        "renameLabel": "%s uchun yangi nom:",
+        "renameTitle": "Qayta nomlash holati"
     },
-    "emptyTable": "Jadvalda ma‘lumot mavjud emas",
-    "info": "Umumiy _TOTAL_ yozuvlarlardan _START_ dan _END_ gachasi ko‘rsatilmoqda",
-    "infoEmpty": "Umumiy 0 yozuvlardan 0 dan 0 gachasi ko‘rsatilmoqda",
-    "lengthMenu": "_MENU_ ta yozuvlarni ko‘rsatish",
+    "thousands": ",",
     "zeroRecords": "Mos keladigan ma‘lumotlar topilmadi"
 }

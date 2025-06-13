@@ -1,15 +1,32 @@
 {
-    "processing": "Próiseáil...",
-    "lengthMenu": "Taispeáin iontrálacha _MENU_",
-    "zeroRecords": "Gan aon taifead meaitseáil aimsithe",
+    "autoFill": {
+        "info": ""
+    },
+    "decimal": "",
     "info": "_START_ Showing a _END_ na n-iontrálacha  _TOTAL_",
     "infoEmpty": "Showing 0-0 na n-iontrálacha  0",
     "infoFiltered": "(scagtha ó _MAX_ iontrálacha iomlán)",
-    "search": "Cuardaigh:",
+    "infoPostFix": "",
+    "lengthMenu": "Taispeáin iontrálacha _MENU_",
     "paginate": {
         "first": "An Chéad",
-        "previous": "Roimhe Seo",
+        "last": "Last",
         "next": "Ar Aghaidh",
-        "last": "Last"
-    }
+        "previous": "Roimhe Seo"
+    },
+    "processing": "Próiseáil...",
+    "search": "Cuardaigh:",
+    "searchPlaceholder": "",
+    "select": {
+        "cells": {
+            "0": ""
+        },
+        "columns": {
+            "0": ""
+        },
+        "rows": {
+            "0": ""
+        }
+    },
+    "zeroRecords": "Gan aon taifead meaitseáil aimsithe"
 }
