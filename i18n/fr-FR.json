@@ -38,6 +38,9 @@
         "updateState": "Mettre à jour"
     },
     "columnControl": {
+        "buttons": {
+            "searchClear": "Effacer la recherche"
+        },
         "colVis": "Visibilité colonnes",
         "colVisDropdown": "Visibilité colonnes",
         "dropdown": "Plus...",
@@ -50,6 +53,7 @@
         "orderAddAsc": "Ajouter tri croissant",
         "orderAddDesc": "Ajouter tri décroissant",
         "orderAsc": "Tri croissant",
+        "orderClear": "Effacer le tri",
         "orderDesc": "Tri décroissant",
         "orderRemove": "Supprimer du tri",
         "reorder": "Réorganiser les colonnes",
@@ -159,6 +163,9 @@
     "infoFiltered": "(filtrées depuis un total de _MAX_ entrées)",
     "infoPostFix": "",
     "infoThousands": " ",
+    "lengthLabels": {
+        "-1": "Tout"
+    },
     "lengthMenu": "Afficher _MENU_ entrées",
     "loadingRecords": "Chargement...",
     "orderClear": "Effacer le tri",
@@ -228,6 +235,7 @@
         "logicAnd": "Et",
         "logicOr": "Ou",
         "rightTitle": "Indenter le critère",
+        "search": "Rechercher",
         "title": {
             "_": "Recherche avancée (%d)",
             "0": "Recherche avancée"
@@ -243,6 +251,7 @@
         "collapseMessage": "Réduire tout",
         "count": "{total}",
         "countFiltered": "{shown} ({total})",
+        "emptyMessage": "<em>vide<\/em>",
         "emptyPanes": "Pas de volet de recherche",
         "loadMessage": "Chargement du volet de recherche...",
         "showMessage": "Montrer tout",
