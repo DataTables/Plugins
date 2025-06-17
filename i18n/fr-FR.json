@@ -33,7 +33,8 @@
         "excel": "Excel",
         "pageLength": {
             "_": "Afficher %d lignes",
-            "-1": "Afficher toutes les lignes"
+            "-1": "Afficher toutes les lignes",
+            "1": "Afficher 1 ligne"
         },
         "pdf": "PDF",
         "print": "Imprimer",
