@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": активирајте да сортирате колону узлазно",
-        "sortDescending": ": активирајте да сортирате колону силазно"
+        "paginate": {
+            "first": "Прва",
+            "last": "Последња",
+            "next": "Следећа",
+            "previous": "Претходна"
+        }
     },
     "autoFill": {
         "cancel": "Откажи",
@@ -89,12 +93,6 @@
     "infoThousands": ".",
     "lengthMenu": "Прикажи _MENU_ уноса",
     "loadingRecords": "Учитавање...",
-    "paginate": {
-        "first": "Прва",
-        "last": "Последња",
-        "next": "Следећа",
-        "previous": "Претходна"
-    },
     "processing": "Обрада...",
     "search": "Претрага:",
     "searchBuilder": {

@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": "आरोही क्रम",
-        "sortDescending": "अवरोही क्रम"
+        "paginate": {
+            "first": "प्रथम",
+            "last": "अंतिम",
+            "next": "अगला",
+            "previous": "पिछला"
+        }
     },
     "autoFill": {
         "cancel": "रद्द करें",
@@ -44,12 +48,6 @@
     "infoPostFix": "",
     "lengthMenu": " _MENU_ प्रविष्टियां दिखाएं ",
     "loadingRecords": "प्रगति पे हैं ...",
-    "paginate": {
-        "first": "प्रथम",
-        "last": "अंतिम",
-        "next": "अगला",
-        "previous": "पिछला"
-    },
     "processing": "प्रगति पे हैं ...",
     "search": "खोजें:",
     "searchBuilder": {

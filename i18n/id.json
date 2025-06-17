@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": aktifkan untuk mengurutkan kolom ke atas",
-        "sortDescending": ": aktifkan untuk mengurutkan kolom menurun"
+        "paginate": {
+            "first": "Pertama",
+            "last": "Terakhir",
+            "next": "Selanjutnya",
+            "previous": "Sebelumnya"
+        }
     },
     "autoFill": {
         "cancel": "Batal",
@@ -112,12 +116,6 @@
     "infoThousands": ",",
     "lengthMenu": "Tampilkan _MENU_ entri",
     "loadingRecords": "Sedang memuat...",
-    "paginate": {
-        "first": "Pertama",
-        "last": "Terakhir",
-        "next": "Selanjutnya",
-        "previous": "Sebelumnya"
-    },
     "processing": "Sedang memproses...",
     "search": "Cari:",
     "searchBuilder": {

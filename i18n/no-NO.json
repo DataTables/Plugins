@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": aktiver for å sortere kolonna stigande",
-        "sortDescending": ": aktiver for å sortere kolonna synkande"
+        "paginate": {
+            "first": "Fyrste",
+            "last": "Siste",
+            "next": "Neste",
+            "previous": "Førre"
+        }
     },
     "autoFill": {
         "info": ""
@@ -15,12 +19,6 @@
     "infoThousands": " ",
     "lengthMenu": "Syn _MENU_ linjer",
     "loadingRecords": "Lastar...",
-    "paginate": {
-        "first": "Fyrste",
-        "last": "Siste",
-        "next": "Neste",
-        "previous": "Førre"
-    },
     "processing": "Lastar...",
     "search": "S&oslash;k:",
     "searchPlaceholder": "",

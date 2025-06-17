@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": სვეტის დალაგება ზრდის მიხედვით",
-        "sortDescending": ": სვეტის დალაგება კლების მიხედვით"
+        "paginate": {
+            "first": "პირველი",
+            "last": "ბოლო",
+            "next": "შემდეგი",
+            "previous": "წინა"
+        }
     },
     "autoFill": {
         "cancel": "გაუქმება",
@@ -94,12 +98,6 @@
     "infoThousands": ",",
     "lengthMenu": "აჩვენე _MENU_ ჩანაწერი",
     "loadingRecords": "იტვირთება...",
-    "paginate": {
-        "first": "პირველი",
-        "last": "ბოლო",
-        "next": "შემდეგი",
-        "previous": "წინა"
-    },
     "processing": "მუშავდება...",
     "search": "ძიება:",
     "searchBuilder": {

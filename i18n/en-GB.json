@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": activate to sort column ascending",
-        "sortDescending": ": activate to sort column descending"
+        "paginate": {
+            "first": "First",
+            "last": "Last",
+            "next": "Next",
+            "previous": "Previous"
+        }
     },
     "autoFill": {
         "cancel": "Cancel",
@@ -112,12 +116,6 @@
     "infoThousands": ",",
     "lengthMenu": "Show _MENU_ entries",
     "loadingRecords": "Loading...",
-    "paginate": {
-        "first": "First",
-        "last": "Last",
-        "next": "Next",
-        "previous": "Previous"
-    },
     "processing": "Processing...",
     "search": "Search:",
     "searchBuilder": {

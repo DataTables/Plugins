@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": నిలువరుసను ఆరోహణ క్రమం అమర్చండి",
-        "sortDescending": ": నిలువరుసను అవరోహణ క్రమం అమర్చండి"
+        "paginate": {
+            "first": "మొదటి",
+            "last": "చివరి",
+            "next": "తర్వాత",
+            "previous": "మునుపటి"
+        }
     },
     "autoFill": {
         "cancel": "రద్దు చేయండి",
@@ -19,12 +23,6 @@
     "infoThousands": ",",
     "lengthMenu": " _MENU_ నమోదులు చూపించు",
     "loadingRecords": "సమాచారం వస్తున్నది...",
-    "paginate": {
-        "first": "మొదటి",
-        "last": "చివరి",
-        "next": "తర్వాత",
-        "previous": "మునుపటి"
-    },
     "processing": "ప్రక్రియలో ఉన్నది...",
     "search": "వెతుకు:",
     "searchPlaceholder": "",

@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": ເປີດໃຊ້ການຈັດລຽງຂໍ້ມູນແຕ່ນ້ອຍຫາໃຫຍ່",
-        "sortDescending": ": ເປີດໃຊ້ການຈັດລຽງຂໍ້ມູນແຕ່ໃຫຍ່ຫານ້ອຍ"
+        "paginate": {
+            "first": "ໜ້າທຳອິດ",
+            "last": "ໜ້າສຸດທ້າຍ",
+            "next": "ໜ້າຕໍ່ໄປ",
+            "previous": "ກ່ອນໜ້ານີ້"
+        }
     },
     "autoFill": {
         "info": ""
@@ -15,12 +19,6 @@
     "infoThousands": ",",
     "lengthMenu": "ສະແດງ _MENU_ ແຖວ",
     "loadingRecords": "ກຳລັງໂຫຼດຂໍ້ມູນ...",
-    "paginate": {
-        "first": "ໜ້າທຳອິດ",
-        "last": "ໜ້າສຸດທ້າຍ",
-        "next": "ໜ້າຕໍ່ໄປ",
-        "previous": "ກ່ອນໜ້ານີ້"
-    },
     "processing": "ກຳລັງດຳເນີນການ...",
     "search": "ຄົ້ນຫາ: ",
     "searchPlaceholder": "",

@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": diaktifkan kepada susunan lajur menaik",
-        "sortDescending": ": diaktifkan kepada susunan lajur menurun"
+        "paginate": {
+            "first": "Pertama",
+            "last": "Akhir",
+            "next": "Seterusnya",
+            "previous": "Sebelum"
+        }
     },
     "autoFill": {
         "cancel": "batal",
@@ -97,12 +101,6 @@
     "infoThousands": ",",
     "lengthMenu": "Papar _MENU_ rekod",
     "loadingRecords": "Diproses...",
-    "paginate": {
-        "first": "Pertama",
-        "last": "Akhir",
-        "next": "Seterusnya",
-        "previous": "Sebelum"
-    },
     "processing": "Sedang diproses...",
     "search": "Carian:",
     "searchPlaceholder": "",

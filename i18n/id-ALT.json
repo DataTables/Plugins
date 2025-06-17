@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": "urutkan naik",
-        "sortDescending": "urutkan turun"
+        "paginate": {
+            "first": "Awal",
+            "last": "Akhir",
+            "next": "Lanjut",
+            "previous": "Balik"
+        }
     },
     "autoFill": {
         "cancel": "Batalkan",
@@ -101,12 +105,6 @@
     "infoThousands": ".",
     "lengthMenu": "Tampilkan _MENU_ entri",
     "loadingRecords": "Memuat . . .",
-    "paginate": {
-        "first": "Awal",
-        "last": "Akhir",
-        "next": "Lanjut",
-        "previous": "Balik"
-    },
     "processing": "Sedang memproses...",
     "search": "Cari:",
     "searchBuilder": {

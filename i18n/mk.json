@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": "сортирај ја табелата по растечки редослед",
-        "sortDescending": "сортирај ја табелата по опаѓачки редослед"
+        "paginate": {
+            "first": "Почетна",
+            "last": "Последна",
+            "next": "Следна",
+            "previous": "Претходна"
+        }
     },
     "autoFill": {
         "cancel": "Откажи",
@@ -32,12 +36,6 @@
     "infoPostFix": "",
     "lengthMenu": "Прикажи _MENU_ записи",
     "loadingRecords": "Вчитување...",
-    "paginate": {
-        "first": "Почетна",
-        "last": "Последна",
-        "next": "Следна",
-        "previous": "Претходна"
-    },
     "processing": "Процесирање...",
     "search": "Барај",
     "searchPlaceholder": "",

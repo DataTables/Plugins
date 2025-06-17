@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": Ordenar colunas de forma ascendente",
-        "sortDescending": ": Ordenar colunas de forma descendente"
+        "paginate": {
+            "first": "Primeiro",
+            "last": "Último",
+            "next": "Próximo",
+            "previous": "Anterior"
+        }
     },
     "autoFill": {
         "cancel": "Cancelar",
@@ -112,12 +116,6 @@
     "infoThousands": ".",
     "lengthMenu": "Exibir _MENU_ resultados por página",
     "loadingRecords": "Carregando...",
-    "paginate": {
-        "first": "Primeiro",
-        "last": "Último",
-        "next": "Próximo",
-        "previous": "Anterior"
-    },
     "processing": "Carregando...",
     "search": "Pesquisar",
     "searchBuilder": {

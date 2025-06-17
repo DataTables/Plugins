@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": virkja til að raða dálki í hækkandi röð",
-        "sortDescending": ": virkja til að raða dálki lækkandi í röð"
+        "paginate": {
+            "first": "Fyrsta",
+            "last": "Síðasta",
+            "next": "Næsta",
+            "previous": "Fyrri"
+        }
     },
     "autoFill": {
         "cancel": "Hætta við",
@@ -71,12 +75,6 @@
     "infoThousands": ".",
     "lengthMenu": "Sýna _MENU_ færslur",
     "loadingRecords": "Hleð...",
-    "paginate": {
-        "first": "Fyrsta",
-        "last": "Síðasta",
-        "next": "Næsta",
-        "previous": "Fyrri"
-    },
     "processing": "Úrvinnsla...",
     "search": "Leita:",
     "searchPlaceholder": "",

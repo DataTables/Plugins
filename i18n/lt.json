@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": suaktyvinkite, jei norite rūšiuoti stulpelį didėjančia tvarka",
-        "sortDescending": ": suaktyvinkite, jei norite rūšiuoti stulpelį mažėjančia tvarka"
+        "paginate": {
+            "first": "Pirmas",
+            "last": "Paskutinis",
+            "next": "Tolimesnis",
+            "previous": "Ankstesnis"
+        }
     },
     "autoFill": {
         "cancel": "Atšaukti",
@@ -112,12 +116,6 @@
     "infoThousands": "  ",
     "lengthMenu": "Rodyti _MENU_ įrašus",
     "loadingRecords": "Įkeliama...",
-    "paginate": {
-        "first": "Pirmas",
-        "last": "Paskutinis",
-        "next": "Tolimesnis",
-        "previous": "Ankstesnis"
-    },
     "processing": "Apdorojama...",
     "search": "Ieškoti:",
     "searchBuilder": {

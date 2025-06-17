@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": aktiválja a növekvő rendezéshez",
-        "sortDescending": ": aktiválja a csökkenő rendezéshez"
+        "paginate": {
+            "first": "Első",
+            "last": "Utolsó",
+            "next": "Következő",
+            "previous": "Előző"
+        }
     },
     "autoFill": {
         "cancel": "Megszakítás",
@@ -109,12 +113,6 @@
     "infoThousands": " ",
     "lengthMenu": "_MENU_ találat oldalanként",
     "loadingRecords": "Betöltés...",
-    "paginate": {
-        "first": "Első",
-        "last": "Utolsó",
-        "next": "Következő",
-        "previous": "Előző"
-    },
     "processing": "Feldolgozás...",
     "search": "Keresés:",
     "searchBuilder": {

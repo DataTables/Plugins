@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": устунни қийматлар ўсиши бўйича тартиблаш",
-        "sortDescending": ": устунни қийматлар камайиши бўйича тартиблаш"
+        "paginate": {
+            "first": "Дастлабки",
+            "last": "Оҳирги",
+            "next": "Кейинги",
+            "previous": "Аввалги"
+        }
     },
     "autoFill": {
         "cancel": "Бекор қил",
@@ -60,12 +64,6 @@
     "infoThousands": "  ",
     "lengthMenu": "_MENU_ та сатр кўринсин",
     "loadingRecords": "Юкланмоқда...",
-    "paginate": {
-        "first": "Дастлабки",
-        "last": "Оҳирги",
-        "next": "Кейинги",
-        "previous": "Аввалги"
-    },
     "processing": "Бажарилмоқда...",
     "search": "Қидириш:",
     "searchBuilder": {

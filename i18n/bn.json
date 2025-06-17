@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ":ঊর্ধ্বক্রম অনুসারে কলাম সাজাতে সক্রিয় করুন",
-        "sortDescending": ":নিন্মক্রম অনুসারে কলাম সাজাতে সক্রিয় করুন"
+        "paginate": {
+            "first": "প্রথমটা",
+            "last": "শেষেরটা",
+            "next": "পরবর্তীটা",
+            "previous": "আগেরটা"
+        }
     },
     "autoFill": {
         "cancel": "বাতিল করা",
@@ -111,12 +115,6 @@
     "infoPostFix": "",
     "lengthMenu": "_MENU_ টা এন্ট্রি দেখাও",
     "loadingRecords": "লোডিং হচ্ছে...",
-    "paginate": {
-        "first": "প্রথমটা",
-        "last": "শেষেরটা",
-        "next": "পরবর্তীটা",
-        "previous": "আগেরটা"
-    },
     "processing": "প্রসেসিং হচ্ছে...",
     "search": "অনুসন্ধান:",
     "searchBuilder": {

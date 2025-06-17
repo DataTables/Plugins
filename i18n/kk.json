@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": өсімі бойынша бағанды сұрыптау үшін активациялау",
-        "sortDescending": ": кемуі бойынша бағанды сұрыптау үшін активациялау"
+        "paginate": {
+            "first": "Бірінші",
+            "last": "Соңғы",
+            "next": "Келесі",
+            "previous": "Алдыңғысы"
+        }
     },
     "autoFill": {
         "cancel": "Доғару",
@@ -23,12 +27,6 @@
     "infoPostFix": "",
     "lengthMenu": "Жазбалар  _MENU_ көрсету",
     "loadingRecords": "Жазбалар жүктемесі...",
-    "paginate": {
-        "first": "Бірінші",
-        "last": "Соңғы",
-        "next": "Келесі",
-        "previous": "Алдыңғысы"
-    },
     "processing": "Күте тұрыңыз...",
     "search": "Іздеу:",
     "searchPlaceholder": "",

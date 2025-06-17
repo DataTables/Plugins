@@ -1,4 +1,12 @@
 {
+    "aria": {
+        "paginate": {
+            "first": "پھريون",
+            "last": "آخري",
+            "next": "اڳيون",
+            "previous": "پويون"
+        }
+    },
     "autoFill": {
         "cancel": "منسوخ",
         "info": ""
@@ -17,12 +25,6 @@
     "decimal": "",
     "emptyTable": "ٽيبل ۾ ڪوبہ مواد ناھي",
     "infoPostFix": "",
-    "paginate": {
-        "first": "پھريون",
-        "last": "آخري",
-        "next": "اڳيون",
-        "previous": "پويون"
-    },
     "processing": "پراسيس ڪري رھيو آھي",
     "search": "ڳولا",
     "searchBuilder": {

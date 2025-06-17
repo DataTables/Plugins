@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": " : activer pour trier la colonne par ordre croissant",
-        "sortDescending": " : activer pour trier la colonne par ordre décroissant"
+        "paginate": {
+            "first": "Première",
+            "last": "Dernière",
+            "next": "Suivante",
+            "previous": "Précédente"
+        }
     },
     "autoFill": {
         "cancel": "Annuler",
@@ -171,12 +175,6 @@
     "lengthMenu": "Afficher _MENU_ entrées",
     "loadingRecords": "Chargement...",
     "orderClear": "Effacer le tri",
-    "paginate": {
-        "first": "Première",
-        "last": "Dernière",
-        "next": "Suivante",
-        "previous": "Précédente"
-    },
     "processing": "Traitement...",
     "search": "Rechercher :",
     "searchBuilder": {

@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": تفعيل لترتيب العمود تصاعدياً",
-        "sortDescending": ": تفعيل لترتيب العمود تنازلياً"
+        "paginate": {
+            "first": "الأول",
+            "last": "الأخير",
+            "next": "التالي",
+            "previous": "السابق"
+        }
     },
     "autoFill": {
         "cancel": "إلغاء الامر",
@@ -112,12 +116,6 @@
     "infoThousands": ",",
     "lengthMenu": "أظهر _MENU_ مدخلات",
     "loadingRecords": "جارٍ التحميل...",
-    "paginate": {
-        "first": "الأول",
-        "last": "الأخير",
-        "next": "التالي",
-        "previous": "السابق"
-    },
     "processing": "جارٍ المعالجة...",
     "search": "ابحث:",
     "searchBuilder": {

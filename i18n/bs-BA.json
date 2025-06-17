@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": aktivirajte da sortirate kolonu uzlazno",
-        "sortDescending": ": aktivirajte da sortirate kolonu silazno"
+        "paginate": {
+            "first": "Početna",
+            "last": "Poslednja",
+            "next": "Sledeća",
+            "previous": "Prethodna"
+        }
     },
     "autoFill": {
         "cancel": "Poništiti",
@@ -39,12 +43,6 @@
     "infoThousands": ".",
     "lengthMenu": "Prikaži _MENU_ zapisa",
     "loadingRecords": "Učitavanje...",
-    "paginate": {
-        "first": "Početna",
-        "last": "Poslednja",
-        "next": "Sledeća",
-        "previous": "Prethodna"
-    },
     "processing": "Obrada...",
     "search": "Pretraga:",
     "searchBuilder": {

@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": "Stigende sortering",
-        "sortDescending": "Faldende sortering"
+        "paginate": {
+            "first": "Første",
+            "last": "Sidste",
+            "next": "Næste",
+            "previous": "Forrige"
+        }
     },
     "autoFill": {
         "cancel": "Annuller",
@@ -112,12 +116,6 @@
     "infoThousands": ".",
     "lengthMenu": "Vis _MENU_ linjer",
     "loadingRecords": "Henter...",
-    "paginate": {
-        "first": "Første",
-        "last": "Sidste",
-        "next": "Næste",
-        "previous": "Forrige"
-    },
     "processing": "Henter...",
     "search": "Søg:",
     "searchBuilder": {

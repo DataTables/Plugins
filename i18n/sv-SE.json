@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": aktivera för att sortera kolumnen i stigande ordning",
-        "sortDescending": ": aktivera för att sortera kolumnen i fallande ordning"
+        "paginate": {
+            "first": "Första",
+            "last": "Sista",
+            "next": "Nästa",
+            "previous": "Föregående"
+        }
     },
     "autoFill": {
         "cancel": "Avbryt",
@@ -112,12 +116,6 @@
     "infoThousands": " ",
     "lengthMenu": "Visa _MENU_ rader",
     "loadingRecords": "Laddar …",
-    "paginate": {
-        "first": "Första",
-        "last": "Sista",
-        "next": "Nästa",
-        "previous": "Föregående"
-    },
     "processing": "Bearbetar …",
     "search": "Sök:",
     "searchBuilder": {

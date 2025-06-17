@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": "сортирай възходящо",
-        "sortDescending": "сортирай низходящо"
+        "paginate": {
+            "first": "Първа",
+            "last": "Последна",
+            "next": "Следваща",
+            "previous": "Предишна"
+        }
     },
     "autoFill": {
         "cancel": "Oткажи",
@@ -100,12 +104,6 @@
     "infoPostFix": "",
     "lengthMenu": "Показване на _MENU_ резултата",
     "loadingRecords": "Зареждане...",
-    "paginate": {
-        "first": "Първа",
-        "last": "Последна",
-        "next": "Следваща",
-        "previous": "Предишна"
-    },
     "processing": "Обработка на резултатите...",
     "search": "Търсене:",
     "searchBuilder": {

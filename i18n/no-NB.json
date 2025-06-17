@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": "aktiver for &aring; sortere kolonnen stigende",
-        "sortDescending": "aktiver for &aring; sortere kolonnen synkende"
+        "paginate": {
+            "first": "F&oslash;rste",
+            "last": "Siste",
+            "next": "Neste",
+            "previous": "Forrige"
+        }
     },
     "autoFill": {
         "cancel": "Avbryt",
@@ -111,12 +115,6 @@
     "infoThousands": " ",
     "lengthMenu": "Vis _MENU_ oppf&oslash;ringer",
     "loadingRecords": "Laster...",
-    "paginate": {
-        "first": "F&oslash;rste",
-        "last": "Siste",
-        "next": "Neste",
-        "previous": "Forrige"
-    },
     "processing": "Laster...",
     "search": "S&oslash;k:",
     "searchBuilder": {

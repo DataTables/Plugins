@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": aktivieren, um Spalte aufsteigend zu sortieren",
-        "sortDescending": ": aktivieren, um Spalte absteigend zu sortieren"
+        "paginate": {
+            "first": "Erste",
+            "last": "Letzte",
+            "next": "Nächste",
+            "previous": "Vorherige"
+        }
     },
     "autoFill": {
         "cancel": "Abbrechen",
@@ -129,12 +133,6 @@
     "lengthMenu": "_MENU_ Zeilen anzeigen",
     "loadingRecords": "Wird geladen ..",
     "orderClear": "Sortierung leeren",
-    "paginate": {
-        "first": "Erste",
-        "last": "Letzte",
-        "next": "Nächste",
-        "previous": "Vorherige"
-    },
     "processing": "Bitte warten ..",
     "search": "Suche:",
     "searchBuilder": {

@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": เปิดใช้งานการเรียงข้อมูลจากน้อยไปมาก",
-        "sortDescending": ": เปิดใช้งานการเรียงข้อมูลจากมากไปน้อย"
+        "paginate": {
+            "first": "หน้าแรก",
+            "last": "หน้าสุดท้าย",
+            "next": "ถัดไป",
+            "previous": "ก่อนหน้า"
+        }
     },
     "autoFill": {
         "cancel": "ยกเลิก",
@@ -112,12 +116,6 @@
     "infoThousands": ",",
     "lengthMenu": "แสดง _MENU_ แถว",
     "loadingRecords": "กำลังโหลดข้อมูล...",
-    "paginate": {
-        "first": "หน้าแรก",
-        "last": "หน้าสุดท้าย",
-        "next": "ถัดไป",
-        "previous": "ก่อนหน้า"
-    },
     "processing": "กำลังดำเนินการ...",
     "search": "ค้นหา:",
     "searchBuilder": {

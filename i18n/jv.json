@@ -1,4 +1,12 @@
 {
+    "aria": {
+        "paginate": {
+            "first": "ndisik",
+            "last": "kemper",
+            "next": "terus",
+            "previous": "maju"
+        }
+    },
     "autoFill": {
         "cancel": "batal",
         "fill": "tambah sedoyo sell",
@@ -98,12 +106,6 @@
     "infoThousands": "infoEwon",
     "lengthMenu": "sedoso",
     "loadingRecords": "saweg mikir",
-    "paginate": {
-        "first": "ndisik",
-        "last": "kemper",
-        "next": "terus",
-        "previous": "maju"
-    },
     "processing": "saweg mikir",
     "search": "madosi",
     "searchBuilder": {

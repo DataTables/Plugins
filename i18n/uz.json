@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": to‘g‘ri tartiblash",
-        "sortDescending": ": teskari tartiblash"
+        "paginate": {
+            "first": "Birinchi",
+            "last": "Oxirgi",
+            "next": "Keyingi",
+            "previous": "Oldingi"
+        }
     },
     "autoFill": {
         "cancel": "Bekor qilish",
@@ -108,12 +112,6 @@
     "infoThousands": ",",
     "lengthMenu": "_MENU_ ta yozuvlarni ko‘rsatish",
     "loadingRecords": "Yuklanmoqda...",
-    "paginate": {
-        "first": "Birinchi",
-        "last": "Oxirgi",
-        "next": "Keyingi",
-        "previous": "Oldingi"
-    },
     "processing": "Yuklanmoqda...",
     "search": "Izlash:",
     "searchBuilder": {

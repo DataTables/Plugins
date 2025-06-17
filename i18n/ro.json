@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": "Sortează ascendent",
-        "sortDescending": "Sortează descendent"
+        "paginate": {
+            "first": "Prima pagină",
+            "last": "Ultima pagină",
+            "next": "Pagina următoare",
+            "previous": "Pagina precedentă"
+        }
     },
     "autoFill": {
         "cancel": "Anulează",
@@ -112,12 +116,6 @@
     "infoThousands": ".",
     "lengthMenu": "Afișează _MENU_ înregistrări pe pagină",
     "loadingRecords": "Încarcă...",
-    "paginate": {
-        "first": "Prima pagină",
-        "last": "Ultima pagină",
-        "next": "Pagina următoare",
-        "previous": "Pagina precedentă"
-    },
     "processing": "Procesează...",
     "search": "Caută:",
     "searchBuilder": {

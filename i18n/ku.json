@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": چاڵاککردن بۆ ریزکردنی سەر بەرەو ژوور",
-        "sortDescending": ": چاڵاککردن بۆ ریزکردنی سەر بەرەو خوار"
+        "paginate": {
+            "first": "یەکەم",
+            "last": "کۆتایی",
+            "next": "دواتر",
+            "previous": "پێشتر"
+        }
     },
     "autoFill": {
         "cancel": "پاشگەزبوونەوە",
@@ -65,12 +69,6 @@
     "infoThousands": ",",
     "lengthMenu": "نیشانبدە _MENU_ تۆمارەکان",
     "loadingRecords": "وەرگرتنى تۆمارەکان...",
-    "paginate": {
-        "first": "یەکەم",
-        "last": "کۆتایی",
-        "next": "دواتر",
-        "previous": "پێشتر"
-    },
     "processing": "تکایە چاوەرێکە...",
     "search": "گەران:",
     "searchPlaceholder": "",

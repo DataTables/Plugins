@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": තීරුව ආරෝහනව තෝරන්න",
-        "sortDescending": ": තීරුව අවරෝහනව තෝරන්න"
+        "paginate": {
+            "first": "පළමු",
+            "last": "අන්තිම",
+            "next": "ඊළග",
+            "previous": "පසුගිය"
+        }
     },
     "autoFill": {
         "info": ""
@@ -15,12 +19,6 @@
     "infoThousands": ",",
     "lengthMenu": "_MENU_ ක් පෙන්වන්න",
     "loadingRecords": "පූරණය වෙමින් පවතී...",
-    "paginate": {
-        "first": "පළමු",
-        "last": "අන්තිම",
-        "next": "ඊළග",
-        "previous": "පසුගිය"
-    },
     "processing": "සැකසෙමින් පවතී...",
     "search": "සොයන්න :",
     "searchPlaceholder": "",

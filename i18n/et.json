@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": sorteeri kasvavalt",
-        "sortDescending": ": sorteeri kahanevalt"
+        "paginate": {
+            "first": "Algus",
+            "last": "Viimane",
+            "next": "J&auml;rgmine",
+            "previous": "Eelmine"
+        }
     },
     "autoFill": {
         "cancel": "Tühista",
@@ -106,12 +110,6 @@
     "infoPostFix": "",
     "lengthMenu": "N&auml;ita kirjeid _MENU_ kaupa",
     "loadingRecords": "Laadin...",
-    "paginate": {
-        "first": "Algus",
-        "last": "Viimane",
-        "next": "J&auml;rgmine",
-        "previous": "Eelmine"
-    },
     "processing": "Palun oodake, koostan kuvamiseks nimekirja!",
     "search": "Otsi k&otilde;ikide tulemuste seast:",
     "searchBuilder": {

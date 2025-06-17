@@ -1,4 +1,12 @@
 {
+    "aria": {
+        "paginate": {
+            "first": "An Chéad",
+            "last": "Last",
+            "next": "Ar Aghaidh",
+            "previous": "Roimhe Seo"
+        }
+    },
     "autoFill": {
         "info": ""
     },
@@ -8,12 +16,6 @@
     "infoFiltered": "(scagtha ó _MAX_ iontrálacha iomlán)",
     "infoPostFix": "",
     "lengthMenu": "Taispeáin iontrálacha _MENU_",
-    "paginate": {
-        "first": "An Chéad",
-        "last": "Last",
-        "next": "Ar Aghaidh",
-        "previous": "Roimhe Seo"
-    },
     "processing": "Próiseáil...",
     "search": "Cuardaigh:",
     "searchPlaceholder": "",

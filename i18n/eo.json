@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": aktivigi por filtri kolumnon kreskante",
-        "sortDescending": ": aktivigi por filtri kolumnon malkreskante"
+        "paginate": {
+            "first": "Unua",
+            "last": "Lasta",
+            "next": "Venonta",
+            "previous": "Antaŭa"
+        }
     },
     "autoFill": {
         "info": ""
@@ -15,12 +19,6 @@
     "infoThousands": ".",
     "lengthMenu": "Montri _MENU_ vicojn",
     "loadingRecords": "Ŝarĝas ...",
-    "paginate": {
-        "first": "Unua",
-        "last": "Lasta",
-        "next": "Venonta",
-        "previous": "Antaŭa"
-    },
     "processing": "Pretigas ...",
     "search": "Serĉi:",
     "searchPlaceholder": "",

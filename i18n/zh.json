@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": 激活以按升序排序此列",
-        "sortDescending": ": 激活以按降序排序此列"
+        "paginate": {
+            "first": "首页",
+            "last": "末页",
+            "next": "下页",
+            "previous": "上页"
+        }
     },
     "autoFill": {
         "cancel": "取消",
@@ -112,12 +116,6 @@
     "infoThousands": ",",
     "lengthMenu": "显示 _MENU_ 条记录",
     "loadingRecords": "正在加载...",
-    "paginate": {
-        "first": "首页",
-        "last": "末页",
-        "next": "下页",
-        "previous": "上页"
-    },
     "processing": "正在处理...",
     "search": "搜索:",
     "searchBuilder": {

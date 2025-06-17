@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": artan sütun sıralamasını aktifleştir",
-        "sortDescending": ": azalan sütun sıralamasını aktifleştir"
+        "paginate": {
+            "first": "İlk",
+            "last": "Son",
+            "next": "Sonraki",
+            "previous": "Önceki"
+        }
     },
     "autoFill": {
         "cancel": "İptal",
@@ -112,12 +116,6 @@
     "infoThousands": ".",
     "lengthMenu": "Sayfada _MENU_ kayıt göster",
     "loadingRecords": "Yükleniyor...",
-    "paginate": {
-        "first": "İlk",
-        "last": "Son",
-        "next": "Sonraki",
-        "previous": "Önceki"
-    },
     "processing": "İşleniyor...",
     "search": "Ara:",
     "searchBuilder": {

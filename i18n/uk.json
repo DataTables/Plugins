@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": активуйте, щоб сортувати колонку за зростанням",
-        "sortDescending": ": активуйте, щоб сортувати колонку за спаданням"
+        "paginate": {
+            "first": "Перша",
+            "last": "Остання",
+            "next": "Наступна",
+            "previous": "Попередня"
+        }
     },
     "autoFill": {
         "cancel": "Відміна",
@@ -87,12 +91,6 @@
     "infoThousands": ",",
     "lengthMenu": "Показати _MENU_ записів",
     "loadingRecords": "Завантаження",
-    "paginate": {
-        "first": "Перша",
-        "last": "Остання",
-        "next": "Наступна",
-        "previous": "Попередня"
-    },
     "processing": "Опрацювання...",
     "search": "Пошук:",
     "searchBuilder": {

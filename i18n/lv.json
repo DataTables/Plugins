@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": aktivizēt kolonnu, lai kārtotu augoši",
-        "sortDescending": ": aktivizēt kolonnu, lai kārtotu dilstoši"
+        "paginate": {
+            "first": "Pirmā",
+            "last": "Pēdējā",
+            "next": "Nākošā",
+            "previous": "Iepriekšējā"
+        }
     },
     "autoFill": {
         "cancel": "Atcelt",
@@ -112,12 +116,6 @@
     "infoThousands": ",",
     "lengthMenu": "Rādīt _MENU_ ierakstus",
     "loadingRecords": "Notiek ielāde...",
-    "paginate": {
-        "first": "Pirmā",
-        "last": "Pēdējā",
-        "next": "Nākošā",
-        "previous": "Iepriekšējā"
-    },
     "processing": "Uzgaidiet...",
     "search": "Meklēt:",
     "searchBuilder": {

@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": rhoi ar waith i drefnu colofnau o'r lleiaf i'r mwyaf",
-        "sortDescending": ": rhoi ar waith i drefnu colofnau o'r mwyaf i'r lleiaf"
+        "paginate": {
+            "first": "Cyntaf",
+            "last": "Olaf",
+            "next": "Nesaf",
+            "previous": "Blaenorol"
+        }
     },
     "autoFill": {
         "info": ""
@@ -15,12 +19,6 @@
     "infoThousands": ",",
     "lengthMenu": "Dangos _MENU_ cofnod",
     "loadingRecords": "Wrthi'n llwytho...",
-    "paginate": {
-        "first": "Cyntaf",
-        "last": "Olaf",
-        "next": "Nesaf",
-        "previous": "Blaenorol"
-    },
     "processing": "Wrthi'n prosesu...",
     "search": "Chwilio:",
     "searchPlaceholder": "",

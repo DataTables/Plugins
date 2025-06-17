@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": sütunu artma sırası üzərə aktiv etmək",
-        "sortDescending": ": sütunu azalma sırası üzərə aktiv etmək"
+        "paginate": {
+            "first": "İlk",
+            "last": "Axırıncı",
+            "next": "Sonrakı",
+            "previous": "Öncəki"
+        }
     },
     "autoFill": {
         "cancel": "Ləğv et",
@@ -82,12 +86,6 @@
     "infoThousands": ".",
     "lengthMenu": "Səhifədə _MENU_ nəticə göstər",
     "loadingRecords": "Yüklənir...",
-    "paginate": {
-        "first": "İlk",
-        "last": "Axırıncı",
-        "next": "Sonrakı",
-        "previous": "Öncəki"
-    },
     "processing": "Gözləyin...",
     "search": "Axtarış:",
     "searchBuilder": {

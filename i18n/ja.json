@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": 列を昇順に並べ替えるにはアクティブにする",
-        "sortDescending": ": 列を降順に並べ替えるにはアクティブにする"
+        "paginate": {
+            "first": "先頭",
+            "last": "最終",
+            "next": "次",
+            "previous": "前"
+        }
     },
     "autoFill": {
         "cancel": "キャンセル",
@@ -112,12 +116,6 @@
     "infoThousands": ",",
     "lengthMenu": "_MENU_ 件表示",
     "loadingRecords": "読み込み中...",
-    "paginate": {
-        "first": "先頭",
-        "last": "最終",
-        "next": "次",
-        "previous": "前"
-    },
     "processing": "処理中...",
     "search": "検索:",
     "searchBuilder": {

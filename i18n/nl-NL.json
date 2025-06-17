@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": activeer om kolom oplopend te sorteren",
-        "sortDescending": ": activeer om kolom aflopend te sorteren"
+        "paginate": {
+            "first": "Eerste",
+            "last": "Laatste",
+            "next": "Volgende",
+            "previous": "Vorige"
+        }
     },
     "autoFill": {
         "cancel": "Annuleren",
@@ -112,12 +116,6 @@
     "infoThousands": ".",
     "lengthMenu": "_MENU_ resultaten weergeven",
     "loadingRecords": "Een moment geduld aub - bezig met laden...",
-    "paginate": {
-        "first": "Eerste",
-        "last": "Laatste",
-        "next": "Volgende",
-        "previous": "Vorige"
-    },
     "processing": "Verwerken...",
     "search": "Zoeken:",
     "searchBuilder": {

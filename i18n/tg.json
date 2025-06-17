@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": фаъолкунӣ барои ҷобаҷогузории сатрҳо аз рӯи бисёршавӣ",
-        "sortDescending": ": фаъолкунӣ барои ҷобаҷогузории сатрҳо аз рӯи камшавӣ"
+        "paginate": {
+            "first": "Якум",
+            "last": "Охирон",
+            "next": "Ба пеш",
+            "previous": "Ба қафо"
+        }
     },
     "autoFill": {
         "info": ""
@@ -14,12 +18,6 @@
     "infoPostFix": "",
     "lengthMenu": "Намоиши сабтҳои _MENU_",
     "loadingRecords": "Боргирии сабтҳо...",
-    "paginate": {
-        "first": "Якум",
-        "last": "Охирон",
-        "next": "Ба пеш",
-        "previous": "Ба қафо"
-    },
     "processing": "Интизор шавед...",
     "search": "Ҷустуҷӯ:",
     "searchPlaceholder": "",

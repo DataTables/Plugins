@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": நிரலை ஏறுவரிசையில் வரிசைப்படுத்த செயல்படுத்த",
-        "sortDescending": ": நிரலை இறங்கு வரிசைப்படுத்த செயல்படுத்த"
+        "paginate": {
+            "first": "முதல்",
+            "last": "இறுதி",
+            "next": "அடுத்து",
+            "previous": "முந்தைய"
+        }
     },
     "autoFill": {
         "cancel": "ரத்து செய்",
@@ -55,12 +59,6 @@
     "infoThousands": ",",
     "lengthMenu": "_MENU_ காண்பி",
     "loadingRecords": "ஏற்றுகிறது ...",
-    "paginate": {
-        "first": "முதல்",
-        "last": "இறுதி",
-        "next": "அடுத்து",
-        "previous": "முந்தைய"
-    },
     "processing": "செயலாக்க ...",
     "search": "தேடு",
     "searchPlaceholder": "",

@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": aktiveer kolom om stygend te sorteer",
-        "sortDescending": ": aktiveer kolom om dalend te sorteer"
+        "paginate": {
+            "first": "eerste",
+            "last": "laaste",
+            "next": "volgende",
+            "previous": "vorige"
+        }
     },
     "autoFill": {
         "cancel": "kanselleer",
@@ -46,12 +50,6 @@
     "infoThousands": ",",
     "lengthMenu": "Wys _MENU_ rye",
     "loadingRecords": "Besig om te laai...",
-    "paginate": {
-        "first": "eerste",
-        "last": "laaste",
-        "next": "volgende",
-        "previous": "vorige"
-    },
     "processing": "Besig om te verwerk...",
     "search": "Soek:",
     "searchBuilder": {

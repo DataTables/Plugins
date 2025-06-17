@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": цагаан толгойн дарааллаар эрэмбэлэх",
-        "sortDescending": ": цагаан толгойн эсрэг дарааллаар эрэмбэлэх"
+        "paginate": {
+            "first": "Эхнийх",
+            "last": "Сүүлийнх",
+            "next": "Дараах",
+            "previous": "Өмнөх"
+        }
     },
     "autoFill": {
         "info": ""
@@ -15,12 +19,6 @@
     "infoThousands": ",",
     "lengthMenu": "Дэлгэцэд _MENU_ бичлэг харуулна",
     "loadingRecords": "Ачааллаж байна...",
-    "paginate": {
-        "first": "Эхнийх",
-        "last": "Сүүлийнх",
-        "next": "Дараах",
-        "previous": "Өмнөх"
-    },
     "processing": "Боловсруулж байна...",
     "search": "Хайлт:",
     "searchPlaceholder": "",

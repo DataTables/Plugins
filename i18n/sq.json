@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": aktivizo për të renditur kolonën me vlera në ngritje",
-        "sortDescending": ": aktivizo për të renditur kolonën me vlera në zbritje"
+        "paginate": {
+            "first": "E para",
+            "last": "E Fundit",
+            "next": "Tjetra",
+            "previous": "E Kaluara"
+        }
     },
     "autoFill": {
         "cancel": "Anulo",
@@ -112,12 +116,6 @@
     "infoThousands": ",",
     "lengthMenu": "Shfaq _MENU_ rreshta",
     "loadingRecords": "Po merren te dhënat...",
-    "paginate": {
-        "first": "E para",
-        "last": "E Fundit",
-        "next": "Tjetra",
-        "previous": "E Kaluara"
-    },
     "processing": "Po procesohen...",
     "search": "Kërkoni:",
     "searchBuilder": {

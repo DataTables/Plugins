@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": "מיון בסדר עולה",
-        "sortDescending": "מיון בסדר יורד"
+        "paginate": {
+            "first": "ראשון",
+            "last": "אחרון",
+            "next": "הבא",
+            "previous": "קודם"
+        }
     },
     "autoFill": {
         "cancel": "ביטול",
@@ -112,12 +116,6 @@
     "infoThousands": ",",
     "lengthMenu": "הצג _MENU_ פריטים",
     "loadingRecords": "טוען...",
-    "paginate": {
-        "first": "ראשון",
-        "last": "אחרון",
-        "next": "הבא",
-        "previous": "קודם"
-    },
     "processing": "מעבד...",
     "search": "חפש:",
     "searchBuilder": {

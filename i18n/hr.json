@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": aktiviraj za rastući poredak",
-        "sortDescending": ": aktiviraj za padajući poredak"
+        "paginate": {
+            "first": "Prva",
+            "last": "Zadnja",
+            "next": "Naprijed",
+            "previous": "Nazad"
+        }
     },
     "autoFill": {
         "cancel": "Poništi",
@@ -107,12 +111,6 @@
     "infoThousands": ",",
     "lengthMenu": "Prikaži _MENU_ rezultata po stranici",
     "loadingRecords": "Dohvaćam...",
-    "paginate": {
-        "first": "Prva",
-        "last": "Zadnja",
-        "next": "Naprijed",
-        "previous": "Nazad"
-    },
     "processing": "Obrađujem...",
     "search": "Pretraži:",
     "searchBuilder": {

@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": فعال سازی نمایش به صورت صعودی",
-        "sortDescending": ": فعال سازی نمایش به صورت نزولی"
+        "paginate": {
+            "first": "ابتدا",
+            "last": "انتها",
+            "next": "بعدی",
+            "previous": "قبلی"
+        }
     },
     "autoFill": {
         "cancel": "انصراف",
@@ -112,12 +116,6 @@
     "infoThousands": ",",
     "lengthMenu": "نمایش _MENU_ ردیف",
     "loadingRecords": "در حال بارگذاری...",
-    "paginate": {
-        "first": "ابتدا",
-        "last": "انتها",
-        "next": "بعدی",
-        "previous": "قبلی"
-    },
     "processing": "در حال پردازش...",
     "search": "جستجو:",
     "searchBuilder": {

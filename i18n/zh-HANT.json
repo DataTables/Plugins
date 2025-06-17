@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": "：升冪排列",
-        "sortDescending": "：降冪排列"
+        "paginate": {
+            "first": "第一頁",
+            "last": "最後一頁",
+            "next": "下一頁",
+            "previous": "上一頁"
+        }
     },
     "autoFill": {
         "cancel": "取消",
@@ -108,12 +112,6 @@
     "infoThousands": ",",
     "lengthMenu": "顯示 _MENU_ 筆結果",
     "loadingRecords": "載入中...",
-    "paginate": {
-        "first": "第一頁",
-        "last": "最後一頁",
-        "next": "下一頁",
-        "previous": "上一頁"
-    },
     "processing": "處理中...",
     "search": "搜尋：",
     "searchBuilder": {

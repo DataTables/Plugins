@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": ከመጀመሪያ ወደ መጨረሻ(ወጪ) አደራደር",
-        "sortDescending": ": ከመጨረሻ ወደ መጀመሪያ(ወራጅ) አደራደር"
+        "paginate": {
+            "first": "መጀመሪያ",
+            "last": "መጨረሻ",
+            "next": "ቀጣዩ",
+            "previous": "የበፊቱ"
+        }
     },
     "autoFill": {
         "info": ""
@@ -15,12 +19,6 @@
     "infoThousands": ",",
     "lengthMenu": "የዝርዝሮች ብዛት _MENU_",
     "loadingRecords": "በማቅረብ ላይ...",
-    "paginate": {
-        "first": "መጀመሪያ",
-        "last": "መጨረሻ",
-        "next": "ቀጣዩ",
-        "previous": "የበፊቱ"
-    },
     "processing": "በማቀናበር ላይ...",
     "search": "ፈልግ:",
     "searchPlaceholder": "",

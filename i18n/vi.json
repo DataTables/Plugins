@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": Sắp xếp thứ tự tăng dần",
-        "sortDescending": ": Sắp xếp thứ tự giảm dần"
+        "paginate": {
+            "first": "Đầu tiên",
+            "last": "Cuối cùng",
+            "next": "Sau",
+            "previous": "Trước"
+        }
     },
     "autoFill": {
         "cancel": "Hủy",
@@ -112,12 +116,6 @@
     "infoThousands": ".",
     "lengthMenu": "Hiển thị _MENU_ mục",
     "loadingRecords": "Đang tải...",
-    "paginate": {
-        "first": "Đầu tiên",
-        "last": "Cuối cùng",
-        "next": "Sau",
-        "previous": "Trước"
-    },
     "processing": "Đang xử lý...",
     "search": "Tìm kiếm:",
     "searchBuilder": {

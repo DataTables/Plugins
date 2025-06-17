@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": ενεργοποιήστε για αύξουσα ταξινόμηση της στήλης",
-        "sortDescending": ": ενεργοποιήστε για φθίνουσα ταξινόμηση της στήλης"
+        "paginate": {
+            "first": "Πρώτη",
+            "last": "Τελευταία",
+            "next": "Επόμενη",
+            "previous": "Προηγούμενη"
+        }
     },
     "autoFill": {
         "cancel": "Ακύρωση",
@@ -104,12 +108,6 @@
     "infoThousands": ".",
     "lengthMenu": "Δείξε _MENU_ εγγραφές",
     "loadingRecords": "Φόρτωση...",
-    "paginate": {
-        "first": "Πρώτη",
-        "last": "Τελευταία",
-        "next": "Επόμενη",
-        "previous": "Προηγούμενη"
-    },
     "processing": "Επεξεργασία...",
     "search": "Αναζήτηση:",
     "searchBuilder": {

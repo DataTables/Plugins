@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": активировать для сортировки столбца по возрастанию",
-        "sortDescending": ": активировать для сортировки столбца по убыванию"
+        "paginate": {
+            "first": "Первая",
+            "last": "Последняя",
+            "next": "Следующая",
+            "previous": "Предыдущая"
+        }
     },
     "autoFill": {
         "cancel": "Отменить",
@@ -112,12 +116,6 @@
     "infoThousands": ",",
     "lengthMenu": "Показать _MENU_ записей",
     "loadingRecords": "Загрузка записей...",
-    "paginate": {
-        "first": "Первая",
-        "last": "Последняя",
-        "next": "Следующая",
-        "previous": "Предыдущая"
-    },
     "processing": "Подождите...",
     "search": "Поиск:",
     "searchBuilder": {

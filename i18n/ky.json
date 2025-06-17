@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": иретте",
-        "sortDescending": ": тескери иретте"
+        "paginate": {
+            "first": "Биринчи",
+            "last": "Акыркы",
+            "next": "Кийинки",
+            "previous": "Мурунку"
+        }
     },
     "autoFill": {
         "cancel": "Жокко чыгаруу",
@@ -23,12 +27,6 @@
     "infoThousands": " ",
     "lengthMenu": "_MENU_ саптан көрсөт",
     "loadingRecords": "Жүктөлүүдө...",
-    "paginate": {
-        "first": "Биринчи",
-        "last": "Акыркы",
-        "next": "Кийинки",
-        "previous": "Мурунку"
-    },
     "processing": "Иштеп жатат...",
     "search": "Издөө:",
     "searchBuilder": {

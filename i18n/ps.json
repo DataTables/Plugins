@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": په صعودي ډول مرتبول",
-        "sortDescending": ": په نزولي ډول مرتبول"
+        "paginate": {
+            "first": "لومړۍ",
+            "last": "وروستۍ",
+            "next": "بله",
+            "previous": "شاته"
+        }
     },
     "autoFill": {
         "cancel": "لغوه کول",
@@ -112,12 +116,6 @@
     "infoThousands": ",",
     "lengthMenu": "_MENU_ کتاره وښايه",
     "loadingRecords": "منتظر اوسئ...",
-    "paginate": {
-        "first": "لومړۍ",
-        "last": "وروستۍ",
-        "next": "بله",
-        "previous": "شاته"
-    },
     "processing": "منتظر اوسئ...",
     "search": "لټون:",
     "searchPlaceholder": "",

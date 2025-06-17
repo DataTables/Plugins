@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": aktivujte na zoradenie stĺpca vzostupne",
-        "sortDescending": ": aktivujte na zoradenie stĺpca zostupne"
+        "paginate": {
+            "first": "Prvá",
+            "last": "Posledná",
+            "next": "Nasledujúca",
+            "previous": "Predchádzajúca"
+        }
     },
     "autoFill": {
         "cancel": "Zrušiť",
@@ -112,12 +116,6 @@
     "infoThousands": " ",
     "lengthMenu": "Zobraz _MENU_ záznamov",
     "loadingRecords": "Načítavam...",
-    "paginate": {
-        "first": "Prvá",
-        "last": "Posledná",
-        "next": "Nasledujúca",
-        "previous": "Predchádzajúca"
-    },
     "processing": "Spracúvam...",
     "search": "Hľadať:",
     "searchBuilder": {

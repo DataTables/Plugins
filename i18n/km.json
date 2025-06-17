@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": ចុចដើម្បីរៀបជួរឈរនេះតាមលំដាប់ឡើង",
-        "sortDescending": ": ចុចដើម្បីរៀបជួរឈរនេះតាមលំដាប់ចុះ"
+        "paginate": {
+            "first": "ដំបូងគេ",
+            "last": "ចុងក្រោយ",
+            "next": "បន្ទាប់",
+            "previous": "ក្រោយ"
+        }
     },
     "autoFill": {
         "cancel": "បោះបង់",
@@ -112,12 +116,6 @@
     "infoThousands": ".",
     "lengthMenu": "បង្ហាញទិន្នន័យ _MENU_ ",
     "loadingRecords": "កំពុងផ្ទុក...",
-    "paginate": {
-        "first": "ដំបូងគេ",
-        "last": "ចុងក្រោយ",
-        "next": "បន្ទាប់",
-        "previous": "ក្រោយ"
-    },
     "processing": "កំពុងដំណើរការ...",
     "search": "ស្វែងរក:",
     "searchBuilder": {

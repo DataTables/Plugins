@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": lajittele sarake nousevasti",
-        "sortDescending": ": lajittele sarake laskevasti"
+        "paginate": {
+            "first": "Ensimmäinen",
+            "last": "Viimeinen",
+            "next": "Seuraava",
+            "previous": "Edellinen"
+        }
     },
     "autoFill": {
         "cancel": "Peruuta",
@@ -109,12 +113,6 @@
     "infoThousands": ".",
     "lengthMenu": "Näytä kerralla _MENU_ riviä",
     "loadingRecords": "Ladataan...",
-    "paginate": {
-        "first": "Ensimmäinen",
-        "last": "Viimeinen",
-        "next": "Seuraava",
-        "previous": "Edellinen"
-    },
     "processing": "Hetkinen...",
     "search": "Etsi:",
     "searchPanes": {

@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": Zutabea goranzko eran ordenatzeko aktibatu ",
-        "sortDescending": ": Zutabea beheranzko eran ordenatzeko aktibatu"
+        "paginate": {
+            "first": "Lehenengoa",
+            "last": "Azkena",
+            "next": "Hurrengoa",
+            "previous": "Aurrekoa"
+        }
     },
     "autoFill": {
         "cancel": "Utzi",
@@ -162,12 +166,6 @@
     "lengthMenu": "Erakutsi _MENU_ erregistro",
     "loadingRecords": "Abiarazten...",
     "orderClear": "Garbitu ordenazioa guztiak",
-    "paginate": {
-        "first": "Lehenengoa",
-        "last": "Azkena",
-        "next": "Hurrengoa",
-        "previous": "Aurrekoa"
-    },
     "processing": "Prozesatzen...",
     "search": "Bilatu:",
     "searchBuilder": {

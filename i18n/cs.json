@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": "Aktivujte pro seřazení vzestupně",
-        "sortDescending": "Aktivujte pro seřazení sestupně"
+        "paginate": {
+            "first": "První",
+            "last": "Poslední",
+            "next": "Další",
+            "previous": "Předchozí"
+        }
     },
     "autoFill": {
         "cancel": "Zrušit",
@@ -112,12 +116,6 @@
     "infoThousands": " ",
     "lengthMenu": "Zobrazit _MENU_ výsledků",
     "loadingRecords": "Načítám...",
-    "paginate": {
-        "first": "První",
-        "last": "Poslední",
-        "next": "Další",
-        "previous": "Předchozí"
-    },
     "processing": "Zpracovávání...",
     "search": "Vyhledávání:",
     "searchBuilder": {

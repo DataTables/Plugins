@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": activar per zavrar las colonnas ensi",
-        "sortDescending": ": activar per zavrar las colonnas engiu"
+        "paginate": {
+            "first": "Emprima",
+            "last": "Ultima",
+            "next": "Proxima",
+            "previous": "Anavos"
+        }
     },
     "autoFill": {
         "info": ""
@@ -30,12 +34,6 @@
     "infoThousands": ".",
     "lengthMenu": "_MENU_ Dumber da cumparsas",
     "loadingRecords": "vegn chargià ..",
-    "paginate": {
-        "first": "Emprima",
-        "last": "Ultima",
-        "next": "Proxima",
-        "previous": "Anavos"
-    },
     "processing": "Spetgar p.pl...",
     "search": "Tschertga",
     "searchPlaceholder": "",

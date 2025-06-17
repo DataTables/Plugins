@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": seti kulainisha sanjari kwa mtindo wa upandaji",
-        "sortDescending": ": seti kulainisha sanjari kwa mtindo wa mteremko"
+        "paginate": {
+            "first": "Mwanzo",
+            "last": "Mwisho",
+            "next": "Ijayo",
+            "previous": "Kabla"
+        }
     },
     "autoFill": {
         "cancel": "Ghairi",
@@ -97,12 +101,6 @@
     "infoThousands": ",",
     "lengthMenu": "Onyesha _MENU_ matokeo",
     "loadingRecords": "Inapakia...",
-    "paginate": {
-        "first": "Mwanzo",
-        "last": "Mwisho",
-        "next": "Ijayo",
-        "previous": "Kabla"
-    },
     "processing": "Processing...",
     "search": "Tafuta:",
     "searchBuilder": {

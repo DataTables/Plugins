@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": સ્તંભ ચડતા ક્રમમાં ગોઠવવા માટે સક્રિય",
-        "sortDescending": ": કૉલમ ઉતરતા ક્રમમાં ગોઠવવા માટે સક્રિય"
+        "paginate": {
+            "first": "પ્રથમ",
+            "last": "અંતિમ",
+            "next": "આગામી",
+            "previous": "ગત"
+        }
     },
     "autoFill": {
         "info": ""
@@ -15,12 +19,6 @@
     "infoThousands": ",",
     "lengthMenu": "બતાવો _MENU_ પ્રવેશો",
     "loadingRecords": "લોડ કરી રહ્યું છે ...",
-    "paginate": {
-        "first": "પ્રથમ",
-        "last": "અંતિમ",
-        "next": "આગામી",
-        "previous": "ગત"
-    },
     "processing": "પ્રક્રિયા ...",
     "search": "શોધો:",
     "searchPlaceholder": "",

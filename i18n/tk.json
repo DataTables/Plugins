@@ -1,4 +1,12 @@
 {
+    "aria": {
+        "paginate": {
+            "first": "Birinji",
+            "last": "Soňky",
+            "next": "Indiki",
+            "previous": "Öňki"
+        }
+    },
     "autoFill": {
         "fill": "Doldurmak",
         "info": ""
@@ -32,12 +40,6 @@
     "infoPostFix": "",
     "lengthMenu": "_MENU_ ýazgyny görkezmek",
     "loadingRecords": "Ýüklenýär",
-    "paginate": {
-        "first": "Birinji",
-        "last": "Soňky",
-        "next": "Indiki",
-        "previous": "Öňki"
-    },
     "processing": "Işlenýär",
     "search": "Gözleg",
     "searchPlaceholder": "",

@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": ਕਾਲਮ ਨੂੰ ਵੱਧਦੇ ਕ੍ਰਮ ਵਿਚ ਵੇਖੋ",
-        "sortDescending": ": ਕਾਲਮ ਨੂੰ ਘਟਦੇ ਕ੍ਰਮ ਵਿਚ ਵੇਖੋ"
+        "paginate": {
+            "first": "ਪਹਿਲਾ",
+            "last": "ਅਖੀਰਲਾ",
+            "next": "ਅਗਲਾ",
+            "previous": "ਪਿਛਲਾ"
+        }
     },
     "autoFill": {
         "info": ""
@@ -32,12 +36,6 @@
     "infoThousands": ",",
     "lengthMenu": "ਕੁੱਲ _MENU_ ਕਤਾਰਾਂ",
     "loadingRecords": "ਸੂਚੀ ਲੋਡ ਹੋ ਰਹੀ ਹੈ...",
-    "paginate": {
-        "first": "ਪਹਿਲਾ",
-        "last": "ਅਖੀਰਲਾ",
-        "next": "ਅਗਲਾ",
-        "previous": "ਪਿਛਲਾ"
-    },
     "processing": "ਕਾਰਵਾਈ ਚੱਲ ਰਹੀ ਹੈ...",
     "search": "ਖੋਜ ਕਰੋ:",
     "searchPlaceholder": "",

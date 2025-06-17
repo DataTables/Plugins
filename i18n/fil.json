@@ -1,4 +1,12 @@
 {
+    "aria": {
+        "paginate": {
+            "first": "Unang",
+            "last": "Huli",
+            "next": "Susunod",
+            "previous": "Nakaraan"
+        }
+    },
     "autoFill": {
         "info": ""
     },
@@ -8,12 +16,6 @@
     "infoFiltered": "(na-filter mula _MAX_ kabuuang entries)",
     "infoPostFix": "",
     "lengthMenu": "Ipakita _MENU_ entries",
-    "paginate": {
-        "first": "Unang",
-        "last": "Huli",
-        "next": "Susunod",
-        "previous": "Nakaraan"
-    },
     "processing": "Pagproseso...",
     "search": "Paghahanap:",
     "searchPlaceholder": "",

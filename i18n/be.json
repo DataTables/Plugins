@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": актываваць для сартавання слупка па ўзрастанні",
-        "sortDescending": ": актываваць для сартавання слупка па змяншэнні"
+        "paginate": {
+            "first": "Першая",
+            "last": "Апошняя",
+            "next": "Наступная",
+            "previous": "Папярэдняя"
+        }
     },
     "autoFill": {
         "info": ""
@@ -12,12 +16,6 @@
     "infoFiltered": "(адфільтравана з _MAX_ запісаў)",
     "infoPostFix": "",
     "lengthMenu": "Паказваць _MENU_ запісаў",
-    "paginate": {
-        "first": "Першая",
-        "last": "Апошняя",
-        "next": "Наступная",
-        "previous": "Папярэдняя"
-    },
     "processing": "Пачакайце...",
     "search": "Пошук:",
     "searchPlaceholder": "",

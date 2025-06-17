@@ -1,7 +1,11 @@
 {
     "aria": {
-        "sortAscending": ": अगाडिबाट अक्षरात्मक रूपमा क्रमबद्ध गराउने",
-        "sortDescending": ": पछाडिबाट अक्षरात्मक रूपमा क्रमबद्ध गराउने"
+        "paginate": {
+            "first": "प्रथम",
+            "last": "अन्तिम",
+            "next": "अघिल्लो",
+            "previous": "पछिल्लो"
+        }
     },
     "autoFill": {
         "cancel": " रद्द गर्नुहोस्",
@@ -45,12 +49,6 @@
     "infoThousands": ",",
     "lengthMenu": " _MENU_ रेकर्ड देखाउने ",
     "loadingRecords": "लोड हुँदैछ...",
-    "paginate": {
-        "first": "प्रथम",
-        "last": "अन्तिम",
-        "next": "अघिल्लो",
-        "previous": "पछिल्लो"
-    },
     "processing": "प्रगति हुदैंछ ...",
     "search": "खोजी:",
     "searchPlaceholder": "",
