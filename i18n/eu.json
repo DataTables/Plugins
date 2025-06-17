@@ -42,7 +42,7 @@
         "colVisDropdown": "Ikusgaitasun menu zabalgarria",
         "dropdown": "menu zabalgarria",
         "list": {
-            "add": "Gehitu",
+            "all": "Gehitu",
             "empty": "Hustu",
             "none": "Bat ere ez",
             "search": "Bilatu..."

@@ -42,7 +42,7 @@
         "colVisDropdown": "Desplegable visibilidad",
         "dropdown": "Desplegable",
         "list": {
-            "add": "Añadir",
+            "all": "Añadir",
             "none": "Ninguno",
             "search": "Buscar.."
         },

@@ -45,7 +45,7 @@
         "colVisDropdown": "Visibilité colonnes",
         "dropdown": "Plus...",
         "list": {
-            "add": "Tout sélectionner",
+            "all": "Tout sélectionner",
             "empty": "Vide",
             "none": "Désélectionner",
             "search": "Rechercher..."
@@ -79,9 +79,11 @@
                 "notEqual": "Différent de"
             },
             "text": {
+                "contains": "Contient",
                 "empty": "Vide",
                 "ends": "Se termine par",
                 "equal": "Égal à",
+                "notContains": "Ne contient pas",
                 "notEmpty": "Non vide",
                 "notEqual": "Différent de",
                 "starts": "Commence par"

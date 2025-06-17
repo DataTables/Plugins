@@ -42,7 +42,7 @@
         "colVisDropdown": "Sichtbarkeit der Spalte",
         "dropdown": "Mehr...",
         "list": {
-            "add": "Alle auswählen",
+            "all": "Alle auswählen",
             "none": "Nichts auswählen",
             "search": "Suche..."
         },
