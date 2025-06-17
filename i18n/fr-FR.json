@@ -1,5 +1,8 @@
 {
     "aria": {
+        "orderable": "Activer pour trier",
+        "orderableRemove": "Activer pour supprimer le tri",
+        "orderableReverse": "Activer pour inverser le tri",
         "paginate": {
             "first": "Première",
             "last": "Dernière",
