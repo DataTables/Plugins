@@ -1,5 +1,8 @@
 {
     "aria": {
+        "orderable": "Activar para ordenar",
+        "orderableRemove": "Activar para quitar ordenación",
+        "orderableReverse": "Activar para ordenar de forma inversa",
         "paginate": {
             "first": "Primero",
             "last": "Último",
@@ -30,7 +33,8 @@
         "excel": "Excel",
         "pageLength": {
             "_": "Mostrar %d filas",
-            "-1": "Mostrar todas las filas"
+            "-1": "Mostrar todas las filas",
+            "1": "Mostrar 1 fila"
         },
         "pdf": "PDF",
         "print": "Imprimir",
@@ -42,17 +46,22 @@
         "updateState": "Actualizar"
     },
     "columnControl": {
+        "buttons": {
+            "searchClear": "Borrar búsqueda"
+        },
         "colVis": "Visibilidad",
         "colVisDropdown": "Desplegable visibilidad",
         "dropdown": "Desplegable",
         "list": {
             "all": "Añadir",
+            "empty": "Vacío",
             "none": "Ninguno",
             "search": "Buscar.."
         },
         "orderAddAsc": "Añadir a ordenación ascendente",
         "orderAddDesc": "Añadir a ordenación descencente",
         "orderAsc": "Ordenar ascendentemente",
+        "orderClear": "Borrar ordenación",
         "orderDesc": "Ordenar descendentemente",
         "orderRemove": "Borrar de ordenación",
         "reorder": "Reordenar",
@@ -78,9 +87,11 @@
                 "notEqual": "Diferente de"
             },
             "text": {
+                "contains": "Contiene",
                 "empty": "Vacío",
                 "ends": "Finaliza con",
                 "equal": "Igual a",
+                "notContains": "no contiene",
                 "notEmpty": "No vacío",
                 "notEqual": "Diferente de",
                 "starts": "Empieza con"
@@ -162,6 +173,9 @@
     "infoFiltered": "(filtrado de un total de _MAX_ registros)",
     "infoPostFix": "",
     "infoThousands": ".",
+    "lengthLabels": {
+        "-1": "Todas"
+    },
     "lengthMenu": "Mostrar _MENU_ registros",
     "loadingRecords": "Cargando...",
     "orderClear": "Limpiar ordenación de toda la tabla",
@@ -225,6 +239,7 @@
         "logicAnd": "Y",
         "logicOr": "O",
         "rightTitle": "Criterios de sangría",
+        "search": "Buscar",
         "title": {
             "_": "Constructor de búsqueda (%d)",
             "0": "Constructor de búsqueda"
@@ -240,6 +255,7 @@
         "collapseMessage": "Colapsar Todo",
         "count": "{total}",
         "countFiltered": "{shown} ({total})",
+        "emptyMessage": "vacío",
         "emptyPanes": "Sin paneles de búsqueda",
         "loadMessage": "Cargando paneles de búsqueda",
         "showMessage": "Mostrar Todo",

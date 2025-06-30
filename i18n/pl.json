@@ -1,5 +1,8 @@
 {
     "aria": {
+        "orderable": "Aktywuj sortowanie",
+        "orderableRemove": "Aktywuj, aby usunąć sortowanie",
+        "orderableReverse": "Aktywuj, aby odwrócić sortowanie",
         "paginate": {
             "first": "Pierwsza",
             "last": "Ostatnia",
@@ -30,7 +33,8 @@
         "excel": "Excel",
         "pageLength": {
             "_": "Pokaż %d wierszy",
-            "-1": "Pokaż wszystkie wiersze"
+            "-1": "Pokaż wszystkie wiersze",
+            "1": "Pokaż 1 wiersz"
         },
         "pdf": "PDF",
         "print": "Drukuj",
@@ -40,6 +44,61 @@
         "savedStates": "Zapisane stany",
         "stateRestore": "Stan %d",
         "updateState": "Aktualizuj"
+    },
+    "columnControl": {
+        "buttons": {
+            "searchClear": "Wyczyść wyszukiwanie"
+        },
+        "colVis": "Widoczność kolumn",
+        "colVisDropdown": "Widoczność kolumn",
+        "dropdown": "Więcej...",
+        "list": {
+            "all": "Zaznacz wszystko",
+            "empty": "Puste",
+            "none": "Odznacz wszystko",
+            "search": "Szukaj..."
+        },
+        "orderAddAsc": "Dodaj sortowanie rosnąco",
+        "orderAddDesc": "Dodaj sortowanie malejąco",
+        "orderAsc": "Sortowanie rosnące",
+        "orderClear": "Wyczyść sortowanie",
+        "orderDesc": "Sortowanie malejące",
+        "orderRemove": "Usuń z sortowania",
+        "reorder": "Przestaw kolumny",
+        "reorderLeft": "Przesuń kolumnę w lewo",
+        "reorderRight": "Przesuń kolumnę w prawo",
+        "search": {
+            "datetime": {
+                "empty": "Puste",
+                "equal": "Równe",
+                "greater": "Po",
+                "less": "Przed",
+                "notEmpty": "Niepuste",
+                "notEqual": "Różne od"
+            },
+            "number": {
+                "empty": "Puste",
+                "equal": "Równe",
+                "greater": "Większe niż",
+                "greaterOrEqual": "Większe lub równe",
+                "less": "Mniejsze niż",
+                "lessOrEqual": "Mniejsze lub równe",
+                "notEmpty": "Niepuste",
+                "notEqual": "Różne od"
+            },
+            "text": {
+                "contains": "Zawiera",
+                "empty": "Puste",
+                "ends": "Kończy się na",
+                "equal": "Równe",
+                "notContains": "Nie zawiera",
+                "notEmpty": "Niepuste",
+                "notEqual": "Różne od",
+                "starts": "Zaczyna się od"
+            }
+        },
+        "searchClear": "Wyczyść wyszukiwanie",
+        "searchDropdown": "Wyszukaj"
     },
     "datetime": {
         "amPm": {
@@ -114,8 +173,12 @@
     "infoFiltered": "(filtrowanie spośród _MAX_ dostępnych pozycji)",
     "infoPostFix": "",
     "infoThousands": " ",
+    "lengthLabels": {
+        "-1": "Wszystko"
+    },
     "lengthMenu": "Pokaż _MENU_ pozycji",
     "loadingRecords": "Wczytywanie...",
+    "orderClear": "Wyczyść sortowanie",
     "processing": "Przetwarzanie...",
     "search": "Szukaj:",
     "searchBuilder": {
@@ -176,6 +239,7 @@
         "logicAnd": "I",
         "logicOr": "Lub",
         "rightTitle": "Prawy",
+        "search": "Szukaj",
         "title": {
             "_": "Aktywne zapytania",
             "0": "Budowanie zapytania"
@@ -191,6 +255,7 @@
         "collapseMessage": "Rozwiń wszystko",
         "count": "{total}",
         "countFiltered": "{shown} ({total})",
+        "emptyMessage": "&lt;em&gt;brak danych&lt;\/em&gt;",
         "emptyPanes": "Brak paneli wyszukań",
         "loadMessage": "Ładuję panele wyszukań",
         "showMessage": "Pokaż wszystko",
@@ -209,7 +274,9 @@
             "1": "zaznaczono %d kolumnę"
         },
         "rows": {
-            "0": ""
+            "_": "Zaznaczono %d wierszy",
+            "0": "",
+            "1": "Zaznaczono 1 wiersz"
         }
     },
     "stateRestore": {

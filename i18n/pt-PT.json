@@ -8,10 +8,10 @@
         }
     },
     "autoFill": {
-        "cancel": "cancelar",
-        "fill": "preencher",
-        "fillHorizontal": "preencher células na horizontal",
-        "fillVertical": "preencher células na vertical",
+        "cancel": "Cancelar",
+        "fill": "Preencher",
+        "fillHorizontal": "Preencher células na horizontal",
+        "fillVertical": "Preencher células na vertical",
         "info": ""
     },
     "buttons": {
@@ -19,13 +19,13 @@
         "colvis": "Visibilidade de colunas",
         "colvisRestore": "Restaurar visibilidade",
         "copy": "Copiar",
-        "copyKeys": "Pressionar CTRL ou u2318 + C para copiar a informação para a área de transferência. Para cancelar, clique nesta mensagem ou pressione ESC.",
+        "copyKeys": "Pressionar CTRL ou u2318 + C para copiar a informação para a área de transferência.<br \/><br \/>Para cancelar, clique nesta mensagem ou pressione ESC.",
         "copySuccess": {
             "_": "%ds linhas copiadas para a área de transferência",
             "1": "Uma linha copiada para a área de transferência"
         },
         "copyTitle": "Copiar para a área de transferência",
-        "createState": "Criar",
+        "createState": "Criar Estado",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -34,20 +34,63 @@
         },
         "pdf": "PDF",
         "print": "Imprimir",
-        "removeAllStates": "Remover Todos",
+        "removeAllStates": "Remover Todos os Estados",
         "removeState": "Remover",
         "renameState": "Renomear",
-        "savedStates": "Gravados",
+        "savedStates": "Estados Gravados",
         "stateRestore": "Estado %d",
         "updateState": "Atualizar"
+    },
+    "columnControl": {
+        "colVis": "Visibilidade da coluna",
+        "colVisDropdown": "Visibilidade da coluna",
+        "dropdown": "Mostrar mais...",
+        "list": {
+            "all": "Todos",
+            "empty": "Vazio",
+            "none": "Nenhum",
+            "search": "Pesquisar..."
+        },
+        "orderAddAsc": "Adicionar à ordem crescente",
+        "orderAddDesc": "Adicionar à ordem decrescente",
+        "orderAsc": "Ordem crescente",
+        "orderDesc": "Ordem decrescente",
+        "orderRemove": "Remover ordenação",
+        "reorder": "Reordenar",
+        "reorderLeft": "Mover para a esquerda",
+        "reorderRight": "Mover para a direita",
+        "search": {
+            "datetime": {
+                "empty": "Vazio",
+                "equal": "Igual a",
+                "greater": "Posterior a",
+                "less": "Anterior a",
+                "notEmpty": "Não está vazio",
+                "notEqual": "Diferente de"
+            },
+            "number": {
+                "equal": "Igual a",
+                "notEqual": "Diferente de"
+            },
+            "text": {
+                "empty": "Vazio",
+                "ends": "Termina em",
+                "equal": "Igual a",
+                "notEmpty": "Não está vazio",
+                "notEqual": "Diferente de",
+                "starts": "Começa por"
+            }
+        },
+        "searchClear": "Limpar pesquisa",
+        "searchDropdown": "Pesquisar"
     },
     "datetime": {
         "amPm": {
             "0": "am",
             "1": "pm"
         },
-        "hours": "horas",
-        "minutes": "minutos",
+        "hours": "Horas",
+        "minutes": "Minutos",
         "months": {
             "0": "Janeiro",
             "1": "Fevereiro",
@@ -62,10 +105,10 @@
             "8": "Setembro",
             "9": "Outubro"
         },
-        "next": "próximo",
-        "previous": "anterior",
-        "seconds": "segundos",
-        "unknown": "desconhecido",
+        "next": "Próximo",
+        "previous": "Anterior",
+        "seconds": "Segundos",
+        "unknown": "-",
         "weekdays": {
             "0": "Dom",
             "1": "Seg",
@@ -82,27 +125,27 @@
         "create": {
             "button": "Novo",
             "submit": "Criar",
-            "title": "Criar novo registro"
+            "title": "Criar novo registo"
         },
         "edit": {
             "button": "Editar",
             "submit": "Atualizar",
-            "title": "Editar registro"
+            "title": "Editar registo"
         },
         "error": {
             "system": "Ocorreu um erro no sistema"
         },
         "multi": {
-            "info": "Os itens selecionados contêm valores diferentes para esta entrada. Para editar e definir todos os itens nesta entrada com o mesmo valor, clique ou toque aqui, caso contrário, eles manterão os seus valores individuais.",
+            "info": "Os itens selecionados contêm valores diferentes para esta entrada. Para editar e definir todos os itens nesta entrada com o mesmo valor, clique ou toque aqui, caso contrário eles manterão os seus valores individuais.",
             "noMulti": "Este campo pode ser editado individualmente mas não pode ser editado em grupo",
             "restore": "Desfazer alterações",
-            "title": "Multiplos valores"
+            "title": "Múltiplos valores"
         },
         "remove": {
             "button": "Remover",
             "confirm": {
-                "_": "Tem certeza que quer apagar %d entradas?",
-                "1": "Tem certeza que quer apagar esta entrada?"
+                "_": "Tem a certeza que pretende eliminar %d entradas?",
+                "1": "Tem a certeza que pretende eliminar esta entrada?"
             },
             "submit": "Remover",
             "title": "Remover"
@@ -110,12 +153,13 @@
     },
     "emptyTable": "Não foi encontrado nenhum registo",
     "info": "Mostrando os registos _START_ a _END_ num total de _TOTAL_",
-    "infoEmpty": "Mostrando 0 os registos num total de 0",
+    "infoEmpty": "Mostrando 0 registos num total de 0",
     "infoFiltered": "(filtrado num total de _MAX_ registos)",
     "infoPostFix": "",
     "infoThousands": ".",
     "lengthMenu": "Mostrar _MENU_ registos",
     "loadingRecords": "A carregar...",
+    "orderClear": "Remover ordenação",
     "processing": "A processar...",
     "search": "Procurar:",
     "searchBuilder": {
@@ -199,19 +243,19 @@
     "searchPlaceholder": "",
     "select": {
         "cells": {
-            "_": "%d células seleccionadas",
+            "_": "%d células selecionadas",
             "0": "",
-            "1": "1 célula seleccionada"
+            "1": "1 célula selecionada"
         },
         "columns": {
-            "_": "%d colunas seleccionadas",
+            "_": "%d colunas selecionadas",
             "0": "",
-            "1": "1 coluna seleccionada"
+            "1": "1 coluna selecionada"
         },
         "rows": {
-            "_": "%d linhas seleccionadas",
+            "_": "%d linhas selecionadas",
             "0": "",
-            "1": "%d linha seleccionada"
+            "1": "%d linha selecionada"
         }
     },
     "stateRestore": {
@@ -232,7 +276,7 @@
             "toggleLabel": "Incluir:"
         },
         "duplicateError": "Já existe um estado com o mesmo nome",
-        "emptyError": "Não pode estar a vazio",
+        "emptyError": "Nome não pode ser vazio",
         "emptyStates": "Não existem estados gravados",
         "removeConfirm": "Deseja mesmo remover o estado %s?",
         "removeError": "Erro ao remover o estado.",

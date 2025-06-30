@@ -1,5 +1,8 @@
 {
     "aria": {
+        "orderable": "Ordenatzeko prest",
+        "orderableRemove": "Ordenazioa kentzeko prest",
+        "orderableReverse": "Alderantziz ordenatzeko prest",
         "paginate": {
             "first": "Lehenengoa",
             "last": "Azkena",
@@ -30,7 +33,8 @@
         "excel": "Excel",
         "pageLength": {
             "_": "Erakutsi %d lerro",
-            "-1": "Erakutsi lerro guztiak"
+            "-1": "Erakutsi lerro guztiak",
+            "1": "Lerro bat erakutsi"
         },
         "pdf": "PDF",
         "print": "Inprimatu",
@@ -42,6 +46,9 @@
         "updateState": "Eguneratu"
     },
     "columnControl": {
+        "buttons": {
+            "searchClear": "Bilaketa garbitu"
+        },
         "colVis": "Ikusgaitasuna",
         "colVisDropdown": "Ikusgaitasun menu zabalgarria",
         "dropdown": "menu zabalgarria",
@@ -54,6 +61,7 @@
         "orderAddAsc": "Gehitu goranzko ordenazioari",
         "orderAddDesc": "Gehitu beheranzko ordenazioari",
         "orderAsc": "Goranzka ordenatu",
+        "orderClear": "Ordenazioa garbitu",
         "orderDesc": "Beheranzka ordenatu",
         "orderRemove": "Ordenazioa ezabatu",
         "reorder": "Berordenatu",
@@ -79,9 +87,11 @@
                 "notEqual": "Ezberdina da"
             },
             "text": {
+                "contains": "Hau dauka",
                 "empty": "Hutsik",
                 "ends": "Honekin amaitze da",
                 "equal": "Berdina da",
+                "notContains": "ez dauka hau",
                 "notEmpty": "Ez dago hutsik",
                 "notEqual": "Ezberdina da",
                 "starts": "Honekin hasten da"
@@ -163,6 +173,9 @@
     "infoFiltered": "(guztira _MAX_ erregistrotik iragazita)",
     "infoPostFix": "",
     "infoThousands": ".",
+    "lengthLabels": {
+        "-1": "denak"
+    },
     "lengthMenu": "Erakutsi _MENU_ erregistro",
     "loadingRecords": "Abiarazten...",
     "orderClear": "Garbitu ordenazioa guztiak",
@@ -226,6 +239,7 @@
         "logicAnd": "eta",
         "logicOr": "edo",
         "rightTitle": "Irizpideari koska handitu",
+        "search": "Bilatu",
         "title": {
             "_": "Bilaketa eraikitzailea (%d)",
             "0": "Bilaketa eraikitzailea"
@@ -241,6 +255,7 @@
         "collapseMessage": "Itxi guztiak",
         "count": "{total}",
         "countFiltered": "{shown} ({total})",
+        "emptyMessage": "Hutsik",
         "emptyPanes": "Ez dago bilaketa panelik",
         "loadMessage": "Bilaketa panelak kargatzen...",
         "showMessage": "Erakutsi guztiak",
