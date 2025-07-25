@@ -1,5 +1,8 @@
 {
     "aria": {
+        "orderable": "Ativar para ordenar",
+        "orderableRemove": "Ativar para remover ordenação",
+        "orderableReverse": "Ativar para inverter ordenação",
         "paginate": {
             "first": "Primeiro",
             "last": "Último",
@@ -30,7 +33,8 @@
         "excel": "Excel",
         "pageLength": {
             "_": "Mostrar %d linhas",
-            "-1": "Mostrar todas as linhas"
+            "-1": "Mostrar todas as linhas",
+            "1": "Mostrar 1 linha"
         },
         "pdf": "PDF",
         "print": "Imprimir",
@@ -42,6 +46,9 @@
         "updateState": "Atualizar"
     },
     "columnControl": {
+        "buttons": {
+            "searchClear": "Limpar pesquisa"
+        },
         "colVis": "Visibilidade da coluna",
         "colVisDropdown": "Visibilidade da coluna",
         "dropdown": "Mostrar mais...",
@@ -54,6 +61,7 @@
         "orderAddAsc": "Adicionar à ordem crescente",
         "orderAddDesc": "Adicionar à ordem decrescente",
         "orderAsc": "Ordem crescente",
+        "orderClear": "Remover ordenação",
         "orderDesc": "Ordem decrescente",
         "orderRemove": "Remover ordenação",
         "reorder": "Reordenar",
@@ -69,13 +77,21 @@
                 "notEqual": "Diferente de"
             },
             "number": {
+                "empty": "Vazio",
                 "equal": "Igual a",
+                "greater": "Maior que",
+                "greaterOrEqual": "Maior ou igual a",
+                "less": "Menor que",
+                "lessOrEqual": "Menor ou igual a",
+                "notEmpty": "Não está vazio",
                 "notEqual": "Diferente de"
             },
             "text": {
+                "contains": "Contém",
                 "empty": "Vazio",
                 "ends": "Termina em",
                 "equal": "Igual a",
+                "notContains": "Não contém",
                 "notEmpty": "Não está vazio",
                 "notEqual": "Diferente de",
                 "starts": "Começa por"
@@ -157,6 +173,9 @@
     "infoFiltered": "(filtrado num total de _MAX_ registos)",
     "infoPostFix": "",
     "infoThousands": ".",
+    "lengthLabels": {
+        "-1": "Todas"
+    },
     "lengthMenu": "Mostrar _MENU_ registos",
     "loadingRecords": "A carregar...",
     "orderClear": "Remover ordenação",
@@ -220,6 +239,7 @@
         "logicAnd": "E",
         "logicOr": "Ou",
         "rightTitle": "Incluir critério",
+        "search": "Pesquisar",
         "title": {
             "_": "Construtor de pesquisa (%d)",
             "0": "Construtor de pesquisa"
@@ -235,6 +255,7 @@
         "collapseMessage": "Ocultar Todos",
         "count": "{total}",
         "countFiltered": "{shown} ({total})",
+        "emptyMessage": "<em>Vazio<\/em>",
         "emptyPanes": "Sem painéis de pesquisa",
         "loadMessage": "A carregar painéis de pesquisa",
         "showMessage": "Mostrar todos",

@@ -2,7 +2,7 @@
     "aria": {
         "paginate": {
             "first": "An Chéad",
-            "last": "Last",
+            "last": "Déanach",
             "next": "Ar Aghaidh",
             "previous": "Roimhe Seo"
         }
@@ -10,9 +10,14 @@
     "autoFill": {
         "info": ""
     },
+    "datetime": {
+        "next": "Ar Aghaidh",
+        "previous": " Roimhe"
+    },
     "decimal": "",
-    "info": "_START_ Showing a _END_ na n-iontrálacha  _TOTAL_",
-    "infoEmpty": "Showing 0-0 na n-iontrálacha  0",
+    "emptyTable": "Gan aon fhaisnéis sa tábla",
+    "info": "_START_ Ag tapeáinist _END_ na n-iontrálacha  _TOTAL_",
+    "infoEmpty": "Ag tapeáinist 0-0 na n-iontrálacha  0",
     "infoFiltered": "(scagtha ó _MAX_ iontrálacha iomlán)",
     "infoPostFix": "",
     "lengthMenu": "Taispeáin iontrálacha _MENU_",
