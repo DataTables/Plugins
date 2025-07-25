@@ -11,31 +11,20 @@
 }
 (function() {
     return {
-    "emptyTable": "Hakuna data iliyo patikana",
-    "info": "Inaonyesha _START_ mpaka _END_ ya matokeo _TOTAL_",
-    "infoEmpty": "Inaonyesha 0 hadi 0 ya matokeo 0",
-    "infoFiltered": "(uschujo kutoka matokeo idadi _MAX_)",
-    "infoThousands": ",",
-    "lengthMenu": "Onyesha _MENU_ matokeo",
-    "loadingRecords": "Inapakia...",
-    "processing": "Processing...",
-    "search": "Tafuta:",
-    "zeroRecords": "Rekodi vinavyolingana haziku patikana",
-    "paginate": {
-        "first": "Mwanzo",
-        "last": "Mwisho",
-        "next": "Ijayo",
-        "previous": "Kabla"
-    },
     "aria": {
-        "sortAscending": ": seti kulainisha sanjari kwa mtindo wa upandaji",
-        "sortDescending": ": seti kulainisha sanjari kwa mtindo wa mteremko"
+        "paginate": {
+            "first": "Mwanzo",
+            "last": "Mwisho",
+            "next": "Ijayo",
+            "previous": "Kabla"
+        }
     },
     "autoFill": {
         "cancel": "Ghairi",
         "fill": "Jaza",
         "fillHorizontal": "Jaza kwa usawa",
-        "fillVertical": "Jaza kwa wima"
+        "fillVertical": "Jaza kwa wima",
+        "info": ""
     },
     "buttons": {
         "collection": "Makusanyiko",
@@ -43,43 +32,30 @@
         "colvisRestore": "Rejesha muonekano",
         "copy": "Nakili",
         "copySuccess": {
-            "1": "Safu moja imenakili ",
-            "_": "Safu %ds zimenakiliwa kwenye clipboard"
+            "_": "Safu %ds zimenakiliwa kwenye clipboard",
+            "1": "Safu moja imenakili "
         },
         "copyTitle": "Nakili kwenye Clipboard",
+        "createState": "Ongeza Jimbo",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
-            "-1": "Onyesha safu zote",
             "_": "Onyesha safu %d",
-            "1": "Onyesha safu %d"
+            "-1": "Onyesha safu zote"
         },
         "pdf": "PDF",
         "print": "Chapisha",
-        "createState": "Ongeza Jimbo",
         "removeAllStates": "Ondosha Majimbo yote",
         "removeState": "Ondosha",
         "renameState": "Sasiha Jina",
-        "updateState": "sasisha",
-        "savedStates": "Majimbo Yaliyohifadhiwa"
-    },
-    "decimal": ".",
-    "searchBuilder": {
-        "add": "Weka Sharti",
-        "clearAll": "Ondoa zote",
-        "condition": "Sharti",
-        "data": "Data",
-        "deleteTitle": "Futa sheria ya kuchuja",
-        "leftTitle": "Vigezo vya zamani",
-        "logicAnd": "Pamoja na",
-        "logicOr": "Au",
-        "value": "Thamani"
+        "savedStates": "Majimbo Yaliyohifadhiwa",
+        "updateState": "sasisha"
     },
     "datetime": {
-        "amPm": [
-            "AM",
-            "PM"
-        ],
+        "amPm": {
+            "0": "AM",
+            "1": "PM"
+        },
         "hours": "Saa",
         "minutes": "Dakika",
         "months": {
@@ -100,16 +76,17 @@
         "previous": "Jana",
         "seconds": "Sekunde",
         "unknown": "-",
-        "weekdays": [
-            "J3",
-            "J4",
-            "J5",
-            "Alh",
-            "Ij",
-            "J1",
-            "J2"
-        ]
+        "weekdays": {
+            "0": "J3",
+            "1": "J4",
+            "2": "J5",
+            "3": "Alh",
+            "4": "Ij",
+            "5": "J1",
+            "6": "J2"
+        }
     },
+    "decimal": "",
     "editor": {
         "close": "Funga",
         "create": {
@@ -124,9 +101,43 @@
         },
         "remove": {
             "button": "Futa",
-            "title": "Futa",
-            "submit": "Futa"
+            "submit": "Futa",
+            "title": "Futa"
         }
-    }
+    },
+    "emptyTable": "Hakuna data iliyo patikana",
+    "info": "Inaonyesha _START_ mpaka _END_ ya matokeo _TOTAL_",
+    "infoEmpty": "Inaonyesha 0 hadi 0 ya matokeo 0",
+    "infoFiltered": "(uschujo kutoka matokeo idadi _MAX_)",
+    "infoPostFix": "",
+    "infoThousands": ",",
+    "lengthMenu": "Onyesha _MENU_ matokeo",
+    "loadingRecords": "Inapakia...",
+    "processing": "Processing...",
+    "search": "Tafuta:",
+    "searchBuilder": {
+        "add": "Weka Sharti",
+        "clearAll": "Ondoa zote",
+        "condition": "Sharti",
+        "data": "Data",
+        "deleteTitle": "Futa sheria ya kuchuja",
+        "leftTitle": "Vigezo vya zamani",
+        "logicAnd": "Pamoja na",
+        "logicOr": "Au",
+        "value": "Thamani"
+    },
+    "searchPlaceholder": "",
+    "select": {
+        "cells": {
+            "0": ""
+        },
+        "columns": {
+            "0": ""
+        },
+        "rows": {
+            "0": ""
+        }
+    },
+    "zeroRecords": "Rekodi vinavyolingana haziku patikana"
 };
 }));

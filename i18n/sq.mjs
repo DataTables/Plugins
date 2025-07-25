@@ -1,32 +1,39 @@
 export default {
-    "infoThousands": ",",
-    "search": "Kërkoni:",
-    "paginate": {
-        "first": "E para",
-        "last": "E Fundit",
-        "next": "Tjetra",
-        "previous": "E Kaluara"
+    "aria": {
+        "paginate": {
+            "first": "E para",
+            "last": "E Fundit",
+            "next": "Tjetra",
+            "previous": "E Kaluara"
+        }
+    },
+    "autoFill": {
+        "cancel": "Anulo",
+        "fill": "Plotëso",
+        "fillHorizontal": "Plotëso rreshtat",
+        "fillVertical": "Plotëso kolonat",
+        "info": ""
     },
     "buttons": {
-        "copy": "Kopjo",
-        "csv": "CSV",
-        "excel": "EXCEL",
-        "pdf": "PDF",
-        "print": "Printo",
         "collection": "Të dhënat",
         "colvis": "Shfaq kolonat",
         "colvisRestore": "Rikthe shfaqjen",
+        "copy": "Kopjo",
         "copyKeys": "Shtyp _ctr ose _⌘ + _C për të kopjuar të dhënat në Clipboard. Për të anulluar, kliko mesazhin ose shtyp butonin 'Escape'.",
         "copySuccess": {
             "_": "U kopjuan %d rreshta në clipboard",
             "1": "U kopjua 1 rresht në clipboard"
         },
         "copyTitle": "Kopjo në Clipboard",
+        "createState": "Krijo Gjendje",
+        "csv": "CSV",
+        "excel": "EXCEL",
         "pageLength": {
             "_": "Shfaq %d rreshta",
             "-1": "Shfaq të gjithë rreshtat"
         },
-        "createState": "Krijo Gjendje",
+        "pdf": "PDF",
+        "print": "Printo",
         "removeAllStates": "Shlyej Të Gjitha Gjendjet",
         "removeState": "Shlyej",
         "renameState": "Riemërto",
@@ -35,13 +42,12 @@ export default {
         "updateState": "Përditëso"
     },
     "datetime": {
-        "amPm": [
-            "am",
-            "pm"
-        ],
+        "amPm": {
+            "0": "am",
+            "1": "pm"
+        },
         "hours": "Ora",
         "minutes": "Minuta",
-        "seconds": "Sekonda",
         "months": {
             "0": "Janar",
             "1": "Shkurt",
@@ -58,30 +64,19 @@ export default {
         },
         "next": "Përpara",
         "previous": "Prapa",
+        "seconds": "Sekonda",
         "unknown": "-",
-        "weekdays": [
-            "E hëne",
-            "E martë",
-            "E mërkurë",
-            "E enjte",
-            "E premte",
-            "E shtunë",
-            "E diel"
-        ]
+        "weekdays": {
+            "0": "E hëne",
+            "1": "E martë",
+            "2": "E mërkurë",
+            "3": "E enjte",
+            "4": "E premte",
+            "5": "E shtunë",
+            "6": "E diel"
+        }
     },
-    "processing": "Po procesohen...",
-    "thousands": ",",
-    "aria": {
-        "sortAscending": ": aktivizo për të renditur kolonën me vlera në ngritje",
-        "sortDescending": ": aktivizo për të renditur kolonën me vlera në zbritje"
-    },
-    "autoFill": {
-        "fill": "Plotëso",
-        "fillHorizontal": "Plotëso rreshtat",
-        "fillVertical": "Plotëso kolonat",
-        "cancel": "Anulo"
-    },
-    "decimal": ",",
+    "decimal": "",
     "editor": {
         "close": "Mbyll",
         "create": {
@@ -98,10 +93,10 @@ export default {
             "system": "Ka ndodhur një gabim në sistem. (<a target=\"\\\" rel=\"\\ nofollow\" href=\"\\\">Më shumë informacion&lt;\\\/a&gt;).<\/a>"
         },
         "multi": {
-            "restore": "Zhbëj ndryshimet",
-            "title": "Vlera të shumëfishta",
             "info": "Artikujt e selektuar përmbajnë vlera të ndryshme për këtë input. Për të edituar dhe t'i rivendosur të gjithë artikujt për këtë input me vlerën e njejtë, klikoni këtu, përndryshe ato do të mbajnë vlerat e tyre individuale.",
-            "noMulti": "Ky input mund të përditësohet individualisht, por jo si pjesë e një grupi."
+            "noMulti": "Ky input mund të përditësohet individualisht, por jo si pjesë e një grupi.",
+            "restore": "Zhbëj ndryshimet",
+            "title": "Vlera të shumëfishta"
         },
         "remove": {
             "button": "Fshi",
@@ -117,8 +112,12 @@ export default {
     "info": "Duke treguar _START_ deri _END_ prej _TOTAL_ rreshtave",
     "infoEmpty": "Duke treguar 0 deri 0 prej 0 rreshtave",
     "infoFiltered": "(të filtruara prej gjithsej _MAX_  reshtave)",
+    "infoPostFix": "",
+    "infoThousands": ",",
     "lengthMenu": "Shfaq _MENU_ rreshta",
     "loadingRecords": "Po merren te dhënat...",
+    "processing": "Po procesohen...",
+    "search": "Kërkoni:",
     "searchBuilder": {
         "add": "Shto kusht",
         "button": {
@@ -164,11 +163,11 @@ export default {
                 "endsWith": "mbaron me",
                 "equals": "i\/e barabartë",
                 "not": "jo",
-                "notEmpty": "jo bosh",
-                "startsWith": "fillon me",
                 "notContains": "Nuk Përmban",
+                "notEmpty": "jo bosh",
+                "notEndsWith": "Nuk Përfundon Me",
                 "notStartsWith": "Nuk Fillon Me",
-                "notEndsWith": "Nuk Përfundon Me"
+                "startsWith": "fillon me"
             }
         },
         "data": "Të dhëna",
@@ -183,30 +182,34 @@ export default {
     },
     "searchPanes": {
         "clearMessage": "Pastro të gjitha",
+        "collapse": {
+            "_": "DritaretKerkimit (%d)",
+            "0": "DritaretKerkimit"
+        },
+        "collapseMessage": "Mbyll të gjitha",
         "count": "{total}",
         "countFiltered": "{shown} ({total})",
-        "title": "Filtra aktivë - %d",
-        "collapse": {
-            "0": "DritaretKerkimit",
-            "_": "DritaretKerkimit (%d)"
-        },
         "emptyPanes": "Nuk ka dritare të kërkimit",
         "loadMessage": "Duke ngarkuar dritaret e kërkimit",
         "showMessage": "Shfaq të gjitha",
-        "collapseMessage": "Mbyll të gjitha"
+        "title": "Filtra aktivë - %d"
     },
+    "searchPlaceholder": "",
     "select": {
         "cells": {
             "_": "%d qeliza të zgjedhura",
+            "0": "",
             "1": "1 qelizë e zgjedhur"
         },
         "columns": {
             "_": "%d kolona të zgjedhura",
+            "0": "",
             "1": "1 kolonë e zgjedhur"
+        },
+        "rows": {
+            "0": ""
         }
     },
-    "zeroRecords": "Nuk u gjet asnjë e dhënë",
-    "searchPlaceholder": "Vendmbajtës shembull",
     "stateRestore": {
         "creationModal": {
             "button": "Krijo",
@@ -235,5 +238,7 @@ export default {
         "renameButton": "Riemërto",
         "renameLabel": "Emri i ri për %s:",
         "renameTitle": "Riemërto Gjendje"
-    }
+    },
+    "thousands": ",",
+    "zeroRecords": "Nuk u gjet asnjë e dhënë"
 };

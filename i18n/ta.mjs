@@ -1,30 +1,18 @@
 export default {
-    "emptyTable": "அட்டவணையில் தரவு கிடைக்கவில்லை",
-    "info": "உள்ளீடுகளை் _START_ முதல _END_ உள்ள _TOTAL_ காட்டும்",
-    "infoEmpty": "0 உள்ளீடுகளை 0 0 காட்டும்",
-    "infoFiltered": "(_MAX_ மொத்த உள்ளீடுகளை இருந்து வடிகட்டி)",
-    "infoThousands": ",",
-    "lengthMenu": "_MENU_ காண்பி",
-    "loadingRecords": "ஏற்றுகிறது ...",
-    "processing": "செயலாக்க ...",
-    "zeroRecords": "பொருத்தமான பதிவுகள் இல்லை",
-    "paginate": {
-        "first": "முதல்",
-        "last": "இறுதி",
-        "next": "அடுத்து",
-        "previous": "முந்தைய"
-    },
     "aria": {
-        "sortAscending": ": நிரலை ஏறுவரிசையில் வரிசைப்படுத்த செயல்படுத்த",
-        "sortDescending": ": நிரலை இறங்கு வரிசைப்படுத்த செயல்படுத்த"
+        "paginate": {
+            "first": "முதல்",
+            "last": "இறுதி",
+            "next": "அடுத்து",
+            "previous": "முந்தைய"
+        }
     },
-    "search": "தேடு",
     "autoFill": {
         "cancel": "ரத்து செய்",
         "fill": "சிஸ்டம் ஆர்க்கிடெக்ட் மூலம் அனைத்து செல்களையும் நிரப்பவும்",
         "fillHorizontal": "செல்களை கிடைமட்டமாக நிரப்பவும்",
         "fillVertical": "செல்களை செங்குத்தாக நிரப்பவும்",
-        "info": "தகவல்"
+        "info": ""
     },
     "buttons": {
         "collection": "சேகரிப்பு",
@@ -38,26 +26,52 @@ export default {
         "pdf": "PDF",
         "print": "print"
     },
-    "decimal": "தசம",
     "datetime": {
-        "previous": "முந்தைய",
-        "next": "அடுத்தது",
+        "amPm": {
+            "0": "am",
+            "1": "pm"
+        },
         "hours": "மணி",
         "minutes": "நிமிடம்",
+        "next": "அடுத்தது",
+        "previous": "முந்தைய",
         "seconds": "வினாடிகள்",
         "unknown": "-",
-        "amPm": [
-            "am",
-            "pm"
-        ],
-        "weekdays": [
-            "ஞாயிறு",
-            "திங்கள்",
-            "செவ்வாய்",
-            "புதன்",
-            "வியாழன்",
-            "வெள்ளி",
-            "சனி"
-        ]
-    }
+        "weekdays": {
+            "0": "ஞாயிறு",
+            "1": "திங்கள்",
+            "2": "செவ்வாய்",
+            "3": "புதன்",
+            "4": "வியாழன்",
+            "5": "வெள்ளி",
+            "6": "சனி"
+        }
+    },
+    "decimal": "",
+    "editor": {
+        "close": "மூடு"
+    },
+    "emptyTable": "அட்டவணையில் தரவு கிடைக்கவில்லை",
+    "info": "உள்ளீடுகளை் _START_ முதல _END_ உள்ள _TOTAL_ காட்டும்",
+    "infoEmpty": "0 உள்ளீடுகளை 0 0 காட்டும்",
+    "infoFiltered": "(_MAX_ மொத்த உள்ளீடுகளை இருந்து வடிகட்டி)",
+    "infoPostFix": "",
+    "infoThousands": ",",
+    "lengthMenu": "_MENU_ காண்பி",
+    "loadingRecords": "ஏற்றுகிறது ...",
+    "processing": "செயலாக்க ...",
+    "search": "தேடு",
+    "searchPlaceholder": "",
+    "select": {
+        "cells": {
+            "0": ""
+        },
+        "columns": {
+            "0": ""
+        },
+        "rows": {
+            "0": ""
+        }
+    },
+    "zeroRecords": "பொருத்தமான பதிவுகள் இல்லை"
 };

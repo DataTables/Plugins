@@ -11,31 +11,20 @@
 }
 (function() {
     return {
-    "info": "Visar _START_ till _END_ av totalt _TOTAL_ rader",
-    "infoEmpty": "Visar 0 till 0 av totalt 0 rader",
-    "infoFiltered": "(filtrerade från totalt _MAX_ rader)",
-    "infoThousands": " ",
-    "lengthMenu": "Visa _MENU_ rader",
-    "loadingRecords": "Laddar …",
-    "processing": "Bearbetar …",
-    "search": "Sök:",
-    "zeroRecords": "Hittade inga matchande resultat",
-    "paginate": {
-        "first": "Första",
-        "last": "Sista",
-        "next": "Nästa",
-        "previous": "Föregående"
-    },
     "aria": {
-        "sortAscending": ": aktivera för att sortera kolumnen i stigande ordning",
-        "sortDescending": ": aktivera för att sortera kolumnen i fallande ordning"
+        "paginate": {
+            "first": "Första",
+            "last": "Sista",
+            "next": "Nästa",
+            "previous": "Föregående"
+        }
     },
     "autoFill": {
         "cancel": "Avbryt",
         "fill": "Fyll alla celler med <i>%d<\/i>",
         "fillHorizontal": "Fyll celler horisontalt",
         "fillVertical": "Fyll celler vertikalt",
-        "info": "Exempel Autofyll Info"
+        "info": ""
     },
     "buttons": {
         "collection": "Samling <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
@@ -44,20 +33,19 @@
         "copy": "Kopiera",
         "copyKeys": "Tryck ctrl eller u2318 + C för att kopiera tabellens data till systemets Urklipp.  Tryck på det är meddelanden eller Escape för att avbryta.",
         "copySuccess": {
-            "1": "Kopierade 1 rad till Urklipp",
-            "_": "Kopierade %ds rader till Urklipp"
+            "_": "Kopierade %ds rader till Urklipp",
+            "1": "Kopierade 1 rad till Urklipp"
         },
         "copyTitle": "Kopiera till Urklipp",
+        "createState": "Skapa urval",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
-            "-1": "Visa alla rader",
             "_": "Visa %d rader",
-            "1": "Visa 1 rad"
+            "-1": "Visa alla rader"
         },
         "pdf": "PDF",
         "print": "Skriv ut",
-        "createState": "Skapa urval",
         "removeAllStates": "Sparade urval",
         "removeState": "Ta bort",
         "renameState": "Döp om",
@@ -65,17 +53,100 @@
         "stateRestore": "Urval",
         "updateState": "Uppdatera"
     },
-    "decimal": ",",
+    "datetime": {
+        "amPm": {
+            "0": "fm",
+            "1": "em"
+        },
+        "hours": "Timmar",
+        "minutes": "Minuter",
+        "months": {
+            "0": "Januari",
+            "1": "Februari",
+            "10": "November",
+            "11": "December",
+            "2": "Mars",
+            "3": "April",
+            "4": "Maj",
+            "5": "Juni",
+            "6": "Juli",
+            "7": "Augusti",
+            "8": "September",
+            "9": "Oktober"
+        },
+        "next": "Nästa",
+        "previous": "Föregående",
+        "seconds": "Sekunder",
+        "unknown": "-",
+        "weekdays": {
+            "0": "Sön",
+            "1": "Mån",
+            "2": "Tis",
+            "3": "Ons",
+            "4": "Tor",
+            "5": "Fre",
+            "6": "Lör"
+        }
+    },
+    "decimal": "",
+    "editor": {
+        "close": "Stäng",
+        "create": {
+            "button": "Ny",
+            "submit": "Skapa",
+            "title": "Skapa ny post"
+        },
+        "edit": {
+            "button": "Redigera",
+            "submit": "Uppdatera",
+            "title": "Redigera post"
+        },
+        "error": {
+            "system": "Ett systemfel har inträffat (<a target=\"\\\" rel=\"nofollow\" href=\"\\\">Mer information<\/a>)."
+        },
+        "multi": {
+            "info": "De valda objekten har olika värden för detta fält. För att redigera och sätta alla objekt för detta fält till samma värde, klicka eller tryck här, annars behåller de sina individuella värden.",
+            "noMulti": "Detta fält kan redigeras individuellt, men inte som en del av en grupp.",
+            "restore": "Ångra ändringar",
+            "title": "Flera värden"
+        },
+        "remove": {
+            "button": "Radera",
+            "confirm": {
+                "_": "Är du säker på att du vill ta bort %d rader?",
+                "1": "Är du säker på att du vill ta bort 1 rad?"
+            },
+            "submit": "Radera",
+            "title": "Radera"
+        }
+    },
     "emptyTable": "Tabellen innehåller ingen data",
+    "info": "Visar _START_ till _END_ av totalt _TOTAL_ rader",
+    "infoEmpty": "Visar 0 till 0 av totalt 0 rader",
+    "infoFiltered": "(filtrerade från totalt _MAX_ rader)",
+    "infoPostFix": "",
+    "infoThousands": " ",
+    "lengthMenu": "Visa _MENU_ rader",
+    "loadingRecords": "Laddar …",
+    "processing": "Bearbetar …",
+    "search": "Sök:",
     "searchBuilder": {
         "add": "Nytt Villkor",
         "button": {
-            "0": "Avancerad sökning",
-            "_": "Avancerad sökning (%d)"
+            "_": "Avancerad sökning (%d)",
+            "0": "Avancerad sökning"
         },
         "clearAll": "Rensa",
         "condition": "Villkor",
         "conditions": {
+            "array": {
+                "contains": "Innehåller",
+                "empty": "Tom",
+                "equals": "Lika med",
+                "not": "Inte",
+                "notEmpty": "Inte Tom",
+                "without": "Utan"
+            },
             "date": {
                 "after": "Efter",
                 "before": "Före",
@@ -104,129 +175,57 @@
                 "endsWith": "Slutar med",
                 "equals": "Lika med",
                 "not": "Inte",
-                "notEmpty": "Inte Tom",
-                "startsWith": "Börjar med",
                 "notContains": "Innehåller inte",
-                "notStartsWith": "Börjar ej med",
-                "notEndsWith": "Slutar ej med"
-            },
-            "array": {
-                "equals": "Lika med",
-                "empty": "Tom",
-                "contains": "Innehåller",
-                "not": "Inte",
                 "notEmpty": "Inte Tom",
-                "without": "Utan"
+                "notEndsWith": "Slutar ej med",
+                "notStartsWith": "Börjar ej med",
+                "startsWith": "Börjar med"
             }
         },
         "data": "Data",
         "deleteTitle": "Ta bort filtreringsregel",
+        "leftTitle": "Omvänt indragskriterier",
         "logicAnd": "Och",
         "logicOr": "Eller",
+        "rightTitle": "Indragskriterier",
         "title": {
-            "0": "Avancerad sökning",
-            "_": "Avancerad sökning (%d)"
+            "_": "Avancerad sökning (%d)",
+            "0": "Avancerad sökning"
         },
-        "value": "Värde",
-        "leftTitle": "Omvänt indragskriterier",
-        "rightTitle": "Indragskriterier"
+        "value": "Värde"
     },
     "searchPanes": {
         "clearMessage": "Rensa",
         "collapse": {
-            "0": "Sökrutor",
-            "_": "Sökrutor (%d)"
+            "_": "Sökrutor (%d)",
+            "0": "Sökrutor"
         },
+        "collapseMessage": "Dölj alla",
         "count": "{total}",
         "countFiltered": "{shown} ({total})",
         "emptyPanes": "Sökrutor saknas",
         "loadMessage": "Laddar Sökrutor...",
-        "title": "Aktiva Filter - %d",
         "showMessage": "Visa alla",
-        "collapseMessage": "Dölj alla"
+        "title": "Aktiva Filter - %d"
     },
+    "searchPlaceholder": "",
     "select": {
         "cells": {
-            "1": "1 cell markerad",
-            "_": "%d celler markerade"
+            "_": "%d celler markerade",
+            "0": "",
+            "1": "1 cell markerad"
         },
         "columns": {
-            "1": "1 kolumn markerad",
-            "_": "%d kolumner markerade"
+            "_": "%d kolumner markerade",
+            "0": "",
+            "1": "1 kolumn markerad"
         },
         "rows": {
-            "1": "1 rad vald",
-            "_": "%d rader valda"
+            "_": "%d rader valda",
+            "0": "",
+            "1": "1 rad vald"
         }
     },
-    "thousands": " ",
-    "datetime": {
-        "previous": "Föregående",
-        "next": "Nästa",
-        "hours": "Timmar",
-        "minutes": "Minuter",
-        "seconds": "Sekunder",
-        "unknown": "-",
-        "amPm": [
-            "fm",
-            "em"
-        ],
-        "months": {
-            "0": "Januari",
-            "1": "Februari",
-            "10": "November",
-            "11": "December",
-            "2": "Mars",
-            "3": "April",
-            "4": "Maj",
-            "5": "Juni",
-            "6": "Juli",
-            "7": "Augusti",
-            "8": "September",
-            "9": "Oktober"
-        },
-        "weekdays": [
-            "Sön",
-            "Mån",
-            "Tis",
-            "Ons",
-            "Tor",
-            "Fre",
-            "Lör"
-        ]
-    },
-    "editor": {
-        "close": "Stäng",
-        "create": {
-            "button": "Ny",
-            "title": "Skapa ny post",
-            "submit": "Skapa"
-        },
-        "edit": {
-            "button": "Redigera",
-            "title": "Redigera post",
-            "submit": "Uppdatera"
-        },
-        "remove": {
-            "button": "Radera",
-            "title": "Radera",
-            "submit": "Radera",
-            "confirm": {
-                "_": "Är du säker på att du vill ta bort %d rader?",
-                "1": "Är du säker på att du vill ta bort 1 rad?"
-            }
-        },
-        "error": {
-            "system": "Ett systemfel har inträffat (<a target=\"\\\" rel=\"nofollow\" href=\"\\\">Mer information<\/a>)."
-        },
-        "multi": {
-            "title": "Flera värden",
-            "info": "De valda objekten har olika värden för detta fält. För att redigera och sätta alla objekt för detta fält till samma värde, klicka eller tryck här, annars behåller de sina individuella värden.",
-            "restore": "Ångra ändringar",
-            "noMulti": "Detta fält kan redigeras individuellt, men inte som en del av en grupp."
-        }
-    },
-    "searchPlaceholder": "ange sökord",
     "stateRestore": {
         "creationModal": {
             "button": "Skapa",
@@ -255,6 +254,8 @@
         "renameButton": "Byt namn",
         "renameLabel": "Nytt namn för %s:",
         "renameTitle": "Byt namn på urval"
-    }
+    },
+    "thousands": " ",
+    "zeroRecords": "Hittade inga matchande resultat"
 };
 }));

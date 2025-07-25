@@ -11,29 +11,23 @@
 }
 (function() {
     return {
-    "processing": "Przetwarzanie...",
-    "search": "Szukaj:",
-    "lengthMenu": "Pokaż _MENU_ pozycji",
-    "info": "Pozycje od _START_ do _END_ z _TOTAL_ łącznie",
-    "infoEmpty": "Pozycji 0 z 0 dostępnych",
-    "infoFiltered": "(filtrowanie spośród _MAX_ dostępnych pozycji)",
-    "loadingRecords": "Wczytywanie...",
-    "zeroRecords": "Nie znaleziono pasujących pozycji",
-    "paginate": {
-        "first": "Pierwsza",
-        "previous": "Poprzednia",
-        "next": "Następna",
-        "last": "Ostatnia"
-    },
     "aria": {
-        "sortAscending": ": aktywuj, by posortować kolumnę rosnąco",
-        "sortDescending": ": aktywuj, by posortować kolumnę malejąco"
+        "orderable": "Aktywuj sortowanie",
+        "orderableRemove": "Aktywuj, aby usunąć sortowanie",
+        "orderableReverse": "Aktywuj, aby odwrócić sortowanie",
+        "paginate": {
+            "first": "Pierwsza",
+            "last": "Ostatnia",
+            "next": "Następna",
+            "previous": "Poprzednia"
+        }
     },
     "autoFill": {
         "cancel": "Anuluj",
         "fill": "Wypełnij wszystkie komórki <i>%d<\/i>",
         "fillHorizontal": "Wypełnij komórki w poziomie",
-        "fillVertical": "Wypełnij komórki w pionie"
+        "fillVertical": "Wypełnij komórki w pionie",
+        "info": ""
     },
     "buttons": {
         "collection": "Zbiór <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
@@ -42,19 +36,20 @@
         "copy": "Kopiuj",
         "copyKeys": "Naciśnij Ctrl lub u2318 + C, aby skopiować dane tabeli do schowka systemowego. <br \/> <br \/> Aby anulować, kliknij tę wiadomość lub naciśnij Esc.",
         "copySuccess": {
-            "1": "Skopiowano 1 wiersz do schowka",
-            "_": "Skopiowano %d wierszy do schowka"
+            "_": "Skopiowano %d wierszy do schowka",
+            "1": "Skopiowano 1 wiersz do schowka"
         },
         "copyTitle": "Skopiuj do schowka",
+        "createState": "Utwórz stan",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
+            "_": "Pokaż %d wierszy",
             "-1": "Pokaż wszystkie wiersze",
-            "_": "Pokaż %d wierszy"
+            "1": "Pokaż 1 wiersz"
         },
         "pdf": "PDF",
         "print": "Drukuj",
-        "createState": "Utwórz stan",
         "removeAllStates": "Usuń wszystkie stany",
         "removeState": "Usuń",
         "renameState": "Zmień nazwę",
@@ -62,16 +57,150 @@
         "stateRestore": "Stan %d",
         "updateState": "Aktualizuj"
     },
+    "columnControl": {
+        "buttons": {
+            "searchClear": "Wyczyść wyszukiwanie"
+        },
+        "colVis": "Widoczność kolumn",
+        "colVisDropdown": "Widoczność kolumn",
+        "dropdown": "Więcej...",
+        "list": {
+            "all": "Zaznacz wszystko",
+            "empty": "Puste",
+            "none": "Odznacz wszystko",
+            "search": "Szukaj..."
+        },
+        "orderAddAsc": "Dodaj sortowanie rosnąco",
+        "orderAddDesc": "Dodaj sortowanie malejąco",
+        "orderAsc": "Sortowanie rosnące",
+        "orderClear": "Wyczyść sortowanie",
+        "orderDesc": "Sortowanie malejące",
+        "orderRemove": "Usuń z sortowania",
+        "reorder": "Przestaw kolumny",
+        "reorderLeft": "Przesuń kolumnę w lewo",
+        "reorderRight": "Przesuń kolumnę w prawo",
+        "search": {
+            "datetime": {
+                "empty": "Puste",
+                "equal": "Równe",
+                "greater": "Po",
+                "less": "Przed",
+                "notEmpty": "Niepuste",
+                "notEqual": "Różne od"
+            },
+            "number": {
+                "empty": "Puste",
+                "equal": "Równe",
+                "greater": "Większe niż",
+                "greaterOrEqual": "Większe lub równe",
+                "less": "Mniejsze niż",
+                "lessOrEqual": "Mniejsze lub równe",
+                "notEmpty": "Niepuste",
+                "notEqual": "Różne od"
+            },
+            "text": {
+                "contains": "Zawiera",
+                "empty": "Puste",
+                "ends": "Kończy się na",
+                "equal": "Równe",
+                "notContains": "Nie zawiera",
+                "notEmpty": "Niepuste",
+                "notEqual": "Różne od",
+                "starts": "Zaczyna się od"
+            }
+        },
+        "searchClear": "Wyczyść wyszukiwanie",
+        "searchDropdown": "Wyszukaj"
+    },
+    "datetime": {
+        "amPm": {
+            "0": "am",
+            "1": "pm"
+        },
+        "hours": "Godzina",
+        "minutes": "Minuta",
+        "months": {
+            "0": "Styczeń",
+            "1": "Luty",
+            "10": "Listopad",
+            "11": "Grudzień",
+            "2": "Marzec",
+            "3": "Kwiecień",
+            "4": "Maj",
+            "5": "Czerwiec",
+            "6": "Lipiec",
+            "7": "Sierpień",
+            "8": "Wrzesień",
+            "9": "Październik"
+        },
+        "next": "Następne",
+        "previous": "Poprzednie",
+        "seconds": "Sekunda",
+        "unknown": "nieznana",
+        "weekdays": {
+            "0": "Nd",
+            "1": "Pn",
+            "2": "Wt",
+            "3": "Śr",
+            "4": "Czw",
+            "5": "Pt",
+            "6": "So"
+        }
+    },
+    "decimal": "",
+    "editor": {
+        "close": "Zamknij",
+        "create": {
+            "button": "Dodaj",
+            "submit": "Dodaj",
+            "title": "Dodawanie nowego wpisu"
+        },
+        "edit": {
+            "button": "Edytuj",
+            "submit": "Aktualizuj",
+            "title": "Aktualizacja wpisu"
+        },
+        "error": {
+            "system": "Nastąpił błąd systemu (<a target=\"\\\" rel=\"\\ nofollow\" href=\"\\\">Więcej informacji&lt;\\\/a&gt;).<\/a>"
+        },
+        "multi": {
+            "info": "Wybrane pole zawiera wiele elementów z różnymi wartościami. Aby zmienić ich wartość kliknij w nie, inaczej zachowane zostaną ich wartości domyślne.",
+            "noMulti": "Ta wartość może być edytowana oddzielnie - niezależnie od grupy.",
+            "restore": "Cofnij zmiany",
+            "title": "Pole z wieloma wartościami"
+        },
+        "remove": {
+            "button": "Usuń",
+            "confirm": {
+                "_": "Czy na pewno chcesz usunąć %d rzędów?",
+                "1": "Czy na pewno chcesz usunąć 1 rząd?"
+            },
+            "submit": "Usuń",
+            "title": "Usuwanie"
+        }
+    },
     "emptyTable": "Brak danych w tabeli",
+    "info": "Pozycje od _START_ do _END_ z _TOTAL_ łącznie",
+    "infoEmpty": "Pozycji 0 z 0 dostępnych",
+    "infoFiltered": "(filtrowanie spośród _MAX_ dostępnych pozycji)",
+    "infoPostFix": "",
+    "infoThousands": " ",
+    "lengthLabels": {
+        "-1": "Wszystko"
+    },
+    "lengthMenu": "Pokaż _MENU_ pozycji",
+    "loadingRecords": "Wczytywanie...",
+    "orderClear": "Wyczyść sortowanie",
+    "processing": "Przetwarzanie...",
+    "search": "Szukaj:",
     "searchBuilder": {
         "add": "Dodaj warunek",
-        "clearAll": "Wyczyść wszystko",
-        "condition": "Warunek",
-        "data": "Dane",
         "button": {
             "_": "Aktywne zapytania",
             "0": "Budowanie zapytania"
         },
+        "clearAll": "Wyczyść wszystko",
+        "condition": "Warunek",
         "conditions": {
             "array": {
                 "contains": "Zawiera",
@@ -109,89 +238,25 @@
                 "endsWith": "Kończy się na",
                 "equals": "Równa się",
                 "not": "Nie",
-                "notEmpty": "Nie pusty",
-                "startsWith": "Zaczyna się od",
                 "notContains": "Nie zawiera",
+                "notEmpty": "Nie pusty",
+                "notEndsWith": "Nie kończy się na",
                 "notStartsWith": "Nie zaczyna się od",
-                "notEndsWith": "Nie kończy się na"
+                "startsWith": "Zaczyna się od"
             }
         },
+        "data": "Dane",
         "deleteTitle": "Czyszczenie",
         "leftTitle": "Lewy",
         "logicAnd": "I",
         "logicOr": "Lub",
         "rightTitle": "Prawy",
+        "search": "Szukaj",
         "title": {
             "_": "Aktywne zapytania",
             "0": "Budowanie zapytania"
         },
         "value": "Wartość"
-    },
-    "datetime": {
-        "amPm": [
-            "am",
-            "pm"
-        ],
-        "hours": "Godzina",
-        "minutes": "Minuta",
-        "next": "Następne",
-        "previous": "Poprzednie",
-        "seconds": "Sekunda",
-        "unknown": "nieznana",
-        "months": {
-            "0": "Styczeń",
-            "1": "Luty",
-            "10": "Listopad",
-            "11": "Grudzień",
-            "2": "Marzec",
-            "3": "Kwiecień",
-            "4": "Maj",
-            "5": "Czerwiec",
-            "6": "Lipiec",
-            "7": "Sierpień",
-            "8": "Wrzesień",
-            "9": "Październik"
-        },
-        "weekdays": [
-            "Nd",
-            "Pn",
-            "Wt",
-            "Śr",
-            "Czw",
-            "Pt",
-            "So"
-        ]
-    },
-    "editor": {
-        "close": "Zamknij",
-        "create": {
-            "button": "Dodaj",
-            "submit": "Dodaj",
-            "title": "Dodawanie nowego wpisu"
-        },
-        "edit": {
-            "button": "Edytuj",
-            "submit": "Aktualizuj",
-            "title": "Aktualizacja wpisu"
-        },
-        "error": {
-            "system": "Nastąpił błąd systemu (<a target=\"\\\" rel=\"\\ nofollow\" href=\"\\\">Więcej informacji&lt;\\\/a&gt;).<\/a>"
-        },
-        "multi": {
-            "info": "Wybrane pole zawiera wiele elementów z różnymi wartościami. Aby zmienić ich wartość kliknij w nie, inaczej zachowane zostaną ich wartości domyślne.",
-            "noMulti": "Ta wartość może być edytowana oddzielnie - niezależnie od grupy.",
-            "restore": "Cofnij zmiany",
-            "title": "Pole z wieloma wartościami"
-        },
-        "remove": {
-            "button": "Usuń",
-            "confirm": {
-                "_": "Czy na pewno chcesz usunąć %d rzędów?",
-                "1": "Czy na pewno chcesz usunąć 1 rząd?"
-            },
-            "submit": "Usuń",
-            "title": "Usuwanie"
-        }
     },
     "searchPanes": {
         "clearMessage": "Wyczyść wszystkie",
@@ -199,22 +264,31 @@
             "_": "Aktywne grupowania (%d)",
             "0": "Grupowanie"
         },
+        "collapseMessage": "Rozwiń wszystko",
         "count": "{total}",
         "countFiltered": "{shown} ({total})",
+        "emptyMessage": "&lt;em&gt;brak danych&lt;\/em&gt;",
         "emptyPanes": "Brak paneli wyszukań",
         "loadMessage": "Ładuję panele wyszukań",
-        "title": "Aktywne filtry",
         "showMessage": "Pokaż wszystko",
-        "collapseMessage": "Rozwiń wszystko"
+        "title": "Aktywne filtry"
     },
+    "searchPlaceholder": "",
     "select": {
         "cells": {
             "_": "zaznaczono %d komórek",
+            "0": "",
             "1": "zaznaczono %d komórkę"
         },
         "columns": {
             "_": "zaznaczono %d kolumn",
+            "0": "",
             "1": "zaznaczono %d kolumnę"
+        },
+        "rows": {
+            "_": "Zaznaczono %d wierszy",
+            "0": "",
+            "1": "Zaznaczono 1 wiersz"
         }
     },
     "stateRestore": {
@@ -246,8 +320,7 @@
         "renameLabel": "Nowa nazwa dla %s:",
         "renameTitle": "Zmień nazwę stanu"
     },
-    "decimal": ",",
-    "infoThousands": " ",
-    "thousands": " "
+    "thousands": " ",
+    "zeroRecords": "Nie znaleziono pasujących pozycji"
 };
 }));

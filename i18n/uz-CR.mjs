@@ -1,13 +1,18 @@
 export default {
     "aria": {
-        "sortAscending": ": устунни қийматлар ўсиши бўйича тартиблаш",
-        "sortDescending": ": устунни қийматлар камайиши бўйича тартиблаш"
+        "paginate": {
+            "first": "Дастлабки",
+            "last": "Оҳирги",
+            "next": "Кейинги",
+            "previous": "Аввалги"
+        }
     },
     "autoFill": {
         "cancel": "Бекор қил",
         "fill": "Ҳамма катакни <i>%d<\/i> билан тўлдириш",
         "fillHorizontal": "Катакларни горизонтал тўлдириш",
-        "fillVertical": "Катакларни вертикал тўлдириш"
+        "fillVertical": "Катакларни вертикал тўлдириш",
+        "info": ""
     },
     "buttons": {
         "colvis": "Устунларни кўрсатиш ",
@@ -22,7 +27,7 @@ export default {
         "seconds": "секунд",
         "unknown": "-"
     },
-    "decimal": ".",
+    "decimal": "",
     "editor": {
         "close": "Ёпиш",
         "create": {
@@ -55,15 +60,10 @@ export default {
     "info": "(_START_- _END_) жами: _TOTAL_",
     "infoEmpty": "бўш",
     "infoFiltered": "_MAX_ та сатрдан фильтрланди",
+    "infoPostFix": "",
     "infoThousands": "  ",
     "lengthMenu": "_MENU_ та сатр кўринсин",
     "loadingRecords": "Юкланмоқда...",
-    "paginate": {
-        "first": "Дастлабки",
-        "last": "Оҳирги",
-        "next": "Кейинги",
-        "previous": "Аввалги"
-    },
     "processing": "Бажарилмоқда...",
     "search": "Қидириш:",
     "searchBuilder": {
@@ -136,17 +136,21 @@ export default {
         "loadMessage": "Қидириш панели юкланмоқда...",
         "title": "Фаол фильтр - %d"
     },
+    "searchPlaceholder": "",
     "select": {
         "cells": {
             "_": "%d катак танланди",
+            "0": "",
             "1": "1 катак танланди"
         },
         "columns": {
             "_": "%d та устун танланди",
+            "0": "",
             "1": "1 та устун танланди"
         },
         "rows": {
             "_": "%d та сатр танланди",
+            "0": "",
             "1": "1 та сатр танланди"
         }
     },

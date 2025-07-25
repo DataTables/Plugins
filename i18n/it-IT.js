@@ -11,26 +11,20 @@
 }
 (function() {
     return {
-    "infoFiltered": "(filtrati da _MAX_ elementi totali)",
-    "infoThousands": ".",
-    "loadingRecords": "Caricamento...",
-    "processing": "Elaborazione...",
-    "search": "Cerca:",
-    "paginate": {
-        "first": "Inizio",
-        "previous": "Precedente",
-        "next": "Successivo",
-        "last": "Fine"
-    },
     "aria": {
-        "sortAscending": ": attiva per ordinare la colonna in ordine crescente",
-        "sortDescending": ": attiva per ordinare la colonna in ordine decrescente"
+        "paginate": {
+            "first": "Inizio",
+            "last": "Fine",
+            "next": "Successivo",
+            "previous": "Precedente"
+        }
     },
     "autoFill": {
         "cancel": "Annulla",
         "fill": "Riempi tutte le celle con <i>%d<\/i>",
         "fillHorizontal": "Riempi celle orizzontalmente",
-        "fillVertical": "Riempi celle verticalmente"
+        "fillVertical": "Riempi celle verticalmente",
+        "info": ""
     },
     "buttons": {
         "collection": "Collezione <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
@@ -39,19 +33,19 @@
         "copy": "Copia",
         "copyKeys": "Premi ctrl o u2318 + C per copiare i dati della tabella nella tua clipboard di sistema.<br \/><br \/>Per annullare, clicca questo messaggio o premi ESC.",
         "copySuccess": {
-            "1": "Copiata 1 riga nella clipboard",
-            "_": "Copiate %d righe nella clipboard"
+            "_": "Copiate %d righe nella clipboard",
+            "1": "Copiata 1 riga nella clipboard"
         },
         "copyTitle": "Copia nella Clipboard",
+        "createState": "Crea stato",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
-            "-1": "Mostra tutte le righe",
-            "_": "Mostra %d righe"
+            "_": "Mostra %d righe",
+            "-1": "Mostra tutte le righe"
         },
         "pdf": "PDF",
         "print": "Stampa",
-        "createState": "Crea stato",
         "removeAllStates": "Rimuovi tutti gli stati",
         "removeState": "Rimuovi",
         "renameState": "Rinomina",
@@ -59,138 +53,97 @@
         "stateRestore": "Ripristina stato",
         "updateState": "Aggiorna"
     },
-    "emptyTable": "Nessun dato disponibile nella tabella",
-    "info": "Risultati da _START_ a _END_ di _TOTAL_ elementi",
-    "infoEmpty": "Risultati da 0 a 0 di 0 elementi",
-    "lengthMenu": "Mostra _MENU_ elementi",
-    "searchBuilder": {
-        "add": "Aggiungi Condizione",
-        "button": {
-            "0": "Generatore di Ricerca",
-            "_": "Generatori di Ricerca (%d)"
+    "columnControl": {
+        "buttons": {
+            "searchClear": "Cancella ricerca"
         },
-        "clearAll": "Pulisci Tutto",
-        "condition": "Condizione",
-        "conditions": {
-            "date": {
-                "after": "Dopo",
-                "before": "Prima",
-                "between": "Tra",
+        "colVis": "Visibilità colonne",
+        "colVisDropdown": "Visibilità colonne",
+        "dropdown": "Altro...",
+        "list": {
+            "all": "Seleziona tutto",
+            "empty": "Vuoto",
+            "none": "Deseleziona tutto",
+            "search": "Cerca..."
+        },
+        "orderAddAsc": "Aggiungi ordinamento crescente",
+        "orderAddDesc": "Aggiungi ordinamento decrescente",
+        "orderAsc": "Ordina in modo crescente",
+        "orderClear": "Cancella ordinamento",
+        "orderDesc": "Ordina in modo decrescente",
+        "orderRemove": "Rimuovi dall'ordinamento",
+        "reorder": "Riordina colonne",
+        "reorderLeft": "Sposta la colonna a sinistra",
+        "reorderRight": "Sposta la colonna a destra",
+        "search": {
+            "datetime": {
                 "empty": "Vuoto",
-                "equals": "Uguale A",
-                "not": "Non",
-                "notBetween": "Non Tra",
-                "notEmpty": "Non Vuoto"
+                "equal": "Uguale a",
+                "greater": "Dopo il",
+                "less": "Prima del",
+                "notEmpty": "Non vuoto",
+                "notEqual": "Diverso da"
             },
             "number": {
-                "between": "Tra",
                 "empty": "Vuoto",
-                "equals": "Uguale A",
-                "gt": "Maggiore Di",
-                "gte": "Maggiore O Uguale A",
-                "lt": "Minore Di",
-                "lte": "Minore O Uguale A",
-                "not": "Non",
-                "notBetween": "Non Tra",
-                "notEmpty": "Non Vuoto"
+                "equal": "Uguale a",
+                "greater": "Maggiore di",
+                "greaterOrEqual": "Maggiore o uguale a",
+                "less": "Minore di",
+                "lessOrEqual": "Minore o uguale a",
+                "notEmpty": "Non vuoto",
+                "notEqual": "Diverso da"
             },
-            "string": {
+            "text": {
                 "contains": "Contiene",
                 "empty": "Vuoto",
-                "endsWith": "Finisce Con",
-                "equals": "Uguale A",
-                "not": "Non",
-                "notEmpty": "Non Vuoto",
-                "startsWith": "Inizia Con",
-                "notContains": "Non Contiene",
-                "notStartsWith": "Non Inizia Con",
-                "notEndsWith": "Non Finisce Con"
-            },
-            "array": {
-                "equals": "Uguale A",
-                "empty": "Vuoto",
-                "contains": "Contiene",
-                "not": "Non",
-                "notEmpty": "Non Vuoto",
-                "without": "Senza"
+                "ends": "Termina con",
+                "equal": "Uguale a",
+                "notContains": "Non contiene",
+                "notEmpty": "Non vuoto",
+                "notEqual": "Diverso da",
+                "starts": "Inizia con"
             }
         },
-        "data": "Dati",
-        "deleteTitle": "Elimina regola filtro",
-        "leftTitle": "Criterio di Riduzione Rientro",
-        "logicAnd": "E",
-        "logicOr": "O",
-        "rightTitle": "Criterio di Aumento Rientro",
-        "title": {
-            "0": "Generatore di Ricerca",
-            "_": "Generatori di Ricerca (%d)"
-        },
-        "value": "Valore"
+        "searchClear": "Cancella ricerca",
+        "searchDropdown": "Cerca"
     },
-    "searchPanes": {
-        "clearMessage": "Pulisci Tutto",
-        "collapse": {
-            "0": "Pannello di Ricerca",
-            "_": "Pannelli di Ricerca (%d)"
-        },
-        "count": "{total}",
-        "countFiltered": "{shown} ({total})",
-        "emptyPanes": "Nessun Pannello di Ricerca",
-        "loadMessage": "Caricamento Pannello di Ricerca",
-        "title": "Filtri Attivi - %d",
-        "showMessage": "Mostra tutto",
-        "collapseMessage": "Espandi tutto"
-    },
-    "select": {
-        "cells": {
-            "1": "1 cella selezionata",
-            "_": "%d celle selezionate"
-        },
-        "columns": {
-            "1": "1 colonna selezionata",
-            "_": "%d colonne selezionate"
-        },
-        "rows": {
-            "1": "1 riga selezionata",
-            "_": "%d righe selezionate"
-        }
-    },
-    "zeroRecords": "Nessun elemento corrispondente trovato",
     "datetime": {
-        "amPm": [
-            "am",
-            "pm"
-        ],
+        "amPm": {
+            "0": "am",
+            "1": "pm"
+        },
         "hours": "ore",
         "minutes": "minuti",
+        "months": {
+            "0": "Gennaio",
+            "1": "Febbraio",
+            "10": "Novembre",
+            "11": "Dicembre",
+            "2": "Marzo",
+            "3": "Aprile",
+            "4": "Maggio",
+            "5": "Giugno",
+            "6": "Luglio",
+            "7": "Agosto",
+            "8": "Settembre",
+            "9": "Ottobre"
+        },
         "next": "successivo",
         "previous": "precedente",
         "seconds": "secondi",
         "unknown": "sconosciuto",
-        "weekdays": [
-            "Dom",
-            "Lun",
-            "Mar",
-            "Mer",
-            "Gio",
-            "Ven",
-            "Sab"
-        ],
-        "months": [
-            "Gennaio",
-            "Febbraio",
-            "Marzo",
-            "Aprile",
-            "Maggio",
-            "Giugno",
-            "Luglio",
-            "Agosto",
-            "Settembre",
-            "Ottobre",
-            "Novembre",
-            "Dicembre"
-        ]
+        "weekdays": {
+            "0": "Dom",
+            "1": "Lun",
+            "2": "Mar",
+            "3": "Mer",
+            "4": "Gio",
+            "5": "Ven",
+            "6": "Sab"
+        }
     },
+    "decimal": "",
     "editor": {
         "close": "Chiudi",
         "create": {
@@ -222,8 +175,112 @@
             "title": "Rimuovi"
         }
     },
-    "thousands": ".",
-    "decimal": ",",
+    "emptyTable": "Nessun dato disponibile nella tabella",
+    "info": "Risultati da _START_ a _END_ di _TOTAL_ elementi",
+    "infoEmpty": "Risultati da 0 a 0 di 0 elementi",
+    "infoFiltered": "(filtrati da _MAX_ elementi totali)",
+    "infoPostFix": "",
+    "infoThousands": ".",
+    "lengthMenu": "Mostra _MENU_ elementi",
+    "loadingRecords": "Caricamento...",
+    "processing": "Elaborazione...",
+    "search": "Cerca:",
+    "searchBuilder": {
+        "add": "Aggiungi Condizione",
+        "button": {
+            "_": "Generatori di Ricerca (%d)",
+            "0": "Generatore di Ricerca"
+        },
+        "clearAll": "Pulisci Tutto",
+        "condition": "Condizione",
+        "conditions": {
+            "array": {
+                "contains": "Contiene",
+                "empty": "Vuoto",
+                "equals": "Uguale A",
+                "not": "Non",
+                "notEmpty": "Non Vuoto",
+                "without": "Senza"
+            },
+            "date": {
+                "after": "Dopo",
+                "before": "Prima",
+                "between": "Tra",
+                "empty": "Vuoto",
+                "equals": "Uguale A",
+                "not": "Non",
+                "notBetween": "Non Tra",
+                "notEmpty": "Non Vuoto"
+            },
+            "number": {
+                "between": "Tra",
+                "empty": "Vuoto",
+                "equals": "Uguale A",
+                "gt": "Maggiore Di",
+                "gte": "Maggiore O Uguale A",
+                "lt": "Minore Di",
+                "lte": "Minore O Uguale A",
+                "not": "Non",
+                "notBetween": "Non Tra",
+                "notEmpty": "Non Vuoto"
+            },
+            "string": {
+                "contains": "Contiene",
+                "empty": "Vuoto",
+                "endsWith": "Finisce Con",
+                "equals": "Uguale A",
+                "not": "Non",
+                "notContains": "Non Contiene",
+                "notEmpty": "Non Vuoto",
+                "notEndsWith": "Non Finisce Con",
+                "notStartsWith": "Non Inizia Con",
+                "startsWith": "Inizia Con"
+            }
+        },
+        "data": "Dati",
+        "deleteTitle": "Elimina regola filtro",
+        "leftTitle": "Criterio di Riduzione Rientro",
+        "logicAnd": "E",
+        "logicOr": "O",
+        "rightTitle": "Criterio di Aumento Rientro",
+        "title": {
+            "_": "Generatori di Ricerca (%d)",
+            "0": "Generatore di Ricerca"
+        },
+        "value": "Valore"
+    },
+    "searchPanes": {
+        "clearMessage": "Pulisci Tutto",
+        "collapse": {
+            "_": "Pannelli di Ricerca (%d)",
+            "0": "Pannello di Ricerca"
+        },
+        "collapseMessage": "Espandi tutto",
+        "count": "{total}",
+        "countFiltered": "{shown} ({total})",
+        "emptyPanes": "Nessun Pannello di Ricerca",
+        "loadMessage": "Caricamento Pannello di Ricerca",
+        "showMessage": "Mostra tutto",
+        "title": "Filtri Attivi - %d"
+    },
+    "searchPlaceholder": "",
+    "select": {
+        "cells": {
+            "_": "%d celle selezionate",
+            "0": "",
+            "1": "1 cella selezionata"
+        },
+        "columns": {
+            "_": "%d colonne selezionate",
+            "0": "",
+            "1": "1 colonna selezionata"
+        },
+        "rows": {
+            "_": "%d righe selezionate",
+            "0": "",
+            "1": "1 riga selezionata"
+        }
+    },
     "stateRestore": {
         "creationModal": {
             "button": "Crea",
@@ -252,6 +309,8 @@
         "renameButton": "Rinomina",
         "renameLabel": "Nuovo nome per %s:",
         "renameTitle": "Rinomina Stato"
-    }
+    },
+    "thousands": ".",
+    "zeroRecords": "Nessun elemento corrispondente trovato"
 };
 }));

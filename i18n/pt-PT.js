@@ -11,67 +11,205 @@
 }
 (function() {
     return {
-    "emptyTable": "Não foi encontrado nenhum registo",
-    "loadingRecords": "A carregar...",
-    "processing": "A processar...",
-    "lengthMenu": "Mostrar _MENU_ registos",
-    "zeroRecords": "Não foram encontrados resultados",
-    "search": "Procurar:",
-    "paginate": {
-        "first": "Primeiro",
-        "previous": "Anterior",
-        "next": "Seguinte",
-        "last": "Último"
-    },
     "aria": {
-        "sortAscending": ": Ordenar colunas de forma ascendente",
-        "sortDescending": ": Ordenar colunas de forma descendente"
+        "orderable": "Ativar para ordenar",
+        "orderableRemove": "Ativar para remover ordenação",
+        "orderableReverse": "Ativar para inverter ordenação",
+        "paginate": {
+            "first": "Primeiro",
+            "last": "Último",
+            "next": "Seguinte",
+            "previous": "Anterior"
+        }
     },
     "autoFill": {
-        "cancel": "cancelar",
-        "fill": "preencher",
-        "fillHorizontal": "preencher células na horizontal",
-        "fillVertical": "preencher células na vertical"
+        "cancel": "Cancelar",
+        "fill": "Preencher",
+        "fillHorizontal": "Preencher células na horizontal",
+        "fillVertical": "Preencher células na vertical",
+        "info": ""
     },
     "buttons": {
         "collection": "Coleção",
         "colvis": "Visibilidade de colunas",
         "colvisRestore": "Restaurar visibilidade",
         "copy": "Copiar",
+        "copyKeys": "Pressionar CTRL ou u2318 + C para copiar a informação para a área de transferência.<br \/><br \/>Para cancelar, clique nesta mensagem ou pressione ESC.",
         "copySuccess": {
-            "1": "Uma linha copiada para a área de transferência",
-            "_": "%ds linhas copiadas para a área de transferência"
+            "_": "%ds linhas copiadas para a área de transferência",
+            "1": "Uma linha copiada para a área de transferência"
         },
         "copyTitle": "Copiar para a área de transferência",
+        "createState": "Criar Estado",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
+            "_": "Mostrar %d linhas",
             "-1": "Mostrar todas as linhas",
-            "_": "Mostrar %d linhas"
+            "1": "Mostrar 1 linha"
         },
         "pdf": "PDF",
         "print": "Imprimir",
-        "copyKeys": "Pressionar CTRL ou u2318 + C para copiar a informação para a área de transferência. Para cancelar, clique nesta mensagem ou pressione ESC.",
-        "createState": "Criar",
-        "removeAllStates": "Remover Todos",
+        "removeAllStates": "Remover Todos os Estados",
         "removeState": "Remover",
         "renameState": "Renomear",
-        "savedStates": "Gravados",
+        "savedStates": "Estados Gravados",
         "stateRestore": "Estado %d",
         "updateState": "Atualizar"
     },
-    "decimal": ",",
+    "columnControl": {
+        "buttons": {
+            "searchClear": "Limpar pesquisa"
+        },
+        "colVis": "Visibilidade da coluna",
+        "colVisDropdown": "Visibilidade da coluna",
+        "dropdown": "Mostrar mais...",
+        "list": {
+            "all": "Todos",
+            "empty": "Vazio",
+            "none": "Nenhum",
+            "search": "Pesquisar..."
+        },
+        "orderAddAsc": "Adicionar à ordem crescente",
+        "orderAddDesc": "Adicionar à ordem decrescente",
+        "orderAsc": "Ordem crescente",
+        "orderClear": "Remover ordenação",
+        "orderDesc": "Ordem decrescente",
+        "orderRemove": "Remover ordenação",
+        "reorder": "Reordenar",
+        "reorderLeft": "Mover para a esquerda",
+        "reorderRight": "Mover para a direita",
+        "search": {
+            "datetime": {
+                "empty": "Vazio",
+                "equal": "Igual a",
+                "greater": "Posterior a",
+                "less": "Anterior a",
+                "notEmpty": "Não está vazio",
+                "notEqual": "Diferente de"
+            },
+            "number": {
+                "empty": "Vazio",
+                "equal": "Igual a",
+                "greater": "Maior que",
+                "greaterOrEqual": "Maior ou igual a",
+                "less": "Menor que",
+                "lessOrEqual": "Menor ou igual a",
+                "notEmpty": "Não está vazio",
+                "notEqual": "Diferente de"
+            },
+            "text": {
+                "contains": "Contém",
+                "empty": "Vazio",
+                "ends": "Termina em",
+                "equal": "Igual a",
+                "notContains": "Não contém",
+                "notEmpty": "Não está vazio",
+                "notEqual": "Diferente de",
+                "starts": "Começa por"
+            }
+        },
+        "searchClear": "Limpar pesquisa",
+        "searchDropdown": "Pesquisar"
+    },
+    "datetime": {
+        "amPm": {
+            "0": "am",
+            "1": "pm"
+        },
+        "hours": "Horas",
+        "minutes": "Minutos",
+        "months": {
+            "0": "Janeiro",
+            "1": "Fevereiro",
+            "10": "Novembro",
+            "11": "Dezembro",
+            "2": "Março",
+            "3": "Abril",
+            "4": "Maio",
+            "5": "Junho",
+            "6": "Julho",
+            "7": "Agosto",
+            "8": "Setembro",
+            "9": "Outubro"
+        },
+        "next": "Próximo",
+        "previous": "Anterior",
+        "seconds": "Segundos",
+        "unknown": "-",
+        "weekdays": {
+            "0": "Dom",
+            "1": "Seg",
+            "2": "Ter",
+            "3": "Qua",
+            "4": "Qui",
+            "5": "Sex",
+            "6": "Sáb"
+        }
+    },
+    "decimal": "",
+    "editor": {
+        "close": "Fechar",
+        "create": {
+            "button": "Novo",
+            "submit": "Criar",
+            "title": "Criar novo registo"
+        },
+        "edit": {
+            "button": "Editar",
+            "submit": "Atualizar",
+            "title": "Editar registo"
+        },
+        "error": {
+            "system": "Ocorreu um erro no sistema"
+        },
+        "multi": {
+            "info": "Os itens selecionados contêm valores diferentes para esta entrada. Para editar e definir todos os itens nesta entrada com o mesmo valor, clique ou toque aqui, caso contrário eles manterão os seus valores individuais.",
+            "noMulti": "Este campo pode ser editado individualmente mas não pode ser editado em grupo",
+            "restore": "Desfazer alterações",
+            "title": "Múltiplos valores"
+        },
+        "remove": {
+            "button": "Remover",
+            "confirm": {
+                "_": "Tem a certeza que pretende eliminar %d entradas?",
+                "1": "Tem a certeza que pretende eliminar esta entrada?"
+            },
+            "submit": "Remover",
+            "title": "Remover"
+        }
+    },
+    "emptyTable": "Não foi encontrado nenhum registo",
+    "info": "Mostrando os registos _START_ a _END_ num total de _TOTAL_",
+    "infoEmpty": "Mostrando 0 registos num total de 0",
     "infoFiltered": "(filtrado num total de _MAX_ registos)",
+    "infoPostFix": "",
     "infoThousands": ".",
+    "lengthLabels": {
+        "-1": "Todas"
+    },
+    "lengthMenu": "Mostrar _MENU_ registos",
+    "loadingRecords": "A carregar...",
+    "orderClear": "Remover ordenação",
+    "processing": "A processar...",
+    "search": "Procurar:",
     "searchBuilder": {
         "add": "Adicionar condição",
         "button": {
-            "0": "Construtor de pesquisa",
-            "_": "Construtor de pesquisa (%d)"
+            "_": "Construtor de pesquisa (%d)",
+            "0": "Construtor de pesquisa"
         },
         "clearAll": "Limpar tudo",
         "condition": "Condição",
         "conditions": {
+            "array": {
+                "contains": "Contém",
+                "empty": "Vazio",
+                "equals": "Igual",
+                "not": "Diferente",
+                "notEmpty": "Não está vazio",
+                "without": "Sem"
+            },
             "date": {
                 "after": "Depois",
                 "before": "Antes",
@@ -100,129 +238,58 @@
                 "endsWith": "Termina em",
                 "equals": "Igual",
                 "not": "Diferente",
-                "notEmpty": "Não está vazio",
-                "startsWith": "Começa em",
                 "notContains": "Não contém",
-                "notStartsWith": "Não começa com",
-                "notEndsWith": "Não termina com"
-            },
-            "array": {
-                "equals": "Igual",
-                "empty": "Vazio",
-                "contains": "Contém",
-                "not": "Diferente",
                 "notEmpty": "Não está vazio",
-                "without": "Sem"
+                "notEndsWith": "Não termina com",
+                "notStartsWith": "Não começa com",
+                "startsWith": "Começa em"
             }
         },
         "data": "Dados",
         "deleteTitle": "Excluir condição de filtragem",
+        "leftTitle": "Excluir critério",
         "logicAnd": "E",
         "logicOr": "Ou",
+        "rightTitle": "Incluir critério",
+        "search": "Pesquisar",
         "title": {
-            "0": "Construtor de pesquisa",
-            "_": "Construtor de pesquisa (%d)"
+            "_": "Construtor de pesquisa (%d)",
+            "0": "Construtor de pesquisa"
         },
-        "value": "Valor",
-        "leftTitle": "Excluir critério",
-        "rightTitle": "Incluir critério"
+        "value": "Valor"
     },
     "searchPanes": {
         "clearMessage": "Limpar tudo",
         "collapse": {
-            "0": "Painéis de pesquisa",
-            "_": "Painéis de pesquisa (%d)"
+            "_": "Painéis de pesquisa (%d)",
+            "0": "Painéis de pesquisa"
         },
+        "collapseMessage": "Ocultar Todos",
         "count": "{total}",
         "countFiltered": "{shown} ({total})",
+        "emptyMessage": "<em>Vazio<\/em>",
         "emptyPanes": "Sem painéis de pesquisa",
         "loadMessage": "A carregar painéis de pesquisa",
-        "title": "Filtros ativos",
         "showMessage": "Mostrar todos",
-        "collapseMessage": "Ocultar Todos"
+        "title": "Filtros ativos"
     },
+    "searchPlaceholder": "",
     "select": {
         "cells": {
-            "1": "1 célula seleccionada",
-            "_": "%d células seleccionadas"
+            "_": "%d células selecionadas",
+            "0": "",
+            "1": "1 célula selecionada"
         },
         "columns": {
-            "1": "1 coluna seleccionada",
-            "_": "%d colunas seleccionadas"
+            "_": "%d colunas selecionadas",
+            "0": "",
+            "1": "1 coluna selecionada"
         },
         "rows": {
-            "1": "%d linha seleccionada",
-            "_": "%d linhas seleccionadas"
+            "_": "%d linhas selecionadas",
+            "0": "",
+            "1": "%d linha selecionada"
         }
-    },
-    "thousands": ".",
-    "editor": {
-        "close": "Fechar",
-        "create": {
-            "button": "Novo",
-            "title": "Criar novo registro",
-            "submit": "Criar"
-        },
-        "edit": {
-            "button": "Editar",
-            "title": "Editar registro",
-            "submit": "Atualizar"
-        },
-        "remove": {
-            "button": "Remover",
-            "title": "Remover",
-            "submit": "Remover",
-            "confirm": {
-                "_": "Tem certeza que quer apagar %d entradas?",
-                "1": "Tem certeza que quer apagar esta entrada?"
-            }
-        },
-        "multi": {
-            "title": "Multiplos valores",
-            "restore": "Desfazer alterações",
-            "info": "Os itens selecionados contêm valores diferentes para esta entrada. Para editar e definir todos os itens nesta entrada com o mesmo valor, clique ou toque aqui, caso contrário, eles manterão os seus valores individuais.",
-            "noMulti": "Este campo pode ser editado individualmente mas não pode ser editado em grupo"
-        },
-        "error": {
-            "system": "Ocorreu um erro no sistema"
-        }
-    },
-    "info": "Mostrando os registos _START_ a _END_ num total de _TOTAL_",
-    "infoEmpty": "Mostrando 0 os registos num total de 0",
-    "datetime": {
-        "previous": "anterior",
-        "next": "próximo",
-        "hours": "horas",
-        "minutes": "minutos",
-        "seconds": "segundos",
-        "unknown": "desconhecido",
-        "amPm": [
-            "am",
-            "pm"
-        ],
-        "months": [
-            "Janeiro",
-            "Fevereiro",
-            "Março",
-            "Abril",
-            "Maio",
-            "Junho",
-            "Julho",
-            "Agosto",
-            "Setembro",
-            "Outubro",
-            "Novembro",
-            "Dezembro"
-        ],
-        "weekdays": [
-            "Dom",
-            "Seg",
-            "Ter",
-            "Qua",
-            "Qui",
-            "Sex",
-            "Sáb"
-        ]
     },
     "stateRestore": {
         "creationModal": {
@@ -242,7 +309,7 @@
             "toggleLabel": "Incluir:"
         },
         "duplicateError": "Já existe um estado com o mesmo nome",
-        "emptyError": "Não pode estar a vazio",
+        "emptyError": "Nome não pode ser vazio",
         "emptyStates": "Não existem estados gravados",
         "removeConfirm": "Deseja mesmo remover o estado %s?",
         "removeError": "Erro ao remover o estado.",
@@ -252,6 +319,8 @@
         "renameButton": "Renomear",
         "renameLabel": "Novo nome para %s:",
         "renameTitle": "Renomear Estado"
-    }
+    },
+    "thousands": ".",
+    "zeroRecords": "Não foram encontrados resultados"
 };
 }));

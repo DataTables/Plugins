@@ -12,14 +12,19 @@
 (function() {
     return {
     "aria": {
-        "sortAscending": ": orden ascendente",
-        "sortDescending": ": orden descendente"
+        "paginate": {
+            "first": "Primero",
+            "last": "Último",
+            "next": "Siguiente",
+            "previous": "Anterior"
+        }
     },
     "autoFill": {
         "cancel": "Cancelar",
         "fill": "Rellenar todas las celdas con <i>%d&lt;\\\/i&gt;<\/i>",
         "fillHorizontal": "Rellenar celdas horizontalmente",
-        "fillVertical": "Rellenar celdas verticalmente"
+        "fillVertical": "Rellenar celdas verticalmente",
+        "info": ""
     },
     "buttons": {
         "collection": "Colección <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
@@ -27,20 +32,20 @@
         "colvisRestore": "Restaurar visibilidad",
         "copy": "Copiar",
         "copyKeys": "Presiona ctrl or u2318 + C para copiar los datos de la tabla al portapapeles.<br \/><br \/>Para cancelar, haz click en este mensaje o presiona esc.",
+        "copySuccess": {
+            "_": "Copiaste %ds registros al portapapeles",
+            "1": "Copiaste un registro al portapapeles"
+        },
         "copyTitle": "Copiado al portapapeles",
+        "createState": "Crear Estado",
         "csv": "CSV",
         "excel": "Excel",
+        "pageLength": {
+            "_": "Mostrar %ds filas",
+            "-1": "Mostrar todos"
+        },
         "pdf": "PDF",
         "print": "Imprimir",
-        "copySuccess": {
-            "1": "Copiaste un registro al portapapeles",
-            "_": "Copiaste %ds registros al portapapeles"
-        },
-        "pageLength": {
-            "-1": "Mostrar todos",
-            "_": "Mostrar %ds filas"
-        },
-        "createState": "Crear Estado",
         "removeAllStates": "Eliminar Todos los Estados",
         "removeState": "Eliminar",
         "renameState": "Renombrar",
@@ -49,10 +54,10 @@
         "updateState": "Actualizar"
     },
     "datetime": {
-        "amPm": [
-            "AM",
-            "PM"
-        ],
+        "amPm": {
+            "0": "AM",
+            "1": "PM"
+        },
         "hours": "Horas",
         "minutes": "Minutos",
         "months": {
@@ -72,18 +77,18 @@
         "next": "Siguiente",
         "previous": "Anterior",
         "seconds": "Segundos",
-        "weekdays": [
-            "Dom",
-            "Lun",
-            "Mar",
-            "Mie",
-            "Jue",
-            "Vie",
-            "Sab"
-        ],
-        "unknown": "-"
+        "unknown": "-",
+        "weekdays": {
+            "0": "Dom",
+            "1": "Lun",
+            "2": "Mar",
+            "3": "Mie",
+            "4": "Jue",
+            "5": "Vie",
+            "6": "Sab"
+        }
     },
-    "decimal": ",",
+    "decimal": "",
     "editor": {
         "close": "Cerrar",
         "create": {
@@ -107,27 +112,22 @@
         },
         "remove": {
             "button": "Eliminar",
-            "submit": "Eliminar",
-            "title": "Eliminar registro",
             "confirm": {
                 "_": "¿Estás seguro de que deseas eliminar %d registros?",
                 "1": "¿Estás seguro de que deseas eliminar 1 registro?"
-            }
+            },
+            "submit": "Eliminar",
+            "title": "Eliminar registro"
         }
     },
     "emptyTable": "Sin registros",
     "info": "Mostrando _START_ a _END_ de _TOTAL_ registros",
     "infoEmpty": "Mostrando 0 a 0 de 0 registros",
     "infoFiltered": "(filtrado de _MAX_ registros)",
+    "infoPostFix": "",
     "infoThousands": ".",
     "lengthMenu": "Mostrar _MENU_ registros",
     "loadingRecords": "Cargando...",
-    "paginate": {
-        "first": "Primero",
-        "last": "Último",
-        "next": "Siguiente",
-        "previous": "Anterior"
-    },
     "processing": "Procesando...",
     "search": "Buscar:",
     "searchBuilder": {
@@ -175,11 +175,11 @@
                 "endsWith": "Termina con",
                 "equals": "Igual",
                 "not": "Distinto",
-                "notEmpty": "No vacío",
-                "startsWith": "Comienza con",
                 "notContains": "No contiene",
+                "notEmpty": "No vacío",
+                "notEndsWith": "No termina con",
                 "notStartsWith": "No comienza con",
-                "notEndsWith": "No termina con"
+                "startsWith": "Comienza con"
             }
         },
         "data": "Datos",
@@ -200,31 +200,32 @@
             "_": "Paneles de búsqueda (%d)",
             "0": "Paneles de búsqueda"
         },
+        "collapseMessage": "Colapsar Todos",
         "count": "{total}",
         "countFiltered": "{shown} ({total})",
         "emptyPanes": "Sin paneles de búsqueda",
         "loadMessage": "Cargando paneles de búsqueda...",
-        "title": "Filtros activos - %d",
         "showMessage": "Mostrar Todos",
-        "collapseMessage": "Colapsar Todos"
+        "title": "Filtros activos - %d"
     },
+    "searchPlaceholder": "",
     "select": {
         "cells": {
             "_": "%d celdas seleccionadas",
+            "0": "",
             "1": "Una celda seleccionada"
         },
         "columns": {
             "_": "%d columnas seleccionadas",
+            "0": "",
             "1": "Una columna seleccionada"
         },
         "rows": {
-            "1": "Una fila seleccionada",
-            "_": "%d filas seleccionadas"
+            "_": "%d filas seleccionadas",
+            "0": "",
+            "1": "Una fila seleccionada"
         }
     },
-    "thousands": ".",
-    "zeroRecords": "No se encontraron registros",
-    "searchPlaceholder": "Ingresa un término",
     "stateRestore": {
         "creationModal": {
             "button": "Crear",
@@ -253,6 +254,8 @@
         "renameButton": "Renombrar",
         "renameLabel": "Nombre nuevo para %s:",
         "renameTitle": "Renombrar Estado"
-    }
+    },
+    "thousands": ".",
+    "zeroRecords": "No se encontraron registros"
 };
 }));
