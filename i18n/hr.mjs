@@ -1,26 +1,17 @@
 export default {
-    "emptyTable": "Nema podataka u tablici",
-    "info": "Prikazano _START_ do _END_ od _TOTAL_ rezultata",
-    "infoEmpty": "Prikazano 0 do 0 od 0 rezultata",
-    "infoFiltered": "(filtrirano iz _MAX_ ukupnih rezultata)",
-    "infoThousands": ",",
-    "lengthMenu": "Prikaži _MENU_ rezultata po stranici",
-    "loadingRecords": "Dohvaćam...",
-    "processing": "Obrađujem...",
-    "search": "Pretraži:",
-    "zeroRecords": "Ništa nije pronađeno",
-    "paginate": {
-        "first": "Prva",
-        "previous": "Nazad",
-        "next": "Naprijed",
-        "last": "Zadnja"
-    },
     "aria": {
-        "sortAscending": ": aktiviraj za rastući poredak",
-        "sortDescending": ": aktiviraj za padajući poredak"
+        "paginate": {
+            "first": "Prva",
+            "last": "Zadnja",
+            "next": "Naprijed",
+            "previous": "Nazad"
+        }
     },
     "autoFill": {
-        "cancel": "Poništi"
+        "cancel": "Poništi",
+        "fillHorizontal": "Ispuni ćelije vodoravno",
+        "fillVertical": "Ispuni ćelije okomito",
+        "info": ""
     },
     "buttons": {
         "collection": "Kolekcija",
@@ -35,42 +26,113 @@ export default {
         "copyTitle": "Kopiraj u Međuspremnik",
         "csv": "CSV",
         "excel": "Excel",
+        "pageLength": {
+            "_": "Prikaži %d redova",
+            "-1": "Prikaži sve redove"
+        },
         "pdf": "PDF",
         "print": "Isprintaj",
-        "pageLength": {
-            "-1": "Prikaži sve redove",
-            "_": "Prikaži %d redova"
-        }
+        "removeState": "Ukloni",
+        "renameState": "Preimenuj",
+        "updateState": "Ažuriraj"
     },
-    "searchPanes": {
-        "collapse": [
-            "Pretra"
-        ],
-        "clearMessage": "Obriši sve",
-        "emptyPanes": "Nema okna za pretraživanje",
-        "loadMessage": "Učitavanje okna za pretraživanje...",
-        "title": "Filtera aktivno - %d"
-    },
-    "select": {
-        "cells": {
-            "_": "%d ćelija odabrano",
-            "1": "1 ćelija odabrana"
+    "datetime": {
+        "amPm": {
+            "0": "AM",
+            "1": "PM"
         },
-        "columns": {
-            "_": "%d stupaca odabrano",
-            "1": "1 stupac odabran"
+        "hours": "Sati",
+        "minutes": "Minute",
+        "months": {
+            "0": "siječanj",
+            "1": "veljača",
+            "10": "studeni",
+            "11": "prosinac",
+            "2": "ožujak",
+            "3": "travanj",
+            "4": "svibanj",
+            "5": "lipanj",
+            "6": "srpanj",
+            "7": "kolovoz",
+            "8": "rujan",
+            "9": "listopad"
+        },
+        "next": "Sljedeće",
+        "previous": "Prethodno",
+        "seconds": "Sekunde",
+        "unknown": "Nepoznat",
+        "weekdays": {
+            "0": "Ned",
+            "1": "Pon",
+            "2": "Uto",
+            "3": "Sri",
+            "4": "Čet",
+            "5": "Pet",
+            "6": "Sub"
         }
     },
+    "decimal": "",
+    "editor": {
+        "close": "Zatvori",
+        "create": {
+            "button": "Novi",
+            "submit": "Dodaj",
+            "title": "Dodaj novi zapis"
+        },
+        "edit": {
+            "button": "Uredi",
+            "submit": "Ažuriraj",
+            "title": "Uredi zapis"
+        },
+        "error": {
+            "system": "Dogodila se pogreška (Više informacija)."
+        },
+        "multi": {
+            "info": "Da biste uredili i postavili sve stavke za ovaj ulaz na istu vrijednost, kliknite ili dodirnite ovdje, inače će zadržati svoje pojedinačne vrijednosti.",
+            "noMulti": "Ovaj unos može biti uređen samostalno, ali ne kao dio grupe.",
+            "restore": "Poništi promjene",
+            "title": "Vrijednosti"
+        },
+        "remove": {
+            "button": "Obriši",
+            "confirm": {
+                "_": "Jeste li sigurni da želite obrisati %d redova?",
+                "1": "Jeste li sigurni da želite obrisati 1 redak?"
+            },
+            "submit": "Obriši",
+            "title": "Obriši"
+        }
+    },
+    "emptyTable": "Nema podataka u tablici",
+    "info": "Prikazano _START_ do _END_ od _TOTAL_ rezultata",
+    "infoEmpty": "Prikazano 0 do 0 od 0 rezultata",
+    "infoFiltered": "(filtrirano iz _MAX_ ukupnih rezultata)",
+    "infoPostFix": "",
+    "infoThousands": ",",
+    "lengthMenu": "Prikaži _MENU_ rezultata po stranici",
+    "loadingRecords": "Dohvaćam...",
+    "processing": "Obrađujem...",
+    "search": "Pretraži:",
     "searchBuilder": {
         "add": "Dodaj uvjet",
         "button": {
-            "0": "Graditelj pretraživanja",
-            "_": "Graditelj pretraživanja (%d)"
+            "_": "Graditelj pretraživanja (%d)",
+            "0": "Graditelj pretraživanja"
         },
         "clearAll": "Obriši sve",
+        "condition": "Uvjet",
         "conditions": {
+            "array": {
+                "contains": "Sadrži",
+                "empty": "Prazno",
+                "equals": "Jednako je",
+                "not": "Ne",
+                "notEmpty": "Nije prazno",
+                "without": "Bez"
+            },
             "date": {
                 "after": "Nakon",
+                "before": "Prije",
                 "between": "Između",
                 "empty": "Prazno",
                 "equals": "Jednako",
@@ -96,16 +158,11 @@ export default {
                 "endsWith": "Završava sa",
                 "equals": "Jednako",
                 "not": "Ne",
+                "notContains": "Ne sadrži",
                 "notEmpty": "Nije prazno",
+                "notEndsWith": "Ne završava sa",
+                "notStartsWith": "Ne počinje sa",
                 "startsWith": "Počinje sa"
-            },
-            "array": {
-                "equals": "Jednako je",
-                "empty": "Prazno",
-                "contains": "Sadrži",
-                "not": "Ne",
-                "notEmpty": "Nije prazno",
-                "without": "Bez"
             }
         },
         "data": "Podatak",
@@ -113,67 +170,40 @@ export default {
         "logicAnd": "I",
         "logicOr": "ILI",
         "title": {
-            "0": "Graditelj pretraživanja",
-            "_": "Graditelj pretraživanja (%d)"
+            "_": "Graditelj pretraživanja (%d)",
+            "0": "Graditelj pretraživanja"
         },
         "value": "Vrijednost"
     },
-    "datetime": {
-        "previous": "Prethodno",
-        "hours": "Sati",
-        "minutes": "Minute",
-        "seconds": "Sekunde",
-        "unknown": "Nepoznat",
-        "amPm": [
-            "AM",
-            "PM"
-        ],
-        "next": "Sljedeće",
-        "months": [
-            "siječanj",
-            "veljača",
-            "ožujak",
-            "travanj",
-            "svibanj",
-            "lipanj",
-            "srpanj",
-            "kolovoz",
-            "rujan",
-            "listopad",
-            "studeni",
-            "prosinac"
-        ]
+    "searchPanes": {
+        "clearMessage": "Obriši sve",
+        "collapse": {
+            "0": "Pretra"
+        },
+        "collapseMessage": "Sažmi sve",
+        "emptyPanes": "Nema okna za pretraživanje",
+        "loadMessage": "Učitavanje okna za pretraživanje...",
+        "showMessage": "Prikaži sve",
+        "title": "Filtera aktivno - %d"
     },
-    "editor": {
-        "close": "Zatvori",
-        "create": {
-            "button": "Novi",
-            "title": "Dodaj novi zapis",
-            "submit": "Dodaj"
+    "searchPlaceholder": "",
+    "select": {
+        "cells": {
+            "_": "%d ćelija odabrano",
+            "0": "",
+            "1": "1 ćelija odabrana"
         },
-        "edit": {
-            "button": "Uredi",
-            "title": "Uredi zapis",
-            "submit": "Ažuriraj"
+        "columns": {
+            "_": "%d stupaca odabrano",
+            "0": "",
+            "1": "1 stupac odabran"
         },
-        "remove": {
-            "button": "Obriši",
-            "title": "Obriši",
-            "submit": "Obriši",
-            "confirm": {
-                "_": "Jeste li sigurni da želite obrisati %d redova?",
-                "1": "Jeste li sigurni da želite obrisati 1 redak?"
-            }
-        },
-        "error": {
-            "system": "Dogodila se pogreška (Više informacija)."
-        },
-        "multi": {
-            "title": "Vrijednosti",
-            "info": "Da biste uredili i postavili sve stavke za ovaj ulaz na istu vrijednost, kliknite ili dodirnite ovdje, inače će zadržati svoje pojedinačne vrijednosti.",
-            "restore": "Poništi promjene",
-            "noMulti": "Ovaj unos može biti uređen samostalno, ali ne kao dio grupe."
+        "rows": {
+            "_": "%d redova odabrano",
+            "0": "",
+            "1": "1 red odabran"
         }
     },
-    "decimal": ","
+    "thousands": ".",
+    "zeroRecords": "Ništa nije pronađeno"
 };

@@ -1,66 +1,140 @@
 export default {
-    "lengthMenu": "_MENU_ resultaten weergeven",
-    "zeroRecords": "Geen resultaten gevonden",
-    "infoEmpty": "Geen resultaten om weer te geven",
-    "search": "Zoeken:",
-    "emptyTable": "Geen resultaten aanwezig in de tabel",
-    "infoThousands": ".",
-    "loadingRecords": "Een moment geduld aub - bezig met laden...",
-    "paginate": {
-        "first": "Eerste",
-        "last": "Laatste",
-        "next": "Volgende",
-        "previous": "Vorige"
-    },
     "aria": {
-        "sortAscending": ": activeer om kolom oplopend te sorteren",
-        "sortDescending": ": activeer om kolom aflopend te sorteren"
+        "paginate": {
+            "first": "Eerste",
+            "last": "Laatste",
+            "next": "Volgende",
+            "previous": "Vorige"
+        }
     },
     "autoFill": {
+        "cancel": "Annuleren",
         "fill": "Vul alle cellen met <i>%d<\/i>",
         "fillHorizontal": "Vul cellen horizontaal",
         "fillVertical": "Vul cellen verticaal",
-        "cancel": "Annuleren",
-        "info": "Voorbeeld automatisch aanvullen info"
+        "info": ""
     },
     "buttons": {
+        "collection": "Verzameling",
         "colvis": "Kolom zichtbaarheid",
         "colvisRestore": "Herstel zichtbaarheid",
         "copy": "Kopieer",
+        "copyKeys": "Klik ctrl of u2318 + C om de tabeldata to kopiëren naar je klembord. Om te annuleren klik hier of klik op escape.",
         "copySuccess": {
-            "1": "1 regel naar klembord gekopieerd",
-            "_": "%ds regels naar klembord gekopieerd"
+            "_": "%ds regels naar klembord gekopieerd",
+            "1": "1 regel naar klembord gekopieerd"
         },
         "copyTitle": "Kopieer naar klembord",
+        "createState": "Maak staat",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
-            "-1": "Toon alle regels",
             "_": "Toon %d regels",
-            "1": "Toon 1 rij"
+            "-1": "Toon alle regels"
         },
         "pdf": "PDF",
         "print": "Print",
-        "copyKeys": "Klik ctrl of u2318 + C om de tabeldata to kopiëren naar je klembord. Om te annuleren klik hier of klik op escape.",
-        "collection": "Verzameling",
-        "createState": "Maak staat",
         "removeAllStates": "Verwijder alle",
         "removeState": "Verwijder",
         "renameState": "Hernoem",
         "savedStates": "Opgeslagen",
-        "updateState": "Bijwerken",
-        "stateRestore": "Preset %d"
+        "stateRestore": "Preset %d",
+        "updateState": "Bijwerken"
     },
+    "datetime": {
+        "amPm": {
+            "0": "vm",
+            "1": "nm"
+        },
+        "hours": "Uur",
+        "minutes": "Minuut",
+        "months": {
+            "0": "Januari",
+            "1": "Februari",
+            "10": "November",
+            "11": "December",
+            "2": "Maart",
+            "3": "April",
+            "4": "Mei",
+            "5": "Juni",
+            "6": "Juli",
+            "7": "Augustus",
+            "8": "September",
+            "9": "Oktober"
+        },
+        "next": "Volgende",
+        "previous": "Vorige",
+        "seconds": "Seconde",
+        "unknown": "Onbekend",
+        "weekdays": {
+            "0": "Zo",
+            "1": "Ma",
+            "2": "Di",
+            "3": "Wo",
+            "4": "Do",
+            "5": "Vr",
+            "6": "Za"
+        }
+    },
+    "decimal": "",
+    "editor": {
+        "close": "Sluiten",
+        "create": {
+            "button": "Nieuw",
+            "submit": "Toevoegen",
+            "title": "Voeg nieuwe gegevens toe"
+        },
+        "edit": {
+            "button": "Wijzigen",
+            "submit": "Wijzigen",
+            "title": "Wijzig gegevens"
+        },
+        "error": {
+            "system": "Er is een fout gebeurd"
+        },
+        "multi": {
+            "info": "De geselecteerde items bevatten verschillende waarden voor deze invoer. Om alle items voor deze invoer op dezelfde waarde te zetten, klik of tik hier, zoniet zullen de individuele waarden behouden blijven.",
+            "noMulti": "Deze invoer kan individueel gewijzigd worden, maar niet als deel van een groep.",
+            "restore": "Wijzigingen ongedaan maken",
+            "title": "Meerdere waarden"
+        },
+        "remove": {
+            "button": "Verwijderen",
+            "confirm": {
+                "_": "Bent u zeker dat u %d rijen wil verwijderen?",
+                "1": "Bent u zeker dat u 1 rij wil verwijderen?"
+            },
+            "submit": "Verwijder",
+            "title": "Verwijder"
+        }
+    },
+    "emptyTable": "Geen resultaten aanwezig in de tabel",
+    "info": "_START_ tot _END_ van _TOTAL_ resultaten",
+    "infoEmpty": "Geen resultaten om weer te geven",
+    "infoFiltered": " (gefilterd uit _MAX_ resultaten)",
+    "infoPostFix": "",
+    "infoThousands": ".",
+    "lengthMenu": "_MENU_ resultaten weergeven",
+    "loadingRecords": "Een moment geduld aub - bezig met laden...",
     "processing": "Verwerken...",
-    "decimal": ",",
+    "search": "Zoeken:",
     "searchBuilder": {
         "add": "Toevoegen",
+        "button": {
+            "_": "Zoekwizard (%d)",
+            "0": "Zoekwizard"
+        },
         "clearAll": "Verwijder alles",
         "condition": "Conditie",
-        "data": "Data",
-        "deleteTitle": "Verwijder",
-        "value": "Waarde",
         "conditions": {
+            "array": {
+                "contains": "Bevat",
+                "empty": "Leeg",
+                "equals": "Gelijk aan",
+                "not": "Niet",
+                "notEmpty": "Niet leeg",
+                "without": "Zonder"
+            },
             "date": {
                 "after": "Na",
                 "before": "Voor",
@@ -89,129 +163,55 @@ export default {
                 "endsWith": "Eindigt met",
                 "equals": "Gelijk aan",
                 "not": "Niet",
-                "notEmpty": "Niet leeg",
-                "startsWith": "Start met",
                 "notContains": "Zonder",
-                "notEndsWith": "Eindigt niet met",
-                "notStartsWith": "Begint niet met"
-            },
-            "array": {
-                "equals": "Gelijk aan",
-                "empty": "Leeg",
-                "contains": "Bevat",
-                "not": "Niet",
                 "notEmpty": "Niet leeg",
-                "without": "Zonder"
+                "notEndsWith": "Eindigt niet met",
+                "notStartsWith": "Begint niet met",
+                "startsWith": "Start met"
             }
         },
+        "data": "Data",
+        "deleteTitle": "Verwijder",
+        "leftTitle": "Afwijkende criteria",
         "logicAnd": "En",
         "logicOr": "Of",
-        "button": {
-            "0": "Zoekwizard",
-            "_": "Zoekwizard (%d)"
-        },
-        "leftTitle": "Afwijkende criteria",
         "rightTitle": "Criteria inspringen",
         "title": {
-            "0": "Zoekwizard",
-            "_": "Zoekwizard (%d) "
-        }
+            "_": "Zoekwizard (%d) ",
+            "0": "Zoekwizard"
+        },
+        "value": "Waarde"
     },
     "searchPanes": {
         "clearMessage": "Alles leegmaken",
         "collapse": {
-            "0": "Zoekpanelen",
-            "_": "Zoekpanelen (%d)"
+            "_": "Zoekpanelen (%d)",
+            "0": "Zoekpanelen"
         },
+        "collapseMessage": "Instorten",
         "count": "{total}",
         "countFiltered": "{shown} ({total})",
         "emptyPanes": "Geen zoekpanelen",
         "loadMessage": "Zoekpanelen laden...",
-        "title": "%d filters actief",
         "showMessage": "Alles weergeven",
-        "collapseMessage": "Instorten"
+        "title": "%d filters actief"
     },
+    "searchPlaceholder": "",
     "select": {
         "cells": {
-            "1": "1 cel geselecteerd",
-            "_": "%d cellen geselecteerd"
+            "_": "%d cellen geselecteerd",
+            "0": "",
+            "1": "1 cel geselecteerd"
         },
         "columns": {
-            "1": "1 kolom geselecteerd",
-            "_": "%d kolommen geselecteerd"
+            "_": "%d kolommen geselecteerd",
+            "0": "",
+            "1": "1 kolom geselecteerd"
         },
         "rows": {
-            "1": "1 rij geselecteerd",
-            "_": "%d rijen geselecteerd"
-        }
-    },
-    "thousands": ".",
-    "info": "_START_ tot _END_ van _TOTAL_ resultaten",
-    "infoFiltered": " (gefilterd uit _MAX_ resultaten)",
-    "datetime": {
-        "previous": "Vorige",
-        "next": "Volgende",
-        "hours": "Uur",
-        "minutes": "Minuut",
-        "seconds": "Seconde",
-        "unknown": "Onbekend",
-        "amPm": [
-            "vm",
-            "nm"
-        ],
-        "weekdays": [
-            "Zo",
-            "Ma",
-            "Di",
-            "Wo",
-            "Do",
-            "Vr",
-            "Za"
-        ],
-        "months": [
-            "Januari",
-            "Februari",
-            "Maart",
-            "April",
-            "Mei",
-            "Juni",
-            "Juli",
-            "Augustus",
-            "September",
-            "Oktober",
-            "November",
-            "December"
-        ]
-    },
-    "editor": {
-        "close": "Sluiten",
-        "create": {
-            "button": "Nieuw",
-            "title": "Voeg nieuwe gegevens toe",
-            "submit": "Toevoegen"
-        },
-        "edit": {
-            "button": "Wijzigen",
-            "title": "Wijzig gegevens",
-            "submit": "Wijzigen"
-        },
-        "remove": {
-            "button": "Verwijderen",
-            "title": "Verwijder",
-            "submit": "Verwijder",
-            "confirm": {
-                "_": "Bent u zeker dat u %d rijen wil verwijderen?",
-                "1": "Bent u zeker dat u 1 rij wil verwijderen?"
-            }
-        },
-        "error": {
-            "system": "Er is een fout gebeurd"
-        },
-        "multi": {
-            "title": "Meerdere waarden",
-            "info": "De geselecteerde items bevatten verschillende waarden voor deze invoer. Om alle items voor deze invoer op dezelfde waarde te zetten, klik of tik hier, zoniet zullen de individuele waarden behouden blijven.",
-            "restore": "Wijzigingen ongedaan maken",
-            "noMulti": "Deze invoer kan individueel gewijzigd worden, maar niet als deel van een groep."
+            "_": "%d rijen geselecteerd",
+            "0": "",
+            "1": "1 rij geselecteerd"
         }
     },
     "stateRestore": {
@@ -242,5 +242,7 @@ export default {
         "renameButton": "Hernoem",
         "renameLabel": "Nieuwe naam voor staat",
         "renameTitle": "Hernoem staat"
-    }
+    },
+    "thousands": ".",
+    "zeroRecords": "Geen resultaten gevonden"
 };

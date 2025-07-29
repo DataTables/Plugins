@@ -11,45 +11,53 @@
 }
 (function() {
     return {
-    "processing": "Palun oodake, koostan kuvamiseks nimekirja!",
-    "lengthMenu": "N&auml;ita kirjeid _MENU_ kaupa",
-    "zeroRecords": "Otsitavat vastet ei leitud.",
-    "info": "Kuvatud: _TOTAL_ kirjet (_START_-_END_)",
-    "infoEmpty": "Otsinguvasteid ei leitud",
-    "infoFiltered": " - filteeritud _MAX_ kirje seast.",
-    "search": "Otsi k&otilde;ikide tulemuste seast:",
-    "paginate": {
-        "first": "Algus",
-        "previous": "Eelmine",
-        "next": "J&auml;rgmine",
-        "last": "Viimane"
-    },
     "aria": {
-        "sortAscending": ": sorteeri kasvavalt",
-        "sortDescending": ": sorteeri kahanevalt"
+        "paginate": {
+            "first": "Algus",
+            "last": "Viimane",
+            "next": "J&auml;rgmine",
+            "previous": "Eelmine"
+        }
     },
     "autoFill": {
-        "cancel": "Tühista"
+        "cancel": "Tühista",
+        "fill": "Eeltäida kõik väljad tekstiga <i>%d<\/i>",
+        "fillHorizontal": "Eeltäida väljad horisontaalselt",
+        "fillVertical": "Eeltäida väljad vertikaalselt",
+        "info": ""
     },
     "buttons": {
+        "collection": "Kogumik <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
+        "colvis": "Veeru nähtavus",
+        "colvisRestore": "Nähtavuse taastamine",
         "copy": "Kopeeri",
         "copyKeys": "Vajuta CTRL või u2318 + C et kopeerida tabeli sisu lõikelauale<br \/><br \/>Tühistamiseks kliki sellel sõnumil või vajutage ESC.",
+        "copySuccess": {
+            "_": "Kopeeri %d rida lõikelauale",
+            "1": "Kopeeri 1 rida lõikelauale"
+        },
         "copyTitle": "Kopeeri lõikelauale",
+        "createState": "Loo otsing",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
             "_": "Kuvan %d rida",
-            "-1": "Kuva kõik read",
-            "1": "Kuvan ühte rida"
+            "-1": "Kuvan kõik read"
         },
         "pdf": "PDF",
-        "print": "Prindi"
+        "print": "Prindi",
+        "removeAllStates": "Eemalda otsingud",
+        "removeState": "Eemalda",
+        "renameState": "Nimeta ümber",
+        "savedStates": "Salvestatud otsingud",
+        "stateRestore": "Taasta otsing",
+        "updateState": "Uuenda"
     },
     "datetime": {
-        "amPm": [
-            "AM",
-            "PM"
-        ],
+        "amPm": {
+            "0": "AM",
+            "1": "PM"
+        },
         "hours": "Tund",
         "minutes": "Minut",
         "months": {
@@ -70,17 +78,17 @@
         "previous": "Eelmine",
         "seconds": "Sekund",
         "unknown": "Teadmata",
-        "weekdays": [
-            "P",
-            "E",
-            "T",
-            "K",
-            "N",
-            "R",
-            "L"
-        ]
+        "weekdays": {
+            "0": "P",
+            "1": "E",
+            "2": "T",
+            "3": "K",
+            "4": "N",
+            "5": "R",
+            "6": "L"
+        }
     },
-    "decimal": ".",
+    "decimal": "",
     "editor": {
         "close": "Sulge",
         "create": {
@@ -93,6 +101,14 @@
             "submit": "Salvesta",
             "title": "Muuda rida"
         },
+        "error": {
+            "system": "Süsteemiviga (<a target=\"\\\" rel=\"nofollow\" href=\"\\\">Rohkem infot<\/a>)."
+        },
+        "multi": {
+            "noMulti": "Antud sisendit saab muuta ükshaaval.",
+            "restore": "Pööra tagasi",
+            "title": "Mitu väärtust"
+        },
         "remove": {
             "button": "Kustuta",
             "submit": "Kustuta",
@@ -100,7 +116,14 @@
         }
     },
     "emptyTable": "Andmed puuduvad",
-    "loadingRecords": "Laen...",
+    "info": "Kuvatud: _TOTAL_ kirjet (_START_-_END_)",
+    "infoEmpty": "Otsinguvasteid ei leitud",
+    "infoFiltered": " - filteeritud _MAX_ kirje seast.",
+    "infoPostFix": "",
+    "lengthMenu": "N&auml;ita kirjeid _MENU_ kaupa",
+    "loadingRecords": "Laadin...",
+    "processing": "Palun oodake, koostan kuvamiseks nimekirja!",
+    "search": "Otsi k&otilde;ikide tulemuste seast:",
     "searchBuilder": {
         "add": "Lisa tingimus",
         "button": {
@@ -167,6 +190,18 @@
         "count": "{total}",
         "countFiltered": "{shown} ({total})"
     },
-    "searchPlaceholder": "Otsi..."
+    "searchPlaceholder": "",
+    "select": {
+        "cells": {
+            "0": ""
+        },
+        "columns": {
+            "0": ""
+        },
+        "rows": {
+            "0": ""
+        }
+    },
+    "zeroRecords": "Otsitavat vastet ei leitud."
 };
 }));

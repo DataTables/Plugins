@@ -1,5 +1,8 @@
 {
     "aria": {
+        "orderable": "تفعيل الترتيب",
+        "orderableRemove": "تفعيل إلغاء الترتيب",
+        "orderableReverse": "تفعيل الترتيب التنازلي",
         "paginate": {
             "first": "الأول",
             "last": "الأخير",
@@ -30,7 +33,8 @@
         "excel": "Excel",
         "pageLength": {
             "_": "إظهار %d أسطر",
-            "-1": "اظهار الكل"
+            "-1": "اظهار الكل",
+            "1": "عرض سطر واحد"
         },
         "pdf": "PDF",
         "print": "طباعة",
@@ -114,8 +118,12 @@
     "infoFiltered": "(مرشحة من مجموع _MAX_ مُدخل)",
     "infoPostFix": "",
     "infoThousands": ",",
+    "lengthLabels": {
+        "-1": "الكل"
+    },
     "lengthMenu": "أظهر _MENU_ مدخلات",
     "loadingRecords": "جارٍ التحميل...",
+    "orderClear": "إلغاء الترتيب",
     "processing": "جارٍ المعالجة...",
     "search": "ابحث:",
     "searchBuilder": {
@@ -176,6 +184,7 @@
         "logicAnd": "و",
         "logicOr": "أو",
         "rightTitle": "محاذاة يمين",
+        "search": "بحث",
         "title": {
             "_": "البحث المتقدم (فعال)",
             "0": "البحث المتقدم"
@@ -191,6 +200,7 @@
         "collapseMessage": "إخفاء الجميع",
         "count": "عدد",
         "countFiltered": "عدد المفلتر",
+        "emptyMessage": "&lt;em&gt;لا توجد بيانات&lt;\/em&gt;",
         "emptyPanes": "لا يوجد مربع بحث",
         "loadMessage": "جارِ التحميل ...",
         "showMessage": "إظهار الجميع",

@@ -12,28 +12,39 @@
 (function() {
     return {
     "aria": {
-        "sortAscending": ": attivà per trasceglie a culonna in ordine criscente",
-        "sortDescending": ": attivà per trasceglie a culonna in ordine scendente"
+        "paginate": {
+            "first": "Prima",
+            "last": "Ultimu",
+            "next": "Seguente",
+            "previous": "Precedente"
+        }
     },
+    "autoFill": {
+        "info": ""
+    },
+    "decimal": "",
     "emptyTable": "Nisunu datu dispunibule in u tavulone",
     "info": "Visualisazione di l'elementu _START_ à _END_ nant'à _TOTAL_ elementi",
     "infoEmpty": "Visualisazione di l'elementu 0 à 0 nant'à 0 elementu",
     "infoFiltered": "staccià à partesi da _MAX_ elementi in tutale",
+    "infoPostFix": "",
     "infoThousands": ",",
     "lengthMenu": "Mustrà _MENU_ elementi",
     "loadingRecords": "Carcamentu...",
-    "paginate": {
-        "first": "Prima",
-        "last": "Ultimu",
-        "next": "Seguente",
-        "previous": "Precedente"
-    },
     "processing": "Trattamentu...",
     "search": "Circà :",
+    "searchPlaceholder": "",
     "select": {
+        "cells": {
+            "0": ""
+        },
+        "columns": {
+            "0": ""
+        },
         "rows": {
-            "1": "1 linea selezziunata",
-            "_": "%d linee selezziunate"
+            "_": "%d linee selezziunate",
+            "0": "",
+            "1": "1 linea selezziunata"
         }
     },
     "zeroRecords": "Nisunu elementu currispundente trovu"

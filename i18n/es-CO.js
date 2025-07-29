@@ -11,42 +11,55 @@
 }
 (function() {
     return {
+    "aria": {
+        "paginate": {
+            "first": "Primero",
+            "last": "Último",
+            "next": "Siguiente",
+            "previous": "Anterior"
+        }
+    },
     "autoFill": {
         "cancel": "Cancelar",
         "fill": "Llenar",
         "fillHorizontal": "Llenar celdas horizontalmente",
         "fillVertical": "Llenar celdas verticalemente",
-        "info": "Información"
+        "info": ""
     },
     "buttons": {
+        "collection": "Colección",
+        "colvis": "Visibilidad Columna",
+        "colvisRestore": "Restaurar Visibilidad",
         "copy": "Copiar",
+        "copyKeys": "Presione Inicio + C para copiar la información de la tabla.  Para Cancelar hacer click en este mensaje para o ESC",
         "copySuccess": {
             "_": "Copiado con exito",
             "1": "Fila copiada con exito"
         },
         "copyTitle": "Tabla Copiada",
         "createState": "Crear estado",
-        "pageLength": {
-            "_": "ver %d filas",
-            "-1": "Ver todas las Filas",
-            "1": "Ver una fila"
-        },
-        "renameState": "Renombrar",
-        "updateState": "Actualizar",
         "csv": "CSV",
         "excel": "Excel",
+        "pageLength": {
+            "_": "ver %d filas",
+            "-1": "Ver todas las Filas"
+        },
         "pdf": "PDF",
-        "collection": "Colección",
-        "colvis": "Visibilidad Columna",
-        "colvisRestore": "Restaurar Visibilidad",
-        "copyKeys": "Presione Inicio + C para copiar la información de la tabla.  Para Cancelar hacer click en este mensaje para o ESC",
         "print": "Imprimir",
         "removeAllStates": "Eliminar todos los estados",
         "removeState": "Eliminar",
+        "renameState": "Renombrar",
         "savedStates": "Estados Guardados",
-        "stateRestore": "Estado %d"
+        "stateRestore": "Estado %d",
+        "updateState": "Actualizar"
     },
     "datetime": {
+        "amPm": {
+            "0": "am",
+            "1": "pm"
+        },
+        "hours": "Hora",
+        "minutes": "Minuto",
         "months": {
             "0": "Enero",
             "1": "Febrero",
@@ -61,26 +74,21 @@
             "8": "Septiembre",
             "9": "Octubre"
         },
+        "next": "Siguiente",
+        "previous": "Anterior",
+        "seconds": "Segundo",
+        "unknown": "Desconocido",
         "weekdays": {
             "0": "Dom",
             "1": "Lun",
             "2": "Mar",
+            "3": "Mié",
             "4": "Jue",
             "5": "Vie",
-            "3": "Mié",
             "6": "Sáb"
-        },
-        "amPm": [
-            "am",
-            "pm"
-        ],
-        "previous": "Anterior",
-        "next": "Siguiente",
-        "hours": "Hora",
-        "minutes": "Minuto",
-        "seconds": "Segundo",
-        "unknown": "Desconocido"
+        }
     },
+    "decimal": "",
     "editor": {
         "close": "Cerrar",
         "create": {
@@ -93,42 +101,52 @@
             "submit": "Actualizar",
             "title": "Editar Registro"
         },
-        "remove": {
-            "button": "Borrar",
-            "submit": "Borrar",
-            "title": "Borrar",
-            "confirm": {
-                "_": "Esta seguro de eliminar %d registros",
-                "1": "Esta seguro de eliminar 1 registro"
-            }
+        "error": {
+            "system": "Ha ocurrido un error del sistema ( Mas Información)"
         },
         "multi": {
             "info": "Los elementos seleccionados contienen diferentes valores para esta entrada. Para editar y configurar todos los elementos de esta entrada en el mismo valor, haga clic o toque aquí, de lo contrario, conservar sus valores individuales.",
             "noMulti": "Múltiples valores",
-            "title": "Valores multiples",
-            "restore": "Deshacer cambios"
+            "restore": "Deshacer cambios",
+            "title": "Valores multiples"
         },
-        "error": {
-            "system": "Ha ocurrido un error del sistema ( Mas Información)"
+        "remove": {
+            "button": "Borrar",
+            "confirm": {
+                "_": "Esta seguro de eliminar %d registros",
+                "1": "Esta seguro de eliminar 1 registro"
+            },
+            "submit": "Borrar",
+            "title": "Borrar"
         }
     },
     "emptyTable": "Tabla Vacia",
+    "info": "Mostrando _START_ a _END_ de _TOTAL_ entradas",
     "infoEmpty": "Sin informacion",
-    "lengthMenu": "Entradas",
+    "infoFiltered": "filtrado de _MAX_ entradas totales",
+    "infoPostFix": "",
+    "infoThousands": ",",
+    "lengthMenu": "Mostrando _MENU_ Entradas",
     "loadingRecords": "Cargando...",
+    "processing": "Procesando...",
+    "search": "Buscar:",
     "searchBuilder": {
+        "add": "Agragar condición",
         "button": {
             "_": "Creador de búsquedas (%d)",
             "0": "Creador de búsquedas"
         },
         "clearAll": "Quitar filtro",
-        "data": "Datos",
-        "logicAnd": "Y",
-        "logicOr": "O",
-        "value": "Valor",
-        "add": "Agragar condición",
         "condition": "Condición",
         "conditions": {
+            "array": {
+                "contains": "Contiene",
+                "empty": "Vacío",
+                "equals": "Iguales",
+                "not": "No",
+                "notEmpty": "No Vacío",
+                "without": "Con"
+            },
             "date": {
                 "after": "Después",
                 "before": "Antes",
@@ -157,75 +175,57 @@
                 "endsWith": "Termina en",
                 "equals": "Iguales",
                 "not": "No",
-                "notEmpty": "No Vacío",
-                "startsWith": "Empieza en",
                 "notContains": "No Contiene",
-                "notStartsWith": "No empieza en",
-                "notEndsWith": "No finaliza en"
-            },
-            "array": {
-                "equals": "Iguales",
-                "empty": "Vacío",
-                "contains": "Contiene",
-                "not": "No",
                 "notEmpty": "No Vacío",
-                "without": "Con"
+                "notEndsWith": "No finaliza en",
+                "notStartsWith": "No empieza en",
+                "startsWith": "Empieza en"
             }
         },
+        "data": "Datos",
         "deleteTitle": "Eliminar regla",
         "leftTitle": "Izquierda",
+        "logicAnd": "Y",
+        "logicOr": "O",
         "rightTitle": "Derecha",
         "title": {
-            "0": "Generador de Consultas",
-            "_": "Generador de Consultas (%d)"
-        }
+            "_": "Generador de Consultas (%d)",
+            "0": "Generador de Consultas"
+        },
+        "value": "Valor"
     },
     "searchPanes": {
         "clearMessage": "Borrar Filtro",
-        "collapseMessage": "desplegar todo",
-        "loadMessage": "Cargando informacion",
-        "showMessage": "Mostrar todos",
-        "title": "Filtros Activos - %d",
         "collapse": {
-            "0": "Paneles de Búsqueda",
-            "_": "Paneles de Búsqueda (%d)"
+            "_": "Paneles de Búsqueda (%d)",
+            "0": "Paneles de Búsqueda"
         },
+        "collapseMessage": "desplegar todo",
         "count": "Cuenta",
         "countFiltered": "Cuenta Filtro",
-        "emptyPanes": "No hay información"
+        "emptyPanes": "No hay información",
+        "loadMessage": "Cargando informacion",
+        "showMessage": "Mostrar todos",
+        "title": "Filtros Activos - %d"
     },
-    "searchPlaceholder": "Busqueda en tabla",
+    "searchPlaceholder": "",
     "select": {
         "cells": {
             "_": "%d celdas seleccionadas",
+            "0": "",
             "1": "1 celda seleccionada"
         },
         "columns": {
             "_": "%d columnas seleccionadas",
+            "0": "",
             "1": "1 columna seleccionada"
         },
         "rows": {
-            "1": "Fila seleccionada",
-            "_": "Filas Seleccionadas"
+            "_": "Filas Seleccionadas",
+            "0": "",
+            "1": "Fila seleccionada"
         }
     },
-    "aria": {
-        "sortAscending": "Activar para ordenar ascendente",
-        "sortDescending": "Activar para ordenar descendente"
-    },
-    "decimal": ".",
-    "infoFiltered": "filtrado de _MAX_ entradas totales",
-    "infoThousands": ",",
-    "paginate": {
-        "first": "Primero",
-        "last": "Último",
-        "next": "Siguiente",
-        "previous": "Anterior"
-    },
-    "processing": "Procesando...",
-    "search": "Buscar:",
-    "thousands": ",",
-    "zeroRecords": "No se encontro información",
     "stateRestore": {
         "creationModal": {
             "button": "Crear",
@@ -255,7 +255,7 @@
         "renameLabel": "Nuevo nombre para %s",
         "renameTitle": "Renombrar Estado"
     },
-    "info": "Mostrando _START_ a _END_ de _TOTAL_ entradas",
-    "infoPostFix": ""
+    "thousands": ",",
+    "zeroRecords": "No se encontro información"
 };
 }));

@@ -30,7 +30,8 @@
         "excel": "Excel",
         "pageLength": {
             "_": "Zeige %d Zeilen",
-            "-1": "Alle Zeilen anzeigen"
+            "-1": "Alle Zeilen anzeigen",
+            "1": "Zeigt 1 Zeile"
         },
         "pdf": "PDF",
         "print": "Drucken",
@@ -62,6 +63,10 @@
         "searchDropdown": "Suchen"
     },
     "datetime": {
+        "amPm": {
+            "0": "Vormittag",
+            "1": "Nachmittag"
+        },
         "hours": "Stunden",
         "minutes": "Minuten",
         "months": {
@@ -130,6 +135,9 @@
     "infoFiltered": "(gefiltert von _MAX_ Einträgen)",
     "infoPostFix": "",
     "infoThousands": ".",
+    "lengthLabels": {
+        "-1": "Alle"
+    },
     "lengthMenu": "_MENU_ Zeilen anzeigen",
     "loadingRecords": "Wird geladen ..",
     "orderClear": "Sortierung leeren",
@@ -193,6 +201,7 @@
         "logicAnd": "Und",
         "logicOr": "Oder",
         "rightTitle": "Innere Kriterien",
+        "search": "Suche",
         "title": {
             "_": "Such-Baukasten (%d)",
             "0": "Such-Baukasten"

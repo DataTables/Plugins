@@ -11,53 +11,41 @@
 }
 (function() {
     return {
-    "info": "Záznamy _START_ až _END_ z celkom _TOTAL_",
-    "infoEmpty": "Záznamy 0 až 0 z celkom 0 ",
-    "infoFiltered": "(vyfiltrované spomedzi _MAX_ záznamov)",
-    "infoThousands": " ",
-    "lengthMenu": "Zobraz _MENU_ záznamov",
-    "loadingRecords": "Načítavam...",
-    "processing": "Spracúvam...",
-    "search": "Hľadať:",
-    "zeroRecords": "Nenašli sa žiadne vyhovujúce záznamy",
-    "paginate": {
-        "first": "Prvá",
-        "last": "Posledná",
-        "next": "Nasledujúca",
-        "previous": "Predchádzajúca"
-    },
     "aria": {
-        "sortAscending": ": aktivujte na zoradenie stĺpca vzostupne",
-        "sortDescending": ": aktivujte na zoradenie stĺpca zostupne"
+        "paginate": {
+            "first": "Prvá",
+            "last": "Posledná",
+            "next": "Nasledujúca",
+            "previous": "Predchádzajúca"
+        }
     },
     "autoFill": {
         "cancel": "Zrušiť",
         "fill": "Vyplniť všetky bunky s <i>%d<i><\/i><\/i>",
         "fillHorizontal": "Vyplniť bunky horizontálne",
         "fillVertical": "Vyplniť bunky vertikálne",
-        "info": "Príklad automatického vypĺňania"
+        "info": ""
     },
     "buttons": {
         "collection": "Kolekcia <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
+        "colvis": "Viditeľnosť stĺpcov",
         "colvisRestore": "Obnoviť viditeľnosť",
         "copy": "Kopírovať",
+        "copyKeys": "Stlačte CTRL alebo u2318 + C pre kopírovanie dát tabuľky do systémovej schránky. Pre zrušenie kliknite na túto správu alebo stlačte ESC.",
         "copySuccess": {
-            "1": "Skopírovaný 1 riadok do schránky",
-            "_": "Skopírovaných %d riadkov do schránky"
+            "_": "Skopírovaných %d riadkov do schránky",
+            "1": "Skopírovaný 1 riadok do schránky"
         },
         "copyTitle": "Kopírovať do schránky",
+        "createState": "Vytvoriť stav",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
-            "-1": "Zobraziť všetky riadky",
             "_": "Zobraziť %d riadkov",
-            "1": "Zobraziť 1 riadok"
+            "-1": "Zobraziť všetky riadky"
         },
         "pdf": "PDF",
         "print": "Tlačiť",
-        "colvis": "Viditeľnosť stĺpcov",
-        "copyKeys": "Stlačte CTRL alebo u2318 + C pre kopírovanie dát tabuľky do systémovej schránky. Pre zrušenie kliknite na túto správu alebo stlačte ESC.",
-        "createState": "Vytvoriť stav",
         "removeAllStates": "Vymazať všetky stavy",
         "removeState": "Odstrániť",
         "renameState": "Premenovať",
@@ -65,11 +53,100 @@
         "stateRestore": "Stav %d",
         "updateState": "Aktualizovať"
     },
+    "datetime": {
+        "amPm": {
+            "0": "Dopoludnia",
+            "1": "Popoludní"
+        },
+        "hours": "Hodiny",
+        "minutes": "Minúty",
+        "months": {
+            "0": "Január",
+            "1": "Feburár",
+            "10": "November",
+            "11": "December",
+            "2": "Marec",
+            "3": "Apríl",
+            "4": "Máj",
+            "5": "Jún",
+            "6": "Júl",
+            "7": "August",
+            "8": "September",
+            "9": "Október"
+        },
+        "next": "Ďalší",
+        "previous": "Predchádzajúci",
+        "seconds": "Sekundy",
+        "unknown": "Neznámy",
+        "weekdays": {
+            "0": "Nedeľa",
+            "1": "Pondelok",
+            "2": "Utorok",
+            "3": "Streda",
+            "4": "Štvrtok",
+            "5": "Piatok",
+            "6": "Sobota"
+        }
+    },
+    "decimal": "",
+    "editor": {
+        "close": "Zavrieť",
+        "create": {
+            "button": "Nový",
+            "submit": "Vytvoriť",
+            "title": "Vytvoriť nový záznam"
+        },
+        "edit": {
+            "button": "Editovať",
+            "submit": "Aktualizovať",
+            "title": "Editovať záznam"
+        },
+        "error": {
+            "system": "Vyskytla sa systémová chyba."
+        },
+        "multi": {
+            "info": "Zvolený prvok obsahuje rozdielne hodnoty pre tento vstup. Na editovanie a nastavenie všetkých prvkov pre tento vstup na rovnakú hodnotu, kliknite alebo klepnite tu, inak si zachovajú individuálne hodnoty.",
+            "noMulti": "Tento vstup môže byť editovaný samostatne, ale nie ako súčasť skupiny.",
+            "restore": "Vrátiť späť zmeny",
+            "title": "Niekoľko hodnôt"
+        },
+        "remove": {
+            "button": "Vymazať",
+            "confirm": {
+                "_": "Určite chcete vymazať %d riadkov?",
+                "1": "Určite chcete vymazať 1 riadok?"
+            },
+            "submit": "Vymazať",
+            "title": "Vymazať"
+        }
+    },
+    "emptyTable": "Nie sú k dispozícii žiadne dáta.",
+    "info": "Záznamy _START_ až _END_ z celkom _TOTAL_",
+    "infoEmpty": "Záznamy 0 až 0 z celkom 0 ",
+    "infoFiltered": "(vyfiltrované spomedzi _MAX_ záznamov)",
+    "infoPostFix": "",
+    "infoThousands": " ",
+    "lengthMenu": "Zobraz _MENU_ záznamov",
+    "loadingRecords": "Načítavam...",
+    "processing": "Spracúvam...",
+    "search": "Hľadať:",
     "searchBuilder": {
         "add": "Pridať Podmienku",
+        "button": {
+            "_": "Rozšírený filter (%d)",
+            "0": "Rozšírený filter"
+        },
         "clearAll": "Zmazať všetko",
         "condition": "Podmienka",
         "conditions": {
+            "array": {
+                "contains": "Obsahuje",
+                "empty": "Prázdne",
+                "equals": "Rovná sa",
+                "not": "Nie je",
+                "notEmpty": "Nie je prázdne",
+                "without": "Bez"
+            },
             "date": {
                 "after": "Po",
                 "before": "Pred",
@@ -98,131 +175,55 @@
                 "endsWith": "Končí s",
                 "equals": "Rovná sa",
                 "not": "Nie je",
-                "notEmpty": "Nie je prázdne",
-                "startsWith": "Začína s",
                 "notContains": "Neobsahuje",
-                "notStartsWith": "Nezačína s",
-                "notEndsWith": "Nekončí s"
-            },
-            "array": {
-                "equals": "Rovná sa",
-                "empty": "Prázdne",
-                "contains": "Obsahuje",
-                "not": "Nie je",
                 "notEmpty": "Nie je prázdne",
-                "without": "Bez"
+                "notEndsWith": "Nekončí s",
+                "notStartsWith": "Nezačína s",
+                "startsWith": "Začína s"
             }
         },
         "data": "Dáta",
         "deleteTitle": "Vymazať filtrovacie pravidlo",
+        "leftTitle": "Podmienky odseku",
         "logicAnd": "A",
         "logicOr": "Alebo",
-        "value": "Hodnota",
-        "button": {
-            "0": "Rozšírený filter",
-            "_": "Rozšírený filter (%d)"
-        },
-        "leftTitle": "Podmienky odseku",
         "rightTitle": "Podmienky v odseku",
         "title": {
-            "0": "Rozšírený filter",
-            "_": "Rozšírený filter (%d)"
-        }
+            "_": "Rozšírený filter (%d)",
+            "0": "Rozšírený filter"
+        },
+        "value": "Hodnota"
     },
     "searchPanes": {
         "clearMessage": "Vymazať všetko",
         "collapse": {
-            "0": "Vyhľadávacie Panely",
-            "_": "Vyhľadávacie Panely (%d)"
+            "_": "Vyhľadávacie Panely (%d)",
+            "0": "Vyhľadávacie Panely"
         },
+        "collapseMessage": "Zbaliť všetko",
         "count": "{total}",
         "countFiltered": "{shown} ({total})",
         "emptyPanes": "Žiadne Vyhľadávacie Panely",
         "loadMessage": "Načítavam Vyhľadávacie Panely",
-        "title": "Aktívnych Filtrov - %",
         "showMessage": "Zobraziť všetko",
-        "collapseMessage": "Zbaliť všetko"
+        "title": "Aktívnych Filtrov - %"
     },
+    "searchPlaceholder": "",
     "select": {
         "cells": {
-            "1": "1 zvolená bunka",
-            "_": "%d vybraných buniek"
+            "_": "%d vybraných buniek",
+            "0": "",
+            "1": "1 zvolená bunka"
         },
         "columns": {
-            "1": "1 vybraný stĺpec",
-            "_": "%d vybraných stĺpcov"
+            "_": "%d vybraných stĺpcov",
+            "0": "",
+            "1": "1 vybraný stĺpec"
+        },
+        "rows": {
+            "0": ""
         }
     },
-    "thousands": " ",
-    "datetime": {
-        "next": "Ďalší",
-        "hours": "Hodiny",
-        "minutes": "Minúty",
-        "seconds": "Sekundy",
-        "unknown": "Neznámy",
-        "previous": "Predchádzajúci",
-        "months": {
-            "0": "Január",
-            "1": "Feburár",
-            "10": "November",
-            "11": "December",
-            "2": "Marec",
-            "3": "Apríl",
-            "4": "Máj",
-            "5": "Jún",
-            "6": "Júl",
-            "7": "August",
-            "8": "September",
-            "9": "Október"
-        },
-        "weekdays": [
-            "Nedeľa",
-            "Pondelok",
-            "Utorok",
-            "Streda",
-            "Štvrtok",
-            "Piatok",
-            "Sobota"
-        ],
-        "amPm": [
-            "Dopoludnia",
-            "Popoludní"
-        ]
-    },
-    "editor": {
-        "close": "Zavrieť",
-        "create": {
-            "button": "Nový",
-            "title": "Vytvoriť nový záznam",
-            "submit": "Vytvoriť"
-        },
-        "edit": {
-            "button": "Editovať",
-            "title": "Editovať záznam",
-            "submit": "Aktualizovať"
-        },
-        "remove": {
-            "button": "Vymazať",
-            "title": "Vymazať",
-            "submit": "Vymazať",
-            "confirm": {
-                "_": "Určite chcete vymazať %d riadkov?",
-                "1": "Určite chcete vymazať 1 riadok?"
-            }
-        },
-        "multi": {
-            "title": "Niekoľko hodnôt",
-            "info": "Zvolený prvok obsahuje rozdielne hodnoty pre tento vstup. Na editovanie a nastavenie všetkých prvkov pre tento vstup na rovnakú hodnotu, kliknite alebo klepnite tu, inak si zachovajú individuálne hodnoty.",
-            "restore": "Vrátiť späť zmeny",
-            "noMulti": "Tento vstup môže byť editovaný samostatne, ale nie ako súčasť skupiny."
-        },
-        "error": {
-            "system": "Vyskytla sa systémová chyba."
-        }
-    },
-    "decimal": ",",
-    "emptyTable": "Nie sú k dispozícii žiadne dáta.",
-    "searchPlaceholder": "Príklad vyhľadávania",
     "stateRestore": {
         "creationModal": {
             "button": "Vytvoriť",
@@ -251,6 +252,8 @@
         "renameButton": "Premenovať",
         "renameLabel": "Nový názov pre %s:",
         "renameTitle": "Premenovať stav"
-    }
+    },
+    "thousands": " ",
+    "zeroRecords": "Nenašli sa žiadne vyhovujúce záznamy"
 };
 }));
