@@ -1,3 +1,8 @@
+table.dataTable thead th,
+table.dataTable thead td {
+  position: relative;
+}
+
 table.dataTable thead span.dt-order-number {
   position: absolute;
   top: 2px;
