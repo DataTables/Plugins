@@ -217,6 +217,7 @@
         "collapseMessage": "Alle einklappen",
         "count": "{total}",
         "countFiltered": "{shown} ({total})",
+        "emptyMessage": "<em>Leer<\/em>",
         "emptyPanes": "Keine Suchmasken",
         "loadMessage": "Lade Suchmasken ..",
         "showMessage": "zeige Alle",

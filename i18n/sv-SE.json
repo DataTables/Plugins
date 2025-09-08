@@ -41,6 +41,45 @@
         "stateRestore": "Urval",
         "updateState": "Uppdatera"
     },
+    "columnControl": {
+        "colVis": "Kolumners utseende",
+        "colVisDropdown": "Utseende på kolumner",
+        "dropdown": "Mer...",
+        "list": {
+            "all": "Välj alla",
+            "empty": "Tom",
+            "none": "Välj ingen",
+            "search": "Sök..."
+        },
+        "orderAddAsc": "Lägg till stigande sortering",
+        "orderAddDesc": "Lägg till fallande sortering",
+        "orderAsc": "Sortera stigande",
+        "orderDesc": "Sortera fallande",
+        "orderRemove": "Avbryt sortering",
+        "reorder": "Flytta kolumner",
+        "reorderLeft": "Flytta kolumn till vänster",
+        "reorderRight": "Flytta kolumn till höger",
+        "search": {
+            "datetime": {
+                "empty": "Tom",
+                "equal": "Lika med",
+                "greater": "Större än",
+                "less": "Mindre än",
+                "notEmpty": "Inte tom",
+                "notEqual": "Inte lika med"
+            },
+            "text": {
+                "empty": "Tom",
+                "ends": "Slutar med",
+                "equal": "Lika med",
+                "notEmpty": "Inte tom",
+                "notEqual": "Inte lika med",
+                "starts": "Börjar med"
+            }
+        },
+        "searchClear": "Rensa sök",
+        "searchDropdown": "Sök"
+    },
     "datetime": {
         "amPm": {
             "0": "fm",
@@ -116,6 +155,7 @@
     "infoThousands": " ",
     "lengthMenu": "Visa _MENU_ rader",
     "loadingRecords": "Laddar …",
+    "orderClear": "Avbryt sortering",
     "processing": "Bearbetar …",
     "search": "Sök:",
     "searchBuilder": {
