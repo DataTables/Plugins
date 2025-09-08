@@ -1,32 +1,45 @@
 export default {
-    "processing": "Күте тұрыңыз...",
-    "search": "Іздеу:",
-    "lengthMenu": "Жазбалар  _MENU_ көрсету",
-    "info": "_TOTAL_ жазбалары бойынша _START_ бастап _END_ дейінгі жазбалар",
-    "infoEmpty": "0 жазбалары бойынша 0 бастап 0 дейінгі жазбалар",
-    "infoFiltered": "(_MAX_ жазбасынан сұрыпталды)",
-    "loadingRecords": "Жазбалар жүктемесі...",
-    "zeroRecords": "Жазбалар жоқ",
-    "emptyTable": "Кестеде деректер жоқ",
-    "paginate": {
-        "first": "Бірінші",
-        "previous": "Алдыңғысы",
-        "next": "Келесі",
-        "last": "Соңғы"
-    },
     "aria": {
-        "sortAscending": ": өсімі бойынша бағанды сұрыптау үшін активациялау",
-        "sortDescending": ": кемуі бойынша бағанды сұрыптау үшін активациялау"
+        "paginate": {
+            "first": "Бірінші",
+            "last": "Соңғы",
+            "next": "Келесі",
+            "previous": "Алдыңғысы"
+        }
     },
     "autoFill": {
         "cancel": "Доғару",
         "fill": "Толықтыру",
         "fillHorizontal": "Көлденең толтыру",
-        "fillVertical": "Тігінен толтыру"
+        "fillVertical": "Тігінен толтыру",
+        "info": ""
     },
     "buttons": {
         "colvis": "Баған көрнісі",
         "colvisRestore": "Қалпына келтіру",
         "copy": "Нұсқалау"
-    }
+    },
+    "decimal": "",
+    "emptyTable": "Кестеде деректер жоқ",
+    "info": "_TOTAL_ жазбалары бойынша _START_ бастап _END_ дейінгі жазбалар",
+    "infoEmpty": "0 жазбалары бойынша 0 бастап 0 дейінгі жазбалар",
+    "infoFiltered": "(_MAX_ жазбасынан сұрыпталды)",
+    "infoPostFix": "",
+    "lengthMenu": "Жазбалар  _MENU_ көрсету",
+    "loadingRecords": "Жазбалар жүктемесі...",
+    "processing": "Күте тұрыңыз...",
+    "search": "Іздеу:",
+    "searchPlaceholder": "",
+    "select": {
+        "cells": {
+            "0": ""
+        },
+        "columns": {
+            "0": ""
+        },
+        "rows": {
+            "0": ""
+        }
+    },
+    "zeroRecords": "Жазбалар жоқ"
 };

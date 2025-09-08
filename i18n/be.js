@@ -11,22 +11,37 @@
 }
 (function() {
     return {
-    "processing": "Пачакайце...",
-    "lengthMenu": "Паказваць _MENU_ запісаў",
-    "zeroRecords": "Запісы адсутнічаюць.",
+    "aria": {
+        "paginate": {
+            "first": "Першая",
+            "last": "Апошняя",
+            "next": "Наступная",
+            "previous": "Папярэдняя"
+        }
+    },
+    "autoFill": {
+        "info": ""
+    },
+    "decimal": "",
     "info": "Запісы з _START_ па _END_ з _TOTAL_ запісаў",
     "infoEmpty": "Запісы з 0 па 0 з 0 запісаў",
     "infoFiltered": "(адфільтравана з _MAX_ запісаў)",
+    "infoPostFix": "",
+    "lengthMenu": "Паказваць _MENU_ запісаў",
+    "processing": "Пачакайце...",
     "search": "Пошук:",
-    "paginate": {
-        "first": "Першая",
-        "previous": "Папярэдняя",
-        "next": "Наступная",
-        "last": "Апошняя"
+    "searchPlaceholder": "",
+    "select": {
+        "cells": {
+            "0": ""
+        },
+        "columns": {
+            "0": ""
+        },
+        "rows": {
+            "0": ""
+        }
     },
-    "aria": {
-        "sortAscending": ": актываваць для сартавання слупка па ўзрастанні",
-        "sortDescending": ": актываваць для сартавання слупка па змяншэнні"
-    }
+    "zeroRecords": "Запісы адсутнічаюць."
 };
 }));

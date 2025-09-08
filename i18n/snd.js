@@ -11,8 +11,17 @@
 }
 (function() {
     return {
+    "aria": {
+        "paginate": {
+            "first": "پھريون",
+            "last": "آخري",
+            "next": "اڳيون",
+            "previous": "پويون"
+        }
+    },
     "autoFill": {
-        "cancel": "منسوخ"
+        "cancel": "منسوخ",
+        "info": ""
     },
     "buttons": {
         "collection": "سھيڙ",
@@ -25,19 +34,27 @@
         "pdf": "پي.ڊي.ايف",
         "print": "پرنٽ"
     },
+    "decimal": "",
     "emptyTable": "ٽيبل ۾ ڪوبہ مواد ناھي",
-    "paginate": {
-        "first": "پھريون",
-        "last": "آخري",
-        "next": "اڳيون",
-        "previous": "پويون"
-    },
+    "infoPostFix": "",
     "processing": "پراسيس ڪري رھيو آھي",
     "search": "ڳولا",
     "searchBuilder": {
         "add": "سھيڙ شامل ڪريو",
         "clearAll": "سڀ صاف ڪريو",
         "data": "ڊيٽا"
+    },
+    "searchPlaceholder": "",
+    "select": {
+        "cells": {
+            "0": ""
+        },
+        "columns": {
+            "0": ""
+        },
+        "rows": {
+            "0": ""
+        }
     }
 };
 }));

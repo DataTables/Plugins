@@ -1,13 +1,20 @@
 export default {
-    "infoThousands": ".",
-    "loadingRecords": "Учитавање...",
-    "processing": "Обрада...",
     "aria": {
-        "sortAscending": ": активирајте да сортирате колону узлазно",
-        "sortDescending": ": активирајте да сортирате колону силазно"
+        "paginate": {
+            "first": "Прва",
+            "last": "Последња",
+            "next": "Следећа",
+            "previous": "Претходна"
+        }
+    },
+    "autoFill": {
+        "cancel": "Откажи",
+        "fill": "Попуни све  <i>%d<\/i>",
+        "fillHorizontal": "Попуни ћелије хоризонтално",
+        "fillVertical": "Попуни ћелије вертикално",
+        "info": ""
     },
     "buttons": {
-        "copyTitle": "Kopirano u klipboard",
         "colvis": "Видљивост колона",
         "colvisRestore": "Поврати видљивост",
         "copy": "Копирај",
@@ -16,24 +23,19 @@ export default {
             "_": "Копирано %ds ред(ова) у клипборд",
             "1": "Копиран 1 ред у клипборд"
         },
+        "copyTitle": "Kopirano u klipboard",
+        "csv": "CSV",
+        "excel": "Ексел",
         "pageLength": {
             "_": "Прикажи %d редова",
             "-1": "Прикажи све редове"
         },
-        "removeState": "Уклони",
+        "pdf": "PDF",
         "print": "Штампај",
+        "removeState": "Уклони",
         "renameState": "Преименуј",
         "savedStates": "Сачувана стања",
-        "updateState": "Ажурирај",
-        "csv": "CSV",
-        "excel": "Ексел",
-        "pdf": "PDF"
-    },
-    "autoFill": {
-        "cancel": "Откажи",
-        "fill": "Попуни све  <i>%d<\/i>",
-        "fillHorizontal": "Попуни ћелије хоризонтално",
-        "fillVertical": "Попуни ћелије вертикално"
+        "updateState": "Ажурирај"
     },
     "datetime": {
         "hours": "Сат",
@@ -56,16 +58,17 @@ export default {
         "previous": "Претходни",
         "seconds": "Секунда",
         "unknown": "-",
-        "weekdays": [
-            "Нед",
-            "Пон",
-            "Уто",
-            "Сре",
-            "Чет",
-            "Пет",
-            "Суб"
-        ]
+        "weekdays": {
+            "0": "Нед",
+            "1": "Пон",
+            "2": "Уто",
+            "3": "Сре",
+            "4": "Чет",
+            "5": "Пет",
+            "6": "Суб"
+        }
     },
+    "decimal": "",
     "editor": {
         "close": "Затвори",
         "create": {
@@ -86,16 +89,12 @@ export default {
     "info": "Приказано _START_ до _END_ од _TOTAL_ уноса",
     "infoEmpty": "Приказано 0 до 0 од 0 уноса",
     "infoFiltered": "филтрирано од укупно _MAX_ уноса",
+    "infoPostFix": "",
+    "infoThousands": ".",
     "lengthMenu": "Прикажи _MENU_ уноса",
+    "loadingRecords": "Учитавање...",
+    "processing": "Обрада...",
     "search": "Претрага:",
-    "thousands": ",",
-    "zeroRecords": "Није пронађен ниједан одговарајући запис",
-    "paginate": {
-        "first": "Прва",
-        "last": "Последња",
-        "next": "Следећа",
-        "previous": "Претходна"
-    },
     "searchBuilder": {
         "add": "Додај услов",
         "clearAll": "Почисти све",
@@ -111,5 +110,19 @@ export default {
         "loadMessage": "Учитавање...",
         "showMessage": "Прикажи све",
         "title": "Активни филтери - %d"
-    }
+    },
+    "searchPlaceholder": "",
+    "select": {
+        "cells": {
+            "0": ""
+        },
+        "columns": {
+            "0": ""
+        },
+        "rows": {
+            "0": ""
+        }
+    },
+    "thousands": ",",
+    "zeroRecords": "Није пронађен ниједан одговарајући запис"
 };

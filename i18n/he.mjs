@@ -1,63 +1,39 @@
 export default {
-    "processing": "מעבד...",
-    "lengthMenu": "הצג _MENU_ פריטים",
-    "zeroRecords": "לא נמצאו רשומות מתאימות",
-    "emptyTable": "לא נמצאו רשומות מתאימות",
-    "infoEmpty": "0 עד 0 מתוך 0 רשומות",
-    "infoFiltered": "(מסונן מסך _MAX_  רשומות)",
-    "search": "חפש:",
-    "paginate": {
-        "first": "ראשון",
-        "previous": "קודם",
-        "next": "הבא",
-        "last": "אחרון"
-    },
-    "searchPanes": {
-        "clearMessage": "איפוס מסננים",
-        "collapse": {
-            "0": "מסנני חיפוש",
-            "_": "מסנני חיפוש (%d)"
-        },
-        "count": "ספירה",
-        "emptyPanes": "אין מסנני חיפוש",
-        "loadMessage": "מסנני חיפוש בטעינה",
-        "title": "מסננים פעילים - %d",
-        "showMessage": "הצג הכל",
-        "countFiltered": "{מוצג} ({סה\"כ})",
-        "collapseMessage": "מוטט הכל"
-    },
     "aria": {
-        "sortAscending": "מיון בסדר עולה",
-        "sortDescending": "מיון בסדר יורד"
+        "paginate": {
+            "first": "ראשון",
+            "last": "אחרון",
+            "next": "הבא",
+            "previous": "קודם"
+        }
     },
     "autoFill": {
         "cancel": "ביטול",
         "fill": "מלא את כל התאים עם  <i>%d<i><\/i><\/i>",
         "fillHorizontal": "מלא תאים במאוזן",
         "fillVertical": "מלא תאים במאונך",
-        "info": "מילוי אוטומטי"
+        "info": ""
     },
     "buttons": {
+        "collection": "אוסף",
         "colvis": "נראות עמודות",
         "colvisRestore": "שחזור נראות",
         "copy": "העתק",
+        "copyKeys": "לחץ ctrl או u2318 + C על מנת להעתיק את תוכן הטבלה.",
         "copySuccess": {
-            "1": "רשומה 1 הועתקה",
-            "_": "%ds רשומות הועתקו"
+            "_": "%ds רשומות הועתקו",
+            "1": "רשומה 1 הועתקה"
         },
         "copyTitle": "העתקת תוכן",
+        "createState": "צור מצב",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
-            "-1": "הצג את כל הרשומות",
             "_": "הצג %d רשומות",
-            "1": "הצג רשומה אחת"
+            "-1": "הצג את כל הרשומות"
         },
         "pdf": "PDF",
         "print": "הדפס",
-        "copyKeys": "לחץ ctrl או u2318 + C על מנת להעתיק את תוכן הטבלה.",
-        "collection": "אוסף",
-        "createState": "צור מצב",
         "removeAllStates": "הסר את כל המצבים",
         "removeState": "הסר",
         "renameState": "שנה שם",
@@ -65,18 +41,13 @@ export default {
         "stateRestore": "מצב %d",
         "updateState": "עדכן"
     },
-    "thousands": ",",
     "datetime": {
-        "previous": "הקודם",
-        "next": "הבא",
+        "amPm": {
+            "0": "לפנה\"צ",
+            "1": "אחה\"צ"
+        },
         "hours": "שעה",
         "minutes": "דקה",
-        "seconds": "שניה",
-        "unknown": "-",
-        "amPm": [
-            "לפנה\"צ",
-            "אחה\"צ"
-        ],
         "months": {
             "0": "ינואר",
             "1": "פברואר",
@@ -91,58 +62,79 @@ export default {
             "8": "ספטמבר",
             "9": "אוקטובר"
         },
-        "weekdays": [
-            "א",
-            "ב",
-            "ג",
-            "ד",
-            "ה",
-            "ו",
-            "ש"
-        ]
+        "next": "הבא",
+        "previous": "הקודם",
+        "seconds": "שניה",
+        "unknown": "-",
+        "weekdays": {
+            "0": "א",
+            "1": "ב",
+            "2": "ג",
+            "3": "ד",
+            "4": "ה",
+            "5": "ו",
+            "6": "ש"
+        }
     },
+    "decimal": "",
     "editor": {
         "close": "סגור",
         "create": {
             "button": "חדש",
-            "title": "צור רשומה חדשה",
-            "submit": "צור"
+            "submit": "צור",
+            "title": "צור רשומה חדשה"
         },
         "edit": {
             "button": "ערוך",
-            "title": "עריכת רשומה",
-            "submit": "עדכן"
-        },
-        "remove": {
-            "button": "מחק",
-            "title": "מחיקה",
-            "submit": "מחק",
-            "confirm": {
-                "_": "האם אתה בטוח שברצונך למחוק %d רשומות?",
-                "1": "האם אתה בטוח שברצונך למחוק רשומה אחת?"
-            }
+            "submit": "עדכן",
+            "title": "עריכת רשומה"
         },
         "error": {
             "system": "אירעה שגיאת מערכת (פרטים נוספים)."
         },
         "multi": {
-            "title": "מגוון ערכים שונים",
             "info": "הרשומות שנבחרו מכילים מישע שונה עבור שדה זה. על מנת להגדיר את ששדה זה בכל הרשומות יכיל ערך זהה, לחץ כאן. אחרת הם יישארו עם אותו ערך שהתקבל",
+            "noMulti": "שדה זה יכול ליות מוגדר בנפרד אך לא כקבוצה",
             "restore": "בטל שינוי",
-            "noMulti": "שדה זה יכול ליות מוגדר בנפרד אך לא כקבוצה"
+            "title": "מגוון ערכים שונים"
+        },
+        "remove": {
+            "button": "מחק",
+            "confirm": {
+                "_": "האם אתה בטוח שברצונך למחוק %d רשומות?",
+                "1": "האם אתה בטוח שברצונך למחוק רשומה אחת?"
+            },
+            "submit": "מחק",
+            "title": "מחיקה"
         }
     },
-    "decimal": "עשרוני",
+    "emptyTable": "לא נמצאו רשומות מתאימות",
+    "info": "מציג _START_ עד _END_ מתוך _TOTAL_ רשומות",
+    "infoEmpty": "0 עד 0 מתוך 0 רשומות",
+    "infoFiltered": "(מסונן מסך _MAX_  רשומות)",
+    "infoPostFix": "",
+    "infoThousands": ",",
+    "lengthMenu": "הצג _MENU_ פריטים",
     "loadingRecords": "טוען...",
+    "processing": "מעבד...",
+    "search": "חפש:",
     "searchBuilder": {
         "add": "הוסף תנאי",
         "button": {
-            "0": "בניית חיפוש",
-            "_": "בניית חיפוש (%d)"
+            "_": "בניית חיפוש (%d)",
+            "0": "בניית חיפוש"
         },
         "clearAll": "נקה הכל",
         "condition": "תנאי",
         "conditions": {
+            "array": {
+                "contains": "מכיל",
+                "empty": "ריק",
+                "equals": "שווה",
+                "not": "לא",
+                "notEmpty": "לא ריק",
+                "without": "ללא"
+            },
             "date": {
                 "after": "אחרי",
                 "before": "לפני",
@@ -171,45 +163,55 @@ export default {
                 "endsWith": "נגמר ב",
                 "equals": "שווה ל",
                 "not": "לא",
-                "notEmpty": "לא ריק",
-                "startsWith": "מתחיל ב",
                 "notContains": "לא מכיל",
-                "notEndsWith": "לא מסתיים ב",
-                "notStartsWith": "לא מתחיל ב"
-            },
-            "array": {
-                "equals": "שווה",
-                "empty": "ריק",
-                "contains": "מכיל",
-                "not": "לא",
                 "notEmpty": "לא ריק",
-                "without": "ללא"
+                "notEndsWith": "לא מסתיים ב",
+                "notStartsWith": "לא מתחיל ב",
+                "startsWith": "מתחיל ב"
             }
         },
         "data": "תוכן",
         "deleteTitle": "מחיקת חוק סינון",
+        "leftTitle": "הזח קריטריונים החוצה",
         "logicAnd": "וגם",
         "logicOr": "או",
+        "rightTitle": "הזח קריטריונים פנימה",
         "title": {
-            "0": "בניית חיפוש",
-            "_": "בניית חיפוש (%d)"
+            "_": "בניית חיפוש (%d)",
+            "0": "בניית חיפוש"
         },
-        "value": "ערך",
-        "leftTitle": "הזח קריטריונים החוצה",
-        "rightTitle": "הזח קריטריונים פנימה"
+        "value": "ערך"
     },
+    "searchPanes": {
+        "clearMessage": "איפוס מסננים",
+        "collapse": {
+            "_": "מסנני חיפוש (%d)",
+            "0": "מסנני חיפוש"
+        },
+        "collapseMessage": "מוטט הכל",
+        "count": "ספירה",
+        "countFiltered": "{מוצג} ({סה\"כ})",
+        "emptyPanes": "אין מסנני חיפוש",
+        "loadMessage": "מסנני חיפוש בטעינה",
+        "showMessage": "הצג הכל",
+        "title": "מסננים פעילים - %d"
+    },
+    "searchPlaceholder": "",
     "select": {
         "cells": {
-            "1": "תא אחד נבחר",
-            "_": "%d תאים נבחרו"
+            "_": "%d תאים נבחרו",
+            "0": "",
+            "1": "תא אחד נבחר"
         },
         "columns": {
-            "1": "עמודה אחת נבחרה",
-            "_": "%d עמודות נבחרו"
+            "_": "%d עמודות נבחרו",
+            "0": "",
+            "1": "עמודה אחת נבחרה"
         },
         "rows": {
-            "1": "שורה אחת נבחרה",
-            "_": "%d שורות נבחרו"
+            "_": "%d שורות נבחרו",
+            "0": "",
+            "1": "שורה אחת נבחרה"
         }
     },
     "stateRestore": {
@@ -229,20 +231,18 @@ export default {
             "title": "צור מצב חדש",
             "toggleLabel": "כולל:"
         },
+        "duplicateError": "מצב עם השם הזה כבר קיים.",
+        "emptyError": "השם לא יכול להיות ריק.",
         "emptyStates": "אין מצבים שמורים",
+        "removeConfirm": "האם אתה בטוח שברצונך להסיר %s?",
+        "removeError": "כשל בהסרת מצב.",
+        "removeJoiner": " וגם ",
         "removeSubmit": "הסר",
         "removeTitle": "הסר מצב",
         "renameButton": "שנה שם",
         "renameLabel": "שם חדש עבור %s:",
-        "renameTitle": "שינוי שם מצב",
-        "duplicateError": "מצב עם השם הזה כבר קיים.",
-        "emptyError": "השם לא יכול להיות ריק.",
-        "removeConfirm": "האם אתה בטוח שברצונך להסיר %s?",
-        "removeError": "כשל בהסרת מצב.",
-        "removeJoiner": " וגם "
+        "renameTitle": "שינוי שם מצב"
     },
-    "infoThousands": ",",
-    "searchPlaceholder": "טקסט לחיפוש",
-    "info": "מציג _START_ עד _END_ מתוך _TOTAL_ רשומות",
-    "infoPostFix": "מציג _START_ עד _END_ מתוך _TOTAL_ רשומות"
+    "thousands": ",",
+    "zeroRecords": "לא נמצאו רשומות מתאימות"
 };

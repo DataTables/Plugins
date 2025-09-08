@@ -11,31 +11,20 @@
 }
 (function() {
     return {
-    "emptyTable": "Engin gögn eru í þessari töflu",
-    "info": "Sýni _START_ til _END_ af _TOTAL_ færslum",
-    "infoEmpty": "Sýni 0 til 0 af 0 færslum",
-    "infoFiltered": "(síað út frá _MAX_ færslum)",
-    "infoThousands": ".",
-    "lengthMenu": "Sýna _MENU_ færslur",
-    "loadingRecords": "Hleð...",
-    "processing": "Úrvinnsla...",
-    "search": "Leita:",
-    "zeroRecords": "Engar færslur fundust",
-    "paginate": {
-        "first": "Fyrsta",
-        "last": "Síðasta",
-        "next": "Næsta",
-        "previous": "Fyrri"
-    },
     "aria": {
-        "sortAscending": ": virkja til að raða dálki í hækkandi röð",
-        "sortDescending": ": virkja til að raða dálki lækkandi í röð"
+        "paginate": {
+            "first": "Fyrsta",
+            "last": "Síðasta",
+            "next": "Næsta",
+            "previous": "Fyrri"
+        }
     },
     "autoFill": {
         "cancel": "Hætta við",
         "fill": "Setja öll svæði með <i>%d<\/i>",
         "fillHorizontal": "Setja öll svæði lárétt",
-        "fillVertical": "Setja öll svæði lóðrétt"
+        "fillVertical": "Setja öll svæði lóðrétt",
+        "info": ""
     },
     "buttons": {
         "colvis": "Sýnileiki dálka",
@@ -57,10 +46,10 @@
         "print": "Prenta"
     },
     "datetime": {
-        "amPm": [
-            "eh",
-            "fh"
-        ],
+        "amPm": {
+            "0": "eh",
+            "1": "fh"
+        },
         "hours": "Klst. ",
         "minutes": "Mínúta",
         "next": "Næsta",
@@ -68,7 +57,7 @@
         "seconds": "Sekúnda",
         "unknown": "-"
     },
-    "decimal": ",",
+    "decimal": "",
     "editor": {
         "close": "Loka",
         "create": {
@@ -90,6 +79,29 @@
             "title": "Eyða"
         }
     },
-    "thousands": "."
+    "emptyTable": "Engin gögn eru í þessari töflu",
+    "info": "Sýni _START_ til _END_ af _TOTAL_ færslum",
+    "infoEmpty": "Sýni 0 til 0 af 0 færslum",
+    "infoFiltered": "(síað út frá _MAX_ færslum)",
+    "infoPostFix": "",
+    "infoThousands": ".",
+    "lengthMenu": "Sýna _MENU_ færslur",
+    "loadingRecords": "Hleð...",
+    "processing": "Úrvinnsla...",
+    "search": "Leita:",
+    "searchPlaceholder": "",
+    "select": {
+        "cells": {
+            "0": ""
+        },
+        "columns": {
+            "0": ""
+        },
+        "rows": {
+            "0": ""
+        }
+    },
+    "thousands": ".",
+    "zeroRecords": "Engar færslur fundust"
 };
 }));

@@ -1,22 +1,37 @@
 export default {
+    "aria": {
+        "paginate": {
+            "first": "Fyrste",
+            "last": "Siste",
+            "next": "Neste",
+            "previous": "Førre"
+        }
+    },
+    "autoFill": {
+        "info": ""
+    },
+    "decimal": "",
     "emptyTable": "Inga data tilgjengeleg i tabellen",
     "info": "Syner _START_ til _END_ av _TOTAL_ linjer",
     "infoEmpty": "Syner 0 til 0 av 0 linjer",
     "infoFiltered": "(filtrert frå _MAX_ totalt antal linjer)",
+    "infoPostFix": "",
     "infoThousands": " ",
-    "loadingRecords": "Lastar...",
     "lengthMenu": "Syn _MENU_ linjer",
+    "loadingRecords": "Lastar...",
     "processing": "Lastar...",
     "search": "S&oslash;k:",
-    "zeroRecords": "Inga linjer treff p&aring; s&oslash;ket",
-    "paginate": {
-        "first": "Fyrste",
-        "next": "Neste",
-        "last": "Siste",
-        "previous": "Førre"
+    "searchPlaceholder": "",
+    "select": {
+        "cells": {
+            "0": ""
+        },
+        "columns": {
+            "0": ""
+        },
+        "rows": {
+            "0": ""
+        }
     },
-    "aria": {
-        "sortAscending": ": aktiver for å sortere kolonna stigande",
-        "sortDescending": ": aktiver for å sortere kolonna synkande"
-    }
+    "zeroRecords": "Inga linjer treff p&aring; s&oslash;ket"
 };

@@ -11,31 +11,20 @@
 }
 (function() {
     return {
-    "emptyTable": "Lentelėje nėra duomenų",
-    "info": "Rodomi įrašai nuo _START_ iki _END_ iš _TOTAL_ įrašų",
-    "infoEmpty": "Rodomi įrašai nuo 0 iki 0 iš 0",
-    "infoFiltered": "(atrinkta iš _MAX_ įrašų)",
-    "lengthMenu": "Rodyti _MENU_ įrašus",
-    "loadingRecords": "Įkeliama...",
-    "processing": "Apdorojama...",
-    "search": "Ieškoti:",
-    "zeroRecords": "Įrašų nerasta",
-    "paginate": {
-        "first": "Pirmas",
-        "previous": "Ankstesnis",
-        "next": "Tolimesnis",
-        "last": "Paskutinis"
-    },
-    "decimal": ",",
     "aria": {
-        "sortAscending": ": suaktyvinkite, jei norite rūšiuoti stulpelį didėjančia tvarka",
-        "sortDescending": ": suaktyvinkite, jei norite rūšiuoti stulpelį mažėjančia tvarka"
+        "paginate": {
+            "first": "Pirmas",
+            "last": "Paskutinis",
+            "next": "Tolimesnis",
+            "previous": "Ankstesnis"
+        }
     },
     "autoFill": {
         "cancel": "Atšaukti",
         "fill": "Užpildykite visus <i>%d<\/i> langelius",
         "fillHorizontal": "Užpildykite ląsteles horizontaliai",
-        "fillVertical": "Užpildykite langelius vertikaliai"
+        "fillVertical": "Užpildykite langelius vertikaliai",
+        "info": ""
     },
     "buttons": {
         "collection": "Nustatyti <span class=\"\\\">&lt;\\\/span&gt;<\/span>",
@@ -43,20 +32,20 @@
         "colvisRestore": "Atkurti matomumą",
         "copy": "Kopijuoti",
         "copyKeys": "Norėdami nukopijuoti lentelės duomenis į sistemos mainų sritį, paspauskite Ctrl arba u2318 + C. <br \/> <br \/> Norėdami atšaukti, spustelėkite šį pranešimą arba paspauskite Esc.",
+        "copySuccess": {
+            "_": "%d eilučių nukopijuota į mainų sritį",
+            "1": "1 eilutė nukopijuota į iškarpinę"
+        },
         "copyTitle": "Nukopijuoti į iškarpinę",
+        "createState": "Sukurti stulpelį",
         "csv": "CSV",
         "excel": "Excel",
+        "pageLength": {
+            "_": "Rodyti %d eilučių",
+            "-1": "Rodyti visas eilutes"
+        },
         "pdf": "PDF",
         "print": "Spausdinti",
-        "copySuccess": {
-            "1": "1 eilutė nukopijuota į iškarpinę",
-            "_": "%d eilučių nukopijuota į mainų sritį"
-        },
-        "pageLength": {
-            "-1": "Rodyti visas eilutes",
-            "_": "Rodyti %d eilučių"
-        },
-        "createState": "Sukurti stulpelį",
         "removeAllStates": "Ištrinti visus stulpelius",
         "removeState": "Ištrinti",
         "renameState": "Pervardyti",
@@ -64,83 +53,100 @@
         "stateRestore": "Būsena %d",
         "updateState": "Atnaujinti"
     },
-    "infoThousands": "  ",
-    "thousands": "  ",
     "datetime": {
-        "previous": "Ankstesnis",
-        "next": "Kitas",
+        "amPm": {
+            "0": "am",
+            "1": "pm"
+        },
         "hours": "Valandos",
         "minutes": "Minutės",
+        "months": {
+            "0": "Sausis",
+            "1": "Vasaris",
+            "10": "Lapkritis",
+            "11": "Gruodis",
+            "2": "Kovas",
+            "3": "Balandis",
+            "4": "Gegužė",
+            "5": "Birželis",
+            "6": "Liepa",
+            "7": "Rugpjūtis",
+            "8": "Rugsėjis",
+            "9": "Spalis"
+        },
+        "next": "Kitas",
+        "previous": "Ankstesnis",
         "seconds": "Sekundės",
         "unknown": "nežinomas",
-        "amPm": [
-            "am",
-            "pm"
-        ],
-        "weekdays": [
-            "Pr",
-            "An",
-            "Tre",
-            "Kt",
-            "Pn",
-            "Št",
-            "Sk"
-        ],
-        "months": [
-            "Sausis",
-            "Vasaris",
-            "Kovas",
-            "Balandis",
-            "Gegužė",
-            "Birželis",
-            "Liepa",
-            "Rugpjūtis",
-            "Rugsėjis",
-            "Spalis",
-            "Lapkritis",
-            "Gruodis"
-        ]
+        "weekdays": {
+            "0": "Pr",
+            "1": "An",
+            "2": "Tre",
+            "3": "Kt",
+            "4": "Pn",
+            "5": "Št",
+            "6": "Sk"
+        }
     },
+    "decimal": "",
     "editor": {
         "close": "Uždaryti",
         "create": {
             "button": "Papildyti",
-            "title": "Pridedamas naujas įrašas",
-            "submit": "Papildyti"
+            "submit": "Papildyti",
+            "title": "Pridedamas naujas įrašas"
         },
         "edit": {
             "button": "Redaguoti",
-            "title": "Paskelbti atnaujinimą",
-            "submit": "Redaguoti"
-        },
-        "remove": {
-            "button": "Ištrinti",
-            "title": "Pašalinimas",
-            "submit": "Ištrinti",
-            "confirm": {
-                "_": "Ar tikrai norite ištrinti %d eilučių?",
-                "1": "Ar tikrai norite ištrinti 1 eilutę?"
-            }
+            "submit": "Redaguoti",
+            "title": "Paskelbti atnaujinimą"
         },
         "error": {
             "system": "Įvyko sistemos klaida (<a target=\"\\\" rel=\"\\ nofollow\" href=\"\\\">Daugiau informacijos&lt;\\\\\\\/a&gt;).&lt;\/\\\/a&gt;<\/a>"
         },
         "multi": {
-            "title": "Laukas su keliomis reikšmėmis",
             "info": "Pasirinktame lauke yra keli elementai su skirtingomis reikšmėmis. Norėdami pakeisti jų vertę, spustelėkite juos, kitaip jų numatytosios vertės bus išsaugotos.",
+            "noMulti": "Šią reikšmę galima redaguoti atskirai – nepriklausomai nuo grupės.",
             "restore": "Anuliuoti pakeitimus",
-            "noMulti": "Šią reikšmę galima redaguoti atskirai – nepriklausomai nuo grupės."
+            "title": "Laukas su keliomis reikšmėmis"
+        },
+        "remove": {
+            "button": "Ištrinti",
+            "confirm": {
+                "_": "Ar tikrai norite ištrinti %d eilučių?",
+                "1": "Ar tikrai norite ištrinti 1 eilutę?"
+            },
+            "submit": "Ištrinti",
+            "title": "Pašalinimas"
         }
     },
+    "emptyTable": "Lentelėje nėra duomenų",
+    "info": "Rodomi įrašai nuo _START_ iki _END_ iš _TOTAL_ įrašų",
+    "infoEmpty": "Rodomi įrašai nuo 0 iki 0 iš 0",
+    "infoFiltered": "(atrinkta iš _MAX_ įrašų)",
+    "infoPostFix": "",
+    "infoThousands": "  ",
+    "lengthMenu": "Rodyti _MENU_ įrašus",
+    "loadingRecords": "Įkeliama...",
+    "processing": "Apdorojama...",
+    "search": "Ieškoti:",
     "searchBuilder": {
-        "add": "Pridėti sąlyga",
+        "add": "Pridėti sąlygą",
         "button": {
-            "0": "Aktyvios užklausos",
-            "_": "Užklausos kūrimas"
+            "_": "Užklausos kūrimas (%d)",
+            "0": "Aktyvios užklausos"
         },
         "clearAll": "Išvalyti viską",
         "condition": "Būklė",
         "conditions": {
+            "array": {
+                "contains": "Sudėtyje yra",
+                "empty": "Tuščia",
+                "equals": "Yra lygus",
+                "not": "Ne",
+                "notEmpty": "Ne tuščias",
+                "without": "Be"
+            },
             "date": {
                 "after": "Po to",
                 "before": "Priešais",
@@ -169,19 +175,11 @@
                 "endsWith": "Baigiasi val",
                 "equals": "Yra lygus",
                 "not": "Ne",
-                "notEmpty": "Ne tuščia",
-                "startsWith": "Jis prasideda nuo",
                 "notContains": "Sudėtyje nėra",
+                "notEmpty": "Ne tuščia",
+                "notEndsWith": "Tai nesibaigia",
                 "notStartsWith": "Tai neprasideda",
-                "notEndsWith": "Tai nesibaigia"
-            },
-            "array": {
-                "equals": "Yra lygus",
-                "empty": "Tuščia",
-                "contains": "Sudėtyje yra",
-                "not": "Ne",
-                "notEmpty": "Ne tuščias",
-                "without": "Be"
+                "startsWith": "Jis prasideda nuo"
             }
         },
         "data": "Duomenys",
@@ -191,40 +189,43 @@
         "logicOr": "Arba",
         "rightTitle": "Dešinė",
         "title": {
-            "0": "Aktyvios užklausos",
-            "_": "Užklausos kūrimas"
+            "_": "Užklausos kūrimas (%d)",
+            "0": "Aktyvios užklausos"
         },
         "value": "Reikšmė"
     },
     "searchPanes": {
         "clearMessage": "Išvalyti viską",
         "collapse": {
-            "0": "Grupavimas",
-            "_": "Aktyvios grupės (%d)"
+            "_": "Aktyvios grupės (%d)",
+            "0": "Grupavimas"
         },
+        "collapseMessage": "Išplėsti viską",
         "count": "Skaičiuoti",
         "countFiltered": "{shown} ({total})",
         "emptyPanes": "Paieškos skydelių nėra",
         "loadMessage": "Įkeliami paieškos skydeliai",
-        "title": "Aktyvūs filtrai",
         "showMessage": "Rodyti viską",
-        "collapseMessage": "Išplėsti viską"
+        "title": "Aktyvūs filtrai"
     },
+    "searchPlaceholder": "",
     "select": {
         "cells": {
-            "1": "Pasirinktas %d langelis",
-            "_": "Pasirinkta %d langelių"
+            "_": "Pasirinkta %d langelių",
+            "0": "",
+            "1": "Pasirinktas %d langelis"
         },
         "columns": {
-            "1": "Pasirinktas stulpelis %d",
-            "_": "Pasirinkta %d stulpelių"
+            "_": "Pasirinkta %d stulpelių",
+            "0": "",
+            "1": "Pasirinktas stulpelis %d"
         },
         "rows": {
-            "1": "Pasirinkta 1 eilutė",
-            "_": "Pasirinkta %d eilučių"
+            "_": "Pasirinkta %d eilučių",
+            "0": "",
+            "1": "Pasirinkta 1 eilutė"
         }
     },
-    "searchPlaceholder": "Ieškoti...",
     "stateRestore": {
         "creationModal": {
             "button": "Sukurti",
@@ -253,6 +254,8 @@
         "renameButton": "Pervardinti",
         "renameLabel": "Naujas %s pavadinimas:",
         "renameTitle": "Pervardinti stulpelį"
-    }
+    },
+    "thousands": "  ",
+    "zeroRecords": "Įrašų nerasta"
 };
 }));

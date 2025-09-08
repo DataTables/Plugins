@@ -1,30 +1,18 @@
 export default {
-    "emptyTable": "No data available in table",
-    "info": "Showing _START_ to _END_ of _TOTAL_ entries",
-    "infoEmpty": "Showing 0 to 0 of 0 entries",
-    "infoFiltered": "(filtered from _MAX_ total entries)",
-    "infoThousands": ",",
-    "lengthMenu": "Show _MENU_ entries",
-    "loadingRecords": "Loading...",
-    "processing": "Processing...",
-    "search": "Search:",
-    "zeroRecords": "No matching records found",
-    "thousands": ",",
-    "paginate": {
-        "first": "First",
-        "last": "Last",
-        "next": "Next",
-        "previous": "Previous"
-    },
     "aria": {
-        "sortAscending": ": activate to sort column ascending",
-        "sortDescending": ": activate to sort column descending"
+        "paginate": {
+            "first": "First",
+            "last": "Last",
+            "next": "Next",
+            "previous": "Previous"
+        }
     },
     "autoFill": {
         "cancel": "Cancel",
         "fill": "Fill all cells with <i>%d<\/i>",
         "fillHorizontal": "Fill cells horizontally",
-        "fillVertical": "Fill cells vertically"
+        "fillVertical": "Fill cells vertically",
+        "info": ""
     },
     "buttons": {
         "collection": "Collection <span class='ui-button-icon-primary ui-icon ui-icon-triangle-1-s'\/>",
@@ -33,35 +21,120 @@ export default {
         "copy": "Copy",
         "copyKeys": "Press ctrl or u2318 + C to copy the table data to your system clipboard.<br><br>To cancel, click this message or press escape.",
         "copySuccess": {
-            "1": "Copied 1 row to clipboard",
-            "_": "Copied %d rows to clipboard"
+            "_": "Copied %d rows to clipboard",
+            "1": "Copied 1 row to clipboard"
         },
         "copyTitle": "Copy to Clipboard",
+        "createState": "Create State",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
-            "-1": "Show all rows",
-            "_": "Show %d rows"
+            "_": "Show %d rows",
+            "-1": "Show all rows"
         },
         "pdf": "PDF",
         "print": "Print",
-        "updateState": "Update",
-        "stateRestore": "State %d",
-        "savedStates": "Saved States",
-        "renameState": "Rename",
-        "removeState": "Remove",
         "removeAllStates": "Remove All States",
-        "createState": "Create State"
+        "removeState": "Remove",
+        "renameState": "Rename",
+        "savedStates": "Saved States",
+        "stateRestore": "State %d",
+        "updateState": "Update"
     },
+    "datetime": {
+        "amPm": {
+            "0": "am",
+            "1": "pm"
+        },
+        "hours": "Hour",
+        "minutes": "Minute",
+        "months": {
+            "0": "January",
+            "1": "February",
+            "10": "November",
+            "11": "December",
+            "2": "March",
+            "3": "April",
+            "4": "May",
+            "5": "June",
+            "6": "July",
+            "7": "August",
+            "8": "September",
+            "9": "October"
+        },
+        "next": "Next",
+        "previous": "Previous",
+        "seconds": "Second",
+        "unknown": "-",
+        "weekdays": {
+            "0": "Sun",
+            "1": "Mon",
+            "2": "Tue",
+            "3": "Wed",
+            "4": "Thu",
+            "5": "Fri",
+            "6": "Sat"
+        }
+    },
+    "decimal": "",
+    "editor": {
+        "close": "Close",
+        "create": {
+            "button": "New",
+            "submit": "Create",
+            "title": "Create new entry"
+        },
+        "edit": {
+            "button": "Edit",
+            "submit": "Update",
+            "title": "Edit Entry"
+        },
+        "error": {
+            "system": "A system error has occurred (<a target=\"\\\" rel=\"nofollow\" href=\"\\\">More information<\/a>)."
+        },
+        "multi": {
+            "info": "The selected items contain different values for this input. To edit and set all items for this input to the same value, click or tap here, otherwise they will retain their individual values.",
+            "noMulti": "This input can be edited individually, but not part of a group. ",
+            "restore": "Undo Changes",
+            "title": "Multiple Values"
+        },
+        "remove": {
+            "button": "Delete",
+            "confirm": {
+                "_": "Are you sure you wish to delete %d rows?",
+                "1": "Are you sure you wish to delete 1 row?"
+            },
+            "submit": "Delete",
+            "title": "Delete"
+        }
+    },
+    "emptyTable": "No data available in table",
+    "info": "Showing _START_ to _END_ of _TOTAL_ entries",
+    "infoEmpty": "Showing 0 to 0 of 0 entries",
+    "infoFiltered": "(filtered from _MAX_ total entries)",
+    "infoPostFix": "",
+    "infoThousands": ",",
+    "lengthMenu": "Show _MENU_ entries",
+    "loadingRecords": "Loading...",
+    "processing": "Processing...",
+    "search": "Search:",
     "searchBuilder": {
         "add": "Add Condition",
         "button": {
-            "0": "Search Builder",
-            "_": "Search Builder (%d)"
+            "_": "Search Builder (%d)",
+            "0": "Search Builder"
         },
         "clearAll": "Clear All",
         "condition": "Condition",
         "conditions": {
+            "array": {
+                "contains": "Contains",
+                "empty": "Empty",
+                "equals": "Equals",
+                "not": "Not",
+                "notEmpty": "Not Empty",
+                "without": "Without"
+            },
             "date": {
                 "after": "After",
                 "before": "Before",
@@ -90,19 +163,11 @@ export default {
                 "endsWith": "Ends With",
                 "equals": "Equals",
                 "not": "Not",
-                "notEmpty": "Not Empty",
-                "startsWith": "Starts With",
                 "notContains": "Does Not Contain",
-                "notStartsWith": "Does Not Start With",
-                "notEndsWith": "Does Not End With"
-            },
-            "array": {
-                "without": "Without",
                 "notEmpty": "Not Empty",
-                "not": "Not",
-                "contains": "Contains",
-                "empty": "Empty",
-                "equals": "Equals"
+                "notEndsWith": "Does Not End With",
+                "notStartsWith": "Does Not Start With",
+                "startsWith": "Starts With"
             }
         },
         "data": "Data",
@@ -112,132 +177,72 @@ export default {
         "logicOr": "Or",
         "rightTitle": "Indent Criteria",
         "title": {
-            "0": "Search Builder",
-            "_": "Search Builder (%d)"
+            "_": "Search Builder (%d)",
+            "0": "Search Builder"
         },
         "value": "Value"
     },
     "searchPanes": {
         "clearMessage": "Clear All",
         "collapse": {
-            "0": "SearchPanes",
-            "_": "SearchPanes (%d)"
+            "_": "SearchPanes (%d)",
+            "0": "SearchPanes"
         },
+        "collapseMessage": "Collapse All",
         "count": "{total}",
         "countFiltered": "{shown} ({total})",
         "emptyPanes": "No SearchPanes",
         "loadMessage": "Loading SearchPanes",
-        "title": "Filters Active - %d",
         "showMessage": "Show All",
-        "collapseMessage": "Collapse All"
+        "title": "Filters Active - %d"
     },
+    "searchPlaceholder": "",
     "select": {
         "cells": {
-            "1": "1 cell selected",
-            "_": "%d cells selected"
+            "_": "%d cells selected",
+            "0": "",
+            "1": "1 cell selected"
         },
         "columns": {
-            "1": "1 column selected",
-            "_": "%d columns selected"
+            "_": "%d columns selected",
+            "0": "",
+            "1": "1 column selected"
         },
         "rows": {
-            "1": "1 row selected",
-            "_": "%d rows selected"
-        }
-    },
-    "datetime": {
-        "previous": "Previous",
-        "next": "Next",
-        "hours": "Hour",
-        "minutes": "Minute",
-        "seconds": "Second",
-        "unknown": "-",
-        "amPm": [
-            "am",
-            "pm"
-        ],
-        "weekdays": [
-            "Sun",
-            "Mon",
-            "Tue",
-            "Wed",
-            "Thu",
-            "Fri",
-            "Sat"
-        ],
-        "months": [
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"
-        ]
-    },
-    "editor": {
-        "close": "Close",
-        "create": {
-            "button": "New",
-            "title": "Create new entry",
-            "submit": "Create"
-        },
-        "edit": {
-            "button": "Edit",
-            "title": "Edit Entry",
-            "submit": "Update"
-        },
-        "remove": {
-            "button": "Delete",
-            "title": "Delete",
-            "submit": "Delete",
-            "confirm": {
-                "_": "Are you sure you wish to delete %d rows?",
-                "1": "Are you sure you wish to delete 1 row?"
-            }
-        },
-        "error": {
-            "system": "A system error has occurred (<a target=\"\\\" rel=\"nofollow\" href=\"\\\">More information<\/a>)."
-        },
-        "multi": {
-            "title": "Multiple Values",
-            "info": "The selected items contain different values for this input. To edit and set all items for this input to the same value, click or tap here, otherwise they will retain their individual values.",
-            "restore": "Undo Changes",
-            "noMulti": "This input can be edited individually, but not part of a group. "
+            "_": "%d rows selected",
+            "0": "",
+            "1": "1 row selected"
         }
     },
     "stateRestore": {
-        "renameTitle": "Rename State",
-        "renameLabel": "New Name for %s:",
-        "renameButton": "Rename",
-        "removeTitle": "Remove State",
-        "removeSubmit": "Remove",
-        "removeJoiner": " and ",
-        "removeError": "Failed to remove state.",
-        "removeConfirm": "Are you sure you want to remove %s?",
-        "emptyStates": "No saved states",
-        "emptyError": "Name cannot be empty.",
-        "duplicateError": "A state with this name already exists.",
         "creationModal": {
-            "toggleLabel": "Includes:",
-            "title": "Create New State",
-            "select": "Select",
-            "searchBuilder": "SearchBuilder",
-            "search": "Search",
-            "scroller": "Scroll Position",
-            "paging": "Paging",
-            "order": "Sorting",
-            "name": "Name:",
+            "button": "Create",
             "columns": {
-                "visible": "Column Visibility",
-                "search": "Column Search"
+                "search": "Column Search",
+                "visible": "Column Visibility"
             },
-            "button": "Create"
-        }
-    }
+            "name": "Name:",
+            "order": "Sorting",
+            "paging": "Paging",
+            "scroller": "Scroll Position",
+            "search": "Search",
+            "searchBuilder": "SearchBuilder",
+            "select": "Select",
+            "title": "Create New State",
+            "toggleLabel": "Includes:"
+        },
+        "duplicateError": "A state with this name already exists.",
+        "emptyError": "Name cannot be empty.",
+        "emptyStates": "No saved states",
+        "removeConfirm": "Are you sure you want to remove %s?",
+        "removeError": "Failed to remove state.",
+        "removeJoiner": " and ",
+        "removeSubmit": "Remove",
+        "removeTitle": "Remove State",
+        "renameButton": "Rename",
+        "renameLabel": "New Name for %s:",
+        "renameTitle": "Rename State"
+    },
+    "thousands": ",",
+    "zeroRecords": "No matching records found"
 };

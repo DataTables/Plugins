@@ -11,25 +11,40 @@
 }
 (function() {
     return {
+    "aria": {
+        "paginate": {
+            "first": "Эхнийх",
+            "last": "Сүүлийнх",
+            "next": "Дараах",
+            "previous": "Өмнөх"
+        }
+    },
+    "autoFill": {
+        "info": ""
+    },
+    "decimal": "",
     "emptyTable": "Хүснэгт хоосон байна",
     "info": "Нийт _TOTAL_ бичлэгээс _START_ - _END_ харуулж байна",
     "infoEmpty": "Тохирох үр дүн алга",
     "infoFiltered": "(нийт _MAX_ бичлэгээс шүүв)",
+    "infoPostFix": "",
     "infoThousands": ",",
     "lengthMenu": "Дэлгэцэд _MENU_ бичлэг харуулна",
     "loadingRecords": "Ачааллаж байна...",
     "processing": "Боловсруулж байна...",
     "search": "Хайлт:",
-    "zeroRecords": "Тохирох бичлэг олдсонгүй",
-    "paginate": {
-        "first": "Эхнийх",
-        "last": "Сүүлийнх",
-        "next": "Дараах",
-        "previous": "Өмнөх"
+    "searchPlaceholder": "",
+    "select": {
+        "cells": {
+            "0": ""
+        },
+        "columns": {
+            "0": ""
+        },
+        "rows": {
+            "0": ""
+        }
     },
-    "aria": {
-        "sortAscending": ": цагаан толгойн дарааллаар эрэмбэлэх",
-        "sortDescending": ": цагаан толгойн эсрэг дарааллаар эрэмбэлэх"
-    }
+    "zeroRecords": "Тохирох бичлэг олдсонгүй"
 };
 }));

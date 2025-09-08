@@ -11,42 +11,57 @@
 }
 (function() {
     return {
-    "emptyTable": "ਸੂਚੀ ਵਿੱਚ ਕੋਈ ਕਤਾਰ ਉਪਲਬਧ ਨਹੀਂ ਹੈ",
-    "info": "_TOTAL_ ਵਿੱਚੋਂ _START_ ਤੋਂ _END_ ਐਂਟਰੀਆਂ ਦਿੱਖ ਰਹੀਆਂ ਹਨ",
-    "infoEmpty": "0 ਵਿੱਚੋਂ 0 ਤੋਂ 0 ਕਤਾਰਾਂ ਦਿੱਖ ਰਹੀਆਂ ਹਨ",
-    "infoFiltered": "(ਕੁੱਲ _MAX_ ਵਿਚੋਂ ਛਾਂਟੀਆਂ ਗਈਆਂ ਕਤਾਰਾਂ)",
-    "infoThousands": ",",
-    "lengthMenu": "ਕੁੱਲ _MENU_ ਕਤਾਰਾਂ",
-    "loadingRecords": "ਸੂਚੀ ਲੋਡ ਹੋ ਰਹੀ ਹੈ...",
-    "processing": "ਕਾਰਵਾਈ ਚੱਲ ਰਹੀ ਹੈ...",
-    "search": "ਖੋਜ ਕਰੋ:",
-    "zeroRecords": "ਕੋਈ ਕਤਾਰ ਨਹੀਂ ਮਿਲੀ",
-    "paginate": {
-        "first": "ਪਹਿਲਾ",
-        "last": "ਅਖੀਰਲਾ",
-        "next": "ਅਗਲਾ",
-        "previous": "ਪਿਛਲਾ"
-    },
     "aria": {
-        "sortAscending": ": ਕਾਲਮ ਨੂੰ ਵੱਧਦੇ ਕ੍ਰਮ ਵਿਚ ਵੇਖੋ",
-        "sortDescending": ": ਕਾਲਮ ਨੂੰ ਘਟਦੇ ਕ੍ਰਮ ਵਿਚ ਵੇਖੋ"
+        "paginate": {
+            "first": "ਪਹਿਲਾ",
+            "last": "ਅਖੀਰਲਾ",
+            "next": "ਅਗਲਾ",
+            "previous": "ਪਿਛਲਾ"
+        }
+    },
+    "autoFill": {
+        "info": ""
     },
     "buttons": {
         "colvis": "ਕਾਲਮ ਦਿੱਖ"
     },
     "datetime": {
-        "previous": "ਪਿਛਲਾ",
-        "next": "ਅਗਲਾ",
+        "amPm": {
+            "0": "ਸਵੇਰੇ",
+            "1": "ਸ਼ਾਮ"
+        },
         "hours": "ਘੰਟੇ",
         "minutes": "ਮਿੰਟ",
-        "seconds": "ਸਕਿੰਟ",
-        "amPm": [
-            "ਸਵੇਰੇ",
-            "ਸ਼ਾਮ"
-        ]
+        "next": "ਅਗਲਾ",
+        "previous": "ਪਿਛਲਾ",
+        "seconds": "ਸਕਿੰਟ"
     },
+    "decimal": "",
     "editor": {
         "close": "ਬੰਦ"
-    }
+    },
+    "emptyTable": "ਸੂਚੀ ਵਿੱਚ ਕੋਈ ਕਤਾਰ ਉਪਲਬਧ ਨਹੀਂ ਹੈ",
+    "info": "_TOTAL_ ਵਿੱਚੋਂ _START_ ਤੋਂ _END_ ਐਂਟਰੀਆਂ ਦਿੱਖ ਰਹੀਆਂ ਹਨ",
+    "infoEmpty": "0 ਵਿੱਚੋਂ 0 ਤੋਂ 0 ਕਤਾਰਾਂ ਦਿੱਖ ਰਹੀਆਂ ਹਨ",
+    "infoFiltered": "(ਕੁੱਲ _MAX_ ਵਿਚੋਂ ਛਾਂਟੀਆਂ ਗਈਆਂ ਕਤਾਰਾਂ)",
+    "infoPostFix": "",
+    "infoThousands": ",",
+    "lengthMenu": "ਕੁੱਲ _MENU_ ਕਤਾਰਾਂ",
+    "loadingRecords": "ਸੂਚੀ ਲੋਡ ਹੋ ਰਹੀ ਹੈ...",
+    "processing": "ਕਾਰਵਾਈ ਚੱਲ ਰਹੀ ਹੈ...",
+    "search": "ਖੋਜ ਕਰੋ:",
+    "searchPlaceholder": "",
+    "select": {
+        "cells": {
+            "0": ""
+        },
+        "columns": {
+            "0": ""
+        },
+        "rows": {
+            "0": ""
+        }
+    },
+    "zeroRecords": "ਕੋਈ ਕਤਾਰ ਨਹੀਂ ਮਿਲੀ"
 };
 }));
