@@ -194,7 +194,7 @@ export default {
         "emptyPanes": "Nenhum Painel de Pesquisa",
         "loadMessage": "Carregando Painéis de Pesquisa...",
         "showMessage": "Mostrar todos",
-        "title": "Filtros Ativos"
+        "title": "Filtros Ativos - %d"
     },
     "searchPlaceholder": "",
     "select": {
