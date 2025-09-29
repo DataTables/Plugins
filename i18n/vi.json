@@ -1,4 +1,10 @@
 {
+    "paginate": {
+        "first": "Đầu tiên",
+        "last": "Cuối cùng",
+        "next": "Sau",
+        "previous": "Trước"
+    },
     "aria": {
         "paginate": {
             "first": "Đầu tiên",
