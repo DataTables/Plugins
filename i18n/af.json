@@ -1,5 +1,8 @@
 {
     "aria": {
+        "orderable": "Aktiveer om te sorteer",
+        "orderableRemove": "Aktiveer om sortering te verwyder",
+        "orderableReverse": "Aktiveer om sortering om te keer",
         "paginate": {
             "first": "eerste",
             "last": "laaste",
@@ -30,7 +33,8 @@
         "excel": "Excel",
         "pageLength": {
             "_": "Wys %d rye",
-            "-1": "Wys alle rye"
+            "-1": "Wys alle rye",
+            "1": "Wys 1 ry"
         },
         "pdf": "PDF",
         "print": "Druk",
@@ -41,6 +45,21 @@
         "stateRestore": "Staat %d",
         "updateState": "Dateer op"
     },
+    "columnControl": {
+        "colVis": "Kolomsigbaarheid",
+        "colVisDropdown": "Kolomsigbaarheid",
+        "dropdown": "Meer...",
+        "orderAddAsc": "Voeg Sorteer stygend by",
+        "orderAddDesc": "Voeg Sorteer aflopend by",
+        "orderAsc": "Sorteer stygend",
+        "orderDesc": "Sorteer aflopend",
+        "orderRemove": "Verwyder uit sorteer",
+        "reorder": "Herrangskik kolomme",
+        "reorderLeft": "Skuif kolom links",
+        "reorderRight": "Skuif kolom regs",
+        "searchClear": "Vee soektog uit",
+        "searchDropdown": "Soek"
+    },
     "decimal": "",
     "emptyTable": "Geen data in tabel nie",
     "info": "Wys _START_ tot _END_ uit _TOTAL_ rye",
@@ -50,6 +69,7 @@
     "infoThousands": ",",
     "lengthMenu": "Wys _MENU_ rye",
     "loadingRecords": "Besig om te laai...",
+    "orderClear": "Verwyder sortering",
     "processing": "Besig om te verwerk...",
     "search": "Soek:",
     "searchBuilder": {
