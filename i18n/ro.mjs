@@ -1,5 +1,8 @@
 export default {
     "aria": {
+        "orderable": "Activează pentru sortare",
+        "orderableRemove": "Activează pentru eliminarea sortării",
+        "orderableReverse": "Activează pentru inversarea sortării",
         "paginate": {
             "first": "Prima pagină",
             "last": "Ultima pagină",
@@ -17,29 +20,38 @@ export default {
     "buttons": {
         "collection": "Colecție <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
         "colvis": "Vizibilitate coloane",
-        "colvisRestore": "Resetare vizibilitate",
-        "copy": "Copie",
+        "colvisRestore": "Resetează vizibilitatea",
+        "copy": "Copiază",
         "copyKeys": "Apasă ctrl sau u2318 + C pentru a copia datele din tabel în clipboard-ul sistemului.<br \/><br \/>Pentru a anula, dați clic pe acest mesaj sau apăsați pe Escape.",
         "copySuccess": {
-            "_": "Copiat %ds rânduri în clipboard",
-            "1": "Copiat un rând în clipboard"
+            "_": "S-au copiat %ds rânduri în clipboard",
+            "1": "S-a copiat un rând în clipboard"
         },
-        "copyTitle": "Copie în Clipboard",
+        "copyTitle": "Copiază în Clipboard",
         "createState": "Creează Stare",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
             "_": "Arată %d rânduri",
-            "-1": "Arată toate rândurile"
+            "-1": "Arată toate rândurile",
+            "1": "Arată 1 rând"
         },
         "pdf": "PDF",
         "print": "Imprimă",
-        "removeAllStates": "Înlătură Toate Stările",
-        "removeState": "Înlătură",
+        "removeAllStates": "Elimină Toate Stările",
+        "removeState": "Elimină",
         "renameState": "Redenumește",
-        "savedStates": "Salvează Stări",
+        "savedStates": "Salvează Stările",
         "stateRestore": "Starea %d",
-        "updateState": "Reincarcă"
+        "updateState": "Actualizează"
+    },
+    "columnControl": {
+        "colVis": "Vizibilitate coloane",
+        "colVisDropdown": "Vizibilitate coloane",
+        "dropdown": "Mai multe...",
+        "orderAddAsc": "Adaugă sortare crescătoare",
+        "orderAddDesc": "Adaugă sortare descrescătoare",
+        "orderAsc": "Sortează ascendent "
     },
     "datetime": {
         "amPm": {
@@ -115,8 +127,9 @@ export default {
     "infoPostFix": "",
     "infoThousands": ".",
     "lengthMenu": "Afișează _MENU_ înregistrări pe pagină",
-    "loadingRecords": "Încarcă...",
-    "processing": "Procesează...",
+    "loadingRecords": "Se încarcă...",
+    "orderClear": "Elimină sortarea",
+    "processing": "Se procesează...",
     "search": "Caută:",
     "searchBuilder": {
         "add": "Adaugă condiție",

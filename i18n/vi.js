@@ -53,6 +53,61 @@
         "stateRestore": "Trạng thái %d",
         "updateState": "Cập nhật"
     },
+    "columnControl": {
+        "buttons": {
+            "searchClear": "Xóa"
+        },
+        "colVis": "Hiển thị cột",
+        "colVisDropdown": "Hiển thị cột",
+        "dropdown": "Thêm...",
+        "list": {
+            "all": "Chọn tất cả",
+            "empty": "Trống",
+            "none": "Bỏ chọn",
+            "search": "Tìm kiếm..."
+        },
+        "orderAddAsc": "Thêm sắp xếp tăng dần",
+        "orderAddDesc": "Thêm sắp xếp giảm dần",
+        "orderAsc": "Tăng dần",
+        "orderClear": "Bỏ sắp xếp",
+        "orderDesc": "Giảm dần",
+        "orderRemove": "Bỏ sắp xếp",
+        "reorder": "Sắp xếp lại",
+        "reorderLeft": "Di chuyển sang trái",
+        "reorderRight": "Di chuyển sang phải",
+        "search": {
+            "datetime": {
+                "empty": "Trống",
+                "equal": "Là",
+                "greater": "Lớn hơn",
+                "less": "Nhỏ hơn",
+                "notEmpty": "Không trống",
+                "notEqual": "Không bằng"
+            },
+            "number": {
+                "empty": "Trống",
+                "equal": "Bằng",
+                "greater": "Lớn hơn",
+                "greaterOrEqual": "Lớn hơn hoặc bằng",
+                "less": "Nhỏ hơn",
+                "lessOrEqual": "Nhỏ hơn hoặc bằng",
+                "notEmpty": "Không trống",
+                "notEqual": "Không bằng"
+            },
+            "text": {
+                "contains": "Chứa",
+                "empty": "Trống",
+                "ends": "Kết thúc bằng",
+                "equal": "Là",
+                "notContains": "Không chứa",
+                "notEmpty": "Không trống",
+                "notEqual": "Không là",
+                "starts": "Bắt đầu bằng"
+            }
+        },
+        "searchClear": "Xóa",
+        "searchDropdown": "Tìm kiếm"
+    },
     "datetime": {
         "amPm": {
             "0": "am",

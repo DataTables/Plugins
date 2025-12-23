@@ -9,30 +9,89 @@ export default {
     },
     "autoFill": {
         "cancel": "취소",
-        "fill": "모든 셀에서 <i>%d<i>을(를) 삽입<\/i><\/i>",
-        "fillHorizontal": "수평 셀에서 값을 삽입",
-        "fillVertical": "수직 설에서 값을 삽입",
+        "fill": "모든 셀에 <i>%d<i><\/i><\/i> 채우기",
+        "fillHorizontal": "수평으로 셀에 값 채우기",
+        "fillVertical": "수직으로 셀에 값 채우기",
         "info": ""
     },
     "buttons": {
-        "collection": "집합 <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
-        "colvis": "컬럼 보기",
+        "collection": "모음 <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
+        "colvis": "열 보기",
         "colvisRestore": "보기 복원",
         "copy": "복사",
-        "copyKeys": "ctrl키 나 u2318 + C키로 테이블 데이터를 시스텝 복사판에서 복사하고 취소하려면 이 메시지를 클릭하거나 ESC키를 누르면됩니다. to copy the table data to your system clipboard. To cancel, click this message or press escape.",
+        "copyKeys": "ctrl키나 u2318 + C키로 테이블 데이터를 시스템 클립보드에서 복사하고 취소하려면 이 메시지를 클릭하거나 ESC키를 누르면됩니다.",
         "copySuccess": {
-            "_": "%d행을 복사판에서 복사됨",
-            "1": "1행을 복사판에서 복사됨"
+            "_": "%d행을 클립보드에서 복사됨",
+            "1": "1행을 클립보드에서 복사됨"
         },
-        "copyTitle": "복사판에서 복사",
+        "copyTitle": "클립보드에서 복사",
+        "createState": "상태 생성",
         "csv": "CSV",
         "excel": "엑셀",
         "pageLength": {
             "_": "%d행 보기",
-            "-1": "모든 행 보기"
+            "-1": "모든 행 보기",
+            "1": "1행 보기"
         },
         "pdf": "PDF",
-        "print": "인쇄"
+        "print": "인쇄",
+        "removeAllStates": "모든 상태 삭제",
+        "removeState": "삭제",
+        "renameState": "이름 변경",
+        "savedStates": "저장된 상태",
+        "stateRestore": "상태 %d",
+        "updateState": "갱신"
+    },
+    "columnControl": {
+        "buttons": {
+            "searchClear": "검색 지우기"
+        },
+        "dropdown": "더 보기...",
+        "list": {
+            "all": "전체 선택",
+            "empty": "비어 있음",
+            "none": "선택 해제",
+            "search": "검색..."
+        },
+        "orderAsc": "오름차순 정렬",
+        "orderClear": "정렬 지우기",
+        "orderDesc": "내림차순 정렬",
+        "orderRemove": "정렬 취소",
+        "reorder": "열 이동",
+        "reorderLeft": "왼쪽으로 열 이동",
+        "reorderRight": "오른쪽으로 열 이동",
+        "search": {
+            "datetime": {
+                "empty": "비어 있음",
+                "equal": "같음",
+                "greater": "이후",
+                "less": "이전",
+                "notEmpty": "비어 있지 않음",
+                "notEqual": "같지 않음"
+            },
+            "number": {
+                "empty": "비어 있음",
+                "equal": "같음",
+                "greater": "큼",
+                "greaterOrEqual": "크거나 같음",
+                "less": "작음",
+                "lessOrEqual": "작거나 같음",
+                "notEmpty": "비어 있지 않음",
+                "notEqual": "같지 않음"
+            },
+            "text": {
+                "contains": "포함되어 있음",
+                "empty": "비어 있음",
+                "ends": "끝남",
+                "equal": "같음",
+                "notContains": "포함되어 있지 않음",
+                "notEmpty": "비어 있지 않음",
+                "notEqual": "같지 않음",
+                "starts": "시작함"
+            }
+        },
+        "searchClear": "검색 지우기",
+        "searchDropdown": "검색"
     },
     "datetime": {
         "amPm": {
@@ -97,9 +156,12 @@ export default {
     "infoFiltered": "(총 _MAX_ 개)",
     "infoPostFix": "",
     "infoThousands": ",",
+    "lengthLabels": {
+        "-1": "전체"
+    },
     "lengthMenu": "페이지당 줄수 _MENU_",
-    "loadingRecords": "읽는중...",
-    "processing": "처리중...",
+    "loadingRecords": "읽는 중...",
+    "processing": "처리 중...",
     "search": "검색:",
     "searchBuilder": {
         "add": "조건 추가",

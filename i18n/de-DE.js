@@ -55,22 +55,57 @@
         "updateState": "Aktualisieren"
     },
     "columnControl": {
+        "buttons": {
+            "searchClear": "Suche löschen"
+        },
         "colVis": "Sichtbarkeit der Spalte",
         "colVisDropdown": "Sichtbarkeit der Spalte",
         "dropdown": "Mehr...",
         "list": {
             "all": "Alle auswählen",
+            "empty": "Leer",
             "none": "Nichts auswählen",
             "search": "Suche..."
         },
         "orderAddAsc": "Aufsteigende Sortierung hinzufügen",
         "orderAddDesc": "Absteigende Sortierung hinzufügen",
         "orderAsc": "Aufsteigend sortieren",
+        "orderClear": "Sortierung aufheben",
         "orderDesc": "Absteigend sortieren",
         "orderRemove": "Aus Sortierung löschen",
         "reorder": "Spalten neu sortieren",
         "reorderLeft": "Spalte nach links verschieben",
         "reorderRight": "Spalte nach rechts verschieben",
+        "search": {
+            "datetime": {
+                "empty": "Leer",
+                "equal": "Gleich",
+                "greater": "Nach",
+                "less": "Vor",
+                "notEmpty": "Nicht leer",
+                "notEqual": "Nicht"
+            },
+            "number": {
+                "empty": "Leer",
+                "equal": "Gleich",
+                "greater": "Größer",
+                "greaterOrEqual": "Größer gleich",
+                "less": "Kleiner",
+                "lessOrEqual": "Kleiner gleich",
+                "notEmpty": "Nicht leer",
+                "notEqual": "Nicht"
+            },
+            "text": {
+                "contains": "Enthält",
+                "empty": "Leer",
+                "ends": "Endet auf",
+                "equal": "Gleich",
+                "notContains": "Enthält nicht",
+                "notEmpty": "Nicht leer",
+                "notEqual": "Nicht",
+                "starts": "Startet mit"
+            }
+        },
         "searchClear": "Suche leeren",
         "searchDropdown": "Suchen"
     },
@@ -229,6 +264,7 @@
         "collapseMessage": "Alle einklappen",
         "count": "{total}",
         "countFiltered": "{shown} ({total})",
+        "emptyMessage": "<em>Leer<\/em>",
         "emptyPanes": "Keine Suchmasken",
         "loadMessage": "Lade Suchmasken ..",
         "showMessage": "zeige Alle",

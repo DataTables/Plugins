@@ -12,6 +12,9 @@
 (function() {
     return {
     "aria": {
+        "orderable": "Aktivovať triedenie",
+        "orderableRemove": "Aktivovať odstránenie triedenia",
+        "orderableReverse": "Aktivovať inverzné triedenie",
         "paginate": {
             "first": "Prvá",
             "last": "Posledná",
@@ -128,6 +131,7 @@
     "infoThousands": " ",
     "lengthMenu": "Zobraz _MENU_ záznamov",
     "loadingRecords": "Načítavam...",
+    "orderClear": "Zrušiť zoradenie",
     "processing": "Spracúvam...",
     "search": "Hľadať:",
     "searchBuilder": {

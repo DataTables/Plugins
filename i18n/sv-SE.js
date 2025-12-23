@@ -12,6 +12,9 @@
 (function() {
     return {
     "aria": {
+        "orderable": "Aktivera sortering i stigande ordning",
+        "orderableRemove": "Deaktivera sortering",
+        "orderableReverse": "Aktivera sortering i fallande ordning",
         "paginate": {
             "first": "Första",
             "last": "Sista",
@@ -42,7 +45,8 @@
         "excel": "Excel",
         "pageLength": {
             "_": "Visa %d rader",
-            "-1": "Visa alla rader"
+            "-1": "Visa alla rader",
+            "1": "Visa 1 rad"
         },
         "pdf": "PDF",
         "print": "Skriv ut",
@@ -52,6 +56,61 @@
         "savedStates": "Sparade urval",
         "stateRestore": "Urval",
         "updateState": "Uppdatera"
+    },
+    "columnControl": {
+        "buttons": {
+            "searchClear": "Rensa sök"
+        },
+        "colVis": "Kolumners utseende",
+        "colVisDropdown": "Utseende på kolumner",
+        "dropdown": "Mer...",
+        "list": {
+            "all": "Välj alla",
+            "empty": "Tom",
+            "none": "Välj ingen",
+            "search": "Sök..."
+        },
+        "orderAddAsc": "Lägg till stigande sortering",
+        "orderAddDesc": "Lägg till fallande sortering",
+        "orderAsc": "Sortera stigande",
+        "orderClear": "Avbryt all sortering",
+        "orderDesc": "Sortera fallande",
+        "orderRemove": "Avbryt sortering",
+        "reorder": "Flytta kolumner",
+        "reorderLeft": "Flytta kolumn till vänster",
+        "reorderRight": "Flytta kolumn till höger",
+        "search": {
+            "datetime": {
+                "empty": "Tom",
+                "equal": "Lika med",
+                "greater": "Större än",
+                "less": "Mindre än",
+                "notEmpty": "Inte tom",
+                "notEqual": "Inte lika med"
+            },
+            "number": {
+                "empty": "Tom",
+                "equal": "Lika med",
+                "greater": "Större än",
+                "greaterOrEqual": "Större eller lika med",
+                "less": "Mindre än",
+                "lessOrEqual": "Mindre eller lika med",
+                "notEmpty": "Inte tom",
+                "notEqual": "Inte lika med"
+            },
+            "text": {
+                "contains": "Innehåller",
+                "empty": "Tom",
+                "ends": "Slutar med",
+                "equal": "Lika med",
+                "notContains": "Innehåller inte",
+                "notEmpty": "Inte tom",
+                "notEqual": "Inte lika med",
+                "starts": "Börjar med"
+            }
+        },
+        "searchClear": "Rensa sök",
+        "searchDropdown": "Sök"
     },
     "datetime": {
         "amPm": {
@@ -126,8 +185,12 @@
     "infoFiltered": "(filtrerade från totalt _MAX_ rader)",
     "infoPostFix": "",
     "infoThousands": " ",
+    "lengthLabels": {
+        "-1": "Alla"
+    },
     "lengthMenu": "Visa _MENU_ rader",
     "loadingRecords": "Laddar …",
+    "orderClear": "Avbryt sortering",
     "processing": "Bearbetar …",
     "search": "Sök:",
     "searchBuilder": {
@@ -188,6 +251,7 @@
         "logicAnd": "Och",
         "logicOr": "Eller",
         "rightTitle": "Indragskriterier",
+        "search": "Sök",
         "title": {
             "_": "Avancerad sökning (%d)",
             "0": "Avancerad sökning"
@@ -203,6 +267,7 @@
         "collapseMessage": "Dölj alla",
         "count": "{total}",
         "countFiltered": "{shown} ({total})",
+        "emptyMessage": "&lt;em&gt;Tom&lt;\/em&gt;",
         "emptyPanes": "Sökrutor saknas",
         "loadMessage": "Laddar Sökrutor...",
         "showMessage": "Visa alla",

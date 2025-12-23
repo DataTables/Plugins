@@ -12,6 +12,9 @@
 (function() {
     return {
     "aria": {
+        "orderable": "Sorteren inschakelen",
+        "orderableRemove": "Sortering verwijderen",
+        "orderableReverse": "Sortering omkeren",
         "paginate": {
             "first": "Eerste",
             "last": "Laatste",
@@ -42,7 +45,8 @@
         "excel": "Excel",
         "pageLength": {
             "_": "Toon %d regels",
-            "-1": "Toon alle regels"
+            "-1": "Toon alle regels",
+            "1": "Toon 1 regel"
         },
         "pdf": "PDF",
         "print": "Print",
@@ -52,6 +56,61 @@
         "savedStates": "Opgeslagen",
         "stateRestore": "Preset %d",
         "updateState": "Bijwerken"
+    },
+    "columnControl": {
+        "buttons": {
+            "searchClear": "Reset zoekactie"
+        },
+        "colVis": "Kolom zichtbaarheid",
+        "colVisDropdown": "Kolom zichtbaarheid",
+        "dropdown": "Meer...",
+        "list": {
+            "all": "Selecteer alles",
+            "empty": "Leeg",
+            "none": "Deselecteer",
+            "search": "Zoeken..."
+        },
+        "orderAddAsc": "Sortering toevoegen (oplopend)",
+        "orderAddDesc": "Sortering toevoegen (aflopend)",
+        "orderAsc": "Oplopend sorteren",
+        "orderClear": "Reset sortering",
+        "orderDesc": "Aflopend sorteren",
+        "orderRemove": "Verwijder van sortering",
+        "reorder": "Kolommen herschikken",
+        "reorderLeft": "Verplaats kolom links",
+        "reorderRight": "Verplaatst kolom rechts",
+        "search": {
+            "datetime": {
+                "empty": "Leeg",
+                "equal": "Gelijk aan",
+                "greater": "Na",
+                "less": "Vóór",
+                "notEmpty": "Niet leeg",
+                "notEqual": "Niet gelijk aan"
+            },
+            "number": {
+                "empty": "Leeg",
+                "equal": "Gelijk aan",
+                "greater": "Meer dan",
+                "greaterOrEqual": "Meer of gelijk",
+                "less": "Minder dan",
+                "lessOrEqual": "Minder of gelijk",
+                "notEmpty": "Niet leeg",
+                "notEqual": "Niet gelijk aan"
+            },
+            "text": {
+                "contains": "Bevat",
+                "empty": "Leeg",
+                "ends": "Eindigt",
+                "equal": "Gelijk aan",
+                "notContains": "Bevat niet",
+                "notEmpty": "Niet leeg",
+                "notEqual": "Niet gelijk aan",
+                "starts": "Begint"
+            }
+        },
+        "searchClear": "Reset zoekactie",
+        "searchDropdown": "Zoeken"
     },
     "datetime": {
         "amPm": {
@@ -126,8 +185,12 @@
     "infoFiltered": " (gefilterd uit _MAX_ resultaten)",
     "infoPostFix": "",
     "infoThousands": ".",
+    "lengthLabels": {
+        "-1": "Alle"
+    },
     "lengthMenu": "_MENU_ resultaten weergeven",
     "loadingRecords": "Een moment geduld aub - bezig met laden...",
+    "orderClear": "Reset sortering",
     "processing": "Verwerken...",
     "search": "Zoeken:",
     "searchBuilder": {
@@ -188,6 +251,7 @@
         "logicAnd": "En",
         "logicOr": "Of",
         "rightTitle": "Criteria inspringen",
+        "search": "Zoeken",
         "title": {
             "_": "Zoekwizard (%d) ",
             "0": "Zoekwizard"
@@ -203,6 +267,7 @@
         "collapseMessage": "Instorten",
         "count": "{total}",
         "countFiltered": "{shown} ({total})",
+        "emptyMessage": "&lt;em&gt;Leeg&lt;\/em&gt;",
         "emptyPanes": "Geen zoekpanelen",
         "loadMessage": "Zoekpanelen laden...",
         "showMessage": "Alles weergeven",

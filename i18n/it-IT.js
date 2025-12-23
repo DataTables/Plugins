@@ -12,6 +12,9 @@
 (function() {
     return {
     "aria": {
+        "orderable": "Ordinamento",
+        "orderableRemove": "Rimuovi ordinamento",
+        "orderableReverse": "Ordinamento inverso",
         "paginate": {
             "first": "Inizio",
             "last": "Fine",
@@ -42,7 +45,8 @@
         "excel": "Excel",
         "pageLength": {
             "_": "Mostra %d righe",
-            "-1": "Mostra tutte le righe"
+            "-1": "Mostra tutte le righe",
+            "1": "Mostra 1 riga"
         },
         "pdf": "PDF",
         "print": "Stampa",
@@ -243,11 +247,13 @@
         "logicAnd": "E",
         "logicOr": "O",
         "rightTitle": "Criterio di Aumento Rientro",
+        "search": "Cerca",
         "title": {
             "_": "Generatori di Ricerca (%d)",
             "0": "Generatore di Ricerca"
         },
-        "value": "Valore"
+        "value": "Valore",
+        "valueJoiner": "e"
     },
     "searchPanes": {
         "clearMessage": "Pulisci Tutto",
@@ -258,6 +264,7 @@
         "collapseMessage": "Espandi tutto",
         "count": "{total}",
         "countFiltered": "{shown} ({total})",
+        "emptyMessage": "Vuoto",
         "emptyPanes": "Nessun Pannello di Ricerca",
         "loadMessage": "Caricamento Pannello di Ricerca",
         "showMessage": "Mostra tutto",

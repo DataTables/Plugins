@@ -256,7 +256,8 @@
             "_": "Recherche avancée (%d)",
             "0": "Recherche avancée"
         },
-        "value": "Valeur"
+        "value": "Valeur",
+        "valueJoiner": "et"
     },
     "searchPanes": {
         "clearMessage": "Effacer tout",

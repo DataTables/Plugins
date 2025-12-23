@@ -12,6 +12,9 @@
 (function() {
     return {
     "aria": {
+        "orderable": "Ordenar",
+        "orderableRemove": "Remover ordenação",
+        "orderableReverse": "Inverter a ordenação",
         "paginate": {
             "first": "Primeiro",
             "last": "Último",
@@ -42,7 +45,8 @@
         "excel": "Excel",
         "pageLength": {
             "_": "Mostrar %d registros",
-            "-1": "Mostrar todos os registros"
+            "-1": "Mostrar todos os registros",
+            "1": "Mostrar 1 registro"
         },
         "pdf": "PDF",
         "print": "Imprimir",
@@ -126,8 +130,12 @@
     "infoFiltered": "(Filtrados de _MAX_ registros)",
     "infoPostFix": "",
     "infoThousands": ".",
+    "lengthLabels": {
+        "-1": "Todos"
+    },
     "lengthMenu": "Exibir _MENU_ resultados por página",
     "loadingRecords": "Carregando...",
+    "orderClear": "Limpar ordenação",
     "processing": "Carregando...",
     "search": "Pesquisar",
     "searchBuilder": {
@@ -188,6 +196,7 @@
         "logicAnd": "E",
         "logicOr": "Ou",
         "rightTitle": "Critérios Internos",
+        "search": "Pesquisar",
         "title": {
             "_": "Construtor de Pesquisa (%d)",
             "0": "Construtor de Pesquisa"
@@ -203,10 +212,11 @@
         "collapseMessage": "Fechar todos",
         "count": "{total}",
         "countFiltered": "{shown} ({total})",
+        "emptyMessage": "&lt;em&gt;Vazio&lt;\/em&gt;",
         "emptyPanes": "Nenhum Painel de Pesquisa",
         "loadMessage": "Carregando Painéis de Pesquisa...",
         "showMessage": "Mostrar todos",
-        "title": "Filtros Ativos"
+        "title": "Filtros Ativos - %d"
     },
     "searchPlaceholder": "",
     "select": {
