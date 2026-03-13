@@ -118,6 +118,9 @@ ScrollResize.prototype = {
         availableHeight -= offsetTop;
         availableHeight -=
             settings.container.height() - (offsetTop + scrollBody.height());
+        if (settings.table.height() < availableHeight){
+          availableHeight = settings.table.height(); 
+        }
         $('div.dt-scroll-body', t.container()).css({
             maxHeight: availableHeight,
             height: availableHeight,
