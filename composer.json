@@ -1,0 +1,19 @@
+{
+	"name": "datatables/plugins",
+	"description": "Plug-ins for DataTables", 
+	"homepage": "http://www.datatables.net/",
+	"author": "SpryMedia",
+	"license": [
+		"MIT"
+	],
+	"prefer-stable": true,
+	"support": {
+		"forum": "https://datatables.net/forums",
+		"source": "https://github.com/DataTables/Plugins"
+	},
+	"extra": {
+        "branch-alias": {
+            "dev-master": "1.10-dev"
+        }
+    }
+}
