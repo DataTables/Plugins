@@ -4,7 +4,7 @@
  *  @name anchor
  *  @summary Renders the column data as HTML anchor (`a` tag)
  *  @author [Fedonyuk Anton](http://ensostudio.ru)
- *  @requires DataTables 1.10+
+ *  @requires DataTables 3+
  *
  *  @param {string} type The anchor type: 'link'(by default), 'phone' or 'email'
  *  @param {object|function} attributes The attributes of the anchor tag or the
@@ -16,24 +16,24 @@
  *
  *  @example
  *    // Display `<a href="..." target="_blank">...</a>`
- *    $('#example').DataTable({
+ *    new DataTable('#myTable', {
  *      columnDefs: [{
  *        targets: 1,
- *        render: $.fn.dataTable.render.anchor()
+ *        render: DataTable.render.anchor()
  *      }]
  *    });
  *
  *  @example
  *    // Display `<a href="mailto:..." class="link">...</a>`
- *    $('#example').DataTable({
+ *    new DataTable('#myTable', {
  *      columnDefs: [{
  *        targets: 2,
- *        render: $.fn.dataTable.render.anchor('email', {'class': 'link'})
+ *        render: DataTable.render.anchor('email', {'class': 'link'})
  *      }]
  *    });
  */
 
-import DataTable from 'datatables.net';
+import DataTable, { Dom, util } from 'datatables.net';
 
 declare module 'datatables.net' {
 	interface DataTablesStaticRender {
@@ -85,8 +85,12 @@ DataTable.render.anchor = function (
 			}
 		}
 
-		var anchorEl = jQuery('<a/>');
+		var anchorEl = Dom.c('a');
 
-		return anchorEl.attr(attrs).text(innerText || '')[0].outerText;
+		util.object.each(attrs, (name, val) => {
+			anchorEl.attr(name, val as any);
+		})
+
+		return anchorEl.text(innerText || '')[0].outerText;
 	};
 };

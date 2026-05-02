@@ -2,7 +2,7 @@
 declare module 'datatables.net' {
     interface Api<T> {
         /** Average the values in a data set. */
-        average(): Number;
+        average(): number;
     }
 }
 export {};

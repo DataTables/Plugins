@@ -1,2 +1,0 @@
-/*! © Alejandro Navarro - datatables.net/license */
-import jQuery from"jquery";import DataTable from"datatables.net";let $=jQuery;DataTable.Api.register("column().title()",function(){var t=this.header();return $(t).text().trim()});export default DataTable;

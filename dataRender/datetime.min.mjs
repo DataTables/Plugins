@@ -1,2 +1,0 @@
-/*! © SpryMedia Ltd - datatables.net/license */
-import jQuery from"jquery";import DataTable from"datatables.net";let $=jQuery;DataTable.render.moment=function(o,a,n){return 1===arguments.length&&(a=o,o="YYYY-MM-DD"),function(t,e,r){return t?window.moment(t,o,n,!0).format("sort"===e||"type"===e?"x":a):"sort"===e||"type"===e?0:t}};export default DateTime;

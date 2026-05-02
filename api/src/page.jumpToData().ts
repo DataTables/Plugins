@@ -17,33 +17,39 @@
  * @name page.JumpToData()
  * @summary Jump to a page by searching for data from a column
  * @author [Allan Jardine](http://datatables.net)
- * @requires DataTables 1.10+
+ * @requires DataTables 3+
  *
  * @param {*} data Data to search for
  * @param {integer} column Column index
  * @returns {Api} DataTables API instance
  *
  * @example
- *    var table = $('#example').DataTable();
- *    table.page.jumpToData( "Allan Jardine", 0 );
+ *    var table = new DataTable('#example');
+ *    table.page.jumpToData( 'Allan', 0 );
  */
 
-import DataTable from 'datatables.net';
+import DataTable, { ApiPage, ColumnSelector } from 'datatables.net';
 
 declare module 'datatables.net' {
 	interface ApiPage {
 		/** Change ordering of the table to its data load order */
-		jumpToData(data: any): Api<any>;
+		jumpToData(this: Api, data: any, column: ColumnSelector): Api<any>;
 	}
 }
 
-DataTable.Api.register('page.jumpToData()', function (data, column) {
-	var pos = this.column(column, { order: 'current' }).data().indexOf(data);
+DataTable.Api.register<ApiPage['jumpToData']>(
+	'page.jumpToData()',
+	function (data, column) {
+		var pos = this
+			.column(column, { order: 'current' })
+			.data()
+			.indexOf(data);
 
-	if (pos >= 0) {
-		var page = Math.floor(pos / this.page.info().length);
-		this.page(page).draw(false);
+		if (pos >= 0) {
+			var page = Math.floor(pos / this.page.info().length);
+			this.page(page).draw(false);
+		}
+
+		return this;
 	}
-
-	return this;
-});
+);

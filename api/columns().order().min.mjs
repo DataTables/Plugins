@@ -1,2 +1,0 @@
-/*! © SpryMedia Ltd - datatables.net/license */
-import jQuery from"jquery";import DataTable from"datatables.net";let $=jQuery;DataTable.Api.register("columns().order()",function(i){return this.iterator("columns",function(r,a){for(var e=[],t=0,o=a.length;t<o;t++)e.push([a[t],Array.isArray(i)?i[t]:i]);new DataTable.Api(r).order(e)})});export default DataTable;

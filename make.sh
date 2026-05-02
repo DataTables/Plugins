@@ -101,9 +101,9 @@ if [ ! -e $DT_BUILT/extensions/Plugins ]; then
 	ln -s $PLUGINS $DT_BUILT/extensions/Plugins
 fi
 
-# for file in $PLUGINS/api/src/*.ts; do
-# 	ts_plugin $file
-# done
+for file in $PLUGINS/api/src/*.ts; do
+	ts_plugin $file
+done
 
 # for file in $PLUGINS/buttons/src/*.ts; do
 # 	ts_plugin $file
@@ -144,9 +144,9 @@ fi
 # 	fi
 # done
 
-for file in $PLUGINS/sorting/src/*.ts; do
-	ts_plugin $file
-done
+# for file in $PLUGINS/sorting/src/*.ts; do
+# 	ts_plugin $file
+# done
 
 # for file in $PLUGINS/type-detection/src/*.ts; do
 # 	ts_plugin $file

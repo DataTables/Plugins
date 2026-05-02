@@ -1,51 +1,4 @@
 /*! © SpryMedia Ltd - datatables.net/license */
-
-(function( factory ){
-	if ( typeof define === 'function' && define.amd ) {
-		// AMD
-		define( ['jquery', 'datatables.net'], function ( $ ) {
-			return factory( $, window, document );
-		} );
-	}
-	else if ( typeof exports === 'object' ) {
-		// CommonJS
-		var jq = require('jquery');
-		var cjsRequires = function (root, $) {
-			if ( ! $.fn.dataTable ) {
-				require('datatables.net')(root, $);
-			}
-		};
-
-		if (typeof window === 'undefined') {
-			module.exports = function (root, $) {
-				if ( ! root ) {
-					// CommonJS environments without a window global must pass a
-					// root. This will give an error otherwise
-					root = window;
-				}
-
-				if ( ! $ ) {
-					$ = jq( root );
-				}
-
-				cjsRequires( root, $ );
-				return factory( $, root, root.document );
-			};
-		}
-		else {
-			cjsRequires( window, jq );
-			module.exports = factory( jq, window, window.document );
-		}
-	}
-	else {
-		// Browser
-		factory( jQuery, window, document );
-	}
-}(function( $, window, document, undefined ) {
-'use strict';
-var DataTable = $.fn.dataTable;
-
-
 /**
  * This function will restore the order in which data was read into a DataTable
  * (for example from an HTML source). Although you can set `dt-api order()` to
@@ -59,7 +12,7 @@ var DataTable = $.fn.dataTable;
  * @name order.neutral()
  * @summary Change ordering of the table to its data load order
  * @author [Allan Jardine](http://datatables.net)
- * @requires DataTables 1.10+
+ * @requires DataTables 3+
  *
  * @returns {DataTables.Api} DataTables API instance
  *
@@ -69,16 +22,12 @@ var DataTable = $.fn.dataTable;
  */
 DataTable.Api.register('order.neutral()', function () {
     return this.iterator('table', function (s) {
-        s.aaSorting.length = 0;
-        s.aiDisplay.sort(function (a, b) {
+        s.order.length = 0;
+        s.display.sort(function (a, b) {
             return a - b;
         });
-        s.aiDisplayMaster.sort(function (a, b) {
+        s.displayMaster.sort(function (a, b) {
             return a - b;
         });
     });
 });
-
-
-return DataTable;
-}));

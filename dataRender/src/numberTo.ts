@@ -9,7 +9,7 @@
  *  @author Alireza Mohammadi Doost
  *
  *  @example
- *    $('#example').DataTable( {
+ *    new DataTable('#example', {
  *      columnDefs: [ {
  *        targets: 2,
  *        render: DataTable.render.numberTo('fa')

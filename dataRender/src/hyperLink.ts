@@ -25,7 +25,7 @@
  *
  *  @example
  *    // Display the hyperlink with 'Click Here', which open hyperlink in new Tab or new Window based on Browser setting
- *    $('#example').DataTable( {
+ *    new DataTable('#myTable', {
  *      columnDefs: [ {
  *        targets: 1,
  *        render: DataTable.render.hyperLink()
@@ -34,7 +34,7 @@
  *
  *  @example
  *    // Display the hyperlink with 'Download', which open hyperlink in new Tab or new Window based on Browser setting
- *    $('#example').DataTable( {
+ *    new DataTable('#myTable', {
  *      columnDefs: [ {
  *        targets: 2,
  *        render: DataTable.render.hyperLink( 'Download' )
@@ -44,7 +44,7 @@
  *  @example
  *    // Display the hyperlink with 'Download', which open hyperlink in popup
  *    //		with size 600as width and 400 as height
- *    $('#example').DataTable( {
+ *    new DataTable('#myTable', {
  *      columnDefs: [ {
  *        targets: 2,
  *        render: DataTable.render.hyperLink( 'Download', 'popup' )
@@ -54,7 +54,7 @@
  *  @example
  *    // Display the hyperlink with 'Download', which open hyperlink in popup
  *    //		with size 1000 width and 500 as height
- *    $('#example').DataTable( {
+ *    new DataTable('#myTable', {
  *      columnDefs: [ {
  *        targets: 2,
  *        render: DataTable.render.hyperLink( 'Download', 'popup' , 1000, 500)

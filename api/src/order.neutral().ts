@@ -13,7 +13,7 @@
  * @name order.neutral()
  * @summary Change ordering of the table to its data load order
  * @author [Allan Jardine](http://datatables.net)
- * @requires DataTables 1.10+
+ * @requires DataTables 3+
  *
  * @returns {DataTables.Api} DataTables API instance
  *
@@ -22,22 +22,22 @@
  *    table.order.neutral().draw();
  */
 
-import DataTable from 'datatables.net';
+import DataTable, { ApiOrder } from 'datatables.net';
 
 declare module 'datatables.net' {
 	interface ApiOrder {
-		/** Change ordering of the table to its data load order */
-		neutral(): Api<any>;
+		/** Average the values in a data set. */
+		neutral(this: Api): Api;
 	}
 }
 
-DataTable.Api.register('order.neutral()', function () {
+DataTable.Api.register<ApiOrder['neutral']>('order.neutral()', function () {
 	return this.iterator('table', function (s) {
-		s.aaSorting.length = 0;
-		s.aiDisplay.sort(function (a, b) {
+		s.order.length = 0;
+		s.display.sort(function (a, b) {
 			return a - b;
 		});
-		s.aiDisplayMaster.sort(function (a, b) {
+		s.displayMaster.sort(function (a, b) {
 			return a - b;
 		});
 	});

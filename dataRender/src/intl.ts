@@ -27,7 +27,7 @@
  *  @name intl
  *  @summary Use the Intl Javascript API to render dates and numbers
  *  @author [Allan Jardine](http://datatables.net)
- *  @requires DataTables 1.10+
+ *  @requires DataTables 3+
  *
  *  @example
  *    // Number renderer - using the `columns.render` option:

@@ -29,13 +29,13 @@
  *  @name percentBar
  *  @summary Display percentage value as a bar
  *  @author [Drijkoningen Dirk](RedJokingInn)
- *  @requires DataTables 1.10+
+ *  @requires DataTables 3+
  *
  *  @returns {String} Html code for bar
  *
  *  @example
  *    // Display rounded bars with white text, medium blue border, light blue bar, dark blue background, rounded to one decimal.
- *    $('#example').DataTable( {
+ *    new DataTable('#myTable, {
  *      columnDefs: [ {
  *        targets: 4,
  *        render: DataTable.render.percentBar( 'round','#FFF', '#269ABC', '#31B0D5', '#286090', 1, 'groove' )
@@ -44,7 +44,7 @@
  *
  *  @example
  *    // All default values used. Square bars with black text, gray ridged border, light green bar, light gray background, rounded to integer.
- *    $('#example').DataTable( {
+ *    new DataTable('#myTable, {
  *      columnDefs: [ {
  *        targets: 2,
  *        render: DataTable.render.percentBar()
@@ -64,7 +64,8 @@ declare module 'datatables.net' {
 			cBar: string,
 			cBack: string,
 			vRound: number,
-			bType: string
+			bType: string,
+			conditionalColors: any
 		);
 	}
 }

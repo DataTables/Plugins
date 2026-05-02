@@ -14,25 +14,25 @@
  *
  * @example
  *    // Average a column
- *    var table = $('#example').DataTable();
+ *    var table = new DataTable('#example')
  *    table.column( 3 ).data().average();
  *
  * @example
  *    // Average two cells
- *    var table = $('#example').DataTable();
+ *    var table = new DataTable('#example')
  *    table.cells( 0, [3,4] ).data().average();
  */
 
-import DataTable from 'datatables.net';
+import DataTable, { Api } from 'datatables.net';
 
 declare module 'datatables.net' {
 	interface Api<T> {
 		/** Average the values in a data set. */
-		average(): Number;
+		average(): number;
 	}
 }
 
-DataTable.Api.register<Number>('average()', function () {
+DataTable.Api.register<Api['average']>('average()', function () {
 	var data = this.flatten();
 	var sum = data.reduce(function (a, b) {
 		return a * 1 + b * 1; // cast values in-case they are strings

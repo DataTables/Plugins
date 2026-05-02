@@ -7,7 +7,7 @@
  * @name columns().order()
  * @summary Apply multi-column ordering through the columns() API method.
  * @author [Allan Jardine](http://sprymedia.co.uk)
- * @requires DataTables 1.10+
+ * @requires DataTables 3+
  *
  * @returns {boolean|DataTables.Api} Searchable flag
  *
@@ -23,7 +23,7 @@
  import DataTable from 'datatables.net';
 
  declare module 'datatables.net' {
-	interface ApiColumnMethods {
+	interface ApiColumnMethods<T=any> {
 		/** Get searchable flag for selected column */
 		searchable(): boolean;
 	}
@@ -39,7 +39,7 @@ DataTable.Api.registerPlural(
 	'column().searchable()',
 	function ( selector, opts ) {
 		return this.iterator( 'column', function ( settings, column ) {
-			return settings.aoColumns[column].bSearchable;
+			return settings.columns[column].searchable;
 		}, 1 );
 	}
 );

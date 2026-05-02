@@ -26,13 +26,13 @@
  *  @summary Restrict output data to a particular length, showing anything
  *      longer with ellipsis and a browser provided tooltip on hover.
  *  @author [Allan Jardine](http://datatables.net)
- *  @requires DataTables 1.10+
+ *  @requires DataTables 3+
  *
  * @returns {Number} Calculated average
  *
  *  @example
  *    // Restrict a column to 17 characters, don't split words
- *    $('#example').DataTable( {
+ *    new DataTable('#myTable', {
  *      columnDefs: [ {
  *        targets: 1,
  *        render: DataTable.render.ellipsis( 17, true )
@@ -41,7 +41,7 @@
  *
  *  @example
  *    // Restrict a column to 10 characters, do split words
- *    $('#example').DataTable( {
+ *    new DataTable('#myTable', {
  *      columnDefs: [ {
  *        targets: 2,
  *        render: DataTable.render.ellipsis( 10 )
