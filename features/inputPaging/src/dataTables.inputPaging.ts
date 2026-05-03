@@ -1,3 +1,22 @@
+/*! © SpryMedia Ltd - datatables.net/license */
+
+/**
+ * @summary     InputPaging
+ * @description Paging control with an input element for direct value input
+ * @author      SpryMedia Ltd
+ * @requires    DataTables 3+
+ *
+ * This feature adds a paging control to the table with an `input` element
+ * showing the current page and allowing the end user to type in the page they
+ * want to jump to.
+ *
+ * @example
+ *   new DataTable('#myTable', {
+ *     layout: {
+ *       bottomEnd: 'inputPaging'
+ *     }
+ *   });
+ */
 import DataTable from 'datatables.net';
 
 DataTable.feature.register('inputPaging', function (settings, opts) {
@@ -14,28 +33,28 @@ DataTable.feature.register('inputPaging', function (settings, opts) {
 
 	// Create the DOM elements for the paging control
 	let wrapper = createElement(tags.wrapper);
-	let first = createElement(tags.item, api.i18n('oPaginate.sFirst', '\u00AB'), (e) => {
+	let first = createElement(tags.item, api.i18n('paginate.first', '\u00AB'), (e) => {
 		e.preventDefault();
 
 		if (!first.classList.contains(tags.item.disabled)) {
 			api.page('first').draw(false);
 		}
 	});
-	let previous = createElement(tags.item, api.i18n('oPaginate.sPrevious', '\u2039'), (e) => {
+	let previous = createElement(tags.item, api.i18n('paginate.previous', '\u2039'), (e) => {
 		e.preventDefault();
 
 		if (!previous.classList.contains(tags.item.disabled)) {
 			api.page('previous').draw(false);
 		}
 	});
-	let next = createElement(tags.item, api.i18n('oPaginate.sNext', '\u203A'), (e) => {
+	let next = createElement(tags.item, api.i18n('paginate.next', '\u203A'), (e) => {
 		e.preventDefault();
 
 		if (!next.classList.contains(tags.item.disabled)) {
 			api.page('next').draw(false);
 		}
 	});
-	let last = createElement(tags.item, api.i18n('oPaginate.sLast', '\u00BB'), (e) => {
+	let last = createElement(tags.item, api.i18n('paginate.last', '\u00BB'), (e) => {
 		e.preventDefault();
 
 		if (!last.classList.contains(tags.item.disabled)) {

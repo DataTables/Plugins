@@ -3,30 +3,30 @@
 /**
  * @summary     LengthLinks
  * @description Page length control via links for DataTables
- * @version     1.2.0
- * @author      Allan Jardine
+ * @author      SpryMedia Ltd
+ * @requires    DataTables 3+
  *
  * This feature plug-in for DataTables adds page length control links to the
  * DataTable. The `-init layout` option can be used to insert the control
  * using the `lengthLinks` option.
  *
  * @example
- *   $('#myTable').DataTable( {
+ *   new DataTable('#myTable', {
  *     layout: {
- *       topStart: 'lengthLinks;
+ *       topStart: 'lengthLinks'
  *     }
  *   } );
  *
  * @example
- *   $('#myTable').DataTable( {
+ *   new DataTable('#myTable', {
  *     layout: {
- *       topStart: 'lengthLinks;
+ *       topStart: 'lengthLinks'
  *     },
  *     lengthMenu: [ [10, 25, 50, -1], [10, 25, 50, "All"] ]
  *   } );
  */
 
-import DataTable from 'datatables.net';
+import DataTable, { Dom } from 'datatables.net';
 
 declare module 'datatables.net' {
 	interface DataTablesStatic {
@@ -42,7 +42,7 @@ declare module 'datatables.net' {
 DataTable.LengthLinks = function (inst) {
 	var api = new DataTable.Api(inst);
 	var settings = api.settings()[0];
-	var container = $('<div></div>').addClass('dt-lengthLinks');
+	var container = Dom.s('div').classAdd('dt-lengthLinks');
 	var lastLength: number | null = null;
 
 	// API so the feature wrapper can return the node to insert
@@ -53,7 +53,7 @@ DataTable.LengthLinks = function (inst) {
 	// Listen for events to change the page length
 	container.on('click.dtll', 'a', function (e) {
 		e.preventDefault();
-		api.page.len($(this).data('length') * 1).draw(false);
+		api.page.len(parseInt(Dom.s(this).data('length'))).draw(false);
 	});
 
 	// Update on each draw
@@ -63,18 +63,18 @@ DataTable.LengthLinks = function (inst) {
 			return;
 		}
 
-		var menu = settings.aLengthMenu;
+		var menu = settings.lengthMenu;
 		var lang = menu.length === 2 && Array.isArray(menu[0]) ? menu[1] : menu;
 		var lens = menu.length === 2 && Array.isArray(menu[0]) ? menu[0] : menu;
 
-		var out = $.map(lens, function (el, i) {
+		var out = lens.map((el, i) => {
 			return el == api.page.len()
 				? '<a class="active" data-length="' + lens[i] + '">' + lang[i] + '</a>'
 				: '<a data-length="' + lens[i] + '">' + lang[i] + '</a>';
 		});
 
 		container.html(
-			settings.oLanguage.sLengthMenu
+			settings.language.lengthMenu
 				.replace('_MENU_', out.join(' | '))
 				.replace('_ENTRIES_', api.i18n('entries', '', 10))
 		);
@@ -86,7 +86,7 @@ DataTable.LengthLinks = function (inst) {
 	});
 };
 
-// Subscribe the feature plug-in to DataTables, ready for use
+// Legacy `dom` option
 DataTable.ext.feature.push({
 	fnInit: function (settings) {
 		var l = new DataTable.LengthLinks(settings);
@@ -96,6 +96,7 @@ DataTable.ext.feature.push({
 	sFeature: 'LengthLinks',
 });
 
+// Feature registration
 DataTable.feature.register('lengthLinks', function (settings) {
 	var l = new DataTable.LengthLinks(settings);
 	return l.container();

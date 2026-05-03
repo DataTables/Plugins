@@ -3,12 +3,10 @@
 /**
  * @summary     LengthLinks
  * @description Deep linking options parsing support for DataTables
- * @version     1.1.0
  * @file        dataTables.deepLink.js
- * @author      SpryMedia Ltd (www.sprymedia.co.uk)
+ * @author      SpryMedia Ltd
  * @copyright   Copyright SpryMedia Ltd.
- *
- * License      MIT - http://datatables.net/license/mit
+ * @license     MIT - http://datatables.net/license/mit
  *
  * This feature plug-in for DataTables provides a function which will
  * take DataTables options from the browser's URL search string and
@@ -24,37 +22,37 @@
  * want to let the URL search string specify the `ajax` option).
  *
  * This specification is done by passing an array of property names
- * to the `DataTable.ext.deepLink` function. If you do which to
+ * to the `DataTable.deepLink` function. If you do which to
  * allow _every_ parameter (I wouldn't recommend it) you can use `all`
  * instead of an array.
  *
  * @example
  *   // Allow a display start point and search string to be specified
- *   $('#myTable').DataTable(
- *     DataTable.ext.deepLink( [ 'displayStart', 'search.search' ] )
+ *   new DataTable('#myTable', {
+ *     DataTable.deepLink( [ 'displayStart', 'search.search' ] )
  *   );
  *
  * @example
  *   // As above, but with a default search
- *   var options = DataTable.ext.deepLink(['displayStart', 'search.search']);
+ *   var options = DataTable.deepLink(['displayStart', 'search.search']);
  *
- *   $('#myTable').DataTable(
- *     $.extend( true, {
+ *   new DataTable('#myTable', {
+ *     DataTable.util.object.assignDeep({
  *       search: { search: 'Initial search value' }
- *     }, options )
+ *     }, options)
  *   );
  */
 
 import DataTable from 'datatables.net';
 
 declare module 'datatables.net' {
-	interface DataTablesStaticExt {
+	interface DataTablesStatic {
 		/** Deep linking options parsing support for DataTables */
 		deepLink(whitelist: 'all' | string[]);
 	}
 }
 
-DataTable.ext.deepLink = function (whitelist) {
+DataTable.deepLink = function (whitelist) {
 	var search = location.search.replace(/^\?/, '').split('&');
 	var out = {};
 
@@ -75,13 +73,13 @@ DataTable.ext.deepLink = function (whitelist) {
 			value = value * 1;
 		}
 		else if (value.indexOf('{') === 0 || value.indexOf('[') === 0) {
-			// Try to JSON parse for arrays and obejcts
+			// Try to JSON parse for arrays and objects
 			try {
-				value = $.parseJSON(value);
+				value = JSON.parse(value);
 			} catch (e) {}
 		}
 
-		if (whitelist === 'all' || $.inArray(key, whitelist) !== -1) {
+		if (whitelist === 'all' || whitelist.indexOf(key) !== -1) {
 			var setter = DataTable.util.set(key);
 
 			setter(out, value, {} as any);

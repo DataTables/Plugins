@@ -4,25 +4,23 @@
  * @summary     AlphabetSearch
  * @description Show an set of alphabet buttons alongside a table providing
  *     search input options
- * @version     1.1.0
- * @file        dataTables.alphabetSearch.js
- * @author      SpryMedia Ltd (www.sprymedia.co.uk)
- * @contact     www.sprymedia.co.uk/contact
+ * @author      SpryMedia Ltd
  * @copyright   Copyright SpryMedia Ltd.
+ * @requires DataTables 3+
  *
  * License      MIT - http://datatables.net/license/mit
  *
  * Please see [this blog post](http://datatables.net/blog/2014-09-22).
  *
  * @example
- *   $('#myTable').DataTable( {
+ *   new DataTable('#myTable', {
  *     layout: {
  *       topStart: 'alphabetSearch;
  *     }
  *   } );
  */
 
-import DataTable from 'datatables.net';
+import DataTable, { Dom } from 'datatables.net';
 
 interface AlphabetSearchOptions {
 	column?: number;
@@ -49,13 +47,21 @@ declare module 'datatables.net' {
 	}
 
 	interface ApiAlphabetMethods<T> extends Api<T> {
-		node(): JQuery | null;
+		node(): Dom | null;
 
 		recalc(): Api<T>;
 	}
 
 	interface Feature {
 		alphabetSearch?: AlphabetSearchOptions;
+	}
+
+	interface Context {
+		alphabetSearch: string;
+	}
+
+	interface Options {
+		alphabet: AlphabetSearchOptions;
 	}
 }
 
@@ -84,27 +90,27 @@ DataTable.Api.register('alphabetSearch.recalc()', function () {
 DataTable.Api.register('alphabetSearch.node()', function () {
 	return this._context.length
 		? this._context._alphabet
-		: null;;
+		: null;
 });
 
 // Search plug-in
 DataTable.ext.search.push(function (context, searchData) {
 	// Ensure that there is a search applied to this table before running it
-	if (!context.alphabetSearch) {
+	if (!context.alphabetSearch || ! searchData) {
 		return true;
 	}
 
 	var columnId = 0;
 	var caseSensitive = false;
 
-	if (context.oInit.alphabet !== undefined) {
+	if (context.init.alphabet !== undefined) {
 		columnId =
-			context.oInit.alphabet.column !== undefined
-				? context.oInit.alphabet.column
+			context.init.alphabet.column !== undefined
+				? context.init.alphabet.column
 				: 0;
 		caseSensitive =
-			context.oInit.alphabet.caseSensitive !== undefined
-				? context.oInit.alphabet.caseSensitive
+			context.init.alphabet.caseSensitive !== undefined
+				? context.init.alphabet.caseSensitive
 				: false;
 	}
 
@@ -154,7 +160,8 @@ function draw(table, alphabet, options) {
 	var columnData = table.column(options.column).data();
 	var bins = bin(columnData, options);
 
-	$('<span class="clear active"/>')
+	Dom.c('span')
+		.classAdd('clear active')
 		.data('letter', '')
 		.data('match-count', columnData.length)
 		.html('None')
@@ -164,10 +171,10 @@ function draw(table, alphabet, options) {
 		for (var i = 0; i < 10; i++) {
 			var letter = String.fromCharCode(48 + i);
 
-			$('<span/>')
+			Dom.c('span')
 				.data('letter', letter)
 				.data('match-count', bins[letter] || 0)
-				.addClass(!bins[letter] ? 'empty' : '')
+				.classAdd(!bins[letter] ? 'empty' : '')
 				.html(letter)
 				.appendTo(alphabet);
 		}
@@ -175,10 +182,10 @@ function draw(table, alphabet, options) {
 	for (var i = 0; i < 26; i++) {
 		var letter = String.fromCharCode(65 + i);
 
-		$('<span/>')
+		Dom.c('span')
 			.data('letter', letter)
 			.data('match-count', bins[letter] || 0)
-			.addClass(!bins[letter] ? 'empty' : '')
+			.classAdd(!bins[letter] ? 'empty' : '')
 			.html(letter)
 			.appendTo(alphabet);
 	}
@@ -186,22 +193,22 @@ function draw(table, alphabet, options) {
 		for (var i = 0; i < 26; i++) {
 			var letter = String.fromCharCode(97 + i);
 
-			$('<span/>')
+			Dom.c('span')
 				.data('letter', letter)
 				.data('match-count', bins[letter] || 0)
-				.addClass(!bins[letter] ? 'empty' : '')
+				.classAdd(!bins[letter] ? 'empty' : '')
 				.html(letter)
 				.appendTo(alphabet);
 		}
 	}
 
-	$('<div class="alphabetInfo"></div>').appendTo(alphabet);
+	Dom.c('div').classAdd('alphabetInfo').appendTo(alphabet);
 }
 
 DataTable.AlphabetSearch = function (context) {
 	var table = new DataTable.Api(context);
-	var alphabet = $('<div class="alphabet"/>');
-	var options = $.extend(
+	var alphabet = Dom.c('div').classAdd('alphabet');
+	var options = Object.assign(
 		{
 			column: 0,
 			caseSensitive: false,
@@ -217,10 +224,10 @@ DataTable.AlphabetSearch = function (context) {
 
 	// Trigger a search
 	alphabet.on('click', 'span', function () {
-		alphabet.find('.active').removeClass('active');
-		$(this).addClass('active');
+		alphabet.find('.active').classRemove('active');
+		Dom.s(this).classAdd('active');
 
-		table.alphabetSearch($(this).data('letter')).draw();
+		table.alphabetSearch(Dom.s(this).data('letter')).draw();
 	});
 
 	// Mouse events to show helper information
@@ -229,14 +236,14 @@ DataTable.AlphabetSearch = function (context) {
 			alphabet
 				.find('div.alphabetInfo')
 				.css({
-					opacity: 1,
-					left: $(this).position().left,
-					width: $(this).width(),
-				} as any) // unsure why it needs any
-				.html($(this).data('match-count'));
+					opacity: '1',
+					left: Dom.s(this).position().left + 'px',
+					width: Dom.s(this).width() + 'px',
+				})
+				.html(Dom.s(this).data('match-count'));
 		})
 		.on('mouseleave', 'span', function () {
-			alphabet.find('div.alphabetInfo').css('opacity', 0);
+			alphabet.find('div.alphabetInfo').css('opacity', '0');
 		});
 
 	this.node = function () {
@@ -244,7 +251,7 @@ DataTable.AlphabetSearch = function (context) {
 	};
 };
 
-// Register a search plug-in
+// Legacy dom option
 DataTable.ext.feature.push({
 	fnInit: function (settings) {
 		var search = new DataTable.AlphabetSearch(settings);
@@ -253,6 +260,7 @@ DataTable.ext.feature.push({
 	cFeature: 'A',
 });
 
+// Feature registration
 DataTable.feature.register('alphabetSearch', function (settings, opts) {
 	var search = new DataTable.AlphabetSearch(settings);
 
