@@ -16,17 +16,20 @@
  * For details please refer to: http://www.datatables.net
  */
 
-import $ from 'jquery';
-import DataTable from 'datatables.net';
+import DataTable, { Dom } from 'datatables.net';
 
 declare module 'datatables.net' {
+	interface Defaults {
+		scrollToTop?: boolean;
+	}
+
 	interface Config {
 		scrollToTop?: boolean;
 	}
 }
 
 // Automatic initialisation listener
-$(document).on('preInit.dt', function (e, settings) {
+Dom.s(document).on('preInit.dt', function (e, settings) {
 	if (e.namespace !== 'dt') {
 		return;
 	}
@@ -36,7 +39,9 @@ $(document).on('preInit.dt', function (e, settings) {
 
 		api.on('page', function () {
 			setTimeout(function () {
-				$(document).scrollTop($(api.table().container()).offset()!.top);
+				Dom.s(document).scrollTop(
+					Dom.s(api.table().container()).offset()!.top
+				);
 			}, 10);
 		});
 	}

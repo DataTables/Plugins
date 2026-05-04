@@ -1,11 +1,11 @@
-/*! © SpryMedia Ltd - datatables.net/license */
+/*! © SpryMedia Ltd - datatables.net/license/mit */
 
 /**
  * @summary     ScrollResize
  * @description Automatically alter the DataTables page length to fit the table
      into a container
- * @version     1.1.0
  * @author      SpryMedia Ltd
+ * @requires    DataTables 3+
  *
  * This feature plug-in for DataTables will automatically change the DataTables
  * page length in order to fit inside its container. This can be particularly
@@ -24,13 +24,19 @@
  *   `table` is a DataTable's API instance.
  */
 
-import $ from 'jquery';
-import DataTable from 'datatables.net';
+import DataTable, { Api, Dom } from 'datatables.net';
 
 declare module 'datatables.net' {
 	interface DataTablesStatic {
-		/** Automatically alter the DataTables page length to fit the table into a container */
-		ScrollResize(settings: any): void;
+		/**
+		 * Automatically alter the DataTables page length to fit the table into
+		 * a container
+		 */
+		ScrollResize: typeof ScrollResize;
+	}
+
+	interface Defaults {
+		scrollResize?: boolean;
 	}
 
 	interface Config {
@@ -38,60 +44,75 @@ declare module 'datatables.net' {
 	}
 }
 
-var ScrollResize = function (dt) {
-	var that = this;
-	var table = dt.table();
+interface ISettings {
+	dt: Api;
+	host: Dom;
+	header: Dom;
+	footer: Dom;
+	body: Dom;
+	container: Dom;
+	table: Dom;
+	obj: Dom;
+}
 
-	this.s = {
-		dt: dt,
-		host: $(table.container()).parent(),
-		header: $(table.header()),
-		footer: $(table.footer()),
-		body: $(table.body()),
-		container: $(table.container()),
-		table: $(table.node()),
-	};
+class ScrollResize {
+	private s: ISettings;
 
-	var host = this.s.host;
-	if (host.css('position') === 'static') {
-		host.css('position', 'relative');
+	constructor(dt: Api) {
+		var that = this;
+		var table = dt.table();
+
+		this.s = {
+			dt: dt,
+			host: Dom.s(table.container()).parent(),
+			header: Dom.s(table.header()),
+			footer: Dom.s(table.footer()),
+			body: Dom.s(table.body()),
+			container: Dom.s(table.container()),
+			table: Dom.s(table.node()),
+			obj: Dom.c('iframe')
+		};
+
+		var host = this.s.host;
+		if (host.css('position') === 'static') {
+			host.css('position', 'relative');
+		}
+
+		dt.on('draw.scrollResize', function () {
+			that._size();
+		});
+
+		dt.on(
+			'destroy.scrollResize',
+			function () {
+				dt.off('.scrollResize');
+				this.s.obj && this.s.obj.remove();
+			}.bind(this)
+		);
+
+		this._attach();
+		this._size();
+
+		// Redraw the header if the scrollbar was visible before feature
+		// initialization, but no longer after initialization. Otherwise,
+		// the header width would differ from the body width, because the
+		// scrollbar is no longer present.
+		var settings = dt.settings()[0];
+		var divBodyEl = settings.scrollBody;
+		var scrollBarVis = divBodyEl[0].scrollHeight > divBodyEl[0].clientHeight;
+
+		if (settings.scrollBarVis && !scrollBarVis) {
+			dt.columns.adjust();
+		}
 	}
-
-	dt.on('draw.scrollResize', function () {
-		that._size();
-	});
-
-	dt.on(
-		'destroy.scrollResize',
-		function () {
-			dt.off('.scrollResize');
-			this.s.obj && this.s.obj.remove();
-		}.bind(this)
-	);
-
-	this._attach();
-	this._size();
-
-	// Redraw the header if the scrollbar was visible before feature
-	// initialization, but no longer after initialization. Otherwise,
-	// the header width would differ from the body width, because the
-	// scrollbar is no longer present.
-	var settings = dt.settings()[0];
-	var divBodyEl = settings.nScrollBody;
-	var scrollBarVis = divBodyEl.scrollHeight > divBodyEl.clientHeight;
-	if (settings.scrollBarVis && !scrollBarVis) {
-		dt.columns.adjust();
-	}
-};
-
-ScrollResize.prototype = {
-	_size: function () {
+		
+	private _size () {
 		var settings = this.s;
 		var dt = settings.dt;
 		var t = dt.table();
-		var offsetTop = $(settings.table).offset()!.top + $(settings.host).offset()!.top;
+		var offsetTop = settings.table.offset()!.top + settings.host.offset()!.top;
 		var availableHeight = settings.host.height();
-		var scrollBody = $('div.dt-scroll-body', t.container());
+		var scrollBody = Dom.s(t.container()).find('div.dt-scroll-body');
 
 		// Subtract the height of the header, footer and the elements
 		// surrounding the table
@@ -99,28 +120,28 @@ ScrollResize.prototype = {
 		availableHeight -=
 			settings.container.height() - (offsetTop + scrollBody.height()!);
 
-		$('div.dt-scroll-body', t.container()).css({
-			maxHeight: availableHeight,
-			height: availableHeight,
+		scrollBody.css({
+			maxHeight: availableHeight + 'px',
+			height: availableHeight + 'px'
 		});
-	},
+	}
 
-	_attach: function () {
+	private _attach () {
 		// There is no `resize` event for elements, so to trigger this effect,
 		// create an empty HTML document using an <iframe> which will issue a
 		// resize event inside itself when the document resizes. Since it is
 		// 100% x 100% that will occur whenever the host element is resized.
 		var that = this;
-		var obj = $('<iframe/>')
+		var obj = this.s.obj
 			.css({
 				position: 'absolute',
-				top: 0,
-				left: 0,
+				top: '0',
+				left: '0',
 				height: '100%',
 				width: '100%',
-				zIndex: -1,
-				border: 0,
-				opacity: 0,
+				zIndex: '-1',
+				border: '0',
+				opacity: '0'
 			})
 			.attr('frameBorder', '0')
 			.attr('src', 'about:blank');
@@ -152,13 +173,13 @@ ScrollResize.prototype = {
 		obj.appendTo(this.s.host).attr('data', 'about:blank');
 
 		this.s.obj = obj;
-	},
+	}
 };
 
 DataTable.ScrollResize = ScrollResize;
 
 // Automatic initialisation listener
-$(document).on('init.dt', function (e, settings) {
+Dom.s(document).on('init.dt', function (e, settings) {
 	if (e.namespace !== 'dt') {
 		return;
 	}
