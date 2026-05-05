@@ -1,10 +1,6 @@
-/*! © SpryMedia Ltd - datatables.net/license */
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * Just like the _hidden title numeric sorting_ plug-in, this sorting plug-in
@@ -22,7 +18,7 @@ let $ = jQuery;
  *  @deprecated
  *
  *  @example
- *    $('#example').dataTable( {
+ *     new DataTable('#example', {
  *       columnDefs: [
  *         { type: 'title-string', targets: 0 }
  *       ]
@@ -34,3 +30,4 @@ DataTable.ext.type.order['title-string-pre'] = function (a) {
 
 
 export default DataTable;
+

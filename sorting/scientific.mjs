@@ -1,10 +1,6 @@
-/*! © SpryMedia Ltd, Nick Schurch - datatables.net/license */
+/*! © SpryMedia Ltd, Nick Schurch - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * This plug-in will treat numbers which are in scientific notation (for
@@ -15,7 +11,7 @@ let $ = jQuery;
  *  @author [Nick Schurch](http://datatables.net/forums/profile/21757/nickschurch)
  *
  *  @example
- *    $('#example').dataTable( {
+ *     new DataTable('#example', {
  *       columnDefs: [
  *         { type: 'scientific', targets: 0 }
  *       ]
@@ -27,3 +23,4 @@ DataTable.ext.type.order['scientific-pre'] = function (a) {
 
 
 export default DataTable;
+

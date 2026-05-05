@@ -1,10 +1,6 @@
-/*! © SpryMedia Ltd - datatables.net/license */
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * Often a list of data which has titles in it (books, albums etc) will have
@@ -17,7 +13,7 @@ let $ = jQuery;
  *  @author [Allan Jardine](http://sprymedia.co.uk)
  *
  *  @example
- *    $('#example').DataTable( {
+ *    new DataTable('#myTable', {
  *       columnDefs: [
  *         { type: 'anti-the', targets: 0 }
  *       ]
@@ -29,3 +25,4 @@ DataTable.ext.type.order['anti-the-pre'] = function (a) {
 
 
 export default DataTable;
+

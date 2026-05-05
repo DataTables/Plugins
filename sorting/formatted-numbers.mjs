@@ -1,10 +1,6 @@
-/*! © SpryMedia Ltd - datatables.net/license */
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * This plug-in will provide numeric sorting for numeric columns which have
@@ -25,7 +21,7 @@ let $ = jQuery;
  *  @author [Allan Jardine](http://sprymedia.co.uk)
  *
  *  @example
- *    $('#example').dataTable( {
+ *    new DataTable('#example', {
  *       columnDefs: [
  *         { type: 'formatted-num', targets: 0 }
  *       ]
@@ -38,3 +34,4 @@ DataTable.ext.type.order['formatted-num-pre'] = function (a) {
 
 
 export default DataTable;
+

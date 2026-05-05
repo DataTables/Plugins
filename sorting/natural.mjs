@@ -1,10 +1,6 @@
-/*! © SpryMedia Ltd - datatables.net/license */
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * Data can often be a complicated mix of numbers and letters (file names
@@ -100,3 +96,4 @@ DataTable.type("natural-ci", {
 
 
 export default DataTable;
+

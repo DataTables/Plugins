@@ -1,2 +1,2 @@
-/*! © SpryMedia Ltd - datatables.net/license */
-import jQuery from"jquery";import DataTable from"datatables.net";let $=jQuery;var unique=0,types=DataTable.ext.type;DataTable.enum=function(e){for(var t="enum-"+unique++,a=window.Map?new Map:{},n=0,r=e.length;n<r;n++)a[e[n]]=n;types.detect.unshift(function(e){return void 0!==a[e]?t:null}),types.order[t+"-pre"]=function(e){return a[e]}};export default DataTable;
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
+import DataTable from"datatables.net";var unique=0,types=DataTable.ext.type;DataTable.enum=function(e){for(var t="enum-"+unique++,a=window.Map?new Map:{},n=0,u=e.length;n<u;n++)a[e[n]]=n;types.detect.unshift(function(e){return void 0!==a[e]?t:null}),types.order[t+"-pre"]=function(e){return a[e]}};export default DataTable;

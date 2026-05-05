@@ -1,10 +1,6 @@
-/*! © SpryMedia Ltd - datatables.net/license */
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * This renderer doesn't format the output itself, but rather allows multiple
@@ -18,7 +14,7 @@ let $ = jQuery;
  *  @name multi
  *  @summary Use multiple renderers
  *  @author [Allan Jardine](http://datatables.net)
- *  @requires DataTables 1.10+
+ *  @requires DataTables 3+
  *
  *  @example
  *    // Convert dates using moment renderer and ensure they are HTML safe
@@ -51,3 +47,4 @@ DataTable.render.multi = function (renderArray) {
 
 
 export default DataTable;
+

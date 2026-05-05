@@ -1,10 +1,6 @@
-/*! © SpryMedia Ltd, Brad Wasson - datatables.net/license */
+/*! © SpryMedia Ltd, Brad Wasson - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * Automatically detect IP addresses in dot notation. Goes perfectly with the
@@ -23,3 +19,4 @@ DataTable.ext.type.detect.unshift(function (data) {
 
 
 export default DataTable;
+

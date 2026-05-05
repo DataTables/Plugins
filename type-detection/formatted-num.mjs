@@ -1,10 +1,6 @@
-/*! © SpryMedia Ltd - datatables.net/license */
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * This plug-in will strip out non-numeric formatting characters such that a
@@ -30,3 +26,4 @@ DataTable.ext.type.detect.unshift(function (data) {
 
 
 export default DataTable;
+

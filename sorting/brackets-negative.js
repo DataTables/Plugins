@@ -1,60 +1,55 @@
-/*! © SpryMedia Ltd, - datatables.net/license */
+/*! © SpryMedia Ltd, - datatables.net/license - 3.0.0-beta.2 */
 
-(function( factory ){
-	if ( typeof define === 'function' && define.amd ) {
+(function(factory){
+	if (typeof define === 'function' && define.amd) {
 		// AMD
-		define( ['jquery', 'datatables.net'], function ( $ ) {
-			return factory( $, window, document );
-		} );
+		define(['datatables.net'], function (dt) {
+			return factory(window, document, dt);
+		});
 	}
-	else if ( typeof exports === 'object' ) {
+	else if (typeof exports === 'object') {
 		// CommonJS
-		var jq = require('jquery');
-		var cjsRequires = function (root, $) {
-			if ( ! $.fn.dataTable ) {
-				require('datatables.net')(root, $);
+		var cjsRequires = function (root) {
+			if (! root.DataTable) {
+				require('datatables.net')(root);
 			}
 		};
 
 		if (typeof window === 'undefined') {
-			module.exports = function (root, $) {
-				if ( ! root ) {
+			module.exports = function (root) {
+				if (! root) {
 					// CommonJS environments without a window global must pass a
 					// root. This will give an error otherwise
 					root = window;
 				}
 
-				if ( ! $ ) {
-					$ = jq( root );
-				}
-
-				cjsRequires( root, $ );
-				return factory( $, root, root.document );
+				cjsRequires(root);
+				return factory(root, root.document, root.DataTable);
 			};
 		}
 		else {
-			cjsRequires( window, jq );
-			module.exports = factory( jq, window, window.document );
+			cjsRequires(window);
+			module.exports = factory(window, window.document, window.DataTable);
 		}
 	}
 	else {
 		// Browser
-		factory( jQuery, window, document );
+		factory(window, document, window.DataTable);
 	}
-}(function( $, window, document ) {
+}(function(window, document, DataTable) {
 'use strict';
-var DataTable = $.fn.dataTable;
 
 
 /**
- * This plug-in will add automatic negative currency detection for currency columns to
- * DataTables. Note that only $, c, £ and € symbols are detected with this code,
- * This plugin has also been updated to automatically detect negative values either those
- * using '-' as well as numbers using '()' to specify negatives.
- * This plugin also includes automatic type detection
+ * This plug-in will add automatic negative currency detection for currency
+ * columns to DataTables. Note that only $, c, £ and € symbols are detected with
+ * this code, This plugin has also been updated to automatically detect negative
+ * values either those using '-' as well as numbers using '()' to specify
+ * negatives. This plugin also includes automatic type detection
  *
  *  @name brackets-negative
- *  @summary Detect data of currency type with a leading currency symbol as well at detect two types of negative number formatting
+ *  @summary Detect data of currency type with a leading currency symbol as well
+ *  at detect two types of negative number formatting
  *  @author Tom Buckle
  */
 // Change this list to the valid characters you want to be detected

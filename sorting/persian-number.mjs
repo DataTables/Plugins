@@ -1,10 +1,6 @@
-/*! © SpryMedia Ltd, Khorshid - datatables.net/license */
+/*! © SpryMedia Ltd, Khorshid - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * Sorts a column containing Persian numbers. Persian numbers can easily be
@@ -15,11 +11,11 @@ let $ = jQuery;
  *  @author [Khorshid](https://khorshidlab.com)
  *
  *  @example
- *    $('#example').DataTable( {
+ *     new DataTable('#example', {
  *       columnDefs: [
  *         { type: 'kh-persian-numbers', targets: 0 }
  *       ]
- *    } );
+ *    });
  */
 function toEnglishNumber(strNum) {
     var pn = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
@@ -37,3 +33,4 @@ DataTable.ext.type.order['kh-persian-numbers-pre'] = function (a, b) {
 
 
 export default DataTable;
+

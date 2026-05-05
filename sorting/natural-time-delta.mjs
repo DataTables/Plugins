@@ -1,10 +1,6 @@
-/*! © SpryMedia Ltd, Shodhan Save - datatables.net/license */
+/*! © SpryMedia Ltd, Shodhan Save - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * This plug-in allows sorting of human readable time delta, viz.,
@@ -19,7 +15,7 @@ let $ = jQuery;
  *  @author Shodhan Save
  *
  *  @example
- *    $("#example").DataTable({
+ *    new DataTable('#example', {
  *       columnDefs: [
  *         { "type": "natural-time-delta", "targets": 2 }
  *       ]
@@ -46,7 +42,11 @@ DataTable.ext.type.order['natural-time-delta-pre'] = function (data) {
         { splitter: 'w', name: 'week', mul: 1 * 60 * 60 * 24 * 7 },
         { splitter: 'w', name: 'month', mul: 1 * 60 * 60 * 24 * 7 * 30 },
         { splitter: 'w', name: 'year', mul: 1 * 60 * 60 * 24 * 7 * 30 * 12 },
-        { splitter: 'w', name: 'decade', mul: 1 * 60 * 60 * 24 * 7 * 30 * 12 * 10 },
+        {
+            splitter: 'w',
+            name: 'decade',
+            mul: 1 * 60 * 60 * 24 * 7 * 30 * 12 * 10
+        }
     ];
     time_elements.forEach(function (el, i) {
         var val = format_time_element(matches[i], el['splitter'], el['mul']);
@@ -57,3 +57,4 @@ DataTable.ext.type.order['natural-time-delta-pre'] = function (data) {
 
 
 export default DataTable;
+

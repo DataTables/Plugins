@@ -1,2 +1,2 @@
-/*! © SpryMedia Ltd - datatables.net/license */
-import jQuery from"jquery";import DataTable from"datatables.net";let $=jQuery;DataTable.ext.type.order["anti-the-pre"]=function(e){return e.replace(/^the /i,"")};export default DataTable;
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
+import DataTable from"datatables.net";DataTable.ext.type.order["anti-the-pre"]=function(e){return e.replace(/^the /i,"")};export default DataTable;

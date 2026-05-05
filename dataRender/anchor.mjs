@@ -1,16 +1,12 @@
-/*! © Fedonyuk Anton - datatables.net/license */
+/*! © Fedonyuk Anton - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  *  @name anchor
  *  @summary Renders the column data as HTML anchor (`a` tag)
  *  @author [Fedonyuk Anton](http://ensostudio.ru)
- *  @requires DataTables 1.10+
+ *  @requires DataTables 3+
  *
  *  @param {string} type The anchor type: 'link'(by default), 'phone' or 'email'
  *  @param {object|function} attributes The attributes of the anchor tag or the
@@ -22,23 +18,23 @@ let $ = jQuery;
  *
  *  @example
  *    // Display `<a href="..." target="_blank">...</a>`
- *    $('#example').DataTable({
+ *    new DataTable('#myTable', {
  *      columnDefs: [{
  *        targets: 1,
- *        render: $.fn.dataTable.render.anchor()
+ *        render: DataTable.render.anchor()
  *      }]
  *    });
  *
  *  @example
  *    // Display `<a href="mailto:..." class="link">...</a>`
- *    $('#example').DataTable({
+ *    new DataTable('#myTable', {
  *      columnDefs: [{
  *        targets: 2,
- *        render: $.fn.dataTable.render.anchor('email', {'class': 'link'})
+ *        render: DataTable.render.anchor('email', {'class': 'link'})
  *      }]
  *    });
  */
-DataTable.render.anchor = function (type = 'link', attributes = {}, innerText = null) {
+DataTable.render.anchor = function (displayType = 'link', attributes = {}, innerText = null) {
     return function (data, type, row, meta = {}) {
         // restriction only for table display rendering
         if (type !== 'display') {
@@ -51,7 +47,7 @@ DataTable.render.anchor = function (type = 'link', attributes = {}, innerText = 
             ? attributes(data, row, meta)
             : attributes;
         if (!attrs.href) {
-            switch (type) {
+            switch (displayType) {
                 case 'mail':
                     attrs.href = 'mailto:' + data;
                     break;
@@ -68,10 +64,14 @@ DataTable.render.anchor = function (type = 'link', attributes = {}, innerText = 
                     }
             }
         }
-        var anchorEl = jQuery('<a/>');
-        return anchorEl.attr(attrs).text(innerText || '')[0].outerText;
+        var anchorEl = Dom.c('a');
+        util.object.each(attrs, (name, val) => {
+            anchorEl.attr(name, val);
+        });
+        return anchorEl.text(innerText || '')[0].outerText;
     };
 };
 
 
 export default DataTable;
+

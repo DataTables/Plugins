@@ -1,10 +1,6 @@
-/*! © SpryMedia Ltd - datatables.net/license */
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * When dealing with computer file sizes, it is common to append a post fix
@@ -19,7 +15,7 @@ let $ = jQuery;
  *  @author Allan Jardine - datatables.net
  *
  *  @example
- *    $('#example').DataTable( {
+ *    new DataTable('#example', {
  *       columnDefs: [
  *         { type: 'file-size', targets: 0 }
  *       ]
@@ -42,7 +38,7 @@ DataTable.ext.type.order['file-size-pre'] = function (data) {
         tb: 1000000000000,
         tib: 1099511627776,
         pb: 1000000000000000,
-        pib: 1125899906842624,
+        pib: 1125899906842624
     };
     if (matches) {
         var multiplier = multipliers[matches[2].toLowerCase()];
@@ -53,3 +49,4 @@ DataTable.ext.type.order['file-size-pre'] = function (data) {
 
 
 export default DataTable;
+

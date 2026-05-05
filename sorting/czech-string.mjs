@@ -1,10 +1,6 @@
-/*! © SpryMedia Ltd - datatables.net/license */
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * This plug-in provides locale aware sorting for Czech.
@@ -14,7 +10,7 @@ let $ = jQuery;
  *  @author
  *
  *  @example
- *    $('#example').dataTable( {
+ *    new DataTable('#example', {
  *       columnDefs: [
  *         { type: 'czech', targets: 0 }
  *       ]
@@ -77,7 +73,7 @@ DataTable.ext.type.order['czech-pre'] = function (a) {
         Z: 'Za',
         z: 'za',
         Ž: 'Zb',
-        ž: 'zb',
+        ž: 'zb'
     };
     for (var val in special_letters) {
         a = a.split(val).join(special_letters[val]).toLowerCase();
@@ -87,3 +83,4 @@ DataTable.ext.type.order['czech-pre'] = function (a) {
 
 
 export default DataTable;
+

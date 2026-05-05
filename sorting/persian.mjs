@@ -1,10 +1,6 @@
-/*! © SpryMedia Ltd, Afshin Mehrabani - datatables.net/license */
+/*! © SpryMedia Ltd, Afshin Mehrabani - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * Sorting in Javascript can be difficult to get right with non-Roman
@@ -16,11 +12,11 @@ let $ = jQuery;
  *  @author [Afshin Mehrabani](http://www.afshinm.name/)
  *
  *  @example
- *    $('#example').dataTable( {
+ *     new DataTable('#example', {
  *       columnDefs: [
  *         { type: 'pstring', targets: 0 }
  *       ]
- *    } );
+ *    });
  */
 var persianSort = [
     'آ',
@@ -55,7 +51,7 @@ var persianSort = [
     'و',
     'ه',
     'ی',
-    'ي',
+    'ي'
 ];
 function GetUniCode(source) {
     source = source.trim();
@@ -79,3 +75,4 @@ DataTable.ext.type.order['pstring-pre'] = function (a, b) {
 
 
 export default DataTable;
+

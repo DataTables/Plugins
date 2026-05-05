@@ -1,10 +1,6 @@
-/*! © SpryMedia Ltd, Behrooz Janfada - datatables.net/license */
+/*! © SpryMedia Ltd, Behrooz Janfada - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * Sorts a column containing Farsi numbers. Farsi numbers can easily be
@@ -16,7 +12,7 @@ let $ = jQuery;
  *  @author Behrooz Janfada
  *
  *  @example
- *    $('#example').DataTable( {
+ *    new DataTable('#example', {
  *       columnDefs: [
  *         { type: 'farsi-numbers', targets: 0 }
  *       ]
@@ -69,3 +65,4 @@ DataTable.ext.type.order['farsi-numbers-pre'] = function (a) {
 
 
 export default DataTable;
+

@@ -1,49 +1,43 @@
-/*! © Drijkoningen Dirk - datatables.net/license */
+/*! © Drijkoningen Dirk - datatables.net/license - 3.0.0-beta.2 */
 
-(function( factory ){
-	if ( typeof define === 'function' && define.amd ) {
+(function(factory){
+	if (typeof define === 'function' && define.amd) {
 		// AMD
-		define( ['jquery', 'datatables.net'], function ( $ ) {
-			return factory( $, window, document );
-		} );
+		define(['datatables.net'], function (dt) {
+			return factory(window, document, dt);
+		});
 	}
-	else if ( typeof exports === 'object' ) {
+	else if (typeof exports === 'object') {
 		// CommonJS
-		var jq = require('jquery');
-		var cjsRequires = function (root, $) {
-			if ( ! $.fn.dataTable ) {
-				require('datatables.net')(root, $);
+		var cjsRequires = function (root) {
+			if (! root.DataTable) {
+				require('datatables.net')(root);
 			}
 		};
 
 		if (typeof window === 'undefined') {
-			module.exports = function (root, $) {
-				if ( ! root ) {
+			module.exports = function (root) {
+				if (! root) {
 					// CommonJS environments without a window global must pass a
 					// root. This will give an error otherwise
 					root = window;
 				}
 
-				if ( ! $ ) {
-					$ = jq( root );
-				}
-
-				cjsRequires( root, $ );
-				return factory( $, root, root.document );
+				cjsRequires(root);
+				return factory(root, root.document, root.DataTable);
 			};
 		}
 		else {
-			cjsRequires( window, jq );
-			module.exports = factory( jq, window, window.document );
+			cjsRequires(window);
+			module.exports = factory(window, window.document, window.DataTable);
 		}
 	}
 	else {
 		// Browser
-		factory( jQuery, window, document );
+		factory(window, document, window.DataTable);
 	}
-}(function( $, window, document, undefined ) {
+}(function(window, document, DataTable) {
 'use strict';
-var DataTable = $.fn.dataTable;
 
 
 /**
@@ -75,13 +69,13 @@ var DataTable = $.fn.dataTable;
  *  @name percentBar
  *  @summary Display percentage value as a bar
  *  @author [Drijkoningen Dirk](RedJokingInn)
- *  @requires DataTables 1.10+
+ *  @requires DataTables 3+
  *
  *  @returns {String} Html code for bar
  *
  *  @example
  *    // Display rounded bars with white text, medium blue border, light blue bar, dark blue background, rounded to one decimal.
- *    $('#example').DataTable( {
+ *    new DataTable('#myTable, {
  *      columnDefs: [ {
  *        targets: 4,
  *        render: DataTable.render.percentBar( 'round','#FFF', '#269ABC', '#31B0D5', '#286090', 1, 'groove' )
@@ -90,7 +84,7 @@ var DataTable = $.fn.dataTable;
  *
  *  @example
  *    // All default values used. Square bars with black text, gray ridged border, light green bar, light gray background, rounded to integer.
- *    $('#example').DataTable( {
+ *    new DataTable('#myTable, {
  *      columnDefs: [ {
  *        targets: 2,
  *        render: DataTable.render.percentBar()
@@ -128,7 +122,8 @@ DataTable.render.percentBar = function (pShape, cText, cBorder, cBar, cBack, vRo
         // do conditional colors based on user input
         if (conditionalColors) {
             for (var i = 0; i < conditionalColors.length; i++) {
-                if (s >= conditionalColors[i].min && s <= conditionalColors[i].max) {
+                if (s >= conditionalColors[i].min &&
+                    s <= conditionalColors[i].max) {
                     if (conditionalColors[i].barColor) {
                         cBarConditional = conditionalColors[i].barColor;
                     }
@@ -167,11 +162,13 @@ DataTable.render.percentBar = function (pShape, cText, cBorder, cBar, cBack, vRo
             ';position:relative;';
         //Bar template
         var styleRule3 = 'height:12px;line-height:12px;text-align:center;background-color:' +
-            cBarConditional + ';padding:auto 6px;';
+            cBarConditional +
+            ';padding:auto 6px;';
         //Square is default, make template round if pShape == round
         if (pShape == 'round') {
             styleRule2 += 'border-radius:5px;';
-            styleRule3 += 'border-top-left-radius:4px;border-bottom-left-radius:4px;';
+            styleRule3 +=
+                'border-top-left-radius:4px;border-bottom-left-radius:4px;';
         }
         //Return the code for the bar
         return ('<div style="' +

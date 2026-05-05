@@ -1,10 +1,6 @@
-/*! © SpryMedia Ltd - datatables.net/license */
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * Rendering methods using the Javascript Intl API. This is supported by IE11,
@@ -33,7 +29,7 @@ let $ = jQuery;
  *  @name intl
  *  @summary Use the Intl Javascript API to render dates and numbers
  *  @author [Allan Jardine](http://datatables.net)
- *  @requires DataTables 1.10+
+ *  @requires DataTables 3+
  *
  *  @example
  *    // Number renderer - using the `columns.render` option:
@@ -111,3 +107,4 @@ DataTable.render.intlNumber = function (locale, options) {
 
 
 export default DataTable;
+

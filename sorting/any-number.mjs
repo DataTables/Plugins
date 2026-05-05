@@ -1,10 +1,6 @@
-/*! © SpryMedia Ltd, David Konrad - datatables.net/license */
+/*! © SpryMedia Ltd, David Konrad - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * Sorts columns by any number, ignoring text. This plugin is useful if you have
@@ -27,7 +23,7 @@ let $ = jQuery;
  *  @author David Konrad
  *
  *  @example
- *    $('#example').dataTable( {
+ *    new DataTable('#myTable', {
  *       columnDefs: [
  *         { type: 'any-number', targets : 0 }
  *       ]
@@ -55,3 +51,4 @@ DataTable.ext.type.order['any-number-desc'] = function (a, b) {
 
 
 export default DataTable;
+

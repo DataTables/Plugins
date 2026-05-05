@@ -1,10 +1,6 @@
-/*! © SpryMedia Ltd - datatables.net/license */
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * This data rendering helper method can be useful for cases where you have
@@ -32,13 +28,13 @@ let $ = jQuery;
  *  @summary Restrict output data to a particular length, showing anything
  *      longer with ellipsis and a browser provided tooltip on hover.
  *  @author [Allan Jardine](http://datatables.net)
- *  @requires DataTables 1.10+
+ *  @requires DataTables 3+
  *
  * @returns {Number} Calculated average
  *
  *  @example
  *    // Restrict a column to 17 characters, don't split words
- *    $('#example').DataTable( {
+ *    new DataTable('#myTable', {
  *      columnDefs: [ {
  *        targets: 1,
  *        render: DataTable.render.ellipsis( 17, true )
@@ -47,7 +43,7 @@ let $ = jQuery;
  *
  *  @example
  *    // Restrict a column to 10 characters, do split words
- *    $('#example').DataTable( {
+ *    new DataTable('#myTable', {
  *      columnDefs: [ {
  *        targets: 2,
  *        render: DataTable.render.ellipsis( 10 )
@@ -99,3 +95,4 @@ DataTable.render.ellipsis = function (cutoff, wordbreak, escapeHtml) {
 
 
 export default DataTable;
+

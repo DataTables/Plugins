@@ -1,10 +1,10 @@
 /*! © SpryMedia Ltd - datatables.net/license */
 declare module 'datatables.net' {
-    interface ApiStatic {
+    interface DataTablesStatic {
         /** Define an absolute sort with string based sorting */
-        absoluteOrder(values: any[]): any;
+        absoluteOrder(values: any[]): string;
         /** Define an absolute sort with number based sorting */
-        absoluteOrderNumber(values: any[]): any;
+        absoluteOrderNumber(values: any[]): string;
     }
 }
 export {};

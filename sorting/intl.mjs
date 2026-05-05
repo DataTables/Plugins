@@ -1,10 +1,6 @@
-/*! © SpryMedia Ltd - datatables.net/license */
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * This sorting type will replace DataTables' default string sort with one that
@@ -68,3 +64,4 @@ DataTable.ext.type.order.intl = DataTable.intlOrder;
 
 
 export default DataTable;
+

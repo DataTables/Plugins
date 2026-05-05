@@ -2,7 +2,7 @@
 declare module 'datatables.net' {
     interface DataTablesStaticRender {
         /** Display percentage value as a bar */
-        percentBar(pShape: string, cText: string, cBorder: string, cBar: string, cBack: string, vRound: number, bType: string): any;
+        percentBar(pShape: string, cText: string, cBorder: string, cBar: string, cBack: string, vRound: number, bType: string, conditionalColors: any): any;
     }
 }
 export {};

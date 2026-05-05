@@ -1,81 +1,75 @@
-/*! © SpryMedia Ltd - datatables.net/license */
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
 
-(function( factory ){
-	if ( typeof define === 'function' && define.amd ) {
+(function(factory){
+	if (typeof define === 'function' && define.amd) {
 		// AMD
-		define( ['jquery', 'datatables.net'], function ( $ ) {
-			return factory( $, window, document );
-		} );
+		define(['datatables.net'], function (dt) {
+			return factory(window, document, dt);
+		});
 	}
-	else if ( typeof exports === 'object' ) {
+	else if (typeof exports === 'object') {
 		// CommonJS
-		var jq = require('jquery');
-		var cjsRequires = function (root, $) {
-			if ( ! $.fn.dataTable ) {
-				require('datatables.net')(root, $);
+		var cjsRequires = function (root) {
+			if (! root.DataTable) {
+				require('datatables.net')(root);
 			}
 		};
 
 		if (typeof window === 'undefined') {
-			module.exports = function (root, $) {
-				if ( ! root ) {
+			module.exports = function (root) {
+				if (! root) {
 					// CommonJS environments without a window global must pass a
 					// root. This will give an error otherwise
 					root = window;
 				}
 
-				if ( ! $ ) {
-					$ = jq( root );
-				}
-
-				cjsRequires( root, $ );
-				return factory( $, root, root.document );
+				cjsRequires(root);
+				return factory(root, root.document, root.DataTable);
 			};
 		}
 		else {
-			cjsRequires( window, jq );
-			module.exports = factory( jq, window, window.document );
+			cjsRequires(window);
+			module.exports = factory(window, window.document, window.DataTable);
 		}
 	}
 	else {
 		// Browser
-		factory( jQuery, window, document );
+		factory(window, document, window.DataTable);
 	}
-}(function( $, window, document ) {
+}(function(window, document, DataTable) {
 'use strict';
-var DataTable = $.fn.dataTable;
 
 
 /**
  *
- * This plug in will sort only on the number value that is included anywhere in a Regex.
- * This is useful for sorting data which requires some extra context to be included in the table.
+ * This plug in will sort only on the number value that is included anywhere in
+ * a Regex. This is useful for sorting data which requires some extra context to
+ * be included in the table.
  *
  *  @name numString
  *  @summary Sorting for number value that is included anywhere in a regex.
  *  @author [Sandy Galloway](http://datatables.net)
- *
  *
  *  @example
  * // This example shows a mixture of text and number values, with the number at the start of the expression.
  * // It is using regex and start and end of expression tags.
  * // It will match "5 examples completed." for example.
  * DataTable.numString(/^\d+ examples? completed.$/);
- * var table = $('#example').DataTable();
+ * var table = new DataTable('#example');
  *
  * @example
  * // This example shows a mixture of text and number values, with the number at the end of the expression.
  * // It is using regex and start and end of expression tags.
  * // It will match "Examples left: 67" for example.
  * DataTable.numString(/^Examples? left: \d+$/);
- * var table = $('#example').DataTable();
+ * var table = new DataTable('#example');
  *
  * @example
  * // This example shows a mixture of text and number values, with the number in the middle of the expression.
  * // It is using regex and no start and end of expression tags.
  * // It will match "Only 1 left." for example.
  * DataTable.numString(/Only \d+ left./);
- * var table = $('example').DataTable();
+ * var table = new DataTable('#example');
  *
  */
 DataTable.numString = function (format) {

@@ -1,49 +1,43 @@
-/*! © SpryMedia Ltd - datatables.net/license */
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
 
-(function( factory ){
-	if ( typeof define === 'function' && define.amd ) {
+(function(factory){
+	if (typeof define === 'function' && define.amd) {
 		// AMD
-		define( ['jquery', 'datatables.net'], function ( $ ) {
-			return factory( $, window, document );
-		} );
+		define(['datatables.net'], function (dt) {
+			return factory(window, document, dt);
+		});
 	}
-	else if ( typeof exports === 'object' ) {
+	else if (typeof exports === 'object') {
 		// CommonJS
-		var jq = require('jquery');
-		var cjsRequires = function (root, $) {
-			if ( ! $.fn.dataTable ) {
-				require('datatables.net')(root, $);
+		var cjsRequires = function (root) {
+			if (! root.DataTable) {
+				require('datatables.net')(root);
 			}
 		};
 
 		if (typeof window === 'undefined') {
-			module.exports = function (root, $) {
-				if ( ! root ) {
+			module.exports = function (root) {
+				if (! root) {
 					// CommonJS environments without a window global must pass a
 					// root. This will give an error otherwise
 					root = window;
 				}
 
-				if ( ! $ ) {
-					$ = jq( root );
-				}
-
-				cjsRequires( root, $ );
-				return factory( $, root, root.document );
+				cjsRequires(root);
+				return factory(root, root.document, root.DataTable);
 			};
 		}
 		else {
-			cjsRequires( window, jq );
-			module.exports = factory( jq, window, window.document );
+			cjsRequires(window);
+			module.exports = factory(window, window.document, window.DataTable);
 		}
 	}
 	else {
 		// Browser
-		factory( jQuery, window, document );
+		factory(window, document, window.DataTable);
 	}
-}(function( $, window, document, undefined ) {
+}(function(window, document, DataTable) {
 'use strict';
-var DataTable = $.fn.dataTable;
 
 
 /**
@@ -72,13 +66,13 @@ var DataTable = $.fn.dataTable;
  *  @summary Restrict output data to a particular length, showing anything
  *      longer with ellipsis and a browser provided tooltip on hover.
  *  @author [Allan Jardine](http://datatables.net)
- *  @requires DataTables 1.10+
+ *  @requires DataTables 3+
  *
  * @returns {Number} Calculated average
  *
  *  @example
  *    // Restrict a column to 17 characters, don't split words
- *    $('#example').DataTable( {
+ *    new DataTable('#myTable', {
  *      columnDefs: [ {
  *        targets: 1,
  *        render: DataTable.render.ellipsis( 17, true )
@@ -87,7 +81,7 @@ var DataTable = $.fn.dataTable;
  *
  *  @example
  *    // Restrict a column to 10 characters, do split words
- *    $('#example').DataTable( {
+ *    new DataTable('#myTable', {
  *      columnDefs: [ {
  *        targets: 2,
  *        render: DataTable.render.ellipsis( 10 )

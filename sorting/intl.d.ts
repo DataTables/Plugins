@@ -1,7 +1,7 @@
 /*! © SpryMedia Ltd - datatables.net/license */
 declare module 'datatables.net' {
-    interface ApiStatic {
-        intlOrder(locals: string, options: Intl.CollatorOptions): any;
+    interface DataTablesStatic {
+        intlOrder(locals: string, options: Intl.CollatorOptions): void;
     }
 }
 export {};

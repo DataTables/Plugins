@@ -1,0 +1,2 @@
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
+import DataTable from"datatables.net";DataTable.ext.type.order["case-sensitive-asc"]=function(e,t){return e<t?-1:t<e?1:0},DataTable.ext.type.order["case-sensitive-desc"]=function(e,t){return t<e?-1:e<t?1:0};export default DataTable;

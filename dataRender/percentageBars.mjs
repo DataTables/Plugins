@@ -1,10 +1,6 @@
-/*! © Drijkoningen Dirk - datatables.net/license */
+/*! © Drijkoningen Dirk - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * This data rendering helper method will convert percentage values into a bar.
@@ -35,13 +31,13 @@ let $ = jQuery;
  *  @name percentBar
  *  @summary Display percentage value as a bar
  *  @author [Drijkoningen Dirk](RedJokingInn)
- *  @requires DataTables 1.10+
+ *  @requires DataTables 3+
  *
  *  @returns {String} Html code for bar
  *
  *  @example
  *    // Display rounded bars with white text, medium blue border, light blue bar, dark blue background, rounded to one decimal.
- *    $('#example').DataTable( {
+ *    new DataTable('#myTable, {
  *      columnDefs: [ {
  *        targets: 4,
  *        render: DataTable.render.percentBar( 'round','#FFF', '#269ABC', '#31B0D5', '#286090', 1, 'groove' )
@@ -50,7 +46,7 @@ let $ = jQuery;
  *
  *  @example
  *    // All default values used. Square bars with black text, gray ridged border, light green bar, light gray background, rounded to integer.
- *    $('#example').DataTable( {
+ *    new DataTable('#myTable, {
  *      columnDefs: [ {
  *        targets: 2,
  *        render: DataTable.render.percentBar()
@@ -88,7 +84,8 @@ DataTable.render.percentBar = function (pShape, cText, cBorder, cBar, cBack, vRo
         // do conditional colors based on user input
         if (conditionalColors) {
             for (var i = 0; i < conditionalColors.length; i++) {
-                if (s >= conditionalColors[i].min && s <= conditionalColors[i].max) {
+                if (s >= conditionalColors[i].min &&
+                    s <= conditionalColors[i].max) {
                     if (conditionalColors[i].barColor) {
                         cBarConditional = conditionalColors[i].barColor;
                     }
@@ -127,11 +124,13 @@ DataTable.render.percentBar = function (pShape, cText, cBorder, cBar, cBack, vRo
             ';position:relative;';
         //Bar template
         var styleRule3 = 'height:12px;line-height:12px;text-align:center;background-color:' +
-            cBarConditional + ';padding:auto 6px;';
+            cBarConditional +
+            ';padding:auto 6px;';
         //Square is default, make template round if pShape == round
         if (pShape == 'round') {
             styleRule2 += 'border-radius:5px;';
-            styleRule3 += 'border-top-left-radius:4px;border-bottom-left-radius:4px;';
+            styleRule3 +=
+                'border-top-left-radius:4px;border-bottom-left-radius:4px;';
         }
         //Return the code for the bar
         return ('<div style="' +
@@ -150,3 +149,4 @@ DataTable.render.percentBar = function (pShape, cText, cBorder, cBar, cBack, vRo
 
 
 export default DataTable;
+

@@ -1,26 +1,22 @@
-/*! © SpryMedia Ltd, Alireza Mohammadi Doost - datatables.net/license */
+/*! © SpryMedia Ltd, Alireza Mohammadi Doost - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * Convert numbers to farsi, english, arabic.
  * تبدیل عداد به فارسی, انگلیسی, عربی
  *
  *  @name convertTo
- *  @summary convert numbers to farsi, english, arabic.
+ *  @summary Convert numbers to Farsi, English, Arabic.
  *  @author Alireza Mohammadi Doost
  *
  *  @example
- *    $('#example').DataTable( {
- *      columnDefs: [ {
+ *    new DataTable('#example', {
+ *      columnDefs: [{
  *        targets: 2,
  *        render: DataTable.render.numberTo('fa')
- *      } ]
- *    } );
+ *      }]
+ *    });
  */
 DataTable.render.numberTo = function (to = 'fa') {
     let result = null;
@@ -39,13 +35,19 @@ DataTable.render.numberTo = function (to = 'fa') {
         }
         switch (to) {
             case 'fa':
-                result = d.toString().replace(/\d/g, x => faNumbers[x]);
+                result = d
+                    .toString()
+                    .replace(/\d/g, (x) => faNumbers[x]);
                 break;
             case 'en':
-                result = d.toString().replace(/\d/g, x => enNumbers[x]);
+                result = d
+                    .toString()
+                    .replace(/\d/g, (x) => enNumbers[x]);
                 break;
             case 'ar':
-                result = d.toString().replace(/\d/g, x => arNumbers[x]);
+                result = d
+                    .toString()
+                    .replace(/\d/g, (x) => arNumbers[x]);
                 break;
         }
         return result;
@@ -54,3 +56,4 @@ DataTable.render.numberTo = function (to = 'fa') {
 
 
 export default DataTable;
+

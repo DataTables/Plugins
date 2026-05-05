@@ -1,10 +1,6 @@
-/*! © Lokesh Babu - datatables.net/license */
+/*! © Lokesh Babu - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * This data rendering helper method can be useful when a hyperLink with custom
@@ -26,12 +22,12 @@ let $ = jQuery;
  *  @name hyperLink
  *  @summary Displays url data in hyperLink with custom plcaeholder
  *  @author Lokesh Babu
- *  @requires DataTables 1.10+
+ *  @requires DataTables 3+
  *
  *
  *  @example
  *    // Display the hyperlink with 'Click Here', which open hyperlink in new Tab or new Window based on Browser setting
- *    $('#example').DataTable( {
+ *    new DataTable('#myTable', {
  *      columnDefs: [ {
  *        targets: 1,
  *        render: DataTable.render.hyperLink()
@@ -40,7 +36,7 @@ let $ = jQuery;
  *
  *  @example
  *    // Display the hyperlink with 'Download', which open hyperlink in new Tab or new Window based on Browser setting
- *    $('#example').DataTable( {
+ *    new DataTable('#myTable', {
  *      columnDefs: [ {
  *        targets: 2,
  *        render: DataTable.render.hyperLink( 'Download' )
@@ -50,7 +46,7 @@ let $ = jQuery;
  *  @example
  *    // Display the hyperlink with 'Download', which open hyperlink in popup
  *    //		with size 600as width and 400 as height
- *    $('#example').DataTable( {
+ *    new DataTable('#myTable', {
  *      columnDefs: [ {
  *        targets: 2,
  *        render: DataTable.render.hyperLink( 'Download', 'popup' )
@@ -60,14 +56,14 @@ let $ = jQuery;
  *  @example
  *    // Display the hyperlink with 'Download', which open hyperlink in popup
  *    //		with size 1000 width and 500 as height
- *    $('#example').DataTable( {
+ *    new DataTable('#myTable', {
  *      columnDefs: [ {
  *        targets: 2,
  *        render: DataTable.render.hyperLink( 'Download', 'popup' , 1000, 500)
  *      } ]
  *    } );
  */
-DataTable.render.hyperLink = function (anchorText, location, width, height) {
+DataTable.render.hyperLink = function (anchorText, location, widthIn, heightIn) {
     var validateAndReturnDefaultIfFailed = function (item, defaultValue) {
         if (typeof item === 'number') {
             return item;
@@ -79,8 +75,8 @@ DataTable.render.hyperLink = function (anchorText, location, width, height) {
     };
     var anchorText = anchorText || 'Click Here';
     var location = location || 'newTab';
-    var width = validateAndReturnDefaultIfFailed(width, 600);
-    var height = validateAndReturnDefaultIfFailed(height, 400);
+    var width = validateAndReturnDefaultIfFailed(widthIn, 600);
+    var height = validateAndReturnDefaultIfFailed(heightIn, 400);
     return function (data, type, row) {
         // restriction only for table display rendering
         if (type !== 'display') {
@@ -132,3 +128,4 @@ DataTable.render.hyperLink = function (anchorText, location, width, height) {
 
 
 export default DataTable;
+

@@ -1,10 +1,6 @@
-/*! © SpryMedia Ltd - datatables.net/license */
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * Although DataTables' internal numeric sorting works no problem on negative
@@ -16,7 +12,7 @@ let $ = jQuery;
  *  @author [Allan Jardine](http://sprymedia.co.uk)
  *
  *  @example
- *    $('#example').dataTable( {
+ *     new DataTable('#example', {
  *       columnDefs: [
  *         { type: 'signed-num', targets: 0 }
  *       ]
@@ -28,3 +24,4 @@ DataTable.ext.type.order['signed-num-pre'] = function (a) {
 
 
 export default DataTable;
+

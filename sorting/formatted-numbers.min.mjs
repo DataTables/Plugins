@@ -1,2 +1,2 @@
-/*! © SpryMedia Ltd - datatables.net/license */
-import jQuery from"jquery";import DataTable from"datatables.net";let $=jQuery;DataTable.ext.type.order["formatted-num-pre"]=function(e){return e="-"===e||""===e?0:e.replace(/[^\d\-\.]/g,""),parseFloat(e)};export default DataTable;
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
+import DataTable from"datatables.net";DataTable.ext.type.order["formatted-num-pre"]=function(a){return a="-"===a||""===a?0:a.replace(/[^\d\-\.]/g,""),parseFloat(a)};export default DataTable;

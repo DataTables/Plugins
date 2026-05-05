@@ -1,10 +1,6 @@
-/*! © SpryMedia Ltd, caochenghua - datatables.net/license */
+/*! © SpryMedia Ltd, caochenghua - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * When dealing with time elapsed, it is common to append a post fix
@@ -19,11 +15,11 @@ let $ = jQuery;
  *  @author [Allan Jardine](//datatables.net), caochenghua
  *
  *  @example
- *    $('#example').DataTable( {
+ *     new DataTable('#example', {
  *       columnDefs: [
  *         { type: 'time-elapsed-dhms', targets: 0 }
  *       ]
- *    } );
+ *    });
  */
 DataTable.ext.type.order['time-elapsed-dhms-pre'] = function (data) {
     var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
@@ -42,3 +38,4 @@ DataTable.ext.type.order['time-elapsed-dhms-pre'] = function (data) {
 
 
 export default DataTable;
+

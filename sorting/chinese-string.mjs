@@ -1,15 +1,12 @@
-/*! © SpryMedia Ltd, Patrik Lindström - datatables.net/license */
+/*! © SpryMedia Ltd, Patrik Lindström - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * Sorting in Javascript for Chinese Character. The Chinese Characters are
  * sorted on the radical and number of strokes. This plug-in performs sorting
- * for Chinese characters using the Javascript [localeCompare](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String/localeCompare)
+ * for Chinese characters using the Javascript
+ * [localeCompare](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String/localeCompare)
  * function.
  *
  * Please note that `localeCompare` is not implemented in the same way in all
@@ -20,7 +17,7 @@ let $ = jQuery;
  *  @author [Patrik Lindström](http://www.lcube.se/sorting-chinese-characters-in-javascript/)
  *
  *  @example
- *    $('#example').dataTable( {
+ *    new DataTable('#example', {
  *       columnDefs: [
  *         { type: 'chinese-string', targets: 0 }
  *       ]
@@ -35,3 +32,4 @@ DataTable.ext.type.order['chinese-string-desc'] = function (s1, s2) {
 
 
 export default DataTable;
+

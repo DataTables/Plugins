@@ -1,10 +1,6 @@
-/*! © SpryMedia Ltd - datatables.net/license */
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * Sort data by a defined enumerated (enum) list. The options for the values in
@@ -46,3 +42,4 @@ DataTable['enum'] = function (arr) {
 
 
 export default DataTable;
+

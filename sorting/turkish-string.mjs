@@ -1,14 +1,10 @@
-/*! © SpryMedia Ltd, Yuksel Beyti - datatables.net/license */
+/*! © SpryMedia Ltd, Yuksel Beyti - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
 
-// Allow reassignment of the $ variable
-let $ = jQuery;
-
 /**
- * Sorting in Javascript for Turkish Characters. This plug-in will replace the special
- * turkish letters (non english characters) and replace in English.
+ * Sorting in Javascript for Turkish Characters. This plug-in will replace the
+ * special turkish letters (non english characters) and replace in English.
  *
  *  @name Turkish
  *  @summary Sort Turkish characters
@@ -16,7 +12,7 @@ let $ = jQuery;
  *
  *  @example
  *    // Use plug-in for all columns
- *    $('#example').dataTable({
+ *     new DataTable('#example', {
  *       columnDefs: [
  *           { type: 'turkish', targets: '_all' }
  *       ]
@@ -57,3 +53,4 @@ DataTable.ext.type.order['turkish-pre'] = function (a) {
 
 
 export default DataTable;
+

@@ -1,10 +1,6 @@
-/*! © SpryMedia Ltd - datatables.net/license */
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * Sorts a column containing chapter numbers. This can be most useful when
@@ -18,7 +14,7 @@ let $ = jQuery;
  *  @author Colin Marks
  *
  *  @example
- *    $('#example').dataTable( {
+ *    new DataTable('#example', {
  *       columnDefs: [
  *         { type: 'chapter', targets: 0 }
  *       ]
@@ -43,3 +39,4 @@ DataTable.ext.type.order['chapter-pre'] = function (a) {
 
 
 export default DataTable;
+

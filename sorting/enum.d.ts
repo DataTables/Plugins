@@ -2,7 +2,7 @@
 declare module 'datatables.net' {
     interface DataTablesStatic {
         /** Dynamically create enum sorting options for a DataTable */
-        enum(arr: any[]): any;
+        enum(arr: any[]): void;
     }
 }
 export {};

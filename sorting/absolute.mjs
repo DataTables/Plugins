@@ -1,41 +1,38 @@
-/*! © SpryMedia Ltd - datatables.net/license */
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
 
-// Allow reassignment of the $ variable
-let $ = jQuery;
-
 /**
- * When sorting a DataTable you might find that you want to keep a specific
- * item at the top or bottom of the table. For example when sorting a column
- * of numbers, if a value is `null` or `N/A` you might want to keep it at the
+ * When sorting a DataTable you might find that you want to keep a specific item
+ * at the top or bottom of the table. For example when sorting a column of
+ * numbers, if a value is `null` or `N/A` you might want to keep it at the
  * bottom of the table, regardless of if ascending or descending sorting is
  * applied. This plug-in provides that ability.
  *
- * You must call the `$.fn.dataTable.absoluteOrder` with information about the
+ * You must call the `DataTable.absoluteOrder` with information about the
  * value(s) you wish to make absolute in the sorting order and store the
- * returned value, assigning it to the `columns.type` option for the column
- * you wish this sorting to be applied to.
+ * returned value, assigning it to the `columns.type` option for the column you
+ * wish this sorting to be applied to.
  *
- * For number based columns a `$.fn.dataTable.absoluteOrderNumber` function is
- * also available.
+ * For number based columns a `DataTable.absoluteOrderNumber` function is also
+ * available.
  *
  * @name Absolute sorting
- * @summary Keep one or more items at the top and/or bottom of a table when sorting
- * @author [Allan Jardine](//datatables.net)
- * @depends DataTables 1.10+
+ * @summary Keep one or more items at the top and/or bottom of a table when
+ * sorting
+ * @author SpryMedia Ltd
+ * @depends DataTables 3+
  *
  * @example
- *    var namesType = $.fn.dataTable.absoluteOrder( [
+ *    var namesType = DataTable.absoluteOrder( [
  *      { value: '', position: 'top' }
  *    ] );
  *
- *    var numbersType = $.fn.dataTable.absoluteOrderNumber( [
+ *    var numbersType = DataTable.absoluteOrderNumber( [
  *      { value: 'N/A', position: 'bottom' }
  *    ] );
  *
- *    $('#example').DataTable( {
+ *    new DataTable('#example', {
  *      columnDefs: [
  *        { type: namesType, targets: 0 },
  *        { type: numbersType, targets: 1 }
@@ -55,7 +52,7 @@ var _setup = function (values) {
         alwaysTop: {},
         alwaysBottom: {},
         asc: function (a, b, isNumber) { },
-        desc: function (a, b, isNumber) { },
+        desc: function (a, b, isNumber) { }
     };
     // In order to provide performance, the symbols that are to be looked for
     // are stored as parameter keys in an object, allowing O(1) lookup, rather
@@ -146,3 +143,4 @@ DataTable.absoluteOrderNumber = function (values) {
 
 
 export default DataTable;
+
