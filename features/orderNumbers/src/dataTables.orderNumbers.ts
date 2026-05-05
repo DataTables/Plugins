@@ -26,7 +26,7 @@
  *   );
  */
 
-import DataTable, { Dom } from 'datatables.net';
+import DataTable, { Api, Dom, InstSelector } from 'datatables.net';
 
 import { OrderNumbers } from './types';
 
@@ -41,7 +41,7 @@ declare module 'datatables.net' {
  *
  * @param src An element, selector, or DataTables API or settings object
  */
-function orderNumbers(src, opts: OrderNumbers) {
+function orderNumbers(src: InstSelector, opts: OrderNumbers) {
 	let table = new DataTable.Api(src);
 
 	table.on('draw.orderNumbers', function () {
@@ -59,12 +59,12 @@ function orderNumbers(src, opts: OrderNumbers) {
 }
 
 /** Remove all existing indicators */
-function remove(table, opts) {
+function remove(table: Api, opts: OrderNumbers) {
 	Dom.s(table.table().header()).find('span.' + opts.className).remove();
 }
 
 /** Draw in new indicators for the currently applied order */
-function draw(table, opts: OrderNumbers) {
+function draw(table: Api, opts: OrderNumbers) {
 	var order = table.order();
 
 	if (order.length > 1) {

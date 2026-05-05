@@ -1,4 +1,25 @@
-import DataTable from 'datatables.net';
+/*! © SpryMedia Ltd - datatables.net/license */
+
+/**
+ * @summary     SelectPaging
+ * @description Show a Select element for the paging control
+ * @author      SpryMedia Ltd
+ * @license     MIT
+ * @requires    DataTables 3+
+ *
+ * This feature makes use of a `-tag select` element as the table's paging
+ * control, instead of the default buttons. If you desire, both the built in
+ * `paging` feature and this one can be used together on the same table.
+ *
+ * @example
+ *   new DataTable('#myTable', {
+ *     layout: {
+ *       topStart: 'selectPaging'
+ *     }
+ *   });
+ */
+
+import DataTable, { Api } from 'datatables.net';
 
 DataTable.feature.register('selectPaging', function (settings, opts) {
 	let api = new DataTable.Api(settings);
@@ -14,28 +35,47 @@ DataTable.feature.register('selectPaging', function (settings, opts) {
 
 	// Create the DOM elements for the paging control
 	let wrapper = createElement(tags.wrapper);
-	let first = createElement(tags.item, api.i18n('paginate.first', '\u00AB'), () => {
-		if (!first.classList.contains(tags.item.disabled)) {
-			api.page('first').draw(false);
+	let first = createElement(
+		tags.item,
+		api.i18n('paginate.first', '\u00AB'),
+		() => {
+			if (!first.classList.contains(tags.item.disabled)) {
+				api.page('first').draw(false);
+			}
 		}
-	});
-	let previous = createElement(tags.item, api.i18n('paginate.previous', '\u2039'), () => {
-		if (!previous.classList.contains(tags.item.disabled)) {
-			api.page('previous').draw(false);
+	);
+	let previous = createElement(
+		tags.item,
+		api.i18n('paginate.previous', '\u2039'),
+		() => {
+			if (!previous.classList.contains(tags.item.disabled)) {
+				api.page('previous').draw(false);
+			}
 		}
-	});
-	let next = createElement(tags.item, api.i18n('paginate.next', '\u203A'), () => {
-		if (!next.classList.contains(tags.item.disabled)) {
-			api.page('next').draw(false);
+	);
+	let next = createElement(
+		tags.item,
+		api.i18n('paginate.next', '\u203A'),
+		() => {
+			if (!next.classList.contains(tags.item.disabled)) {
+				api.page('next').draw(false);
+			}
 		}
-	});
-	let last = createElement(tags.item, api.i18n('paginate.last', '\u00BB'), () => {
-		if (!last.classList.contains(tags.item.disabled)) {
-			api.page('last').draw(false);
+	);
+	let last = createElement(
+		tags.item,
+		api.i18n('paginate.last', '\u00BB'),
+		() => {
+			if (!last.classList.contains(tags.item.disabled)) {
+				api.page('last').draw(false);
+			}
 		}
-	});
+	);
 	let box = createElement(tags.inputItem);
-	let select = createElement({ tag: 'select', className: tags.input.className });
+	let select = createElement({
+		tag: 'select',
+		className: tags.input.className
+	});
 	let of = createElement({ tag: 'span', className: '' });
 
 	// Assemble the DOM structure
@@ -76,7 +116,10 @@ DataTable.feature.register('selectPaging', function (settings, opts) {
 		setState(previous, tags.item.disabled, info.page === 0);
 
 		// Set previous page to 0 if no records else to current page -1
-		let prevPage = info.recordsTotal === 0 || info.recordsDisplay === 0 ? 0 : info.pages - 1;
+		let prevPage =
+			info.recordsTotal === 0 || info.recordsDisplay === 0
+				? 0
+				: info.pages - 1;
 		setState(next, tags.item.disabled, info.page === prevPage);
 		setState(last, tags.item.disabled, info.page === prevPage);
 
@@ -94,7 +137,8 @@ DataTable.feature.register('selectPaging', function (settings, opts) {
 		select.value = info.page;
 
 		// If the table is empty, disable the select
-		select.disabled = info.recordsTotal === 0 || info.recordsDisplay === 0 ? true : false;
+		select.disabled =
+			info.recordsTotal === 0 || info.recordsDisplay === 0 ? true : false;
 
 		// Show how many pages there are
 		of.textContent = ' / ' + info.pages;
@@ -103,7 +147,7 @@ DataTable.feature.register('selectPaging', function (settings, opts) {
 	return wrapper;
 });
 
-function setState(el, disabledClass, disabled) {
+function setState(el: Element, disabledClass: string, disabled: boolean) {
 	el.classList.toggle(disabledClass, disabled);
 
 	let a = el.querySelector('a');
@@ -122,7 +166,7 @@ function setState(el, disabledClass, disabled) {
  * Get details about the DOM structure that input paging needs to build
  * @returns DOM information object
  */
-function stylingStructure(api) {
+function stylingStructure(api: Api) {
 	let container = api.table().container();
 	let classList = container.classList;
 
@@ -255,7 +299,7 @@ function stylingStructure(api) {
  * @param fn Click event handler
  * @returns Element
  */
-function createElement(opts, text?, fn?) {
+function createElement(opts: any, text?: string, fn?: Function) {
 	let el = document.createElement(opts.tag);
 	el.className = opts.className;
 

@@ -1,5 +1,5 @@
 
-import DataTables, {ColumnSelector} from 'datatables.net';
+import DataTables, { Api, ColumnSelector } from 'datatables.net';
 
 export default DataTables;
 
@@ -8,7 +8,7 @@ export default DataTables;
  * DataTables' types integration
  */
 declare module 'datatables.net' {
-	interface Config {
+	interface Options {
 		fuzzySearch?:
 			| boolean
 			| {
@@ -19,10 +19,18 @@ declare module 'datatables.net' {
 			  };
 	}
 
-	interface State {
+	interface Row {
+		_fuzzySearch?: any;
+	}
+
+	interface StateLoad {
 		_fuzzySearch: {
 			active: 'true' | 'false';
 			val: any;
 		};
+	}
+
+	interface ApiSearch<T> {
+		fuzzy: (input: string) => Api;
 	}
 }

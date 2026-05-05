@@ -43,12 +43,12 @@
  *   );
  */
 
-import DataTable from 'datatables.net';
+import DataTable, { Options } from 'datatables.net';
 
 declare module 'datatables.net' {
 	interface DataTablesStatic {
 		/** Deep linking options parsing support for DataTables */
-		deepLink(whitelist: 'all' | string[]);
+		deepLink(whitelist: 'all' | string[]): Options;
 	}
 }
 

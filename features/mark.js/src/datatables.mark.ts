@@ -1,95 +1,155 @@
-/*!***************************************************
- * datatables.mark.js v3.0.0
- * https://github.com/julmot/datatables.mark.js
- * Copyright (c) 2016–2020, Julian Kühnel, SpryMedia Ltd
- * Released under the MIT license https://git.io/voRZ7
- *****************************************************/
+/*! © SpryMedia Ltd - datatables.net/license */
 
-import $ from 'jquery';
-import DataTable from 'datatables.net';
+/**
+ * @summary     Mark.js
+ * @description Search term highlighting using the Mark.js library
+ * @author      Julian Kühnel, SpryMedia Ltd
+ * @license     MIT
+ * @requires    DataTables 3+
+ *
+ * It can sometimes be useful to get a visual indication of where search terms
+ * are in a result set, which is exactly that this library does! It uses
+ * [Mark.js](https://markjs.io/) to highlight search terms, updating on each
+ * draw as required.
+ *
+ * To enable, make sure you load Mark.js on your page (as well as this plug-in)
+ * and then add `mark: true` to your DataTables initialisation.
+ *
+ * @example
+ *   new DataTable('#myTable', {
+ *     mark: true
+ *   });
+ */
+
+import DataTable, { Api, Context, Dom } from 'datatables.net';
 
 declare module 'datatables.net' {
 	interface Config {
 		mark?: boolean;
 	}
+
+	interface Defaults {
+		mark?: boolean;
+	}
+}
+
+declare global {
+	interface Window {
+		Mark: any; // todo
+	}
 }
 
 class MarkDataTables {
-	private instance;
+	private _dt;
 	private options;
 	private intervalThreshold: number;
 	private intervalMs: number;
+	private _mark: any;
+	private _columnMarks: any[] = [];
 
-	constructor(dtInstance, options) {
-		if (!($.fn as any).mark || !($.fn as any).unmark) {
-			throw new Error('jquery.mark.js is necessary for datatables.mark.js');
+	constructor(dt: Api, options: any) {
+		if (!window.Mark) {
+			throw new Error(
+				'Mark.js is necessary for datatables.mark.js and must be ' +
+					'accessible at window.Mark'
+			);
 		}
-		this.instance = dtInstance;
+
+		this._dt = dt;
 		this.options = typeof options === 'object' ? options : {};
 		this.intervalThreshold = 49;
 		this.intervalMs = 300;
-		this.initMarkListener();
+		this._mark = new window.Mark(dt.table().body());
+		this._listeners();
 	}
 
-	initMarkListener() {
-		let ev = 'draw.dt.dth column-visibility.dt.dth column-reorder.dt.dth';
-		ev += ' responsive-display.dt.dth';
+	private _listeners() {
 		let intvl: any = null;
-		this.instance.on(ev, () => {
-			const rows = this.instance
+		let ev =
+			'draw.dt.dth ' +
+			'column-visibility.dt.dth ' +
+			'column-reorder.dt.dth ' +
+			'responsive-display.dt.dth';
+
+		this._dt.on(ev, () => {
+			const rows = this._dt
 				.rows({
 					filter: 'applied',
-					page: 'current',
+					page: 'current'
 				})
 				.nodes().length;
+
 			if (rows > this.intervalThreshold) {
 				clearTimeout(intvl);
+
 				intvl = setTimeout(() => {
-					this.mark();
+					this._performMark();
 				}, this.intervalMs);
 			}
 			else {
-				this.mark();
+				this._performMark();
 			}
 		});
-		this.instance.on('destroy', () => {
-			this.instance.off(ev);
+
+		this._dt.on('destroy', () => {
+			this._dt.off(ev);
 		});
-		this.mark();
+
+		this._performMark();
 	}
 
-	mark() {
-		const globalSearch = this.instance.search();
-		const $tableBody = $(this.instance.table().body()) as any;
-		$tableBody.unmark(this.options);
-		if (this.instance.table().rows({ search: 'applied' }).data().length) {
-			$tableBody.mark(globalSearch, this.options);
-		}
-		this.instance
-			.columns({
-				search: 'applied',
-				page: 'current',
-			})
-			.nodes()
-			.each((nodes, colIndex) => {
-				const columnSearch = this.instance.column(colIndex).search(),
-					searchVal = columnSearch || globalSearch;
-				if (searchVal) {
-					nodes.forEach(node => {
-						($(node) as any).unmark(this.options).mark(searchVal, this.options);
-					});
+	private _performMark() {
+		const globalSearch = this._dt.search();
+
+		// Remove any previous highlights
+		this._mark.unmark({
+			done: () => {
+				// Don't want to highlight the "No data" message!
+				if (this._dt.rows({ search: 'applied' }).count()) {
+					return;
 				}
-			});
+
+				// Global search highlighting
+				if (globalSearch) {
+					this._mark.mark(globalSearch, this.options);
+				}
+
+				// Column search highlighting
+				this._dt
+					.columns({
+						search: 'applied',
+						page: 'current'
+					})
+					.nodes()
+					.each((nodes, colIndex) => {
+						// Remove any previous highlights from the column
+						if (this._columnMarks[colIndex]) {
+							this._columnMarks[colIndex].unmark();
+						}
+
+						const columnSearch = this._dt.column(colIndex).search();
+
+						if (columnSearch) {
+							this._columnMarks[colIndex] = new window.Mark(
+								nodes
+							);
+							this._columnMarks[colIndex].mark(
+								columnSearch,
+								this.options
+							);
+						}
+					});
+			}
+		});
 	}
 }
 
-$(document).on('init.dt.dth', (event, settings) => {
+Dom.s(document).on('init.dt.dth', (event, settings: Context) => {
 	if (event.namespace !== 'dt') {
 		return;
 	}
 
 	const dtInstance = new DataTable.Api(settings);
-
 	let options: boolean | undefined = false;
 
 	if (dtInstance.init().mark) {

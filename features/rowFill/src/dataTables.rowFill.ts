@@ -3,8 +3,9 @@
 /**
  * @summary     RowFill
  * @description Match the number of rows in a table to the page length
- * @version     1.1.0
  * @author      SpryMedia Ltd
+ * @license     MIT
+ * @requires    DataTables 3+
  *
  * This feature plug-in for DataTables will automatically insert temporary rows
  * into a DataTable that draws a page that is less than the configured page
@@ -14,79 +15,100 @@
  * Filler rows have the class `dt-rowFill--filler` assigned to them allowing for
  * additional styling (e.g. reducing opacity).
  *
- * To enable for a table add `rowFill: true` to your DataTables configuration.
+ * To enable for a table add `rowFill: true` to your DataTables configuration:
+ *
+ * ```js
+ * const table = new DataTable('#myTable', {
+ *   rowFill: true
+ * });
+ * ```
  */
 
-import $ from 'jquery';
-import DataTable from 'datatables.net';
+import DataTable, { Api, Context, Dom } from 'datatables.net';
 
 declare module 'datatables.net' {
 	interface DataTablesStatic {
 		/** Match the number of rows in a table to the page length */
-		RowFill(settings: any): void;
+		RowFill: typeof RowFill;
 	}
 
 	interface Config {
 		rowFill?: boolean;
 	}
+
+	interface Defaults {
+		rowFill?: boolean;
+	}
 }
 
-var RowFill = function (dt) {
-	var table = dt.table();
+interface ISettings {
+	dt: Api;
+	body: Dom;
+}
 
-	this.s = {
-		dt: dt,
-		body: $(table.body()),
-	};
+export default class RowFill {
+	private s: ISettings;
 
-	this._attach();
-};
+	constructor(dt: Api) {
+		let table = dt.table();
 
-RowFill.prototype = {
-	_attach: function () {
-		var dt = this.s.dt;
-		var body = this.s.body;
+		this.s = {
+			dt: dt,
+			body: Dom.s(table.body())
+		};
+
+		this._attach();
+	}
+
+	private _attach() {
+		let dt = this.s.dt;
+		let body = this.s.body;
 
 		dt.on('draw', function () {
-			var colspan = dt.columns(':visible').count();
-			var rowCount = dt.rows({ page: 'current' }).count();
-			var class1 = 'even';
-			var class2 = 'odd';
+			let colspan = dt.columns(':visible').count();
+			let rowCount = dt.rows({ page: 'current' }).count();
+			let class1 = 'even';
+			let class2 = 'odd';
 
-			// Take account of the fact that DataTables will show a "Nothing found" row
-			// for an empty record set
+			// Take account of the fact that DataTables will show a "Nothing
+			// found" row for an empty record set
 			if (rowCount === 0) {
 				rowCount = 1;
 			}
 
-			// Reverse for continuation from the DataTable rows when a odd number of rows
+			// Reverse for continuation from the DataTable rows when a odd
+			// number of rows
 			if (rowCount % 2 === 0) {
 				class1 = 'odd';
 				class2 = 'even';
 			}
 
-			for (var i = 0; i < dt.page.len() - rowCount; i++) {
+			for (let i = 0; i < dt.page.len() - rowCount; i++) {
 				body.append(
-					$('<tr><td colspan="' + colspan + '">&nbsp;</td></tr>')
-						.addClass(i % 2 === 0 ? class1 : class2)
-						.addClass('dt-rowFill--filler')
+					Dom.c('tr').append(
+						Dom.c('td')
+							.attr('colspan', colspan)
+							.classAdd(i % 2 === 0 ? class1 : class2)
+							.classAdd('dt-rowFill--filler')
+							.html('&nbsp;')
+					)
 				);
 			}
 		});
-	},
-};
+	}
+}
 
 DataTable.RowFill = RowFill;
 
 // Automatic initialisation listener
-$(document).on('preInit.dt', function (e, settings) {
+Dom.s(document).on('preInit.dt', function (e, settings: Context) {
 	if (e.namespace !== 'dt') {
 		return;
 	}
 
-	var api = new DataTable.Api(settings);
+	let api = new DataTable.Api(settings);
 
-	if (settings.oInit.rowFill || DataTable.defaults.rowFill) {
+	if (settings.init.rowFill || DataTable.defaults.rowFill) {
 		new RowFill(api);
 	}
 });

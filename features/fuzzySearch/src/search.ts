@@ -1,5 +1,4 @@
-
-function levenshtein(__this, that, limit?) {
+function levenshtein(__this: any, that: any, limit?: any) {
 	var thisLength = __this.length,
 		thatLength = that.length,
 		matrix: any[] = [];
@@ -56,26 +55,26 @@ function levenshtein(__this, that, limit?) {
 
 	return prepare(matrix[thisLength][thatLength]);
 
-	function prepare(steps) {
+	function prepare(steps: any) {
 		var length = Math.max(thisLength, thatLength);
 		var relative = length === 0 ? 0 : steps / length;
 		var similarity = 1 - relative;
 		return {
 			steps: steps,
 			relative: relative,
-			similarity: similarity,
+			similarity: similarity
 		};
 	}
 }
 
-export default function fuzzySearch(searchVal, data, initial) {
+export default function fuzzySearch(searchVal: any, data: any, initial: any) {
 	var x, y, i;
 
 	// If no searchVal has been defined then return all rows.
 	if (searchVal === undefined || searchVal.length === 0) {
 		return {
 			pass: true,
-			score: '',
+			score: ''
 		};
 	}
 
@@ -103,7 +102,7 @@ export default function fuzzySearch(searchVal, data, initial) {
 
 	// Going to check each cell for potential matches
 	for (i = 0; i < data.length; i++) {
-		if ( columns === null || columns.includes(i) ) {
+		if (columns === null || columns.includes(i)) {
 			// Convert all data points to lower case fo insensitive sorting
 			data[i] = data[i].toLowerCase();
 
@@ -123,22 +122,29 @@ export default function fuzzySearch(searchVal, data, initial) {
 				// Reset highest score
 				var highest: { pass?: boolean; score: number } = {
 					pass: undefined,
-					score: 0,
+					score: 0
 				};
 
 				// Against each word in the cell
 				for (y = 0; y < splitData.length; y++) {
 					// If this search Term word is the beginning of the word in the cell we want to pass this word
 					if (splitData[y].indexOf(splitSearch[x]) === 0) {
-						var newScore = splitSearch[x].length / splitData[y].length;
+						var newScore =
+							splitSearch[x].length / splitData[y].length;
 						highest = {
 							pass: true,
-							score: highest.score < newScore ? newScore : highest.score,
+							score:
+								highest.score < newScore
+									? newScore
+									: highest.score
 						};
 					}
 
 					// Get the levenshtein similarity score for the two words
-					var steps = levenshtein(splitSearch[x], splitData[y]).similarity;
+					var steps = levenshtein(
+						splitSearch[x],
+						splitData[y]
+					).similarity;
 
 					// If the levenshtein similarity score is better than a previous one for the search word then var's store it
 					if (steps > highest.score) {
@@ -153,7 +159,7 @@ export default function fuzzySearch(searchVal, data, initial) {
 							highest.pass || highestCollated[x].pass
 								? true
 								: highest.score > threshold,
-						score: highest.score,
+						score: highest.score
 					};
 				}
 			}
@@ -170,7 +176,7 @@ export default function fuzzySearch(searchVal, data, initial) {
 						(highestCollated.reduce((a, b) => a + b.score, 0) /
 							highestCollated.length) *
 							100
-					) + '%',
+					) + '%'
 			};
 		}
 	}
@@ -183,6 +189,6 @@ export default function fuzzySearch(searchVal, data, initial) {
 				(highestCollated.reduce((a, b) => a + b.score, 0) /
 					highestCollated.length) *
 					100
-			) + '%',
+			) + '%'
 	};
 }
