@@ -21,7 +21,7 @@
  *  @author David Konrad
  *
  *  @example
- *    $('#example').dataTable( {
+ *    new DataTable('#myTable', {
  *       columnDefs: [
  *         { type: 'any-number', targets : 0 }
  *       ]
@@ -31,7 +31,7 @@
 
 import DataTable from 'datatables.net';
 
-function _anyNumberSort(a, b, high) {
+function _anyNumberSort(a: any, b: any, high: number) {
 	var reg = /[+-]?((\d+(\.\d*)?)|\.\d+)([eE][+-]?[0-9]+)?/;
 
 	if (typeof a === 'string') {
@@ -47,10 +47,10 @@ function _anyNumberSort(a, b, high) {
 	return a < b ? -1 : a > b ? 1 : 0;
 }
 
-DataTable.ext.type.order['any-number-asc'] = function (a, b) {
+DataTable.ext.type.order['any-number-asc'] = function (a: any, b: any) {
 	return _anyNumberSort(a, b, Number.POSITIVE_INFINITY);
 };
 
-DataTable.ext.type.order['any-number-desc'] = function (a, b) {
+DataTable.ext.type.order['any-number-desc'] = function (a: any, b: any) {
 	return _anyNumberSort(a, b, Number.NEGATIVE_INFINITY) * -1;
 };

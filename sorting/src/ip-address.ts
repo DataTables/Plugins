@@ -1,9 +1,10 @@
 /*! © SpryMedia Ltd, Dominique Fournier, Brad Wasson, Peter Vilhan, Kevin Gilkey-Graham - datatables.net/license */
 
 /**
- * Sorts a column containing IP addresses (IPv4 and IPv6) or IPv4 address and port delimited by ':' in typical dot
- * notation / colon. This can be most useful when using DataTables for a
- * networking application, and reporting information containing IP address.
+ * Sorts a column containing IP addresses (IPv4 and IPv6) or IPv4 address and
+ * port delimited by ':' in typical dot notation / colon. This can be most
+ * useful when using DataTables for a networking application, and reporting
+ * information containing IP address.
  *
  *  @name IP addresses
  *  @summary Sort IP addresses numerically
@@ -13,16 +14,16 @@
  *  @author Kevin Gilkey-Graham
  *
  *  @example
- *    $('#example').dataTable( {
+ *    new DataTable('#example', {
  *       columnDefs: [
- *         { type: 'ip-address', targets: 0 }
+ *         {type: 'ip-address', targets: 0}
  *       ]
- *    } );
+ *    });
  */
 
 import DataTable from 'datatables.net';
 
-DataTable.ext.type.order['ip-address-pre'] = function (a) {
+DataTable.ext.type.order['ip-address-pre'] = function (a: any) {
 	var i, item;
 	var m, n, t, p;
 	var x, xa;

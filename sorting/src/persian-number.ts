@@ -9,16 +9,16 @@
  *  @author [Khorshid](https://khorshidlab.com)
  *
  *  @example
- *    $('#example').DataTable( {
+ *     new DataTable('#example', {
  *       columnDefs: [
  *         { type: 'kh-persian-numbers', targets: 0 }
  *       ]
- *    } );
+ *    });
  */
 
 import DataTable from 'datatables.net';
 
-function toEnglishNumber(strNum) {
+function toEnglishNumber(strNum: any) {
 	var pn = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
 	var en = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 	var cache = strNum;
@@ -31,6 +31,6 @@ function toEnglishNumber(strNum) {
 	return cache;
 }
 
-DataTable.ext.type.order['kh-persian-numbers-pre'] = function (a, b) {
+DataTable.ext.type.order['kh-persian-numbers-pre'] = function (a: any, b: any) {
 	return parseFloat(toEnglishNumber(a));
 };

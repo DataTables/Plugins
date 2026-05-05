@@ -10,7 +10,7 @@
  *  @author Behrooz Janfada
  *
  *  @example
- *    $('#example').DataTable( {
+ *    new DataTable('#example', {
  *       columnDefs: [
  *         { type: 'farsi-numbers', targets: 0 }
  *       ]
@@ -19,7 +19,7 @@
 
 import DataTable from 'datatables.net';
 
-function farsiToLatin(farsi) {
+function farsiToLatin(farsi: any) {
 	switch (farsi) {
 		case '۰':
 			return 0;
@@ -57,7 +57,7 @@ function farsiToLatin(farsi) {
 	}
 }
 
-DataTable.ext.type.order['farsi-numbers-pre'] = function (a) {
+DataTable.ext.type.order['farsi-numbers-pre'] = function (a: any) {
 	var latin = '',
 		i = 0;
 

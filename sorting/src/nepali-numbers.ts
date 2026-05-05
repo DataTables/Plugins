@@ -14,7 +14,7 @@
  *  @author David Konrad
  *
  *  @example
- *    $('#example').DataTable( {
+ *    new DataTable('#example', {
  *       columnDefs: [
  *         { type: 'nepali-numbers', targets: 0 }
  *       ]
@@ -23,7 +23,7 @@
 
 import DataTable from 'datatables.net';
 
-function nepaliToLatin(nepali) {
+function nepaliToLatin(nepali: string) {
 	switch (nepali) {
 		case '०':
 			return 0;
@@ -61,7 +61,7 @@ function nepaliToLatin(nepali) {
 	}
 }
 
-DataTable.ext.type.order['nepali-numbers-pre'] = function (a) {
+DataTable.ext.type.order['nepali-numbers-pre'] = function (a: any) {
 	var latin = '',
 		i = 0;
 

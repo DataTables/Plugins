@@ -8,7 +8,7 @@
  *  @author
  *
  *  @example
- *    $('#example').dataTable( {
+ *    new DataTable('#example', {
  *       columnDefs: [
  *         { type: 'czech', targets: 0 }
  *       ]
@@ -17,7 +17,7 @@
 
 import DataTable from 'datatables.net';
 
-DataTable.ext.type.order['czech-pre'] = function (a) {
+DataTable.ext.type.order['czech-pre'] = function (a: any) {
 	var special_letters = {
 		A: 'Aa',
 		a: 'aa',
@@ -74,8 +74,8 @@ DataTable.ext.type.order['czech-pre'] = function (a) {
 		Z: 'Za',
 		z: 'za',
 		Ž: 'Zb',
-		ž: 'zb',
-	};
+		ž: 'zb'
+	} as any;
 
 	for (var val in special_letters) {
 		a = a.split(val).join(special_letters[val]).toLowerCase();

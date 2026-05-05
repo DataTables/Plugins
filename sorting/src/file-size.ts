@@ -13,7 +13,7 @@
  *  @author Allan Jardine - datatables.net
  *
  *  @example
- *    $('#example').DataTable( {
+ *    new DataTable('#example', {
  *       columnDefs: [
  *         { type: 'file-size', targets: 0 }
  *       ]
@@ -22,13 +22,13 @@
 
 import DataTable from 'datatables.net';
 
-DataTable.ext.type.order['file-size-pre'] = function (data) {
+DataTable.ext.type.order['file-size-pre'] = function (data: any) {
 	if (data === null || data === '') {
 		return 0;
 	}
 
 	var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
-	var multipliers = {
+	var multipliers: any = {
 		b: 1,
 		bytes: 1,
 		kb: 1000,
@@ -40,11 +40,12 @@ DataTable.ext.type.order['file-size-pre'] = function (data) {
 		tb: 1000000000000,
 		tib: 1099511627776,
 		pb: 1000000000000000,
-		pib: 1125899906842624,
+		pib: 1125899906842624
 	};
 
 	if (matches) {
 		var multiplier = multipliers[matches[2].toLowerCase()];
+
 		return parseFloat(matches[1]) * multiplier;
 	}
 

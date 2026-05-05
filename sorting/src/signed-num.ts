@@ -10,7 +10,7 @@
  *  @author [Allan Jardine](http://sprymedia.co.uk)
  *
  *  @example
- *    $('#example').dataTable( {
+ *     new DataTable('#example', {
  *       columnDefs: [
  *         { type: 'signed-num', targets: 0 }
  *       ]
@@ -19,6 +19,6 @@
 
 import DataTable from 'datatables.net';
 
-DataTable.ext.type.order['signed-num-pre'] = function (a) {
+DataTable.ext.type.order['signed-num-pre'] = function (a: any) {
 	return a == '-' || a === '' ? 0 : a.replace('+', '') * 1;
 };

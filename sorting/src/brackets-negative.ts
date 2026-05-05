@@ -1,14 +1,15 @@
 /*! © SpryMedia Ltd, - datatables.net/license */
 
 /**
- * This plug-in will add automatic negative currency detection for currency columns to
- * DataTables. Note that only $, c, £ and € symbols are detected with this code,
- * This plugin has also been updated to automatically detect negative values either those
- * using '-' as well as numbers using '()' to specify negatives.
- * This plugin also includes automatic type detection
+ * This plug-in will add automatic negative currency detection for currency
+ * columns to DataTables. Note that only $, c, £ and € symbols are detected with
+ * this code, This plugin has also been updated to automatically detect negative
+ * values either those using '-' as well as numbers using '()' to specify
+ * negatives. This plugin also includes automatic type detection
  *
  *  @name brackets-negative
- *  @summary Detect data of currency type with a leading currency symbol as well at detect two types of negative number formatting
+ *  @summary Detect data of currency type with a leading currency symbol as well
+ *  at detect two types of negative number formatting
  *  @author Tom Buckle
  */
 
@@ -27,7 +28,7 @@ DataTable.ext.type.detect.unshift(function (data) {
 	return 'currency';
 });
 
-DataTable.ext.type.order['currency-pre'] = function (data) {
+DataTable.ext.type.order['currency-pre'] = function (data: any) {
 	if (data === '') {
 		return 0;
 	}

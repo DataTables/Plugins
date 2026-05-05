@@ -13,7 +13,7 @@
  *  @author Shodhan Save
  *
  *  @example
- *    $("#example").DataTable({
+ *    new DataTable('#example', {
  *       columnDefs: [
  *         { "type": "natural-time-delta", "targets": 2 }
  *       ]
@@ -22,11 +22,15 @@
 
 import DataTable from 'datatables.net';
 
-DataTable.ext.type.order['natural-time-delta-pre'] = function (data) {
+DataTable.ext.type.order['natural-time-delta-pre'] = function (data: any) {
 	var result = 0;
 	var pattern =
 		/(\d+\s*decades?\s*)?(\d+\s*years?\s*)?(\d+\s*months?\s*)?(\d+\s*weeks?\s*)?(\d+\s*days?\s*)?(\d+\s*hours?\s*)?(\d+\s*minutes?\s*)?(\d+\s*seconds?\s*)?(\d+\s*milliseconds?\s*)?(\d+\s*microseconds?\s*)?/i;
-	var format_time_element = function (el, splitter, mul) {
+	var format_time_element = function (
+		el: any,
+		splitter: string,
+		mul: number
+	) {
 		if (el === undefined) {
 			return 0;
 		}
@@ -46,7 +50,11 @@ DataTable.ext.type.order['natural-time-delta-pre'] = function (data) {
 		{ splitter: 'w', name: 'week', mul: 1 * 60 * 60 * 24 * 7 },
 		{ splitter: 'w', name: 'month', mul: 1 * 60 * 60 * 24 * 7 * 30 },
 		{ splitter: 'w', name: 'year', mul: 1 * 60 * 60 * 24 * 7 * 30 * 12 },
-		{ splitter: 'w', name: 'decade', mul: 1 * 60 * 60 * 24 * 7 * 30 * 12 * 10 },
+		{
+			splitter: 'w',
+			name: 'decade',
+			mul: 1 * 60 * 60 * 24 * 7 * 30 * 12 * 10
+		}
 	];
 
 	time_elements.forEach(function (el, i) {

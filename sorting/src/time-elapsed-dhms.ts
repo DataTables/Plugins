@@ -13,23 +13,23 @@
  *  @author [Allan Jardine](//datatables.net), caochenghua
  *
  *  @example
- *    $('#example').DataTable( {
+ *     new DataTable('#example', {
  *       columnDefs: [
  *         { type: 'time-elapsed-dhms', targets: 0 }
  *       ]
- *    } );
+ *    });
  */
 
 import DataTable from 'datatables.net';
 
-DataTable.ext.type.order['time-elapsed-dhms-pre'] = function (data) {
+DataTable.ext.type.order['time-elapsed-dhms-pre'] = function (data: any) {
 	var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
 	var multipliers = {
 		s: 1,
 		m: 60,
 		h: 3600,
 		d: 86400,
-	};
+	} as any;
 
 	if (matches) {
 		var multiplier = multipliers[matches[2].toLowerCase()];

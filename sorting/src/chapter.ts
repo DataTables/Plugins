@@ -12,7 +12,7 @@
  *  @author Colin Marks
  *
  *  @example
- *    $('#example').dataTable( {
+ *    new DataTable('#example', {
  *       columnDefs: [
  *         { type: 'chapter', targets: 0 }
  *       ]
@@ -21,7 +21,7 @@
 
 import DataTable from 'datatables.net';
 
-DataTable.ext.type.order['chapter-pre'] = function (a) {
+DataTable.ext.type.order['chapter-pre'] = function (a: any) {
 	var constMaxSections = 5;
 	var constMaxSectionDigits = 4;
 

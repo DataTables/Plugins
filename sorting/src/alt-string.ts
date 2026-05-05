@@ -10,15 +10,15 @@
  *  @author _Jumpy_
  *
  *  @example
- *    $('#example').dataTable( {
+ *    new DataTable('#myTable', {
  *       columnDefs: [
  *         { type: 'alt-string', targets: 0 }
  *       ]
- *    } );
+ *    });
  */
 
 import DataTable from 'datatables.net';
 
-DataTable.ext.type.order['alt-string-pre'] = function (a) {
+DataTable.ext.type.order['alt-string-pre'] = function (a: any) {
 	return a.match(/alt="(.*?)"/)[1].toLowerCase();
 };

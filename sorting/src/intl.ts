@@ -39,17 +39,20 @@
 import DataTable from 'datatables.net';
 
 declare module 'datatables.net' {
-	interface ApiStatic {
-		intlOrder(locals: string, options: Intl.CollatorOptions);
+	interface DataTablesStatic {
+		intlOrder(locals: string, options: Intl.CollatorOptions): void;
 	}
 }
 
-DataTable.intlOrder = function (locales, options) {
+DataTable.intlOrder = function (
+	locales: Intl.LocalesArgument,
+	options: Intl.CollatorOptions
+) {
 	if (window.Intl) {
 		var collator = new Intl.Collator(locales, options);
 		var types = DataTable.ext.type;
 		var asc = collator.compare;
-		var desc = function (a, b) {
+		var desc = function (a: any, b: any) {
 			return collator.compare(a, b) * -1;
 		};
 
@@ -58,18 +61,18 @@ DataTable.intlOrder = function (locales, options) {
 		types.order['string-desc'] = desc;
 
 		// The utf8 data type variant uses the same sorting methods
-        types.order['string-utf8-asc'] = asc;
-        types.order['string-utf8-desc'] = desc;
+		types.order['string-utf8-asc'] = asc;
+		types.order['string-utf8-desc'] = desc;
 
-        types.order['html-pre'] = DataTable.util.stripHtml;
-        types.order['html-asc'] = asc;
-        types.order['html-desc'] = desc;
+		types.order['html-pre'] = DataTable.util.stripHtml;
+		types.order['html-asc'] = asc;
+		types.order['html-desc'] = desc;
 
-        types.order['html-utf8-pre'] = DataTable.util.stripHtml;
-        types.order['html-utf8-asc'] = asc;
-        types.order['html-utf8-desc'] = desc;
+		types.order['html-utf8-pre'] = DataTable.util.stripHtml;
+		types.order['html-utf8-asc'] = asc;
+		types.order['html-utf8-desc'] = desc;
 	}
 };
 
 // Old style originally introduced in the blog post
-DataTable.ext.type.order.intl = DataTable.intlOrder;
+(DataTable.ext.type.order as any).intl = DataTable.intlOrder;

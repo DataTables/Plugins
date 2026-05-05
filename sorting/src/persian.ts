@@ -10,11 +10,11 @@
  *  @author [Afshin Mehrabani](http://www.afshinm.name/)
  *
  *  @example
- *    $('#example').dataTable( {
+ *     new DataTable('#example', {
  *       columnDefs: [
  *         { type: 'pstring', targets: 0 }
  *       ]
- *    } );
+ *    });
  */
 
 import DataTable from 'datatables.net';
@@ -52,13 +52,15 @@ var persianSort = [
 	'و',
 	'ه',
 	'ی',
-	'ي',
+	'ي'
 ];
 
-function GetUniCode(source) {
+function GetUniCode(source: string) {
 	source = source.trim();
+
 	var result = '';
 	var i, index;
+
 	for (i = 0; i < source.length; i++) {
 		index = persianSort.indexOf(source.charAt(i));
 
@@ -76,6 +78,6 @@ function GetUniCode(source) {
 	return 'a' + result;
 }
 
-DataTable.ext.type.order['pstring-pre'] = function (a, b) {
+DataTable.ext.type.order['pstring-pre'] = function (a: any, b: any) {
 	return GetUniCode(a.toLowerCase());
 };

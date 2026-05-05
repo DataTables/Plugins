@@ -19,7 +19,7 @@
  *  @author [Allan Jardine](http://sprymedia.co.uk)
  *
  *  @example
- *    $('#example').dataTable( {
+ *    new DataTable('#example', {
  *       columnDefs: [
  *         { type: 'formatted-num', targets: 0 }
  *       ]
@@ -28,7 +28,7 @@
 
 import DataTable from 'datatables.net';
 
-DataTable.ext.type.order['formatted-num-pre'] = function (a) {
+DataTable.ext.type.order['formatted-num-pre'] = function (a: any) {
 	a = a === '-' || a === '' ? 0 : a.replace(/[^\d\-\.]/g, '');
 	return parseFloat(a);
 };

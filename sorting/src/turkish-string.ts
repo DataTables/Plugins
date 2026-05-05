@@ -1,8 +1,8 @@
 /*! © SpryMedia Ltd, Yuksel Beyti - datatables.net/license */
 
 /**
- * Sorting in Javascript for Turkish Characters. This plug-in will replace the special
- * turkish letters (non english characters) and replace in English.
+ * Sorting in Javascript for Turkish Characters. This plug-in will replace the
+ * special turkish letters (non english characters) and replace in English.
  *
  *  @name Turkish
  *  @summary Sort Turkish characters
@@ -10,7 +10,7 @@
  *
  *  @example
  *    // Use plug-in for all columns
- *    $('#example').dataTable({
+ *     new DataTable('#example', {
  *       columnDefs: [
  *           { type: 'turkish', targets: '_all' }
  *       ]
@@ -19,7 +19,7 @@
 
 import DataTable from 'datatables.net';
 
-DataTable.ext.type.order['turkish-pre'] = function (a) {
+DataTable.ext.type.order['turkish-pre'] = function (a: any) {
 	var special_letters = {
 		C: 'Ca',
 		c: 'ca',
@@ -45,7 +45,8 @@ DataTable.ext.type.order['turkish-pre'] = function (a) {
 		u: 'ua',
 		Ü: 'Ub',
 		ü: 'ub',
-	};
+	} as any;
+
 	for (var val in special_letters) {
 		a = a.split(val).join(special_letters[val]).toLowerCase();
 	}

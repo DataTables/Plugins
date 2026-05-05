@@ -11,7 +11,7 @@
  *  @author [Allan Jardine](http://sprymedia.co.uk)
  *
  *  @example
- *    $('#example').DataTable( {
+ *    new DataTable('#myTable', {
  *       columnDefs: [
  *         { type: 'anti-the', targets: 0 }
  *       ]
@@ -20,6 +20,6 @@
 
 import DataTable from 'datatables.net';
 
-DataTable.ext.type.order['anti-the-pre'] = function (a) {
+DataTable.ext.type.order['anti-the-pre'] = function (a: any) {
 	return a.replace(/^the /i, '');
 };

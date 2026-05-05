@@ -24,7 +24,7 @@ import DataTable from 'datatables.net';
 declare module 'datatables.net' {
 	interface DataTablesStatic {
 		/** Dynamically create enum sorting options for a DataTable */
-		enum(arr: any[]);
+		enum(arr: any[]): void;
 	}
 }
 
@@ -35,7 +35,7 @@ var types = DataTable.ext.type;
 // a reserved word in JavaScript
 DataTable['enum'] = function (arr) {
 	var name = 'enum-' + unique++;
-	var lookup = window.Map ? new Map() : {};
+	var lookup: any = window.Map ? new Map() : {};
 
 	for (var i = 0, ien = arr.length; i < ien; i++) {
 		lookup[arr[i]] = i;
@@ -47,7 +47,7 @@ DataTable['enum'] = function (arr) {
 	});
 
 	// Add sorting method
-	types.order[name + '-pre'] = function (d) {
+	types.order[name + '-pre'] = function (d: any) {
 		return lookup[d];
 	};
 };

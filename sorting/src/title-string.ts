@@ -16,7 +16,7 @@
  *  @deprecated
  *
  *  @example
- *    $('#example').dataTable( {
+ *     new DataTable('#example', {
  *       columnDefs: [
  *         { type: 'title-string', targets: 0 }
  *       ]
@@ -25,6 +25,6 @@
 
 import DataTable from 'datatables.net';
 
-DataTable.ext.type.order['title-string-pre'] = function (a) {
+DataTable.ext.type.order['title-string-pre'] = function (a: any) {
 	return a.match(/title="(.*?)"/)[1].toLowerCase();
 };

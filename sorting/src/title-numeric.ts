@@ -19,7 +19,7 @@
  *  @author [Allan Jardine](http://sprymedia.co.uk)
  *
  *  @example
- *    $('#example').dataTable( {
+ *     new DataTable('#example', {
  *       columnDefs: [
  *         { type: 'title-numeric', targets: 0 }
  *       ]
@@ -28,7 +28,7 @@
 
 import DataTable from 'datatables.net';
 
-DataTable.ext.type.order['title-numeric-pre'] = function (a) {
+DataTable.ext.type.order['title-numeric-pre'] = function (a: any) {
 	var x = a.match(/title="*(-?[0-9\.]+)/)[1];
 	return parseFloat(x);
 };
