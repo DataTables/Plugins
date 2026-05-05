@@ -1,10 +1,6 @@
-/*! © SpryMedia Ltd - datatables.net/license */
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * It can sometimes be useful to get the average of data in an API result set,
@@ -20,12 +16,12 @@ let $ = jQuery;
  *
  * @example
  *    // Average a column
- *    var table = $('#example').DataTable();
+ *    var table = new DataTable('#example')
  *    table.column( 3 ).data().average();
  *
  * @example
  *    // Average two cells
- *    var table = $('#example').DataTable();
+ *    var table = new DataTable('#example')
  *    table.cells( 0, [3,4] ).data().average();
  */
 DataTable.Api.register('average()', function () {
@@ -38,3 +34,4 @@ DataTable.Api.register('average()', function () {
 
 
 export default DataTable;
+

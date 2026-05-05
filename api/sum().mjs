@@ -1,10 +1,6 @@
-/*! © SpryMedia Ltd - datatables.net/license */
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * Fairly simply, this plug-in will take the data from an API result set
@@ -22,24 +18,23 @@ let $ = jQuery;
  * @name sum()
  * @summary Sum the values in a data set.
  * @author [Allan Jardine](http://datatables.net)
- * @requires DataTables 1.10+
+ * @requires DataTables 3+
  *
  * @returns {Number} Summed value
  *
  * @example
  *    // Simply get the sum of a column
- *    var table = $('#example').DataTable();
+ *    var table = new DataTable('#example');
  *    table.column( 3 ).data().sum();
  *
  * @example
  *    // Insert the sum of a column into the columns footer, for the visible
  *    // data on each draw
- *    $('#example').DataTable( {
+ *    new DataTable('#example').DataTable( {
  *      drawCallback: function () {
  *        var api = this.api();
- *        $( api.table().footer() ).html(
- *          api.column( 4, {page:'current'} ).data().sum()
- *        );
+ *        api.column(4).footer().innerHTML =
+ *          api.column( 4, {page:'current'} ).data().sum();
  *      }
  *    } );
  */
@@ -57,3 +52,4 @@ DataTable.Api.register('sum()', function () {
 
 
 export default DataTable;
+

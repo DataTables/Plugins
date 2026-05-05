@@ -1,25 +1,18 @@
-/*! © Edouard Labre - datatables.net/license */
+/*! © Edouard Labre - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * This plugin jumps to the right page of the DataTable to show the required row
  *
- * @version 1.0
  * @name row().show()
  * @summary See the row in datable by display the right pagination page
  * @author [Edouard Labre](http://www.edouardlabre.com)
- *
- * @param {void} a row must be selected
- * @returns {DataTables.Api.Rows} DataTables Rows API instance
+ * @requires DataTables 3+
  *
  * @example
  *    // Add an element to a huge table and go to the right pagination page
- *    var table = $('#example').DataTable();
+ *    var table = new DataTable('#example');
  *    var new_row = {
  *      DT_RowId: 'row_example',
  *      name: 'example',
@@ -52,3 +45,4 @@ DataTable.Api.register('row().show()', function () {
 
 
 export default DataTable;
+

@@ -28,7 +28,7 @@ declare module 'datatables.net' {
 		searchable(): boolean;
 	}
 
-	interface ApiColumnsMethods {
+	interface ApiColumnsMethods<T> {
 		/** Get searchable flag for selected columns */
 		searchable(): Api<boolean>;
 	}

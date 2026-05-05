@@ -1,2 +1,2 @@
-/*! © SpryMedia Ltd - datatables.net/license */
-import jQuery from"jquery";import DataTable from"datatables.net";let $=jQuery;DataTable.Api.register("page.jumpToData()",function(t,a){a=this.column(a,{order:"current"}).data().indexOf(t);return 0<=a&&(t=Math.floor(a/this.page.info().length),this.page(t).draw(!1)),this});export default DataTable;
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
+import DataTable from"datatables.net";DataTable.Api.register("page.jumpToData()",function(a,t){t=this.column(t,{order:"current"}).data().indexOf(a);return 0<=t&&(a=Math.floor(t/this.page.info().length),this.page(a).draw(!1)),this});export default DataTable;

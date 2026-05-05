@@ -1,10 +1,6 @@
-/*! © SpryMedia Ltd - datatables.net/license */
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * It can be quite useful to jump straight to a page which contains a certain
@@ -23,18 +19,20 @@ let $ = jQuery;
  * @name page.JumpToData()
  * @summary Jump to a page by searching for data from a column
  * @author [Allan Jardine](http://datatables.net)
- * @requires DataTables 1.10+
+ * @requires DataTables 3+
  *
  * @param {*} data Data to search for
  * @param {integer} column Column index
  * @returns {Api} DataTables API instance
  *
  * @example
- *    var table = $('#example').DataTable();
- *    table.page.jumpToData( "Allan Jardine", 0 );
+ *    var table = new DataTable('#example');
+ *    table.page.jumpToData( 'Allan', 0 );
  */
 DataTable.Api.register('page.jumpToData()', function (data, column) {
-    var pos = this.column(column, { order: 'current' }).data().indexOf(data);
+    var pos = this.column(column, { order: 'current' })
+        .data()
+        .indexOf(data);
     if (pos >= 0) {
         var page = Math.floor(pos / this.page.info().length);
         this.page(page).draw(false);
@@ -44,3 +42,4 @@ DataTable.Api.register('page.jumpToData()', function (data, column) {
 
 
 export default DataTable;
+

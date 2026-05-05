@@ -1,10 +1,6 @@
-/*! © SpryMedia Ltd - datatables.net/license */
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * The plug-in provides a way to determine the searchable state of one or more
@@ -13,7 +9,7 @@ let $ = jQuery;
  * @name columns().order()
  * @summary Apply multi-column ordering through the columns() API method.
  * @author [Allan Jardine](http://sprymedia.co.uk)
- * @requires DataTables 1.10+
+ * @requires DataTables 3+
  *
  * @returns {boolean|DataTables.Api} Searchable flag
  *
@@ -25,11 +21,12 @@ let $ = jQuery;
  *  // Get the searchable flag for column index 0
  *  table.column(0).searchable()
  */
-DataTable.Api.registerPlural('columns().searchable()', 'column().searchable()', function (selector, opts) {
+DataTable.Api.registerPlural('columns().searchable()', 'column().searchable()', function () {
     return this.iterator('column', function (settings, column) {
-        return settings.aoColumns[column].bSearchable;
-    }, 1);
+        return settings.columns[column].searchable;
+    }, true);
 });
 
 
 export default DataTable;
+

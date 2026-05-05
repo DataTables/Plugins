@@ -1,2 +1,2 @@
-/*! © SpryMedia Ltd - datatables.net/license */
-import jQuery from"jquery";import DataTable from"datatables.net";let $=jQuery;DataTable.Api.register("average()",function(){var e=this.flatten();return e.reduce(function(e,t){return+e+ +t},0)/e.length});export default DataTable;
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
+import DataTable from"datatables.net";DataTable.Api.register("average()",function(){var t=this.flatten();return t.reduce(function(t,a){return+t+ +a},0)/t.length});export default DataTable;

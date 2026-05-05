@@ -20,8 +20,9 @@ fi
 function ts_plugin {
 	local SRC_FILE=$1
 	local DEST_DIR=$2
-	local REQUIRE=${3:-'jquery datatables.net'}
+	local REQUIRE=${3:-'datatables.net'}
 	local FILE_NAME=$(basename $SRC_FILE)
+	local VERSION=$(dt_version)
 
 	# Remove extension
 	FILE_NAME="${FILE_NAME%.*}"
@@ -30,28 +31,30 @@ function ts_plugin {
 		DEST_DIR=$(dirname $(dirname $SRC_FILE))
 	fi
 
-	./node_modules/.bin/tsc \
+	../../node_modules/.bin/tsc \
 		--target esnext \
 		--moduleResolution node \
 		--outDir $DEST_DIR \
 		--declaration \
+		--skipLibCheck \
 		--allowSyntheticDefaultImports \
 		$SRC_FILE
 
 	# Remove import statements - the wrap will add them
 	sed -i '/^import /d' $DEST_DIR/$FILE_NAME.js
 
-	js_wrap $DEST_DIR/$FILE_NAME.js "$REQUIRE"
+	js_wrap $DEST_DIR/$FILE_NAME.js $VERSION "$REQUIRE"
 }
 
 function js_plugin {
 	local SRC_FILE=$1
-	local REQUIRE=${2:-'jquery datatables.net'}
+	local REQUIRE=${2:-'datatables.net'}
 	local DEST_DIR=$(dirname $(dirname $SRC_FILE))
 	local FILE_NAME=$(basename $SRC_FILE)
+	local VERSION=$(dt_version)
 
 	cp $SRC_FILE $DEST_DIR/$FILE_NAME
-	js_wrap $DEST_DIR/$FILE_NAME "$REQUIRE"
+	js_wrap $DEST_DIR/$FILE_NAME $VERSION "$REQUIRE"
 }
 
 function lang_plugin {
@@ -86,10 +89,6 @@ EOF
 
 # Change into script's own dir
 cd $(dirname $0)
-
-if [ ! -d node_modules ]; then
-	npm install
-fi
 
 DT_SRC=$(dirname $(dirname $(pwd)))
 DT_BUILT="${DT_SRC}/built/DataTables"
@@ -149,10 +148,6 @@ done
 # done
 
 # for file in $PLUGINS/type-detection/src/*.ts; do
-# 	ts_plugin $file
-# done
-
-# for file in $PLUGINS/filtering/type-based/src/*.ts; do
 # 	ts_plugin $file
 # done
 

@@ -47,7 +47,7 @@ declare module 'datatables.net' {
 }
 
 DataTable.Api.register('sum()', function (this: Api) {
-	return this.flatten().reduce(function (a, b) {
+	return this.flatten().reduce(function (a: any, b: any) {
 		if (typeof a === 'string') {
 			a = (a.replace(/[^\d.-]/g, '') as any) * 1;
 		}

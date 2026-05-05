@@ -1,2 +1,2 @@
-/*! © SpryMedia Ltd - datatables.net/license */
-import jQuery from"jquery";import DataTable from"datatables.net";let $=jQuery;DataTable.Api.registerPlural("columns().searchable()","column().searchable()",function(a,e){return this.iterator("column",function(a,e){return a.aoColumns[e].bSearchable},1)});export default DataTable;
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
+import DataTable from"datatables.net";DataTable.Api.registerPlural("columns().searchable()","column().searchable()",function(){return this.iterator("column",function(a,e){return a.columns[e].searchable},!0)});export default DataTable;

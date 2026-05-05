@@ -28,7 +28,7 @@
  *    table.page.jumpToData( 'Allan', 0 );
  */
 
-import DataTable, { ApiPage, ColumnSelector } from 'datatables.net';
+import DataTable, { Api, ApiPage, ColumnSelector } from 'datatables.net';
 
 declare module 'datatables.net' {
 	interface ApiPage {

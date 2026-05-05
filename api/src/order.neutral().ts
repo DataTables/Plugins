@@ -22,7 +22,7 @@
  *    table.order.neutral().draw();
  */
 
-import DataTable, { ApiOrder } from 'datatables.net';
+import DataTable, { Api, ApiOrder } from 'datatables.net';
 
 declare module 'datatables.net' {
 	interface ApiOrder {

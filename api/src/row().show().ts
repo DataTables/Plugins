@@ -20,7 +20,7 @@
  *    table.row.add( new_row ).draw().show().draw(false);
  */
 
-import DataTable, { ApiRowMethods } from 'datatables.net';
+import DataTable, { Api, ApiRowMethods } from 'datatables.net';
 
 declare module 'datatables.net' {
 	interface ApiRowMethods<T> {
@@ -29,7 +29,7 @@ declare module 'datatables.net' {
 	}
 }
 
-DataTable.Api.register<ApiRowMethods['show']>(
+DataTable.Api.register<ApiRowMethods<any>['show']>(
 	'row().show()',
 	function (this: any) {
 		var page_info = this.table().page.info();

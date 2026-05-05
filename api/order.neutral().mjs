@@ -1,10 +1,6 @@
-/*! © SpryMedia Ltd - datatables.net/license */
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net';
-
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
 /**
  * This function will restore the order in which data was read into a DataTable
@@ -19,7 +15,7 @@ let $ = jQuery;
  * @name order.neutral()
  * @summary Change ordering of the table to its data load order
  * @author [Allan Jardine](http://datatables.net)
- * @requires DataTables 1.10+
+ * @requires DataTables 3+
  *
  * @returns {DataTables.Api} DataTables API instance
  *
@@ -29,11 +25,11 @@ let $ = jQuery;
  */
 DataTable.Api.register('order.neutral()', function () {
     return this.iterator('table', function (s) {
-        s.aaSorting.length = 0;
-        s.aiDisplay.sort(function (a, b) {
+        s.order.length = 0;
+        s.display.sort(function (a, b) {
             return a - b;
         });
-        s.aiDisplayMaster.sort(function (a, b) {
+        s.displayMaster.sort(function (a, b) {
             return a - b;
         });
     });
@@ -41,3 +37,4 @@ DataTable.Api.register('order.neutral()', function () {
 
 
 export default DataTable;
+
