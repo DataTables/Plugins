@@ -5,16 +5,16 @@
  * تبدیل عداد به فارسی, انگلیسی, عربی
  *
  *  @name convertTo
- *  @summary convert numbers to farsi, english, arabic.
+ *  @summary Convert numbers to Farsi, English, Arabic.
  *  @author Alireza Mohammadi Doost
  *
  *  @example
  *    new DataTable('#example', {
- *      columnDefs: [ {
+ *      columnDefs: [{
  *        targets: 2,
  *        render: DataTable.render.numberTo('fa')
- *      } ]
- *    } );
+ *      }]
+ *    });
  */
 
 import DataTable from 'datatables.net';
@@ -22,7 +22,7 @@ import DataTable from 'datatables.net';
 declare module 'datatables.net' {
 	interface DataTablesStaticRender {
 		/** Convert numbers to Farsi, English or Arabic. */
-		numberTo(string: 'fa' | 'en' | 'ar');
+		numberTo(string: 'fa' | 'en' | 'ar'): any;
 	}
 }
 
@@ -32,7 +32,7 @@ DataTable.render.numberTo = function (to = 'fa') {
 	const enNumbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 	const arNumbers = ['۰', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
 
-	return function (d, type, row) {
+	return function (d: any, type: string, row: any) {
 		if (type !== 'display') {
 			return d;
 		}
@@ -46,15 +46,21 @@ DataTable.render.numberTo = function (to = 'fa') {
 
 		switch (to) {
 			case 'fa':
-				result = d.toString().replace(/\d/g, x => faNumbers[x]);
+				result = d
+					.toString()
+					.replace(/\d/g, (x: number) => faNumbers[x]);
 				break;
 
 			case 'en':
-				result = d.toString().replace(/\d/g, x => enNumbers[x]);
+				result = d
+					.toString()
+					.replace(/\d/g, (x: number) => enNumbers[x]);
 				break;
 
 			case 'ar':
-				result = d.toString().replace(/\d/g, x => arNumbers[x]);
+				result = d
+					.toString()
+					.replace(/\d/g, (x: number) => arNumbers[x]);
 				break;
 		}
 		return result;

@@ -1,2 +1,0 @@
-/*! © SpryMedia Ltd - datatables.net/license */
-import jQuery from"jquery";import DataTable from"datatables.net";let $=jQuery;DataTable.ext.type.search.phoneNumber=function(e){return e?"string"==typeof e?e+e.replace(/[ \-]/g,""):e:""};export default DataTable;

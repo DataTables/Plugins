@@ -37,7 +37,7 @@
  *    } );
  */
 
-import DataTable from 'datatables.net';
+import DataTable, { Api } from 'datatables.net';
 
 declare module 'datatables.net' {
 	interface Api<T> {
@@ -46,7 +46,7 @@ declare module 'datatables.net' {
 	}
 }
 
-DataTable.Api.register('sum()', function () {
+DataTable.Api.register('sum()', function (this: Api) {
 	return this.flatten().reduce(function (a, b) {
 		if (typeof a === 'string') {
 			a = (a.replace(/[^\d.-]/g, '') as any) * 1;

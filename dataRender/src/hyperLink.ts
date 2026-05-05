@@ -20,7 +20,7 @@
  *  @name hyperLink
  *  @summary Displays url data in hyperLink with custom plcaeholder
  *  @author Lokesh Babu
- *  @requires DataTables 1.10+
+ *  @requires DataTables 3+
  *
  *
  *  @example
@@ -72,30 +72,37 @@ declare module 'datatables.net' {
 			location: string,
 			width: number,
 			height: number
-		);
+		): any;
 	}
 }
 
-DataTable.render.hyperLink = function (anchorText, location, width, height) {
-	var validateAndReturnDefaultIfFailed: (item, defaultValue) => number =
-		function (item, defaultValue) {
-			if (typeof item === 'number') {
-				return item;
-			}
+DataTable.render.hyperLink = function (
+	anchorText: string,
+	location: string,
+	widthIn?: number,
+	heightIn?: number
+) {
+	var validateAndReturnDefaultIfFailed: (
+		item: any,
+		defaultValue: any
+	) => number = function (item, defaultValue) {
+		if (typeof item === 'number') {
+			return item;
+		}
 
-			if (typeof item === 'string') {
-				return parseInt(item) ? item : defaultValue;
-			}
+		if (typeof item === 'string') {
+			return parseInt(item) ? item : defaultValue;
+		}
 
-			return defaultValue;
-		};
+		return defaultValue;
+	};
 
 	var anchorText = anchorText || 'Click Here';
 	var location = location || 'newTab';
-	var width = validateAndReturnDefaultIfFailed(width, 600);
-	var height = validateAndReturnDefaultIfFailed(height, 400);
+	var width = validateAndReturnDefaultIfFailed(widthIn, 600);
+	var height = validateAndReturnDefaultIfFailed(heightIn, 400);
 
-	return function (data, type, row) {
+	return function (data: any, type: string, row: any) {
 		// restriction only for table display rendering
 		if (type !== 'display') {
 			return data;

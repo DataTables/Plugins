@@ -32,7 +32,7 @@ declare module 'datatables.net' {
 	}
 }
 
-DataTable.Api.register<Api['average']>('average()', function () {
+DataTable.Api.register<Api['average']>('average()', function (this: Api) {
 	var data = this.flatten();
 	var sum = data.reduce(function (a, b) {
 		return a * 1 + b * 1; // cast values in-case they are strings

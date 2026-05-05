@@ -33,9 +33,9 @@
  * 	});
  */
 
-import DataTable, { util } from 'datatables.net';
+import DataTable, { Api, util } from 'datatables.net';
 
-function flattenJson(data, name?, flattened?) {
+function flattenJson(data: any, name?: any, flattened?: any) {
 	if (!flattened) {
 		flattened = {};
 	}
@@ -54,12 +54,16 @@ function flattenJson(data, name?, flattened?) {
 			}
 		});
 	else if (Array.isArray(data)) {
-		for (let i=0 ; i<data.length ; i++) {
+		for (let i = 0; i < data.length; i++) {
 			if (name === '') {
 				flattenJson(data[i], i, flattened);
 			}
 			else {
-				flattenJson(data[i], name + '[' + i.toString() + ']', flattened);
+				flattenJson(
+					data[i],
+					name + '[' + i.toString() + ']',
+					flattened
+				);
 			}
 		}
 	}
@@ -72,7 +76,7 @@ function flattenJson(data, name?, flattened?) {
 
 DataTable.ext.buttons.download = {
 	text: 'Download',
-	action: function (e, dt, node, config) {
+	action: function (e: Event, dt: Api, node: Node, config: any) {
 		// Gather information to be submitted
 		var data = {};
 
@@ -119,5 +123,5 @@ DataTable.ext.buttons.download = {
 	},
 	url: '',
 	type: 'POST',
-	data: {},
+	data: {}
 };

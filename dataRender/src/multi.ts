@@ -12,7 +12,7 @@
  *  @name multi
  *  @summary Use multiple renderers
  *  @author [Allan Jardine](http://datatables.net)
- *  @requires DataTables 1.10+
+ *  @requires DataTables 3+
  *
  *  @example
  *    // Convert dates using moment renderer and ensure they are HTML safe
@@ -32,12 +32,12 @@ import DataTable from 'datatables.net';
 declare module 'datatables.net' {
 	interface DataTablesStaticRender {
 		/** Use multiple renderers */
-		multi(renderers: any[]);
+		multi(renderers: any[]): any;
 	}
 }
 
 DataTable.render.multi = function (renderArray: any[]) {
-	return function (d, type, row, meta) {
+	return function (d: any, type: string, row: any, meta: any) {
 		for (var r = 0; r < renderArray.length; r++) {
 			if (typeof renderArray[r] === 'function') {
 				d = renderArray[r](d, type, row, meta);

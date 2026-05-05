@@ -1,2 +1,0 @@
-/*! © guillimon, SpryMedia Ltd - datatables.net/license */
-import jQuery from"jquery";import DataTable from"datatables.net";let $=jQuery;var _div=document.createElement("div");DataTable.ext.type.search.html=function(e){return _div.innerHTML=e,(_div.textContent||_div.innerText).replace(/\n/g," ")};export default DataTable;

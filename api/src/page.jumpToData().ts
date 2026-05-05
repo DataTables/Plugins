@@ -40,8 +40,7 @@ declare module 'datatables.net' {
 DataTable.Api.register<ApiPage['jumpToData']>(
 	'page.jumpToData()',
 	function (data, column) {
-		var pos = this
-			.column(column, { order: 'current' })
+		var pos = this.column(column, { order: 'current' })
 			.data()
 			.indexOf(data);
 

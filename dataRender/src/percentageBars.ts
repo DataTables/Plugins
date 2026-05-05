@@ -66,7 +66,7 @@ declare module 'datatables.net' {
 			vRound: number,
 			bType: string,
 			conditionalColors: any
-		);
+		): any;
 	}
 }
 
@@ -91,10 +91,13 @@ DataTable.render.percentBar = function (
 	//Bar templates
 	var styleRule1 = 'max-width:100px;height:12px;margin:0 auto;';
 
-	return function (d, type, row) {
+	return function (d: any, type: string, row: any) {
 		//Remove % if found in the value
 		//Round to the given parameter vRound
-		var s: any = parseFloat(d.toString().replace(/\s%|%/g, '')).toFixed(vRound);
+		var s: any = parseFloat(d.toString().replace(/\s%|%/g, '')).toFixed(
+			vRound
+		);
+
 		//Not allowed to go over 100%
 		if (s > 100) {
 			s = 100;
@@ -108,40 +111,47 @@ DataTable.render.percentBar = function (
 			return d;
 		}
 
-        var cBackConditional;
-        var cBarConditional;
-        var cTextConditional;
+		var cBackConditional;
+		var cBarConditional;
+		var cTextConditional;
 
-        // do conditional colors based on user input
-        if (conditionalColors) {
-            for (var i = 0; i < conditionalColors.length; i++) {
-                if (s >= conditionalColors[i].min && s <= conditionalColors[i].max) {
-                    if (conditionalColors[i].barColor) {
-                        cBarConditional = conditionalColors[i].barColor;
-                    } else {
-                        cBarConditional = cBar;
-                    }
-                    if (conditionalColors[i].backgroundColor) {
-                        cBackConditional = conditionalColors[i].backgroundColor;
-                    } else {
-                        cBackConditional = cBack;
-                    }
-                    if (conditionalColors[i].textColor) {
-                        cTextConditional = conditionalColors[i].textColor;
-                    } else {
-                        cTextConditional = cText;
-                    }
-                    break;
-                }
-            }
-        }
+		// do conditional colors based on user input
+		if (conditionalColors) {
+			for (var i = 0; i < conditionalColors.length; i++) {
+				if (
+					s >= conditionalColors[i].min &&
+					s <= conditionalColors[i].max
+				) {
+					if (conditionalColors[i].barColor) {
+						cBarConditional = conditionalColors[i].barColor;
+					}
+					else {
+						cBarConditional = cBar;
+					}
+					if (conditionalColors[i].backgroundColor) {
+						cBackConditional = conditionalColors[i].backgroundColor;
+					}
+					else {
+						cBackConditional = cBack;
+					}
+					if (conditionalColors[i].textColor) {
+						cTextConditional = conditionalColors[i].textColor;
+					}
+					else {
+						cTextConditional = cText;
+					}
+					break;
+				}
+			}
+		}
 		else {
-            cBackConditional = cBack;
-            cBarConditional = cBar;
-            cTextConditional = cText;
-        }
+			cBackConditional = cBack;
+			cBarConditional = cBar;
+			cTextConditional = cText;
+		}
 
-        var styleRule2 = 'border:2px ' +
+		var styleRule2 =
+			'border:2px ' +
 			bType +
 			' ' +
 			cBorder +
@@ -152,15 +162,18 @@ DataTable.render.percentBar = function (
 			';position:relative;';
 
 		//Bar template
-        var styleRule3 = 'height:12px;line-height:12px;text-align:center;background-color:' +
-        cBarConditional + ';padding:auto 6px;';
+		var styleRule3 =
+			'height:12px;line-height:12px;text-align:center;background-color:' +
+			cBarConditional +
+			';padding:auto 6px;';
 
-        //Square is default, make template round if pShape == round
-        if (pShape == 'round') {
-            styleRule2 += 'border-radius:5px;';
-            styleRule3 += 'border-top-left-radius:4px;border-bottom-left-radius:4px;';
-        }
-	
+		//Square is default, make template round if pShape == round
+		if (pShape == 'round') {
+			styleRule2 += 'border-radius:5px;';
+			styleRule3 +=
+				'border-top-left-radius:4px;border-bottom-left-radius:4px;';
+		}
+
 		//Return the code for the bar
 		return (
 			'<div style="' +

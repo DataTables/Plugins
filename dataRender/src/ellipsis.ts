@@ -54,12 +54,12 @@ import DataTable from 'datatables.net';
 declare module 'datatables.net' {
 	interface DataTablesStaticRender {
 		/** Restrict output data to a particular length, showing anything longer with ellipsis */
-		ellipsis(cutoff: number, wordbreak?: boolean, escapeHtml?: boolean);
+		ellipsis(cutoff: number, wordbreak?: boolean, escapeHtml?: boolean): any;
 	}
 }
 
 DataTable.render.ellipsis = function (cutoff, wordbreak, escapeHtml) {
-	var esc = function (t) {
+	var esc = function (t: string) {
 		return ('' + t)
 			.replace(/&/g, '&amp;')
 			.replace(/</g, '&lt;')
@@ -67,7 +67,7 @@ DataTable.render.ellipsis = function (cutoff, wordbreak, escapeHtml) {
 			.replace(/"/g, '&quot;');
 	};
 
-	return function (d, type, row) {
+	return function (d: any, type: string, row: any) {
 		// Order, search and type get the original data
 		if (type !== 'display') {
 			return d;

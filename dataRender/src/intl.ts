@@ -66,10 +66,10 @@ import DataTable from 'datatables.net';
 declare module 'datatables.net' {
 	interface DataTablesStaticRender {
 		/** Use the Intl Javascript API to render dates and times */
-		intlDateTime(locale: string, options: Intl.DateTimeFormatOptions);
+		intlDateTime(locale: string, options: Intl.DateTimeFormatOptions): any;
 
 		/** Use the Intl Javascript API to render numbers */
-		intlNumber(locale: string, options: Intl.NumberFormatOptions);
+		intlNumber(locale: string, options: Intl.NumberFormatOptions): any;
 	}
 }
 
@@ -77,7 +77,7 @@ DataTable.render.intlDateTime = function (locale, options) {
 	if (window.Intl) {
 		var formatter = new Intl.DateTimeFormat(locale, options);
 
-		return function (data, type) {
+		return function (data: any, type: string) {
 			var date;
 
 			if (typeof data === 'string') {
@@ -87,7 +87,7 @@ DataTable.render.intlDateTime = function (locale, options) {
 				date = data;
 			}
 
-			if (isNaN(date) || type === 'type' || type === 'sort') {
+			if (isNaN(date as any) || type === 'type' || type === 'sort') {
 				return data;
 			}
 
@@ -95,7 +95,7 @@ DataTable.render.intlDateTime = function (locale, options) {
 		};
 	}
 	else {
-		return function (d) {
+		return function (d: any) {
 			return d;
 		};
 	}
@@ -105,7 +105,7 @@ DataTable.render.intlNumber = function (locale, options) {
 	if (window.Intl) {
 		var formatter = new Intl.NumberFormat(locale, options);
 
-		return function (d, type) {
+		return function (d: any, type: string) {
 			if (type === 'display') {
 				return formatter.format(d);
 			}
@@ -116,7 +116,7 @@ DataTable.render.intlNumber = function (locale, options) {
 		};
 	}
 	else {
-		return function (d) {
+		return function (d: any) {
 			return d;
 		};
 	}

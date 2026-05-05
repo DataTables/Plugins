@@ -39,19 +39,19 @@ declare module 'datatables.net' {
 	interface DataTablesStaticRender {
 		/** Renders the column data as HTML anchor (`a` tag) */
 		anchor(
-			type: string,
+			displayType: string,
 			attribute: { [key: string]: any },
 			innerText: string | null
-		);
+		): any;
 	}
 }
 
 DataTable.render.anchor = function (
-	type = 'link',
+	displayType = 'link',
 	attributes = {},
 	innerText = null
 ) {
-	return function (data, type, row, meta = {}) {
+	return function (data: any, type: string, row: any, meta = {}) {
 		// restriction only for table display rendering
 		if (type !== 'display') {
 			return data;
@@ -67,7 +67,7 @@ DataTable.render.anchor = function (
 				: attributes;
 
 		if (!attrs.href) {
-			switch (type) {
+			switch (displayType) {
 				case 'mail':
 					attrs.href = 'mailto:' + data;
 					break;
