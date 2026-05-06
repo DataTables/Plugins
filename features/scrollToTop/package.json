@@ -1,11 +1,10 @@
 {
-	"name": "datatables.net-feature-inputpaging",
-	"version": "2.0.0",
-	"description": "DataTables plugin: Paging control with a page number input for DataTables",
-    "main": "dist/dataTables.inputPaging.js",
-    "module": "dist/dataTables.inputPaging.mjs",
-    "style": "dist/dataTables.inputPaging.css",
-    "types": "dist/types.d.ts",
+	"name": "datatables.net-feature-scrolltotop",
+	"version": "1.0.0",
+	"description": "DataTables plugin: Move the window's scrolling to the top of the table on paging",
+    "main": "dist/dataTables.scrollToTop.js",
+    "module": "dist/dataTables.scrollToTop.mjs",
+    "types": "dist/dataTables.scrollToTop.d.ts",
     "files": [
         "dist/*.css",
         "dist/*.js",

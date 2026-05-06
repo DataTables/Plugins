@@ -1,11 +1,10 @@
 {
-	"name": "datatables.net-feature-inputpaging",
-	"version": "2.0.0",
-	"description": "DataTables plugin: Paging control with a page number input for DataTables",
-    "main": "dist/dataTables.inputPaging.js",
-    "module": "dist/dataTables.inputPaging.mjs",
-    "style": "dist/dataTables.inputPaging.css",
-    "types": "dist/types.d.ts",
+	"name": "datatables.net-feature-conditionalpaging",
+	"version": "1.0.0",
+	"description": "DataTables plugin: Conditionally show the paging control",
+    "main": "dist/dataTables.conditionalPaging.js",
+    "module": "dist/dataTables.conditionalPaging.mjs",
+    "types": "dist/dataTables.conditionalPaging.d.ts",
     "files": [
         "dist/*.css",
         "dist/*.js",

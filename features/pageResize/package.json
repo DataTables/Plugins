@@ -1,11 +1,10 @@
 {
-	"name": "datatables.net-feature-inputpaging",
-	"version": "2.0.0",
-	"description": "DataTables plugin: Paging control with a page number input for DataTables",
-    "main": "dist/dataTables.inputPaging.js",
-    "module": "dist/dataTables.inputPaging.mjs",
-    "style": "dist/dataTables.inputPaging.css",
-    "types": "dist/types.d.ts",
+	"name": "datatables.net-feature-pageresize",
+	"version": "1.0.0",
+	"description": "DataTables plugin: Automatically change the page length to fit the container",
+    "main": "dist/dataTables.pageResize.js",
+    "module": "dist/dataTables.pageResize.mjs",
+    "types": "dist/dataTables.pageResize.d.ts",
     "files": [
         "dist/*.css",
         "dist/*.js",

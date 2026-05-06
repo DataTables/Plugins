@@ -1,11 +1,10 @@
 {
-	"name": "datatables.net-feature-inputpaging",
-	"version": "2.0.0",
-	"description": "DataTables plugin: Paging control with a page number input for DataTables",
-    "main": "dist/dataTables.inputPaging.js",
-    "module": "dist/dataTables.inputPaging.mjs",
-    "style": "dist/dataTables.inputPaging.css",
-    "types": "dist/types.d.ts",
+	"name": "datatables.net-feature-rowfill",
+	"version": "1.0.0",
+	"description": "DataTables plugin: Add rows to make the table the full page length",
+    "main": "dist/dataTables.rowFill.js",
+    "module": "dist/dataTables.rowFill.mjs",
+    "types": "dist/dataTables.rowFill.d.ts",
     "files": [
         "dist/*.css",
         "dist/*.js",

@@ -1,11 +1,11 @@
 {
-	"name": "datatables.net-feature-inputpaging",
-	"version": "2.0.0",
-	"description": "DataTables plugin: Paging control with a page number input for DataTables",
-    "main": "dist/dataTables.inputPaging.js",
-    "module": "dist/dataTables.inputPaging.mjs",
-    "style": "dist/dataTables.inputPaging.css",
-    "types": "dist/types.d.ts",
+	"name": "datatables.net-feature-searchfade",
+	"version": "1.0.0",
+	"description": "DataTables plugin: Fade out search results, rather removing them",
+    "main": "dist/dataTables.searchFade.js",
+    "module": "dist/dataTables.searchFade.mjs",
+    "style": "dist/dataTables.searchFade.css",
+    "types": "dist/dataTables.searchFade.d.ts",
     "files": [
         "dist/*.css",
         "dist/*.js",

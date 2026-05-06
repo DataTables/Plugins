@@ -1,11 +1,10 @@
 {
-	"name": "datatables.net-feature-inputpaging",
-	"version": "2.0.0",
-	"description": "DataTables plugin: Paging control with a page number input for DataTables",
-    "main": "dist/dataTables.inputPaging.js",
-    "module": "dist/dataTables.inputPaging.mjs",
-    "style": "dist/dataTables.inputPaging.css",
-    "types": "dist/types.d.ts",
+	"name": "datatables.net-feature-markjs",
+	"version": "1.0.0",
+	"description": "DataTables plugin: Search term highlighting",
+    "main": "dist/dataTables.markjs.js",
+    "module": "dist/dataTables.markjs.mjs",
+    "types": "dist/dataTables.markjs.d.ts",
     "files": [
         "dist/*.css",
         "dist/*.js",
@@ -18,7 +17,10 @@
 	},
 	"keywords": [
 		"DataTables",
-		"plugins"
+		"plugins",
+		"mark.js",
+		"search",
+		"highlighting"
 	],
 	"author": "SpryMedia Ltd",
 	"license": "MIT",
@@ -27,6 +29,7 @@
 	},
 	"homepage": "https://datatables.net",
 	"dependencies": {
-		"datatables.net": "^3.0.0-0"
+		"datatables.net": "^3.0.0-0",
+		"mark.js": "^8"
 	}
 }

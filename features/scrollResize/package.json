@@ -1,11 +1,10 @@
 {
-	"name": "datatables.net-feature-inputpaging",
-	"version": "2.0.0",
-	"description": "DataTables plugin: Paging control with a page number input for DataTables",
-    "main": "dist/dataTables.inputPaging.js",
-    "module": "dist/dataTables.inputPaging.mjs",
-    "style": "dist/dataTables.inputPaging.css",
-    "types": "dist/types.d.ts",
+	"name": "datatables.net-feature-scrollresize",
+	"version": "1.0.0",
+	"description": "DataTables plugin: Dynamic vertical resizing of a scrolling table",
+    "main": "dist/dataTables.scrollResize.js",
+    "module": "dist/dataTables.scrollResize.mjs",
+    "types": "dist/dataTables.scrollResize.d.ts",
     "files": [
         "dist/*.css",
         "dist/*.js",

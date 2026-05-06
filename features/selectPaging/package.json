@@ -1,6 +1,6 @@
 {
 	"name": "datatables.net-feature-selectpaging",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "Paging control with a 'select' list for DataTables",
     "main": "dist/dataTables.selectPaging.js",
     "module": "dist/dataTables.selectPaging.mjs",
@@ -18,7 +18,6 @@
 	},
 	"keywords": [
 		"DataTables",
-		"jQuery",
 		"plugins"
 	],
 	"author": "SpryMedia Ltd",
@@ -28,6 +27,6 @@
 	},
 	"homepage": "https://datatables.net",
 	"dependencies": {
-		"datatables.net": "^2.1"
+		"datatables.net": "^3.0.0-0"
 	}
 }

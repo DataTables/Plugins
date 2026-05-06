@@ -1,10 +1,10 @@
 {
-	"name": "datatables.net-feature-inputpaging",
-	"version": "2.0.0",
-	"description": "DataTables plugin: Paging control with a page number input for DataTables",
-    "main": "dist/dataTables.inputPaging.js",
-    "module": "dist/dataTables.inputPaging.mjs",
-    "style": "dist/dataTables.inputPaging.css",
+	"name": "datatables.net-feature-fuzzysearch",
+	"version": "1.0.0",
+	"description": "DataTables plugin: Fuzzy search",
+    "main": "dist/dataTables.fuzzySearch.js",
+    "module": "dist/dataTables.fuzzySearch.mjs",
+    "style": "dist/dataTables.fuzzySearch.css",
     "types": "dist/types.d.ts",
     "files": [
         "dist/*.css",
@@ -18,7 +18,8 @@
 	},
 	"keywords": [
 		"DataTables",
-		"plugins"
+		"plugins",
+		"search"
 	],
 	"author": "SpryMedia Ltd",
 	"license": "MIT",

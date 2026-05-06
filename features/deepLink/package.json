@@ -1,11 +1,10 @@
 {
-	"name": "datatables.net-feature-inputpaging",
-	"version": "2.0.0",
-	"description": "DataTables plugin: Paging control with a page number input for DataTables",
-    "main": "dist/dataTables.inputPaging.js",
-    "module": "dist/dataTables.inputPaging.mjs",
-    "style": "dist/dataTables.inputPaging.css",
-    "types": "dist/types.d.ts",
+	"name": "datatables.net-feature-deeplink",
+	"version": "1.0.0",
+	"description": "DataTables plugin: Helper to allow deep links into a DataTable",
+    "main": "dist/dataTables.deepLink.js",
+    "module": "dist/dataTables.deepLink.mjs",
+    "types": "dist/dataTables.deepLink.d.ts",
     "files": [
         "dist/*.css",
         "dist/*.js",
