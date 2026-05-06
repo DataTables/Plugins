@@ -32,7 +32,7 @@ function ts_plugin {
 	fi
 
 	../../node_modules/.bin/tsc \
-		--target esnext \
+		--target es6 \
 		--moduleResolution node \
 		--outDir $DEST_DIR \
 		--declaration \

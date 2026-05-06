@@ -70,7 +70,6 @@ DataTable.ext.search.push(function (context, searchData) {
     return false;
 });
 class AlphabetSearch {
-    _container;
     constructor(context) {
         var table = new DataTable.Api(context);
         var alphabet = Dom.c('div').classAdd('alphabet');

@@ -1,2 +1,0 @@
-/*! © SpryMedia Ltd - datatables.net/license */
-import jQuery from"jquery";import DataTable from"datatables.net";let $=jQuery;$(document).on("preInit.dt",function(t,e){var o;"dt"===t.namespace&&(e.oInit.scrollToTop||DataTable.defaults.scrollToTop)&&(o=new DataTable.Api(e)).on("page",function(){setTimeout(function(){$(document).scrollTop($(o.table().container()).offset().top)},10)})});export default DataTable;

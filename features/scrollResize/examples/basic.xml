@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="html" order="1">
+
+<css lib="datatables">
+div.container {
+	margin: 0 auto;
+	max-width: 980px;
+}
+
+#resize_wrapper {
+	position: relative;
+	height: 300px;
+	padding: 0.5em 0.5em 1.5em 0.5em;
+	border: 1px solid #aaa;
+	border-radius: 0.5em;
+	background-color: #f9f9f9;
+}
+
+#resize_handle {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 1.5em;
+	border-bottom-right-radius: 0.5em;
+	border-bottom-left-radius: 0.5em;
+	text-align: center;
+	font-size: 0.8em;
+	line-height: 1.5em;
+	background-color: #4d90fe;
+	color: white;
+	cursor: pointer;
+}
+
+div.dt-pageLength {
+	display: none;
+}
+</css>
+<js lib="datatables feature-scrollResize">
+<![CDATA[
+
+// Create a manual resize element
+let resizer = DataTable.Dom.c('div')
+	.attr('id', 'resize_wrapper')
+	.append(
+		DataTable.Dom.s('#example')
+	)
+	.append(
+		DataTable.Dom.c('div')
+			.attr('id', 'resize_handle')
+			.text('Click and drag me!')
+	)
+	.appendTo('div.demo-html');
+
+// Resize the demo container with mouse drag
+DataTable.Dom.s('#resize_handle').on('mousedown', function (e) {
+	var mouseStartY = e.pageY;
+	var resizeStartHeight = resizer.height();
+
+	DataTable.Dom.s(document)
+		.on('mousemove.demo', function (e) {
+			var height = resizeStartHeight + (e.pageY - mouseStartY);
+			if (height < 180) {
+				height = 180;
+			}
+
+			resizer.height(height);
+		})
+		.on('mouseup.demo', function (e) {
+			DataTable.Dom.s(document).off('mousemove.demo mouseup.demo');
+		});
+
+	return false;
+});
+
+new DataTable('#example', {
+	scrollY: 300,
+	scrollCollapse: true,
+	scrollResize: true,
+	paging: false,
+	layout: {
+		topStart: null
+	}
+});
+
+]]>
+</js>
+
+<title lib="ScrollResize">Basic demo</title>
+
+<info><![CDATA[
+
+This example shows ScrollResize operating dynamically with a container, the height of which you can control with a click and drag.
+
+]]></info>
+
+</dt-example>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example order="0">
+
+<title>RowFill feature plugin</title>
+
+<js lib="datatables" />
+<info><![CDATA[
+
+This feature plug-in for DataTables will automatically insert temporary rows into a DataTable that draws a page that is less than the configured page length. This can be handy to ensure that your table always as (e.g.) 10 rows visible.
+
+]]></info>
+
+</dt-example>

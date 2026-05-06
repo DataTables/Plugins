@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="html" order="1">
+
+<css lib="datatables" />
+<js lib="datatables feature-rowFill">
+<![CDATA[
+new DataTable('#example', {
+	rowFill: true
+});
+]]>
+</js>
+
+<title lib="RowFill">Basic example</title>
+
+<info><![CDATA[
+
+This plugin for DataTables will make sure that the number of rows in a page is always that of the page length. This can be useful for filling a gap in a UI. It does this by appending empty rows to the table on each row (as needed).
+
+The plugin is active on this table and to see it in action, jump to the final page, or apply a search term to the table to reduce the number of rows to less than 10.
+
+]]></info>
+
+</dt-example>

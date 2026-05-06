@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example order="0">
+
+<title>ScrollToDrop feature plugin</title>
+
+<js lib="datatables" />
+<info><![CDATA[
+
+This feature will cause the scrolling of the page to shift to the top of the table when the table is paged.
+
+]]></info>
+
+</dt-example>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="html" order="1">
+
+<css lib="datatables feature-lengthLinks" />
+<js lib="datatables feature-lengthLinks">
+<![CDATA[
+new DataTable('#example', {
+	layout: {
+		topStart: 'lengthLinks'
+	}
+});
+]]>
+</js>
+
+<title lib="LengthLinks">Basic example</title>
+
+<info><![CDATA[
+
+This example demonstrates the LengthLinks feature for DataTables - replacing the default `-tag select` with a series of links that can be clicked on to change the table's page size.
+
+]]></info>
+
+</dt-example>

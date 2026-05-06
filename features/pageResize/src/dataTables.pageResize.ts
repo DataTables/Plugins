@@ -68,7 +68,7 @@ interface ISizes {
 	footerHeight: number;
 }
 
-export default class PageResize {
+class PageResize {
 	private s: ISettings;
 	private sizes: ISizes;
 

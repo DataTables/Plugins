@@ -7,24 +7,24 @@
  * @author      SpryMedia Ltd
  * @requires    DataTables 3+
  *
- * This feature plug-in for DataTables will automatically change the DataTables
- * page length in order to fit inside its container. This can be particularly
+ * This feature plug-in for DataTables will automatically change the height of a
+ * scrolling DataTable to fit inside its container. This can be particularly
  * useful for control panels and other interfaces which resize dynamically with
- * the user's browser window instead of scrolling.
+ * the user's browser window.
  *
  * Page resizing in DataTables can be enabled by using any one of the following
  * options:
  *
- * * Setting the `scrollResize` parameter in the DataTables initialisation to
- *   be true - i.e. `scrollResize: true`
- * * Setting the `scrollResize` parameter to be true in the DataTables
- *   defaults (thus causing all tables to have this feature) - i.e.
+ * * Setting the `scrollResize` parameter in the DataTables initialisation to be
+ *   true - i.e. `scrollResize: true`
+ * * Setting the `scrollResize` parameter to be true in the DataTables defaults
+ *   (thus causing all tables to have this feature) - i.e.
  *   `DataTable.defaults.scrollResize = true`.
  * * Creating a new instance: `new DataTable.ScrollResize( table );` where
  *   `table` is a DataTable's API instance.
  */
 
-import DataTable, { Api, Dom } from 'datatables.net';
+import DataTable, { Api, Context, Dom } from 'datatables.net';
 
 declare module 'datatables.net' {
 	interface DataTablesStatic {
@@ -82,13 +82,10 @@ class ScrollResize {
 			that._size();
 		});
 
-		dt.on(
-			'destroy.scrollResize',
-			function () {
-				dt.off('.scrollResize');
-				this.s.obj && this.s.obj.remove();
-			}.bind(this)
-		);
+		dt.on('destroy.scrollResize', () => {
+			dt.off('.scrollResize');
+			this.s.obj && this.s.obj.remove();
+		});
 
 		this._attach();
 		this._size();
@@ -99,18 +96,20 @@ class ScrollResize {
 		// scrollbar is no longer present.
 		var settings = dt.settings()[0];
 		var divBodyEl = settings.scrollBody;
-		var scrollBarVis = divBodyEl[0].scrollHeight > divBodyEl[0].clientHeight;
+		var scrollBarVis =
+			divBodyEl[0].scrollHeight > divBodyEl[0].clientHeight;
 
 		if (settings.scrollBarVis && !scrollBarVis) {
 			dt.columns.adjust();
 		}
 	}
-		
-	private _size () {
+
+	private _size() {
 		var settings = this.s;
 		var dt = settings.dt;
 		var t = dt.table();
-		var offsetTop = settings.table.offset()!.top + settings.host.offset()!.top;
+		var offsetTop =
+			settings.table.offset()!.top + settings.host.offset()!.top;
 		var availableHeight = settings.host.height();
 		var scrollBody = Dom.s(t.container()).find('div.dt-scroll-body');
 
@@ -126,7 +125,7 @@ class ScrollResize {
 		});
 	}
 
-	private _attach () {
+	private _attach() {
 		// There is no `resize` event for elements, so to trigger this effect,
 		// create an empty HTML document using an <iframe> which will issue a
 		// resize event inside itself when the document resizes. Since it is
@@ -174,19 +173,19 @@ class ScrollResize {
 
 		this.s.obj = obj;
 	}
-};
+}
 
 DataTable.ScrollResize = ScrollResize;
 
 // Automatic initialisation listener
-Dom.s(document).on('init.dt', function (e, settings) {
+Dom.s(document).on('init.dt', function (e, settings: Context) {
 	if (e.namespace !== 'dt') {
 		return;
 	}
 
 	var api = new DataTable.Api(settings);
 
-	if (settings.oInit.scrollResize || DataTable.defaults.scrollResize) {
+	if (settings.init.scrollResize || DataTable.defaults.scrollResize) {
 		new ScrollResize(api);
 	}
 });

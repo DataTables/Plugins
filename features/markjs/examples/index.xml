@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example order="0">
+
+<title>Mark.js integration</title>
+
+<js lib="datatables" />
+<info><![CDATA[
+
+This plugin provides integration with [mark.js](https://markjs.io/) to highlight search terms in the table.
+
+]]></info>
+
+</dt-example>

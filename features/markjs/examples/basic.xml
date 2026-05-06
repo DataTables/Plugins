@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="html" order="1">
+
+<css lib="datatables" />
+<js lib="//cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"/>
+<js lib="datatables feature-markjs">
+<![CDATA[
+new DataTable('#example', {
+	mark: true
+});
+]]>
+</js>
+
+<title lib="Mark.js">Search highlighting</title>
+
+<info><![CDATA[
+
+[Mark.js](https://markjs.io/) is a library will highlight words on the web-page, and this integration with DataTables provides search term highlighting.
+
+Use the global search box for the DataTable and notice that the values are highlighted in the resulting table.
+
+]]></info>
+
+</dt-example>

@@ -44,9 +44,10 @@ Dom.s(document).on('preInit.dt', function (e, settings: Context) {
 
 		api.on('page', function () {
 			setTimeout(function () {
-				Dom.s(document).scrollTop(
-					Dom.s(api.table().container()).offset()!.top
-				);
+				window.scrollTo({
+					top: Dom.s(api.table().container()).offset()!.top,
+					behavior: 'smooth'
+				});
 			}, 10);
 		});
 	}

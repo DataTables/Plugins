@@ -190,7 +190,8 @@ Dom.s(document).on('init.dt', function (e, settings) {
                 }
                 // For each row call the fuzzy search function to get result
                 api.rows().iterator('row', function (settings, rowIdx) {
-                    settings.data[rowIdx]._fuzzySearch = fuzzySearch(fuzzySearchVal, settings.data[rowIdx]?.searchCellCache, initialFuzzy);
+                    var _a;
+                    settings.data[rowIdx]._fuzzySearch = fuzzySearch(fuzzySearchVal, (_a = settings.data[rowIdx]) === null || _a === void 0 ? void 0 : _a.searchCellCache, initialFuzzy);
                 }, false);
                 fromPlugin = true;
                 // Empty the datatables search and replace it with our own
@@ -213,7 +214,8 @@ Dom.s(document).on('init.dt', function (e, settings) {
             input.val(fuzzySearchVal);
             // For each row call the fuzzy search function to get result
             api.rows().iterator('row', function (settings, rowIdx) {
-                settings.data[rowIdx]._fuzzySearch = fuzzySearch(fuzzySearchVal, settings.data[rowIdx]?.searchCellCache, initialFuzzy);
+                var _a;
+                settings.data[rowIdx]._fuzzySearch = fuzzySearch(fuzzySearchVal, (_a = settings.data[rowIdx]) === null || _a === void 0 ? void 0 : _a.searchCellCache, initialFuzzy);
             }, false);
             // triggerSearchFunction({key: 'Enter'});
             return this;

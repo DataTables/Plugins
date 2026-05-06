@@ -4,19 +4,6 @@
 <css lib="datatables feature-selectPaging" />
 <js lib="jquery datatables feature-selectPaging">
 <![CDATA[
-$('#example').DataTable({
-	layout: {
-		bottomEnd: {
-			selectPaging: {
-				pageOf: false
-			}
-		}
-	}
-});
-]]>
-</js>
-<js-vanilla>
-<![CDATA[
 new DataTable('#example', {
 	layout: {
 		bottomEnd: {
@@ -27,7 +14,7 @@ new DataTable('#example', {
 	}
 });
 ]]>
-</js-vanilla>
+</js>
 
 <title lib="SelectPaging">Disable "page of"</title>
 

@@ -26,78 +26,90 @@
  *   } );
  */
 
-import DataTable, { Dom } from 'datatables.net';
+import DataTable, { Context, Dom } from 'datatables.net';
 
 declare module 'datatables.net' {
 	interface DataTablesStatic {
 		/** Page length control via links for DataTables */
-		LengthLinks(settings: any): void;
+		LengthLinks: typeof LengthLinks;
 	}
 
 	interface Feature {
-		lengthLinks?: {}
+		lengthLinks?: {};
 	}
 }
 
-DataTable.LengthLinks = function (inst) {
-	var api = new DataTable.Api(inst);
-	var settings = api.settings()[0];
-	var container = Dom.s('div').classAdd('dt-lengthLinks');
-	var lastLength: number | null = null;
+class LengthLinks {
+	private container: Dom;
 
-	// API so the feature wrapper can return the node to insert
-	this.container = function () {
-		return container[0];
-	};
+	constructor(inst: Context) {
+		var api = new DataTable.Api(inst);
+		var settings = api.settings()[0];
+		var container = Dom.c('div').classAdd('dt-lengthLinks');
+		var lastLength: number | null = null;
 
-	// Listen for events to change the page length
-	container.on('click.dtll', 'a', function (e) {
-		e.preventDefault();
-		api.page.len(parseInt(Dom.s(this).data('length'))).draw(false);
-	});
+		this.container = container;
 
-	// Update on each draw
-	api.on('draw', function () {
-		// No point in updating - nothing has changed
-		if (api.page.len() === lastLength) {
-			return;
-		}
-
-		var menu = settings.lengthMenu;
-		var lang = menu.length === 2 && Array.isArray(menu[0]) ? menu[1] : menu;
-		var lens = menu.length === 2 && Array.isArray(menu[0]) ? menu[0] : menu;
-
-		var out = lens.map((el, i) => {
-			return el == api.page.len()
-				? '<a class="active" data-length="' + lens[i] + '">' + lang[i] + '</a>'
-				: '<a data-length="' + lens[i] + '">' + lang[i] + '</a>';
+		// Listen for events to change the page length
+		container.on('click.dtll', 'a', function (e) {
+			e.preventDefault();
+			api.page.len(parseInt(Dom.s(this).data('length'))).draw(false);
 		});
 
-		container.html(
-			settings.language.lengthMenu
-				.replace('_MENU_', out.join(' | '))
-				.replace('_ENTRIES_', api.i18n('entries', '', 10))
-		);
-		lastLength = api.page.len();
-	});
+		// Update on each draw
+		api.on('draw', function () {
+			// No point in updating - nothing has changed
+			if (api.page.len() === lastLength) {
+				return;
+			}
 
-	api.on('destroy', function () {
-		container.off('click.dtll', 'a');
-	});
-};
+			var menu = settings.lengthMenu;
+			var lang =
+				menu.length === 2 && Array.isArray(menu[0]) ? menu[1] : menu;
+			var lens =
+				menu.length === 2 && Array.isArray(menu[0]) ? menu[0] : menu;
+
+			var out = lens.map((el, i) => {
+				return el == api.page.len()
+					? '<a class="active" data-length="' +
+							lens[i] +
+							'">' +
+							lang[i] +
+							'</a>'
+					: '<a data-length="' + lens[i] + '">' + lang[i] + '</a>';
+			});
+
+			container.html(
+				settings.language.lengthMenu
+					.replace('_MENU_', out.join(' | '))
+					.replace('_ENTRIES_', api.i18n('entries', '', 10))
+			);
+			lastLength = api.page.len();
+		});
+
+		api.on('destroy', function () {
+			container.off('click.dtll', 'a');
+		});
+	}
+
+	public node() {
+		return this.container[0];
+	}
+}
+DataTable.LengthLinks = LengthLinks;
 
 // Legacy `dom` option
 DataTable.ext.feature.push({
-	fnInit: function (settings) {
+	fnInit: function (settings: Context) {
 		var l = new DataTable.LengthLinks(settings);
-		return l.container();
+		return l.node();
 	},
 	cFeature: 'L',
-	sFeature: 'LengthLinks',
+	sFeature: 'LengthLinks'
 });
 
 // Feature registration
 DataTable.feature.register('lengthLinks', function (settings) {
 	var l = new DataTable.LengthLinks(settings);
-	return l.container();
+	return l.node();
 });

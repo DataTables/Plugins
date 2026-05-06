@@ -62,17 +62,22 @@ DataTable.Api.register('searchFade().node()', function (this: Api) {
 	return this.settings()[0].searchFadeNode;
 });
 
-export default class SearchFade {
+class SearchFade {
 	private searchFade: Dom;
+	private input: Dom;
 
 	constructor(settings: Context) {
+		var that = this;
 		var table = new DataTable.Api(settings);
-		var searchFade = Dom.c('div').classAdd('searchFade');
+		var searchFade = Dom.c('div').classAdd('searchFade').append('Search: ');
 
 		table.settings()[0].searchFadeNode = searchFade;
 		this.searchFade = searchFade;
 
-		this._draw(table, searchFade);
+		this.input = Dom.c('input')
+			.attr('type', 'text')
+			.classAdd(['dt-input', 'searchFadeInput'])
+			.appendTo(searchFade);
 
 		// Trigger a search
 		searchFade.on('keyup redraw', 'input', function () {
@@ -80,9 +85,7 @@ export default class SearchFade {
 				.rows({ page: 'current' })
 				.every(function (rowIdx, tableLoop, rowLoop) {
 					var present = true;
-					var val = Dom.s(
-						'.searchFadeInput' + table.settings()[0].tableId
-					).val();
+					var val = that.input.val();
 
 					if (val.length) {
 						present = table
@@ -109,17 +112,9 @@ export default class SearchFade {
 	public node() {
 		return this.searchFade;
 	}
-
-	private _draw(table: Api, searchFade: Dom) {
-		searchFade.empty();
-		searchFade.append('Search: ');
-
-		Dom.c('input')
-			.attr('type', 'text')
-			.classAdd('searchFadeInput')
-			.appendTo(searchFade);
-	}
 }
+
+DataTable.SearchFade = SearchFade;
 
 // Legacy `dom` interface
 DataTable.ext.feature.push({

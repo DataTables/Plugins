@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example order="0">
+
+<title>PageResize</title>
+
+<js lib="datatables" />
+<info><![CDATA[
+
+This feature plug-in for DataTables will automatically change the DataTables page length in order to fit inside its container. This can be particularly useful for control panels and other interfaces which resize dynamically with the user's browser window instead of scrolling.
+
+]]></info>
+
+</dt-example>

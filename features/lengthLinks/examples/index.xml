@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example order="0">
+
+<title>LengthLinks feature plugin</title>
+
+<js lib="datatables" />
+<info><![CDATA[
+
+The LengthLinks plugin for DataTables which adds a _feature_ to DataTables for use in the `-init layout` option. The `lengthLinks` feature shows a paging length control as a set of links that can be clicked on to change the table's page size.
+
+]]></info>
+
+</dt-example>

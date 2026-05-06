@@ -18,7 +18,7 @@
 		run: function () {
 				
 
-$('#example').DataTable({
+new DataTable('#example', {
 	layout: {
 		bottomEnd: {
 			selectPaging: {
@@ -534,7 +534,7 @@ $('#example').DataTable({
 				<div class="js">
 					<p>The JavaScript shown below is used to initialise the table shown in this example:</p>
 					<div id="js">
-						<code class="multiline language-js">$(&#039;#example&#039;).DataTable({
+						<code class="multiline language-js">new DataTable(&#039;#example&#039;, {
 	layout: {
 		bottomEnd: {
 			selectPaging: {

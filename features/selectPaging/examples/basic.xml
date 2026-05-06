@@ -2,16 +2,7 @@
 <dt-example table-type="html" order="1">
 
 <css lib="datatables feature-selectPaging" />
-<js lib="jquery datatables feature-selectPaging">
-<![CDATA[
-$('#example').DataTable({
-	layout: {
-		bottomEnd: 'selectPaging'
-	}
-});
-]]>
-</js>
-<js-vanilla>
+<js lib="datatables feature-selectPaging">
 <![CDATA[
 new DataTable('#example', {
 	layout: {
@@ -19,7 +10,7 @@ new DataTable('#example', {
 	}
 });
 ]]>
-</js-vanilla>
+</js>
 
 <title lib="SelectPaging">Basic example</title>
 

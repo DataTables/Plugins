@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="html" order="1">
+
+<css lib="datatables" />
+<js lib="datatables feature-scrollToTop">
+<![CDATA[
+new DataTable('#example', {
+	scrollToTop: true
+});
+]]>
+</js>
+
+<title lib="ScrollToTop">Basic example</title>
+
+<info><![CDATA[
+
+When you have a long table, it can be useful to have the document automatically scroll back to the top of the table when paged. That is what this plugin does when activated on a DataTable.
+
+To see it in action, change the page length to 25 or more, then scroll down to the paging control and change to the next page. Note that the document scroll position is moved to the top of the table.
+
+]]></info>
+
+</dt-example>

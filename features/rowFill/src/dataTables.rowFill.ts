@@ -46,7 +46,7 @@ interface ISettings {
 	body: Dom;
 }
 
-export default class RowFill {
+class RowFill {
 	private s: ISettings;
 
 	constructor(dt: Api) {
