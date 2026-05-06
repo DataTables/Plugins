@@ -1,0 +1,2 @@
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
+import DataTable from"datatables.net";DataTable.deepLink=function(e){for(var a=location.search.replace(/^\?/,"").split("&"),t={},l=0,r=a.length;l<r;l++){var i=a[l].split("="),n=decodeURIComponent(i[0]),i=decodeURIComponent(i[1]);if("true"===i)i=!0;else if("false"===i)i=!1;else if(i.match(/[^\d]/)||"search.search"===n){if(0===i.indexOf("{")||0===i.indexOf("["))try{i=JSON.parse(i)}catch(e){}}else i=+i;"all"!==e&&-1===e.indexOf(n)||DataTable.util.set(n)(t,i,{})}return t};export default DataTable;

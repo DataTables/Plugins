@@ -1,0 +1,2 @@
+/*! © SpryMedia Ltd, Matthew Hasbach - datatables.net/license - 3.0.0-beta.2 */
+import DataTable,{Dom,util}from"datatables.net";Dom.s(document).on("init.dt",function(a,i){var n;"dt"===a.namespace&&(a=i.init.conditionalPaging||DataTable.defaults.conditionalPaging,util.is.plainObject(a)||!0===a)&&(util.is.plainObject(a),n=new DataTable.Api(i),(a=function(a){var i=Dom.s(n.table().container()).find("div.dt-paging"),t=n.page.info().pages;i.css("visibility",t<=1?"hidden":"")})(),n.on("draw.dt",a))});export default DataTable;

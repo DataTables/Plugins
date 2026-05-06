@@ -1,6 +1,6 @@
 /*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
 
-import DataTable, from 'datatables.net';
+import DataTable from 'datatables.net';
 
 /**
  * @summary     LengthLinks

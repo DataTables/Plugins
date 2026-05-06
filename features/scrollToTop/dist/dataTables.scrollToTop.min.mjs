@@ -1,0 +1,2 @@
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
+import DataTable,{Dom}from"datatables.net";Dom.s(document).on("preInit.dt",function(o,t){if("dt"===o.namespace&&(t.init.scrollToTop||DataTable.defaults.scrollToTop)){let o=new DataTable.Api(t);o.on("page",function(){setTimeout(function(){window.scrollTo({top:Dom.s(o.table().container()).offset().top,behavior:"smooth"})},10)})}});export default DataTable;
