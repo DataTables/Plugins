@@ -1,0 +1,122 @@
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
+
+(function(factory){
+	if (typeof define === 'function' && define.amd) {
+		// AMD
+		define(['datatables.net'], function (dt) {
+			return factory(window, document, dt);
+		});
+	}
+	else if (typeof exports === 'object') {
+		// CommonJS
+		var cjsRequires = function (root) {
+			if (! root.DataTable) {
+				require('datatables.net')(root);
+			}
+		};
+
+		if (typeof window === 'undefined') {
+			module.exports = function (root) {
+				if (! root) {
+					// CommonJS environments without a window global must pass a
+					// root. This will give an error otherwise
+					root = window;
+				}
+
+				cjsRequires(root);
+				return factory(root, root.document, root.DataTable);
+			};
+		}
+		else {
+			cjsRequires(window);
+			module.exports = factory(window, window.document, window.DataTable);
+		}
+	}
+	else {
+		// Browser
+		factory(window, document, window.DataTable);
+	}
+}(function(window, document, DataTable) {
+'use strict';
+
+
+/**
+ * @summary     LengthLinks
+ * @description Deep linking options parsing support for DataTables
+ * @file        dataTables.deepLink.js
+ * @author      SpryMedia Ltd
+ * @copyright   Copyright SpryMedia Ltd.
+ * @license     MIT - http://datatables.net/license/mit
+ *
+ * This feature plug-in for DataTables provides a function which will
+ * take DataTables options from the browser's URL search string and
+ * return an object that can be used to construct a DataTable. This
+ * allows deep linking to be easily implemented with DataTables - for
+ * example a URL might be `myTable?displayStart=10` which will
+ * automatically cause the second page of the DataTable to be displayed.
+ *
+ * This plug-in works on a whitelist basis - you must specify which
+ * [initialisation parameters](//datatables.net/reference/option) you
+ * want the URL search string to specify. Any parameter given in the
+ * URL which is not listed will be ignored (e.g. you are unlikely to
+ * want to let the URL search string specify the `ajax` option).
+ *
+ * This specification is done by passing an array of property names
+ * to the `DataTable.deepLink` function. If you do which to
+ * allow _every_ parameter (I wouldn't recommend it) you can use `all`
+ * instead of an array.
+ *
+ * @example
+ *   // Allow a display start point and search string to be specified
+ *   new DataTable(
+ *     '#example',
+ *     DataTable.deepLink(['pageLength', 'search.search'])
+ *   );
+ *
+ * @example
+ *   // As above, but with a default search
+ *   var options = DataTable.deepLink(['displayStart', 'search.search']);
+ *
+ *   new DataTable(
+ *     '#myTable',
+ *     DataTable.util.object.assignDeep({
+ *       search: { search: 'Initial search value' }
+ *     }, options)
+ *   );
+ */
+DataTable.deepLink = function (whitelist) {
+    var search = location.search.replace(/^\?/, '').split('&');
+    var out = {};
+    for (var i = 0, ien = search.length; i < ien; i++) {
+        var pair = search[i].split('=');
+        var key = decodeURIComponent(pair[0]);
+        var value = decodeURIComponent(pair[1]);
+        // "Casting"
+        if (value === 'true') {
+            value = true;
+        }
+        else if (value === 'false') {
+            value = false;
+        }
+        else if (!value.match(/[^\d]/) && key !== 'search.search') {
+            // don't convert if searching or it'll break the search
+            value = value * 1;
+        }
+        else if (value.indexOf('{') === 0 || value.indexOf('[') === 0) {
+            // Try to JSON parse for arrays and objects
+            try {
+                value = JSON.parse(value);
+            }
+            catch (e) { }
+        }
+        if (whitelist === 'all' || whitelist.indexOf(key) !== -1) {
+            var setter = DataTable.util.set(key);
+            setter(out, value, {});
+        }
+    }
+    return out;
+};
+
+
+return DataTable;
+}));

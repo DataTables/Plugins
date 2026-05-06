@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example order="0">
+
+<title>AlphabetSearch feature plugin</title>
+
+<js lib="datatables" />
+<info><![CDATA[
+
+Show an set of alphabet buttons alongside a table providing search input options.
+
+]]></info>
+
+</dt-example>

@@ -15,7 +15,7 @@
  * @example
  *   new DataTable('#myTable', {
  *     layout: {
- *       topStart: 'alphabetSearch;
+ *       top: 'alphabetSearch'
  *     }
  *   });
  */
@@ -175,7 +175,7 @@ class AlphabetSearch {
 						left: Dom.s(this).position().left + 'px',
 						width: Dom.s(this).width() + 'px'
 					})
-					.html(Dom.s(this).data('match-count'));
+					.html(Dom.s(this).data('matchCount'));
 			})
 			.on('mouseleave', 'span', function () {
 				alphabet.find('div.alphabetInfo').css('opacity', '0');
@@ -223,7 +223,7 @@ class AlphabetSearch {
 		Dom.c('span')
 			.classAdd('clear active')
 			.data('letter', '')
-			.data('match-count', columnData.length)
+			.data('matchCount', columnData.length)
 			.html('None')
 			.appendTo(alphabet);
 
@@ -233,7 +233,7 @@ class AlphabetSearch {
 
 				Dom.c('span')
 					.data('letter', letter)
-					.data('match-count', bins[letter] || 0)
+					.data('matchCount', bins[letter] || 0)
 					.classAdd(!bins[letter] ? 'empty' : '')
 					.html(letter)
 					.appendTo(alphabet);
@@ -244,7 +244,7 @@ class AlphabetSearch {
 
 			Dom.c('span')
 				.data('letter', letter)
-				.data('match-count', bins[letter] || 0)
+				.data('matchCount', bins[letter] || 0)
 				.classAdd(!bins[letter] ? 'empty' : '')
 				.html(letter)
 				.appendTo(alphabet);
@@ -255,7 +255,7 @@ class AlphabetSearch {
 
 				Dom.c('span')
 					.data('letter', letter)
-					.data('match-count', bins[letter] || 0)
+					.data('matchCount', bins[letter] || 0)
 					.classAdd(!bins[letter] ? 'empty' : '')
 					.html(letter)
 					.appendTo(alphabet);

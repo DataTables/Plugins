@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="html" order="1">
+
+<css lib="datatables" />
+<js lib="datatables feature-deepLink">
+<![CDATA[
+new DataTable(
+	'#example',
+	DataTable.deepLink(['pageLength', 'search.search'])
+);
+]]>
+</js>
+
+<title lib="DeepLink">Basic example</title>
+
+<info><![CDATA[
+
+DeepLink provides an easy way to parse values from a URL query string and use them as DataTables initialisation values. In this way, a link can be provides to navigate to a specific configuration for the table.
+
+Use the following links to this page to see the results:
+
+* [Default - no options](basic.html)
+* [Apply "software" as a search term](basic.html?search.search=software)
+* [Set page size to 25](basic.html?pageLength=25)
+
+]]></info>
+
+</dt-example>

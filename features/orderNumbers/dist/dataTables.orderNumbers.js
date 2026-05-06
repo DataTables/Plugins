@@ -1,50 +1,71 @@
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
 
-
-(function( factory ){
-	if ( typeof define === 'function' && define.amd ) {
+(function(factory){
+	if (typeof define === 'function' && define.amd) {
 		// AMD
-		define( ['jquery', 'datatables.net'], function ( $ ) {
-			return factory( $, window, document );
-		} );
+		define(['datatables.net'], function (dt) {
+			return factory(window, document, dt);
+		});
 	}
-	else if ( typeof exports === 'object' ) {
+	else if (typeof exports === 'object') {
 		// CommonJS
-		var jq = require('jquery');
-		var cjsRequires = function (root, $) {
-			if ( ! $.fn.dataTable ) {
-				require('datatables.net')(root, $);
+		var cjsRequires = function (root) {
+			if (! root.DataTable) {
+				require('datatables.net')(root);
 			}
 		};
 
 		if (typeof window === 'undefined') {
-			module.exports = function (root, $) {
-				if ( ! root ) {
+			module.exports = function (root) {
+				if (! root) {
 					// CommonJS environments without a window global must pass a
 					// root. This will give an error otherwise
 					root = window;
 				}
 
-				if ( ! $ ) {
-					$ = jq( root );
-				}
-
-				cjsRequires( root, $ );
-				return factory( $, root, root.document );
+				cjsRequires(root);
+				return factory(root, root.document, root.DataTable);
 			};
 		}
 		else {
-			cjsRequires( window, jq );
-			module.exports = factory( jq, window, window.document );
+			cjsRequires(window);
+			module.exports = factory(window, window.document, window.DataTable);
 		}
 	}
 	else {
 		// Browser
-		factory( jQuery, window, document );
+		factory(window, document, window.DataTable);
 	}
-}(function( $, window, document ) {
+}(function(window, document, DataTable) {
 'use strict';
-var DataTable = $.fn.dataTable;
 
+var Dom = DataTable.Dom;
+
+/**
+ * @summary     OrderNumbers
+ * @description Display ordering sequence along side the header cell
+ * @author      SpryMedia Ltd
+ * @copyright   Copyright SpryMedia Ltd.
+ * @license     MIT - http://datatables.net/license/mit
+ *
+ * This feature is for use with a DataTable when multi-column sorting. It will
+ * show an icon above each column that is being used for the current sort,
+ * indicating the position of that column in the sort sequence.
+ *
+ * @example
+ *   // Allow a display start point and search string to be specified
+ *   new DataTable('#myTable', {
+ *     orderNumbers: true
+ *   );
+ *
+ * @example
+ *   // As above, but with a default search
+ *   new DataTable('#myTable', {
+ *     orderNumbers: {
+ *       className: 'my-ordering-class'
+ *     }
+ *   );
+ */
 /**
  * Add event listeners to apply orderNumbers to a table
  *
@@ -65,7 +86,7 @@ function orderNumbers(src, opts) {
 }
 /** Remove all existing indicators */
 function remove(table, opts) {
-    $('span.' + opts.className, table.table().header()).remove();
+    Dom.s(table.table().header()).find('span.' + opts.className).remove();
 }
 /** Draw in new indicators for the currently applied order */
 function draw(table, opts) {
@@ -77,9 +98,9 @@ function draw(table, opts) {
             if (!col.visible()) {
                 continue;
             }
-            $('<span>')
-                .addClass(opts.className)
-                .text(i + 1)
+            Dom.c('span')
+                .classAdd(opts.className)
+                .text((i + 1).toString())
                 .appendTo(cell);
         }
     }
@@ -102,13 +123,13 @@ function applyOptions(optsOut, optsIn) {
 }
 // Listen for DataTable's initialisation's so we can check if the plug-in should
 // be automatically activated or not.
-$(document).on('init.dt', function (e, settings) {
+Dom.s(document).on('init.dt', function (e, settings) {
     if (e.namespace !== 'dt') {
         return;
     }
     let opts = Object.assign({}, orderNumbers.defaults);
     applyOptions(opts, DataTable.defaults.orderNumbers);
-    applyOptions(opts, settings.oInit.orderNumbers);
+    applyOptions(opts, settings.init.orderNumbers);
     if (opts.enable) {
         orderNumbers(settings, opts);
     }

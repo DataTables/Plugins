@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="html" order="1">
+
+<css lib="datatables feature-alphabetSearch" />
+<js lib="datatables feature-alphabetSearch">
+<![CDATA[
+new DataTable('#example', {
+	layout: {
+		top: 'alphabetSearch'
+	}
+});
+]]>
+</js>
+
+<title lib="AlphabetSearch">Basic example</title>
+
+<info><![CDATA[
+
+This example demonstrates the AlphabetSearch input control, which shows a list of characters which the user can click on to search the table.
+
+]]></info>
+
+</dt-example>

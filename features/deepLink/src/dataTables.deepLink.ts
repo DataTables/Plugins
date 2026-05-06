@@ -28,15 +28,17 @@
  *
  * @example
  *   // Allow a display start point and search string to be specified
- *   new DataTable('#myTable', {
- *     DataTable.deepLink( [ 'displayStart', 'search.search' ] )
+ *   new DataTable(
+ *     '#example',
+ *     DataTable.deepLink(['pageLength', 'search.search'])
  *   );
  *
  * @example
  *   // As above, but with a default search
  *   var options = DataTable.deepLink(['displayStart', 'search.search']);
  *
- *   new DataTable('#myTable', {
+ *   new DataTable(
+ *     '#myTable',
  *     DataTable.util.object.assignDeep({
  *       search: { search: 'Initial search value' }
  *     }, options)

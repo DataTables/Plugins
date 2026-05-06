@@ -1,50 +1,62 @@
+/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
 
-
-(function( factory ){
-	if ( typeof define === 'function' && define.amd ) {
+(function(factory){
+	if (typeof define === 'function' && define.amd) {
 		// AMD
-		define( ['jquery', 'datatables.net'], function ( $ ) {
-			return factory( $, window, document );
-		} );
+		define(['datatables.net'], function (dt) {
+			return factory(window, document, dt);
+		});
 	}
-	else if ( typeof exports === 'object' ) {
+	else if (typeof exports === 'object') {
 		// CommonJS
-		var jq = require('jquery');
-		var cjsRequires = function (root, $) {
-			if ( ! $.fn.dataTable ) {
-				require('datatables.net')(root, $);
+		var cjsRequires = function (root) {
+			if (! root.DataTable) {
+				require('datatables.net')(root);
 			}
 		};
 
 		if (typeof window === 'undefined') {
-			module.exports = function (root, $) {
-				if ( ! root ) {
+			module.exports = function (root) {
+				if (! root) {
 					// CommonJS environments without a window global must pass a
 					// root. This will give an error otherwise
 					root = window;
 				}
 
-				if ( ! $ ) {
-					$ = jq( root );
-				}
-
-				cjsRequires( root, $ );
-				return factory( $, root, root.document );
+				cjsRequires(root);
+				return factory(root, root.document, root.DataTable);
 			};
 		}
 		else {
-			cjsRequires( window, jq );
-			module.exports = factory( jq, window, window.document );
+			cjsRequires(window);
+			module.exports = factory(window, window.document, window.DataTable);
 		}
 	}
 	else {
 		// Browser
-		factory( jQuery, window, document );
+		factory(window, document, window.DataTable);
 	}
-}(function( $, window, document ) {
+}(function(window, document, DataTable) {
 'use strict';
-var DataTable = $.fn.dataTable;
 
+
+/**
+ * @summary     InputPaging
+ * @description Paging control with an input element for direct value input
+ * @author      SpryMedia Ltd
+ * @requires    DataTables 3+
+ *
+ * This feature adds a paging control to the table with an `input` element
+ * showing the current page and allowing the end user to type in the page they
+ * want to jump to.
+ *
+ * @example
+ *   new DataTable('#myTable', {
+ *     layout: {
+ *       bottomEnd: 'inputPaging'
+ *     }
+ *   });
+ */
 DataTable.feature.register('inputPaging', function (settings, opts) {
     let api = new DataTable.Api(settings);
     let tags = stylingStructure(api);
@@ -55,25 +67,25 @@ DataTable.feature.register('inputPaging', function (settings, opts) {
     }, opts);
     // Create the DOM elements for the paging control
     let wrapper = createElement(tags.wrapper);
-    let first = createElement(tags.item, api.i18n('oPaginate.sFirst', '\u00AB'), (e) => {
+    let first = createElement(tags.item, api.i18n('paginate.first', '\u00AB'), (e) => {
         e.preventDefault();
         if (!first.classList.contains(tags.item.disabled)) {
             api.page('first').draw(false);
         }
     });
-    let previous = createElement(tags.item, api.i18n('oPaginate.sPrevious', '\u2039'), (e) => {
+    let previous = createElement(tags.item, api.i18n('paginate.previous', '\u2039'), (e) => {
         e.preventDefault();
         if (!previous.classList.contains(tags.item.disabled)) {
             api.page('previous').draw(false);
         }
     });
-    let next = createElement(tags.item, api.i18n('oPaginate.sNext', '\u203A'), (e) => {
+    let next = createElement(tags.item, api.i18n('paginate.next', '\u203A'), (e) => {
         e.preventDefault();
         if (!next.classList.contains(tags.item.disabled)) {
             api.page('next').draw(false);
         }
     });
-    let last = createElement(tags.item, api.i18n('oPaginate.sLast', '\u00BB'), (e) => {
+    let last = createElement(tags.item, api.i18n('paginate.last', '\u00BB'), (e) => {
         e.preventDefault();
         if (!last.classList.contains(tags.item.disabled)) {
             api.page('last').draw(false);

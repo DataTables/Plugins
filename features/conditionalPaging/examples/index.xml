@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example order="0">
+
+<title>ConditionalPaging feature plugin</title>
+
+<js lib="datatables" />
+<info><![CDATA[
+
+Shows or hides the paging control depending on the amount of data in the table.
+
+]]></info>
+
+</dt-example>

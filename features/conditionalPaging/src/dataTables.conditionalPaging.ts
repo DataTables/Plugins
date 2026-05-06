@@ -46,17 +46,7 @@ Dom.s(document).on('init.dt', function (e, dtSettings: Context) {
 					),
 					pages = api.page.info().pages;
 
-				if (e instanceof $.Event) {
-					if (pages <= 1) {
-						paging.css('visibility', 'hidden');
-					}
-					else {
-						paging.css('visibility', '');
-					}
-				}
-				else if (pages <= 1) {
-					paging.css('visibility', 'hidden');
-				}
+				paging.css('visibility', pages <= 1 ? 'hidden' : '');
 			};
 
 		conditionalPaging(null);

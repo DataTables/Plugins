@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example order="0">
+
+<title>DeepLink feature plugin</title>
+
+<js lib="datatables" />
+<info><![CDATA[
+
+This feature plug-in for DataTables provides a function which will take DataTables options from the browser's URL search string and return an object that can be used to construct a DataTable.
+
+]]></info>
+
+</dt-example>

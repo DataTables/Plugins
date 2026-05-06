@@ -41,7 +41,7 @@ function ts_plugin {
 		$SRC_FILE
 
 	# Remove import statements - the wrap will add them
-	sed -i '/^import /d' $DEST_DIR/$FILE_NAME.js
+	# sed -i '/^import /d' $DEST_DIR/$FILE_NAME.js
 
 	js_wrap $DEST_DIR/$FILE_NAME.js $VERSION "$REQUIRE"
 }
@@ -112,44 +112,48 @@ fi
 # 	ts_plugin $file
 # done
 
-# for FEATURE_DIR in $PLUGINS/features/*; do
-# 	if [ -e "$FEATURE_DIR/examples" ]; then
-# 		# Newer - more complete style
-# 		NAME=$(basename $FEATURE_DIR)
+for FEATURE_DIR in $PLUGINS/features/*; do
+	if [ -e "$FEATURE_DIR/examples" ]; then
+		# Newer - more complete style
+		NAME=$(basename $FEATURE_DIR)
 
-# 		## Build TS if there is a ts file
-# 		ts_plugin $FEATURE_DIR/src/dataTables.$NAME.ts $FEATURE_DIR/dist
+		## Build TS if there is a ts file
+		ts_plugin $FEATURE_DIR/src/dataTables.$NAME.ts $FEATURE_DIR/dist
 
-# 		cp $FEATURE_DIR/src/types.d.ts $FEATURE_DIR/dist
+		if [ -e $FEATURE_DIR/src/types.d.ts ]; then
+			cp $FEATURE_DIR/src/types.d.ts $FEATURE_DIR/dist
+		fi
 
-# 		## Build SCSS
-# 		cp $FEATURE_DIR/src/dataTables.$NAME.scss $FEATURE_DIR/dist
-# 		scss_compile $FEATURE_DIR/dist/dataTables.$NAME.scss
-# 		rm $FEATURE_DIR/dist/dataTables.$NAME.scss
+		## Build SCSS
+		if [ -e $FEATURE_DIR/src/dataTables.$NAME.scss ]; then
+			cp $FEATURE_DIR/src/dataTables.$NAME.scss $FEATURE_DIR/dist
+			scss_compile $FEATURE_DIR/dist/dataTables.$NAME.scss
+			rm $FEATURE_DIR/dist/dataTables.$NAME.scss
+		fi
 
-# 		## Build examples
-# 		if [ -d $FEATURE_DIR/dist/examples ]; then
-# 			rm -r $FEATURE_DIR/dist/examples
-# 		fi
+		## Build examples
+		if [ -d $FEATURE_DIR/dist/examples ]; then
+			rm -r $FEATURE_DIR/dist/examples
+		fi
 
-# 		# Build happens in the path that is http available, despite it just being a symlink
-# 		cp -r $FEATURE_DIR/examples $FEATURE_DIR/dist/examples
-# 		examples_process $DT_BUILT/extensions/Plugins/features/$NAME/dist
-# 	# else
-# 	# 	# Old style
-# 	# 	for file in $FEATURE_DIR/src/*.ts; do
-# 	# 		ts_plugin $file
-# 	# 	done
-# 	fi
+		# Build happens in the path that is http available, despite it just being a symlink
+		cp -r $FEATURE_DIR/examples $FEATURE_DIR/dist/examples
+		examples_process $DT_BUILT/extensions/Plugins/features/$NAME/dist
+	# else
+	# 	# Old style
+	# 	for file in $FEATURE_DIR/src/*.ts; do
+	# 		ts_plugin $file
+	# 	done
+	fi
+done
+
+# for file in $PLUGINS/sorting/src/*.ts; do
+# 	ts_plugin $file
 # done
 
-for file in $PLUGINS/sorting/src/*.ts; do
-	ts_plugin $file
-done
-
-for file in $PLUGINS/type-detection/src/*.ts; do
-	ts_plugin $file
-done
+# for file in $PLUGINS/type-detection/src/*.ts; do
+# 	ts_plugin $file
+# done
 
 # echo_section "  Languages"
 # for file in $PLUGINS/i18n/*.json; do

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dt-example table-type="html" order="1">
+
+<css lib="datatables" />
+<js lib="datatables feature-conditionalPageLength">
+<![CDATA[
+new DataTable('#example', {
+	conditionalPageLength: true
+});
+]]>
+</js>
+
+<title lib="ConditionalPageLength">Basic example</title>
+
+<info><![CDATA[
+
+This example demonstrates the ConditionalPageLength option, which will hide the page length input when there is only a single page of data to show.
+
+]]></info>
+
+</dt-example>
