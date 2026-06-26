@@ -1,11 +1,5 @@
 /*! © SpryMedia Ltd - datatables.net/license */
 /**
- * @summary     RowFill
- * @description Match the number of rows in a table to the page length
- * @author      SpryMedia Ltd
- * @license     MIT
- * @requires    DataTables 3+
- *
  * This feature plug-in for DataTables will automatically insert temporary rows
  * into a DataTable that draws a page that is less than the configured page
  * length. This can be handy to ensure that your table always as (e.g.) 10 rows
@@ -21,6 +15,12 @@
  *   rowFill: true
  * });
  * ```
+ *
+ * @summary     RowFill
+ * @description Match the number of rows in a table to the page length
+ * @author      SpryMedia Ltd
+ * @license     MIT
+ * @requires    DataTables 3+
  */
 import { Api } from 'datatables.net';
 declare module 'datatables.net' {

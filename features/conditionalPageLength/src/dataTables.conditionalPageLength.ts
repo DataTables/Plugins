@@ -1,14 +1,14 @@
 /*! © SpryMedia Ltd, Garrett Hyder - datatables.net/license */
 
 /**
+ * This feature plugin for DataTables hides the page length control when the
+ * amount of pages is <= 1.
+ *
  * @summary     ConditionalPageLength
  * @description Hide the page length control when the amount of pages is <= 1
  * @author      Garrett Hyder (https://github.com/garretthyder)
  * @copyright   Copyright Garrett Hyder and SpryMedia
  * @license     MIT - http://datatables.net/license/mit
- *
- * This feature plugin for DataTables hides the page length control when the
- * amount of pages is <= 1.
  *
  * @example
  *    new DataTable('#myTable', {

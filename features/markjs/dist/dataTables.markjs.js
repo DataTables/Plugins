@@ -42,12 +42,6 @@
 var Dom = DataTable.Dom;
 
 /**
- * @summary     Mark.js
- * @description Search term highlighting using the Mark.js library
- * @author      Julian Kühnel, SpryMedia Ltd
- * @license     MIT
- * @requires    DataTables 3+
- *
  * It can sometimes be useful to get a visual indication of where search terms
  * are in a result set, which is exactly that this library does! It uses
  * [Mark.js](https://markjs.io/) to highlight search terms, updating on each
@@ -55,6 +49,12 @@ var Dom = DataTable.Dom;
  *
  * To enable, make sure you load Mark.js on your page (as well as this plug-in)
  * and then add `mark: true` to your DataTables initialisation.
+ *
+ * @summary     Mark.js
+ * @description Search term highlighting using the Mark.js library
+ * @author      Julian Kühnel, SpryMedia Ltd
+ * @license     MIT
+ * @requires    DataTables 3+
  *
  * @example
  *   new DataTable('#myTable', {

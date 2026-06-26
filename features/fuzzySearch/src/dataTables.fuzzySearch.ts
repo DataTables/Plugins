@@ -8,8 +8,23 @@
  * All rights reserved.
  */
 
+/**
+ * The FuzzySearch plugin for DataTables which adds a _feature_ to DataTables
+ * for use in the `-init layout` option. The `fuzzySearch` feature provides an
+ * input control that will give the end user of fuzzy matching on the text in
+ * the table.
+ *
+ * @summary     FuzzySearch
+ * @description Provide fuzzy search abilities to the DataTables search.
+ * @author      SpryMedia Ltd, Damerau-Levenshtein algorithm by Tadeusz Łazurski
+ * @requires    DataTables 3+
+ *
+ * @example
+ *   new DataTable('#myTable', {
+ *     fuzzySearch: true
+ *   });
+ */
 import DataTable, { Api, Context, Dom, util } from 'datatables.net';
-import type from './types';
 
 DataTable.ext.search.push(function (settings, data, dataIndex) {
 	let initial = settings.init.fuzzySearch;

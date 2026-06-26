@@ -3,12 +3,6 @@
 import DataTable, { Dom } from 'datatables.net';
 
 /**
- * @summary     scrollToTop
- * @description Always return to top of table when page changed
- * @author      SpryMedia Ltd
- * @license     MIT
- * @requires    DataTables 3+
- *
  * When enabled for a table, this option will cause the page to scroll to the
  * top of the table when paging is triggered by the end user. This can be useful
  * for very long tables.
@@ -21,6 +15,12 @@ import DataTable, { Dom } from 'datatables.net';
  *   scrollToTop: true
  * });
  * ```
+ *
+ * @summary     scrollToTop
+ * @description Always return to top of table when page changed
+ * @author      SpryMedia Ltd
+ * @license     MIT
+ * @requires    DataTables 3+
  */
 // Automatic initialisation listener
 Dom.s(document).on('preInit.dt', function (e, settings) {

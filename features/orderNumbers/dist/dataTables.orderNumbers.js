@@ -42,15 +42,15 @@
 var Dom = DataTable.Dom;
 
 /**
+ * This feature is for use with a DataTable when multi-column sorting. It will
+ * show an icon above each column that is being used for the current sort,
+ * indicating the position of that column in the sort sequence.
+ *
  * @summary     OrderNumbers
  * @description Display ordering sequence along side the header cell
  * @author      SpryMedia Ltd
  * @copyright   Copyright SpryMedia Ltd.
  * @license     MIT - http://datatables.net/license/mit
- *
- * This feature is for use with a DataTable when multi-column sorting. It will
- * show an icon above each column that is being used for the current sort,
- * indicating the position of that column in the sort sequence.
  *
  * @example
  *   // Allow a display start point and search string to be specified

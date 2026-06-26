@@ -3,14 +3,14 @@
 import DataTable, { Dom } from 'datatables.net';
 
 /**
+ * This feature plug-in for DataTables adds page length control links to the
+ * DataTable. The `-init layout` option can be used to insert the control
+ * using the `lengthLinks` option.
+ *
  * @summary     LengthLinks
  * @description Page length control via links for DataTables
  * @author      SpryMedia Ltd
  * @requires    DataTables 3+
- *
- * This feature plug-in for DataTables adds page length control links to the
- * DataTable. The `-init layout` option can be used to insert the control
- * using the `lengthLinks` option.
  *
  * @example
  *   new DataTable('#myTable', {

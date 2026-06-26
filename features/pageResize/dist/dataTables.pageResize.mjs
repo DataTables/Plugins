@@ -3,13 +3,6 @@
 import DataTable, { Dom } from 'datatables.net';
 
 /**
- * @summary     PageResize
- * @description Automatically alter the DataTables page length to fit the table
- *   into a container
- * @author      SpryMedia Ltd
- * @license     MIT
- * @requires    DataTables 3+
- *
  * This feature plug-in for DataTables will automatically change the DataTables
  * page length in order to fit inside its container. This can be particularly
  * useful for control panels and other interfaces which resize dynamically with
@@ -29,6 +22,13 @@ import DataTable, { Dom } from 'datatables.net';
  *
  * For more detailed information please [see this blog
  * post](http://datatables.net/blog/2015-04-10).
+ *
+ * @summary     PageResize
+ * @description Automatically alter the DataTables page length to fit the table
+ *   into a container
+ * @author      SpryMedia Ltd
+ * @license     MIT
+ * @requires    DataTables 3+
  */
 class PageResize {
     constructor(dt, pageResizeManualDelta) {

@@ -1,13 +1,6 @@
 /*! © SpryMedia Ltd - datatables.net/license */
 
 /**
- * @summary     LengthLinks
- * @description Deep linking options parsing support for DataTables
- * @file        dataTables.deepLink.js
- * @author      SpryMedia Ltd
- * @copyright   Copyright SpryMedia Ltd.
- * @license     MIT - http://datatables.net/license/mit
- *
  * This feature plug-in for DataTables provides a function which will
  * take DataTables options from the browser's URL search string and
  * return an object that can be used to construct a DataTable. This
@@ -25,6 +18,13 @@
  * to the `DataTable.deepLink` function. If you do which to
  * allow _every_ parameter (I wouldn't recommend it) you can use `all`
  * instead of an array.
+ *
+ * @summary     LengthLinks
+ * @description Deep linking options parsing support for DataTables
+ * @file        dataTables.deepLink.js
+ * @author      SpryMedia Ltd
+ * @copyright   Copyright SpryMedia Ltd.
+ * @license     MIT - http://datatables.net/license/mit
  *
  * @example
  *   // Allow a display start point and search string to be specified

@@ -1,12 +1,6 @@
 /*! © SpryMedia Ltd - datatables.net/license/mit */
 
 /**
- * @summary     ScrollResize
- * @description Automatically alter the DataTables page length to fit the table
-     into a container
- * @author      SpryMedia Ltd
- * @requires    DataTables 3+
- *
  * This feature plug-in for DataTables will automatically change the height of a
  * scrolling DataTable to fit inside its container. This can be particularly
  * useful for control panels and other interfaces which resize dynamically with
@@ -22,6 +16,12 @@
  *   `DataTable.defaults.scrollResize = true`.
  * * Creating a new instance: `new DataTable.ScrollResize( table );` where
  *   `table` is a DataTable's API instance.
+ *
+ * @summary     ScrollResize
+ * @description Automatically alter the DataTables page length to fit the table
+     into a container
+ * @author      SpryMedia Ltd
+ * @requires    DataTables 3+
  */
 
 import DataTable, { Api, Context, Dom } from 'datatables.net';

@@ -1,15 +1,15 @@
 /*! © SpryMedia Ltd - datatables.net/license */
 
 /**
+ * This feature makes use of a `-tag select` element as the table's paging
+ * control, instead of the default buttons. If you desire, both the built in
+ * `paging` feature and this one can be used together on the same table.
+ *
  * @summary     SelectPaging
  * @description Show a Select element for the paging control
  * @author      SpryMedia Ltd
  * @license     MIT
  * @requires    DataTables 3+
- *
- * This feature makes use of a `-tag select` element as the table's paging
- * control, instead of the default buttons. If you desire, both the built in
- * `paging` feature and this one can be used together on the same table.
  *
  * @example
  *   new DataTable('#myTable', {
