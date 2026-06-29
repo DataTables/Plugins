@@ -1,0 +1,14 @@
+
+div.DTE_Field_Type_handwriting div.DTE_Field_InputControl {
+	position: relative;
+}
+
+div.DTE_Field_Type_handwriting div.DTE_Field_InputControl button {
+	position: absolute;
+	right: 0;
+}
+
+div.DTE_Field_Type_handwriting canvas {
+	border: 1px solid #aaa;
+	border-radius: 3px;
+}

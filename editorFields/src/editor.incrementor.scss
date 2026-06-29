@@ -1,0 +1,23 @@
+
+div.DTE {
+	button.btn.alter {
+		padding: 5px;
+		margin: 0;
+	}
+
+	button.btn.alter.decrement {
+		float:left;
+		background:red;
+		color:white;
+	}
+
+	button.btn.alter.increment {
+		float:left;
+		background:green;
+		color:white;
+	}
+
+	input.incrementor {
+		margin: 0 5px;
+	}
+}
