@@ -3,8 +3,8 @@
 import DataTable, { Dom } from 'datatables.net';
 
 /**
- * @summary     AlphabetSearch
- * @description Show an set of alphabet buttons alongside a table providing
+ * @name     AlphabetSearch
+ * @summary Show an set of alphabet buttons alongside a table providing
  *     search input options
  * @author      SpryMedia Ltd
  * @copyright   Copyright SpryMedia Ltd.

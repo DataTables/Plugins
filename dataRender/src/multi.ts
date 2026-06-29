@@ -9,10 +9,11 @@
  * going to give it to the `render` property directly (i.e. if it is just a
  * simple function, don't execute it).
  *
- *  @name multi
+ *  @name Multi
  *  @summary Use multiple renderers
  *  @author [Allan Jardine](http://datatables.net)
  *  @requires DataTables 3+
+ *  @license MIT
  *
  *  @example
  *    // Convert dates using moment renderer and ensure they are HTML safe

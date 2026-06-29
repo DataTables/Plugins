@@ -4,9 +4,10 @@
  * Convert numbers to farsi, english, arabic.
  * تبدیل عداد به فارسی, انگلیسی, عربی
  *
- *  @name convertTo
+ *  @name ConvertTo
  *  @summary Convert numbers to Farsi, English, Arabic.
  *  @author Alireza Mohammadi Doost
+ *  @license MIT
  *
  *  @example
  *    new DataTable('#example', {

@@ -11,8 +11,8 @@ import DataTable, { Dom } from 'datatables.net';
  * To enable, make sure you load Mark.js on your page (as well as this plug-in)
  * and then add `mark: true` to your DataTables initialisation.
  *
- * @summary     Mark.js
- * @description Search term highlighting using the Mark.js library
+ * @name        Mark.js
+ * @summary     Search term highlighting using the Mark.js library
  * @author      Julian Kühnel, SpryMedia Ltd
  * @license     MIT
  * @requires    DataTables 3+

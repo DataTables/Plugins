@@ -16,8 +16,8 @@
  * * Creating a new instance: `new DataTable.ScrollResize( table );` where
  *   `table` is a DataTable's API instance.
  *
- * @summary     ScrollResize
- * @description Automatically alter the DataTables page length to fit the table
+ * @name        ScrollResize
+ * @summary     Automatically alter the DataTables page length to fit the table
      into a container
  * @author      SpryMedia Ltd
  * @requires    DataTables 3+

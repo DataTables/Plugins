@@ -1,0 +1,1 @@
+import DataTable from"datatables.net";DataTable.ext.editorFields||(DataTable.ext.editorFields={});var _fieldTypes=DataTable.Editor?DataTable.Editor.fieldTypes:DataTable.ext.editorFields;_fieldTypes.title={create:function(e){return DataTable.Dom.c("div")[0]},get:function(e){return""},set:function(e,t){}};export default DataTable.Editor;

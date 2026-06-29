@@ -4,10 +4,11 @@
  * DataTable. The `-init layout` option can be used to insert the control
  * using the `lengthLinks` option.
  *
- * @summary     LengthLinks
- * @description Page length control via links for DataTables
+ * @name        LengthLinks
+ * @summary     Page length control via links for DataTables
  * @author      SpryMedia Ltd
  * @requires    DataTables 3+
+ * @license     MIT
  *
  * @example
  *   new DataTable('#myTable', {

@@ -44,8 +44,8 @@ var Dom = DataTable.Dom;
 /**
  * This feature will fade out rows which don't match from the input
  *
- * @summary     SearchFade
- * @description Search and Fade unmatching rows in a DataTables
+ * @name        SearchFade
+ * @summary     Search and Fade unmatching rows in a DataTables
  * @author      SpryMedia Ltd
  * @license     MIT
  * @requires    DataTables 3+

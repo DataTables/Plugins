@@ -13,9 +13,10 @@
  * can be used to let the server generate the required file and then download
  * it to the client-side.
  *
- * @summary     Download Button
+ * @name        Download Button
+ * @summary     A button that can be configured to trigger a server-side action.
  * @author      SpryMedia Ltd (www.datatables.net)
- * @copyright   Copyright 2018 SpryMedia Ltd.
+ * @copyright   Copyright SpryMedia Ltd.
  * @requires    DataTables 3+
  * @license     MIT - http://datatables.net/license/mit
  *

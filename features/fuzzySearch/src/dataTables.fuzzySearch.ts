@@ -14,8 +14,8 @@
  * input control that will give the end user of fuzzy matching on the text in
  * the table.
  *
- * @summary     FuzzySearch
- * @description Provide fuzzy search abilities to the DataTables search.
+ * @name        FuzzySearch
+ * @summary     Provide fuzzy search abilities to the DataTables search.
  * @author      SpryMedia Ltd, Damerau-Levenshtein algorithm by Tadeusz Łazurski
  * @requires    DataTables 3+
  *

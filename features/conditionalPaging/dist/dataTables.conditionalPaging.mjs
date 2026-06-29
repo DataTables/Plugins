@@ -6,8 +6,8 @@ import DataTable, { Dom, util } from 'datatables.net';
  * This feature plugin for DataTables hides paging controls when the amount
  * of pages is <= 1.
  *
- * @summary     ConditionalPaging
- * @description Hide paging controls when the amount of pages is <= 1
+ * @name        ConditionalPaging
+ * @summary     Hide paging controls when the amount of pages is <= 1
  * @author      Matthew Hasbach (https://github.com/mjhasbach)
  * @copyright   Copyright Matthew Hasbach and SpryMedia
  * @license     MIT - http://datatables.net/license/mit

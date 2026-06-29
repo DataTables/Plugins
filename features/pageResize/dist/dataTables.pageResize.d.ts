@@ -20,8 +20,8 @@
  * For more detailed information please [see this blog
  * post](http://datatables.net/blog/2015-04-10).
  *
- * @summary     PageResize
- * @description Automatically alter the DataTables page length to fit the table
+ * @name        PageResize
+ * @summary     Automatically alter the DataTables page length to fit the table
  *   into a container
  * @author      SpryMedia Ltd
  * @license     MIT

@@ -5,10 +5,11 @@
  * showing the current page and allowing the end user to type in the page they
  * want to jump to.
  *
- * @summary     InputPaging
- * @description Paging control with an input element for direct value input
+ * @name        InputPaging
+ * @summary     Paging control with an input element for direct value input
  * @author      SpryMedia Ltd
  * @requires    DataTables 3+
+ * @license     MIT
  *
  * @example
  *   new DataTable('#myTable', {

@@ -26,10 +26,11 @@
  *
  *  DEMO : http://codepen.io/RedJokingInn/pen/jrkZQN
  *
- *  @name percentBar
+ *  @name PercentBar
  *  @summary Display percentage value as a bar
- *  @author [Drijkoningen Dirk](RedJokingInn)
+ *  @author [Drijkoningen Dirk](https://github.com/RedJokingInn)
  *  @requires DataTables 3+
+ *  @license MIT
  *
  *  @returns {String} Html code for bar
  *

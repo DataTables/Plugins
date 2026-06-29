@@ -7,8 +7,8 @@ import DataTable from 'datatables.net';
  * control, instead of the default buttons. If you desire, both the built in
  * `paging` feature and this one can be used together on the same table.
  *
- * @summary     SelectPaging
- * @description Show a Select element for the paging control
+ * @name        SelectPaging
+ * @summary     Show a Select element for the paging control
  * @author      SpryMedia Ltd
  * @license     MIT
  * @requires    DataTables 3+

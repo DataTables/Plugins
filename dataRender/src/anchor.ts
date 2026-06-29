@@ -1,10 +1,11 @@
 /*! © Fedonyuk Anton - datatables.net/license */
 
 /**
- *  @name anchor
+ *  @name Anchor
  *  @summary Renders the column data as HTML anchor (`a` tag)
  *  @author [Fedonyuk Anton](http://ensostudio.ru)
  *  @requires DataTables 3+
+ *  @license MIT
  *
  *  @param {string} type The anchor type: 'link'(by default), 'phone' or 'email'
  *  @param {object|function} attributes The attributes of the anchor tag or the

@@ -58,8 +58,8 @@ var Dom = DataTable.Dom;
  * });
  * ```
  *
- * @summary     RowFill
- * @description Match the number of rows in a table to the page length
+ * @name        RowFill
+ * @summary     Match the number of rows in a table to the page length
  * @author      SpryMedia Ltd
  * @license     MIT
  * @requires    DataTables 3+

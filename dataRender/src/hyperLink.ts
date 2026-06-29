@@ -14,13 +14,14 @@
  *		The custom width of popup to display.
  *		Value is utilised on when 'location' is given as 'popup'.
  * 4. 'height' -  type integer - (optional - default `400`)
- *		The custom heigth of popup to display.
+ *		The custom height of popup to display.
  *		Value is utilised on when 'location' is given as 'popup'.
  *
- *  @name hyperLink
- *  @summary Displays url data in hyperLink with custom plcaeholder
+ *  @name HyperLink
+ *  @summary Displays url data in hyperLink with custom placeholder
  *  @author Lokesh Babu
  *  @requires DataTables 3+
+ *  @license MIT
  *
  *
  *  @example
@@ -43,7 +44,7 @@
  *
  *  @example
  *    // Display the hyperlink with 'Download', which open hyperlink in popup
- *    //		with size 600as width and 400 as height
+ *    // with size 600as width and 400 as height
  *    new DataTable('#myTable', {
  *      columnDefs: [ {
  *        targets: 2,
@@ -53,7 +54,7 @@
  *
  *  @example
  *    // Display the hyperlink with 'Download', which open hyperlink in popup
- *    //		with size 1000 width and 500 as height
+ *    // with size 1000 width and 500 as height
  *    new DataTable('#myTable', {
  *      columnDefs: [ {
  *        targets: 2,

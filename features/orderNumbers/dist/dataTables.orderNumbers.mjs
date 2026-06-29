@@ -7,8 +7,8 @@ import DataTable, { Dom } from 'datatables.net';
  * show an icon above each column that is being used for the current sort,
  * indicating the position of that column in the sort sequence.
  *
- * @summary     OrderNumbers
- * @description Display ordering sequence along side the header cell
+ * @name        OrderNumbers
+ * @summary     Display ordering sequence along side the header cell
  * @author      SpryMedia Ltd
  * @copyright   Copyright SpryMedia Ltd.
  * @license     MIT - http://datatables.net/license/mit

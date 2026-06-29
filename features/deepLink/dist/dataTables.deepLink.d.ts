@@ -1,52 +1,8 @@
 /*! © SpryMedia Ltd - datatables.net/license */
-/**
- * This feature plug-in for DataTables provides a function which will
- * take DataTables options from the browser's URL search string and
- * return an object that can be used to construct a DataTable. This
- * allows deep linking to be easily implemented with DataTables - for
- * example a URL might be `myTable?displayStart=10` which will
- * automatically cause the second page of the DataTable to be displayed.
- *
- * This plug-in works on a whitelist basis - you must specify which
- * [initialisation parameters](//datatables.net/reference/option) you
- * want the URL search string to specify. Any parameter given in the
- * URL which is not listed will be ignored (e.g. you are unlikely to
- * want to let the URL search string specify the `ajax` option).
- *
- * This specification is done by passing an array of property names
- * to the `DataTable.deepLink` function. If you do which to
- * allow _every_ parameter (I wouldn't recommend it) you can use `all`
- * instead of an array.
- *
- * @summary     LengthLinks
- * @description Deep linking options parsing support for DataTables
- * @file        dataTables.deepLink.js
- * @author      SpryMedia Ltd
- * @copyright   Copyright SpryMedia Ltd.
- * @license     MIT - http://datatables.net/license/mit
- *
- * @example
- *   // Allow a display start point and search string to be specified
- *   new DataTable(
- *     '#example',
- *     DataTable.deepLink(['pageLength', 'search.search'])
- *   );
- *
- * @example
- *   // As above, but with a default search
- *   var options = DataTable.deepLink(['displayStart', 'search.search']);
- *
- *   new DataTable(
- *     '#myTable',
- *     DataTable.util.object.assignDeep({
- *       search: { search: 'Initial search value' }
- *     }, options)
- *   );
- */
-import { Options } from 'datatables.net';
 declare module 'datatables.net' {
     interface DataTablesStatic {
         /** Deep linking options parsing support for DataTables */
         deepLink(whitelist: 'all' | string[]): Options;
     }
 }
+export {};

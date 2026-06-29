@@ -26,10 +26,11 @@ import DataTable from 'datatables.net';
  * [DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) and
  * [NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat).
  *
- *  @name intl
+ *  @name Intl
  *  @summary Use the Intl Javascript API to render dates and numbers
  *  @author [Allan Jardine](http://datatables.net)
  *  @requires DataTables 3+
+ *  @license MIT
  *
  *  @example
  *    // Number renderer - using the `columns.render` option:

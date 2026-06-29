@@ -16,8 +16,8 @@ import DataTable, { Dom } from 'datatables.net';
  * });
  * ```
  *
- * @summary     scrollToTop
- * @description Always return to top of table when page changed
+ * @name        ScrollToTop
+ * @Summary     Always return to top of table when page changed
  * @author      SpryMedia Ltd
  * @license     MIT
  * @requires    DataTables 3+
