@@ -108,8 +108,18 @@ fi
 # 	ts_plugin $file
 # done
 
-for file in $PLUGINS/editor/src/*.js; do
+for file in $PLUGINS/editorFields/src/*.js; do
 	js_plugin $file
+done
+
+for FILE_IN in $PLUGINS/editorFields/src/*.scss; do
+	BASENAME=$(basename $FILE_IN .scss)
+	DIRNAME=$(dirname $FILE_IN)
+	FILE_OUT=${DIRNAME}/../${BASENAME}.scss
+
+	cp $FILE_IN $FILE_OUT
+	scss_compile $FILE_OUT
+	rm ${DIRNAME}/../${BASENAME}.css
 done
 
 # for file in $PLUGINS/dataRender/src/*.ts; do
