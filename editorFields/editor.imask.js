@@ -45,8 +45,9 @@
  * [IMask library](https://imask.js.org) which has a wide variety of
  * configuration options.
  *
+ * @name imask
  * @summary Display user input in a given format
- * @requires [IMask](https://cdnjs.com/libraries/imask)
+ * @requires [IMask](https://imask.js.org/)
  *
  * @depjs https://cdnjs.cloudflare.com/ajax/libs/imask/7.6.1/imask.min.js
  * 

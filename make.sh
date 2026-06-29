@@ -100,13 +100,13 @@ if [ ! -e $DT_BUILT/extensions/Plugins ]; then
 	ln -s $PLUGINS $DT_BUILT/extensions/Plugins
 fi
 
-for file in $PLUGINS/api/src/*.ts; do
-	ts_plugin $file
-done
+# for file in $PLUGINS/api/src/*.ts; do
+# 	ts_plugin $file
+# done
 
-for file in $PLUGINS/buttons/src/*.ts; do
-	ts_plugin $file
-done
+# for file in $PLUGINS/buttons/src/*.ts; do
+# 	ts_plugin $file
+# done
 
 for file in $PLUGINS/editorFields/src/*.js; do
 	js_plugin $file
@@ -122,44 +122,44 @@ for FILE_IN in $PLUGINS/editorFields/src/*.scss; do
 	rm ${DIRNAME}/../${BASENAME}.css
 done
 
-for file in $PLUGINS/dataRender/src/*.ts; do
-	ts_plugin $file
-done
+# for file in $PLUGINS/dataRender/src/*.ts; do
+# 	ts_plugin $file
+# done
 
-for FEATURE_DIR in $PLUGINS/features/*; do
-	NAME=$(basename $FEATURE_DIR)
+# for FEATURE_DIR in $PLUGINS/features/*; do
+# 	NAME=$(basename $FEATURE_DIR)
 
-	## Build TS if there is a ts file
-	ts_plugin $FEATURE_DIR/src/dataTables.$NAME.ts $FEATURE_DIR/dist
+# 	## Build TS if there is a ts file
+# 	ts_plugin $FEATURE_DIR/src/dataTables.$NAME.ts $FEATURE_DIR/dist
 
-	if [ -e $FEATURE_DIR/src/types.d.ts ]; then
-		cp $FEATURE_DIR/src/types.d.ts $FEATURE_DIR/dist
-	fi
+# 	if [ -e $FEATURE_DIR/src/types.d.ts ]; then
+# 		cp $FEATURE_DIR/src/types.d.ts $FEATURE_DIR/dist
+# 	fi
 
-	## Build SCSS
-	if [ -e $FEATURE_DIR/src/dataTables.$NAME.scss ]; then
-		cp $FEATURE_DIR/src/dataTables.$NAME.scss $FEATURE_DIR/dist
-		scss_compile $FEATURE_DIR/dist/dataTables.$NAME.scss
-		rm $FEATURE_DIR/dist/dataTables.$NAME.scss
-	fi
+# 	## Build SCSS
+# 	if [ -e $FEATURE_DIR/src/dataTables.$NAME.scss ]; then
+# 		cp $FEATURE_DIR/src/dataTables.$NAME.scss $FEATURE_DIR/dist
+# 		scss_compile $FEATURE_DIR/dist/dataTables.$NAME.scss
+# 		rm $FEATURE_DIR/dist/dataTables.$NAME.scss
+# 	fi
 
-	## Build examples
-	if [ -d $FEATURE_DIR/dist/examples ]; then
-		rm -r $FEATURE_DIR/dist/examples
-	fi
+# 	## Build examples
+# 	if [ -d $FEATURE_DIR/dist/examples ]; then
+# 		rm -r $FEATURE_DIR/dist/examples
+# 	fi
 
-	# Build happens in the path that is http available, despite it just being a symlink
-	cp -r $FEATURE_DIR/examples $FEATURE_DIR/dist/examples
-	examples_process $DT_BUILT/extensions/Plugins/features/$NAME/dist
-done
+# 	# Build happens in the path that is http available, despite it just being a symlink
+# 	cp -r $FEATURE_DIR/examples $FEATURE_DIR/dist/examples
+# 	examples_process $DT_BUILT/extensions/Plugins/features/$NAME/dist
+# done
 
-for file in $PLUGINS/sorting/src/*.ts; do
-	ts_plugin $file
-done
+# for file in $PLUGINS/sorting/src/*.ts; do
+# 	ts_plugin $file
+# done
 
-for file in $PLUGINS/type-detection/src/*.ts; do
-	ts_plugin $file
-done
+# for file in $PLUGINS/type-detection/src/*.ts; do
+# 	ts_plugin $file
+# done
 
 # echo_section "  Languages"
 # for file in $PLUGINS/i18n/*.json; do
