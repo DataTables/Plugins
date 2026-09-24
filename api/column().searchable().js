@@ -1,4 +1,4 @@
-/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
+/*! © SpryMedia Ltd - datatables.net/license - 3.1.1 */
 
 (function(factory){
 	if (typeof define === 'function' && define.amd) {
@@ -44,8 +44,8 @@
  * The plug-in provides a way to determine the searchable state of one or more
  * columns, as was configured by the `-init columns.searchable` option.
  *
- * @name columns().order()
- * @summary Apply multi-column ordering through the columns() API method.
+ * @name columns().searchable()
+ * @summary Get the orderable state for one or more columns
  * @author [Allan Jardine](http://sprymedia.co.uk)
  * @requires DataTables 3+
  *

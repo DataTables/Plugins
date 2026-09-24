@@ -1,2 +1,2 @@
-/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
+/*! © SpryMedia Ltd - datatables.net/license - 3.1.1 */
 import DataTable from"datatables.net";DataTable.Api.register("order.neutral()",function(){return this.iterator("table",function(t){t.order.length=0,t.display.sort(function(t,r){return t-r}),t.displayMaster.sort(function(t,r){return t-r})})});export default DataTable;

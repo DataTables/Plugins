@@ -1,4 +1,4 @@
-/*! © Edouard Labre - datatables.net/license - 3.0.0-beta.2 */
+/*! © Edouard Labre - datatables.net/license - 3.1.1 */
 
 import DataTable from 'datatables.net';
 

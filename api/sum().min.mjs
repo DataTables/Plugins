@@ -1,2 +1,2 @@
-/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
+/*! © SpryMedia Ltd - datatables.net/license - 3.1.1 */
 import DataTable from"datatables.net";DataTable.Api.register("sum()",function(){return this.flatten().reduce(function(t,e){return(t="string"==typeof t?+t.replace(/[^\d.-]/g,""):t)+(e="string"==typeof e?+e.replace(/[^\d.-]/g,""):e)},0)});export default DataTable;
