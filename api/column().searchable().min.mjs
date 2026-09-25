@@ -1,2 +1,2 @@
-/*! © SpryMedia Ltd - datatables.net/license - 3.1.1 */
+/*! © SpryMedia Ltd - datatables.net/license - 3.1.2 */
 import DataTable from"datatables.net";DataTable.Api.registerPlural("columns().searchable()","column().searchable()",function(){return this.iterator("column",function(a,e){return a.columns[e].searchable},!0)});export default DataTable;

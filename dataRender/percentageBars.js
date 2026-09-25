@@ -1,4 +1,4 @@
-/*! © Drijkoningen Dirk - datatables.net/license - 3.0.0-beta.2 */
+/*! © Drijkoningen Dirk - datatables.net/license - 3.1.2 */
 
 (function(factory){
 	if (typeof define === 'function' && define.amd) {

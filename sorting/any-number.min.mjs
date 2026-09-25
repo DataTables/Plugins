@@ -1,2 +1,2 @@
-/*! © SpryMedia Ltd, David Konrad - datatables.net/license - 3.0.0-beta.2 */
+/*! © SpryMedia Ltd, David Konrad - datatables.net/license - 3.1.2 */
 import DataTable from"datatables.net";function _anyNumberSort(e,a,t){var r=/[+-]?((\d+(\.\d*)?)|\.\d+)([eE][+-]?[0-9]+)?/;return(e="string"==typeof e?null!==(e=e.replace(",",".").match(r))?parseFloat(e[0]):t:e)<(a="string"==typeof a?null!==(a=a.replace(",",".").match(r))?parseFloat(a[0]):t:a)?-1:a<e?1:0}DataTable.ext.type.order["any-number-asc"]=function(e,a){return _anyNumberSort(e,a,Number.POSITIVE_INFINITY)},DataTable.ext.type.order["any-number-desc"]=function(e,a){return-1*_anyNumberSort(e,a,Number.NEGATIVE_INFINITY)};export default DataTable;

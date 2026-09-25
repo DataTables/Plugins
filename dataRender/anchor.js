@@ -1,4 +1,4 @@
-/*! © Fedonyuk Anton - datatables.net/license - 3.0.0-beta.2 */
+/*! © Fedonyuk Anton - datatables.net/license - 3.1.2 */
 
 (function(factory){
 	if (typeof define === 'function' && define.amd) {

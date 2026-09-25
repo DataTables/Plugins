@@ -1,4 +1,4 @@
-/*! © SpryMedia Ltd, Patrik Lindström - datatables.net/license - 3.0.0-beta.2 */
+/*! © SpryMedia Ltd, Patrik Lindström - datatables.net/license - 3.1.2 */
 
 import DataTable from 'datatables.net';
 

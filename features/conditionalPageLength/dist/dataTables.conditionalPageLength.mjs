@@ -1,4 +1,4 @@
-/*! © SpryMedia Ltd, Garrett Hyder - datatables.net/license - 3.0.0-beta.2 */
+/*! © SpryMedia Ltd, Garrett Hyder - datatables.net/license - 3.1.2 */
 
 import DataTable, { Dom, util } from 'datatables.net';
 

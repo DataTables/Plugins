@@ -1,2 +1,2 @@
-/*! © SpryMedia Ltd, Patrik Lindström - datatables.net/license - 3.0.0-beta.2 */
+/*! © SpryMedia Ltd, Patrik Lindström - datatables.net/license - 3.1.2 */
 import DataTable from"datatables.net";DataTable.ext.type.order["chinese-string-asc"]=function(e,a){return e.localeCompare(a)},DataTable.ext.type.order["chinese-string-desc"]=function(e,a){return a.localeCompare(e)};export default DataTable;

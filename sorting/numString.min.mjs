@@ -1,2 +1,2 @@
-/*! © SpryMedia Ltd - datatables.net/license - 3.0.0-beta.2 */
+/*! © SpryMedia Ltd - datatables.net/license - 3.1.2 */
 import DataTable from"datatables.net";DataTable.numString=function(e){DataTable.ext.type.detect.unshift(function(t){return"string"==typeof t&&t.match(e)?"numString-"+e.source:null}),DataTable.ext.type.order["numString-"+e.source+"-pre"]=function(t){return+t.replace(/\D/g,"")}};export default DataTable;

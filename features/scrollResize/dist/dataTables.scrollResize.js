@@ -1,4 +1,4 @@
-/*! © SpryMedia Ltd - datatables.net/license/mit - 3.0.0-beta.2 */
+/*! © SpryMedia Ltd - datatables.net/license/mit - 3.1.2 */
 
 (function(factory){
 	if (typeof define === 'function' && define.amd) {

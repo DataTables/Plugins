@@ -1,4 +1,4 @@
-/*! © Edouard Labre - datatables.net/license - 3.1.1 */
+/*! © Edouard Labre - datatables.net/license - 3.1.2 */
 
 (function(factory){
 	if (typeof define === 'function' && define.amd) {
