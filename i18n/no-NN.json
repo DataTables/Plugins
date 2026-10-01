@@ -1,0 +1,218 @@
+{
+    "aria": {
+        "paginate": {
+            "first": "Fyrste",
+            "last": "Siste",
+            "next": "Neste",
+            "previous": "Førre"
+        }
+    },
+    "autoFill": {
+        "cancel": "Avbryt",
+        "fill": "Fyll alle celler med <i>%d</i>",
+        "fillHorizontal": "Fyll celler vassrett",
+        "fillVertical": "Fyll celler loddrett",
+        "info": ""
+    },
+    "buttons": {
+        "collection": "Samling <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"></span>",
+        "colvis": "Kolonnesynlegheit",
+        "colvisRestore": "Gjenopprett synlegheit",
+        "copy": "Kopier",
+        "copyKeys": "Trykk ctrl eller ⌘ + C for å kopiere tabelldata til utklippstavla i systemet.<br /><br />For å avbryte, klikk på denne meldinga eller trykk på escape.",
+        "copySuccess": {
+            "_": "Kopierte %d rader til utklippstavla",
+            "1": "Kopierte éi rad til utklippstavla"
+        },
+        "copyTitle": "Kopier til utklippstavle",
+        "createState": "Opprett tilstand",
+        "csv": "CSV",
+        "excel": "Excel",
+        "pageLength": {
+            "_": "Vis %d rader",
+            "-1": "Vis alle rader"
+        },
+        "pdf": "PDF",
+        "print": "Utskrift",
+        "removeAllStates": "Fjern alle tilstandar",
+        "removeState": "Fjern",
+        "renameState": "Nytt namn",
+        "savedStates": "Lagra tilstandar",
+        "stateRestore": "Tilstand %d",
+        "updateState": "Oppdater"
+    },
+    "datetime": {
+        "amPm": {
+            "0": "am",
+            "1": "pm"
+        },
+        "hours": "timar",
+        "minutes": "minutt",
+        "months": {
+            "0": "Januar",
+            "1": "Februar",
+            "10": "November",
+            "11": "Desember",
+            "2": "Mars",
+            "3": "April",
+            "4": "Mai",
+            "5": "Juni",
+            "6": "Juli",
+            "7": "August",
+            "8": "September",
+            "9": "Oktober"
+        },
+        "next": "neste",
+        "previous": "førre",
+        "seconds": "sekund",
+        "unknown": "ukjend",
+        "weekdays": {
+            "0": "Søn",
+            "1": "Mån",
+            "2": "Tys",
+            "3": "Ons",
+            "4": "Tor",
+            "5": "Fre",
+            "6": "Lau"
+        }
+    },
+    "decimal": "",
+    "editor": {
+        "close": "Lukk",
+        "create": {
+            "button": "Ny",
+            "submit": "Opprett",
+            "title": "Ny oppføring"
+        },
+        "edit": {
+            "button": "Endre",
+            "submit": "Oppdater",
+            "title": "Endre oppføring"
+        },
+        "error": {
+            "system": "Det har oppstått ein systemfeil (Meir informasjon)"
+        },
+        "multi": {
+            "noMulti": "Dette feltet kan redigerast individuelt, men ikkje som del av ei gruppe.",
+            "restore": "Gjer om endringar",
+            "title": "Fleire verdiar"
+        },
+        "remove": {
+            "button": "Slett",
+            "confirm": {
+                "_": "Er du sikker på at du vil slette %d rader?",
+                "1": "Er du sikker på at du vil slette 1 rad?"
+            },
+            "submit": "Slett",
+            "title": "Sletting"
+        }
+    },
+    "emptyTable": "Ingen data tilgjengeleg i tabellen",
+    "info": "Viser _START_ til _END_ av _TOTAL_ oppføringar",
+    "infoEmpty": "Viser 0 til 0 av 0 oppføringar",
+    "infoFiltered": "filtrert frå totalt _MAX_ oppføringar",
+    "infoPostFix": "",
+    "infoThousands": " ",
+    "lengthMenu": "Vis _MENU_ oppføringar",
+    "loadingRecords": "Lastar...",
+    "processing": "Lastar...",
+    "search": "Søk:",
+    "searchBuilder": {
+        "add": "Legg til vilkår",
+        "button": {
+            "_": "Søkjekonstruktør (%d)",
+            "0": "Søkjekonstruktør"
+        },
+        "clearAll": "Fjern alle",
+        "condition": "Vilkår",
+        "conditions": {
+            "array": {
+                "contains": "Inneheld",
+                "empty": "Tom",
+                "equals": "Er lik",
+                "not": "Ikkje",
+                "notEmpty": "Ikkje tom",
+                "without": "Utan"
+            },
+            "date": {
+                "after": "Etter",
+                "before": "Før",
+                "between": "Mellom",
+                "empty": "Tom",
+                "equals": "Er lik",
+                "not": "Ikkje",
+                "notBetween": "Ikkje mellom",
+                "notEmpty": "Ikkje tom"
+            },
+            "number": {
+                "between": "Mellom",
+                "empty": "Tom",
+                "equals": "Er lik",
+                "gt": "Større enn",
+                "gte": "Større eller lik",
+                "lt": "Mindre enn",
+                "lte": "Mindre eller lik",
+                "not": "Ikkje",
+                "notBetween": "Ikkje mellom",
+                "notEmpty": "Ikkje tom"
+            },
+            "string": {
+                "contains": "Inneheld",
+                "empty": "Tom",
+                "endsWith": "Sluttar med",
+                "equals": "Er lik",
+                "not": "Ikkje",
+                "notContains": "Inneheld ikkje",
+                "notEmpty": "Ikkje tom",
+                "notEndsWith": "Sluttar ikkje med",
+                "notStartsWith": "Startar ikkje med",
+                "startsWith": "Startar med"
+            }
+        },
+        "data": "Data",
+        "deleteTitle": "Slett filtreringsregel",
+        "leftTitle": "Rykk tilbake vilkår",
+        "logicAnd": "Og",
+        "logicOr": "Eller",
+        "rightTitle": "Rykk inn vilkår",
+        "title": {
+            "_": "Søkjekonstruktør (%d)",
+            "0": "Søkjekonstruktør"
+        },
+        "value": "Verdi"
+    },
+    "searchPanes": {
+        "clearMessage": "Fjern alle",
+        "collapse": {
+            "_": "Søkjerute (%d)",
+            "0": "Søkjerute"
+        },
+        "collapseMessage": "Slå saman alle",
+        "count": "{total}",
+        "countFiltered": "{shown} ({total})",
+        "emptyPanes": "Inga søkjerute",
+        "loadMessage": "Lastar inn søkjerute...",
+        "showMessage": "Vis alle",
+        "title": "Aktive filter - %d"
+    },
+    "searchPlaceholder": "",
+    "select": {
+        "cells": {
+            "_": "%d celler er valde",
+            "0": "",
+            "1": "1 celle er vald"
+        },
+        "columns": {
+            "_": "%d kolonnar er valde",
+            "0": "",
+            "1": "1 kolonne er vald"
+        },
+        "rows": {
+            "_": "%d rader valde",
+            "0": "",
+            "1": "1 rad vald"
+        }
+    },
+    "thousands": " .",
+    "zeroRecords": "Ingen rader samsvarar med søket"
+}
