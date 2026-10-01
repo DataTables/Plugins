@@ -1,0 +1,11 @@
+.owner
+.play
+.command 
+.song
+.create gc
+.remove
+ .mute 
+.unmute 
+.login
+.ban
+.warn
