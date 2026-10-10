@@ -15,7 +15,7 @@
  *   // Allow a display start point and search string to be specified
  *   new DataTable('#myTable', {
  *     orderNumbers: true
- *   );
+ *   });
  *
  * @example
  *   // As above, but with a default search
@@ -23,7 +23,7 @@
  *     orderNumbers: {
  *       className: 'my-ordering-class'
  *     }
- *   );
+ *   });
  */
 
 import DataTable, { Api, Dom, InstSelector } from 'datatables.net';
