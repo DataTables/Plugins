@@ -1,5 +1,7 @@
 {
     "aria": {
+        "orderable": "Aktiviraj za sortiranje",
+        "orderableRemove": "Aktiviraj za odstranjevanje sortiranja",
         "paginate": {
             "first": "Prva",
             "last": "Zadnja",
@@ -30,7 +32,8 @@
         "excel": "Excel",
         "pageLength": {
             "_": "Prikaži %ds vrstic",
-            "-1": "Prikaži vse vrstice"
+            "-1": "Prikaži vse vrstice",
+            "1": "Prikaži 1 vrstico"
         },
         "pdf": "PDF",
         "print": "Natisni",
@@ -40,6 +43,30 @@
         "savedStates": "Shranjena stanja",
         "stateRestore": "Obnovi stanje",
         "updateState": "Posodobi stranje"
+    },
+    "columnControl": {
+        "search": {
+            "datetime": {
+                "greater": "Po",
+                "less": "Pred"
+            },
+            "number": {
+                "empty": "Prazno",
+                "equal": "Je enako",
+                "greater": "Večje kot",
+                "greaterOrEqual": "Večje ali enako kot",
+                "less": "Manjše kot",
+                "lessOrEqual": "Manjše ali enako kot",
+                "notEmpty": "Ni prazno",
+                "notEqual": "Ni enako"
+            },
+            "text": {
+                "contains": "Vsebuje",
+                "ends": "Konča",
+                "notContains": "Ne vsebuje",
+                "starts": "Začne"
+            }
+        }
     },
     "datetime": {
         "amPm": {

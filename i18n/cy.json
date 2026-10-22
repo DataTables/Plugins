@@ -8,7 +8,12 @@
         }
     },
     "autoFill": {
+        "cancel": "Canslo",
+        "fill": "Llenwi pob cell gyda: &lt;i&gt;%d&lt;i&gt;&lt;\/i&gt;&lt;\/i&gt;",
         "info": ""
+    },
+    "buttons": {
+        "collection": "Casgliad &lt;span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"&gt;&lt;\/span&gt;"
     },
     "decimal": "",
     "emptyTable": "Dim data ar gael yn y tabl",
@@ -19,6 +24,7 @@
     "infoThousands": ",",
     "lengthMenu": "Dangos _MENU_ cofnod",
     "loadingRecords": "Wrthi'n llwytho...",
+    "orderClear": "Clirio trefn",
     "processing": "Wrthi'n prosesu...",
     "search": "Chwilio:",
     "searchPlaceholder": "",

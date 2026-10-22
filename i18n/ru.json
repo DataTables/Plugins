@@ -41,6 +41,38 @@
         "stateRestore": "Состояние %d",
         "updateState": "Обновить"
     },
+    "columnControl": {
+        "buttons": {
+            "searchClear": "Сбросить поиск"
+        },
+        "orderDesc": "По-убыванию",
+        "search": {
+            "datetime": {
+                "greater": "После",
+                "less": "До"
+            },
+            "number": {
+                "empty": "Пустое",
+                "equal": "Равно",
+                "greater": "Больше",
+                "greaterOrEqual": "Больше или равно",
+                "less": "Меньше",
+                "lessOrEqual": "Меньше или равно",
+                "notEmpty": "Не пустое",
+                "notEqual": "Не равно"
+            },
+            "text": {
+                "contains": "Содержит",
+                "empty": "Не заполнено",
+                "ends": "Заканчивается на",
+                "equal": "Совпадает с",
+                "notContains": "Не содержит",
+                "notEmpty": "Заполнено",
+                "notEqual": "Не совпадает с",
+                "starts": "Начинается с"
+            }
+        }
+    },
     "datetime": {
         "amPm": {
             "0": "AM",

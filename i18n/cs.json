@@ -41,6 +41,46 @@
         "stateRestore": "Stav %d",
         "updateState": "Aktualizovat"
     },
+    "columnControl": {
+        "buttons": {
+            "searchClear": "Vymazat hledání"
+        },
+        "colVisDropdown": "Viditelnost sloupců",
+        "dropdown": "Více…",
+        "list": {
+            "all": "Vybrat vše",
+            "none": "Zrušit výběr",
+            "search": "Hledat..."
+        },
+        "orderAddAsc": "Přidat vzestupné řazení",
+        "orderAddDesc": "Přidat sestupné řazení",
+        "orderAsc": "Vzestupné řazení",
+        "orderClear": "Vymazat řazení",
+        "orderDesc": "Sestupné řazení",
+        "orderRemove": "Odebrat z řazení",
+        "reorder": "Přeskupit sloupce",
+        "reorderLeft": "Přesunout sloupec doleva",
+        "reorderRight": "Přesunout sloupec doprava",
+        "search": {
+            "number": {
+                "empty": "Prázdné",
+                "equal": "Rovno",
+                "greater": "Větší než",
+                "greaterOrEqual": "Větší nebo rovno",
+                "less": "Menší než",
+                "lessOrEqual": "Menší nebo rovno",
+                "notEmpty": "Neprázdné",
+                "notEqual": "Nerovno"
+            },
+            "text": {
+                "contains": "Obsahuje",
+                "ends": "Končí na",
+                "notContains": "Neobsahuje",
+                "starts": "Začíná na"
+            }
+        },
+        "searchDropdown": "Hledat"
+    },
     "datetime": {
         "amPm": {
             "0": "Dopoledne",
