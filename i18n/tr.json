@@ -28,7 +28,6 @@
             "1": "1 satır panoya kopyalandı"
         },
         "copyTitle": "Panoya kopyala",
-        "createState": "Şuanki Görünümü Kaydet",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -37,13 +36,7 @@
             "1": "1 Satır Göster"
         },
         "pdf": "PDF",
-        "print": "Yazdır",
-        "removeAllStates": "Tüm Görünümleri Sil",
-        "removeState": "Aktif Görünümü Sil",
-        "renameState": "Aktif Görünümün Adını Değiştir",
-        "savedStates": "Kaydedilmiş Görünümler",
-        "stateRestore": "Görünüm -&gt; %d",
-        "updateState": "Aktif Görünümün Güncelle"
+        "print": "Yazdır"
     },
     "columnControl": {
         "buttons": {
@@ -267,33 +260,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Kaydet",
-            "columns": {
-                "search": "Kolon Araması",
-                "visible": "Kolon Görünümü"
-            },
-            "name": "Görünüm İsmi",
-            "order": "Sıralama",
-            "paging": "Sayfalama",
-            "scroller": "Kaydırma (Scrool)",
-            "search": "Arama",
-            "searchBuilder": "Arama Oluşturucu",
-            "select": "Seçimler",
-            "title": "Yeni Görünüm Oluştur",
-            "toggleLabel": "Kaydedilecek Olanlar"
+        "button": {
+            "create": "Şuanki Görünümü Kaydet",
+            "edit": "Aktif Görünümün Güncelle",
+            "remove": "Aktif Görünümü Sil",
+            "statesList": "Kaydedilmiş Görünümler",
+            "statesRemoveAll": "Tüm Görünümleri Sil"
         },
-        "duplicateError": "Bu Görünüm Daha Önce Tanımlanmış",
-        "emptyError": "Görünüm Boş Olamaz",
-        "emptyStates": "Herhangi Bir Görünüm Yok",
-        "removeConfirm": "Görünümü silmek istediğinize emin misiniz?",
-        "removeError": "Görünüm silinemedi",
-        "removeJoiner": "ve",
-        "removeSubmit": "Sil",
-        "removeTitle": "Görünüm Sil",
-        "renameButton": "Değiştir",
-        "renameLabel": "Görünüme Yeni İsim Ver -&gt; %s:",
-        "renameTitle": "Görünüm İsmini Değiştir"
+        "create": {
+            "title": "Yeni Görünüm Oluştur"
+        },
+        "remove": {
+            "button": "Sil",
+            "message": {
+                "_": "Görünümü silmek istediğinize emin misiniz?"
+            },
+            "title": "Görünüm Sil"
+        }
     },
     "thousands": ".",
     "zeroRecords": "Eşleşen kayıt bulunamadı"

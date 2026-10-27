@@ -25,7 +25,6 @@
             "1": "1행을 클립보드에서 복사됨"
         },
         "copyTitle": "클립보드에서 복사",
-        "createState": "상태 생성",
         "csv": "CSV",
         "excel": "엑셀",
         "pageLength": {
@@ -34,13 +33,7 @@
             "1": "1행 보기"
         },
         "pdf": "PDF",
-        "print": "인쇄",
-        "removeAllStates": "모든 상태 삭제",
-        "removeState": "삭제",
-        "renameState": "이름 변경",
-        "savedStates": "저장된 상태",
-        "stateRestore": "상태 %d",
-        "updateState": "갱신"
+        "print": "인쇄"
     },
     "columnControl": {
         "buttons": {
@@ -191,6 +184,15 @@
         },
         "rows": {
             "0": ""
+        }
+    },
+    "stateRestore": {
+        "button": {
+            "create": "상태 생성",
+            "edit": "갱신",
+            "remove": "삭제",
+            "statesList": "저장된 상태",
+            "statesRemoveAll": "모든 상태 삭제"
         }
     },
     "zeroRecords": "검색 결과가 없습니다"

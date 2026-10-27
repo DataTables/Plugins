@@ -25,7 +25,6 @@
             "1": "1 red je kopiran u beležnik"
         },
         "copyTitle": "Kopiraj u beležnik",
-        "createState": "Kreiraj stanje",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -33,13 +32,7 @@
             "-1": "Prikaži sve redove"
         },
         "pdf": "PDF",
-        "print": "Štampa",
-        "removeAllStates": "Ukloni sva stanja",
-        "removeState": "Ukloni",
-        "renameState": "Preimenuj",
-        "savedStates": "Sačuvana stanja",
-        "stateRestore": "Stanje %d",
-        "updateState": "Ažuriraj"
+        "print": "Štampa"
     },
     "datetime": {
         "amPm": {
@@ -215,33 +208,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Kreiraj",
-            "columns": {
-                "search": "Pretraga kolone",
-                "visible": "Vidljivost kolone"
-            },
-            "name": "Ime:",
-            "order": "Sortiranje",
-            "paging": "Paginacija",
-            "scroller": "Pozicija skrola",
-            "search": "Pretraga",
-            "searchBuilder": "Kreator pretraga",
-            "select": "Odabir",
-            "title": "Kreiraj novo stanje",
-            "toggleLabel": "Uključuje:"
+        "button": {
+            "create": "Kreiraj stanje",
+            "edit": "Ažuriraj",
+            "remove": "Ukloni",
+            "statesList": "Sačuvana stanja",
+            "statesRemoveAll": "Ukloni sva stanja"
         },
-        "duplicateError": "Stanje sa ovim imenom već postoji",
-        "emptyError": "Ime ne može biti prazno.",
-        "emptyStates": "Nema sačuvanih stanja",
-        "removeConfirm": "Da li ste sigurni da zelite obrisati stanje %s?",
-        "removeError": "Brisanje stanja nije uspelo.",
-        "removeJoiner": "i",
-        "removeSubmit": "Obriši",
-        "removeTitle": "Obriši stanje",
-        "renameButton": "Preimenuj",
-        "renameLabel": "Novo ime za %s:",
-        "renameTitle": "Preimenuj stanje"
+        "create": {
+            "title": "Kreiraj novo stanje"
+        },
+        "remove": {
+            "button": "Obriši",
+            "message": {
+                "_": "Da li ste sigurni da zelite obrisati stanje %s?"
+            },
+            "title": "Obriši stanje"
+        }
     },
     "thousands": ".",
     "zeroRecords": "Nisu pronađeni odgovarajući zapisi"

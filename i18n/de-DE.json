@@ -25,7 +25,6 @@
             "1": "1 Zeile kopiert"
         },
         "copyTitle": "In Zwischenablage kopieren",
-        "createState": "Ansicht erstellen",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -34,13 +33,7 @@
             "1": "Zeigt 1 Zeile"
         },
         "pdf": "PDF",
-        "print": "Drucken",
-        "removeAllStates": "Alle Ansichten entfernen",
-        "removeState": "Entfernen",
-        "renameState": "Umbenennen",
-        "savedStates": "Gespeicherte Ansicht",
-        "stateRestore": "Ansicht %d",
-        "updateState": "Aktualisieren"
+        "print": "Drucken"
     },
     "columnControl": {
         "buttons": {
@@ -277,33 +270,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Erstellen",
-            "columns": {
-                "search": "Spalten Suche",
-                "visible": "Spalten Sichtbarkeit"
-            },
-            "name": "Name:",
-            "order": "Sortieren",
-            "paging": "Seiten",
-            "scroller": "Scroll Position",
-            "search": "Suche",
-            "searchBuilder": "Such-Baukasten",
-            "select": "Auswahl",
-            "title": "Neue Ansicht erstellen",
-            "toggleLabel": "Inkludiert:"
+        "button": {
+            "create": "Ansicht erstellen",
+            "edit": "Aktualisieren",
+            "remove": "Entfernen",
+            "statesList": "Gespeicherte Ansicht",
+            "statesRemoveAll": "Alle Ansichten entfernen"
         },
-        "duplicateError": "Eine Ansicht mit diesem Namen existiert bereits.",
-        "emptyError": "Name darf nicht leer sein.",
-        "emptyStates": "Keine gespeicherten Ansichten",
-        "removeConfirm": "Sicher dass %s entfernt werden soll?",
-        "removeError": "Entfernen der Ansicht fehlgeschlagen.",
-        "removeJoiner": " und ",
-        "removeSubmit": "Entfernen",
-        "removeTitle": "Ansicht entfernen",
-        "renameButton": "Umbenennen",
-        "renameLabel": "Neuer Name für %s:",
-        "renameTitle": "Ansicht umbenennen"
+        "create": {
+            "title": "Neue Ansicht erstellen"
+        },
+        "remove": {
+            "button": "Entfernen",
+            "message": {
+                "_": "Sicher dass %s entfernt werden soll?"
+            },
+            "title": "Ansicht entfernen"
+        }
     },
     "thousands": ".",
     "zeroRecords": "Keine passenden Einträge gefunden"

@@ -25,7 +25,6 @@
             "1": "1 eilutė nukopijuota į iškarpinę"
         },
         "copyTitle": "Nukopijuoti į iškarpinę",
-        "createState": "Sukurti stulpelį",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -33,13 +32,7 @@
             "-1": "Rodyti visas eilutes"
         },
         "pdf": "PDF",
-        "print": "Spausdinti",
-        "removeAllStates": "Ištrinti visus stulpelius",
-        "removeState": "Ištrinti",
-        "renameState": "Pervardyti",
-        "savedStates": "Išsaugotos būsenos",
-        "stateRestore": "Būsena %d",
-        "updateState": "Atnaujinti"
+        "print": "Spausdinti"
     },
     "datetime": {
         "amPm": {
@@ -215,33 +208,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Sukurti",
-            "columns": {
-                "search": "Stulpelio paieška",
-                "visible": "Stulpelio matomumas"
-            },
-            "name": "Pavadinimas:",
-            "order": "Rūšiavimas",
-            "paging": "Puslapis",
-            "scroller": "Slinkimas",
-            "search": "Paieška",
-            "searchBuilder": "Paieškos kūrimas",
-            "select": "Pasirinkimas",
-            "title": "Sukurkite naują stulpelį",
-            "toggleLabel": "Sudėtis:"
+        "button": {
+            "create": "Sukurti stulpelį",
+            "edit": "Atnaujinti",
+            "remove": "Ištrinti",
+            "statesList": "Išsaugotos būsenos",
+            "statesRemoveAll": "Ištrinti visus stulpelius"
         },
-        "duplicateError": "Stulpelis tokiu pavadinimu jau egzistuoja",
-        "emptyError": "Pavadinimas negali būti tuščias",
-        "emptyStates": "Nėra išsaugotų stulpelių",
-        "removeConfirm": "Ar tikrai norite ištrinti %s?",
-        "removeError": "Nepavyko pašalinti būsenos.",
-        "removeJoiner": "ir",
-        "removeSubmit": "Ištrinti",
-        "removeTitle": "Ištrinti stulpelį",
-        "renameButton": "Pervardinti",
-        "renameLabel": "Naujas %s pavadinimas:",
-        "renameTitle": "Pervardinti stulpelį"
+        "create": {
+            "title": "Sukurkite naują stulpelį"
+        },
+        "remove": {
+            "button": "Ištrinti",
+            "message": {
+                "_": "Ar tikrai norite ištrinti %s?"
+            },
+            "title": "Ištrinti stulpelį"
+        }
     },
     "thousands": "  ",
     "zeroRecords": "Įrašų nerasta"

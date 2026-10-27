@@ -28,7 +28,6 @@
             "1": "S-a copiat un rând în clipboard"
         },
         "copyTitle": "Copiază în Clipboard",
-        "createState": "Creează Stare",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -37,13 +36,7 @@
             "1": "Arată 1 rând"
         },
         "pdf": "PDF",
-        "print": "Imprimă",
-        "removeAllStates": "Elimină Toate Stările",
-        "removeState": "Elimină",
-        "renameState": "Redenumește",
-        "savedStates": "Salvează Stările",
-        "stateRestore": "Starea %d",
-        "updateState": "Actualizează"
+        "print": "Imprimă"
     },
     "columnControl": {
         "buttons": {
@@ -272,33 +265,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Creează",
-            "columns": {
-                "search": "Căutare în coloană",
-                "visible": "Vizibilitate coloană"
-            },
-            "name": "Nume:",
-            "order": "Ordonare",
-            "paging": "Paginație",
-            "scroller": "Poziție Scroll",
-            "search": "Căutare",
-            "searchBuilder": "Creează Căutare",
-            "select": "Selectări",
-            "title": "Creează o nouă Stare",
-            "toggleLabel": "Include:"
+        "button": {
+            "create": "Creează Stare",
+            "edit": "Actualizează",
+            "remove": "Elimină",
+            "statesList": "Salvează Stările",
+            "statesRemoveAll": "Elimină Toate Stările"
         },
-        "duplicateError": "O stare cu acest nume există deja.",
-        "emptyError": "Numele nu poate fi gol.",
-        "emptyStates": "Stare nesalvată",
-        "removeConfirm": "Sunteți sigur că vreți sa ștergeți %s?",
-        "removeError": "Ștergere stare eșuată.",
-        "removeJoiner": "și",
-        "removeSubmit": "Șterge",
-        "removeTitle": "Sterge Starea",
-        "renameButton": "Redenumește",
-        "renameLabel": "Nume nou pentru %s:",
-        "renameTitle": "Redenumește Starea"
+        "create": {
+            "title": "Creează o nouă Stare"
+        },
+        "remove": {
+            "button": "Șterge",
+            "message": {
+                "_": "Sunteți sigur că vreți sa ștergeți %s?"
+            },
+            "title": "Sterge Starea"
+        }
     },
     "thousands": ".",
     "zeroRecords": "Nu am găsit nimic - ne pare rău"

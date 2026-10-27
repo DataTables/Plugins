@@ -217,7 +217,9 @@
         }
     },
     "stateRestore": {
-        "removeSubmit": "Sil"
+        "remove": {
+            "button": "Sil"
+        }
     },
     "thousands": ".",
     "zeroRecords": "Nəticə Tapılmadı."

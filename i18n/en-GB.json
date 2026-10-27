@@ -25,7 +25,6 @@
             "1": "Copied 1 row to clipboard"
         },
         "copyTitle": "Copy to Clipboard",
-        "createState": "Create State",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -33,13 +32,7 @@
             "-1": "Show all rows"
         },
         "pdf": "PDF",
-        "print": "Print",
-        "removeAllStates": "Remove All States",
-        "removeState": "Remove",
-        "renameState": "Rename",
-        "savedStates": "Saved States",
-        "stateRestore": "State %d",
-        "updateState": "Update"
+        "print": "Print"
     },
     "datetime": {
         "amPm": {
@@ -215,33 +208,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Create",
-            "columns": {
-                "search": "Column Search",
-                "visible": "Column Visibility"
-            },
-            "name": "Name:",
-            "order": "Sorting",
-            "paging": "Paging",
-            "scroller": "Scroll Position",
-            "search": "Search",
-            "searchBuilder": "SearchBuilder",
-            "select": "Select",
-            "title": "Create New State",
-            "toggleLabel": "Includes:"
+        "button": {
+            "create": "Create State",
+            "edit": "Update",
+            "remove": "Remove",
+            "statesList": "Saved States",
+            "statesRemoveAll": "Remove All States"
         },
-        "duplicateError": "A state with this name already exists.",
-        "emptyError": "Name cannot be empty.",
-        "emptyStates": "No saved states",
-        "removeConfirm": "Are you sure you want to remove %s?",
-        "removeError": "Failed to remove state.",
-        "removeJoiner": " and ",
-        "removeSubmit": "Remove",
-        "removeTitle": "Remove State",
-        "renameButton": "Rename",
-        "renameLabel": "New Name for %s:",
-        "renameTitle": "Rename State"
+        "create": {
+            "title": "Create New State"
+        },
+        "remove": {
+            "button": "Remove",
+            "message": {
+                "_": "Are you sure you want to remove %s?"
+            },
+            "title": "Remove State"
+        }
     },
     "thousands": ",",
     "zeroRecords": "No matching records found"

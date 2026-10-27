@@ -25,7 +25,6 @@
             "1": "یک ردیف داخل حافظه کپی شد"
         },
         "copyTitle": "کپی در حافظه",
-        "createState": "ایجاد وضعیت جدول",
         "csv": "فایل CSV",
         "excel": "فایل اکسل",
         "pageLength": {
@@ -33,13 +32,7 @@
             "-1": "نمایش همه ردیف‌ها"
         },
         "pdf": "فایل PDF",
-        "print": "چاپ",
-        "removeAllStates": "حذف همه وضعیت ها",
-        "removeState": "حذف",
-        "renameState": "تغییر نام",
-        "savedStates": "وضعیت های ذخیره شده",
-        "stateRestore": "بازگشت به وضعیت %d",
-        "updateState": "به روز رسانی"
+        "print": "چاپ"
     },
     "datetime": {
         "amPm": {
@@ -215,33 +208,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "ایجاد",
-            "columns": {
-                "search": "جستجوی ستون",
-                "visible": "وضعیت نمایش ستون"
-            },
-            "name": "نام:",
-            "order": "مرتب سازی",
-            "paging": "صفحه بندی",
-            "scroller": "موقعیت جدول (اسکرول)",
-            "search": "جستجو",
-            "searchBuilder": "صفحه جستجو",
-            "select": "انتخاب",
-            "title": "ایجاد وضعیت جدید",
-            "toggleLabel": "شامل:"
+        "button": {
+            "create": "ایجاد وضعیت جدول",
+            "edit": "به روز رسانی",
+            "remove": "حذف",
+            "statesList": "وضعیت های ذخیره شده",
+            "statesRemoveAll": "حذف همه وضعیت ها"
         },
-        "duplicateError": "وضعیتی با این نام از پیش ذخیره شده.",
-        "emptyError": "نام نمیتواند خالی باشد.",
-        "emptyStates": "هیچ وضعیتی ذخیره نشده",
-        "removeConfirm": "آیا از حذف %s مطمئنید؟",
-        "removeError": "حذف با خطا موماجه شد",
-        "removeJoiner": "و",
-        "removeSubmit": "حذف وضعیت",
-        "removeTitle": "حذف وضعیت جدول",
-        "renameButton": "تغییر نام",
-        "renameLabel": "نام جدید برای $s :",
-        "renameTitle": "تغییر نام وضعیت"
+        "create": {
+            "title": "ایجاد وضعیت جدید"
+        },
+        "remove": {
+            "button": "حذف وضعیت",
+            "message": {
+                "_": "آیا از حذف %s مطمئنید؟"
+            },
+            "title": "حذف وضعیت جدول"
+        }
     },
     "thousands": ",",
     "zeroRecords": "رکوردی با این مشخصات پیدا نشد"

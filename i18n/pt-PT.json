@@ -28,7 +28,6 @@
             "1": "Uma linha copiada para a área de transferência"
         },
         "copyTitle": "Copiar para a área de transferência",
-        "createState": "Criar Estado",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -37,13 +36,7 @@
             "1": "Mostrar 1 linha"
         },
         "pdf": "PDF",
-        "print": "Imprimir",
-        "removeAllStates": "Remover Todos os Estados",
-        "removeState": "Remover",
-        "renameState": "Renomear",
-        "savedStates": "Estados Gravados",
-        "stateRestore": "Estado %d",
-        "updateState": "Atualizar"
+        "print": "Imprimir"
     },
     "columnControl": {
         "buttons": {
@@ -280,33 +273,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Criar",
-            "columns": {
-                "search": "Pesquisa por Colunas",
-                "visible": "Visibilidade das Colunas"
-            },
-            "name": "Nome:",
-            "order": "Ordenar",
-            "paging": "Paginação",
-            "scroller": "Posição da barra de Scroll",
-            "search": "Pesquisa",
-            "searchBuilder": "Pesquisa Avançada",
-            "select": "Selecionar",
-            "title": "Criar Novo Estado",
-            "toggleLabel": "Incluir:"
+        "button": {
+            "create": "Criar Estado",
+            "edit": "Atualizar",
+            "remove": "Remover",
+            "statesList": "Estados Gravados",
+            "statesRemoveAll": "Remover Todos os Estados"
         },
-        "duplicateError": "Já existe um estado com o mesmo nome",
-        "emptyError": "Nome não pode ser vazio",
-        "emptyStates": "Não existem estados gravados",
-        "removeConfirm": "Deseja mesmo remover o estado %s?",
-        "removeError": "Erro ao remover o estado.",
-        "removeJoiner": " e ",
-        "removeSubmit": "Apagar",
-        "removeTitle": "Apagar Estado",
-        "renameButton": "Renomear",
-        "renameLabel": "Novo nome para %s:",
-        "renameTitle": "Renomear Estado"
+        "create": {
+            "title": "Criar Novo Estado"
+        },
+        "remove": {
+            "button": "Apagar",
+            "message": {
+                "_": "Deseja mesmo remover o estado %s?"
+            },
+            "title": "Apagar Estado"
+        }
     },
     "thousands": ".",
     "zeroRecords": "Não foram encontrados resultados"

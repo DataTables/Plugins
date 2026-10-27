@@ -28,7 +28,6 @@
             "1": "1 fila copiada"
         },
         "copyTitle": "Copia al portapapers",
-        "createState": "Crear Estat",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -37,13 +36,7 @@
             "1": "Mostra 1 fila"
         },
         "pdf": "PDF",
-        "print": "Imprimeix",
-        "removeAllStates": "Borrar tots els Estats",
-        "removeState": "Borra",
-        "renameState": "Canviar nom",
-        "savedStates": "Estats gravats",
-        "stateRestore": "Restaura",
-        "updateState": "Actualitza"
+        "print": "Imprimeix"
     },
     "columnControl": {
         "buttons": {
@@ -269,33 +262,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Crear",
-            "columns": {
-                "search": "Cerca per columnes",
-                "visible": "Visibilitat de columnes"
-            },
-            "name": "Nom",
-            "order": "Ordenar",
-            "paging": "Paginació",
-            "scroller": "Posició Scroll",
-            "search": "Bñusqueda",
-            "searchBuilder": "Constructor de cerques",
-            "select": "Sel·lecció",
-            "title": "Crear nou Estat",
-            "toggleLabel": "Inclou:"
+        "button": {
+            "create": "Crear Estat",
+            "edit": "Actualitza",
+            "remove": "Borra",
+            "statesList": "Estats gravats",
+            "statesRemoveAll": "Borrar tots els Estats"
         },
-        "duplicateError": "Ja existeix un estat amb aquest nom",
-        "emptyError": "El nom no pot estar buit",
-        "emptyStates": "No hi ha estats gravats",
-        "removeConfirm": "Segur que vol eliminar %s?",
-        "removeError": "S'ha produït un error en eliminar l'estat.",
-        "removeJoiner": "i",
-        "removeSubmit": "Eliminar",
-        "removeTitle": "Borrar Estat",
-        "renameButton": "Canviar nom",
-        "renameLabel": "Nou nom per %s",
-        "renameTitle": "Canviar nom"
+        "create": {
+            "title": "Crear nou Estat"
+        },
+        "remove": {
+            "button": "Eliminar",
+            "message": {
+                "_": "Segur que vol eliminar %s?"
+            },
+            "title": "Borrar Estat"
+        }
     },
     "thousands": ".",
     "zeroRecords": "No s'han trobat registres"

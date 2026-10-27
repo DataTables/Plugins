@@ -28,7 +28,6 @@
             "1": "Skopiowano 1 wiersz do schowka"
         },
         "copyTitle": "Skopiuj do schowka",
-        "createState": "Utwórz stan",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -37,13 +36,7 @@
             "1": "Pokaż 1 wiersz"
         },
         "pdf": "PDF",
-        "print": "Drukuj",
-        "removeAllStates": "Usuń wszystkie stany",
-        "removeState": "Usuń",
-        "renameState": "Zmień nazwę",
-        "savedStates": "Zapisane stany",
-        "stateRestore": "Stan %d",
-        "updateState": "Aktualizuj"
+        "print": "Drukuj"
     },
     "columnControl": {
         "buttons": {
@@ -280,33 +273,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Utwórz",
-            "columns": {
-                "search": "Wyszukiwanie kolumny",
-                "visible": "Widoczność kolumny"
-            },
-            "name": "Nazwa:",
-            "order": "Sortowanie",
-            "paging": "Stronicowanie",
-            "scroller": "Przewijanie",
-            "search": "Szukanie",
-            "searchBuilder": "Tworzenie zapytań",
-            "select": "Wybieranie",
-            "title": "Utwórz nowy stan",
-            "toggleLabel": "Zawiera:"
+        "button": {
+            "create": "Utwórz stan",
+            "edit": "Aktualizuj",
+            "remove": "Usuń",
+            "statesList": "Zapisane stany",
+            "statesRemoveAll": "Usuń wszystkie stany"
         },
-        "duplicateError": "Stan o tej nazwie już istnieje.",
-        "emptyError": "Nazwa nie może być pusta.",
-        "emptyStates": "Brak zapisanych stanów",
-        "removeConfirm": "Czy na pewno chcesz usunąć %s?",
-        "removeError": "Nie udało się usunąć stanu.",
-        "removeJoiner": "oraz",
-        "removeSubmit": "Usuń",
-        "removeTitle": "Usuń stan",
-        "renameButton": "Zmień nazwę",
-        "renameLabel": "Nowa nazwa dla %s:",
-        "renameTitle": "Zmień nazwę stanu"
+        "create": {
+            "title": "Utwórz nowy stan"
+        },
+        "remove": {
+            "button": "Usuń",
+            "message": {
+                "_": "Czy na pewno chcesz usunąć %s?"
+            },
+            "title": "Usuń stan"
+        }
     },
     "thousands": " ",
     "zeroRecords": "Nie znaleziono pasujących pozycji"

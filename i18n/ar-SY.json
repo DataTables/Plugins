@@ -26,7 +26,6 @@
             "1": "تم نسخ سجل واحد إلى الذاكرة"
         },
         "copyTitle": "نسخ إلى الذاكرة",
-        "createState": "تكوين حالة",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -35,12 +34,7 @@
             "1": "عرض سجل واحد"
         },
         "pdf": "PDF",
-        "print": "طباعة",
-        "removeAllStates": "ازالة جميع الحالات",
-        "removeState": "ازالة الحالة",
-        "savedStates": "الحالات المحفوظة",
-        "stateRestore": "استرجاع الحالة",
-        "updateState": "تحديث الحالة"
+        "print": "طباعة"
     },
     "columnControl": {
         "buttons": {
@@ -244,31 +238,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "انشاء",
-            "columns": {
-                "search": "البحث في العمود",
-                "visible": "إظهار العمود"
-            },
-            "name": "الاسم:",
-            "paging": "التنقل بين الصفحات",
-            "scroller": "موقع  شريط التمرير",
-            "search": "البحث",
-            "searchBuilder": "منشئ البحث",
-            "select": "اختيار",
-            "title": "انشاء حالة جديدة",
-            "toggleLabel": "تضمين:"
+        "button": {
+            "create": "تكوين حالة",
+            "edit": "تحديث الحالة",
+            "remove": "ازالة الحالة",
+            "statesList": "الحالات المحفوظة",
+            "statesRemoveAll": "ازالة جميع الحالات"
         },
-        "duplicateError": "توجد حالة بهذا الاسم مسجلة بالفعل",
-        "emptyError": "لا يمكن ترك الأسم خاليا",
-        "emptyStates": "لا يوجد حالات مخزنة",
-        "removeConfirm": "%s ؟هل انت متأكد انك تريد ازالة ",
-        "removeError": "فشلت إزالة الحالة",
-        "removeSubmit": "أزل",
-        "removeTitle": "أزل الحالة",
-        "renameButton": "اعادة تسمية",
-        "renameLabel": "%s :اسم جديد لـ ",
-        "renameTitle": "إعادة تسمية الحالة"
+        "create": {
+            "title": "انشاء حالة جديدة"
+        },
+        "remove": {
+            "button": "أزل",
+            "message": {
+                "_": "%s ؟هل انت متأكد انك تريد ازالة "
+            },
+            "title": "أزل الحالة"
+        }
     },
     "thousands": ",",
     "zeroRecords": "لم يعثر على أية سجلات"

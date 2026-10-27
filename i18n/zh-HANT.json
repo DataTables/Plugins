@@ -28,7 +28,6 @@
             "1": "已複製 1 列到剪貼簿"
         },
         "copyTitle": "複製到剪貼簿",
-        "createState": "建立暫存狀態",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -37,13 +36,7 @@
             "1": "顯示 1 列"
         },
         "pdf": "PDF",
-        "print": "列印",
-        "removeAllStates": "移除所有暫存狀態",
-        "removeState": "移除",
-        "renameState": "重新命名",
-        "savedStates": "已暫存的狀態",
-        "stateRestore": "暫存狀態 %d",
-        "updateState": "更新"
+        "print": "列印"
     },
     "columnControl": {
         "buttons": {
@@ -271,33 +264,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "建立",
-            "columns": {
-                "search": "欄位搜尋",
-                "visible": "欄位顯示"
-            },
-            "name": "名稱：",
-            "order": "排序",
-            "paging": "分頁",
-            "scroller": "卷軸位置",
-            "search": "搜尋",
-            "searchBuilder": "複合查詢",
-            "select": "選擇",
-            "title": "建立新暫存狀態",
-            "toggleLabel": "包含："
+        "button": {
+            "create": "建立暫存狀態",
+            "edit": "更新",
+            "remove": "移除",
+            "statesList": "已暫存的狀態",
+            "statesRemoveAll": "移除所有暫存狀態"
         },
-        "duplicateError": "已有使用此名稱的暫存狀態。",
-        "emptyError": "名稱不能為空白。",
-        "emptyStates": "沒有暫存狀態",
-        "removeConfirm": "確定要移除 %s 嗎？",
-        "removeError": "暫存狀態移除失敗。",
-        "removeJoiner": "和",
-        "removeSubmit": "移除",
-        "removeTitle": "移除暫存狀態",
-        "renameButton": "重新命名",
-        "renameLabel": "%s 的新名稱：",
-        "renameTitle": "重新命名暫存狀態"
+        "create": {
+            "title": "建立新暫存狀態"
+        },
+        "remove": {
+            "button": "移除",
+            "message": {
+                "_": "確定要移除 %s 嗎？"
+            },
+            "title": "移除暫存狀態"
+        }
     },
     "thousands": ",",
     "zeroRecords": "沒有符合的資料"

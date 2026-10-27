@@ -25,7 +25,6 @@
             "1": "Đã sao chép 1 dòng dữ liệu vào clipboard"
         },
         "copyTitle": "Sao chép vào clipboard",
-        "createState": "Tạo trạng thái",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -33,13 +32,7 @@
             "-1": "Xem tất cả các dòng"
         },
         "pdf": "PDF",
-        "print": "In ấn",
-        "removeAllStates": "Xóa hết trạng thái",
-        "removeState": "Xóa",
-        "renameState": "Đổi tên",
-        "savedStates": "Trạng thái đã lưu",
-        "stateRestore": "Trạng thái %d",
-        "updateState": "Cập nhật"
+        "print": "In ấn"
     },
     "columnControl": {
         "buttons": {
@@ -270,33 +263,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Thêm",
-            "columns": {
-                "search": "Tìm kiếm thèo cột",
-                "visible": "Hiển thị theo cột"
-            },
-            "name": "Tên:",
-            "order": "Sắp xếp",
-            "paging": "Phân trang",
-            "scroller": "Cuộn vị trí",
-            "search": "Tìm kiếm",
-            "searchBuilder": "Trình tạo tìm kiếm",
-            "select": "Lựa chọn",
-            "title": "Thêm trạng thái",
-            "toggleLabel": "Bao gồm:"
+        "button": {
+            "create": "Tạo trạng thái",
+            "edit": "Cập nhật",
+            "remove": "Xóa",
+            "statesList": "Trạng thái đã lưu",
+            "statesRemoveAll": "Xóa hết trạng thái"
         },
-        "duplicateError": "Trạng thái có tên này đã tồn tại.",
-        "emptyError": "Tên không được để trống.",
-        "emptyStates": "Không có trạng thái nào được lưu",
-        "removeConfirm": "Bạn có chắc chắn muốn xóa %s không?",
-        "removeError": "Không xóa được trạng thái.",
-        "removeJoiner": "và",
-        "removeSubmit": "Xóa",
-        "removeTitle": "Xóa trạng thái",
-        "renameButton": "Đổi tên",
-        "renameLabel": "Tên mới cho %s:",
-        "renameTitle": "Đổi tên trạng thái"
+        "create": {
+            "title": "Thêm trạng thái"
+        },
+        "remove": {
+            "button": "Xóa",
+            "message": {
+                "_": "Bạn có chắc chắn muốn xóa %s không?"
+            },
+            "title": "Xóa trạng thái"
+        }
     },
     "thousands": ".",
     "zeroRecords": "Không tìm thấy kết quả"
