@@ -1,4 +1,4 @@
-/*! © SpryMedia Ltd, Dominique Fournier, Brad Wasson, Peter Vilhan, Kevin Gilkey-Graham - datatables.net/license - 3.1.2 */
+/*! © SpryMedia Ltd, Dominique Fournier, Brad Wasson, Peter Vilhan, Kevin Gilkey-Graham - datatables.net/license - 3.1.4 */
 
 import DataTable from 'datatables.net';
 

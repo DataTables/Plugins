@@ -37,7 +37,6 @@
             "1": "Copiada 1 fila ao portapapeis"
         },
         "copyTitle": "Copiar ao portapapeis",
-        "createState": "Crear Estado",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -45,13 +44,7 @@
             "-1": "Mostrar todas as filas"
         },
         "pdf": "PDF",
-        "print": "Imprimir",
-        "removeAllStates": "Eliminar Todos os Estados",
-        "removeState": "Eliminar",
-        "renameState": "Renomear",
-        "savedStates": "Estados Gardados",
-        "stateRestore": "Estado %d",
-        "updateState": "Actualizar"
+        "print": "Imprimir"
     },
     "datetime": {
         "amPm": {
@@ -227,33 +220,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Crear",
-            "columns": {
-                "search": "Busca de columnas",
-                "visible": "Visibilidade de columnas"
-            },
-            "name": "Nome:",
-            "order": "Ordenación",
-            "paging": "Paxinación",
-            "scroller": "Posición de scroll",
-            "search": "Busca",
-            "searchBuilder": "SearchBuilder",
-            "select": "Selección",
-            "title": "Crear novo estado",
-            "toggleLabel": "Inclue:"
+        "button": {
+            "create": "Crear Estado",
+            "edit": "Actualizar",
+            "remove": "Eliminar",
+            "statesList": "Estados Gardados",
+            "statesRemoveAll": "Eliminar Todos os Estados"
         },
-        "duplicateError": "Un estado con este nome xa existe.",
-        "emptyError": "O nome non pode estar baleiro.",
-        "emptyStates": "Sen estados gardados",
-        "removeConfirm": "Seguro que quere eliminar %s?",
-        "removeError": "Fallo ao eliminar o estado.",
-        "removeJoiner": "e",
-        "removeSubmit": "Eliminar",
-        "removeTitle": "Eliminar estado",
-        "renameButton": "Renomear",
-        "renameLabel": "Novo nome para %s:",
-        "renameTitle": "Renomear estado"
+        "create": {
+            "title": "Crear novo estado"
+        },
+        "remove": {
+            "button": "Eliminar",
+            "message": {
+                "_": "Seguro que quere eliminar %s?"
+            },
+            "title": "Eliminar estado"
+        }
     },
     "thousands": ".",
     "zeroRecords": "Non se atoparon resultados"

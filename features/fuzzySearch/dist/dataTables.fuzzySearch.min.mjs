@@ -1,5 +1,5 @@
 /*!
- * Fuzzy Search 3.1.2 for DataTables
+ * Fuzzy Search 3.1.4 for DataTables
  * SpryMedia Ltd - datatables.net/license MIT license
  *
  * Damerau-Levenshtein function courtesy of https://github.com/tad-lispy/node-damerau-levenshtein

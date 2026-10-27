@@ -37,7 +37,6 @@
             "1": "បានចំលង 1 ជួរទៅកាន់ clipboard"
         },
         "copyTitle": "ចំលងទៅកាន់ Clipboard",
-        "createState": "បង្កើតសភាព",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -45,13 +44,7 @@
             "-1": "បង្ហាញទាំងអស់ជួរ"
         },
         "pdf": "PDF",
-        "print": "បោះពុម្ព",
-        "removeAllStates": "លុបសភាពទាំងអស់",
-        "removeState": "លុប",
-        "renameState": "ដូរឈ្មោះ",
-        "savedStates": "សភាពដែលបានរក្សាទុក",
-        "stateRestore": "សភាព %d",
-        "updateState": "ធ្វើបច្ចុប្បន្នភាព"
+        "print": "បោះពុម្ព"
     },
     "datetime": {
         "amPm": {
@@ -227,33 +220,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "បង្កើត",
-            "columns": {
-                "search": "ស្វែងរកជួរ",
-                "visible": "ការបង្ហាញ\/លាក"
-            },
-            "name": "ឈ្មោះ:",
-            "order": "រៀបលំដាប់",
-            "paging": "បែងចែកទំព័រ",
-            "scroller": "អូស",
-            "search": "ស្វែងរក",
-            "searchBuilder": "បង្កើតការស្វែងរក",
-            "select": "ជ្រើសរើស",
-            "title": "បង្កើតសភាពថ្មី",
-            "toggleLabel": "រួមមាន៖"
+        "button": {
+            "create": "បង្កើតសភាព",
+            "edit": "ធ្វើបច្ចុប្បន្នភាព",
+            "remove": "លុប",
+            "statesList": "សភាពដែលបានរក្សាទុក",
+            "statesRemoveAll": "លុបសភាពទាំងអស់"
         },
-        "duplicateError": "សភាពដែលមានឈ្មោះដូចនេះមានហើយ",
-        "emptyError": "ឈ្មោះមិនអាចទទេទេ។",
-        "emptyStates": "មិនមានសភាពដែលបានរក្សាទុកទេ",
-        "removeConfirm": "តើអ្នកពិតជាចង់លុប %s មែនទេ?",
-        "removeError": "មិនអាចលុបសភាពបានទេ។",
-        "removeJoiner": "និង",
-        "removeSubmit": "លុបចេញ",
-        "removeTitle": "លុបសភាព",
-        "renameButton": "ដូរ",
-        "renameLabel": "ឈ្មោះថ្មីសម្រាប់ %s:",
-        "renameTitle": "ប្តូរឈ្មោះសភាព"
+        "create": {
+            "title": "បង្កើតសភាពថ្មី"
+        },
+        "remove": {
+            "button": "លុបចេញ",
+            "message": {
+                "_": "តើអ្នកពិតជាចង់លុប %s មែនទេ?"
+            },
+            "title": "លុបសភាព"
+        }
     },
     "thousands": ".",
     "zeroRecords": "មិនមានទិន្នន័យត្រូវតាមលក្ខខណ្ឌស្វែងរកទេ"

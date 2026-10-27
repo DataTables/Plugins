@@ -37,7 +37,6 @@
             "1": "Copiada 1 fila al portapapeles"
         },
         "copyTitle": "Copiar al portapapeles",
-        "createState": "Crear Estado",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -45,13 +44,7 @@
             "-1": "Mostrar todas las filas"
         },
         "pdf": "PDF",
-        "print": "Imprimir",
-        "removeAllStates": "Borrar Todos los Estados",
-        "removeState": "Borrar Estado",
-        "renameState": "Renombrar Estado",
-        "savedStates": "Guardar Estado",
-        "stateRestore": "Restaurar Estado",
-        "updateState": "Actualizar Estado"
+        "print": "Imprimir"
     },
     "datetime": {
         "amPm": {
@@ -227,33 +220,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Crear",
-            "columns": {
-                "search": "Columna de búsqueda",
-                "visible": "Columna de visibilidad"
-            },
-            "name": "Nombre:",
-            "order": "Ordenar",
-            "paging": "Paginar",
-            "scroller": "Posición de desplazamiento",
-            "search": "Buscar",
-            "searchBuilder": "Creador de búsquedas",
-            "select": "Selector",
-            "title": "Crear nuevo",
-            "toggleLabel": "Incluye:"
+        "button": {
+            "create": "Crear Estado",
+            "edit": "Actualizar Estado",
+            "remove": "Borrar Estado",
+            "statesList": "Guardar Estado",
+            "statesRemoveAll": "Borrar Todos los Estados"
         },
-        "duplicateError": "Ya existe un valor con el mismo nombre",
-        "emptyError": "No puede ser vacío",
-        "emptyStates": "No se han guardado",
-        "removeConfirm": "Esta seguro de eliminar %s?",
-        "removeError": "Fallo al eliminar",
-        "removeJoiner": "y",
-        "removeSubmit": "Eliminar",
-        "removeTitle": "Eliminar",
-        "renameButton": "Renombrar",
-        "renameLabel": "Nuevo nombre para %s:",
-        "renameTitle": "Renombrar"
+        "create": {
+            "title": "Crear nuevo"
+        },
+        "remove": {
+            "button": "Eliminar",
+            "message": {
+                "_": "Esta seguro de eliminar %s?"
+            },
+            "title": "Eliminar"
+        }
     },
     "thousands": ",",
     "zeroRecords": "No se encontraron coincidencias"

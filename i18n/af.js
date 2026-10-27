@@ -40,7 +40,6 @@
             "1": "1 ry gekopieër na knipbord"
         },
         "copyTitle": "Kopieër na knipbord",
-        "createState": "Skep Staat",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -49,13 +48,7 @@
             "1": "Wys 1 ry"
         },
         "pdf": "PDF",
-        "print": "Druk",
-        "removeAllStates": "Verwyder Alle State",
-        "removeState": "Verwyder",
-        "renameState": "Hernoem",
-        "savedStates": "Gestoorde State",
-        "stateRestore": "Staat %d",
-        "updateState": "Dateer op"
+        "print": "Druk"
     },
     "columnControl": {
         "colVis": "Kolomsigbaarheid",
@@ -100,6 +93,15 @@
         },
         "rows": {
             "0": ""
+        }
+    },
+    "stateRestore": {
+        "button": {
+            "create": "Skep Staat",
+            "edit": "Dateer op",
+            "remove": "Verwyder",
+            "statesList": "Gestoorde State",
+            "statesRemoveAll": "Verwyder Alle State"
         }
     },
     "thousands": ",",

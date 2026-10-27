@@ -40,7 +40,6 @@
             "1": "Skopírovaný 1 riadok do schránky"
         },
         "copyTitle": "Kopírovať do schránky",
-        "createState": "Vytvoriť stav",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -48,13 +47,7 @@
             "-1": "Zobraziť všetky riadky"
         },
         "pdf": "PDF",
-        "print": "Tlačiť",
-        "removeAllStates": "Vymazať všetky stavy",
-        "removeState": "Odstrániť",
-        "renameState": "Premenovať",
-        "savedStates": "Uložené stavy",
-        "stateRestore": "Stav %d",
-        "updateState": "Aktualizovať"
+        "print": "Tlačiť"
     },
     "datetime": {
         "amPm": {
@@ -229,33 +222,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Vytvoriť",
-            "columns": {
-                "search": "Vyhľadanie v stĺpci",
-                "visible": "Viditeľnosť stĺpca"
-            },
-            "name": "Názov:",
-            "order": "Zoradenie",
-            "paging": "Stránkovanie",
-            "scroller": "Pozícia skrolovania",
-            "search": "Hľadať",
-            "searchBuilder": "Pokročilé Vyhľadávanie",
-            "select": "Výber",
-            "title": "Vytvoriť nový stav",
-            "toggleLabel": "Zahrnúť:"
+        "button": {
+            "create": "Vytvoriť stav",
+            "edit": "Aktualizovať",
+            "remove": "Odstrániť",
+            "statesList": "Uložené stavy",
+            "statesRemoveAll": "Vymazať všetky stavy"
         },
-        "duplicateError": "Stav s týmto názvom už existuje.",
-        "emptyError": "Názov nesmie byť prázdny.",
-        "emptyStates": "Žiadne uložené stavy",
-        "removeConfirm": "Ste si istí, že chcete odstrániť stav %s?",
-        "removeError": "Nepodarilo sa odstrániť stav.",
-        "removeJoiner": " a ",
-        "removeSubmit": "Odstrániť",
-        "removeTitle": "Odstrániť stav",
-        "renameButton": "Premenovať",
-        "renameLabel": "Nový názov pre %s:",
-        "renameTitle": "Premenovať stav"
+        "create": {
+            "title": "Vytvoriť nový stav"
+        },
+        "remove": {
+            "button": "Odstrániť",
+            "message": {
+                "_": "Ste si istí, že chcete odstrániť stav %s?"
+            },
+            "title": "Odstrániť stav"
+        }
     },
     "thousands": " ",
     "zeroRecords": "Nenašli sa žiadne vyhovujúce záznamy"

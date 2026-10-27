@@ -40,7 +40,6 @@
             "1": "Lerro bat arbelera kopiatu da"
         },
         "copyTitle": "Kopiatu arbelera",
-        "createState": "Sortu egoera",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -49,13 +48,7 @@
             "1": "Lerro bat erakutsi"
         },
         "pdf": "PDF",
-        "print": "Inprimatu",
-        "removeAllStates": "Ezabatu egoera guztiak",
-        "removeState": "Ezabatu",
-        "renameState": "Berrizendatu",
-        "savedStates": "Gordetako egoerak",
-        "stateRestore": "%d egoera",
-        "updateState": "Eguneratu"
+        "print": "Inprimatu"
     },
     "columnControl": {
         "buttons": {
@@ -292,33 +285,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Sortu",
-            "columns": {
-                "search": "Zutabe bilaketa",
-                "visible": "Zutabe ikusgaitasuna"
-            },
-            "name": "Izena",
-            "order": "Ordenazioa",
-            "paging": "Orrikatzea",
-            "scroller": "Desplazamentu posizioa",
-            "search": "Bilaketa",
-            "searchBuilder": "Bilaketa aurreratua",
-            "select": "Aukeraketa",
-            "title": "Egoera berria sortu",
-            "toggleLabel": "Gehitu:"
+        "button": {
+            "create": "Sortu egoera",
+            "edit": "Eguneratu",
+            "remove": "Ezabatu",
+            "statesList": "Gordetako egoerak",
+            "statesRemoveAll": "Ezabatu egoera guztiak"
         },
-        "duplicateError": "Izen berdina duen egoera bat existitzen da jada",
-        "emptyError": "Izena ezin da hutsik egon",
-        "emptyStates": "Ez daude Egoerarik gordeta",
-        "removeConfirm": "Ziur al zaude %s hau ezabatu nahi duzula?",
-        "removeError": "Lerroa ezabatzean errorea",
-        "removeJoiner": "eta",
-        "removeSubmit": "Ezabatu",
-        "removeTitle": "Egoera ezabatu",
-        "renameButton": "Izena aldatu",
-        "renameLabel": "%s egoerarentzako izen berria",
-        "renameTitle": "Egoerari izena aldatu"
+        "create": {
+            "title": "Egoera berria sortu"
+        },
+        "remove": {
+            "button": "Ezabatu",
+            "message": {
+                "_": "Ziur al zaude %s hau ezabatu nahi duzula?"
+            },
+            "title": "Egoera ezabatu"
+        }
     },
     "thousands": ".",
     "zeroRecords": "Ez da emaitzarik aurkitu"

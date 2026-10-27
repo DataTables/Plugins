@@ -12,6 +12,9 @@
 (function() {
     return {
     "aria": {
+        "orderable": "Sıralamayı etkinleştirmek için tıklayın",
+        "orderableRemove": "Sıralamayı kaldırmak için etkinleştirin.",
+        "orderableReverse": "Sıralamayı tersine çevirmek için etkinleştirin",
         "paginate": {
             "first": "İlk",
             "last": "Son",
@@ -37,21 +40,58 @@
             "1": "1 satır panoya kopyalandı"
         },
         "copyTitle": "Panoya kopyala",
-        "createState": "Şuanki Görünümü Kaydet",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
             "_": "%d satır göster",
-            "-1": "Bütün satırları göster"
+            "-1": "Bütün satırları göster",
+            "1": "1 Satır Göster"
         },
         "pdf": "PDF",
-        "print": "Yazdır",
-        "removeAllStates": "Tüm Görünümleri Sil",
-        "removeState": "Aktif Görünümü Sil",
-        "renameState": "Aktif Görünümün Adını Değiştir",
-        "savedStates": "Kaydedilmiş Görünümler",
-        "stateRestore": "Görünüm -&gt; %d",
-        "updateState": "Aktif Görünümün Güncelle"
+        "print": "Yazdır"
+    },
+    "columnControl": {
+        "buttons": {
+            "searchClear": "Aramayı temizle"
+        },
+        "colVisDropdown": "Sütun görünürlüğü",
+        "dropdown": "Daha fazla",
+        "list": {
+            "all": "Tümünü seç",
+            "none": "Seçimi kaldır",
+            "search": "Ara..."
+        },
+        "orderAddAsc": "Artan Sıralama Ekle",
+        "orderAddDesc": "Azalan Sıralama Ekle",
+        "orderAsc": "Artan Sırala",
+        "orderClear": "Sıralamayı temizle",
+        "orderDesc": "Azalan Sırala",
+        "orderRemove": "Sıralamadan kaldır",
+        "reorder": "Sütunları yeniden sıralayın",
+        "reorderLeft": "Sütunu sola taşı",
+        "reorderRight": "Sütunu sağa taşı",
+        "search": {
+            "datetime": {
+                "greater": "Sonra",
+                "less": "Önce"
+            },
+            "number": {
+                "empty": "Boş",
+                "equal": "Eşittir",
+                "greater": "Bundan daha büyük",
+                "greaterOrEqual": "Büyük veya eşit",
+                "less": "Daha az",
+                "lessOrEqual": "Daha az veya eşit",
+                "notEmpty": "Boş değil",
+                "notEqual": "Eşit değil"
+            },
+            "text": {
+                "contains": "İçerir",
+                "ends": "Son",
+                "notContains": "İçermez",
+                "starts": "Başlangıç"
+            }
+        }
     },
     "datetime": {
         "amPm": {
@@ -126,6 +166,9 @@
     "infoFiltered": "(_MAX_ kayıt içerisinden bulunan)",
     "infoPostFix": "",
     "infoThousands": ".",
+    "lengthLabels": {
+        "-1": "Tümü"
+    },
     "lengthMenu": "Sayfada _MENU_ kayıt göster",
     "loadingRecords": "Yükleniyor...",
     "processing": "İşleniyor...",
@@ -188,11 +231,13 @@
         "logicAnd": "ve",
         "logicOr": "veya",
         "rightTitle": "Kriteri içeri al",
+        "search": "Ara",
         "title": {
             "_": "Arama Oluşturucu (%d)",
             "0": "Arama Oluşturucu"
         },
-        "value": "Değer"
+        "value": "Değer",
+        "valueJoiner": "Ve"
     },
     "searchPanes": {
         "clearMessage": "Hepsini Temizle",
@@ -227,33 +272,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Kaydet",
-            "columns": {
-                "search": "Kolon Araması",
-                "visible": "Kolon Görünümü"
-            },
-            "name": "Görünüm İsmi",
-            "order": "Sıralama",
-            "paging": "Sayfalama",
-            "scroller": "Kaydırma (Scrool)",
-            "search": "Arama",
-            "searchBuilder": "Arama Oluşturucu",
-            "select": "Seçimler",
-            "title": "Yeni Görünüm Oluştur",
-            "toggleLabel": "Kaydedilecek Olanlar"
+        "button": {
+            "create": "Şuanki Görünümü Kaydet",
+            "edit": "Aktif Görünümün Güncelle",
+            "remove": "Aktif Görünümü Sil",
+            "statesList": "Kaydedilmiş Görünümler",
+            "statesRemoveAll": "Tüm Görünümleri Sil"
         },
-        "duplicateError": "Bu Görünüm Daha Önce Tanımlanmış",
-        "emptyError": "Görünüm Boş Olamaz",
-        "emptyStates": "Herhangi Bir Görünüm Yok",
-        "removeConfirm": "Görünümü silmek istediğinize emin misiniz?",
-        "removeError": "Görünüm silinemedi",
-        "removeJoiner": "ve",
-        "removeSubmit": "Sil",
-        "removeTitle": "Görünüm Sil",
-        "renameButton": "Değiştir",
-        "renameLabel": "Görünüme Yeni İsim Ver -&gt; %s:",
-        "renameTitle": "Görünüm İsmini Değiştir"
+        "create": {
+            "title": "Yeni Görünüm Oluştur"
+        },
+        "remove": {
+            "button": "Sil",
+            "message": {
+                "_": "Görünümü silmek istediğinize emin misiniz?"
+            },
+            "title": "Görünüm Sil"
+        }
     },
     "thousands": ".",
     "zeroRecords": "Eşleşen kayıt bulunamadı"

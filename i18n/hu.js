@@ -37,7 +37,6 @@
             "1": "1 sor másolva"
         },
         "copyTitle": "Vágólapra másolás",
-        "createState": "Állapot mentése",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -45,13 +44,7 @@
             "-1": "Összes sor megjelenítése"
         },
         "pdf": "PDF",
-        "print": "Nyomtat",
-        "removeAllStates": "Mentett állapotok törlése",
-        "removeState": "Törlés",
-        "renameState": "Átnevezés",
-        "savedStates": "Mentett állapotok",
-        "stateRestore": "%d. állapot",
-        "updateState": "Frissítés"
+        "print": "Nyomtat"
     },
     "datetime": {
         "amPm": {
@@ -222,33 +215,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Létrehozás",
-            "columns": {
-                "search": "Oszlopkeresők",
-                "visible": "Oszlop láthatóság"
-            },
-            "name": "Név:",
-            "order": "Rendezés",
-            "paging": "Oldalszám",
-            "scroller": "Görgetés pozíciója",
-            "search": "Kereső",
-            "searchBuilder": "Keresési feltételek",
-            "select": "Kijelölések",
-            "title": "Állapot mentése",
-            "toggleLabel": "Tartalmazza:"
+        "button": {
+            "create": "Állapot mentése",
+            "edit": "Frissítés",
+            "remove": "Törlés",
+            "statesList": "Mentett állapotok",
+            "statesRemoveAll": "Mentett állapotok törlése"
         },
-        "duplicateError": "Ilyen névvel már létezik mentett állapot.",
-        "emptyError": "A név nem lehet üres.",
-        "emptyStates": "Nincs mentett állapot",
-        "removeConfirm": "Biztos törlöd %s állapotot?",
-        "removeError": "Nem sikerült törölni a mentett állapotot.",
-        "removeJoiner": "és",
-        "removeSubmit": "Törlés",
-        "removeTitle": "Mentett állapot törlése",
-        "renameButton": "Átnevezés",
-        "renameLabel": "%s új neve:",
-        "renameTitle": "Mentett állapot átnevezése"
+        "create": {
+            "title": "Állapot mentése"
+        },
+        "remove": {
+            "button": "Törlés",
+            "message": {
+                "_": "Biztos törlöd %s állapotot?"
+            },
+            "title": "Mentett állapot törlése"
+        }
     },
     "thousands": "&nbsp;",
     "zeroRecords": "Nincs a keresésnek megfelelő találat"

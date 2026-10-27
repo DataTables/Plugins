@@ -36,7 +36,6 @@
             "1": "Safu moja imenakili "
         },
         "copyTitle": "Nakili kwenye Clipboard",
-        "createState": "Ongeza Jimbo",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -44,12 +43,7 @@
             "-1": "Onyesha safu zote"
         },
         "pdf": "PDF",
-        "print": "Chapisha",
-        "removeAllStates": "Ondosha Majimbo yote",
-        "removeState": "Ondosha",
-        "renameState": "Sasiha Jina",
-        "savedStates": "Majimbo Yaliyohifadhiwa",
-        "updateState": "sasisha"
+        "print": "Chapisha"
     },
     "datetime": {
         "amPm": {
@@ -136,6 +130,15 @@
         },
         "rows": {
             "0": ""
+        }
+    },
+    "stateRestore": {
+        "button": {
+            "create": "Ongeza Jimbo",
+            "edit": "sasisha",
+            "remove": "Ondosha",
+            "statesList": "Majimbo Yaliyohifadhiwa",
+            "statesRemoveAll": "Ondosha Majimbo yote"
         }
     },
     "zeroRecords": "Rekodi vinavyolingana haziku patikana"

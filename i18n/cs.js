@@ -37,7 +37,6 @@
             "1": "Zkopírován 1 řádek do schránky"
         },
         "copyTitle": "Kopírovat do schránky",
-        "createState": "Vytvořit stav",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -45,13 +44,47 @@
             "-1": "Zobrazit všechny řádky"
         },
         "pdf": "PDF",
-        "print": "Tisknout",
-        "removeAllStates": "Vymazat všechny stavy",
-        "removeState": "Odstranit",
-        "renameState": "Odstranit",
-        "savedStates": "Uložit stavy",
-        "stateRestore": "Stav %d",
-        "updateState": "Aktualizovat"
+        "print": "Tisknout"
+    },
+    "columnControl": {
+        "buttons": {
+            "searchClear": "Vymazat hledání"
+        },
+        "colVisDropdown": "Viditelnost sloupců",
+        "dropdown": "Více…",
+        "list": {
+            "all": "Vybrat vše",
+            "none": "Zrušit výběr",
+            "search": "Hledat..."
+        },
+        "orderAddAsc": "Přidat vzestupné řazení",
+        "orderAddDesc": "Přidat sestupné řazení",
+        "orderAsc": "Vzestupné řazení",
+        "orderClear": "Vymazat řazení",
+        "orderDesc": "Sestupné řazení",
+        "orderRemove": "Odebrat z řazení",
+        "reorder": "Přeskupit sloupce",
+        "reorderLeft": "Přesunout sloupec doleva",
+        "reorderRight": "Přesunout sloupec doprava",
+        "search": {
+            "number": {
+                "empty": "Prázdné",
+                "equal": "Rovno",
+                "greater": "Větší než",
+                "greaterOrEqual": "Větší nebo rovno",
+                "less": "Menší než",
+                "lessOrEqual": "Menší nebo rovno",
+                "notEmpty": "Neprázdné",
+                "notEqual": "Nerovno"
+            },
+            "text": {
+                "contains": "Obsahuje",
+                "ends": "Končí na",
+                "notContains": "Neobsahuje",
+                "starts": "Začíná na"
+            }
+        },
+        "searchDropdown": "Hledat"
     },
     "datetime": {
         "amPm": {
@@ -227,33 +260,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Vytvořit",
-            "columns": {
-                "search": "Vyhledávání v buňce",
-                "visible": "Viditelnost buňky"
-            },
-            "name": "Název:",
-            "order": "Řazení",
-            "paging": "Stránkování",
-            "scroller": "Pozice skrolování",
-            "search": "Filtrování",
-            "searchBuilder": "Rozšířené filtrování",
-            "select": "Výběr",
-            "title": "Vytvořit nový stav",
-            "toggleLabel": "Zahrnout"
+        "button": {
+            "create": "Vytvořit stav",
+            "edit": "Aktualizovat",
+            "remove": "Odstranit",
+            "statesList": "Uložit stavy",
+            "statesRemoveAll": "Vymazat všechny stavy"
         },
-        "duplicateError": "Stav s tímto názvem již existuje.",
-        "emptyError": "Název nemůže být prázdný.",
-        "emptyStates": "Žádné uložené stavy",
-        "removeConfirm": "Opravdu chcete odstranit %s?",
-        "removeError": "Chyba při odstraňování stavu.",
-        "removeJoiner": "a",
-        "removeSubmit": "Odstranit",
-        "removeTitle": "Odstranit stav",
-        "renameButton": "Vymazat",
-        "renameLabel": "Nové jméno pro %s:",
-        "renameTitle": "Přejmenování stavu"
+        "create": {
+            "title": "Vytvořit nový stav"
+        },
+        "remove": {
+            "button": "Odstranit",
+            "message": {
+                "_": "Opravdu chcete odstranit %s?"
+            },
+            "title": "Odstranit stav"
+        }
     },
     "thousands": " ",
     "zeroRecords": "Nebyly nalezeny žádné záznamy"

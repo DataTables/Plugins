@@ -1,2 +1,2 @@
-/*! © SpryMedia Ltd - datatables.net/license - 3.1.2 */
+/*! © SpryMedia Ltd - datatables.net/license - 3.1.4 */
 import DataTable from"datatables.net";DataTable.ext.type.order["title-numeric-pre"]=function(t){t=t.match(/title="*(-?[0-9\.]+)/)[1];return parseFloat(t)};export default DataTable;

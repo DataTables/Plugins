@@ -37,7 +37,6 @@
             "1": "U kopjua 1 rresht në clipboard"
         },
         "copyTitle": "Kopjo në Clipboard",
-        "createState": "Krijo Gjendje",
         "csv": "CSV",
         "excel": "EXCEL",
         "pageLength": {
@@ -45,13 +44,7 @@
             "-1": "Shfaq të gjithë rreshtat"
         },
         "pdf": "PDF",
-        "print": "Printo",
-        "removeAllStates": "Shlyej Të Gjitha Gjendjet",
-        "removeState": "Shlyej",
-        "renameState": "Riemërto",
-        "savedStates": "Gjendjet e Ruajtura",
-        "stateRestore": "Shteti %d",
-        "updateState": "Përditëso"
+        "print": "Printo"
     },
     "datetime": {
         "amPm": {
@@ -223,33 +216,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Krijo",
-            "columns": {
-                "search": "Kërkimi Kolonës",
-                "visible": "Pamja Kolonës"
-            },
-            "name": "Emri:",
-            "order": "Renditja",
-            "paging": "Faqezimi",
-            "scroller": "Pozicioni i lëvizjes",
-            "search": "Kërkimi",
-            "searchBuilder": "NdertuesiKerkimit",
-            "select": "Selekto",
-            "title": "Krijo Gjendje Të Re",
-            "toggleLabel": "Përfshin:"
+        "button": {
+            "create": "Krijo Gjendje",
+            "edit": "Përditëso",
+            "remove": "Shlyej",
+            "statesList": "Gjendjet e Ruajtura",
+            "statesRemoveAll": "Shlyej Të Gjitha Gjendjet"
         },
-        "duplicateError": "Ekziton një gjendje me këtë emër.",
-        "emptyError": "Emri nuk mund të jetë i zbrazët.",
-        "emptyStates": "Nuk ka gjendje të ruajtura.",
-        "removeConfirm": "A jeni i sigurtë që doni të shlyeni %s?",
-        "removeError": "Shlyerja e gjendjes dështoi.",
-        "removeJoiner": "dhe",
-        "removeSubmit": "Shlyej",
-        "removeTitle": "Shlyej Gjendje",
-        "renameButton": "Riemërto",
-        "renameLabel": "Emri i ri për %s:",
-        "renameTitle": "Riemërto Gjendje"
+        "create": {
+            "title": "Krijo Gjendje Të Re"
+        },
+        "remove": {
+            "button": "Shlyej",
+            "message": {
+                "_": "A jeni i sigurtë që doni të shlyeni %s?"
+            },
+            "title": "Shlyej Gjendje"
+        }
     },
     "thousands": ",",
     "zeroRecords": "Nuk u gjet asnjë e dhënë"

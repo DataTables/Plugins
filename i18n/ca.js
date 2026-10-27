@@ -12,6 +12,9 @@
 (function() {
     return {
     "aria": {
+        "orderable": "Activar per ordenar",
+        "orderableRemove": "Activar per llevar l'ordenació",
+        "orderableReverse": "Activar per ordenar de forma inversa",
         "paginate": {
             "first": "Primer",
             "last": "Darrer",
@@ -37,21 +40,58 @@
             "1": "1 fila copiada"
         },
         "copyTitle": "Copia al portapapers",
-        "createState": "Crear Estat",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
             "_": "Mostra %d files",
-            "-1": "Mostra totes les files"
+            "-1": "Mostra totes les files",
+            "1": "Mostra 1 fila"
         },
         "pdf": "PDF",
-        "print": "Imprimeix",
-        "removeAllStates": "Borrar tots els Estats",
-        "removeState": "Borra",
-        "renameState": "Canviar nom",
-        "savedStates": "Estats gravats",
-        "stateRestore": "Restaura",
-        "updateState": "Actualitza"
+        "print": "Imprimeix"
+    },
+    "columnControl": {
+        "buttons": {
+            "searchClear": "Neteja la cerca"
+        },
+        "colVis": "Visibilitat",
+        "colVisDropdown": "Visibilidad de la columna",
+        "dropdown": "Més...",
+        "list": {
+            "all": "Selecciona-ho tot",
+            "empty": "Buida",
+            "none": "Deselecciona-ho tot",
+            "search": "Cerca..."
+        },
+        "orderAddAsc": "Afegeix a ordenació ascendent",
+        "orderAddDesc": "Afegeix a ordenació descendent",
+        "orderAsc": "Ordenar ascendentment",
+        "orderClear": "Neteja l'ordanació",
+        "orderDesc": "Ordenar descendentment",
+        "orderRemove": "Borrar de l'ordenació",
+        "reorder": "Reordenar columnes",
+        "reorderLeft": "Mou la columna cap a l'esquerra",
+        "reorderRight": "Mou la columna cap a la dreta",
+        "search": {
+            "number": {
+                "empty": "Buit",
+                "equal": "Igual a",
+                "greater": "Major que",
+                "greaterOrEqual": "Major o igual",
+                "less": "Menor que",
+                "lessOrEqual": "Menor o igual",
+                "notEmpty": "No buit",
+                "notEqual": "Diferent de"
+            },
+            "text": {
+                "contains": "Conté",
+                "ends": "Acaba amb",
+                "notContains": "No conté",
+                "starts": "Comença amb"
+            }
+        },
+        "searchClear": "Borrar al cerca",
+        "searchDropdown": "Cerca"
     },
     "datetime": {
         "amPm": {
@@ -102,19 +142,19 @@
             "title": "Editar entrada"
         },
         "error": {
-            "system": "Ha ocurregut un error de sistema (Més informació)"
+            "system": "S'ha produït un error al sistema (<a target=\"\\\" rel=\"\\ nofollow\" href=\"\\\">Més informació&lt;\\\/a&gt;).<\/a>"
         },
         "multi": {
             "info": "El ítems seleccionats contenen diferents valors per aquesta entrada. Per editar i configurar tots els ítems per a aquesta entrada al mateix valor, prem o clica tabular aquí, sino, mantindran els seus valors individuals",
             "noMulti": "Aquest camp pot ser editat individualment; però no com a part d'un grup",
-            "restore": "Desfés el canvi",
+            "restore": "Desfer els canvis",
             "title": "Múltiples valors"
         },
         "remove": {
             "button": "Eliminar",
             "confirm": {
                 "_": "Està segur de voler eliminar %d files?",
-                "1": "Està segur de voler elmiminar 1 fila?"
+                "1": "Està segur de voler eliminar 1 fila?"
             },
             "submit": "Eliminar",
             "title": "Eliminar"
@@ -126,8 +166,12 @@
     "infoFiltered": "(filtrat de _MAX_ registres)",
     "infoPostFix": "",
     "infoThousands": ".",
+    "lengthLabels": {
+        "-1": "Totes"
+    },
     "lengthMenu": "Mostra _MENU_ registres",
     "loadingRecords": "Carregant...",
+    "orderClear": "Netejar ordenació de toda la taula",
     "processing": "Processant...",
     "search": "Cerca:",
     "searchBuilder": {
@@ -162,7 +206,7 @@
                 "empty": "Buit",
                 "equals": "Iguals",
                 "gt": "Major que",
-                "gte": "Mejor o igual a",
+                "gte": "Major o igual a",
                 "lt": "Menor que",
                 "lte": "Menor o igual a",
                 "not": "No",
@@ -182,17 +226,19 @@
                 "startsWith": "Comença amb"
             }
         },
-        "data": "Data",
+        "data": "Dades",
         "deleteTitle": "Esborrar regla de filtrat",
         "leftTitle": "Criteri de desindentació",
         "logicAnd": "I",
         "logicOr": "O",
         "rightTitle": "Criteri d'indentació",
+        "search": "Cercar",
         "title": {
             "_": "Constructor de cerca (%d)",
             "0": "Constructor de cerca"
         },
-        "value": "Valor"
+        "value": "Valor",
+        "valueJoiner": "i"
     },
     "searchPanes": {
         "clearMessage": "Esborrar tot",
@@ -200,9 +246,10 @@
             "_": "Panells de cerca (%d)",
             "0": "Panells de cerca"
         },
-        "collapseMessage": "Colapsar Tot",
+        "collapseMessage": "Tancar-ho tot",
         "count": "{total}",
-        "countFiltered": "{monstrat} ({total})",
+        "countFiltered": "{mostrat} ({total})",
+        "emptyMessage": "&lt;em&gt;Buit&lt;\/em&gt;",
         "emptyPanes": "No hi ha panells de cerca",
         "loadMessage": "Carregant panells de cerca",
         "showMessage": "Mostrar-ho tot",
@@ -211,9 +258,9 @@
     "searchPlaceholder": "",
     "select": {
         "cells": {
-            "_": "%d files seleccionades",
+            "_": "%d cel·les seleccionades",
             "0": "",
-            "1": "1 fila seleccionada"
+            "1": "S'ha seleccionat 1 cel·la"
         },
         "columns": {
             "_": "%d columnes seleccionades",
@@ -227,33 +274,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Crear",
-            "columns": {
-                "search": "Cerca per columnes",
-                "visible": "Visibilitat de columnes"
-            },
-            "name": "Nom",
-            "order": "Ordenar",
-            "paging": "Paginació",
-            "scroller": "Posició Scroll",
-            "search": "Bñusqueda",
-            "searchBuilder": "Generador Búsquedes",
-            "select": "Sel·lecció",
-            "title": "Crear nou Estat",
-            "toggleLabel": "Inclou:"
+        "button": {
+            "create": "Crear Estat",
+            "edit": "Actualitza",
+            "remove": "Borra",
+            "statesList": "Estats gravats",
+            "statesRemoveAll": "Borrar tots els Estats"
         },
-        "duplicateError": "Ja existeix un estat amb aquest nom",
-        "emptyError": "El nom no pot estar buit",
-        "emptyStates": "No hi ha estats gravats",
-        "removeConfirm": "¿Segur que vol eliminar aquest %s?",
-        "removeError": "Error eliminant el registre",
-        "removeJoiner": "i",
-        "removeSubmit": "Eliminar",
-        "removeTitle": "Borrar Estat",
-        "renameButton": "Canviar nom",
-        "renameLabel": "Nou nom per %s",
-        "renameTitle": "Canviar nom"
+        "create": {
+            "title": "Crear nou Estat"
+        },
+        "remove": {
+            "button": "Eliminar",
+            "message": {
+                "_": "Segur que vol eliminar %s?"
+            },
+            "title": "Borrar Estat"
+        }
     },
     "thousands": ".",
     "zeroRecords": "No s'han trobat registres"

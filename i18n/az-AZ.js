@@ -41,10 +41,18 @@
         "excel": "Excel",
         "pageLength": {
             "_": "%d sətir göstər",
-            "-1": "Bütün sətirlari göstər"
+            "-1": "Bütün sətirlari göstər",
+            "1": "1 sətir göstər"
         },
         "pdf": "PDF",
         "print": "Çap Et"
+    },
+    "columnControl": {
+        "colVisDropdown": "Sütunun görünməsi",
+        "dropdown": "Daha çox",
+        "list": {
+            "search": "Axtarış..."
+        }
     },
     "datetime": {
         "amPm": {
@@ -53,10 +61,31 @@
         },
         "hours": "Saat",
         "minutes": "Dəqiqə",
+        "months": {
+            "0": "Janvar",
+            "1": "Fevral",
+            "10": "Noyabr",
+            "11": "Dekabr",
+            "2": "Mart",
+            "3": "Aprel",
+            "4": "May",
+            "5": "İyun",
+            "6": "İyul",
+            "7": "Avqust",
+            "8": "Sentyabr",
+            "9": "Oktyabr"
+        },
         "next": "Növbəti",
         "previous": "Öncəki",
         "seconds": "Saniyə",
-        "unknown": "Naməlum"
+        "unknown": "Naməlum",
+        "weekdays": {
+            "0": "B.",
+            "1": "B.e.",
+            "4": "C.a.",
+            "5": "C.",
+            "6": "Ş."
+        }
     },
     "decimal": "",
     "editor": {
@@ -101,7 +130,7 @@
     "processing": "Gözləyin...",
     "search": "Axtarış:",
     "searchBuilder": {
-        "add": "Koşul Ekle",
+        "add": "Şərt əlavə edin",
         "button": {
             "_": "Axtarış Yaradıcı (%d)",
             "0": "Axtarış Yaradıcı"
@@ -145,7 +174,10 @@
                 "endsWith": "İlə bitər",
                 "equals": "Bərabərdir",
                 "not": "Deyildir",
+                "notContains": "Tərkibində yoxdur",
                 "notEmpty": "Dolu",
+                "notEndsWith": "İlə bitmir",
+                "notStartsWith": "İlə başlamır",
                 "startsWith": "İlə başlayar"
             }
         },
@@ -155,11 +187,13 @@
         "logicAnd": "və",
         "logicOr": "vəya",
         "rightTitle": "Meyarı içəri al",
+        "search": "Axtarış",
         "title": {
             "_": "Axtarış Yaradıcı (%d)",
             "0": "Axtarış Yaradıcı"
         },
-        "value": "Değer"
+        "value": "Değer",
+        "valueJoiner": "və"
     },
     "searchPanes": {
         "clearMessage": "Hamısını Təmizlə",
@@ -167,10 +201,13 @@
             "_": "Axtarış Bölməsi (%d)",
             "0": "Axtarış Bölməsi"
         },
+        "collapseMessage": "Hamısını yığışdırın",
         "count": "{total}",
         "countFiltered": "{shown}\/{total}",
+        "emptyMessage": "&lt;em&gt;Boş&lt;\/em&gt;",
         "emptyPanes": "Axtarış Bölməsi yoxdur",
         "loadMessage": "Axtarış Bölməsi yüklənir ...",
+        "showMessage": "Hamısını göstər",
         "title": "Aktiv filtrlər - %d"
     },
     "searchPlaceholder": "",
@@ -189,6 +226,11 @@
             "_": "%d qeyd seçildi",
             "0": "",
             "1": "1 qeyd seçildi"
+        }
+    },
+    "stateRestore": {
+        "remove": {
+            "button": "Sil"
         }
     },
     "thousands": ".",

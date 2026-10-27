@@ -40,7 +40,6 @@
             "1": "Радок скапіяваны ў буфер памену"
         },
         "copyTitle": "Скапіяваць у буфер памену",
-        "createState": "Стварыць стан",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -49,13 +48,7 @@
             "1": "Паказаць 1 радок"
         },
         "pdf": "PDF",
-        "print": "Друкаваць",
-        "removeAllStates": "Выдаліць усе станы",
-        "removeState": "Выдаліць",
-        "renameState": "Пераназваць",
-        "savedStates": "Захаваныя станы",
-        "stateRestore": "Стан %d",
-        "updateState": "Абнавіць"
+        "print": "Друкаваць"
     },
     "columnControl": {
         "buttons": {
@@ -292,33 +285,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Стварыць",
-            "columns": {
-                "search": "Пошук у слупку",
-                "visible": "Бачнасць слупка"
-            },
-            "name": "Назва:",
-            "order": "Сартаванне",
-            "paging": "Пэйджынг",
-            "scroller": "Гартанне",
-            "search": "Пошук",
-            "searchBuilder": "Конструктор запытаў",
-            "select": "Выбар",
-            "title": "Стварыць новы стан",
-            "toggleLabel": "Змяшчае:"
+        "button": {
+            "create": "Стварыць стан",
+            "edit": "Абнавіць",
+            "remove": "Выдаліць",
+            "statesList": "Захаваныя станы",
+            "statesRemoveAll": "Выдаліць усе станы"
         },
-        "duplicateError": "Стан з такой назвай ужо існуе.",
-        "emptyError": "Назва не можа быць пустой.",
-        "emptyStates": "Няма захаваных станаў.",
-        "removeConfirm": "Вы ўпэўнены, што хочаце выдаліць %s?",
-        "removeError": "Не магу выдаліць стан.",
-        "removeJoiner": "і",
-        "removeSubmit": "Выдаліць",
-        "removeTitle": "Выдаліць стан",
-        "renameButton": "Пераназваць",
-        "renameLabel": "Новая назва для %s:",
-        "renameTitle": "Пераназваць стан"
+        "create": {
+            "title": "Стварыць новы стан"
+        },
+        "remove": {
+            "button": "Выдаліць",
+            "message": {
+                "_": "Вы ўпэўнены, што хочаце выдаліць %s?"
+            },
+            "title": "Выдаліць стан"
+        }
     },
     "thousands": " ",
     "zeroRecords": "Патрэбныя запісы не знойдзены."

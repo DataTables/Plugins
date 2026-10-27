@@ -28,7 +28,6 @@ export default {
             "1": "S-a copiat un rând în clipboard"
         },
         "copyTitle": "Copiază în Clipboard",
-        "createState": "Creează Stare",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -37,21 +36,53 @@ export default {
             "1": "Arată 1 rând"
         },
         "pdf": "PDF",
-        "print": "Imprimă",
-        "removeAllStates": "Elimină Toate Stările",
-        "removeState": "Elimină",
-        "renameState": "Redenumește",
-        "savedStates": "Salvează Stările",
-        "stateRestore": "Starea %d",
-        "updateState": "Actualizează"
+        "print": "Imprimă"
     },
     "columnControl": {
+        "buttons": {
+            "searchClear": "Elimină căutarea"
+        },
         "colVis": "Vizibilitate coloane",
         "colVisDropdown": "Vizibilitate coloane",
         "dropdown": "Mai multe...",
+        "list": {
+            "all": "Selectează tot",
+            "none": "Deselectează tot",
+            "search": "Căutare..."
+        },
         "orderAddAsc": "Adaugă sortare crescătoare",
         "orderAddDesc": "Adaugă sortare descrescătoare",
-        "orderAsc": "Sortează ascendent "
+        "orderAsc": "Sortează ascendent ",
+        "orderClear": "Curăță sortarea",
+        "orderDesc": "Sortează descendent",
+        "orderRemove": "Elimină din sortare",
+        "reorder": "Reordonează coloanele",
+        "reorderLeft": "Mută coloana la stânga",
+        "reorderRight": "Mută coloana la dreapta",
+        "search": {
+            "datetime": {
+                "greater": "După",
+                "less": "Înainte"
+            },
+            "number": {
+                "empty": "Gol",
+                "equal": "Egal",
+                "greater": "Mai mare ca",
+                "greaterOrEqual": "Mai mare sau egal",
+                "less": "Mai mic ca",
+                "lessOrEqual": "Mai mic sau egal",
+                "notEmpty": "Nu este gol",
+                "notEqual": "Nu este egal"
+            },
+            "text": {
+                "contains": "Conține",
+                "ends": "Se termină cu",
+                "notContains": "Nu conține",
+                "starts": "Începe cu"
+            }
+        },
+        "searchClear": "Curăță căutarea",
+        "searchDropdown": "Căutare"
     },
     "datetime": {
         "amPm": {
@@ -113,8 +144,8 @@ export default {
         "remove": {
             "button": "Șterge",
             "confirm": {
-                "_": "Sigur doriți să ștergeți %d rânduri?",
-                "1": "Sigur doriți să ștergeți 1 rând?"
+                "_": "Sigur dorești să ștergi %d rânduri?",
+                "1": "Sigur dorești să ștergi 1 rând?"
             },
             "submit": "Șterge",
             "title": "Șterge"
@@ -126,13 +157,16 @@ export default {
     "infoFiltered": "(filtrate dintr-un total de _MAX_ înregistrări)",
     "infoPostFix": "",
     "infoThousands": ".",
+    "lengthLabels": {
+        "-1": "Toate"
+    },
     "lengthMenu": "Afișează _MENU_ înregistrări pe pagină",
     "loadingRecords": "Se încarcă...",
     "orderClear": "Elimină sortarea",
     "processing": "Se procesează...",
     "search": "Caută:",
     "searchBuilder": {
-        "add": "Adaugă condiție",
+        "add": "Adaugă o condiție",
         "button": {
             "_": "Generator de căutare (%d)",
             "0": "Generator de căutare"
@@ -165,7 +199,7 @@ export default {
                 "gt": "Mai mare de",
                 "gte": "Mai mare sau egal cu",
                 "lt": "Mai puțin de",
-                "lte": "Mai pușin sau egal cu",
+                "lte": "Mai puțin sau egal cu",
                 "not": "Nu este",
                 "notBetween": "Nu este între",
                 "notEmpty": "Nu este gol"
@@ -183,17 +217,19 @@ export default {
                 "startsWith": "Începe cu"
             }
         },
-        "data": "Data",
-        "deleteTitle": "Ștergeți regula de filtrare",
+        "data": "Date",
+        "deleteTitle": "Șterge regula de filtrare",
         "leftTitle": "Criterii Outdent",
         "logicAnd": "Și",
         "logicOr": "Sau",
         "rightTitle": "Criterii de indentare",
+        "search": "Caută",
         "title": {
             "_": "Generator de căutare (%d)",
             "0": "Generator de căutare"
         },
-        "value": "Valoare"
+        "value": "Valoare",
+        "valueJoiner": "și"
     },
     "searchPanes": {
         "clearMessage": "Șterge tot",
@@ -204,8 +240,9 @@ export default {
         "collapseMessage": "Închide toate",
         "count": "{total}",
         "countFiltered": "{shown} ({total})",
+        "emptyMessage": "&lt;em&gt;Gol&lt;\/em&gt;",
         "emptyPanes": "Fără panouri de căutare",
-        "loadMessage": "Ăncarcă panouri de căutare",
+        "loadMessage": "Încarcă panouri de căutare",
         "showMessage": "Arată toate",
         "title": "Filtre Activ - %d"
     },
@@ -228,33 +265,23 @@ export default {
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Creează",
-            "columns": {
-                "search": "Căutare în coloană",
-                "visible": "Vizibilitate coloană"
-            },
-            "name": "Nume:",
-            "order": "Ordonare",
-            "paging": "Paginație",
-            "scroller": "Poziție Scroll",
-            "search": "Căutare",
-            "searchBuilder": "Creează Căutare",
-            "select": "Selectări",
-            "title": "Creează o nouă Stare",
-            "toggleLabel": "Include:"
+        "button": {
+            "create": "Creează Stare",
+            "edit": "Actualizează",
+            "remove": "Elimină",
+            "statesList": "Salvează Stările",
+            "statesRemoveAll": "Elimină Toate Stările"
         },
-        "duplicateError": "O stare cu acest nume există deja.",
-        "emptyError": "Numele nu poate fi gol.",
-        "emptyStates": "Stare nesalvată",
-        "removeConfirm": "Sunteți sigur că vreți sa ștergeți %s?",
-        "removeError": "Ștergere stare eșuată.",
-        "removeJoiner": "și",
-        "removeSubmit": "Șterge",
-        "removeTitle": "Sterge Starea",
-        "renameButton": "Redenumește",
-        "renameLabel": "Nume nou pentru %s:",
-        "renameTitle": "Redenumește Starea"
+        "create": {
+            "title": "Creează o nouă Stare"
+        },
+        "remove": {
+            "button": "Șterge",
+            "message": {
+                "_": "Sunteți sigur că vreți sa ștergeți %s?"
+            },
+            "title": "Sterge Starea"
+        }
     },
     "thousands": ".",
     "zeroRecords": "Nu am găsit nimic - ne pare rău"

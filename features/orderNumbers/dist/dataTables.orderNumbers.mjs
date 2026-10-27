@@ -1,4 +1,4 @@
-/*! © SpryMedia Ltd - datatables.net/license - 3.1.2 */
+/*! © SpryMedia Ltd - datatables.net/license - 3.1.4 */
 
 import DataTable, { Dom } from 'datatables.net';
 
@@ -17,7 +17,7 @@ import DataTable, { Dom } from 'datatables.net';
  *   // Allow a display start point and search string to be specified
  *   new DataTable('#myTable', {
  *     orderNumbers: true
- *   );
+ *   });
  *
  * @example
  *   // As above, but with a default search
@@ -25,7 +25,7 @@ import DataTable, { Dom } from 'datatables.net';
  *     orderNumbers: {
  *       className: 'my-ordering-class'
  *     }
- *   );
+ *   });
  */
 /**
  * Add event listeners to apply orderNumbers to a table

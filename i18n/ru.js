@@ -37,7 +37,6 @@
             "1": "Строка скопирована в буфер обмена"
         },
         "copyTitle": "Скопировать в буфер обмена",
-        "createState": "Создать состояние",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -45,13 +44,39 @@
             "-1": "Показать все строки"
         },
         "pdf": "PDF",
-        "print": "Печать",
-        "removeAllStates": "Удалить все состояния",
-        "removeState": "Удалить",
-        "renameState": "Переименовать",
-        "savedStates": "Сохраненные состояния",
-        "stateRestore": "Состояние %d",
-        "updateState": "Обновить"
+        "print": "Печать"
+    },
+    "columnControl": {
+        "buttons": {
+            "searchClear": "Сбросить поиск"
+        },
+        "orderDesc": "По-убыванию",
+        "search": {
+            "datetime": {
+                "greater": "После",
+                "less": "До"
+            },
+            "number": {
+                "empty": "Пустое",
+                "equal": "Равно",
+                "greater": "Больше",
+                "greaterOrEqual": "Больше или равно",
+                "less": "Меньше",
+                "lessOrEqual": "Меньше или равно",
+                "notEmpty": "Не пустое",
+                "notEqual": "Не равно"
+            },
+            "text": {
+                "contains": "Содержит",
+                "empty": "Не заполнено",
+                "ends": "Заканчивается на",
+                "equal": "Совпадает с",
+                "notContains": "Не содержит",
+                "notEmpty": "Заполнено",
+                "notEqual": "Не совпадает с",
+                "starts": "Начинается с"
+            }
+        }
     },
     "datetime": {
         "amPm": {
@@ -227,33 +252,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Создать",
-            "columns": {
-                "search": "Поиск по столбцам",
-                "visible": "Видимость столбцов"
-            },
-            "name": "Имя:",
-            "order": "Сортировка",
-            "paging": "Страницы",
-            "scroller": "Позиция прокрутки",
-            "search": "Поиск",
-            "searchBuilder": "Редактор поиска",
-            "select": "Выделение",
-            "title": "Создать новое состояние",
-            "toggleLabel": "Включает:"
+        "button": {
+            "create": "Создать состояние",
+            "edit": "Обновить",
+            "remove": "Удалить",
+            "statesList": "Сохраненные состояния",
+            "statesRemoveAll": "Удалить все состояния"
         },
-        "duplicateError": "Состояние с таким именем уже существует.",
-        "emptyError": "Имя не может быть пустым.",
-        "emptyStates": "Нет сохраненных состояний",
-        "removeConfirm": "Вы уверены, что хотите удалить %s?",
-        "removeError": "Не удалось удалить состояние.",
-        "removeJoiner": "и",
-        "removeSubmit": "Удалить",
-        "removeTitle": "Удалить состояние",
-        "renameButton": "Переименовать",
-        "renameLabel": "Новое имя для %s:",
-        "renameTitle": "Переименовать состояние"
+        "create": {
+            "title": "Создать новое состояние"
+        },
+        "remove": {
+            "button": "Удалить",
+            "message": {
+                "_": "Вы уверены, что хотите удалить %s?"
+            },
+            "title": "Удалить состояние"
+        }
     },
     "thousands": " ",
     "zeroRecords": "Записи отсутствуют."

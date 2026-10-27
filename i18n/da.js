@@ -40,7 +40,6 @@
             "1": "Kopieret 1 række til udklipsholder"
         },
         "copyTitle": "Kopier til udklipsholder",
-        "createState": "Opret tilstand",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -49,13 +48,7 @@
             "1": "Vis 1 række"
         },
         "pdf": "PDF",
-        "print": "Udskriv",
-        "removeAllStates": "Fjern alle tilstande",
-        "removeState": "Fjern",
-        "renameState": "Omdøb",
-        "savedStates": "Gemte tilstande",
-        "stateRestore": "Tilstand %d",
-        "updateState": "Opdatér"
+        "print": "Udskriv"
     },
     "columnControl": {
         "buttons": {
@@ -292,33 +285,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Opret",
-            "columns": {
-                "search": "Kolonne-søgning",
-                "visible": "Kolonne-synlighed"
-            },
-            "name": "Navn:",
-            "order": "Sortering",
-            "paging": "Paginering",
-            "scroller": "Scroll position",
-            "search": "Søgning",
-            "searchBuilder": "Søge bygger",
-            "select": "Vælg",
-            "title": "Opret ny tilstand",
-            "toggleLabel": "Indeholder:"
+        "button": {
+            "create": "Opret tilstand",
+            "edit": "Opdatér",
+            "remove": "Fjern",
+            "statesList": "Gemte tilstande",
+            "statesRemoveAll": "Fjern alle tilstande"
         },
-        "duplicateError": "En tilstand med dette navn eksisterer allerede.",
-        "emptyError": "Navn kan ikke være tomt.",
-        "emptyStates": "Ingen gemte tilstande",
-        "removeConfirm": "Er du sikker på, at du vil fjerne %s?",
-        "removeError": "Fejl ved fjernelse af tilstand.",
-        "removeJoiner": " og ",
-        "removeSubmit": "Fjern",
-        "removeTitle": "Fjern tilstand",
-        "renameButton": "Omdøb",
-        "renameLabel": "Nyt navn til %s:",
-        "renameTitle": "Omdøb tilstand"
+        "create": {
+            "title": "Opret ny tilstand"
+        },
+        "remove": {
+            "button": "Fjern",
+            "message": {
+                "_": "Er du sikker på, at du vil fjerne %s?"
+            },
+            "title": "Fjern tilstand"
+        }
     },
     "thousands": ".",
     "zeroRecords": "Ingen linjer matcher s&oslash;gningen"

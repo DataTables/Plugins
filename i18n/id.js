@@ -37,7 +37,6 @@
             "1": "satu baris disalin ke papan klip"
         },
         "copyTitle": "Salin ke Papan klip",
-        "createState": "Tambahkan Data",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -45,13 +44,7 @@
             "-1": "Tampilkan semua baris"
         },
         "pdf": "PDF",
-        "print": "Cetak",
-        "removeAllStates": "Hapus Semua Data",
-        "removeState": "Hapus Data",
-        "renameState": "Rubah Nama",
-        "savedStates": "SImpan Data",
-        "stateRestore": "Publihkan Data",
-        "updateState": "Perbaharui data"
+        "print": "Cetak"
     },
     "datetime": {
         "amPm": {
@@ -227,33 +220,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Buat",
-            "columns": {
-                "search": "Pencarian Kolom",
-                "visible": "Visibilitas Kolom"
-            },
-            "name": "Nama:",
-            "order": "Penyortiran",
-            "paging": "Nomor Halaman",
-            "scroller": "Posisi Skrol",
-            "search": "Pencarian",
-            "searchBuilder": "Cari Builder",
-            "select": "Pemilihan",
-            "title": "Buat State Baru",
-            "toggleLabel": "Termasuk:"
+        "button": {
+            "create": "Tambahkan Data",
+            "edit": "Perbaharui data",
+            "remove": "Hapus Data",
+            "statesList": "SImpan Data",
+            "statesRemoveAll": "Hapus Semua Data"
         },
-        "duplicateError": "Nama State ini sudah ada.",
-        "emptyError": "Nama tidak boleh kosong.",
-        "emptyStates": "Tidak ada State yang disimpan.",
-        "removeConfirm": "Apakah Anda yakin ingin menghapus %s?",
-        "removeError": "Gagal menghapus State.",
-        "removeJoiner": "dan",
-        "removeSubmit": "Hapus",
-        "removeTitle": "Penghapusan State",
-        "renameButton": "Ganti Nama",
-        "renameLabel": "Nama Baru untuk %s:",
-        "renameTitle": "Ganti nama State"
+        "create": {
+            "title": "Buat State Baru"
+        },
+        "remove": {
+            "button": "Hapus",
+            "message": {
+                "_": "Apakah Anda yakin ingin menghapus %s?"
+            },
+            "title": "Penghapusan State"
+        }
     },
     "thousands": ".",
     "zeroRecords": "Tidak ditemukan data yang sesuai"

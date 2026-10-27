@@ -37,7 +37,6 @@
             "1": "1 قطار کلپ بورډ ته کاپي شوی"
         },
         "copyTitle": "کلپ بورډ ته کاپي کړئ",
-        "createState": "حالت جوړول",
         "csv": "سی اس وی",
         "excel": "اکسل",
         "pageLength": {
@@ -45,13 +44,7 @@
             "-1": "ټول قطارونه وښایاست"
         },
         "pdf": "پی ډی اف",
-        "print": "پرنټ",
-        "removeAllStates": "ټول حالات له منځه وړل",
-        "removeState": "له منځه وړل",
-        "renameState": "نوم بدلون",
-        "savedStates": "حالت ذخیره کول",
-        "stateRestore": "حالت شمیره",
-        "updateState": "تازه کول"
+        "print": "پرنټ"
     },
     "datetime": {
         "amPm": {
@@ -140,6 +133,15 @@
         },
         "rows": {
             "0": ""
+        }
+    },
+    "stateRestore": {
+        "button": {
+            "create": "حالت جوړول",
+            "edit": "تازه کول",
+            "remove": "له منځه وړل",
+            "statesList": "حالت ذخیره کول",
+            "statesRemoveAll": "ټول حالات له منځه وړل"
         }
     },
     "thousands": ",",

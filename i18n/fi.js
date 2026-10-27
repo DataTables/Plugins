@@ -37,18 +37,11 @@
             "1": "Yksi rivi kopioitu leikepöydälle"
         },
         "copyTitle": "Kopioi leikepöydälle",
-        "createState": "Tallenna tila",
         "pageLength": {
             "_": "Näytä %d riviä",
             "-1": "Näytä kaikki rivit"
         },
-        "print": "Tulosta",
-        "removeAllStates": "Poista kaikki tilat",
-        "removeState": "Poista tila",
-        "renameState": "Nimeä tila",
-        "savedStates": "Tallennetut tilat",
-        "stateRestore": "Tila %d",
-        "updateState": "Päivitä tila"
+        "print": "Tulosta"
     },
     "datetime": {
         "amPm": {
@@ -158,32 +151,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Luo",
-            "columns": {
-                "search": "Sarakehaut",
-                "visible": "Sarakkeiden näkyvyys"
-            },
-            "name": "Nimi:",
-            "order": "Järjestys",
-            "paging": "Sivutus",
-            "scroller": "Paikka sivulla",
-            "search": "Aktiivinen haku",
-            "select": "Valinnat",
-            "title": "Luo uusi tila",
-            "toggleLabel": "Sisältäen:"
+        "button": {
+            "create": "Tallenna tila",
+            "edit": "Päivitä tila",
+            "remove": "Poista tila",
+            "statesList": "Tallennetut tilat",
+            "statesRemoveAll": "Poista kaikki tilat"
         },
-        "duplicateError": "Tällä nimellä on jo tallennettu tila",
-        "emptyError": "Nimi ei voi olla tyhjä",
-        "emptyStates": "Ei tallennettuja tiloja",
-        "removeConfirm": "Oletko varma, että haluat poistaa tilan %s?",
-        "removeError": "Tilan poistaminen epäonnistui",
-        "removeJoiner": "ja",
-        "removeSubmit": "Poista",
-        "removeTitle": "Poista tila",
-        "renameButton": "Nimeä uudelleen",
-        "renameLabel": "Uusi nimi tilalle %s:",
-        "renameTitle": "Nimeä tila uudelleen"
+        "create": {
+            "title": "Luo uusi tila"
+        },
+        "remove": {
+            "button": "Poista",
+            "message": {
+                "_": "Oletko varma, että haluat poistaa tilan %s?"
+            },
+            "title": "Poista tila"
+        }
     },
     "zeroRecords": "Ei hakua vastaavia tuloksia"
 };

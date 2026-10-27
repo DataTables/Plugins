@@ -1,4 +1,4 @@
-/*! © Drijkoningen Dirk - datatables.net/license - 3.1.2 */
+/*! © Drijkoningen Dirk - datatables.net/license - 3.1.4 */
 
 import DataTable from 'datatables.net';
 

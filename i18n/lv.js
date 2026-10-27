@@ -37,7 +37,6 @@
             "1": "1 rinda ir kopēta starpliktuvē"
         },
         "copyTitle": "Kopēt starpliktuvē",
-        "createState": "Izveidot Stāvokli",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -45,13 +44,7 @@
             "-1": "Rādīt visas rindas"
         },
         "pdf": "PDF",
-        "print": "Drukāt",
-        "removeAllStates": "Dzēst Visus Stāvokļus",
-        "removeState": "Dzēst",
-        "renameState": "Pārsaukt",
-        "savedStates": "Saglabātie Stāvokļi",
-        "stateRestore": "Stāvoklis %d",
-        "updateState": "Atjaunināt"
+        "print": "Drukāt"
     },
     "datetime": {
         "amPm": {
@@ -227,33 +220,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Izveidot",
-            "columns": {
-                "search": "Meklēšana Kolonnās",
-                "visible": "Kolonnu Redzamība"
-            },
-            "name": "Nosaukums:",
-            "order": "Kārtošana",
-            "paging": "Lapošana",
-            "scroller": "Ritināšanas Pozīcija",
-            "search": "Meklēšana",
-            "searchBuilder": "Atlases Konstruktors",
-            "select": "Atlase",
-            "title": "Izveidot Jaunu Stāvokli",
-            "toggleLabel": "Iekļauj:"
+        "button": {
+            "create": "Izveidot Stāvokli",
+            "edit": "Atjaunināt",
+            "remove": "Dzēst",
+            "statesList": "Saglabātie Stāvokļi",
+            "statesRemoveAll": "Dzēst Visus Stāvokļus"
         },
-        "duplicateError": "Stāvoklis ar šādu nosaukumu jau eksistē.",
-        "emptyError": "Nosaukums nedrīkst būt tukšs.",
-        "emptyStates": "Nav saglabātu stāvokļu",
-        "removeConfirm": "Vai tiešām vēlaties dzēst %s?",
-        "removeError": "Neizdevās dzēst stāvokli.",
-        "removeJoiner": "un",
-        "removeSubmit": "Dzēst",
-        "removeTitle": "Dzēst Stāvokli",
-        "renameButton": "Pārsaukt",
-        "renameLabel": "Jaunais %s nosaukums:",
-        "renameTitle": "Pārsaukt Stāvokli"
+        "create": {
+            "title": "Izveidot Jaunu Stāvokli"
+        },
+        "remove": {
+            "button": "Dzēst",
+            "message": {
+                "_": "Vai tiešām vēlaties dzēst %s?"
+            },
+            "title": "Dzēst Stāvokli"
+        }
     },
     "thousands": ",",
     "zeroRecords": "Nav atrasti vaicājumam atbilstoši ieraksti"

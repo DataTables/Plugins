@@ -31,11 +31,7 @@ export default {
             "-1": "Прикажи све редове"
         },
         "pdf": "PDF",
-        "print": "Штампај",
-        "removeState": "Уклони",
-        "renameState": "Преименуј",
-        "savedStates": "Сачувана стања",
-        "updateState": "Ажурирај"
+        "print": "Штампај"
     },
     "datetime": {
         "hours": "Сат",
@@ -121,6 +117,13 @@ export default {
         },
         "rows": {
             "0": ""
+        }
+    },
+    "stateRestore": {
+        "button": {
+            "edit": "Ажурирај",
+            "remove": "Уклони",
+            "statesList": "Сачувана стања"
         }
     },
     "thousands": ",",

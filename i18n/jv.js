@@ -36,7 +36,6 @@
             "1": "Nyalin sak baris ke clipboard"
         },
         "copyTitle": "nyalinJudul",
-        "createState": "Gawe Keadaan",
         "csv": "csv",
         "excel": "eksel",
         "pageLength": {
@@ -44,12 +43,7 @@
             "-1": "Munculke Kabeh Baris"
         },
         "pdf": "pdf",
-        "print": "cetak",
-        "removeAllStates": "Buwang Kabeh Keadaan",
-        "removeState": "Buwang",
-        "renameState": "Ganti",
-        "savedStates": "Simpen Keadaan",
-        "updateState": "Anyari Keadaan"
+        "print": "cetak"
     },
     "datetime": {
         "amPm": {
@@ -172,12 +166,18 @@
         }
     },
     "stateRestore": {
-        "duplicateError": "salahDobel",
-        "emptyError": "salahKosong",
-        "emptyStates": "kosongStates",
-        "removeConfirm": "pindahKonfirmasi",
-        "removeError": "pindahSalah",
-        "renameTitle": "gantiJudul"
+        "button": {
+            "create": "Gawe Keadaan",
+            "edit": "Anyari Keadaan",
+            "remove": "Buwang",
+            "statesList": "Simpen Keadaan",
+            "statesRemoveAll": "Buwang Kabeh Keadaan"
+        },
+        "remove": {
+            "message": {
+                "_": "pindahKonfirmasi"
+            }
+        }
     },
     "thousands": ".",
     "zeroRecords": "mboten wonten data ingkang dipun padosi"

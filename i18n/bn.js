@@ -37,7 +37,6 @@
             "1": "ক্লিপবোর্ডে ১টি সারি কপি করা হয়েছে"
         },
         "copyTitle": "ক্লিপবোর্ডে কপি করুন",
-        "createState": "স্টেট তৈরি",
         "csv": "সিএসভি",
         "excel": "এক্সেল",
         "pageLength": {
@@ -45,13 +44,7 @@
             "-1": "সমস্ত সারি দেখান"
         },
         "pdf": "পিডিএফ",
-        "print": "মুদ্রণ",
-        "removeAllStates": "সব স্টেটগুলো অপসারণ",
-        "removeState": "অপসারণ করা",
-        "renameState": "নাম পরিবর্তন করুন",
-        "savedStates": "সেভ করা স্টেটগুলো",
-        "stateRestore": "স্টেট %d",
-        "updateState": "আপডেট"
+        "print": "মুদ্রণ"
     },
     "datetime": {
         "amPm": {
@@ -222,33 +215,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "সৃষ্টি",
-            "columns": {
-                "search": "কলাম অনুসন্ধান",
-                "visible": "কলাম দৃশ্যমানতা"
-            },
-            "name": "নাম",
-            "order": "সাজানো",
-            "paging": "পেজিং",
-            "scroller": "স্ক্রোল অবস্থান",
-            "search": "অনুসন্ধান করুন",
-            "searchBuilder": "সার্চ বিল্ডার",
-            "select": "নির্বাচন করুন",
-            "title": "নতুন স্টেট তৈরি করুন",
-            "toggleLabel": "অন্তর্ভুক্ত: "
+        "button": {
+            "create": "স্টেট তৈরি",
+            "edit": "আপডেট",
+            "remove": "অপসারণ করা",
+            "statesList": "সেভ করা স্টেটগুলো",
+            "statesRemoveAll": "সব স্টেটগুলো অপসারণ"
         },
-        "duplicateError": "এই নামের একটি স্টেট ইতিমধ্যেই বিদ্যমান৷",
-        "emptyError": "নাম খালি রাখা যাবে না।",
-        "emptyStates": "কোন সংরক্ষিত স্টেট",
-        "removeConfirm": "আপনি নিশ্চিত ভাবে সরাতে চান হয় %s?",
-        "removeError": "স্টেট সরাতে ব্যর্থ হয়েছে৷",
-        "removeJoiner": "এবং",
-        "removeSubmit": "অপসারণ",
-        "removeTitle": "স্টেট মুছুন",
-        "renameButton": "নাম পরিবর্তন করুন",
-        "renameLabel": "নতুন নাম এর জন্য %s:",
-        "renameTitle": "রাজ্যের নাম পরিবর্তন করুন"
+        "create": {
+            "title": "নতুন স্টেট তৈরি করুন"
+        },
+        "remove": {
+            "button": "অপসারণ",
+            "message": {
+                "_": "আপনি নিশ্চিত ভাবে সরাতে চান হয় %s?"
+            },
+            "title": "স্টেট মুছুন"
+        }
     },
     "thousands": ",",
     "zeroRecords": "আপনি যা অনুসন্ধান করেছেন তার সাথে মিলে যাওয়া কোন রেকর্ড খুঁজে পাওয়া যায় নাই"

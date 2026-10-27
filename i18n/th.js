@@ -37,7 +37,6 @@
             "1": "คัดลอกข้อมูลแล้ว จำนวน 1 แถว"
         },
         "copyTitle": "คัดลอกไปยังคลิปบอร์ด",
-        "createState": "สร้างสถานะ",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -45,13 +44,7 @@
             "-1": "แสดงข้อมูลทั้งหมด"
         },
         "pdf": "PDF",
-        "print": "สั่งพิมพ์",
-        "removeAllStates": "ลบสถานะทั้งหมด",
-        "removeState": "ลบสถานะ",
-        "renameState": "เปลี่ยนชื่อสถานะ",
-        "savedStates": "บันทึกสถานะ",
-        "stateRestore": "คืนค่าสถานะ",
-        "updateState": "แก้ไขสถานะ"
+        "print": "สั่งพิมพ์"
     },
     "datetime": {
         "amPm": {
@@ -209,21 +202,20 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "สร้าง",
-            "name": "ชื่อ:"
+        "button": {
+            "create": "สร้างสถานะ",
+            "edit": "แก้ไขสถานะ",
+            "remove": "ลบสถานะ",
+            "statesList": "บันทึกสถานะ",
+            "statesRemoveAll": "ลบสถานะทั้งหมด"
         },
-        "duplicateError": "มีข้อมูลที่ใช้ชื่อนี้แล้ว",
-        "emptyError": "ชื่อต้องไม่เป็นค่าว่าง",
-        "emptyStates": "ไม่มีสถานะที่บันทึกไว้",
-        "removeConfirm": "คุณแน่ใจหรือไม่ว่าต้องการลบ %s",
-        "removeError": "ไม่สามารถลบสถานะ",
-        "removeJoiner": "และ",
-        "removeSubmit": "ลบ",
-        "removeTitle": "ลบสถานะ",
-        "renameButton": "เปลี่ยนชื่อ",
-        "renameLabel": "ชื่อใหม่สำหรับ %s:",
-        "renameTitle": "เปลี่ยนชื่อสถานะ"
+        "remove": {
+            "button": "ลบ",
+            "message": {
+                "_": "คุณแน่ใจหรือไม่ว่าต้องการลบ %s"
+            },
+            "title": "ลบสถานะ"
+        }
     },
     "thousands": ",",
     "zeroRecords": "ไม่พบข้อมูล"

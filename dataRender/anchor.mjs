@@ -1,4 +1,4 @@
-/*! © Fedonyuk Anton - datatables.net/license - 3.1.2 */
+/*! © Fedonyuk Anton - datatables.net/license - 3.1.4 */
 
 import DataTable, { Dom, util } from 'datatables.net';
 

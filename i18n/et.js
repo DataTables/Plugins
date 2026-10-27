@@ -37,7 +37,6 @@
             "1": "Kopeeri 1 rida lõikelauale"
         },
         "copyTitle": "Kopeeri lõikelauale",
-        "createState": "Loo otsing",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -45,13 +44,7 @@
             "-1": "Kuvan kõik read"
         },
         "pdf": "PDF",
-        "print": "Prindi",
-        "removeAllStates": "Eemalda otsingud",
-        "removeState": "Eemalda",
-        "renameState": "Nimeta ümber",
-        "savedStates": "Salvestatud otsingud",
-        "stateRestore": "Taasta otsing",
-        "updateState": "Uuenda"
+        "print": "Prindi"
     },
     "datetime": {
         "amPm": {
@@ -200,6 +193,15 @@
         },
         "rows": {
             "0": ""
+        }
+    },
+    "stateRestore": {
+        "button": {
+            "create": "Loo otsing",
+            "edit": "Uuenda",
+            "remove": "Eemalda",
+            "statesList": "Salvestatud otsingud",
+            "statesRemoveAll": "Eemalda otsingud"
         }
     },
     "zeroRecords": "Otsitavat vastet ei leitud."

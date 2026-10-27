@@ -40,7 +40,6 @@
             "1": "تم نسخ سطر واحد الى الحافظة"
         },
         "copyTitle": "نسخ إلى الحافظة",
-        "createState": "تكوين حالة",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -49,13 +48,7 @@
             "1": "عرض سطر واحد"
         },
         "pdf": "PDF",
-        "print": "طباعة",
-        "removeAllStates": "ازالة جميع الحالات",
-        "removeState": "ازالة حالة",
-        "renameState": "تغيير اسم حالة",
-        "savedStates": "الحالات المحفوظة",
-        "stateRestore": "استرجاع حالة",
-        "updateState": "تحديث حالة"
+        "print": "طباعة"
     },
     "datetime": {
         "amPm": {
@@ -237,33 +230,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "تكوين الحالة",
-            "columns": {
-                "search": "إمكانية البحث للعمود",
-                "visible": "إظهار العمود"
-            },
-            "name": "اسم الحالة",
-            "order": "فرز",
-            "paging": "تصحيف",
-            "scroller": "مكان السحب",
-            "search": "بحث",
-            "searchBuilder": "مكون البحث",
-            "select": "تحديد",
-            "title": "تكوين حالة جديدة",
-            "toggleLabel": "تتضمن"
+        "button": {
+            "create": "تكوين حالة",
+            "edit": "تحديث حالة",
+            "remove": "ازالة حالة",
+            "statesList": "الحالات المحفوظة",
+            "statesRemoveAll": "ازالة جميع الحالات"
         },
-        "duplicateError": "حالة مكررة بنفس الاسم",
-        "emptyError": "لا يسمح بأن يكون اسم الحالة فارغة.",
-        "emptyStates": "لا توجد حالة محفوظة",
-        "removeConfirm": "هل أنت متأكد من حذف الحالة %s؟",
-        "removeError": "لم استطع ازالة الحالة.",
-        "removeJoiner": "و",
-        "removeSubmit": "حذف",
-        "removeTitle": "حذف حالة",
-        "renameButton": "تغيير اسم حالة",
-        "renameLabel": "الاسم الجديد للحالة %s:",
-        "renameTitle": "تغيير اسم الحالة"
+        "create": {
+            "title": "تكوين حالة جديدة"
+        },
+        "remove": {
+            "button": "حذف",
+            "message": {
+                "_": "هل أنت متأكد من حذف الحالة %s؟"
+            },
+            "title": "حذف حالة"
+        }
     },
     "thousands": ".",
     "zeroRecords": "لم يعثر على أية سجلات"

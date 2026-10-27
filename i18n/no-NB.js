@@ -37,7 +37,6 @@
             "1": "Kopierte én rad til utklippstavle"
         },
         "copyTitle": "Kopier til utklippstavle",
-        "createState": "Opprett tilstand",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -45,13 +44,7 @@
             "-1": "Vis alle rader"
         },
         "pdf": "PDF",
-        "print": "Utskrift",
-        "removeAllStates": "Fjern alle tilstander",
-        "removeState": "Fjern",
-        "renameState": "Nytt navn",
-        "savedStates": "Lagrede tilstander",
-        "stateRestore": "Tilstand %d",
-        "updateState": "Oppdater"
+        "print": "Utskrift"
     },
     "datetime": {
         "amPm": {
@@ -223,6 +216,15 @@
             "_": "%d rader valgt",
             "0": "",
             "1": "1 rad valgt"
+        }
+    },
+    "stateRestore": {
+        "button": {
+            "create": "Opprett tilstand",
+            "edit": "Oppdater",
+            "remove": "Fjern",
+            "statesList": "Lagrede tilstander",
+            "statesRemoveAll": "Fjern alle tilstander"
         }
     },
     "thousands": " .",

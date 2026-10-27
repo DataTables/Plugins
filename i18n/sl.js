@@ -12,6 +12,8 @@
 (function() {
     return {
     "aria": {
+        "orderable": "Aktiviraj za sortiranje",
+        "orderableRemove": "Aktiviraj za odstranjevanje sortiranja",
         "paginate": {
             "first": "Prva",
             "last": "Zadnja",
@@ -37,21 +39,39 @@
             "1": "1 vrstica prekopirana na odložišče."
         },
         "copyTitle": "Kopiraj na odložišče",
-        "createState": "Izdelaj stanje",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
             "_": "Prikaži %ds vrstic",
-            "-1": "Prikaži vse vrstice"
+            "-1": "Prikaži vse vrstice",
+            "1": "Prikaži 1 vrstico"
         },
         "pdf": "PDF",
-        "print": "Natisni",
-        "removeAllStates": "Odstrani vsa stanja",
-        "removeState": "Odstrani stanje",
-        "renameState": "Preimenuj stanje",
-        "savedStates": "Shranjena stanja",
-        "stateRestore": "Obnovi stanje",
-        "updateState": "Posodobi stranje"
+        "print": "Natisni"
+    },
+    "columnControl": {
+        "search": {
+            "datetime": {
+                "greater": "Po",
+                "less": "Pred"
+            },
+            "number": {
+                "empty": "Prazno",
+                "equal": "Je enako",
+                "greater": "Večje kot",
+                "greaterOrEqual": "Večje ali enako kot",
+                "less": "Manjše kot",
+                "lessOrEqual": "Manjše ali enako kot",
+                "notEmpty": "Ni prazno",
+                "notEqual": "Ni enako"
+            },
+            "text": {
+                "contains": "Vsebuje",
+                "ends": "Konča",
+                "notContains": "Ne vsebuje",
+                "starts": "Začne"
+            }
+        }
     },
     "datetime": {
         "amPm": {
@@ -227,33 +247,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Ustvari",
-            "columns": {
-                "search": "Iskanje po kolonah",
-                "visible": "Vidnost kolon"
-            },
-            "name": "Ime:",
-            "order": "Razvrščanje",
-            "paging": "Trent",
-            "scroller": "Pozicija drsnika",
-            "search": "Iskanje",
-            "searchBuilder": "Gradnik iskanja",
-            "select": "Izbrano",
-            "title": "Ustvari novo stanje",
-            "toggleLabel": "Vključuje:"
+        "button": {
+            "create": "Izdelaj stanje",
+            "edit": "Posodobi stranje",
+            "remove": "Odstrani stanje",
+            "statesList": "Shranjena stanja",
+            "statesRemoveAll": "Odstrani vsa stanja"
         },
-        "duplicateError": "Stanje s tem imenom že obstaja.",
-        "emptyError": "Ime ne sme biti prazno.",
-        "emptyStates": "Ni shranjenih stanj",
-        "removeConfirm": "Ali ste prepričani, da želite odstraniti %s?",
-        "removeError": "Napaka pri odstranjevanju stanja.",
-        "removeJoiner": "in",
-        "removeSubmit": "Odstrani",
-        "removeTitle": "Odstrani stanje",
-        "renameButton": "Preimenuj",
-        "renameLabel": "Novo ime za %s:",
-        "renameTitle": "Preimenuj stanje"
+        "create": {
+            "title": "Ustvari novo stanje"
+        },
+        "remove": {
+            "button": "Odstrani",
+            "message": {
+                "_": "Ali ste prepričani, da želite odstraniti %s?"
+            },
+            "title": "Odstrani stanje"
+        }
     },
     "thousands": ".",
     "zeroRecords": "Nobeden zapis ne ustreza"

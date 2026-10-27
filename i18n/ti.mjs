@@ -1,0 +1,19 @@
+export default {
+    "autoFill": {
+        "info": ""
+    },
+    "decimal": "",
+    "infoPostFix": "",
+    "searchPlaceholder": "",
+    "select": {
+        "cells": {
+            "0": ""
+        },
+        "columns": {
+            "0": ""
+        },
+        "rows": {
+            "0": ""
+        }
+    }
+};

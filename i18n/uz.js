@@ -37,7 +37,6 @@
             "1": "1 ta qator vaqtinchalik xotiraga ko‘chirib olindi"
         },
         "copyTitle": "Vaqtinchalik xotiraga ko‘chirib olish",
-        "createState": "Holat yaratish",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -45,13 +44,7 @@
             "-1": "Barcha qatorlarni ko‘rsatish"
         },
         "pdf": "PDF",
-        "print": "Chop etish",
-        "removeAllStates": "Barcha holatlarni o‘chirish",
-        "removeState": "O‘chirish",
-        "renameState": "Qayta nomlash",
-        "savedStates": "Saqlangan holatlar",
-        "stateRestore": "Holat %d",
-        "updateState": "Yangilash"
+        "print": "Chop etish"
     },
     "datetime": {
         "hours": "Soat",
@@ -205,31 +198,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Yaratish",
-            "columns": {
-                "search": "Ustundan qidirish",
-                "visible": "Ustun ko‘rinishi"
-            },
-            "name": "Nomi:",
-            "order": "Tartiblash",
-            "paging": "Sahifalash",
-            "search": "Qidirish",
-            "select": "Tanlash",
-            "title": "Yangi holat yaratish",
-            "toggleLabel": "Shularni o‘z ichiga oladi:"
+        "button": {
+            "create": "Holat yaratish",
+            "edit": "Yangilash",
+            "remove": "O‘chirish",
+            "statesList": "Saqlangan holatlar",
+            "statesRemoveAll": "Barcha holatlarni o‘chirish"
         },
-        "duplicateError": "Ushbu nomdagi holat mavjud.",
-        "emptyError": "Nomi bo‘sh bo‘lishi mumkin emas.",
-        "emptyStates": "Saqlangan holatlar mavjud emas",
-        "removeConfirm": "%s ni o‘chirmoqchimisiz?",
-        "removeError": "Holatni o‘chirishda xatolik yuz berdi.",
-        "removeJoiner": "va",
-        "removeSubmit": "O‘chirish",
-        "removeTitle": "O‘chirish holati",
-        "renameButton": "Qayta nomlash",
-        "renameLabel": "%s uchun yangi nom:",
-        "renameTitle": "Qayta nomlash holati"
+        "create": {
+            "title": "Yangi holat yaratish"
+        },
+        "remove": {
+            "button": "O‘chirish",
+            "message": {
+                "_": "%s ni o‘chirmoqchimisiz?"
+            },
+            "title": "O‘chirish holati"
+        }
     },
     "thousands": ",",
     "zeroRecords": "Mos keladigan ma‘lumotlar topilmadi"

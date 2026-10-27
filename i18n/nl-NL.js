@@ -40,7 +40,6 @@
             "1": "1 regel naar klembord gekopieerd"
         },
         "copyTitle": "Kopieer naar klembord",
-        "createState": "Maak staat",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -49,13 +48,7 @@
             "1": "Toon 1 regel"
         },
         "pdf": "PDF",
-        "print": "Print",
-        "removeAllStates": "Verwijder alle",
-        "removeState": "Verwijder",
-        "renameState": "Hernoem",
-        "savedStates": "Opgeslagen",
-        "stateRestore": "Preset %d",
-        "updateState": "Bijwerken"
+        "print": "Print"
     },
     "columnControl": {
         "buttons": {
@@ -292,33 +285,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Aanmaken",
-            "columns": {
-                "search": "Zoeken in kolom",
-                "visible": "Kolom tonen"
-            },
-            "name": "Naam",
-            "order": "Sorteervolgorde",
-            "paging": "Paginering",
-            "scroller": "Meescrollen",
-            "search": "Zoeken",
-            "searchBuilder": "SearchBuilder",
-            "select": "Selecteer",
-            "title": "Nieuwe staat aanmaken",
-            "toggleLabel": "Bevat"
+        "button": {
+            "create": "Maak staat",
+            "edit": "Bijwerken",
+            "remove": "Verwijder",
+            "statesList": "Opgeslagen",
+            "statesRemoveAll": "Verwijder alle"
         },
-        "duplicateError": "Staat bestaat al",
-        "emptyError": "Naam kan niet leeg zijn",
-        "emptyStates": "Geen beschikbare staten",
-        "removeConfirm": "Weet u zeker dat u deze wil verwijderen:",
-        "removeError": "De verwijdering is mislukt",
-        "removeJoiner": "en",
-        "removeSubmit": "Verwijder",
-        "removeTitle": "Verwijder staat",
-        "renameButton": "Hernoem",
-        "renameLabel": "Nieuwe naam voor staat",
-        "renameTitle": "Hernoem staat"
+        "create": {
+            "title": "Nieuwe staat aanmaken"
+        },
+        "remove": {
+            "button": "Verwijder",
+            "message": {
+                "_": "Weet u zeker dat u deze wil verwijderen:"
+            },
+            "title": "Verwijder staat"
+        }
     },
     "thousands": ".",
     "zeroRecords": "Geen resultaten gevonden"

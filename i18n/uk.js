@@ -40,7 +40,6 @@
             "1": "Скопійовано 1 рядок в буфер обміну"
         },
         "copyTitle": "Копіювати в буфер обміну",
-        "createState": "Створити стан",
         "csv": "CSV",
         "excel": "Excel",
         "pageLength": {
@@ -49,13 +48,7 @@
             "1": "Показати 1 рядок"
         },
         "pdf": "PDF",
-        "print": "Друкувати",
-        "removeAllStates": "Видалити всі стани",
-        "removeState": "Видалити",
-        "renameState": "Перейменувати",
-        "savedStates": "Збережені стани",
-        "stateRestore": "Стан %d",
-        "updateState": "Оновити"
+        "print": "Друкувати"
     },
     "columnControl": {
         "buttons": {
@@ -292,33 +285,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Створити",
-            "columns": {
-                "search": "Пошук у стовпці",
-                "visible": "Видимість стовпця"
-            },
-            "name": "Ім'я:",
-            "order": "Сортування",
-            "paging": "Пейджинг",
-            "scroller": "Прокручування",
-            "search": "Пошук",
-            "searchBuilder": "Конструктор запитів",
-            "select": "Вибір",
-            "title": "Створити новий стан",
-            "toggleLabel": "Включає:"
+        "button": {
+            "create": "Створити стан",
+            "edit": "Оновити",
+            "remove": "Видалити",
+            "statesList": "Збережені стани",
+            "statesRemoveAll": "Видалити всі стани"
         },
-        "duplicateError": "Стан з такою назвою вже існує.",
-        "emptyError": "Назва не може бути порожньою.",
-        "emptyStates": "Немає збереженого стану.",
-        "removeConfirm": "Ви впевнені, що хочете видалити %s?",
-        "removeError": "Не вдалося видалити стан.",
-        "removeJoiner": "і",
-        "removeSubmit": "Видалити",
-        "removeTitle": "Видалити стан",
-        "renameButton": "Перейменувати",
-        "renameLabel": "Нова назва для %s:",
-        "renameTitle": "Перейменувати стан"
+        "create": {
+            "title": "Створити новий стан"
+        },
+        "remove": {
+            "button": "Видалити",
+            "message": {
+                "_": "Ви впевнені, що хочете видалити %s?"
+            },
+            "title": "Видалити стан"
+        }
     },
     "thousands": ",",
     "zeroRecords": "Не знайдено жодних записів"

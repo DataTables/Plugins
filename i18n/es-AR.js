@@ -29,17 +29,10 @@
     "buttons": {
         "copy": "Copiar",
         "copyTitle": "Copiar al portapapeles",
-        "createState": "Crear estado",
         "csv": "CSV",
         "excel": "Excel",
         "pdf": "PDF",
-        "print": "Imprimir",
-        "removeAllStates": "Eliminar todos los estados",
-        "removeState": "Eliminar estado",
-        "renameState": "Renombrar estado",
-        "savedStates": "Estados guardados",
-        "stateRestore": "Estado %d",
-        "updateState": "Actualizar"
+        "print": "Imprimir"
     },
     "datetime": {
         "amPm": {
@@ -214,33 +207,23 @@
         }
     },
     "stateRestore": {
-        "creationModal": {
-            "button": "Crear",
-            "columns": {
-                "search": "Busqueda de la columna",
-                "visible": "Visibilidad de la columna"
-            },
-            "name": "Nombre",
-            "order": "Clasificación",
-            "paging": "Paginación",
-            "scroller": "Posición de desplazamiento",
-            "search": "Búsqueda",
-            "searchBuilder": "Generador de búsqueda",
-            "select": "Seleccionar",
-            "title": "Crear nuevo estado",
-            "toggleLabel": "Incluir:"
+        "button": {
+            "create": "Crear estado",
+            "edit": "Actualizar",
+            "remove": "Eliminar estado",
+            "statesList": "Estados guardados",
+            "statesRemoveAll": "Eliminar todos los estados"
         },
-        "duplicateError": "Ya existe un estado con este nombre",
-        "emptyError": "Debe indicar un nombre para el estado",
-        "emptyStates": "No hay estados guardados",
-        "removeConfirm": "¿Está seguro de que quiere remover el estado %s?",
-        "removeError": "Error al remover el estado",
-        "removeJoiner": "y",
-        "removeSubmit": "Borrar",
-        "removeTitle": "Borrar estado",
-        "renameButton": "Renombrar",
-        "renameLabel": "Nuevo nombre para el estado %s",
-        "renameTitle": "Renombrar estado"
+        "create": {
+            "title": "Crear nuevo estado"
+        },
+        "remove": {
+            "button": "Borrar",
+            "message": {
+                "_": "¿Está seguro de que quiere remover el estado %s?"
+            },
+            "title": "Borrar estado"
+        }
     },
     "thousands": ".",
     "zeroRecords": "No se encontraron registros que coincidan con la búsqueda"

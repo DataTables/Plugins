@@ -31,10 +31,7 @@ export default {
             "-1": "Prikaži sve redove"
         },
         "pdf": "PDF",
-        "print": "Isprintaj",
-        "removeState": "Ukloni",
-        "renameState": "Preimenuj",
-        "updateState": "Ažuriraj"
+        "print": "Isprintaj"
     },
     "datetime": {
         "amPm": {
@@ -202,6 +199,12 @@ export default {
             "_": "%d redova odabrano",
             "0": "",
             "1": "1 red odabran"
+        }
+    },
+    "stateRestore": {
+        "button": {
+            "edit": "Ažuriraj",
+            "remove": "Ukloni"
         }
     },
     "thousands": ".",
